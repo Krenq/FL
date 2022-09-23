@@ -2,6 +2,7 @@
 /* Slider css styles start */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+@import url('./slider.css');
 /* Slider css styles end */
 @tailwind base;
 @tailwind components;
@@ -9,53 +10,6 @@
 
 .container-base {
 	@apply max-w-screen-2xl mx-auto overflow-y-hidden overflow-x-hidden;
-}
-
-.moreF {
-	left: 460px;
-	opacity: .9;
-	top: 350px;
-	transition: .3s ease all;
-}
-
-.moreP {
-	left: 110px;
-	opacity: .9;
-	top: 280px;
-	z-index: 30;
-	transition: .3s ease all;
-}
-
-.moreP:hover .info {
-	transition: .3s ease all;
-	display: block;
-	background-color: #fff;
-	z-index: 100;
-}
-
-.moreF:hover .info {
-	transition: .3s ease all;
-	display: block;
-	background-color: #fff;
-	z-index: 100;
-}
-
-.moreTr {
-	left: 550px;
-	opacity: .9;
-	top: 480px;
-	transition: .3s ease all;
-}
-
-.moreT {
-	opacity: .9;
-	left: 370px;
-	top: 440px;
-	transition: .3s ease all;
-}
-
-.info {
-	box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
 }
 
 .slick-dots {
@@ -82,95 +36,4 @@
 	color: black;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.next {
-	right: 45.6%;
-	z-index: 1;
-	bottom: 22px;
-	border-radius: 20px;
-}
-
-.prev {
-	left: 46%;
-	z-index: 1;
-	bottom: 22px;
-	border-radius: 20px;
-}
-
-.prev svg {
-	transform: rotate(180deg);
-}
-
-/* special offers */
-.container__special {
-	max-width: 1460px;
-	margin: 0 auto;
-}
-
-.item {
-	max-width: 252px;
-}
-
-.special__next {
-	right: -20px;
-	z-index: 1;
-	bottom: 50%;
-	transform: translateY(-50%);
-	border-radius: 20px;
-}
-
-.special__prev {
-	left: -20px;
-	z-index: 1;
-	bottom: 50%;
-	transform: translateY(-50%) rotate(180deg);
-	border-radius: 20px;
-}
-
-.news {
-	bottom: 230px;
-	right: 445px;
-}
-
-.see {
-	bottom: 140px;
-	right: 515px;
-}
-
-.products-item {
-	width: 228px;
-	height: 228px;
-}
-
-.promo {
-	height: 727px;
-}
-
-.timer {
-	background: linear-gradient(270.09deg, rgba(255, 255, 255, 0.2) -1.39%, rgba(255, 255, 255, 0) 99.9%);
-
-}
-
-.timer__wrapper {
-	transform: translateX(-320px);
-}
-
-.ability {
-	transform: translateX(-50%);
-}
-
-.nextPartner {
-	right: -20px;
-	transform: translateY(-50%);
-	top: 50%;
-	border-radius: 20px;
-}
-
-.prevPartner {
-	left: -20px;
-	transform: translateY(-50%) rotate(180deg);
-	top: 50%;
-	z-index: 20;
-	border-radius: 20px;
 }

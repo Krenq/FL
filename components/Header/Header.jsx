@@ -5,14 +5,14 @@ import SectionWithStock from '../SectionWithStock/SectionWithStock';
 import SectionWithWarnings from '../SectionWithWarnings/SectionWithWarnings';
 
 function Header() {
-  return (
-    <header>
-      <SectionWithStock />
-      <SectionWithWarnings />
-      <SectionOverNavBar />
-      <NavBar />
-    </header>
-  );
+	return (
+		<header>
+			<SectionWithStock />
+			<SectionWithWarnings />
+			<SectionOverNavBar />
+			<NavBar />
+		</header>
+	);
 }
 
 export default Header;

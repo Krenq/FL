@@ -1,0 +1,89 @@
+import Image from "next/image"
+import Slider from "react-slick"
+import twoStories from '../../images/templates/2stories.jpg'
+import treeStories from '../../images/templates/3stories.jpg'
+import fourStories from '../../images/templates/4stories.jpg'
+import oneStories from '../../images/templates/1stories.jpg'
+import PartnersButtonNext from "../Partners/PartnersButtonNext"
+import PartnersButtonPrev from "../Partners/PartnersButtonPrev"
+
+const Stories = () => {
+	const settings = {
+		dots: false,
+		Infinity: true,
+		speed: 500,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: < PartnersButtonPrev />,
+		nextArrow: < PartnersButtonNext />,
+		responsive: [
+			{
+				breakpoint: 750,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 550,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+				}
+			}
+		]
+	}
+	return (
+		<section className="container__special relative">
+			<p className="ability left-1/2 -top-16 flex items-center text-3xl italic absolute"><svg className="mr-3" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fillRule="evenodd" clipRule="evenodd" d="M19 15.072C19.3094 14.8933 19.6906 14.8933 20 15.072L30.5 21.1342C30.8094 21.3128 31 21.6429 31 22.0002C31 22.3575 30.8094 22.6876 30.5 22.8662L20 28.9284C19.6906 29.107 19.3094 29.107 19 28.9284C18.6906 28.7498 18.5 28.4197 18.5 28.0624V15.938C18.5 15.5807 18.6906 15.2506 19 15.072ZM20.5 17.67V26.3303L28 22.0002L20.5 17.67Z" fill="#337202" />
+				<circle cx="22" cy="22" r="21.5" stroke="#337202" />
+			</svg>
+				ИСТОРИИ</p>
+			<div className="mt-16">
+				<Slider {...settings}>
+					<div >
+						<div className="relative py-1   flex items-center justify-center transition-all hover:opacity-80 cursor-pointer">
+							<Image className="object-cover" src={oneStories} alt="newsImg" />
+							<p className="absolute bottom-5 left-5 text-xl text-white">Reels</p>
+						</div>
+					</div>
+					<div>
+						<div className="relative py-1 flex items-center justify-center transition-all hover:opacity-80 cursor-pointer">
+							<Image className="object-cover" src={twoStories} alt="newsImg" />
+							<p className="absolute bottom-5 left-5 text-xl text-white">LiveShop</p>
+						</div>
+					</div>
+					<div>
+						<div className="relative py-1 flex items-center justify-center transition-all hover:opacity-80 cursor-pointer">
+							<Image className="object-cover" src={treeStories} alt="newsImg" />
+							<p className="absolute bottom-5 left-5 text-xl text-white">Бесплатная доставка</p>
+						</div>
+					</div>
+					<div>
+						<div className="py-1 flex items-center justify-center relative transition-all hover:opacity-80 cursor-pointer">
+
+							<Image className="object-cover" src={fourStories} alt="newsImg" />
+							<p className="absolute bottom-5 left-5 text-xl text-white">Скидки</p>
+						</div>
+					</div>
+
+					<div>
+						<div className="py-1 flex items-center justify-center relative transition-all hover:opacity-80 cursor-pointer">
+
+							<Image className="object-cover" src={fourStories} alt="newsImg" />
+							<p className="absolute bottom-5 left-5 text-xl text-white">Скидки</p>
+						</div>
+					</div>
+
+				</Slider>
+			</div>
+
+		</section>
+	)
+}
+export default Stories

@@ -15,19 +15,57 @@ const SpecialOffers = () => {
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		nextArrow: <SpecialOffersNext />,
-		prevArrow: <SpecialOffersPrev />
+		prevArrow: <SpecialOffersPrev />,
+		responsive: [
+			{
+				breakpoint: 950,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 750,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 500,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+				}
+			},
+			{
+				breakpoint: 450,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true
+				}
+			}
+		]
 	}
 	return (
-		<article className="container__special bg-white pb-36">
+		<article className="container__special bg-white pb-36 ..5x2:pb-14 .1x1:pb-28 pl-2">
 			<div className="mt-16 flex border-b-2 border-gray pb-7">
-				<p className="hover:text-primary transition-all cursor-pointer mr-8 border-gray border-r-2  pr-8 text-gray-quick-silver text-lg">Все спецпредложения</p>
-				<p className="hover:text-primary transition-all cursor-pointer mr-8 text-gray-quick-silver text-lg">Новинки</p>
-				<p className="hover:text-primary transition-all cursor-pointer mr-8 text-gray-quick-silver text-lg">Хит продаж</p>
-				<p className="hover:text-primary transition-all cursor-pointer mr-8 text-gray-quick-silver text-lg">Суперцена</p>
-				<p className="hover:text-primary transition-all cursor-pointer mr-8 text-gray-quick-silver text-lg">Наборы</p>
+				<p className="..6x3:text-sm ..7x1:text-xs ..6x3:mr-3 ..6x3:pr-3 ..6x1:text-base hover:text-primary transition-all cursor-pointer mr-8 border-gray border-r-2  pr-8 text-gray-quick-silver text-lg">Все спецпредложения</p>
+				<p className="..6x3:text-sm ..7x1:text-xs ..6x3:mr-3 ..6x1:text-base hover:text-primary transition-all cursor-pointer mr-8 text-gray-quick-silver text-lg">Новинки</p>
+				<p className="..6x3:text-sm ..7x1:text-xs ..6x3:mr-3 ..6x1:text-base hover:text-primary transition-all cursor-pointer mr-8 text-gray-quick-silver text-lg">Хит продаж</p>
+				<p className="..6x3:text-sm ..7x1:text-xs ..6x3:mr-3 ..6x1:text-base hover:text-primary transition-all cursor-pointer mr-8 text-gray-quick-silver text-lg">Суперцена</p>
+				<p className="..6x3:text-sm ..6x5:hidden ..6x3:mr-3 ..6x1:text-base hover:text-primary transition-all cursor-pointer mr-8 text-gray-quick-silver text-lg">Наборы</p>
 			</div>
-			<Slider {...settings}>
-				<div className="relative cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver">
+			<Slider {...settings} className='special'>
+				<div className="relative ..5x2:border-0 cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver hover:border-primary hover:opacity-70 transition-all ">
 					<div className="absolute  z-10 flex flex-col">
 						<small className="bg-label-yellow px-5 py-1 mb-1">HIT!</small>
 						<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,19 +80,19 @@ const SpecialOffers = () => {
 
 					</div>
 					<Image className="object-cover" src={one} alt="specialOffersImg" />
-					<p className="absolute right-4 flex items-center top-48 text-xs text-gray-quick-silver">
+					<p className="absolute ..5x2:top-32  ..5x1:top-40 right-4 flex items-center top-48 text-xs text-gray-quick-silver">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
 						1.4 Б</p>
 					<p className="text-xs text-center text-gray-quick-silver tracking-widest">ПИТАТЕЛЬНЫЙ ШАМПУНЬ С КОРНЕМ ИМБИРЯ</p>
-					<p className="text-label-orange text-center text-sm mt-7">3 750 De</p>
-					<p className="text-center text-sm pb-14">₽ 764.00</p>
+					<p className="text-label-orange text-center text-sm mt-7  ">3 750 De</p>
+					<p className="text-center text-sm pb-14  ">₽ 764.00</p>
 				</div>
-				<div className="relative cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver">
+				<div className="relative ..5x2:border-0 cursor-pointer mt-4  item border-b-2 px-4 border-gray-quick-silver hover:border-primary hover:opacity-70 transition-all ">
 					<div className="absolute  z-10 flex flex-col">
 						<div>
 							<small className="border-2 px-3 py-1 border-gray-quick-silver mb-1 mr-2">NEW</small>
@@ -68,22 +106,22 @@ const SpecialOffers = () => {
 
 					</div>
 					<Image className="object-cover" src={two} alt="specialOffersImg" />
-					<p className="absolute right-4 flex items-center top-48 text-xs text-gray-quick-silver">
+					<p className="absolute ..5x2:top-32 right-4 ..5x1:top-40 flex items-center top-48 text-xs text-gray-quick-silver">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
 						1.4 Б</p>
 					<p className="text-xs text-center text-gray-quick-silver tracking-widest">УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ</p>
-					<div className="pb-14 flex pl-14 pt-8">
+					<div className="pb-14 ..5x5:pb-14 flex pl-14 ..5x4:pb-10 ..5x1:pl-6 pt-8 ..5x1:pb-10 ..5x2:pb-14">
 						<p className="text-center text-sm mr-2 text-gray-quick-silver line-through">₽ 920.00</p>
 						<p className="text-center text-sm text-label-pink-2">₽ 764.00</p>
 					</div>
 
 				</div>
-				<div className="relative cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver">
+				<div className="relative ..5x2:border-0 cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver hover:border-primary hover:opacity-70 transition-all ">
 					<div className="absolute  z-10 flex flex-col">
 						<small className="bg-label-yellow px-5 py-1 mb-1">HIT!</small>
 						<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,19 +136,19 @@ const SpecialOffers = () => {
 
 					</div>
 					<Image className="object-cover" src={tree} alt="specialOffersImg" />
-					<p className="absolute right-4 flex items-center top-48 text-xs text-gray-quick-silver">
+					<p className="absolute right-4 ..5x2:top-32 ..5x1:top-40 flex items-center top-48 text-xs text-gray-quick-silver">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
 						1.4 Б</p>
 					<p className="text-xs text-center text-gray-quick-silver tracking-widest">БЬЮТИ - КОСМЕТИЧКА "CАКУРА"</p>
 
-					<p className="text-center text-sm pb-14 mt-16">₽ 764.00</p>
+					<p className="text-center text-sm pb-14 ..6x1:pb-10 ..5x5:pb-14 .1x1:pb-10 mt-16 ..5x3:pb-10 ..5x2:pb-14">₽ 764.00</p>
 				</div>
-				<div className="relative cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver">
+				<div className="relative ..5x2:border-0 cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver hover:border-primary hover:opacity-70 transition-all ">
 					<div className="absolute  z-10 flex flex-col">
 
 
@@ -120,19 +158,19 @@ const SpecialOffers = () => {
 
 					</div>
 					<Image className="object-cover" src={four} alt="specialOffersImg" />
-					<p className="absolute right-4 flex items-center top-48 text-xs text-gray-quick-silver">
+					<p className="absolute ..5x2:top-32 ..5x1:top-40 right-4 flex items-center top-48 text-xs text-gray-quick-silver">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
 						1.4 Б</p>
 					<p className="text-xs text-center text-gray-quick-silver tracking-widest">ПИТАТЕЛЬНЫЙ ШАМПУНЬ С КОРНЕМ ИМБИРЯ</p>
 					<p className="text-label-orange text-center text-sm mt-7">3 750 De</p>
-					<p className="text-center text-sm pb-14">₽ 764.00</p>
+					<p className="text-center text-sm pb-14 ">₽ 764.00</p>
 				</div>
-				<div className="relative cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver">
+				<div className="relative ..5x2:border-0 cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver hover:border-primary hover:opacity-70 transition-all ">
 					<div className="absolute  z-10 flex flex-col">
 						<small className="bg-label-yellow px-5 py-1 mb-1">HIT!</small>
 
@@ -143,19 +181,19 @@ const SpecialOffers = () => {
 
 					</div>
 					<Image className="object-cover" src={five} alt="specialOffersImg" />
-					<p className="absolute right-4 flex items-center top-48 text-xs text-gray-quick-silver">
+					<p className="absolute right-4 ..5x2:top-32 flex ..5x1:top-40 items-center top-48 text-xs text-gray-quick-silver">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
 						1.4 Б</p>
 					<p className="text-xs text-center text-gray-quick-silver tracking-widest">ПИТАТЕЛЬНЫЙ ШАМПУНЬ С КОРНЕМ ИМБИРЯ</p>
 					<p className="text-label-orange text-center text-sm mt-7">3 750 De</p>
-					<p className="text-center text-sm pb-14">₽ 764.00</p>
+					<p className="text-center text-sm pb-14 ">₽ 764.00</p>
 				</div>
-				<div className="relative cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver">
+				<div className="relative  ..5x2:border-0 cursor-pointer mt-4 item border-b-2 px-4 border-gray-quick-silver hover:border-primary hover:opacity-70 transition-all ">
 					<div className="absolute  z-10 flex flex-col">
 						<small className="bg-label-yellow px-5 py-1 mb-1">HIT!</small>
 						<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,12 +208,12 @@ const SpecialOffers = () => {
 
 					</div>
 					<Image className="object-cover" src={one} alt="specialOffersImg" />
-					<p className="absolute right-4 flex items-center top-48 text-xs text-gray-quick-silver">
+					<p className="absolute right-4 flex ..5x1:top-40 items-center top-48 text-xs text-gray-quick-silver">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
-							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66667 9.33333L9 5" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
+							<path d="M8.66666 9.33333L5.33333 9" stroke="#5D986A" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
 						1.4 Б</p>
 					<p className="text-xs text-center text-gray-quick-silver tracking-widest">ПИТАТЕЛЬНЫЙ ШАМПУНЬ С КОРНЕМ ИМБИРЯ</p>
