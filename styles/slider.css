@@ -3,6 +3,7 @@
 	opacity: .9;
 	top: 350px;
 	transition: .3s ease all;
+	z-index: 20;
 }
 
 .moreP {
@@ -12,6 +13,8 @@
 	z-index: 30;
 	transition: .3s ease all;
 }
+
+
 
 .moreP:hover .info {
 	transition: .3s ease all;
@@ -26,6 +29,24 @@
 	background-color: #fff;
 	z-index: 100;
 }
+
+@media (max-width: 530px) {
+	.text {
+		transform: translateY(-68px);
+	}
+
+	.catal {
+		height: 75px !important;
+	}
+
+
+	.snap {
+		height: 210px;
+		width: 210px;
+		margin-left: -4px;
+	}
+}
+
 
 .moreTr {
 	left: 550px;
@@ -85,6 +106,11 @@
 
 .item {
 	max-width: 252px;
+	padding-right: 20px;
+}
+
+.special .slick-list .slick-track .slick-slide div {
+	border-bottom: 2px solid rgb(128, 128, 128);
 }
 
 .special__next {
@@ -236,6 +262,10 @@
 		left: 50% !important;
 		transform: translateX(-50%);
 		top: 150px !important;
+	}
+
+	.special .slick-list .slick-track .slick-slide div {
+		border-bottom: none !important;
 	}
 
 	.moreTr {
@@ -403,5 +433,11 @@
 @media(max-width: 400px) {
 	.logo {
 		left: 30% !important;
+	}
+}
+
+@media(max-width: 800px) {
+	.seemore {
+		width: 340px !important;
 	}
 }

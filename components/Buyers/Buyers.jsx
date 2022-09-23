@@ -9,18 +9,28 @@ import twoglos from '../../images/templates/2glos.jpg'
 
 const Buyers = () => {
 	return (
-		<>
+		<div className="relative">
 
-			<section className="container__special relative">
+			<div className="absolute right-0 ..6x2:w-32 ..6x2:h-32 .4x1:-mt-20">
+				<Image className="object-cover " src={glos} alt="specialOffersImg" />
+			</div>
+			<div className="absolute left-0 bottom-0 ..6x2:w-40 ..6x2:h-40 .4x1:-bottom-32">
+				<Image className="object-cover " src={twoglos} alt="specialOffersImg" />
+			</div>
 
-				<div className="absolute -right-56 ">
-					<Image className="object-cover " src={glos} alt="specialOffersImg" />
-				</div>
-				<div className="absolute -left-56 bottom-0">
-					<Image className="object-cover " src={twoglos} alt="specialOffersImg" />
-				</div>
 
-				<p className="text-center text-4xl italic mb-16 ..6x04:text-3xl ..6x04:mb-10">ПОКУПАТЕЛЯМ</p>
+			<section className="container__special relative pt-10 .4x1:pt-0">
+
+				<svg className="absolute ..6x2:h-36 ..6x2:mt-5 left-1/2 ability ..5x2:-top-16 -top-20" width="184" height="183" viewBox="0 0 184 183" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M151.013 93.73C151.013 93.73 139.225 129.886 109.863 139.841C80.4998 149.797 15.8079 123.058 15.8079 123.058C15.8079 123.058 39.851 57.2523 64.9368 42.373C90.0226 27.4936 133.618 51.8244 133.618 51.8244" stroke="#EFF5F0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+					<path d="M168.192 59.8028C168.192 59.8028 132.964 80.5241 105.01 90.4961C77.0561 100.468 53.4366 100.74 53.4366 100.74" stroke="#EFF5F0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+					<path d="M105.01 90.4961L71.0828 73.3172" stroke="#EFF5F0" strokeWidth="4" strokelinecap="round" strokeLinejoin="round" />
+					<path d="M105.01 90.496L91.1736 116.337" stroke="#EFF5F0" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+				</svg>
+				<p className="text-center text-4xl italic mb-16 ..6x04:text-3xl z-10 ..6x04:mb-10 relative">
+
+
+					ПОКУПАТЕЛЯМ</p>
 				<div className="flex ..6x4:flex-wrap ..6x4:p-1">
 					<div className="pr-4 ..6x4:-mr-4">
 
@@ -49,7 +59,7 @@ const Buyers = () => {
 					</div>
 				</div>
 			</section>
-		</>
+		</div>
 
 	)
 }

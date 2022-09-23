@@ -48,12 +48,19 @@ const SeaAct = () => {
 	}
 	return (
 		<div className='bg-gray-light'>
-			<section className="container__special  pt-14 pb-24 ..5x2:pb-10">
-				<p className='text-center font-medium text-2xl ..6x04:text-xl'>Каждый сезон</p>
-				<p className='text-center font-medium text-3xl italic ..6x04:text-2xl'>НОВЫЕ АКЦИИ</p>
-				<p className="mb-9 text-center mt-2">Покупай в наборах и получай подарок</p>
+			<section className="container__special relative pt-16 pb-24 ..5x2:pb-10">
+				<svg className='ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-8 ' width="184" height="183" viewBox="0 0 184 183" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M151.013 93.7301C151.013 93.7301 139.225 129.886 109.863 139.841C80.4998 149.797 15.8079 123.059 15.8079 123.059C15.8079 123.059 39.851 57.2524 64.9368 42.3731C90.0226 27.4937 133.618 51.8245 133.618 51.8245" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+					<path d="M168.192 59.8027C168.192 59.8027 132.964 80.524 105.01 90.496C77.0561 100.468 53.4366 100.739 53.4366 100.739" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+					<path d="M105.01 90.4961L71.0828 73.3172" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+					<path d="M105.01 90.496L91.1736 116.337" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+				</svg>
+
+				<p className='absolute left-1/2 ability  font-medium text-2xl  ..6x04:text-xl'>Каждый сезон</p>
+				<p className='absolute left-1/2 ability top-24 text-center font-medium text-3xl italic ..6x04:text-2xl'>НОВЫЕ АКЦИИ</p>
+				<p className="mb-9 text-center mt-20">Покупай в наборах и получай подарок</p>
 				<div className='flex justify-center '>
-					<div className='relative .3x1:hidden'>
+					<div className='relative   .3x1:hidden'>
 						<div className='absolute top-32 left-10 z-10'>
 							<p className='text-2xl text-primary'>АКЦИЯ ВЕСНЫ</p>
 							<p className='text-3xl font-medium'>Получай подарки за покупки</p>
@@ -65,10 +72,10 @@ const SeaAct = () => {
 							<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 						</svg>
 						</p>
-						<Image className="object-cover " height='1400px' width='1146px' src={one} alt="productsPhoto" />
+						<Image className="object-cover sunl" height='1523px' width='1146px' src={one} alt="productsPhoto" />
 					</div>
 					<Slider {...settings} className='actionsfl flex flex-wrap .3x1:w-2/3 ..5x2:w-full .1x1:w-4/5 .3x1:justify-center'>
-						<div className="relative bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
+						<div className="relative pr-0 bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
 							<div className="absolute items-center z-10 flex ">
 								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -101,9 +108,9 @@ const SeaAct = () => {
 								<p className="text-center text-sm mr-2 text-gray-quick-silver line-through">₽ 920.00</p>
 								<p className="text-center text-sm text-label-pink-2">₽ 764.00</p>
 							</div>
-							<button className='bg-gray ..6x04:text-xs text-primary py-3 px-16 mt-2 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
+							<button className=' ..6x04:text-xs text-primary py-3 px-16 mt-10 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
 						</div>
-						<div className="relative bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
+						<div className="relative pr-0 bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
 							<div className="absolute items-center z-10 flex ">
 								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -139,9 +146,9 @@ const SeaAct = () => {
 								<p className="text-center text-sm mr-2 text-gray-quick-silver line-through">₽ 920.00</p>
 								<p className="text-center text-sm text-label-pink-2">₽ 764.00</p>
 							</div>
-							<button className='bg-gray ..6x04:text-xs text-primary py-3 px-16 mt-2 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
+							<button className=' ..6x04:text-xs text-primary py-3 px-16 mt-10 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
 						</div>
-						<div className="relative bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
+						<div className="relative pr-0 bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
 							<div className="absolute items-center z-10 flex ">
 								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -177,9 +184,9 @@ const SeaAct = () => {
 								<p className="text-center text-sm mr-2 text-gray-quick-silver line-through">₽ 920.00</p>
 								<p className="text-center text-sm text-label-pink-2">₽ 764.00</p>
 							</div>
-							<button className='..6x04:text-xs bg-gray text-primary py-3 px-16 mt-2 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
+							<button className=' ..6x04:text-xs text-primary py-3 px-16 mt-10 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
 						</div>
-						<div className="relative bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
+						<div className="relative pr-0 bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
 							<div className="absolute items-center z-10 flex ">
 								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -215,9 +222,9 @@ const SeaAct = () => {
 								<p className="text-center text-sm mr-2 text-gray-quick-silver line-through">₽ 920.00</p>
 								<p className="text-center text-sm text-label-pink-2">₽ 764.00</p>
 							</div>
-							<button className='..6x04:text-xs bg-gray text-primary py-3 px-16 mt-2 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
+							<button className=' ..6x04:text-xs text-primary py-3 px-16 mt-10 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
 						</div>
-						<div className="relative bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
+						<div className="relative pr-0 bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
 							<div className="absolute items-center z-10 flex ">
 								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -253,9 +260,9 @@ const SeaAct = () => {
 								<p className="text-center text-sm mr-2 text-gray-quick-silver line-through">₽ 920.00</p>
 								<p className="text-center text-sm text-label-pink-2">₽ 764.00</p>
 							</div>
-							<button className='..6x04:text-xs bg-gray text-primary py-3 px-16 mt-2 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
+							<button className=' ..6x04:text-xs text-primary py-3 px-16 mt-10 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
 						</div>
-						<div className="relative bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
+						<div className="relative pr-0 bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
 							<div className="absolute items-center z-10 flex ">
 								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -291,7 +298,7 @@ const SeaAct = () => {
 								<p className="text-center text-sm mr-2 text-gray-quick-silver line-through">₽ 920.00</p>
 								<p className="text-center text-sm text-label-pink-2">₽ 764.00</p>
 							</div>
-							<button className='..6x04:text-xs bg-gray text-primary py-3 px-16 mt-2 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
+							<button className=' ..6x04:text-xs text-primary py-3 px-16 mt-10 text-sm hover:text-black transition-all hover:bg-gray-light2'>+ Добавить в заказ</button>
 						</div>
 					</Slider>
 

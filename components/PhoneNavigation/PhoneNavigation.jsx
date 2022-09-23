@@ -1,7 +1,7 @@
 const PhoneNavigation = () => {
 	return (
 		<nav className="hidden ..5x2:block bg-white pb-3 ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
-			<ul className="flex justify-center ">
+			<ul className="flex justify-center ..6x4:justify-between">
 				<li className="relative">
 					<svg className="h-24 w-24 ..6x5:h-20 ..6x5:w-20" width="54" height="24" viewBox="0 0 54 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<rect width="24" height="24" transform="translate(15)" fill="white" />
