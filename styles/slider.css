@@ -257,6 +257,23 @@
 
 }
 
+.funds .slick-list .slick-track .slick-cloned div .pb-20 .flex {
+
+	opacity: .5;
+}
+
+.funds .slick-list .slick-track .slick-slide div .pb-20 .flex {
+
+	opacity: .5;
+}
+
+.funds .slick-list .slick-track .slick-current div .pb-20 .flex {
+	margin-left: 50px;
+	margin-right: 50px;
+	opacity: 1;
+}
+
+
 @media(max-width: 1000px) {
 	.moreF {
 		left: 50% !important;
