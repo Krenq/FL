@@ -27,11 +27,11 @@ const DiscountsSlider = () => {
 							<div className=" hidden ..5x2:block ..5x2:absolute img ..5x2:w-full ..5x2:h-410px ..5x2:top-0 ..5x2:left-0">
 
 							</div>
-							<div className="mt-52 ..6x6:mt-1 ..6x3:w-44 ..6x3:mb-15 ..6x3:mt-10 ..5x1:w-56 .1x1:w-64 .5x1:mt-36 .4x1:w-80 .2x1:w-72 ..5x2:mt-20 ..5x1:mb-16">
+							<div className="mt-52 ..7x2:w-40 ..7x2:h-40 ..6x6:mt-1 ..6x3:w-44 ..6x3:mb-15 ..6x3:mt-10 ..5x1:w-56 .1x1:w-64 .5x1:mt-36 .4x1:w-80 .2x1:w-72 ..5x2:mt-20 ..5x1:mb-16">
 								<Image className="object-cover" src={imgProduct} alt="discountImg" />
 
-								<div className=" bg-gray   .4x1:top-52  .5x1:left-96 .5x1:top-1/2 px-4 py-2 text-lg moreF rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">+
-									<section className="..5x2:p-2 ..6x6:-left-36 ..6x6:top-0 opacity-100 seemore ..5x5:w-f ..6x1:-left-32   ..5x2:w-96  .5x1:-left-52   ..5x2:left-12 ..5x2:-top-28   absolute hidden text-black -top-52  rounded-lg w-410px p-6 rounded-xlbg-white info cursor-default">
+								<div className=" bg-gray ..7x2:px-3 ..7x2:py-1 .4x1:top-52  .5x1:left-96 .5x1:top-1/2 px-4 py-2 text-lg moreF rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">+
+									<section className="..5x2:p-2 ..7x2:!w-72 ..7x2:left-1/2 seesh ..6x6:-left-36 ..6x6:top-0 opacity-100 seemore ..5x5:w-f ..6x1:-left-32   ..5x2:w-96  .5x1:-left-52   ..5x2:left-12 ..5x2:-top-28   absolute hidden text-black -top-52  rounded-lg w-410px p-6 rounded-xlbg-white info cursor-default">
 										<span className="flex">
 											<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M8.00001 1.3335L9.49677 5.94005H14.3404L10.4218 8.78706L11.9186 13.3936L8.00001 10.5466L4.08144 13.3936L5.5782 8.78706L1.65963 5.94005H6.50325L8.00001 1.3335Z" stroke="#337202" />
@@ -50,7 +50,7 @@ const DiscountsSlider = () => {
 											</svg>
 										</span>
 										<div className="flex">
-											<p className="font-bold text-lg w-72 mt-3 ..5x5:w-64 ..5x5:text-base">Шампунь - активатор роста Bio Rehab</p>
+											<p className="font-bold text-lg w-72 ..7x2:w-52 mt-3 ..5x5:w-64 ..5x5:text-base">Шампунь - активатор роста Bio Rehab</p>
 											<div>
 												<p className="..5x5:text-base text-label-pink-2 text-lg mt-3">₽ 764.00</p>
 												<p className="..5x5:text-base text-black text-lg line-through">₽ 764.00</p>
@@ -68,10 +68,10 @@ const DiscountsSlider = () => {
 										</div>
 									</section>
 								</div>
-								<div className="moreT  ..5x1:left-48 .2x1:left-56 z-0 .4x1:top-80 .5x1:left-72 bg-gray px-4 py-2 text-lg    rounded-full absolute hover:bg-nude-3 hover:text-white cursor-pointer">+
+								<div className="moreT ..7x2:px-3 ..7x2:py-1 ..5x1:left-48 .2x1:left-56 z-0 .4x1:top-80 .5x1:left-72 bg-gray px-4 py-2 text-lg    rounded-full absolute hover:bg-nude-3 hover:text-white cursor-pointer">+
 
 								</div>
-								<div className="moreTr  .4x1:top-80  bg-gray px-4 py-2 text-lg   rounded-full absolute hover:bg-nude-3 hover:text-white cursor-pointer">+
+								<div className="moreTr ..7x2:px-3 ..7x2:py-1 .4x1:top-80  bg-gray px-4 py-2 text-lg   rounded-full absolute hover:bg-nude-3 hover:text-white cursor-pointer">+
 
 								</div>
 
@@ -88,11 +88,11 @@ const DiscountsSlider = () => {
 							<div className=" hidden ..5x2:block ..5x2:absolute img ..5x2:w-full ..5x2:h-410px ..5x2:top-0 ..5x2:left-0">
 
 							</div>
-							<div className="mt-52 ..6x6:mt-1 ..6x3:w-44 ..6x3:mb-15 ..6x3:mt-10 ..5x1:w-56 .1x1:w-64 .5x1:mt-36 .4x1:w-80 .2x1:w-72 ..5x2:mt-20 ..5x1:mb-16">
+							<div className="mt-52 ..7x2:w-40 ..7x2:h-40 ..6x6:mt-1 ..6x3:w-44 ..6x3:mb-15 ..6x3:mt-10 ..5x1:w-56 .1x1:w-64 .5x1:mt-36 .4x1:w-80 .2x1:w-72 ..5x2:mt-20 ..5x1:mb-16">
 								<Image className="object-cover" src={imgProduct} alt="discountImg" />
 
-								<div className=" bg-gray   .4x1:top-52  .5x1:left-96 .5x1:top-1/2 px-4 py-2 text-lg moreF rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">+
-									<section className="..5x2:p-2 ..6x6:-left-36 ..6x6:top-0 opacity-100 seemore ..5x5:w-f ..6x1:-left-32   ..5x2:w-96  .5x1:-left-52   ..5x2:left-12 ..5x2:-top-28   absolute hidden text-black -top-52  rounded-lg w-410px p-6 rounded-xlbg-white info cursor-default">
+								<div className=" bg-gray ..7x2:px-3 ..7x2:py-1 .4x1:top-52  .5x1:left-96 .5x1:top-1/2 px-4 py-2 text-lg moreF rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">+
+									<section className="..5x2:p-2 ..7x2:!w-72 ..7x2:left-1/2 seesh ..6x6:-left-36 ..6x6:top-0 opacity-100 seemore ..5x5:w-f ..6x1:-left-32   ..5x2:w-96  .5x1:-left-52   ..5x2:left-12 ..5x2:-top-28   absolute hidden text-black -top-52  rounded-lg w-410px p-6 rounded-xlbg-white info cursor-default">
 										<span className="flex">
 											<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M8.00001 1.3335L9.49677 5.94005H14.3404L10.4218 8.78706L11.9186 13.3936L8.00001 10.5466L4.08144 13.3936L5.5782 8.78706L1.65963 5.94005H6.50325L8.00001 1.3335Z" stroke="#337202" />
@@ -111,7 +111,7 @@ const DiscountsSlider = () => {
 											</svg>
 										</span>
 										<div className="flex">
-											<p className="font-bold text-lg w-72 mt-3 ..5x5:w-64 ..5x5:text-base">Шампунь - активатор роста Bio Rehab</p>
+											<p className="font-bold text-lg w-72 ..7x2:w-52 mt-3 ..5x5:w-64 ..5x5:text-base">Шампунь - активатор роста Bio Rehab</p>
 											<div>
 												<p className="..5x5:text-base text-label-pink-2 text-lg mt-3">₽ 764.00</p>
 												<p className="..5x5:text-base text-black text-lg line-through">₽ 764.00</p>
@@ -129,10 +129,10 @@ const DiscountsSlider = () => {
 										</div>
 									</section>
 								</div>
-								<div className="moreT  ..5x1:left-48 .2x1:left-56 z-0 .4x1:top-80 .5x1:left-72 bg-gray px-4 py-2 text-lg    rounded-full absolute hover:bg-nude-3 hover:text-white cursor-pointer">+
+								<div className="moreT ..7x2:px-3 ..7x2:py-1 ..5x1:left-48 .2x1:left-56 z-0 .4x1:top-80 .5x1:left-72 bg-gray px-4 py-2 text-lg    rounded-full absolute hover:bg-nude-3 hover:text-white cursor-pointer">+
 
 								</div>
-								<div className="moreTr  .4x1:top-80  bg-gray px-4 py-2 text-lg   rounded-full absolute hover:bg-nude-3 hover:text-white cursor-pointer">+
+								<div className="moreTr ..7x2:px-3 ..7x2:py-1 .4x1:top-80  bg-gray px-4 py-2 text-lg   rounded-full absolute hover:bg-nude-3 hover:text-white cursor-pointer">+
 
 								</div>
 

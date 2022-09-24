@@ -1,6 +1,6 @@
 const Support = () => {
 	return (
-		<section className="support left-1/2 ability px-10 bg-white absolute -bottom-10 z-50 flex justify-between py-10 ..5x1:flex-col ..5x1:w-384px ..5x1:p-0 ..5x1:bg-gray-light ..5x1:bottom-3">
+		<section className="support left-1/2 ..7x2:px-0 ability px-10 ..7x2:w-full bg-white absolute -bottom-10 z-50 flex justify-between py-10 ..5x1:flex-col ..5x1:w-384px ..5x1:p-0 ..5x1:bg-gray-light ..5x1:bottom-3">
 			<div className="flex relative ..5x1:mb-2 ..5x1:bg-white ..5x1:p-1 ..5x1:rounded items-center">
 				<svg width="80" className="mr-5 .2x1:h-16 .2x1:mr-0" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<rect x="1" y="1" width="78" height="78" rx="11" fill="#3E7E0B" />

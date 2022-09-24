@@ -45,7 +45,7 @@ const Instrumensts = () => {
 				<Image className="object-cover" src={oneinsr} alt="discountImg" />
 
 			</div>
-			<section className="container__special ..5x3:mt-5 ..5x1:-mt-32 relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40  pb-36 ">
+			<section className="container__special ..7x2:pb-20 ..5x3:mt-5 ..5x1:-mt-32 relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40  pb-36 ">
 				<p className="absolute left-1/2 ability text-2xl z-10">Сервисы</p>
 
 				<svg width="140" className="absolute ..6x2:h-22 ..6x2:w-22 ..6x2:mt-5 left-1/2 ability top-12" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,7 +54,7 @@ const Instrumensts = () => {
 
 
 
-				<p className="text-center text-3xl italic mb-3 absolute left-1/2 ability top-40">И ИНСТРУМЕНТЫ</p>
+				<p className="text-center text-3xl italic mb-3 absolute left-1/2 ability top-40 ..7x2:text-2xl">И ИНСТРУМЕНТЫ</p>
 				<Slider {...settings} className='mt-32'>
 					<div className="flex ..5x4:!flex mt-12">
 						<div className="flex-1 justify-center flex-col relative items-center   transition-all hover:text-primary cursor-pointer">
@@ -171,7 +171,7 @@ const Instrumensts = () => {
 
 						</div>
 					</div>
-					<div className="flex ..5x4:!flex w-full">
+					<div className="..7x2:hidden flex ..5x4:!flex w-full">
 						<div className="flex-1 relative justify-center flex-col items-center   mt-10   transition-all hover:text-primary cursor-pointer">
 							<svg className="absolute left-1/2 ability" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clipPath="url(#clip0_2279_697339)">
@@ -267,7 +267,7 @@ const Instrumensts = () => {
 
 						</div>
 
-						<div className="flex-1 relative ..6x2:hidden   justify-center flex-col items-center mt-10  transition-all hover:text-primary cursor-pointer">
+						<div className="flex-1 ..7x2:hidden relative ..6x2:hidden   justify-center flex-col items-center mt-10  transition-all hover:text-primary cursor-pointer">
 							<svg className="absolute left-1/2 ability" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clipPath="url(#clip0_2279_697355)">
 									<path d="M64.4444 45.1111V6.44444C64.4444 2.9 61.5767 0 58 0H6.44444C2.9 0 0 2.9 0 6.44444V45.1111C0 48.6878 2.9 51.5555 6.44444 51.5555H19.3333L32.2222 64.4444L45.1111 51.5555H58C61.5767 51.5555 64.4444 48.6878 64.4444 45.1111Z" fill="#337202" />
@@ -387,7 +387,7 @@ const Instrumensts = () => {
 
 
 						</div>
-						<div className="flex-1 relative    justify-center flex-col items-center mt-10  transition-all hover:text-primary cursor-pointer">
+						<div className="flex-1 relative  ..7x2:hidden  justify-center flex-col items-center mt-10  transition-all hover:text-primary cursor-pointer">
 							<svg className="absolute left-1/2 ability" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g clipPath="url(#clip0_2279_697355)">
 									<path d="M64.4444 45.1111V6.44444C64.4444 2.9 61.5767 0 58 0H6.44444C2.9 0 0 2.9 0 6.44444V45.1111C0 48.6878 2.9 51.5555 6.44444 51.5555H19.3333L32.2222 64.4444L45.1111 51.5555H58C61.5767 51.5555 64.4444 48.6878 64.4444 45.1111Z" fill="#337202" />

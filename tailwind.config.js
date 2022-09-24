@@ -38,7 +38,8 @@ module.exports = {
 			'..6x04': { 'max': '530px' },
 			'..6x5': { 'max': '500px' },
 			'..6x6': { 'max': '450px' },
-			'..7x1': { 'max': '400px' }
+			'..7x1': { 'max': '400px' },
+			'..7x2': { 'max': '320px' }
 		},
 		colors: {
 			white: {

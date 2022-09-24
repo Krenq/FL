@@ -20,11 +20,13 @@ const Funds = () => {
 		prevArrow: <DiscounstsButtonsSliderPrev />,
 		responsive: [
 			{
-				breakpoint: 1450,
+				breakpoint: 1600,
 				settings: {
+
+					centerMode: false,
 					variableWidth: false,
 					focusOnSelect: false,
-					cunterMode: false
+
 				}
 			},
 
@@ -42,31 +44,31 @@ const Funds = () => {
 				<path d="M105.01 90.496L91.1736 116.337" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
 			</svg>
 			<p className="ability absolute left-1/2 top-6 font-medium text-xl pt-10">Что-то</p>
-			<p className="ability absolute left-1/2 top-24 w-full text-center font-medium text-2xl italic mb-4">ПРО УХОДОВЫЕ СРЕДСТВА</p>
-			<p className="text-center text-lg mb-10 pt-32">Которые не так очевидны в каталоге, например, подкатегории, <br /> наборы и идеи подарков</p>
+			<p className="ability absolute left-1/2 top-24 w-full   text-center font-medium text-2xl italic mb-4">ПРО УХОДОВЫЕ СРЕДСТВА</p>
+			<p className="text-center text-lg mb-10 pt-32 ..7x2:text-base">Которые не так очевидны в каталоге, например, подкатегории, <br /> наборы и идеи подарков</p>
 			<Slider {...settings} className='funds'>
 
-				<div className="pb-20">
+				<div className="pb-20 ..7x2:p-0">
 					<div className="flex justify-center ..6x4:flex-wrap ">
 						<div className="..6x4:h-80 relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
 							<Image className="object-cover" src={one} alt="discountImg" />
-							<p className="absolute bottom-10 left-10 text-xl font-medium">Сыворотки</p>
-							<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<p className="absolute bottom-10 left-10 text-xl font-medium ..7x2:left-2 ..7x2:bottom-5 ">Сыворотки</p>
+							<small className="flex items-center absolute bottom-10 right-10 ..7x2:right-2 ..7x2:bottom-5 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 							</svg></small>
 						</div>
 						<div>
 							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image className="object-cover" src={two} alt="discountImg" />
-								<p className="absolute bottom-10 left-10 text-xl font-medium">Макияж</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<p className="absolute bottom-10 left-10 text-xl font-medium  ..7x2:left-2 ..7x2:bottom-5">Макияж</p>
+								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 								</svg></small>
 							</div>
 							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image className="object-cover" src={tree} alt="discountImg" />
-								<p className="absolute bottom-10 left-10 text-xl font-medium z-10">Идеи подарков</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<p className="absolute bottom-10 left-10 text-xl font-medium z-10  ..7x2:left-2 ..7x2:bottom-5">Идеи подарков</p>
+								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 								</svg></small>
 							</div>
@@ -74,27 +76,27 @@ const Funds = () => {
 					</div>
 
 				</div>
-				<div className="pb-20">
+				<div className="pb-20 ..7x2:p-0">
 					<div className="flex justify-center ..6x4:flex-wrap ">
 						<div className="..6x4:h-80 relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
 							<Image className="object-cover" src={one} alt="discountImg" />
-							<p className="absolute bottom-10 left-10 text-xl font-medium">Сыворотки</p>
-							<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<p className="absolute bottom-10 left-10 text-xl font-medium ..7x2:left-2 ..7x2:bottom-5 ">Сыворотки</p>
+							<small className="flex items-center absolute bottom-10 right-10 ..7x2:right-2 ..7x2:bottom-5 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 							</svg></small>
 						</div>
 						<div>
 							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image className="object-cover" src={two} alt="discountImg" />
-								<p className="absolute bottom-10 left-10 text-xl font-medium">Макияж</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<p className="absolute bottom-10 left-10 text-xl font-medium  ..7x2:left-2 ..7x2:bottom-5">Макияж</p>
+								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 								</svg></small>
 							</div>
 							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image className="object-cover" src={tree} alt="discountImg" />
-								<p className="absolute bottom-10 left-10 text-xl font-medium z-10">Идеи подарков</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<p className="absolute bottom-10 left-10 text-xl font-medium z-10  ..7x2:left-2 ..7x2:bottom-5">Идеи подарков</p>
+								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 								</svg></small>
 							</div>
@@ -102,27 +104,27 @@ const Funds = () => {
 					</div>
 
 				</div>
-				<div className="pb-20">
+				<div className="pb-20 ..7x2:p-0">
 					<div className="flex justify-center ..6x4:flex-wrap ">
 						<div className="..6x4:h-80 relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
 							<Image className="object-cover" src={one} alt="discountImg" />
-							<p className="absolute bottom-10 left-10 text-xl font-medium">Сыворотки</p>
-							<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<p className="absolute bottom-10 left-10 text-xl font-medium ..7x2:left-2 ..7x2:bottom-5 ">Сыворотки</p>
+							<small className="flex items-center absolute bottom-10 right-10 ..7x2:right-2 ..7x2:bottom-5 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 							</svg></small>
 						</div>
 						<div>
 							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image className="object-cover" src={two} alt="discountImg" />
-								<p className="absolute bottom-10 left-10 text-xl font-medium">Макияж</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<p className="absolute bottom-10 left-10 text-xl font-medium  ..7x2:left-2 ..7x2:bottom-5">Макияж</p>
+								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 								</svg></small>
 							</div>
 							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image className="object-cover" src={tree} alt="discountImg" />
-								<p className="absolute bottom-10 left-10 text-xl font-medium z-10">Идеи подарков</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<p className="absolute bottom-10 left-10 text-xl font-medium z-10  ..7x2:left-2 ..7x2:bottom-5">Идеи подарков</p>
+								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">Смотреть<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 								</svg></small>
 							</div>

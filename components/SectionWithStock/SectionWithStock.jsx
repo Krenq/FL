@@ -4,13 +4,13 @@ import * as icons from '../../images/constsIcons';
 
 export default function SectionWithStock() {
 	return (
-		<article className=" ..6x6:text-xs flex flex-row justify-center items-center bg-primary-hover h-42px text-white font-noto-sans text-sm font-medium">
+		<article className=" ..7x2:text-10px ..6x6:text-xs flex flex-row justify-center items-center bg-primary-hover h-42px text-white font-noto-sans text-sm font-medium">
 			Кешбэк-марафон
-			<div className="..7x1:text-sm ..6x6:text-base bg-white px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3">
+			<div className=" ..7x2:text-10px  ..7x2:mx-1  ..7x1:text-sm ..6x6:text-base bg-white px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3">
 				17d : 09h : 10m : 20s
 			</div>
 			<div className=" flex flex-row items-center border-b border-b-white">
-				<button className="..6x6:text-xs font-montserrat font-medium text-13px">
+				<button className="..7x2:text-10px ..6x6:text-xs font-montserrat font-medium text-13px">
 					Учавствовать
 				</button>
 				<div className=" ml-1">

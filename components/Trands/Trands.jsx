@@ -36,9 +36,9 @@ const Trands = () => {
 
 
 			</div>
-			<div className="..6x2:w-full ..6x2:flex ..6x2:justify-center absolute left-1/2 ability z-10 bottom-60 ..5x1:bottom-96">
-				<button className="mr-4 border-2 py-3 px-6 text-white bg-primary border-primary transition-all hover:bg-white hover:text-primary">Показать еще</button>
-				<button className="mr-4 border-2 py-3 px-6 text-primary bg-white border-primary transition-all hover:bg-primary hover:text-white">Посмотреть все</button>
+			<div className="..6x2:w-full ..6x2:flex ..7x2:ml-2 ..6x2:justify-center absolute left-1/2 ability z-10 bottom-60 ..5x1:bottom-96">
+				<button className="mr-4 ..7x2:text-sm ..7x2:py-2 ..7x2:px-5 border-2 py-3 px-6 text-white bg-primary border-primary transition-all hover:bg-white hover:text-primary">Показать еще</button>
+				<button className="mr-4 ..7x2:text-sm ..7x2:py-2 border-2 py-3 px-6 text-primary bg-white border-primary transition-all hover:bg-primary hover:text-white">Посмотреть все</button>
 			</div>
 		</section>
 	)

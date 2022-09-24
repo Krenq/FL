@@ -57,10 +57,10 @@ const SeaAct = () => {
 				</svg>
 
 				<p className='absolute left-1/2 ability  font-medium text-2xl  ..6x04:text-xl'>Каждый сезон</p>
-				<p className='absolute left-1/2 ability top-24 text-center font-medium text-3xl italic ..6x04:text-2xl'>НОВЫЕ АКЦИИ</p>
+				<p className='absolute left-1/2 ability top-24 text-center font-medium text-3xl italic ..6x04:text-2xl ..7x2:text-xl'>НОВЫЕ АКЦИИ</p>
 				<p className="mb-9 text-center mt-20">Покупай в наборах и получай подарок</p>
 				<div className='flex justify-center '>
-					<div className='relative   .3x1:hidden'>
+					<div className='relative   .4x1:hidden'>
 						<div className='absolute top-32 left-10 z-10'>
 							<p className='text-2xl text-primary'>АКЦИЯ ВЕСНЫ</p>
 							<p className='text-3xl font-medium'>Получай подарки за покупки</p>
@@ -74,7 +74,7 @@ const SeaAct = () => {
 						</p>
 						<Image className="object-cover sunl" height='1523px' width='1146px' src={one} alt="productsPhoto" />
 					</div>
-					<Slider {...settings} className='actionsfl flex flex-wrap .3x1:w-2/3 ..5x2:w-full .1x1:w-4/5 .3x1:justify-center'>
+					<Slider {...settings} className='actionsfl flex flex-wrap .4x1:w-2/3 ..5x2:w-full .1x1:w-4/5 .4x1:justify-center'>
 						<div className="relative pr-0 bg-white m-2 mt-0 cursor-pointer item transition-all hover:scale-95 hover:text-primary">
 							<div className="absolute items-center z-10 flex ">
 								<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
