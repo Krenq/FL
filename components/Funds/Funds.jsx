@@ -44,8 +44,9 @@ const Funds = () => {
 				<path d="M105.01 90.496L91.1736 116.337" stroke="white" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
 			</svg>
 			<p className="ability absolute left-1/2 top-6 font-medium text-xl pt-10">Что-то</p>
-			<p className="ability absolute left-1/2 top-24 w-full   text-center font-medium text-2xl italic mb-4">ПРО УХОДОВЫЕ СРЕДСТВА</p>
-			<p className="text-center text-lg mb-10 pt-32 ..7x2:text-base">Которые не так очевидны в каталоге, например, подкатегории, <br /> наборы и идеи подарков</p>
+			<p className="ability absolute left-1/2 top-24 w-full   text-center font-medium text-2xl italic mb-4 ..7x2:text-xl">ПРО УХОДОВЫЕ СРЕДСТВА</p>
+			<p className="text-center text-lg mb-10 pt-32 ..7x2:text-sm">Которые не так очевидны в каталоге, например, подкатегории, <br /> наборы и идеи подарков</p>
+
 			<Slider {...settings} className='funds'>
 
 				<div className="pb-20 ..7x2:p-0">
