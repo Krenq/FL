@@ -326,7 +326,7 @@ const Instrumensts = () => {
 				</div>
 				<Slider {...settings} className='mt-32 hidden ..5x4:flex ..5x4:h-80  flex-wrap justify-center instrim'>
 
-					<div className="..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2 ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-86px  justify-center flex-col relative items-center   transition-all hover:text-primary cursor-pointer">
+					<div className="!h-80 ..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-1 ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-86px  justify-center flex-col relative items-center   transition-all hover:text-primary cursor-pointer">
 						<svg className="absolute left-1/2 ability" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clipPath="url(#clip0_2275_697625)">
 								<path d="M64.4444 45.1111V6.44444C64.4444 2.9 61.5767 0 58 0H6.44444C2.9 0 0 2.9 0 6.44444V45.1111C0 48.6878 2.9 51.5555 6.44444 51.5555H19.3333L32.2222 64.4444L45.1111 51.5555H58C61.5767 51.5555 64.4444 48.6878 64.4444 45.1111Z" fill="#337202" />
@@ -345,7 +345,7 @@ const Instrumensts = () => {
 							<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 						</svg></p>
 					</div>
-					<div className="..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2  ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-100px   relative justify-center flex-col items-center  transition-all hover:text-primary cursor-pointer">
+					<div className="!h-80 ..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2  ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-100px   relative justify-center flex-col items-center  transition-all hover:text-primary cursor-pointer">
 						<svg width="64" height="64" className="absolute left-1/2 ability" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clipPath="url(#clip0_2276_697302)">
 								<path d="M64.4444 45.1111V6.44444C64.4444 2.9 61.5767 0 58 0H6.44444C2.9 0 0 2.9 0 6.44444V45.1111C0 48.6878 2.9 51.5555 6.44444 51.5555H19.3333L32.2222 64.4444L45.1111 51.5555H58C61.5767 51.5555 64.4444 48.6878 64.4444 45.1111Z" fill="#337202" />
@@ -364,7 +364,7 @@ const Instrumensts = () => {
 							<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 						</svg></p>
 					</div>
-					<div className="..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2 ..5x4:block ..5x4:h-full ..5x4:pb-6 ..5x4:pt-5  ..6x2:hidden relative justify-center flex-col items-center transition-all hover:text-primary cursor-pointer">
+					<div className="!h-80 ..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2 ..5x4:block ..5x4:h-full ..5x4:pb-6 ..5x4:pt-5  ..6x2:hidden relative justify-center flex-col items-center transition-all hover:text-primary cursor-pointer">
 						<svg className="absolute left-1/2 ability" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clipPath="url(#clip0_2277_697301)">
 								<path d="M64.4444 45.1111V6.44444C64.4444 2.9 61.5767 0 58 0H6.44444C2.9 0 0 2.9 0 6.44444V45.1111C0 48.6878 2.9 51.5555 6.44444 51.5555H19.3333L32.2222 64.4444L45.1111 51.5555H58C61.5767 51.5555 64.4444 48.6878 64.4444 45.1111Z" fill="#337202" />
@@ -440,7 +440,7 @@ const Instrumensts = () => {
 
 
 					</div>
-					<div className="..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2 ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-24  relative justify-center flex-col items-center      transition-all hover:text-primary cursor-pointer">
+					<div className="!h-80 ..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2 ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-24  relative justify-center flex-col items-center      transition-all hover:text-primary cursor-pointer">
 						<svg className="absolute left-1/2 ability" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clipPath="url(#clip0_2279_697339)">
 								<path d="M64.4444 45.1111V6.44444C64.4444 2.9 61.5767 0 58 0H6.44444C2.9 0 0 2.9 0 6.44444V45.1111C0 48.6878 2.9 51.5555 6.44444 51.5555H19.3333L32.2222 64.4444L45.1111 51.5555H58C61.5767 51.5555 64.4444 48.6878 64.4444 45.1111Z" fill="#337202" />
@@ -464,7 +464,7 @@ const Instrumensts = () => {
 
 
 					</div>
-					<div className="..5x4:bg-gray-light2 itemSl mt-2  ..5x4:px-2 ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-28  relative   justify-center flex-col items-center  mr-0 transition-all hover:text-primary cursor-pointer">
+					<div className="!h-80 ..5x4:bg-gray-light2 itemSl mt-2  ..5x4:px-2 ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-28  relative   justify-center flex-col items-center  mr-0 transition-all hover:text-primary cursor-pointer">
 
 						<svg width="64" className="absolute left-1/2 ability" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clipPath="url(#clip0_2279_697347)">
@@ -487,9 +487,9 @@ const Instrumensts = () => {
 
 
 						<p className="text-xl font-medium mb-2 text-center mt-16">Доставка от 1000 ₽ </p>
-						<div className="flex justify-center">
-							<div className="flex flex-col">
-								<small className="flex font-medium">Россия <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<div className="flex justify-center flex-wrap">
+							<div className="flex ">
+								<small className="flex font-medium mr-2 mb-3">Россия <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<g clipPath="url(#clip0_2282_697496)">
 										<path d="M7.38542 9.625L5 12.0201L2.60937 9.625L1.875 10.3623L5 13.5L8.125 10.3623L7.38542 9.625Z" fill="#337202" />
 									</g>
@@ -500,10 +500,10 @@ const Instrumensts = () => {
 									</defs>
 								</svg>
 								</small>
-								<small className="text-gray-quick-silver mb-10 ">+ 31 страна</small>
+								<small className="text-gray-quick-silver w-full ">+ 31 страна</small>
 							</div>
 
-							<div className="flex ">
+							<div className="flex ..5x4:flex-wrap justify-center">
 								<div className="mr-2">
 									<Image className="object-cover" src={yandex} alt="discountImg" />
 								</div>
@@ -524,7 +524,7 @@ const Instrumensts = () => {
 
 
 							</div>
-							<p className="flex items-center text-sm text-center absolute -bottom-0 left-1/2 ability ..6x3:!bottom-1 ..5x2:bottom-5">Подробнее<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<p className="flex items-center text-sm text-center absolute -bottom-0 left-1/2 ability ..6x3:!bottom-8 ..5x2:bottom-5">Подробнее<svg className='ml-2' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z" fill="black" />
 							</svg></p>
 
@@ -533,7 +533,7 @@ const Instrumensts = () => {
 
 
 					</div>
-					<div className="..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2 ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-32   ..7x2:hidden relative ..6x2:hidden   justify-center flex-col items-center   transition-all hover:text-primary cursor-pointer">
+					<div className="!h-80 ..5x4:bg-gray-light2 itemSl mt-2 ..5x4:px-2 ..5x4:pt-5 ..5x4:block ..5x4:h-full ..5x4:pb-32   ..7x2:hidden relative ..6x2:hidden   justify-center flex-col items-center   transition-all hover:text-primary cursor-pointer">
 						<svg className="absolute left-1/2 ability" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clipPath="url(#clip0_2279_697355)">
 								<path d="M64.4444 45.1111V6.44444C64.4444 2.9 61.5767 0 58 0H6.44444C2.9 0 0 2.9 0 6.44444V45.1111C0 48.6878 2.9 51.5555 6.44444 51.5555H19.3333L32.2222 64.4444L45.1111 51.5555H58C61.5767 51.5555 64.4444 48.6878 64.4444 45.1111Z" fill="#337202" />

@@ -469,6 +469,10 @@
 }
 
 @media(max-width: 320px) {
+	.container__special .instrim .slick-dots {
+		bottom: -45px !important;
+	}
+
 	.partners .prevPartner {
 		top: unset;
 		bottom: 27%;
