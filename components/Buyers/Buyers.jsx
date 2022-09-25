@@ -46,14 +46,14 @@ const Buyers = () => {
 							<div className="absolute top-24 ..6x3:pt-0 left-44">
 								<Image className="object-cover" src={groups} alt="specialOffersImg" />
 							</div>
-							<button className="buttons absolute ..6x2:top-24 ..6x4:top-32 ..6x2:text-xs ..6x1:top-28 top-48 .2x1:text-base ..5x1:text-sm ..5x1:h-12 ..5x1:top-36 transition-all hover:opacity-80  h-14 w-42 bg-primary left-5 text-white px-8 py-4">Подробнее</button>
+							<button className="buttons ..7x2:h-11 ..7x2:pt-3 absolute ..6x2:top-24 ..6x4:top-32 ..6x2:text-xs ..6x1:top-28 top-48 .2x1:text-base ..5x1:text-sm ..5x1:h-12 ..5x1:top-36 transition-all hover:opacity-80  h-14 w-42 bg-primary left-5 text-white px-8 py-4">Подробнее</button>
 
 						</div>
 						<div className="pt-3 ..6x3:pt-0 relative w-full">
 							<Image className="object-cover" src={tree} alt="specialOffersImg" />
 							<p className="..7x2:text-xl ..6x2:text-lg ..6x4:text-2xl ..6x1:top-4 ..6x2:top-5 ..6x1:top-3..6x1:top-3  text-4xl z-10 .2x1:text-3xl text-black absolute top-10  left-4 w-full ..5x1:text-2xl">Бесплатная доставка <br /> от 1500 ₽</p>
 							<p className="..7x2:text-base   ..6x2:text-base ..6x4:top-20 ..6x4:text-lg ..6x2:top-16  ..6x1:top-20 text-3xl z-10 .2x1:text-2xl  text-primary absolute news top-32 left-4  w-full ..5x1:text-xl ..5x1:top-28">новичкам июня</p>
-							<button className="buttons ..6x4:top-32 ..6x1:top-28 ..6x2:top-24 ..6x2:text-xs ..5x1:text-sm ..5x1:h-12 ..5x1:top-36 transition-all .2x1:h-14 .2x1:w-36  hover:opacity-80 bg-primary absolute w-52 top-52 h-16 see text-white px-8 py-4 left-4">Подробнее</button>
+							<button className="buttons  ..7x2:h-11 ..7x2:pt-3 ..6x4:top-32 ..6x1:top-28 ..6x2:top-24 ..6x2:text-xs ..5x1:text-sm ..5x1:h-12 ..5x1:top-36 transition-all .2x1:h-14 .2x1:w-36  hover:opacity-80 bg-primary absolute w-52 top-52 h-16 see text-white px-8 py-4 left-4">Подробнее</button>
 
 						</div>
 					</div>

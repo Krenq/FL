@@ -41,7 +41,7 @@ const Health = () => {
 
 					<Slider {...settings} className='flex  '>
 						<div>
-							<div className="  bg-white relative pb-96 mr-3 mb-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
+							<div className="  bg-white relative pb-96 mr-3 ..7x2:pb-64 mb-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
 								<p className="..6x04:text-6xl text-7xl ability text-gray font-medium absolute z-10 left-1/2 ">-30%</p>
 								<p className=" ability ..6x04:text-xl text-2xl text-primary  absolute top-12 z-10 left-1/2 ">«АНТИСТРЕСС»</p>
 								<p className=" ability ..6x04:text-xl text-2xl text-center  absolute top-20 z-10 left-1/2 ">Смотри на мир здоровыми глазами!</p>
@@ -74,9 +74,9 @@ const Health = () => {
 
 							</div>
 							<div className="ml-3 bg-primary  mt-3 relative">
-								<p className="text-center text-3xl text-white pt-16 pb-5 ..5x1:text-2xl ..7x2:text-xl">50+ программ</p>
-								<p className="text-center text-2xl text-white pb-40 ..5x1:text-lg ..7x2:text-base">«Мужское здоровье», «антипаразитарная <br /> программа», «бодрость и энергия», «активное <br /> долголетие» и др.</p>
-								<button className="ability border-2 border-gray absolute bottom-20 text-gray py-2 px-4  left-1/2 hover:text-white transition-all">Все программы</button>
+								<p className="text-center text-3xl text-white pt-16 pb-5 ..5x1:text-2xl ..7x2:text-xl ..7x2:pt-4">50+ программ</p>
+								<p className="text-center text-2xl text-white pb-40 ..5x1:text-lg ..7x2:text-base ..7x2:pb-32">«Мужское здоровье», «антипаразитарная <br /> программа», «бодрость и энергия», «активное <br /> долголетие» и др.</p>
+								<button className="ability border-2 border-gray absolute bottom-20 text-gray py-2 px-4  left-1/2 hover:text-white transition-all ..7x2:text-sm">Все программы</button>
 							</div>
 						</div>
 

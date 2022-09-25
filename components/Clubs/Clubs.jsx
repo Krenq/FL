@@ -24,8 +24,8 @@ const Clubs = () => {
 			<p className="text-xl text-center mt-4 pb-48 ..7x2:text-base .1x1:pb-42 ..6x04:text-lg">Покупай любимые продукты, зарабатывай DeCoins, оплачивай <br /> ими следующие заказы!
 			</p>
 			<div className="..6x2:w-full ..6x2:flex ..6x2:justify-center ..7x2:ml-2 absolute left-1/2 ability z-10 bottom-20">
-				<button className="mr-4 border-2 py-3 px-6 text-white bg-primary border-primary transition-all hover:bg-white hover:text-primary ..7x2:text-sm">Вступить в клуб</button>
-				<button className="mr-4 border-2 py-3 px-6 text-primary bg-white border-primary transition-all hover:bg-primary hover:text-white">Подробнее</button>
+				<button className="mr-4 border-2 py-3 px-6 text-white bg-primary border-primary transition-all hover:bg-white hover:text-primary ..7x2:text-10px">Вступить в клуб</button>
+				<button className="mr-4 border-2 py-3 px-6 text-primary bg-white border-primary transition-all hover:bg-primary hover:text-white ..7x2:text-10px">Подробнее</button>
 			</div>
 		</section>
 	)

@@ -469,6 +469,21 @@
 }
 
 @media(max-width: 320px) {
+	.partners .prevPartner {
+		top: unset;
+		bottom: 27%;
+		transform: rotate(180deg);
+	}
+
+	.partners .nextPartner {
+		top: unset;
+		bottom: 23.5%;
+	}
+
+	.catb {
+		transform: translateY(4px);
+	}
+
 	.logo {
 		left: 35% !important;
 	}
@@ -507,8 +522,8 @@
 	}
 
 	.catal {
-		height: 55px !important;
-		transform: translate(-2px, 15px);
+		height: 52px !important;
+		transform: translate(-2px, 13px);
 		width: 144px !important;
 	}
 
