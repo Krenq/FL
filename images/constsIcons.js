@@ -32,3 +32,5 @@ export const ICON_TIK_TOK_GREEN = require('./Icons/tik-tok_green.png');
 
 export const ICON_APP_STORE = require('./Icons/icon_app_store.png');
 export const ICON_GOOGLE_PLAY = require('./Icons/icon_google_play.png');
+
+export const ICON_DE_CATALOG = require('./Icons/icon_DE_CATALOG.png');
