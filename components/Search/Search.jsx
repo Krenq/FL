@@ -4,7 +4,7 @@ import * as icons from '../../images/constsIcons';
 
 export default function Search() {
 	return (
-		<article className=".1x1:pr-5 pr-86px ..5x2:flex ..5x1:pl-5">
+		<article className=".5x01:pr-2 pr-86px ..5x2:flex ..5x1:pl-5">
 			<Image className='..5x2:opacity-20'
 				src={icons.ICON_SEARCH}
 				height="24px"

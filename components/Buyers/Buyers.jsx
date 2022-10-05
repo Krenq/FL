@@ -101,13 +101,13 @@ function Buyers() {
           ПОКУПАТЕЛЯМ
         </p>
 
-        <Slider {...settings}>
-          <div className=" px-2">
+        <Slider {...settings} className="">
+          <div className="px-2">
             <Image
               className="object-cover"
               src={one}
               alt="specialOffersImg"
-              height={768}
+              height={760}
               width={710}
             />
           </div>
@@ -117,7 +117,7 @@ function Buyers() {
               className="object-cover"
               src={one}
               alt="specialOffersImg"
-              height={768}
+              height={760}
               width={710}
             />
           </div>
@@ -125,30 +125,31 @@ function Buyers() {
           <div className="flex flex-col justify-between px-2 h-full ">
             {/* <div className="mb-3 ..5x1:mb-2 ..5x03:mb-3 ..6x1:mb-2 ..6x03:mb-1 ..7x01:mb-0">
              */}
+
             <div className="relative cartinka">
               <Image
                 className=" object-cover"
                 src={two}
                 alt="specialOffersImg"
-                width={710}
+                width={730}
                 height={380}
               />
 
-              <p className="..7x2:text-xl ..6x2:text-lg ..6x4:text-2xl ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 ..5x1:text-2xl">
+              <p className="..6x2:text-3xl ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
                 Кешбэк-марафон + <br /> розыгрыш бьюти-гаджетов
               </p>
-              <p className="..7x2:text-base  ..6x2:text-base ..6x4:top-20 ..6x4:text-lg ..6x2:top-16  ..6x1:top-20 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-32 text-primary ..5x1:text-xl ..5x1:top-28">
+              <p className="..6x2:text-3xl ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-36 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
                 6%, 7%, 8%
               </p>
 
-              <div className="absolute top-24 ..6x3:pt-0 left-44">
+              <div className="absolute left-48 top-40 .1x01:top-32 .1x01:left-36 .1x01:w-50 .1x01:h-20 ..5x03:top-36 ..5x03:left-48 ..5x03:w-auto ..5x03:h-auto ..6x1:top-32 ..6x3:left-40 ..6x3:top-28 ..6x3:w-36 ..6x3:h-20 ..6x4:top-16 ..6x4:w-28 ..7x1:w-20 ..7x1:left-36 ..7x1:top-12">
                 <Image
-                  className="object-cover"
+                  className="object-cover .1x01:object-contain ..5x03:object-cover ..6x3:object-contain"
                   src={groups}
                   alt="specialOffersImg"
                 />
               </div>
-              <button className="buttons ..7x2:h-11 ..7x2:pt-3 absolute ..6x2:top-24 ..6x4:top-32 ..6x2:text-xs ..6x1:top-28 top-48 .2x1:text-base ..5x1:text-sm ..5x1:h-12 ..5x1:top-36 transition-all hover:opacity-80  h-14 w-42 bg-primary left-5 text-white px-8 py-4">
+              <button className="absolute left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-1 ..7x1:top-20">
                 Подробнее
               </button>
             </div>
@@ -162,13 +163,13 @@ function Buyers() {
                 height={380}
               />
 
-              <p className="..7x2:text-xl ..6x2:text-lg ..6x4:text-2xl ..6x1:top-4 ..6x2:top-5 ..6x1:top-3..6x1:top-3  text-4xl z-10 .2x1:text-3xl text-black absolute top-10  left-4 w-full ..5x1:text-2xl">
+              <p className="..6x2:text-3xl ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
                 Бесплатная доставка <br /> от 1500 ₽
               </p>
-              <p className="..7x2:text-base   ..6x2:text-base ..6x4:top-20 ..6x4:text-lg ..6x2:top-16  ..6x1:top-20 text-3xl z-10 .2x1:text-2xl  text-primary absolute news top-32 left-4  w-full ..5x1:text-xl ..5x1:top-28">
+              <p className="..6x2:text-3xl ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-36 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
                 новичкам июня
               </p>
-              <button className="buttons  ..7x2:h-11 ..7x2:pt-3 ..6x4:top-32 ..6x1:top-28 ..6x2:top-24 ..6x2:text-xs ..5x1:text-sm ..5x1:h-12 ..5x1:top-36 transition-all .2x1:h-14 .2x1:w-36  hover:opacity-80 bg-primary absolute w-52 top-52 h-16 see text-white px-8 py-4 left-4">
+              <button className="absolute left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-1 ..7x1:top-20">
                 Подробнее
               </button>
             </div>

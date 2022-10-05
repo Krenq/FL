@@ -34,3 +34,10 @@ export const ICON_APP_STORE = require('./Icons/icon_app_store.png');
 export const ICON_GOOGLE_PLAY = require('./Icons/icon_google_play.png');
 
 export const ICON_DE_CATALOG = require('./Icons/icon_DE_CATALOG.png');
+
+export const ICON_LK = require('./Icons/Image_LK.png');
+export const ICON_SKIDKA = require('./Icons/Image_skidka.png');
+export const ICON_MOB_APPS = require('./Icons/Image_mob_apps.png');
+export const ICON_ONLINE_BONUS = require('./Icons/Image_online_bonus.png');
+export const ICON_DOSTAVKA = require('./Icons/Image_dostavka.png');
+export const ICON_OPLATA = require('./Icons/Image_oplata.png');

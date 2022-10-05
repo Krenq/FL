@@ -17,7 +17,7 @@ export default function ShoppingBag() {
                 height="22px"
               />
             </div>
-            <div className=" bg-primary rounded-2xl px-10px -mt-6px text-white ml-6px h-5 py-0.5 text-10px font-noto-sans font-medium">
+            <div className=" bg-primary rounded-2xl px-10px -mt-6px text-white ml-6px h-5 py-0.5 pt-1 text-10px font-noto-sans font-medium">
               12
             </div>
           </div>
