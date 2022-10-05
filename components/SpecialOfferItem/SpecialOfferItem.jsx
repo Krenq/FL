@@ -28,7 +28,7 @@ export default function SpecialOfferItem({ img }) {
           />
         </svg>
         <div className=" mt-20">
-          <Image className=" object-cover" src={img} />
+          <Image className=" object-cover" src={img} width={218} height={218}/>
         </div>
         <div className="flex flex-row justify-end items-end w-full mb-4">
           <svg

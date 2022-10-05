@@ -56,7 +56,7 @@ function Buyers() {
   return (
     <div className="relative">
       <div className="absolute left-0 bottom-0 ..6x2:w-40 ..6x2:h-40 .4x1:-bottom-32">
-        <Image className="object-cover " src={twoglos} alt="specialOffersImg" />
+        <Image className="object-cover " src={twoglos} alt="specialOffersImg" width={237} height={237}/>
       </div>
 
       <section className="container__special relative pt-10 .4x1:pt-10 ..5x2:pt-32">
@@ -123,8 +123,6 @@ function Buyers() {
           </div>
 
           <div className="flex flex-col justify-between px-2 h-full ">
-            {/* <div className="mb-3 ..5x1:mb-2 ..5x03:mb-3 ..6x1:mb-2 ..6x03:mb-1 ..7x01:mb-0">
-             */}
 
             <div className="relative cartinka">
               <Image
@@ -147,6 +145,8 @@ function Buyers() {
                   className="object-cover .1x01:object-contain ..5x03:object-cover ..6x3:object-contain"
                   src={groups}
                   alt="specialOffersImg"
+                  width={230}
+                  height={112}
                 />
               </div>
               <button className="absolute left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-1 ..7x1:top-20">

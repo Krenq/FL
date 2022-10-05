@@ -15,7 +15,7 @@ export default function InstrumentItem({
     <div class="sm:w-1/2 md:w-1/2 lg:w-1/4 ..6x03:mt-32 ..6x03:mx-auto ..6x03:w-250px ..6x03:h-305px ..6x03:text-center ..6x03:flex ..6x03:flex-col ..6x03:justify-between ..6x03:bg-gray-light px-4 py-4 bg-gray-100 rounded-lg dark:bg-gray-800">
       <div class="flex-shrink-0">
         <div class="flex items-center mx-auto justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-          <Image src={icon} />
+          <Image src={icon} width={64} height={64}/>
         </div>
       </div>
       <h3 class="text-2xl sm:text-xl ..6x03:text-sm text-black font-medium font-montserrat dark:text-white pt-4">
@@ -60,9 +60,11 @@ export default function InstrumentItem({
                     return (
                       <div className='mx-1'>
                         <Image
-                          className="object-cover"
+                          className="object-contain"
                           src={el}
                           alt="discountImg"
+                          width={50}
+                          height={16}
                         />
                       </div>
                     );
@@ -83,8 +85,8 @@ export default function InstrumentItem({
 
       {bottomImg1 ? (
         <div className="flex flex-row justify-around ">
-          <Image className='object-fill' src={bottomImg1}/>
-          <Image className='object-fill' src={bottomImg2}/>
+          <Image className='object-fill' width={135} height={44} src={bottomImg1}/>
+          <Image className='object-fill' width={135} height={44} src={bottomImg2}/>
         </div>
       ) : (
         

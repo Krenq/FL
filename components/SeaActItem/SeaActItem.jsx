@@ -41,7 +41,7 @@ export default function SeaActItem({ img, mb }) {
           />
         </svg>
         <div className=" mt-10">
-          <Image className=" object-cover" src={img} />
+          <Image className=" object-cover" src={img} width={218} height={218}/>
         </div>
         <div className="flex flex-row justify-between items-end w-full mb-1">
           <p className="text-sm flex items-center text-gray-quick-silver">

@@ -71,6 +71,8 @@ const Partners = () => {
         <Image
           className="object-cover "
           src={twopartner}
+          width={277}
+          height={277}
           alt="specialOffersImg"
         />
       </div>
@@ -126,6 +128,8 @@ const Partners = () => {
                 <Image
                   className="object-cover"
                   src={onepartner}
+                  width={1028}
+                  height={432}
                   alt="discountImg"
                 />
                 <p className="absolute top-10 left-10 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
@@ -158,6 +162,8 @@ const Partners = () => {
                 <Image
                   className="object-cover"
                   src={onepartner}
+                  width={1028}
+                  height={432}
                   alt="discountImg"
                 />
                 <p className="absolute top-10 left-10 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
@@ -189,6 +195,8 @@ const Partners = () => {
                 <Image
                   className="object-cover"
                   src={onepartner}
+                  width={1028}
+                  height={432}
                   alt="discountImg"
                 />
                 <p className="absolute top-10 left-10 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
@@ -221,6 +229,8 @@ const Partners = () => {
                 <Image
                   className="object-cover"
                   src={onepartner}
+                  width={1028}
+                  height={432}
                   alt="discountImg"
                 />
                 <p className="absolute top-10 left-10 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">

@@ -89,6 +89,8 @@ const Health = () => {
                   <Image
                     className="object-cover"
                     src={oneHealth}
+                    width={300}
+                    height={300}
                     alt="discountImg"
                   />
                 </div>
@@ -103,6 +105,8 @@ const Health = () => {
                 <Image
                   className="object-cover"
                   src={twoHealth}
+                  width={720}
+                  height={900}
                   alt="discountImg"
                 />
                 <p className="absolute top-52 cursor-pointer z-10 left-10 flex items-center text-sm ..7x2:left-2">
@@ -150,6 +154,8 @@ const Health = () => {
                 <Image
                   className="object-cover"
                   src={treeHealth}
+                  width={720}
+                  height={900}
                   alt="discountImg"
                 />
               </div>

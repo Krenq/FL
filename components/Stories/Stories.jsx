@@ -4,9 +4,9 @@ import twoStories from '../../images/templates/2stories.jpg';
 import treeStories from '../../images/templates/3stories.jpg';
 import fourStories from '../../images/templates/4stories.jpg';
 import oneStories from '../../images/templates/1stories.jpg';
-import PartnersButtonNext from '../Partners/PartnersButtonNext';
-import PartnersButtonPrev from '../Partners/PartnersButtonPrev';
 import StoriesItem from '../StoriesItem/StoriesItem';
+import StoriesNext from './StoriesNext';
+import StoriesPrev from './StoriesPrev';
 import useWindowSize from '../utils/useWindowSize';
 import { useEffect, useRef, useState } from 'react';
 
@@ -29,8 +29,8 @@ const Stories = () => {
     centerMode: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: <PartnersButtonPrev />,
-    nextArrow: <PartnersButtonNext />,
+    prevArrow: <StoriesPrev />,
+    nextArrow: <StoriesNext />,
     dotsClass: 'slick-dots slick-thumb',
 
     responsive: [

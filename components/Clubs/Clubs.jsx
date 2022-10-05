@@ -6,10 +6,10 @@ function Clubs() {
   return (
     <section className="relative bg-nude-2 mt-16 .1x1:mt-14">
       <div className="absolute right-0 bottom-0 ..6x2:w-40 ..6x2:h-40 .4x1:-bottom-32">
-        <Image className="object-cover " src={one} alt="specialOffersImg" />
+        <Image className="object-cover " src={one} width={486} height={486} alt="specialOffersImg" />
       </div>
       <div className="absolute left-0 top-0 ..6x4:-top-10 ..6x2:w-40 ..6x2:h-40 .4x1:-bottom-32">
-        <Image className="object-cover " src={two} alt="specialOffersImg" />
+        <Image className="object-cover " width={357} height={357} src={two} alt="specialOffersImg" />
       </div>
 
       <svg

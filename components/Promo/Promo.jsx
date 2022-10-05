@@ -9,6 +9,8 @@ const Promo = () => {
         <Image
           className="object-cover ..5x3:!hidden"
           src={bg}
+          width={1920}
+          height={727}
           alt="specialOffersImg"
         />
       </div>
@@ -101,6 +103,8 @@ const Promo = () => {
             <Image
               className="object-cover z-20"
               src={itemleas}
+              width={497}
+              height={497}
               alt="specialOffersImg"
             />
           </div>
@@ -115,6 +119,8 @@ const Promo = () => {
             className="object-cover z-20"
             src={itemleas}
             alt="specialOffersImg"
+            width={497}
+            height={497}
           />
         </div>
       </div>

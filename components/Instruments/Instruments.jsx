@@ -82,10 +82,10 @@ function Instrumensts() {
   return (
     <div className="relative">
       <div className="absolute right-0 bottom-0 ..6x2:w-40 ..6x2:h-40">
-        <Image className="object-cover" src={twoinsr} alt="discountImg" />
+        <Image className="object-cover" width={486} height={486} src={twoinsr} alt="discountImg" />
       </div>
       <div className="absolute right-0 top-0 ..6x2:w-40 ..6x2:h-40">
-        <Image className="object-cover" src={oneinsr} alt="discountImg" />
+        <Image className="object-cover" width={231} height={231} src={oneinsr} alt="discountImg" />
       </div>
       <section className="container__special ..7x2:pb-20 ..5x3:mt-5 ..5x1:-mt-32 relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40  pb-36 ">
         <p className="absolute left-1/2 ability text-2xl z-10">Сервисы</p>

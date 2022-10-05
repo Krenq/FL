@@ -39,8 +39,7 @@ function DiscountsSlider() {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-            }
-          }
+            }}
           >
             <ul
               style={{
@@ -75,6 +74,8 @@ function DiscountsSlider() {
               <div className="flex items-center">
                 <Image
                   className="object-cover"
+                  width={388}
+                  height={462}
                   src={imgProduct}
                   alt="discountImg"
                 />
@@ -203,6 +204,8 @@ function DiscountsSlider() {
               <Image
                 className="object-cover"
                 src={imgDiscount}
+                width={960}
+                height={824}
                 alt="discountImg"
               />
             </div>
@@ -215,6 +218,8 @@ function DiscountsSlider() {
                 <Image
                   className="object-cover"
                   src={imgProduct}
+                  width={388}
+                  height={462}
                   alt="discountImg"
                 />
 
@@ -342,6 +347,8 @@ function DiscountsSlider() {
               <Image
                 className="object-cover"
                 src={imgDiscount}
+                width={960}
+                height={824}
                 alt="discountImg"
               />
             </div>
@@ -354,6 +361,8 @@ function DiscountsSlider() {
                 <Image
                   className="object-cover"
                   src={imgProduct}
+                  width={388}
+                  height={462}
                   alt="discountImg"
                 />
 
@@ -481,6 +490,8 @@ function DiscountsSlider() {
               <Image
                 className="object-cover"
                 src={imgDiscount}
+                width={960}
+                height={824}
                 alt="discountImg"
               />
             </div>
@@ -493,6 +504,8 @@ function DiscountsSlider() {
                 <Image
                   className="object-cover"
                   src={imgProduct}
+                  width={388}
+                  height={462}
                   alt="discountImg"
                 />
 
@@ -620,6 +633,8 @@ function DiscountsSlider() {
               <Image
                 className="object-cover"
                 src={imgDiscount}
+                width={960}
+                height={824}
                 alt="discountImg"
               />
             </div>
@@ -632,6 +647,8 @@ function DiscountsSlider() {
                 <Image
                   className="object-cover"
                   src={imgProduct}
+                  width={388}
+                  height={462}
                   alt="discountImg"
                 />
 
@@ -759,6 +776,8 @@ function DiscountsSlider() {
               <Image
                 className="object-cover"
                 src={imgDiscount}
+                width={960}
+                height={824}
                 alt="discountImg"
               />
             </div>
@@ -771,6 +790,8 @@ function DiscountsSlider() {
                 <Image
                   className="object-cover"
                   src={imgProduct}
+                  width={388}
+                  height={462}
                   alt="discountImg"
                 />
 
@@ -898,6 +919,8 @@ function DiscountsSlider() {
               <Image
                 className="object-cover"
                 src={imgDiscount}
+                width={960}
+                height={824}
                 alt="discountImg"
               />
             </div>

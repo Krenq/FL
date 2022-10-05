@@ -8,6 +8,8 @@ import PartnersButtonNext from '../Partners/PartnersButtonNext';
 import PartnersButtonPrev from '../Partners/PartnersButtonPrev';
 import { useEffect, useRef, useState } from 'react';
 import useWindowSize from '../utils/useWindowSize';
+import NewsPrev from './NewsPrev';
+import NewsNext from './NewsNext';
 
 const News = () => {
   const divBlock = useRef(null);
@@ -26,8 +28,8 @@ const News = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <PartnersButtonPrev />,
-    nextArrow: <PartnersButtonNext />,
+    prevArrow: <NewsPrev />,
+    nextArrow: <NewsNext />,
     appendDots: (dots) => {
       setKol(dots.length);
       return (
@@ -145,7 +147,7 @@ const News = () => {
       <Slider {...settings} className="pt-48">
         <div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
           <div>
-            <Image className="object-cover" src={oneNew} alt="newsImg" />
+            <Image className="object-cover" width={474} height={330} src={oneNew} alt="newsImg" />
           </div>
           <div className="border-2 border-gray -mt-2 relative">
             <p className="text-center mt-6 text-gray-quick-silver underline mb-2">
@@ -165,7 +167,7 @@ const News = () => {
         </div>
         <div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
           <div>
-            <Image className="object-cover" src={twoNew} alt="newsImg" />
+            <Image className="object-cover" src={twoNew} width={474} height={330} alt="newsImg" />
           </div>
           <div className="border-2 border-gray -mt-2 relative">
             <p className="text-center mt-6 text-gray-quick-silver underline mb-2">
@@ -185,7 +187,7 @@ const News = () => {
         </div>
         <div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
           <div>
-            <Image className="object-cover" src={treeNew} alt="newsImg" />
+            <Image className="object-cover" src={treeNew} width={474} height={330} alt="newsImg" />
           </div>
           <div className="border-2 border-gray -mt-2 relative">
             <p className="text-center mt-6 text-gray-quick-silver underline mb-2">
@@ -206,7 +208,7 @@ const News = () => {
         </div>
         <div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
           <div>
-            <Image className="object-cover" src={treeNew} alt="newsImg" />
+            <Image className="object-cover" src={treeNew} width={474} height={330} alt="newsImg" />
           </div>
           <div className="border-2 border-gray -mt-2 relative">
             <p className="text-center mt-6 text-gray-quick-silver underline mb-2">
