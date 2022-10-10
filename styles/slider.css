@@ -1,0 +1,427 @@
+.stories {
+	border: 2px solid skyblue;
+	border-image: linear-gradient(to right top,
+			rgba(51, 114, 2, 1),
+			rgba(233, 251, 240, 1));
+	border-image-slice: 1;
+	min-width: 151px;
+	min-height: 146px;
+}
+
+.moreF {
+	left: 48.5%;
+	opacity: 0.9;
+	top: 35%;
+	transition: 0.3s ease all;
+	z-index: 20;
+}
+
+.moreP {
+	left: 110px;
+	opacity: 0.9;
+	top: 280px;
+	z-index: 30;
+	transition: 0.3s ease all;
+}
+
+.moreP:hover .info {
+	transition: 0.3s ease all;
+	display: block;
+	background-color: #fff;
+	z-index: 100;
+}
+
+.moreF:hover .info {
+	transition: 0.3s ease all;
+	display: block;
+	background-color: #fff;
+	z-index: 100;
+}
+
+@media (max-width: 530px) {
+	.text {
+		transform: translateY(-68px);
+	}
+
+	.catal {
+		height: 75px !important;
+	}
+
+	.snap {
+		height: 210px;
+		width: 210px;
+		margin-left: -4px;
+	}
+}
+
+.support {
+	width: 1200px;
+}
+
+.info {
+	box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
+}
+
+.next {
+	z-index: 1;
+	bottom: 10px;
+	border-radius: 20px;
+}
+
+.prev {
+	z-index: 1;
+	bottom: 10px;
+	border-radius: 20px;
+}
+
+.prev svg {
+	transform: rotate(180deg);
+}
+
+/* special offers */
+.container__special {
+	max-width: 1460px;
+	margin: 0 auto;
+}
+
+.special__next {
+	right: -20px;
+	z-index: 1;
+	bottom: 50%;
+	transform: translateY(-50%);
+	border-radius: 20px;
+}
+
+.special__prev {
+	left: -20px;
+	z-index: 1;
+	bottom: 50%;
+	transform: translateY(-50%) rotate(180deg);
+	border-radius: 20px;
+}
+
+.news {
+	bottom: 230px;
+	right: 445px;
+}
+
+.see {
+	bottom: 140px;
+	right: 515px;
+}
+
+/* TEMP STYLE */
+.itemTr {
+	margin-left: -20px;
+}
+
+.products-item {
+	width: 228px;
+}
+
+.promo {
+	height: 727px;
+}
+
+.timer {
+	background: linear-gradient(270.09deg,
+			rgba(255, 255, 255, 0.2) -1.39%,
+			rgba(255, 255, 255, 0) 99.9%);
+}
+
+.timer__wrapper {
+	transform: translateX(-320px);
+}
+
+.ability {
+	transform: translateX(-50%);
+}
+
+.nextPartner {
+	bottom: 6px;
+	z-index: 20;
+	border-radius: 20px;
+}
+
+.prevPartner {
+	bottom: -15px;
+	z-index: 20;
+	border-radius: 20px;
+	transform: translateY(-50%) rotate(180deg);
+
+}
+
+.nextNews {
+	right: -7px;
+	transform: translateY(-50%);
+	top: 66%;
+	border-radius: 20px;
+}
+
+.prevNews {
+	left: -7px;
+	transform: translateY(-50%) rotate(180deg);
+	top: 66%;
+	z-index: 20;
+	border-radius: 20px;
+}
+
+.act_slider .slick-slide div:first-child {
+	display: flex;
+}
+
+@media (max-width: 1536px) {
+	.special__next {
+		right: 10px !important;
+	}
+
+	.special__prev {
+		left: 10px !important;
+	}
+
+	/* .prevPartner {
+    left: 15px !important;
+  } */
+
+	/* .nextPartner {
+    right: 15px !important;
+  } */
+}
+
+@media (max-width: 1470px) {
+
+	.promo {
+		height: 550px !important;
+	}
+}
+
+@media (min-width: 1450px) {
+	.funds .slick-list .slick-track .slick-cloned div .pb-20 .flex {
+		opacity: 0.5;
+	}
+
+	.funds .slick-list .slick-track .slick-slide div .pb-20 .flex {
+		opacity: 0.5;
+	}
+
+	.funds .slick-list .slick-track .slick-current div .pb-20 .flex {
+		margin-left: 50px;
+		margin-right: 50px;
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1000px) {
+	.special .slick-list .slick-track .slick-slide div {
+		border-bottom: none !important;
+	}
+}
+
+@media (max-width: 950px) {
+
+	.promo {
+		background-image: url('../images/templates/bgL.jpg');
+	}
+
+	.cat {
+		transform: translateY(16px);
+	}
+}
+
+@media (max-width: 850px) {
+	/* .logo {
+    left: 40% !important;
+  } */
+}
+
+.actionsfl .slick-list .slick-track .slick-slide div {
+	display: flex;
+	justify-content: center;
+}
+
+
+@media (max-width: 400px) {
+	/* .logo {
+    left: 30% !important;
+  } */
+}
+
+@media (max-width: 320px) {
+
+	/* .partners .prevPartner {
+    top: unset;
+    bottom: 27%;
+    transform: rotate(180deg);
+  } */
+
+	/* .partners .nextPartner {
+    top: unset;
+    bottom: 23.5%;
+  } */
+
+	.catb {
+		transform: translateY(4px);
+	}
+
+	/* .logo {
+    left: 35% !important;
+  } */
+
+	.seesh {
+		transform: translateX(-50%);
+	}
+
+	.funds {
+		padding-bottom: 50px;
+	}
+
+	.text {
+		transform: translateY(-3px);
+	}
+
+	.catal {
+		height: 52px !important;
+		transform: translate(-2px, 13px);
+		width: 144px !important;
+	}
+
+	.catal:hover {
+		scale: 1 !important;
+	}
+
+	.snap {
+		height: 55px !important;
+		width: 144px !important;
+	}
+}
+
+.itemSl {
+	width: 240px;
+}
+
+@media (max-width: 800px) {
+	.seemore {
+		width: 340px !important;
+	}
+}
+
+.sunl {
+	width: 607px;
+}
+
+.drop {
+	width: 1440px;
+	height: 657px;
+	top: 70px;
+	left: -200%;
+}
+
+.imgFilter {
+	height: 46px;
+	width: 46px;
+}
+
+.py-3 .slick-slide {
+	width: unset !important;
+}
+
+.filterslider .next {
+	right: -10px !important;
+	background-color: transparent;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.filterslider .prev {
+	left: -10px !important;
+	background-color: transparent;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.filterslider .prev:hover {
+	background-color: transparent;
+}
+
+.filterslider .slick-list {
+	margin: 0 -5px;
+}
+
+.filterslider .slick-slide>div {
+	padding: 0 5px;
+}
+
+.filterslider .next:hover {
+	background-color: transparent;
+}
+
+.dropDownSliderAc .slick-dots li button:before {
+	font-family: 'slick';
+	font-size: 26px;
+	line-height: 20px;
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	content: '○';
+
+	text-align: center;
+	opacity: 1;
+	color: rgb(0, 0, 0);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.dropDownSliderAc .slick-dots li.slick-active button:before {
+	opacity: 1;
+	font-size: 12px;
+	top: 0;
+	content: '•';
+}
+
+.active {
+	opacity: 1;
+	z-index: 200;
+}
+
+.hiddenCustom {
+	z-index: -200 !important;
+	opacity: 0;
+}
+
+.activeArrow {
+	transform: rotate(180deg);
+}
+
+.itemDrop {
+	width: 1440px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media (max-width: 1536px) {
+	.drop {
+		left: -240%;
+	}
+}
+
+@media (max-width: 1450px) {
+	.drop.active {
+		width: 1350%;
+	}
+
+	.itemDrop {
+		width: 100%;
+	}
+
+	.hiddenCustom {
+		display: none !important;
+	}
+}
+
+@media (max-width: 1450px) {
+	.drop {
+		left: -200%;
+	}
+}
