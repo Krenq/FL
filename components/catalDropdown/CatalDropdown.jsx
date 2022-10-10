@@ -146,10 +146,7 @@ const CatalDropdown = ({ show, setShow }) => {
 
 							</div>
 						</div>
-
 					</section>
-
-
 				</div>
 				<div className='p-4 border-l-2 w-22% border-gray'>
 					<Slider {...settingsTwo} className='dropDownSliderAc mb-10'>
