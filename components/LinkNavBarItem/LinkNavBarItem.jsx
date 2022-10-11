@@ -20,7 +20,8 @@ export default function LinkHeaderItem({ title }) {
 				<article onClick={setShowDropdown} className="cursor-pointer hover:text-green-hov flex flex-row items-center">
 					<article>{title}</article>
 
-					<article className=" pl-2 pb-0.5">
+					<article className=" pl-2 ..5x01:pl-0.5 pb-0.5">
+
 						<Image
 							src={icons.ICON_ARROW_DOWN}
 							className={`transition-all ${show ? 'activeArrow' : ""}`}
