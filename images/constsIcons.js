@@ -41,3 +41,12 @@ export const ICON_MOB_APPS = require('./Icons/Image_mob_apps.png');
 export const ICON_ONLINE_BONUS = require('./Icons/Image_online_bonus.png');
 export const ICON_DOSTAVKA = require('./Icons/Image_dostavka.png');
 export const ICON_OPLATA = require('./Icons/Image_oplata.png');
+
+export const ICON_HEART_GRAY = require('./Icons/heart_gray.png');
+
+export const ICON_HEART_NAV = require('./Icons/heart_nav.png');
+
+export const ICON_VISA_GRAY = require('./Icons/visa_gray.png');
+export const ICON_MIR_GRAY = require('./Icons/mir_gray.png');
+export const ICON_UP_GRAY = require('./Icons/UP_gray.png');
+export const ICON_MC_GRAY = require('./Icons/MC_gray.png');

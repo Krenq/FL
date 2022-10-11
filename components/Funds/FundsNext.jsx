@@ -1,48 +1,41 @@
 import useWindowSize from '../utils/useWindowSize';
 
-const PartnersButtonPrev = ({ onClick, kolichestvo }) => {
+const FundsNext = ({ onClick, kolichestvo }) => {
   let size = useWindowSize();
-  let perc = '46%';
+  let perc = '47.5%';
 
   if (size.width <= 1600 && size.width > 1350) {
-    perc = '46%';
+    perc = '47%';
   } else if (size.width <= 1350 && size.width > 1100) {
-    perc = '45.5%';
+    perc = '46.5%';
   } else if (size.width <= 1100 && size.width > 990) {
-    perc = '44%';
-  } else if (size.width <= 990 && size.width > 780) {
-    perc = '43%';
-  } else if (size.width <= 780 && size.width > 650) {
-    perc = '42%';
-  } else if (size.width <= 650 && size.width > 500) {
-    perc = '39%';
-  } else if (size.width <= 500 && size.width > 400) {
-    perc = '38%';
-  } else if (size.width <= 400) {
-    perc = '33%';
-  } else if (size.width > 1600) {
     perc = '46%';
+  } else if (size.width <= 990 && size.width > 780) {
+    perc = '45%';
+  } else if (size.width <= 780 && size.width > 650) {
+    perc = '44%';
+  } else if (size.width <= 650 && size.width > 500) {
+    perc = '42%';
+  } else if (size.width <= 500 && size.width > 400) {
+    perc = '40%';
+  } else if (size.width <= 400) {
+    perc = '37%';
+  } else if (size.width > 1600) {
+    perc = '47.5%';
   }
 
-  let styleL = {
-    left: `calc(${perc} - 12.5px * ${kolichestvo})`,
-  };
-
-  let styleLMod = {
-    left: '-1.5%',
-    top: '60%',
-    zIndex: 20,
+  let styleR = {
+    right: `calc(${perc} - 12.5px * ${kolichestvo})`,
+    zIndex: 1,
     borderRadius: 20,
-    transform: 'rotate(180deg)',
+    bottom: 25,
   };
 
   return (
     <button
-      className={`${
-        kolichestvo ? 'prevPartner' : ''
-      } absolute transition-all hover:bg-gray bg-white py-3 px-3.5`}
+      className={` absolute transition-all hover:bg-gray bg-white py-2 px-3 `}
       onClick={onClick}
-      style={kolichestvo ? styleL : styleLMod}
+      style={styleR}
     >
       <svg
         width="10"
@@ -59,4 +52,4 @@ const PartnersButtonPrev = ({ onClick, kolichestvo }) => {
     </button>
   );
 };
-export default PartnersButtonPrev;
+export default FundsNext;

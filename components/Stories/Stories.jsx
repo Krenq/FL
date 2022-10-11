@@ -27,6 +27,7 @@ const Stories = () => {
     speed: 500,
     className: 'center',
     centerMode: true,
+    centerPadding: '250px',
     slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: <StoriesPrev />,
@@ -35,20 +36,23 @@ const Stories = () => {
 
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 1650,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
+          prevArrow: <StoriesPrev />,
+          nextArrow: <StoriesNext />,
         },
       },
       {
-        breakpoint: 700,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
-          centerPadding: '40px',
+          centerPadding: '0px',
+          centerMode: false,
           infinite: true,
           dots: true,
           prevArrow: false,
@@ -99,7 +103,7 @@ const Stories = () => {
         },
       },
       {
-        breakpoint: 400,
+        breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -158,7 +162,7 @@ const Stories = () => {
     ],
   };
   return (
-    <section className="container__special relative">
+    <section className="my-0 mx-auto relative">
       <p className="ability left-1/2 -top-16 flex items-center text-3xl italic absolute">
         <svg
           className="mr-3"

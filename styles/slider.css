@@ -33,7 +33,7 @@
 
 .moreF:hover .info {
 	transition: 0.3s ease all;
-	display: block;
+	display: flex;
 	background-color: #fff;
 	z-index: 100;
 }
@@ -100,6 +100,10 @@
 	border-radius: 20px;
 }
 
+.prev_rotate {
+	transform: rotate(180deg);
+}
+
 .news {
 	bottom: 230px;
 	right: 445px;
@@ -148,7 +152,6 @@
 	z-index: 20;
 	border-radius: 20px;
 	transform: translateY(-50%) rotate(180deg);
-
 }
 
 .nextNews {
@@ -178,18 +181,9 @@
 	.special__prev {
 		left: 10px !important;
 	}
-
-	/* .prevPartner {
-    left: 15px !important;
-  } */
-
-	/* .nextPartner {
-    right: 15px !important;
-  } */
 }
 
 @media (max-width: 1470px) {
-
 	.promo {
 		height: 550px !important;
 	}
@@ -218,7 +212,6 @@
 }
 
 @media (max-width: 950px) {
-
 	.promo {
 		background-image: url('../images/templates/bgL.jpg');
 	}
@@ -228,44 +221,15 @@
 	}
 }
 
-@media (max-width: 850px) {
-	/* .logo {
-    left: 40% !important;
-  } */
-}
-
 .actionsfl .slick-list .slick-track .slick-slide div {
 	display: flex;
 	justify-content: center;
 }
 
-
-@media (max-width: 400px) {
-	/* .logo {
-    left: 30% !important;
-  } */
-}
-
 @media (max-width: 320px) {
-
-	/* .partners .prevPartner {
-    top: unset;
-    bottom: 27%;
-    transform: rotate(180deg);
-  } */
-
-	/* .partners .nextPartner {
-    top: unset;
-    bottom: 23.5%;
-  } */
-
 	.catb {
 		transform: translateY(4px);
 	}
-
-	/* .logo {
-    left: 35% !important;
-  } */
 
 	.seesh {
 		transform: translateX(-50%);
@@ -299,90 +263,8 @@
 	width: 240px;
 }
 
-@media (max-width: 800px) {
-	.seemore {
-		width: 340px !important;
-	}
-}
-
 .sunl {
 	width: 607px;
-}
-
-.drop {
-	width: 1440px;
-	height: 657px;
-	top: 70px;
-	left: -200%;
-}
-
-.imgFilter {
-	height: 46px;
-	width: 46px;
-}
-
-.py-3 .slick-slide {
-	width: unset !important;
-}
-
-.filterslider .next {
-	right: -10px !important;
-	background-color: transparent;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.filterslider .prev {
-	left: -10px !important;
-	background-color: transparent;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
-.filterslider .prev:hover {
-	background-color: transparent;
-}
-
-.filterslider .slick-list {
-	margin: 0 -5px;
-}
-
-.filterslider .slick-slide>div {
-	padding: 0 5px;
-}
-
-.filterslider .next:hover {
-	background-color: transparent;
-}
-
-.dropDownSliderAc .slick-dots li button:before {
-	font-family: 'slick';
-	font-size: 26px;
-	line-height: 20px;
-	position: absolute;
-	top: -4px;
-	left: 0;
-	width: 20px;
-	height: 20px;
-	content: '○';
-
-	text-align: center;
-	opacity: 1;
-	color: rgb(0, 0, 0);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.dropDownSliderAc .slick-dots li.slick-active button:before {
-	opacity: 1;
-	font-size: 12px;
-	top: 0;
-	content: '•';
-}
-
-.active {
-	opacity: 1;
-	z-index: 200;
 }
 
 .hiddenCustom {

@@ -9,20 +9,27 @@
 @tailwind utilities;
 
 .container-base {
-	@apply max-w-screen-2xl mx-auto overflow-y-hidden overflow-x-hidden;
+  @apply max-w-screen-2xl mx-auto overflow-y-hidden overflow-x-hidden;
 }
 
 .slick-dots li {
-	width: auto;
-	height: auto;
-	margin: 0 !important;
+  width: auto;
+  height: auto;
+  margin: 0 !important;
 }
 
 li.slick-active div {
-	background-color: black !important;
+  background-color: black !important ;
 }
 
 .cartinka span:first-child {
-	height: 100% !important;
-	width: 100% !important;
+  height: 100% !important;
+  width: 100% !important;
 }
+
+/* .slider_instr .slick-slide {
+  margin-left: 3px;
+  margin-right: 3px;
+} */
+
+
