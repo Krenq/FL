@@ -8,7 +8,7 @@ import twoglos from '../../images/templates/2glos.jpg';
 
 function Buyers() {
   const settings = {
-    dots: true,
+    dots: false,
     Infinity: true,
     speed: 500,
     slidesToShow: 2,
@@ -20,7 +20,7 @@ function Buyers() {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
           className: 'center',
           centerMode: true,
           centerPadding: '75px',
@@ -32,7 +32,7 @@ function Buyers() {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
           className: 'center',
           centerMode: true,
           centerPadding: '50px',
@@ -44,7 +44,7 @@ function Buyers() {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          dots: false,
           className: 'center',
           centerMode: true,
           centerPadding: '20px',
@@ -56,7 +56,13 @@ function Buyers() {
   return (
     <div className="relative">
       <div className="absolute left-0 bottom-0 ..6x2:w-40 ..6x2:h-40 .4x1:-bottom-32">
-        <Image className="object-cover " src={twoglos} alt="specialOffersImg" width={237} height={237}/>
+        <Image
+          className="object-cover "
+          src={twoglos}
+          alt="specialOffersImg"
+          width={237}
+          height={237}
+        />
       </div>
 
       <section className="container__special relative pt-10 .4x1:pt-10 ..5x2:pt-32">
@@ -123,7 +129,58 @@ function Buyers() {
           </div>
 
           <div className="flex flex-col justify-between px-2 h-full ">
+            <div className="relative cartinka">
+              <Image
+                className=" object-cover"
+                src={two}
+                alt="specialOffersImg"
+                width={730}
+                height={380}
+              />
 
+              <p className="..6x2:text-3xl ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
+                Кешбэк-марафон + <br /> розыгрыш бьюти-гаджетов
+              </p>
+              <p className="..6x2:text-3xl ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-36 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
+                6%, 7%, 8%
+              </p>
+
+              <div className="absolute left-48 top-40 .1x01:top-32 .1x01:left-36 .1x01:w-50 .1x01:h-20 ..5x03:top-36 ..5x03:left-48 ..5x03:w-auto ..5x03:h-auto ..6x1:top-32 ..6x3:left-40 ..6x3:top-28 ..6x3:w-36 ..6x3:h-20 ..6x4:top-16 ..6x4:w-28 ..7x1:w-20 ..7x1:left-36 ..7x1:top-12">
+                <Image
+                  className="object-cover .1x01:object-contain ..5x03:object-cover ..6x3:object-contain"
+                  src={groups}
+                  alt="specialOffersImg"
+                  width={230}
+                  height={112}
+                />
+              </div>
+              <button className="absolute left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-1 ..7x1:top-20">
+                Подробнее
+              </button>
+            </div>
+
+            <div className="relative cartinka">
+              <Image
+                className="object-cover"
+                src={three}
+                alt="specialOffersImg"
+                width={710}
+                height={380}
+              />
+
+              <p className="..6x2:text-3xl ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
+                Бесплатная доставка <br /> от 1500 ₽
+              </p>
+              <p className="..6x2:text-3xl ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-36 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
+                новичкам июня
+              </p>
+              <button className="absolute left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-1 ..7x1:top-20">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between px-2 h-full ">
             <div className="relative cartinka">
               <Image
                 className=" object-cover"

@@ -1,11 +1,15 @@
 import Image from 'next/image';
+import { useState } from 'react';
 import Slider from 'react-slick';
 import one from '../../images/templates/1funds.jpg';
 import two from '../../images/templates/2Funds.jpg';
 import tree from '../../images/templates/3funds.jpg';
-import DiscountsButtonsSliderNext from '../DiscounstsButtonsSliderNext/DiscountsButtonsSliderNext';
-import DiscounstsButtonsSliderPrev from '../DiscounstsButtonsSliderNext/DiscountsButtonsSliderPrev';
+import FundsNext from './FundsNext';
+import FundsPrev from './FundsPrev';
+
 const Funds = () => {
+  const [kolichestvo, setKolichestvo] = useState(1);
+
   const settings = {
     dots: true,
     Infinity: true,
@@ -15,10 +19,54 @@ const Funds = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-	nextArrow: false,
-    prevArrow: false,
-    // nextArrow: <DiscountsButtonsSliderNext />,
-    // prevArrow: <DiscounstsButtonsSliderPrev />,
+    nextArrow: <FundsNext kolichestvo={kolichestvo} />,
+    prevArrow: <FundsPrev kolichestvo={kolichestvo} />,
+    appendDots: (dots) => {
+      setKolichestvo(dots.length);
+      return (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            position: 'absolute',
+            bottom: 25,
+          }}
+        >
+          <div
+            style={{
+              // backgroundColor: 'rgba(255, 255, 255, 0.8)',
+              borderRadius: '54px',
+              padding: '15px',
+              paddingInline: '40px',
+              width: 'auto',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <ul
+              style={{
+                margin: '0px',
+                display: 'flex',
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+              }}
+            >
+              {dots}
+            </ul>
+          </div>
+        </div>
+      );
+    },
+    customPaging: (i) => (
+      <div
+        style={{
+          background: '#E5E6E4',
+          width: 25,
+          height: 3,
+        }}
+      />
+    ),
     responsive: [
       {
         breakpoint: 1600,
@@ -26,6 +74,52 @@ const Funds = () => {
           centerMode: false,
           variableWidth: false,
           focusOnSelect: false,
+          appendDots: (dots) => {
+            setKolichestvo(dots.length);
+            return (
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  position: 'absolute',
+                  bottom: 25,
+                }}
+              >
+                <div
+                  style={{
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    borderRadius: '54px',
+                    padding: '15px',
+                    paddingInline: '40px',
+                    width: 'auto',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <ul
+                    style={{
+                      margin: '0px',
+                      display: 'flex',
+                      alignItems: 'flex-end',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {dots}
+                  </ul>
+                </div>
+              </div>
+            );
+          },
+          customPaging: (i) => (
+            <div
+              style={{
+                background: '#E5E6E4',
+                width: 25,
+                height: 3,
+              }}
+            />
+          ),
         },
       },
     ],
@@ -81,7 +175,7 @@ const Funds = () => {
       </p>
 
       <Slider {...settings} className="funds">
-        <div className="pb-20 ..7x2:p-0">
+        <div className=" pb-20 ..7x2:p-0">
           <div className="flex justify-center ..6x4:flex-wrap ">
             <div className="..6x4:h-80 relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
               <Image

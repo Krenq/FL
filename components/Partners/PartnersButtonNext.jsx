@@ -28,11 +28,20 @@ const PartnersButtonNext = ({ onClick, kolichestvo }) => {
     right: `calc(${perc} - 12.5px * ${kolichestvo})`,
   };
 
+  let styleRMod = {
+    right: '-1.5%',
+    top: '60%',
+    zIndex: 20,
+    borderRadius: 20,
+  };
+
   return (
     <button
-      className="nextPartner absolute transition-all hover:bg-gray bg-white py-3 px-4"
+      className={`${
+        kolichestvo ? 'nextPartner' : ''
+      } absolute transition-all hover:bg-gray bg-white py-3 px-3.5`}
       onClick={onClick}
-      style={styleR}
+      style={kolichestvo ? styleR : styleRMod}
     >
       <svg
         width="10"

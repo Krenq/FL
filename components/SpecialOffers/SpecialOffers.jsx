@@ -27,7 +27,7 @@ function SpecialOffers() {
 
   const settings = {
     dots: true,
-    Infinity: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -79,7 +79,7 @@ function SpecialOffers() {
     ),
     responsive: [
       {
-        breakpoint: 1110,
+        breakpoint: 1350,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
@@ -88,7 +88,7 @@ function SpecialOffers() {
         },
       },
       {
-        breakpoint: 900,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -97,7 +97,7 @@ function SpecialOffers() {
         },
       },
       {
-        breakpoint: 660,
+        breakpoint: 780,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -153,7 +153,7 @@ function SpecialOffers() {
       {
         breakpoint: 450,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -207,8 +207,8 @@ function SpecialOffers() {
     ],
   };
   return (
-    <article className="container__special bg-white pb-36 ..5x2:pb-14 .1x1:pb-28 pl-2">
-      <div className="mt-16 flex items-center border-b-2 border-gray pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat">
+    <article className="container__special bg-white pb-36 ..5x2:pb-14 .1x1:pb-28">
+      <div className="mt-16 flex items-center border-b-2 border-gray pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
         <p className="..6x3:text-sm ..6x3:mr-3 ..6x3:pr-3 ..6x1:text-base flex items-center h-8 hover:text-primary transition-all cursor-pointer mr-8 border-gray border-r-2  pr-8 text-gray-quick-silver text-lg">
           Все спецпредложения
         </p>

@@ -5,14 +5,16 @@ import SectionWithStock from '../SectionWithStock/SectionWithStock';
 import SectionWithWarnings from '../SectionWithWarnings/SectionWithWarnings';
 
 function Header() {
-	return (
-		<header>
-			<SectionWithStock />
-			<SectionWithWarnings />
-			<SectionOverNavBar />
-			<NavBar />
-		</header>
-	);
+  return (
+    <>
+      <SectionWithStock />
+      <SectionWithWarnings />
+      <SectionOverNavBar />
+      <header className=" sticky top-0 z-50">
+        <NavBar />
+      </header>
+    </>
+  );
 }
 
 export default Header;

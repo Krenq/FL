@@ -160,10 +160,10 @@ const Health = () => {
                 />
               </div>
               <div className="mx-3 px-3 bg-primary  mt-3 relative">
-                <p className="text-center text-3xl text-white pt-16 pb-5 ..5x1:text-2xl ..7x2:text-xl ..7x2:pt-4">
+                <p className="text-center text-3xl text-white pt-16 pb-5 .1x1:text-2xl ..7x2:text-xl ..7x2:pt-4">
                   50+ программ
                 </p>
-                <p className="text-center text-2xl text-white pb-40 ..5x1:text-lg ..7x2:text-base ..7x2:pb-32">
+                <p className="text-center text-2xl text-white pb-40 .1x1:text-lg ..7x2:text-base ..7x2:pb-32">
                   «Мужское здоровье», «антипаразитарная <br /> программа»,
                   «бодрость и энергия», «активное <br /> долголетие» и др.
                 </p>
