@@ -241,10 +241,10 @@ const SeaAct = () => {
         </p>
         <div className="flex justify-center ">
           <div className="relative w-44% .4x1:hidden">
-            <div className="absolute top-32 left-10 z-10">
+            <div className="absolute top-10 left-10 z-10">
               <p className="text-2xl text-primary">АКЦИЯ ВЕСНЫ</p>
               <p className="text-3xl font-medium">Получай подарки за покупки</p>
-              <div className=" absolute -left-4 top-24 bg-white px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3  ">
+              <div className=" absolute -left-4 top-24 bg-white-80pe px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3  ">
                 17d : 09h : 10m : 20s
               </div>
             </div>
@@ -292,7 +292,6 @@ const SeaAct = () => {
               <SeaActItem img={six} mb="mb-4" />
               <SeaActItem img={two} />
             </div>
-
           </Slider>
         </div>
       </section>

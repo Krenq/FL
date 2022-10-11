@@ -1,6 +1,6 @@
 const NewsPrev = ({ onClick, kolichestvo }) => {
   let styleL = {
-    left: 0,
+    left: '12.2%',
     top: '45%',
     zIndex: 20,
     borderRadius: 25,
@@ -8,7 +8,7 @@ const NewsPrev = ({ onClick, kolichestvo }) => {
 
   return (
     <button
-      className=" absolute transition-all hover:bg-gray bg-white py-3 px-4"
+      className="prev_rotate absolute transition-all hover:bg-gray bg-white py-3 px-4"
       onClick={onClick}
       style={styleL}
     >

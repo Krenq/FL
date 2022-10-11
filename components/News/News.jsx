@@ -81,8 +81,8 @@ const News = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-		  prevArrow: false,
-		  nextArrow: false,
+          prevArrow: false,
+          nextArrow: false,
         },
       },
       {
@@ -92,8 +92,8 @@ const News = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-		  prevArrow: false,
-		  nextArrow: false,
+          prevArrow: false,
+          nextArrow: false,
         },
       },
     ],
@@ -147,7 +147,13 @@ const News = () => {
       <Slider {...settings} className="pt-48">
         <div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
           <div>
-            <Image className="object-cover" width={474} height={330} src={oneNew} alt="newsImg" />
+            <Image
+              className="object-cover"
+              width={474}
+              height={330}
+              src={oneNew}
+              alt="newsImg"
+            />
           </div>
           <div className="border-2 border-gray -mt-2 relative">
             <p className="text-center mt-6 text-gray-quick-silver underline mb-2">
@@ -160,14 +166,21 @@ const News = () => {
               Все помнят тот самый косметический спонж, который под струей воды
               превращался из палочки в круглый диск...
             </p>
-            <button className="absolute ability left-1/2 bottom-3 text-primary">
+            <button className="relative ability left-1/2 bottom-3 text-black">
               Читать
+              <div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
             </button>
           </div>
         </div>
         <div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
           <div>
-            <Image className="object-cover" src={twoNew} width={474} height={330} alt="newsImg" />
+            <Image
+              className="object-cover"
+              src={twoNew}
+              width={474}
+              height={330}
+              alt="newsImg"
+            />
           </div>
           <div className="border-2 border-gray -mt-2 relative">
             <p className="text-center mt-6 text-gray-quick-silver underline mb-2">
@@ -180,14 +193,21 @@ const News = () => {
               Все помнят тот самый косметический спонж, который под струей воды
               превращался из палочки в круглый диск...
             </p>
-            <button className="absolute ability left-1/2 bottom-3 text-primary">
+            <button className="relative ability left-1/2 bottom-3 text-black">
               Читать
+              <div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
             </button>
           </div>
         </div>
         <div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
           <div>
-            <Image className="object-cover" src={treeNew} width={474} height={330} alt="newsImg" />
+            <Image
+              className="object-cover"
+              src={treeNew}
+              width={474}
+              height={330}
+              alt="newsImg"
+            />
           </div>
           <div className="border-2 border-gray -mt-2 relative">
             <p className="text-center mt-6 text-gray-quick-silver underline mb-2">
@@ -201,14 +221,21 @@ const News = () => {
               Все помнят тот самый косметический спонж, который под струей воды
               превращался из палочки в круглый диск...
             </p>
-            <button className="absolute ability left-1/2 bottom-3 text-primary">
+            <button className="relative ability left-1/2 bottom-3 text-black">
               Читать
+              <div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
             </button>
           </div>
         </div>
         <div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
           <div>
-            <Image className="object-cover" src={treeNew} width={474} height={330} alt="newsImg" />
+            <Image
+              className="object-cover"
+              src={treeNew}
+              width={474}
+              height={330}
+              alt="newsImg"
+            />
           </div>
           <div className="border-2 border-gray -mt-2 relative">
             <p className="text-center mt-6 text-gray-quick-silver underline mb-2">
@@ -222,8 +249,9 @@ const News = () => {
               Все помнят тот самый косметический спонж, который под струей воды
               превращался из палочки в круглый диск...
             </p>
-            <button className="absolute ability left-1/2 bottom-3 text-primary">
+            <button className="relative ability left-1/2 bottom-3 text-black">
               Читать
+              <div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
             </button>
           </div>
         </div>

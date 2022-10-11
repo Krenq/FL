@@ -4,7 +4,7 @@ import * as icons from '../../images/constsIcons';
 
 export default function SectionOverNavBar() {
   return (
-    <article className=" ..5x2:hidden h-8 px-20 border-b border-gray-quick-silver border-opacity-50 .2x1:px-1">
+    <article className=" ..5x2:hidden h-8 px-20 bg-white border-b border-gray-quick-silver border-opacity-50 .2x1:px-1">
       <div className="max-w-screen-overBar h-full mx-auto flex flex-row justify-between items-center ">
         <div className="flex flex-row justify-center items-center">
           <div className="flex justify-center items-center mr-5 text-13px font-normal font-montserrat text-gray-quick-silver">
