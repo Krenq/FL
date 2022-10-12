@@ -36,7 +36,6 @@ const Funds = () => {
 		nextArrow: <FundsNext kolichestvo={kolichestvo} />,
 		prevArrow: <FundsPrev kolichestvo={kolichestvo} />,
 		appendDots: (dots) => {
-
 			return (
 				<div
 					style={{
@@ -91,7 +90,7 @@ const Funds = () => {
 					focusOnSelect: false,
 
 					appendDots: (dots) => {
-						setKolichestvo(dots.length);
+
 						return (
 							<div
 								style={{

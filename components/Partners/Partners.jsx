@@ -29,7 +29,6 @@ const Partners = () => {
 		nextArrow: <PartnersButtonNext />,
 
 		appendDots: (dots) => {
-
 			return (
 				<div
 					style={{

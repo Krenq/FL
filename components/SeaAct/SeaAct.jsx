@@ -11,7 +11,8 @@ import SeaActItem from '../SeaActItem/SeaActItem';
 import useWindowSize from '../utils/useWindowSize';
 
 const SeaAct = () => {
-	const divBlock = useRef(null);
+	const divBlock = useRef(null),
+		slider = useRef(null)
 	const size = useWindowSize();
 
 	const [kol, setKol] = useState();
@@ -19,7 +20,11 @@ const SeaAct = () => {
 
 	useEffect(() => {
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
-	}, [size.width]);
+
+		// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
+		if (slider.current) setKol(slider?.current.props?.children?.length);
+
+	}, [size.width, slider?.current]);
 
 	const settings = {
 		dots: true,
@@ -36,7 +41,7 @@ const SeaAct = () => {
 					slidesToShow: 2,
 					slidesToScroll: 1,
 					appendDots: (dots) => {
-						setKol(dots.length);
+
 						return (
 							<div
 								style={{
@@ -86,7 +91,7 @@ const SeaAct = () => {
 					slidesToShow: 2,
 					slidesToScroll: 1,
 					appendDots: (dots) => {
-						setKol(dots.length);
+
 						return (
 							<div
 								style={{
@@ -141,7 +146,7 @@ const SeaAct = () => {
 					infinite: true,
 					dots: true,
 					appendDots: (dots) => {
-						setKol(dots.length);
+
 						return (
 							<div
 								style={{
@@ -275,7 +280,7 @@ const SeaAct = () => {
 							/>
 						</div>
 					</div>
-					<Slider
+					<Slider ref={slider}
 						{...settings}
 						className="act_slider flex flex-row justify-between w-60% .4x1:w-2/3 ..5x2:w-full .1x1:w-4/5 .4x1:justify-center"
 					>

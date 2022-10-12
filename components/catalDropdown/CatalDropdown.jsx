@@ -62,20 +62,20 @@ const CatalDropdown = ({ show, setShow }) => {
 				<div className='h-full w-65% pb-3'>
 					<section>
 						<div className='px-4 mt-2'>
-						<Slider {...settings} className=' .2x1:h-16 .2x1:overflow-hidden border-b-2 border-gray filterslider'>
-							<CatalDropDownItem title='антиакне' />
-							<CatalDropDownItem title='антистресс' />
-							<CatalDropDownItem title='коррекция морщин' />
-							<CatalDropDownItem title='молодая кожа' />
-							<CatalDropDownItem title='обезвоженная' />
-							<CatalDropDownItem title='антиакне' />
-							<CatalDropDownItem title='антистресс' />
-							<CatalDropDownItem title='коррекция морщин' />
-							<CatalDropDownItem title='молодая кожа' />
-							<CatalDropDownItem title='обезвоженная' />
-						</Slider>
+							<Slider {...settings} className=' .2x1:h-16 .2x1:overflow-hidden border-b-2 border-gray filterslider'>
+								<CatalDropDownItem title='антиакне' />
+								<CatalDropDownItem title='антистресс' />
+								<CatalDropDownItem title='коррекция морщин' />
+								<CatalDropDownItem title='молодая кожа' />
+								<CatalDropDownItem title='обезвоженная' />
+								<CatalDropDownItem title='антиакне' />
+								<CatalDropDownItem title='антистресс' />
+								<CatalDropDownItem title='коррекция морщин' />
+								<CatalDropDownItem title='молодая кожа' />
+								<CatalDropDownItem title='обезвоженная' />
+							</Slider>
 						</div>
-						 
+
 						<div className='flex ..5x1:m-2 mt-7 ml-10'>
 							<div className='mr-24 .3x1:mr-8 ..5x1:mr-6'>
 								<p className='font-semibold border-b-2 border-primary mb-4 w-36 text-xs'>Антивозрастной уход</p>

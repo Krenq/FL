@@ -40,7 +40,6 @@ function SpecialOffers() {
 		prevArrow: <SpecialOffersPrev />,
 		dotsClass: 'slick-dots slick-thumb',
 		appendDots: (dots) => {
-
 			return (
 				<div
 					ref={divBlock}
@@ -117,7 +116,7 @@ function SpecialOffers() {
 					nextArrow: false,
 					prevArrow: false,
 					appendDots: (dots) => {
-						setKol(dots.length);
+
 						return (
 							<div
 								style={{
@@ -173,7 +172,7 @@ function SpecialOffers() {
 					nextArrow: false,
 					prevArrow: false,
 					appendDots: (dots) => {
-						setKol(dots.length);
+
 						return (
 							<div
 								style={{

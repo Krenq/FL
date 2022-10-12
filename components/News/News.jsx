@@ -37,7 +37,6 @@ const News = () => {
 		prevArrow: <NewsPrev />,
 		nextArrow: <NewsNext />,
 		appendDots: (dots) => {
-
 			return (
 				<div
 					style={{

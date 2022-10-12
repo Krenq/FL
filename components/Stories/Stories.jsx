@@ -64,7 +64,7 @@ const Stories = () => {
 					prevArrow: false,
 					nextArrow: false,
 					appendDots: (dots) => {
-						setKol(dots.length);
+
 						return (
 							<div
 								style={{
@@ -122,7 +122,7 @@ const Stories = () => {
 					prevArrow: false,
 					nextArrow: false,
 					appendDots: (dots) => {
-						setKol(dots.length);
+
 						return (
 							<div
 								style={{
