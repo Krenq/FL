@@ -7,20 +7,22 @@ import tree from '../../images/templates/collag.jpg'
 import four from '../../images/templates/marine.jpg'
 import sl from '../../images/templates/sl.jpg'
 import Slider from 'react-slick';
-import { useState } from 'react';
+
 import Image from 'next/image';
 import DropFilterItem from '../DropFilterItem/DropFilterItem';
 import CatalDropDownItem from '../CatalDropDownItem/CatalDropDownItem';
+import CatalDropdownNext from '../CatalDropDownNext/CatalDropDownNext';
+import CatalDropdownPrev from '../CatalDropDownPrev/CatalDropDownPrev';
 const CatalDropdown = ({ show, setShow }) => {
-	const [kolichestvo, setKolichestvo] = useState(1);
+
 	const settings = {
 		dots: false,
 		Infinity: true,
 		speed: 500,
 		slidesToShow: 6,
 		slidesToScroll: 1,
-		nextArrow: <DiscountsButtonsSliderNext kolichestvo={kolichestvo} />,
-		prevArrow: <DiscounstsButtonsSliderPrev kolichestvo={kolichestvo} />,
+		nextArrow: <CatalDropdownNext />,
+		prevArrow: <CatalDropdownPrev />,
 		responsive: [
 			{
 				breakpoint: 1410,
@@ -45,7 +47,7 @@ const CatalDropdown = ({ show, setShow }) => {
 		<>
 			<div className={`fixed top-0 right-0 left-0 bottom-0 z-10 ${show ? 'block' : 'hidden'}`} onClick={setShow}></div>
 			<section className={`absolute flex z-20 drop right-0 transition-all bg-white mt-0 ${show ? 'active' : "hiddenCustom"}`}>
-				<div className='bg-white-BG_FILTER w-48 .1x01:p-0 pl-3 pt-3 pb-3'>
+				<div className='bg-white-BG_FILTER w-48   pl-3 pt-3 pb-3'>
 					<DropFilterItem src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon_DE_CATALOG.8f87018f.png&w=640&q=75' title='De-каталог' />
 					<DropFilterItem title='Лицо' src='http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2tian.4e6e4278.jpg&w=1080&q=75' />
 					<DropFilterItem title='Тело' src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2product.132a978a.jpg&w=640&q=75' />
@@ -61,8 +63,8 @@ const CatalDropdown = ({ show, setShow }) => {
 				</div>
 				<div className='h-full w-65% pb-3'>
 					<section>
-						<div className='px-4 mt-2'>
-							<Slider {...settings} className=' .2x1:h-16 .2x1:overflow-hidden border-b-2 border-gray filterslider'>
+						<div className='px-6 mt-2 border-b-2 border-gray'>
+							<Slider {...settings} className='   filterslider'>
 								<CatalDropDownItem title='антиакне' />
 								<CatalDropDownItem title='антистресс' />
 								<CatalDropDownItem title='коррекция морщин' />
@@ -153,7 +155,7 @@ const CatalDropdown = ({ show, setShow }) => {
 						</div>
 					</section>
 				</div>
-				<div className='p-4 .1x01:p-1 border-l-2 w-22% border-gray'>
+				<div className='p-4 .1x01:p-1 border-l-2 w-22% .2x1:w-20% border-gray'>
 					<Slider {...settingsTwo} className='dropDownSliderAc mb-10'>
 
 						<div className='relative'>
@@ -196,16 +198,16 @@ const CatalDropdown = ({ show, setShow }) => {
 					</Slider>
 					<div className='flex justify-center .3x1:ml-3'>
 						<div>
-							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .1x01:w-24 .3x1:w-28 border-gray justify-center items-center flex mr-3 text-md'>Новинки</p>
-							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .1x01:w-24 .3x1:w-28 border-gray justify-center items-center flex mr-3 text-md'>Наборы</p>
-							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .1x01:w-24 .3x1:w-28 border-gray justify-center items-center flex mr-3 text-md'>Хит продаж</p>
-							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .1x01:w-24 .3x1:w-28 border-gray justify-center items-center flex mr-3 text-md'>Идеи подарков</p>
+							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Новинки</p>
+							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Наборы</p>
+							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Хит продаж</p>
+							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Идеи подарков</p>
 
 						</div>
 						<div>
-							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .1x01:w-24 .3x1:w-28 border-gray justify-center items-center flex mr-3 text-md'>Акции</p>
-							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .1x01:w-24 .3x1:w-28 border-gray justify-center items-center flex mr-3 text-md'>Товар дня</p>
-							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .1x01:w-24 .3x1:w-28 border-gray justify-center items-center flex mr-3 text-md'>Суперцена</p>
+							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Акции</p>
+							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Товар дня</p>
+							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Суперцена</p>
 
 						</div>
 

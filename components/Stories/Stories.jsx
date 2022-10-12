@@ -11,7 +11,8 @@ import useWindowSize from '../utils/useWindowSize';
 import { useEffect, useRef, useState } from 'react';
 
 const Stories = () => {
-	const divBlock = useRef(null);
+	const divBlock = useRef(null),
+		slider = useRef(null)
 	const size = useWindowSize();
 
 	const [kol, setKol] = useState();
@@ -19,7 +20,8 @@ const Stories = () => {
 
 	useEffect(() => {
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
-	}, [size.width]);
+		if (slider.current) setKol(slider?.current.props?.children?.length);
+	}, [size.width, slider?.current]);
 
 	const settings = {
 		dots: false,
@@ -192,7 +194,7 @@ const Stories = () => {
 				ИСТОРИИ
 			</p>
 			<div className="mt-16">
-				<Slider {...settings}>
+				<Slider {...settings} ref={slider}>
 					<StoriesItem text="Reels" photo={oneStories} />
 					<StoriesItem text="LiveShop" photo={twoStories} />
 					<StoriesItem text="Бесплатная доставка" photo={treeStories} />
