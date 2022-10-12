@@ -117,6 +117,7 @@ module.exports = {
 				'3px': '3px',
 				'5px': '5px',
 				'6px': '6px',
+				'9px': '9px',
 				'10px': '10px',
 				'14px': '14px',
 				'26px': '26px',
@@ -210,12 +211,23 @@ module.exports = {
 				'32px': '32px',
 				'56px': '56px',
 			},
+			borderWidth: {
+				'2px': '2px',
+				'3px': '3px',
+				'3.5px': '3.5px',
+				'4px': '4px',
+				'6px': '6px',
+				'8px': '8px',
+			  },
 			lineHeight: {
 				'100%': '100%',
 				'120%': '120%',
 				'140%': '140%',
 				'150%': '150%',
-			}
+			},
+			zIndex: {
+				'100': '100',
+			  },
 		},
 	},
 	variants: {
