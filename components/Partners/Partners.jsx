@@ -7,7 +7,16 @@ import PartnersButtonPrev from './PartnersButtonPrev';
 import { useEffect, useRef, useState } from 'react';
 
 const Partners = () => {
-	const [kolichestvo, setKolichestvo] = useState(1);
+	const [kolichestvo, setKolichestvo] = useState(1),
+		slider = useRef(null)
+
+	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
+
+	useEffect(() => {
+		if (slider.current) setKolichestvo(slider?.current.props?.children?.length);
+	}, [slider?.current])
+
+
 
 	const settings = {
 		dots: true,
@@ -20,7 +29,7 @@ const Partners = () => {
 		nextArrow: <PartnersButtonNext />,
 
 		appendDots: (dots) => {
-			setKolichestvo(dots.length);
+
 			return (
 				<div
 					style={{
@@ -136,7 +145,7 @@ const Partners = () => {
 					Бизнес-возможности
 				</button>
 
-				<Slider {...settings} className="pt-64 ..7x2:pt-52 partners">
+				<Slider ref={slider} {...settings} className="pt-64 ..7x2:pt-52 partners">
 					<section className="pb-20 ">
 
 						<div className="flex ..5x2:flex-col bg-gray-light">

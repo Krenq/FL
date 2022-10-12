@@ -4,23 +4,29 @@ import twoNew from '../../images/templates/2news.jpg';
 import oneNew from '../../images/templates/1news.jpg';
 import treeNew from '../../images/templates/3news.jpg';
 
-import PartnersButtonNext from '../Partners/PartnersButtonNext';
-import PartnersButtonPrev from '../Partners/PartnersButtonPrev';
 import { useEffect, useRef, useState } from 'react';
 import useWindowSize from '../utils/useWindowSize';
 import NewsPrev from './NewsPrev';
 import NewsNext from './NewsNext';
 
 const News = () => {
-	const divBlock = useRef(null);
+	const divBlock = useRef(null),
+		slider = useRef(null)
+
+
 	const size = useWindowSize();
 
 	const [kol, setKol] = useState();
 	const [widthDot, setWidthDot] = useState();
 
+
+
+	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
+
 	useEffect(() => {
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
-	}, [size.width]);
+		if (slider.current) setKol(slider?.current.props?.children?.length);
+	}, [size.width, slider?.current]);
 
 	const settings = {
 		dots: true,
@@ -31,7 +37,7 @@ const News = () => {
 		prevArrow: <NewsPrev />,
 		nextArrow: <NewsNext />,
 		appendDots: (dots) => {
-			setKol(dots.length);
+
 			return (
 				<div
 					style={{

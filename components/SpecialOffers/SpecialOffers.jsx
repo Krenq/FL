@@ -1,5 +1,3 @@
-import autoprefixer from 'autoprefixer';
-import Image from 'next/image';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useRef } from 'react';
@@ -15,15 +13,20 @@ import SpecialOffersNext from './SpecialOffersNext';
 import SpecialOffersPrev from './SpecialOffersPrev';
 
 function SpecialOffers() {
-	const divBlock = useRef(null);
-	const size = useWindowSize();
+	const divBlock = useRef(null),
+		slider = useRef(null)
 
+
+	const size = useWindowSize();
 	const [kol, setKol] = useState();
 	const [widthDot, setWidthDot] = useState();
 
 	useEffect(() => {
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
-	}, [size.width]);
+
+		// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
+		if (slider.current) setKol(slider?.current.props?.children?.length);
+	}, [size.width, slider?.current]);
 
 	const settings = {
 		dots: true,
@@ -37,7 +40,7 @@ function SpecialOffers() {
 		prevArrow: <SpecialOffersPrev />,
 		dotsClass: 'slick-dots slick-thumb',
 		appendDots: (dots) => {
-			setKol(dots.length);
+
 			return (
 				<div
 					ref={divBlock}
@@ -237,7 +240,7 @@ function SpecialOffers() {
 					Наборы
 				</p>
 			</div>
-			<Slider {...settings}>
+			<Slider {...settings} ref={slider}>
 				<SpecialOfferItem img={one} />
 				<SpecialOfferItem img={two} />
 				<SpecialOfferItem img={tree} />

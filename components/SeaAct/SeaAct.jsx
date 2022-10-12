@@ -7,7 +7,6 @@ import tree from '../../images/templates/3seaAct.jpg';
 import four from '../../images/templates/4seaAct.jpg';
 import five from '../../images/templates/5seaAct.jpg';
 import six from '../../images/templates/6seaAct.jpg';
-import sev from '../../images/templates/7seaAct.jpg';
 import SeaActItem from '../SeaActItem/SeaActItem';
 import useWindowSize from '../utils/useWindowSize';
 

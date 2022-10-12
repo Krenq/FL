@@ -1,6 +1,7 @@
 
 
-import { useState } from 'react';
+import { useEffect } from 'react';
+import { useRef, useState } from 'react';
 import Slider from 'react-slick';
 
 import imgDiscount from '../../images/templates/discountImg.jpg';
@@ -14,7 +15,8 @@ import DiscounstsButtonsSliderPrev from '../DiscounstsButtonsSliderNext/Discount
 import DiscountSliderItem from '../DiscountSliderItem/DiscountSliderItem';
 
 function DiscountsSlider() {
-	const [kolichestvo, setKolichestvo] = useState(1);
+	const [kolichestvo, setKolichestvo] = useState(1),
+		slider = useRef(null)
 	const settings = {
 		dots: true,
 		Infinity: true,
@@ -24,7 +26,6 @@ function DiscountsSlider() {
 		nextArrow: <DiscountsButtonsSliderNext kolichestvo={kolichestvo} />,
 		prevArrow: <DiscounstsButtonsSliderPrev kolichestvo={kolichestvo} />,
 		appendDots: (dots) => {
-			setKolichestvo(dots.length);
 			return (
 				<div
 					style={{
@@ -70,9 +71,15 @@ function DiscountsSlider() {
 			/>
 		),
 	};
+
+	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
+	useEffect(() => {
+		if (slider.current) setKolichestvo(slider?.current.props?.children?.length);
+	}, [slider.current])
+
 	return (
 		<div className="bg-white w-full ">
-			<Slider {...settings}>
+			<Slider {...settings} ref={slider}>
 				<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
 				<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
 				<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />

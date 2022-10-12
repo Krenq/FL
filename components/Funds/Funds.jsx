@@ -1,6 +1,7 @@
 import Image from 'next/image';
+import { useEffect } from 'react';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import Slider from 'react-slick';
 import one from '../../images/templates/1funds.jpg';
@@ -13,6 +14,13 @@ import FundsPrev from './FundsPrev';
 
 const Funds = () => {
 	const [kolichestvo, setKolichestvo] = useState(1);
+
+	const slider = useRef(null)
+
+	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
+	useEffect(() => {
+		if (slider.current) setKolichestvo(slider?.current.props?.children?.length);
+	}, [slider?.current])
 
 
 	const settings = {
@@ -28,7 +36,7 @@ const Funds = () => {
 		nextArrow: <FundsNext kolichestvo={kolichestvo} />,
 		prevArrow: <FundsPrev kolichestvo={kolichestvo} />,
 		appendDots: (dots) => {
-			setKolichestvo(dots.length);
+
 			return (
 				<div
 					style={{
@@ -183,7 +191,7 @@ const Funds = () => {
 				наборы и идеи подарков
 			</p>
 
-			<Slider {...settings} className="funds">
+			<Slider {...settings} ref={slider} className="funds">
 
 				<div className=" pb-20 ..7x2:p-0">
 

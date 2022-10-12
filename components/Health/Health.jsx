@@ -75,14 +75,14 @@ const Health = () => {
 
 					<Slider {...settings} className="flex">
 						<div>
-							<div className="  bg-white relative pb-96 mx-3 ..7x2:pb-64 mb-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
+							<div className=" ..7x11:px-1 bg-white relative  pb-96 mx-3 ..7x2:pb-64 mb-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
 								<p className="..6x04:text-6xl text-7xl ability text-gray font-medium absolute z-10 left-1/2 ">
 									-30%
 								</p>
 								<p className=" ability ..6x04:text-xl text-2xl text-primary  absolute top-12 z-10 left-1/2 ">
 									«АНТИСТРЕСС»
 								</p>
-								<p className=" ability ..6x04:text-xl text-2xl text-center  absolute top-20 z-10 left-1/2 ">
+								<p className=" ability ..7x11:w-56 ..6x04:text-xl text-2xl text-center  absolute top-20 z-10 left-1/2 ">
 									Смотри на мир здоровыми глазами!
 								</p>
 								<div className="absolute bottom-0 left-1/2 ability">
@@ -96,10 +96,10 @@ const Health = () => {
 								</div>
 							</div>
 							<div className="relative mt-3 mx-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
-								<p className="absolute ..6x04:text-xl z-10 top-20 text-2xl text-primary left-10 ..7x2:left-2">
+								<p className="absolute ..7x1:left-2 ..6x4:top-5 ..6x4:left-5 ..6x3:top-10 ..6x04:text-xl z-10 top-20 text-2xl text-primary left-10 ..7x2:left-2">
 									«ЗДОРОВЫЙ СОН»
 								</p>
-								<p className="absolute ..6x04:text-2xl z-10 top-32 text-3xl   left-10 ..7x2:text-lg ..7x2:left-2">
+								<p className="absolute ..7x1:text-xl ..7x1:top-14 ..7x1:left-2 ..6x4:top-16 ..6x4:left-5 ..6x3:top-20 ..6x04:text-2xl z-10 top-32 text-3xl   left-10 ..7x2:text-lg ..7x2:left-2">
 									Чтобы каждое утро было <br /> добрым
 								</p>
 								<Image
@@ -109,7 +109,7 @@ const Health = () => {
 									height={900}
 									alt="discountImg"
 								/>
-								<p className="absolute top-52 cursor-pointer z-10 left-10 flex items-center text-sm ..7x2:left-2">
+								<p className="absolute ..7x1:left-2 ..7x1:top-32 ..6x4:top-40 ..6x4:left-5 ..6x3:top-44 top-52 cursor-pointer z-10 left-10 flex items-center text-sm ..7x2:left-2">
 									Подробнее{' '}
 									<svg
 										className="ml-2"
@@ -135,7 +135,7 @@ const Health = () => {
 								<p className="absolute ..6x04:text-2xl z-10 top-32 text-3xl text-primary left-10 ..7x2:text-lg ..7x2:left-2">
 									Фитокоррекция <br /> проблемной кожи
 								</p>
-								<p className="absolute top-52 cursor-pointer z-10 left-10 flex items-center text-sm  ..7x2:left-2">
+								<p className="absolute  top-52 cursor-pointer z-10 left-10 flex items-center text-sm  ..7x2:left-2">
 									Подробнее{' '}
 									<svg
 										className="ml-2"
@@ -159,14 +159,15 @@ const Health = () => {
 									alt="discountImg"
 								/>
 							</div>
-							<div className="mx-3 px-3 bg-primary pt-28 pb-2 ..5x03:pb-8 .1x1:pb-5  mt-3 relative">
+							<div className="mx-3 px-3 bg-primary pb-2 ..5x03:pb-8 .1x1:pb-5  mt-3 relative">
 
-								<p className="text-center ..5x03:text-base text-2xl text-white pb-40 .1x1:text-lg ..7x2:text-base ..7x2:pb-32">
+								<h1 className='text-32px text-center mb-5 pt-11 ..5x4:pt-10 ..5x3:pt-12 text-w text-white'>50+ программ</h1>
+								<p className="text-center ..5x03:font-normal ..5x4:pb-24 text-2xl text-white pb-40 .1x1:text-xl ..5x3:pb-32 ..7x2:text-base ..7x2:pb-32">
 
 									«Мужское здоровье», «антипаразитарная <br /> программа»,
 									«бодрость и энергия», «активное <br /> долголетие» и др.
 								</p>
-								<button className="ability border-2 border-gray absolute bottom-20 text-gray py-2 px-4  left-1/2 hover:text-white transition-all ..7x2:text-sm">
+								<button className="ability border-2 border-gray absolute bottom-20 ..5x4:bottom-16 text-gray py-2 px-4  left-1/2 hover:text-white transition-all ..7x2:text-sm">
 									Все программы
 								</button>
 							</div>

@@ -2,22 +2,11 @@ import * as icons from '../../images/constsIcons';
 
 import Image from 'next/image';
 import Slider from 'react-slick';
-
 import yandex from '../../images/templates/yandex.jpg';
-
 import ozon from '../../images/templates/ozon.png';
-
-
-import email from '../../images/templates/email.jpg';
-
 import pochtaRF from '../../images/templates/pochta_rf.png';
-
 import cdek from '../../images/templates/cdek.jpg';
 import berry from '../../images/templates/berry.jpg';
-import mir from '../../images/templates/MNP.jpg';
-import UnionPay from '../../images/templates/UnionPay.jpg';
-import MasterCard from '../../images/templates/Mastercard.jpg';
-import Visa from '../../images/templates/Visa Classic.jpg';
 import oneinsr from '../../images/templates/1instr.png';
 import twoinsr from '../../images/templates/2instr.jpg';
 import InstrumentItem from '../InstrumentItem/InstrumentItem';
@@ -26,7 +15,9 @@ import useWindowSize from '../utils/useWindowSize';
 
 function Instrumensts() {
 
-	const divBlock = useRef(null);
+	const divBlock = useRef(null),
+		slider = useRef(null)
+
 	const size = useWindowSize();
 
 	const [kol, setKol] = useState();
@@ -34,7 +25,10 @@ function Instrumensts() {
 
 	useEffect(() => {
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
-	}, [size.width]);
+
+		// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
+		if (slider.current) setKol(slider?.current.props?.children?.length);
+	}, [size.width, slider?.current]);
 
 	const settings = {
 		dots: true,
@@ -46,7 +40,6 @@ function Instrumensts() {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		appendDots: (dots) => {
-			setKol(dots.length);
 			return (
 				<div
 					style={{
@@ -203,7 +196,7 @@ function Instrumensts() {
 					</div>
 				</div>
 
-				<Slider {...settings} className="hidden ..5x1:block slider_instr">
+				<Slider {...settings} ref={slider} className="hidden ..5x1:block slider_instr">
 					<InstrumentItem
 						icon={icons.ICON_LK}
 						text="Управление профилем в понятном и удобном интерфейсе"
