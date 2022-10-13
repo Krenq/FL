@@ -11,9 +11,10 @@ function Header() {
 			<SectionWithStock />
 			<SectionWithWarnings />
 			<SectionOverNavBar />
-			<header className=" sticky top-0 z-100">
+			<header className=" sticky top-0 z-40">
 				<NavBar />
 			</header>
+
 		</>
 	);
 

@@ -70,7 +70,7 @@ module.exports = {
 				light2: '#EDEEEC',
 				platinum: '#E8E9E7',
 				'quick-silver': '#828584',
-
+				smart: '#d1d1d1'
 			},
 			primary: {
 				DEFAULT: '#337202',
@@ -223,7 +223,7 @@ module.exports = {
 			},
 			borderWidth: {
 				'3.5px': '3.5px',
-			  },
+			},
 			lineHeight: {
 				'100%': '100%',
 				'120%': '120%',
@@ -232,7 +232,7 @@ module.exports = {
 			},
 			zIndex: {
 				'100': '100',
-			  },
+			},
 		},
 	},
 	variants: {

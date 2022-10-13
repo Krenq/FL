@@ -415,3 +415,11 @@
 .sunl {
 	width: 607px;
 }
+
+.curtomClose {
+	border-radius: 0 20px 20px 0;
+}
+
+.confirm {
+	box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
+}
