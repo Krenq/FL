@@ -1,11 +1,17 @@
 import Image from 'next/image'
-import cont from '../../images/templates/country.png'
 
-const SetLocationItem = ({ title }) => {
+
+const SetLocationItem = ({ title, src, setCurrentCountry, setShow }) => {
+
+	const setCurrentCountryHandle = () => {
+		setCurrentCountry({ name: title, src })
+		setShow(false)
+	}
+
 	return (
-		<p className="flex cursor-pointer items-center text-sm px-4 py-3">
+		<p onClick={setCurrentCountryHandle} className="flex cursor-pointer hover:bg-gray transition-colors items-center text-sm px-4 py-3">
 			<Image
-				src={cont}
+				src={src}
 				className={`rounded-56px`}
 
 				alt="no image"

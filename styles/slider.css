@@ -79,6 +79,12 @@
 
 }
 
+.container__base {
+	max-width: 1920px;
+	margin: 0 auto;
+
+}
+
 /* special offers */
 .container__special {
 	max-width: 1460px;

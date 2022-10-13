@@ -3,10 +3,14 @@ import React, { useState } from 'react';
 import * as icons from '../../images/constsIcons';
 import SetLanguage from '../SetLanguage/SetLanguage';
 import SetLocation from '../SetLocation/SetLocation';
-
+import ru from '../../images/Icons/flag.png'
 export default function SectionOverNavBar() {
 	const [show, setShow] = useState(false),
-		[showLang, setShowLang] = useState(false)
+		[showLang, setShowLang] = useState(false),
+		[currentLang, setCurrentLang] = useState({ name: 'RU', src: ru }),
+		[currentCity, setCurrentCity] = useState(false)
+
+
 
 	const handleSetShow = () => setShow(!show),
 		handleSetShowLang = () => setShowLang(!showLang)
@@ -18,7 +22,7 @@ export default function SectionOverNavBar() {
 					<div className="flex flex-row justify-center items-center">
 						<div onClick={handleSetShow} className="flex cursor-pointer hover:text-black transition-colors justify-center items-center mr-5 text-13px font-normal font-montserrat text-gray-quick-silver">
 							<Image src={icons.ICON_LOCATION} width={10} height={14} />
-							<span className=".1x1:text-xs ml-2 flex items-center">Москва
+							<span className=".1x1:text-xs ml-2 flex items-center">{currentCity?.name || 'Москва'}
 								<svg className='ml-1' width="8" height="4" viewBox="0 0 8 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M0.875 0.75L4 3.875L7.125 0.75H0.875Z" fill="#18202B" />
 								</svg>
@@ -49,7 +53,7 @@ export default function SectionOverNavBar() {
 						Бесплатная доставка от Р 2.500 +
 					</div>
 
-					<div className="flex flex-row items-center h-full">
+					<div className="relative flex flex-row items-center h-full">
 						<div className="flex items-center h-full text-13px font-normal font-montserrat text-black-70pe border-l border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1">
 							<Image src={icons.ICON_HEART} width={18} height={15} />
 							<span className=".1x1:text-xs .1x1:ml-2 ml-2">Избранное</span>
@@ -62,22 +66,22 @@ export default function SectionOverNavBar() {
 							<Image src={icons.ICON_HUMAN} width={14} height={16} />
 							<span className=".1x1:text-xs .1x1:ml-2 ml-2">Регистрация</span>
 						</div>
-						<div onClick={setShowLang} className="overflow-visible flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1">
+						<div onClick={handleSetShowLang} className=" relative overflow-visible flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1">
 							<Image
 								className="object-cover rounded-full"
-								src={icons.ICON_FLAG}
+								src={currentLang.src}
 								width={14}
 								height={15}
 							/>
-							<span className=".1x1:text-xs .1x1:ml-2 ml-2">RU</span>
+							<span className=".1x1:text-xs .1x1:ml-2 ml-2">{currentLang.name}</span>
 
 						</div>
-
+						<SetLanguage setShow={setShowLang} show={showLang} setCurrentLang={setCurrentLang} />
 					</div>
 				</div>
 			</article>
-			<SetLanguage setShow={setShowLang} show={showLang} />
-			<SetLocation showL={show} setShowL={setShow} />
+
+			<SetLocation showL={show} setShowL={setShow} setCurrentCity={setCurrentCity} currentCity={currentCity} />
 
 		</>
 
