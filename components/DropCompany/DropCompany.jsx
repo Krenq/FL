@@ -2,7 +2,7 @@ import prod1 from '../../images/templates/1product.jpg'
 import serviceCenter from '../../images/templates/serviceCenter.jpg'
 import img2 from '../../images/templates/service2.jpg'
 import img3 from '../../images/templates/service3.jpg'
-import Image from 'next/image'
+
 import DropItemDown from '../DropItemDown/DropItemDown'
 
 const DropCompany = ({ show, setShow }) => {

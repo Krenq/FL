@@ -163,8 +163,8 @@ const CatalDropdown = ({ show, setShow }) => {
 								src={sl}
 								alt="dropdown img"
 							/>
-							<p className='font-medium tracking-widest text-xs absolute top-6 left-5'>АКЦИЯ ВЕСНЫ</p>
-							<p className='tracking-widest text-xl absolute top-12 left-5'>Расцветай <br /> вместе с нами</p>
+							<p className='font-medium tracking-widest text-xs absolute top-6 left-5 .2x1:left-1 '>АКЦИЯ ВЕСНЫ</p>
+							<p className='tracking-widest text-xl absolute top-12 left-5 .2x1:left-1 .2x1:text-base'>Расцветай <br /> вместе с нами</p>
 							<p className='flex items-center tracking-widest absolute bottom-4 right-6'>Смотреть <svg className='ml-1' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.02529 0.935913L7.08469 1.70374L9.26485 3.46684L0.194824 3.47426L0.196166 4.55759L9.24134 4.5502L7.09791 6.2999L8.04292 7.06414L11.8053 3.99286L8.02529 0.935913Z" fill="black" />
 							</svg>
@@ -175,8 +175,8 @@ const CatalDropdown = ({ show, setShow }) => {
 								src={sl}
 								alt="dropdown img"
 							/>
-							<p className='font-medium tracking-widest text-xs absolute top-6 left-5'>АКЦИЯ ВЕСНЫ</p>
-							<p className='tracking-widest text-xl absolute top-12 left-5'>Расцветай <br /> вместе с нами</p>
+							<p className='font-medium tracking-widest text-xs absolute top-6 left-5 .2x1:left-1 '>АКЦИЯ ВЕСНЫ</p>
+							<p className='tracking-widest text-xl absolute top-12 left-5 .2x1:left-1 .2x1:text-base'>Расцветай <br /> вместе с нами</p>
 							<p className='flex items-center tracking-widest absolute bottom-4 right-6'>Смотреть <svg className='ml-1' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.02529 0.935913L7.08469 1.70374L9.26485 3.46684L0.194824 3.47426L0.196166 4.55759L9.24134 4.5502L7.09791 6.2999L8.04292 7.06414L11.8053 3.99286L8.02529 0.935913Z" fill="black" />
 							</svg>
@@ -187,13 +187,12 @@ const CatalDropdown = ({ show, setShow }) => {
 								src={sl}
 								alt="dropdown img"
 							/>
-							<p className='font-medium tracking-widest text-xs absolute top-6 left-5'>АКЦИЯ ВЕСНЫ</p>
-							<p className='tracking-widest text-xl absolute top-12 left-5'>Расцветай <br /> вместе с нами</p>
+							<p className='font-medium tracking-widest text-xs absolute top-6 left-5 .2x1:left-1 '>АКЦИЯ ВЕСНЫ</p>
+							<p className='tracking-widest text-xl absolute top-12 left-5 .2x1:left-1 .2x1:text-base'>Расцветай <br /> вместе с нами</p>
 							<p className='flex items-center tracking-widest absolute bottom-4 right-6'>Смотреть <svg className='ml-1' width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.02529 0.935913L7.08469 1.70374L9.26485 3.46684L0.194824 3.47426L0.196166 4.55759L9.24134 4.5502L7.09791 6.2999L8.04292 7.06414L11.8053 3.99286L8.02529 0.935913Z" fill="black" />
 							</svg>
 							</p>
-
 						</div>
 					</Slider>
 					<div className='flex justify-center .3x1:ml-3'>
