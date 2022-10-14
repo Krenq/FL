@@ -8,7 +8,7 @@ import DropItemDown from '../DropItemDown/DropItemDown'
 const DropCompany = ({ show, setShow }) => {
 	return (
 		<>
-			<section className={`absolute .2x1:pt-2  flex z-20 right-0 left-0 h-56 .3x1:pt-0 .3x1:h-44 .3x1:items-start .3x1:pt-5  transition-all bg-white mt-11 ${show ? 'active' : "hiddenCustom"}`}>
+			<section className={`absolute .2x1:pt-2  flex z-20 right-0 left-0 h-56 .3x1:pt-0 .3x1:h-44 .3x1:items-start .3x1:pt-5  transition-all bg-white mt-9 ${show ? 'active' : "hiddenCustom"}`}>
 				<div className="w-1816px  px-2 my-0 mx-auto flex items-center justify-center">
 
 					<DropItemDown src={prod1} title="НОВОСТИ" />

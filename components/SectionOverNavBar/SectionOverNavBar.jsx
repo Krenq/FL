@@ -66,17 +66,17 @@ export default function SectionOverNavBar() {
 							<Image src={icons.ICON_HUMAN} width={14} height={16} />
 							<span className=".1x1:text-xs .1x1:ml-2 ml-2">Регистрация</span>
 						</div>
-						<div onClick={handleSetShowLang} className=" relative overflow-visible flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1">
+						<div onClick={handleSetShowLang} className="w-16 relative overflow-visible flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1">
 							<Image
 								className="object-cover rounded-full"
 								src={currentLang.src}
 								width={14}
 								height={15}
 							/>
-							<span className=".1x1:text-xs .1x1:ml-2 ml-2">{currentLang.name}</span>
+							<span className=".1x1:text-xs .1x1:ml-2 ml-1">{currentLang.name}</span>
 
 						</div>
-						<SetLanguage setShow={setShowLang} show={showLang} setCurrentLang={setCurrentLang} />
+						<SetLanguage setShow={setShowLang} show={showLang} currentLang={currentLang} setCurrentLang={setCurrentLang} />
 					</div>
 				</div>
 			</article>

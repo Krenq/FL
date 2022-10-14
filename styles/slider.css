@@ -209,7 +209,7 @@
 }
 
 .itemDrop {
-	width: 1440px;
+	width: 100%;
 	left: 50%;
 	transform: translateX(-50%);
 }
