@@ -24,7 +24,7 @@ export default function LinkHeaderItem({ title }) {
 
 					<Image
 						src={icons.ICON_ARROW_DOWN}
-						className={`transition-all ${show ? 'activeArrow' : ""}`}
+						className={`transition-all  ${show ? 'activeArrow' : ""}`}
 
 						width="8px"
 						height="6px"

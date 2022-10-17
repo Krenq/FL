@@ -73,7 +73,7 @@ export default function SectionOverNavBar() {
 								width={14}
 								height={15}
 							/>
-							<span className=".1x1:text-xs .1x1:ml-2 ml-1">{currentLang.name}</span>
+							<span className=".1x1:text-xs .1x1:ml-2 ml-2">{currentLang.name}</span>
 
 						</div>
 						<SetLanguage setShow={setShowLang} show={showLang} currentLang={currentLang} setCurrentLang={setCurrentLang} />
