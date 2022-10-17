@@ -44,8 +44,8 @@ const CatalDropdown = ({ show, setShow }) => {
 
 	return (
 		<>
-			<div className={`fixed top-0 right-0 left-0 bottom-0 z-10 ${show ? 'block' : 'hidden'}`} onClick={setShow}></div>
-			<section className={`absolute flex z-20 drop right-0 transition-all bg-white -mt-1 ${show ? 'active' : "hiddenCustom"}`}>
+			<div className={`fixed top-0 right-0 left-0 bottom-0 z-10 ${show ? 'block' : 'hidden'}`}></div>
+			<section onMouseLeave={setShow} className={`absolute flex z-20 drop right-0 transition-all bg-white -mt-1 ${show ? 'active' : "hiddenCustom"}`}>
 				<div className='bg-white-BG_FILTER w-48   pl-3 pt-3 pb-3'>
 					<DropFilterItem src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon_DE_CATALOG.8f87018f.png&w=640&q=75' title='De-каталог' />
 					<DropFilterItem title='Лицо' src='http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2tian.4e6e4278.jpg&w=1080&q=75' />
@@ -111,7 +111,7 @@ const CatalDropdown = ({ show, setShow }) => {
 								<p className='text-gray-quick-silver mb-4 text-xs relative'>Губы <small className='absolute -top-0.5 ml-1'>36</small></p>
 								<p className='text-gray-quick-silver text-xs relative'>Веки <small className='absolute -top-0.5 ml-1'>6</small></p>
 							</div>
-							<div className='.2x1:mr-2'>
+							<div className='.2x1:mr-2 dropdownSL'>
 								<Image
 									src={preview}
 									alt="dropdown img"
@@ -119,7 +119,7 @@ const CatalDropdown = ({ show, setShow }) => {
 								/>
 								<p className='font-sans text-xs tracking-widest'>Online - каталог</p>
 								<p className='text-2xl font-semibold mb-7'>Весна 2022</p>
-								<div className='flex items-center mb-2'>
+								<div className='flex items-center mb-2 imgIS'>
 									<Image
 										src={one}
 										alt="dropdown img"
@@ -127,21 +127,21 @@ const CatalDropdown = ({ show, setShow }) => {
 									/>
 									<p className='text-xs ml-1 text-gray-quick-silver tracking-widest text-md'>BOTOLUXE</p>
 								</div>
-								<div className='flex items-center mb-2'>
+								<div className='flex items-center mb-2 imgIS'>
 									<Image
 										src={two}
 										alt="dropdown img"
 									/>
 									<p className='text-xs ml-1 text-gray-quick-silver tracking-widest text-md'>BIO REHAB</p>
 								</div>
-								<div className='flex items-center mb-2'>
+								<div className='flex items-center mb-2 imgIS'>
 									<Image
 										src={tree}
 										alt="dropdown img"
 									/>
 									<p className='text-xs ml-1 text-gray-quick-silver tracking-widest text-md'>COLLAGEN ACTIVE</p>
 								</div>
-								<div className='flex items-center mb-2'>
+								<div className='flex items-center mb-2 imgIS'>
 									<Image
 										src={four}
 										alt="dropdown img"
@@ -157,7 +157,7 @@ const CatalDropdown = ({ show, setShow }) => {
 				<div className='p-4 .1x01:p-1 border-l-2 w-22% .2x1:w-20% border-gray'>
 					<Slider {...settingsTwo} className='dropDownSliderAc mb-10'>
 
-						<div className='relative'>
+						<div className='relative sliderItemCatal'>
 							<Image
 								src={sl}
 								alt="dropdown img"
@@ -169,7 +169,7 @@ const CatalDropdown = ({ show, setShow }) => {
 							</svg>
 							</p>
 						</div>
-						<div className='relative'>
+						<div className='relative sliderItemCatal'>
 							<Image
 								src={sl}
 								alt="dropdown img"
@@ -181,7 +181,7 @@ const CatalDropdown = ({ show, setShow }) => {
 							</svg>
 							</p>
 						</div>
-						<div className='relative'>
+						<div className='relative sliderItemCatal'>
 							<Image
 								src={sl}
 								alt="dropdown img"
@@ -195,7 +195,7 @@ const CatalDropdown = ({ show, setShow }) => {
 						</div>
 					</Slider>
 					<div className='flex justify-center .3x1:ml-3'>
-						<div>
+						<div >
 							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Новинки</p>
 							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Наборы</p>
 							<p className='w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md'>Хит продаж</p>

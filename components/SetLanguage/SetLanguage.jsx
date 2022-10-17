@@ -10,12 +10,12 @@ const SetLanguage = ({ show, setShow, setCurrentLang, currentLang }) => {
 	const langs = [
 		{ name: 'RU', src: ru },
 		{ name: 'EN', src: eng },
-		{ name: 'GER', src: ger },
+		{ name: 'GE', src: ger },
 		{ name: 'TR', src: tur },
-		{ name: 'CZE', src: ch },
+		{ name: 'CZ', src: ch },
 
 	]
-	console.log(currentLang.name.length)
+
 	const changeLang = (item) => {
 		setCurrentLang(item)
 		setShow(!show)
@@ -23,7 +23,7 @@ const SetLanguage = ({ show, setShow, setCurrentLang, currentLang }) => {
 
 	return (
 		<section className={` z-50 bg-white   absolute top-8 right-0 ${show ? 'block' : "hidden"} `}>
-			{langs.map((lang, i) => <div key={i} onClick={() => changeLang(lang)} className={`w-16 py-1.5 px-1 -mt-0.5 hover:bg-primary transition-colors bg-white hover:text-white flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver  border-opacity-50 ..5x1:px-1`}>
+			{langs.map((lang, i) => <div key={i} onClick={() => changeLang(lang)} className={`w-16 py-1.5 px-2 -mt-0.5 hover:bg-primary transition-colors bg-white hover:text-white flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver  border-opacity-50 ..5x1:px-1`}>
 				<Image
 					className="object-cover rounded-full"
 					src={lang.src}

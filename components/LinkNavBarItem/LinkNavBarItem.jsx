@@ -17,7 +17,7 @@ export default function LinkHeaderItem({ title }) {
 	return (
 		<article className={`${title === 'Каталог' ? 'relative' : ''} py-6px .2x1:text-xs .3x1:px-2 px-4   hover:rounded-32px transition-all	 hover:bg-gray-light text-black font-montserrat font-medium text-sm`}>
 
-			<article onClick={setShowDropdown} className="cursor-pointer hover:text-green-hov flex flex-row items-center">
+			<article onMouseEnter={setShowDropdown} className="cursor-pointer hover:text-green-hov flex flex-row items-center">
 				<article>{title}</article>
 
 				<article className=" pl-2 ..5x01:pl-0.5 pb-0.5">
