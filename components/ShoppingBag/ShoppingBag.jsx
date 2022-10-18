@@ -5,7 +5,7 @@ import * as icons from '../../images/constsIcons';
 
 export default function ShoppingBag() {
   return (
-    <div className=" ml-4">
+    <div className=" mx-4 cursor-pointer">
       <Link href="/">
         <div className="flex flex-row justify-center">
           <div className=" flex flex-row h-6">

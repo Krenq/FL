@@ -430,9 +430,9 @@
 	box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
 }
 
-.slick-active {
+/* .slick-active {
 	bottom: -1px;
-}
+} */
 
 @media(max-height: 875px) {
 	.bg-white-BG_FILTER.w-48 {

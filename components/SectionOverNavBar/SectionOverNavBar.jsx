@@ -64,21 +64,21 @@ export default function SectionOverNavBar() {
           </div>
 
           <div className="relative flex flex-row items-center h-full">
-            <div className="flex items-center h-full text-13px font-normal font-montserrat text-black-70pe border-l border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1 cursor-pointer">
+            <div className="flex items-center h-full text-13px font-normal font-montserrat text-black-70pe border-l border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1 cursor-pointer hover:text-black">
               <Image src={icons.ICON_HEART} width={18} height={15} />
               <span className=".1x1:text-xs .1x1:ml-2 ml-2">Избранное</span>
             </div>
-            <div className="flex items-center h-full text-13px font-normal font-montserrat text-black-70pe border-l border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1 cursor-pointer">
+            <div className="flex items-center h-full text-13px font-normal font-montserrat text-black-70pe border-l border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1 cursor-pointer hover:text-black">
               <Image src={icons.ICON_DOOR} width={18} height={17} />
               <span className=".1x1:text-xs .1x1:ml-2 ml-2">Вход</span>
             </div>
-            <div className="flex items-center h-full text-13px font-normal font-montserrat text-black-70pe border-l border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1 cursor-pointer">
+            <div className="flex items-center h-full text-13px font-normal font-montserrat text-black-70pe border-l border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1 cursor-pointer hover:text-black">
               <Image src={icons.ICON_HUMAN} width={14} height={16} />
               <span className=".1x1:text-xs .1x1:ml-2 ml-2">Регистрация</span>
             </div>
             <div
               onClick={handleSetShowLang}
-              className="w-16 relative overflow-visible flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1"
+              className="w-16 relative overflow-visible flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver px-2 border-opacity-50 ..5x1:px-1 hover:text-black"
             >
               <Image
                 className="object-cover rounded-full"
