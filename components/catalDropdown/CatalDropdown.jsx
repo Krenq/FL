@@ -48,7 +48,7 @@ const CatalDropdown = ({ show, setShow }) => {
 			<section onMouseLeave={setShow} className={`absolute flex z-20 drop right-0 transition-all bg-white -mt-1 ${show ? 'active' : "hiddenCustom"}`}>
 				<div className='bg-white-BG_FILTER w-48   pl-3 pt-3 pb-3'>
 					<DropFilterItem src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon_DE_CATALOG.8f87018f.png&w=640&q=75' title='De-каталог' />
-					<DropFilterItem title='Лицо' src='http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2tian.4e6e4278.jpg&w=1080&q=75' />
+					<DropFilterItem title='Лицо' src='_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2tian.4e6e4278.jpg&w=1080&q=75' />
 					<DropFilterItem title='Тело' src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2product.132a978a.jpg&w=640&q=75' />
 					<DropFilterItem title='Волосы' src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F3product.0ea2089c.jpg&w=640&q=75' />
 					<DropFilterItem title='Макияж' src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2F4product.efc031fd.jpg&w=640&q=75' />
