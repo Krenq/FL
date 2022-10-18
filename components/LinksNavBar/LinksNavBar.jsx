@@ -1,18 +1,28 @@
 import React from 'react';
 import ShoppingBag from '../ShoppingBag/ShoppingBag';
 import LinkNavBarItem from '../LinkNavBarItem/LinkNavBarItem';
+import { useState } from 'react';
 
 
 
 export default function LinksHeader() {
+	const [show, setShow] = useState({
+		showCatal: false,
+		showCompany: false,
+		showBis: false,
+		showBuyers: false,
+		showLoal: false
+	})
+
+
 	return (
 		<article className="flex  ..5x2:hidden .1x1:w-3/4 whitespace-nowrap flex-row justify-center items-center p-0 h-8 -ml-86px">
 
-			<LinkNavBarItem title="Каталог" />
-			<LinkNavBarItem title="О компании" />
-			<LinkNavBarItem title="Бизнес-возможности" />
-			<LinkNavBarItem title="Покупателям" />
-			<LinkNavBarItem title="Программа лояльности" />
+			<LinkNavBarItem setShow={setShow} show={show} title="Каталог" />
+			<LinkNavBarItem setShow={setShow} show={show} title="О компании" />
+			<LinkNavBarItem setShow={setShow} show={show} title="Бизнес-возможности" />
+			<LinkNavBarItem setShow={setShow} show={show} title="Покупателям" />
+			<LinkNavBarItem setShow={setShow} show={show} title="Программа лояльности" />
 
 			<ShoppingBag />
 		</article>

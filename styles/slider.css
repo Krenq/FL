@@ -436,7 +436,8 @@
 
 @media(max-height: 875px) {
 	.bg-white-BG_FILTER.w-48 {
-		padding: 0;
+		padding-top: 5px;
+		padding-bottom: 0;
 	}
 
 	.flex.items-center.mb-2.cursor-pointer.rounded-sm {
@@ -448,7 +449,7 @@
 	}
 
 	.drop {
-		height: 625px;
+		height: 645px;
 	}
 }
 
@@ -495,7 +496,7 @@
 	}
 
 	.drop {
-		height: 555px;
+		height: 575px;
 	}
 }
 
@@ -537,7 +538,7 @@
 	}
 
 	.drop {
-		height: 520px;
+		height: 540px;
 	}
 
 	/* .dropdownSL {
@@ -576,7 +577,7 @@
 	}
 
 	.drop {
-		height: 500px;
+		height: 520px;
 	}
 }
 
@@ -652,6 +653,6 @@
 	}
 
 	.drop {
-		height: 440px;
+		height: 460px;
 	}
 }
