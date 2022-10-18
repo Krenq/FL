@@ -28,7 +28,7 @@ const Stories = () => {
 		Infinity: true,
 		speed: 500,
 		className: 'center',
-		centerMode: true,
+
 
 		variableWidth: true,
 		focusOnSelect: true,
@@ -201,6 +201,9 @@ const Stories = () => {
 					<StoriesItem text="LiveShop" photo={twoStories} />
 					<StoriesItem text="Бесплатная доставка" photo={treeStories} />
 					<StoriesItem text="Скидки" photo={fourStories} />
+					<StoriesItem text="Reels" photo={oneStories} />
+					<StoriesItem text="LiveShop" photo={twoStories} />
+					<StoriesItem text="Бесплатная доставка" photo={treeStories} />
 					<StoriesItem text="Скидки" photo={fourStories} />
 				</Slider>
 			</div>

@@ -343,7 +343,9 @@
 }
 
 @media (min-width: 1450px) {
-
+	.temp {
+		transform: translateX(250px);
+	}
 
 	.funds .slick-list .slick-track .slick-cloned div .pb-20 .flex {
 		opacity: 0.5;
@@ -365,6 +367,11 @@
 	.storiesOpacity .slick-list .slick-track .slick-active .mx-auto {
 
 		opacity: 1 !important;
+	}
+
+	.storiesOpacity .slick-list .slick-track .slick-active:last-child .mx-auto {
+
+		opacity: .5 !important;
 	}
 
 	.funds .slick-list .slick-track .slick-slide div .pb-20 .flex {

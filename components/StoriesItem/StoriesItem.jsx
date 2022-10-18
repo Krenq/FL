@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function ({ photo, text }) {
 	return (
 
-		<div className=" px-1 mx-auto max-w-350px max-h-340px">
+		<div className="temp px-1 mx-auto max-w-350px max-h-340px">
 
 			<div className="relative p-1 flex items-center justify-center transition-all hover:opacity-80 cursor-pointer stories">
 				<Image className="object-cover" src={photo} width={340} height={340} alt="newsImg" />
