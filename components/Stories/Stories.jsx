@@ -30,6 +30,8 @@ const Stories = () => {
 		className: 'center',
 		centerMode: true,
 
+		variableWidth: true,
+		focusOnSelect: true,
 		centerPadding: '250px',
 
 		slidesToShow: 4,
@@ -194,7 +196,7 @@ const Stories = () => {
 				ИСТОРИИ
 			</p>
 			<div className="mt-16">
-				<Slider {...settings} ref={slider}>
+				<Slider {...settings} ref={slider} className='storiesOpacity'>
 					<StoriesItem text="Reels" photo={oneStories} />
 					<StoriesItem text="LiveShop" photo={twoStories} />
 					<StoriesItem text="Бесплатная доставка" photo={treeStories} />
