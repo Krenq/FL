@@ -31,7 +31,7 @@ export default function NavBar({ scrollMenu }) {
 
           <Logo styles="top-5 pl-20 .5x01:pl-2 ..7x2:w-100px  ..5x1:flex-1 ..5x5:transform-none ..5x2:left-1/2 ..5x2:ability ..5x2:absolute " />
           <LinksHeader />
-          <SectionNavButtons />
+          {/* <SectionNavButtons /> */}
           <Search />
         </nav>
       ) : (
