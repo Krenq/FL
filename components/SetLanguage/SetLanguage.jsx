@@ -1,12 +1,12 @@
 import Image from "next/image"
-import eng from '../../images/templates/eng.jpg'
-import ger from '../../images/templates/ger.jpg'
-import tur from '../../images/templates/tur.jpg'
-import ch from '../../images/templates/ch.jpg'
+import eng from '../../images/templates/eng.png'
+import ger from '../../images/templates/ger.png'
+import tur from '../../images/templates/tur.png'
+import ch from '../../images/templates/ch.png'
 import ru from '../../images/Icons/flag.png'
 
 
-const SetLanguage = ({ show, setShow, setCurrentLang, currentLang }) => {
+const SetLanguage = ({ show, setShow, setCurrentLang }) => {
 	const langs = [
 		{ name: 'RU', src: ru },
 		{ name: 'EN', src: eng },
@@ -27,8 +27,7 @@ const SetLanguage = ({ show, setShow, setCurrentLang, currentLang }) => {
 				<Image
 					className="object-cover rounded-full"
 					src={lang.src}
-					width={14}
-					height={15}
+
 				/>
 				<span className=".1x1:text-xs .1x1:ml-2 ml-2">{lang.name}</span>
 

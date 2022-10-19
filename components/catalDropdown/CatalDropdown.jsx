@@ -44,8 +44,7 @@ const CatalDropdown = ({ show, setShow }) => {
 
 	return (
 		<>
-			<div className={`fixed top-0 right-0 left-0 bottom-0 z-10 ${show ? 'block' : 'hidden'}`}></div>
-			<section onMouseLeave={setShow} className={`absolute flex z-20 drop right-0 transition-all bg-white -mt-1 ${show ? 'active' : "hiddenCustom"}`}>
+			<section onMouseLeave={setShow} className={`absolute flex z-20 drop right-0 transition-all bg-white -mt-1 ${show.showCatal ? 'active' : "hiddenCustom"}`}>
 				<div className='bg-white-BG_FILTER w-48   pl-3 pt-3 pb-3'>
 					<DropFilterItem src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon_DE_CATALOG.8f87018f.png&w=640&q=75' title='De-каталог' />
 					<DropFilterItem title='Лицо' src='_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2tian.4e6e4278.jpg&w=1080&q=75' />
