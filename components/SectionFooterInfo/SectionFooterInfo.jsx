@@ -15,8 +15,8 @@ export default function SectionFooterInfo() {
 				<br />
 				Ответим на любой вопрос
 			</div>
-			<div className='.3x1:text-11px .2x1.0:block mt-4 mb-2'>
-				Ежедневно: будни с 06:00 до 22:00,  сб-вс с 10:00 до 22:00 (Мск).{' '}
+			<div className='.3x1:text-11px hidden .2x1.0:block mt-4 mb-2'>
+				Ежедневно: будни с 06:00 до 22:00, сб-вс с 10:00 до 22:00 (Мск).{' '}
 
 				Ответим на любой вопрос
 			</div>

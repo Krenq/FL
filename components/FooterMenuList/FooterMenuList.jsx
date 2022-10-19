@@ -40,52 +40,52 @@ export default function FooterMenuList() {
 
 	return (
 		<div className="flex flex-row .2x1.0:flex-col .2x1.0:w-full justify-around w-7/12">
-			<div className="flex flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px">
+			<div className="flex  flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px">
 				<div onClick={showCompany} className={`${show.companyShow ? 'text-black' : ''}.2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b transition-all .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between`}>Компания <svg className={`hidden .2x1.0:block transition-all ${show.companyShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill="#949792" />
 				</svg>
 				</div>
 				<div className={`${show.companyShow ? '!h-32' : "hiddenCustomFoot"} mt-7 .2x1.0:h-auto .3x1:h-56 h-222px transition-all .2x1.0:mt-0 flex flex-col justify-between .2x1.0:justify-start .2x1.0:mb-5 `}>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">О бренде</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">Новости</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">Instashop</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">Контакты</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1:text-xs .2x1.0:mt-2 .2x1.0:font-medium">О бренде</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1:text-xs  .2x1.0:mt-2 .2x1.0:font-medium">Новости</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px  .2x1:text-xs .2x1.0:mt-2 .2x1.0:font-medium">Instashop</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px  .2x1:text-xs .2x1.0:mt-2 .2x1.0:font-medium">Контакты</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1:text-xs  .2x1.0:mt-2 .2x1.0:font-medium">
 						Сервисные центры
 					</div>
 				</div>
 
 			</div>
-			<div className="flex flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px">
+			<div className="flex  flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px">
 				<div onClick={showCatal} className={`${show.catalShow ? '!text-black' : ''} .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3 transition-all`}>Каталог <svg className={`hidden .2x1.0:block transition-all ${show.catalShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill="#949792" />
 				</svg>
 				</div>
 				<div className={`${show.catalShow ? '!h-32' : "hiddenCustomFoot"} .2x1.0:h-auto .3x1:h-56 h-222px mt-7 transition-all .2x1.0:mt-0 flex flex-col justify-between .2x1.0:justify-start .2x1.0:mb-5   `}>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">Акции</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">Наборы</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">Новинки</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">Хиты продаж</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1:text-xs  .2x1.0:mt-2 .2x1.0:font-medium">Акции</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px  .2x1:text-xs .2x1.0:mt-2 .2x1.0:font-medium">Наборы</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px  .2x1:text-xs .2x1.0:mt-2 .2x1.0:font-medium">Новинки</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1:text-xs  .2x1.0:mt-2 .2x1.0:font-medium">Хиты продаж</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px  .2x1:text-xs .2x1.0:mt-2 .2x1.0:font-medium">
 						Программы здоровья
 					</div>
 				</div>
 
 			</div>
-			<div className={` flex flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px`}>
+			<div className={` flex   flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px`}>
 				<div onClick={showbuyers} className={`${show.buyersShow ? '!text-black' : ''} transition-all .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3`}>Покупателям <svg className={`hidden .2x1.0:block transition-all ${show.buyersShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill="#949792" />
 				</svg>
 				</div>
 				<div className={`${show.buyersShow ? '!h-32' : "hiddenCustomFoot"}  .2x1.0:h-auto .3x1:h-56 h-222px mt-7 transition-all .2x1.0:mt-0 flex flex-col justify-between .2x1.0:justify-start .2x1.0:mb-5`}>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px  .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px  .2x1.0:mt-2 .2x1.0:font-medium  .2x1:text-xs ">
 						Оплата, доставка, возврат
 					</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium  .2x1:text-xs ">
 						Обратная связь
 					</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">Online-бонус</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium  .2x1:text-xs ">Online-бонус</div>
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium  .2x1:text-xs ">
 						Личный кабинет
 					</div>
 				</div>
@@ -97,16 +97,16 @@ export default function FooterMenuList() {
 				</svg>
 				</div>
 				<div className={`${show.bisShow ? '!h-32' : "hiddenCustomFoot"} mt-7 .2x1.0:h-auto .3x1:h-56 h-222px transition-all .2x1.0:mt-0 flex flex-col justify-between .2x1.0:justify-start .2x1.0:mb-5  `}>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium  .2x1:text-xs ">
 						Успех, деньги, карьера
 					</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium .2x1:text-xs ">
 						Online-возможности
 					</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium .2x1:text-xs ">
 						Управление и развитие
 					</div>
-					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium">
+					<div className=".2x1.0:text-gray-quick-silver font-normal text-sm text-black-70pe .3x1:text-13px .2x1.0:mt-2 .2x1.0:font-medium .2x1:text-xs ">
 						Присоединяйтесь
 					</div>
 				</div>
