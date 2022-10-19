@@ -336,6 +336,13 @@
 	}
 }
 
+@media (max-width: 1250px) {
+	.hiddenCustomFoot {
+		height: 0 !important;
+		overflow: hidden;
+	}
+}
+
 @media (max-width: 1470px) {
 	.promo {
 		height: 550px !important;
