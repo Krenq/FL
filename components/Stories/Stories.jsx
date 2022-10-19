@@ -43,6 +43,21 @@ const Stories = () => {
 		responsive: [
 			{
 
+				breakpoint: 1875,
+
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: false,
+
+
+					prevArrow: <StoriesPrev />,
+					nextArrow: <StoriesNext />,
+				},
+			},
+			{
+
 				breakpoint: 1650,
 
 				settings: {
@@ -56,13 +71,72 @@ const Stories = () => {
 				},
 			},
 			{
+				breakpoint: 1460,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					centerPadding: '0px',
+					centerMode: false,
+					variableWidth: false,
+					focusOnSelect: false,
+					infinite: true,
+					dots: true,
+					prevArrow: false,
+					nextArrow: false,
+					appendDots: (dots) => {
+
+						return (
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									position: 'absolute',
+									bottom: -30,
+								}}
+							>
+								<div
+									ref={divBlock}
+									style={{
+										width: 200,
+										display: 'flex',
+										justifyContent: 'center',
+										alignItems: 'center',
+									}}
+								>
+									<ul
+										style={{
+											margin: '0px',
+											display: 'flex',
+											alignItems: 'flex-end',
+											justifyContent: 'center',
+										}}
+									>
+										{dots}
+									</ul>
+								</div>
+							</div>
+						);
+					},
+					customPaging: (i) => (
+						<div
+							style={{
+								backgroundColor: ' rgb(218, 218, 218)',
+								width: `${widthDot}px`,
+								height: 4,
+							}}
+						/>
+					),
+				},
+			},
+			{
 				breakpoint: 1200,
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
 					centerPadding: '0px',
 					centerMode: false,
-
+					variableWidth: false,
+					focusOnSelect: false,
 					infinite: true,
 					dots: true,
 					prevArrow: false,
@@ -119,8 +193,68 @@ const Stories = () => {
 					slidesToShow: 2,
 					slidesToScroll: 1,
 					className: 'center',
-					centerMode: true,
-					centerPadding: '0px',
+					centerMode: false,
+					variableWidth: false,
+					focusOnSelect: false,
+					infinite: true,
+					dots: true,
+					prevArrow: false,
+					nextArrow: false,
+					appendDots: (dots) => {
+
+						return (
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									position: 'absolute',
+									bottom: -30,
+								}}
+							>
+								<div
+									ref={divBlock}
+									style={{
+										width: 150,
+										display: 'flex',
+										justifyContent: 'center',
+										alignItems: 'center',
+									}}
+								>
+									<ul
+										style={{
+											margin: '0px',
+											display: 'flex',
+											alignItems: 'flex-end',
+											justifyContent: 'center',
+										}}
+									>
+										{dots}
+									</ul>
+								</div>
+							</div>
+						);
+					},
+					customPaging: (i) => (
+						<div
+							style={{
+								backgroundColor: ' rgb(218, 218, 218)',
+								width: `${widthDot}px`,
+								height: 4,
+							}}
+						/>
+					),
+				},
+			},
+			{
+				breakpoint: 350,
+
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					className: 'center',
+					centerMode: false,
+					variableWidth: false,
+					focusOnSelect: false,
 					infinite: true,
 					dots: true,
 					prevArrow: false,

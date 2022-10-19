@@ -349,10 +349,28 @@
 	}
 }
 
-@media (min-width: 1450px) {
+@media (min-width: 1875px) {
 	.temp {
-		transform: translateX(250px);
+		transform: translateX(250px) !important;
 	}
+}
+
+@media (max-width: 1460px) {
+	.temp {
+		transform: translateX(0%) !important;
+	}
+}
+
+@media (max-width: 1875px) {
+	.temp {
+		transform: translateX(60%);
+	}
+}
+
+
+
+@media (min-width: 1450px) {
+
 
 	.funds .slick-list .slick-track .slick-cloned div .pb-20 .flex {
 		opacity: 0.5;
