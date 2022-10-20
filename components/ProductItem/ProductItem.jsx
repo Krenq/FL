@@ -6,7 +6,7 @@ export default function ProductItem({ title, photo, lastItem }) {
     <>
       {lastItem ? (
         <>
-          <div className="flex flex-col items-center justify-center w-full max-w-228px max-h-228px bg-gray cursor-pointer hover:text-primary transition-all .3x1:hidden">
+          <div className="flex flex-col items-center justify-center w-full max-w-228px max-h-228px bg-gray-light cursor-pointer hover:text-primary transition-all .3x1:hidden">
             <p className="text-2xl text-primary font-medium">Каталог</p>
             <p className="flex justify-center items-center text-sm text-primary cursor-pointer">
               Перейти{' '}

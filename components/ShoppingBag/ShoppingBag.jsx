@@ -22,7 +22,7 @@ export default function ShoppingBag() {
             </div>
           </div>
           <span className=" ml-1 text-xs font-normal self-center">
-            P 22323.00
+            ₽ 22323.00
           </span>
         </div>
       </Link>

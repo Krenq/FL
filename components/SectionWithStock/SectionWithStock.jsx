@@ -13,7 +13,7 @@ export default function SectionWithStock() {
       </div>
       <div className="flex flex-row items-center border-b border-b-white ..6x5:mt-4">
         <button className="font-montserrat font-medium text-13px">
-          Учавствовать
+          Участвовать
         </button>
         <div className="ml-1">
           <Image src={icons.ICON_ARROW_RIGHT} width={13} height={8} />

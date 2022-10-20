@@ -5,7 +5,7 @@ import * as icons from '../../images/constsIcons';
 export default function SeaActItem({ img, mb }) {
   return (
     <div
-      className={`flex justify-center items-center  cursor-pointer ${mb} hover:opacity-70 transition-all `}
+      className={`flex justify-center items-center ${mb} hover:opacity-70 transition-all `}
     >
       <div className="flex flex-col bg-white relative p-4 justify-around items-center max-w-278px mx-auto">
         <div className="absolute flex left-2 top-2 z-10">
@@ -37,7 +37,7 @@ export default function SeaActItem({ img, mb }) {
           <Image className=" object-cover" src={img} width={218} height={218} />
         </div>
         <div className="flex flex-row justify-between items-end w-full mb-1">
-          <p className="text-sm flex items-center text-gray-quick-silver">
+          <p className="text-sm flex items-center text-gray-quick-silver cursor-pointer">
             <svg
               className="mr-2"
               width="16"
@@ -107,7 +107,7 @@ export default function SeaActItem({ img, mb }) {
           </div>
         </div>
 
-        <button className=" ..6x04:text-xs bg-gray-light2 text-primary py-3 px-16 font-montserrat whitespace-nowrap text-xs hover:text-black transition-all">
+        <button className=" ..6x04:text-xs bg-gray-light2 text-primary py-3 px-16 font-montserrat whitespace-nowrap text-xs hover:text-white hover:bg-primary transition-all cursor-pointer">
           + Добавить в заказ
         </button>
       </div>
