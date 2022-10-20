@@ -29,6 +29,7 @@ function Instrumensts() {
     if (slider.current) setKol(slider?.current.props?.children?.length);
   }, [size.width, slider?.current]);
 
+  
   const settings = {
     dots: true,
     className: 'center',
