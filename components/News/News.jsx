@@ -24,9 +24,11 @@ const News = () => {
 	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
 
 	useEffect(() => {
+
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
 		if (slider.current) setKol(slider?.current.props?.children?.length);
 	}, [size.width, slider?.current]);
+
 
 	const settings = {
 		dots: true,
@@ -37,6 +39,7 @@ const News = () => {
 		prevArrow: <NewsPrev />,
 		nextArrow: <NewsNext />,
 		appendDots: (dots) => {
+
 			return (
 				<div
 					style={{
@@ -69,6 +72,7 @@ const News = () => {
 				</div>
 			);
 		},
+
 		customPaging: (i) => (
 			<div
 				style={{
@@ -152,7 +156,7 @@ const News = () => {
 			<button className="ability left-1/2 absolute top-32 text-primary border-2 boder-primary py-3 px-6 text-sm transition-all hover:text-white hover:bg-primary">
 				Смотреть все
 			</button>
-			<Slider {...settings} className="pt-48">
+			<Slider {...settings} ref={slider} className="pt-48">
 				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<div>
 

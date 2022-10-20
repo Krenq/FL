@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useRef, useState } from 'react';
 import Slider from 'react-slick';
+import { useSizeDiscount } from '../../hooks/useSizeDiscount';
 
 import imgDiscount from '../../images/templates/discountImg.jpg';
 import imgProduct from '../../images/templates/prdesc.png';
@@ -16,7 +17,12 @@ import DiscountSliderItem from '../DiscountSliderItem/DiscountSliderItem';
 
 function DiscountsSlider() {
 	const [kolichestvo, setKolichestvo] = useState(1),
-		slider = useRef(null)
+		slider = useRef(null),
+		containerSlider = useRef(null)
+
+
+
+	// useSizeDiscount()
 	const settings = {
 		dots: true,
 		Infinity: true,
@@ -78,8 +84,8 @@ function DiscountsSlider() {
 	}, [slider.current])
 
 	return (
-		<div className="bg-white w-full ">
-			<Slider {...settings} ref={slider}>
+		<div className="bg-white w-full tempSlider" ref={containerSlider}>
+			<Slider {...settings} ref={slider} className='tempSlider'>
 				<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
 				<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
 				<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />

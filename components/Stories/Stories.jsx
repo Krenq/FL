@@ -29,10 +29,10 @@ const Stories = () => {
 		speed: 500,
 		className: 'center',
 
-
+		centerMode: true,
 		variableWidth: true,
 		focusOnSelect: true,
-		centerPadding: '250px',
+
 
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -43,7 +43,7 @@ const Stories = () => {
 		responsive: [
 			{
 
-				breakpoint: 1875,
+				breakpoint: 1810,
 
 				settings: {
 					slidesToShow: 3,
@@ -71,11 +71,11 @@ const Stories = () => {
 				},
 			},
 			{
-				breakpoint: 1460,
+				breakpoint: 1100,
 				settings: {
 					slidesToShow: 4,
 					slidesToScroll: 1,
-					centerPadding: '0px',
+
 					centerMode: false,
 					variableWidth: false,
 					focusOnSelect: false,
@@ -128,64 +128,7 @@ const Stories = () => {
 					),
 				},
 			},
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 1,
-					centerPadding: '0px',
-					centerMode: false,
-					variableWidth: false,
-					focusOnSelect: false,
-					infinite: true,
-					dots: true,
-					prevArrow: false,
-					nextArrow: false,
-					appendDots: (dots) => {
 
-						return (
-							<div
-								style={{
-									display: 'flex',
-									justifyContent: 'center',
-									position: 'absolute',
-									bottom: -30,
-								}}
-							>
-								<div
-									ref={divBlock}
-									style={{
-										width: 200,
-										display: 'flex',
-										justifyContent: 'center',
-										alignItems: 'center',
-									}}
-								>
-									<ul
-										style={{
-											margin: '0px',
-											display: 'flex',
-											alignItems: 'flex-end',
-											justifyContent: 'center',
-										}}
-									>
-										{dots}
-									</ul>
-								</div>
-							</div>
-						);
-					},
-					customPaging: (i) => (
-						<div
-							style={{
-								backgroundColor: ' rgb(218, 218, 218)',
-								width: `${widthDot}px`,
-								height: 4,
-							}}
-						/>
-					),
-				},
-			},
 			{
 				breakpoint: 600,
 
@@ -247,7 +190,7 @@ const Stories = () => {
 			},
 
 		],
-	};
+	}
 	return (
 
 		<section className="my-0 mx-auto relative">

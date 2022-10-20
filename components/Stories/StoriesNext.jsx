@@ -1,7 +1,7 @@
 const NewsNext = ({ onClick, kolichestvo }) => {
 	let styleR = {
 
-		right: '12.2%',
+		right: '2.2%',
 
 		top: '45%',
 		zIndex: 20,
@@ -10,7 +10,7 @@ const NewsNext = ({ onClick, kolichestvo }) => {
 
 	return (
 		<button
-			className=" absolute transition-all hover:bg-gray bg-white py-3 px-4"
+			className="nextStories absolute transition-all hover:bg-gray bg-white py-3 px-4"
 			onClick={onClick}
 			style={styleR}
 		>

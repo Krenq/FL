@@ -12,7 +12,7 @@ import DropFilterItem from '../DropFilterItem/DropFilterItem';
 import CatalDropDownItem from '../CatalDropDownItem/CatalDropDownItem';
 import CatalDropdownNext from '../CatalDropDownNext/CatalDropDownNext';
 import CatalDropdownPrev from '../CatalDropDownPrev/CatalDropDownPrev';
-const CatalDropdown = ({ show, setShow }) => {
+const CatalDropdown = ({ show, setShow, scrollMenu }) => {
 
 	const settings = {
 		dots: false,
@@ -44,7 +44,7 @@ const CatalDropdown = ({ show, setShow }) => {
 
 	return (
 		<>
-			<section onMouseLeave={setShow} className={`absolute flex z-20 drop right-0 transition-all bg-white -mt-1 ${show.showCatal ? 'active' : "hiddenCustom"}`}>
+			<section onMouseLeave={setShow} className={`absolute flex z-20 drop right-0 transition-all bg-white ${scrollMenu ? '-mt-4' : ""} -mt-1 ${show.showCatal ? 'active' : "hiddenCustom"}`}>
 				<div className='bg-white-BG_FILTER w-48   pl-3 pt-3 pb-3'>
 					<DropFilterItem src='/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon_DE_CATALOG.8f87018f.png&w=640&q=75' title='De-каталог' />
 					<DropFilterItem title='Лицо' src='_next/image?url=%2F_next%2Fstatic%2Fmedia%2F2tian.4e6e4278.jpg&w=1080&q=75' />

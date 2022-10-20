@@ -9,7 +9,7 @@ import * as icons from '../../images/constsIcons';
 import CatalDropdown from '../catalDropdown/CatalDropdown';
 import DropDownItem from '../DropDownItem/DropDownItem';
 
-export default function LinkHeaderItem({ title, show, setShow }) {
+export default function LinkHeaderItem({ title, show, setShow, scrollMenu }) {
 	const [showL, setShowL] = useState(false)
 
 
@@ -76,8 +76,8 @@ export default function LinkHeaderItem({ title, show, setShow }) {
 
 
 			{title === 'Каталог' ?
-				<CatalDropdown show={show} setShow={closeDrop} />
-				: <DropDownItem title={title} show={show} setShow={closeDrop} />
+				<CatalDropdown show={show} scrollMenu={scrollMenu} setShow={closeDrop} />
+				: <DropDownItem title={title} show={show} scrollMenu={scrollMenu} setShow={closeDrop} />
 			}
 
 		</article >

@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 
-export default function LinksHeader() {
+export default function LinksHeader({ scrollMenu }) {
 	const [show, setShow] = useState({
 		showCatal: false,
 		showCompany: false,
@@ -18,11 +18,11 @@ export default function LinksHeader() {
 	return (
 		<article className="flex ..5x2:hidden whitespace-nowrap flex-row justify-center items-center p-0 h-8 ">
 
-			<LinkNavBarItem setShow={setShow} show={show} title="Каталог" />
-			<LinkNavBarItem setShow={setShow} show={show} title="О компании" />
-			<LinkNavBarItem setShow={setShow} show={show} title="Бизнес-возможности" />
-			<LinkNavBarItem setShow={setShow} show={show} title="Покупателям" />
-			<LinkNavBarItem setShow={setShow} show={show} title="Программа лояльности" />
+			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="Каталог" />
+			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="О компании" />
+			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="Бизнес-возможности" />
+			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="Покупателям" />
+			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="Программа лояльности" />
 
 			<ShoppingBag />
 		</article>

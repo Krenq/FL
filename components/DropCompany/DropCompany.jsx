@@ -5,10 +5,10 @@ import img3 from '../../images/templates/service3.jpg'
 
 import DropItemDown from '../DropItemDown/DropItemDown'
 
-const DropCompany = ({ show, setShow }) => {
+const DropCompany = ({ show, setShow, scrollMenu }) => {
 	return (
 
-		<section onMouseLeave={setShow} className={`absolute .2x1:pt-2  flex z-20 right-0 left-0 h-56 .3x1:pt-0 .3x1:h-44 .3x1:items-start .3x1:pt-5  transition-all bg-white mt-9 ${show.showCompany ? 'active' : "hiddenCustom"}`}>
+		<section onMouseLeave={setShow} className={`absolute .2x1:pt-2  flex z-20 right-0 left-0 h-56 .3x1:pt-0 .3x1:h-44 .3x1:items-start .3x1:pt-5  transition-all bg-white ${scrollMenu ? 'mt-6' : ""} mt-9 ${show.showCompany ? 'active' : "hiddenCustom"}`}>
 			<div className="w-1816px  px-2 my-0 mx-auto flex items-center justify-center">
 
 				<DropItemDown src={prod1} title="НОВОСТИ" />
