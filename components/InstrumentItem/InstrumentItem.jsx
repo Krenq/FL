@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import SectionImgs from './sectionImgs';
+import SectionImgs from './SectionImgs';
 
 export default function InstrumentItem({
 	icon,
