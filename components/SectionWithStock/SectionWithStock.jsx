@@ -5,6 +5,7 @@ import { useTimerHook } from '../../hooks/useTimerHook';
 import * as icons from '../../images/constsIcons';
 
 export default function SectionWithStock() {
+
 	const [time, setTime] = useState({
 		days: '00',
 		hours: '00',
@@ -39,4 +40,5 @@ export default function SectionWithStock() {
 			</div>
 		</article>
 	);
+
 }

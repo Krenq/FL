@@ -73,6 +73,7 @@ module.exports = {
         platinum: '#E8E9E7',
         'quick-silver': '#828584',
         smart: '#d1d1d1',
+        border: '#DCE0DF',
       },
       primary: {
         DEFAULT: '#337202',
@@ -123,6 +124,7 @@ module.exports = {
         '10px': '10px',
         '14px': '14px',
         '26px': '26px',
+        '27px': '27px',
         '34px': '34px',
         '38px': '38px',
         '42px': '42px',
@@ -210,6 +212,7 @@ module.exports = {
         '15.65%': '15.65%',
       },
       maxHeight: {
+        '21px': '21px',
         '228px': '228px',
         '262px': '262px',
         '305px': '305px',

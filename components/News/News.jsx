@@ -11,24 +11,19 @@ import NewsNext from './NewsNext';
 
 const News = () => {
 	const divBlock = useRef(null),
-		slider = useRef(null)
-
+		slider = useRef(null);
 
 	const size = useWindowSize();
 
 	const [kol, setKol] = useState();
 	const [widthDot, setWidthDot] = useState();
 
-
-
 	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
 
 	useEffect(() => {
-
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
 		if (slider.current) setKol(slider?.current.props?.children?.length);
 	}, [size.width, slider?.current]);
-
 
 	const settings = {
 		dots: true,
@@ -39,7 +34,6 @@ const News = () => {
 		prevArrow: <NewsPrev />,
 		nextArrow: <NewsNext />,
 		appendDots: (dots) => {
-
 			return (
 				<div
 					style={{
@@ -47,6 +41,7 @@ const News = () => {
 						justifyContent: 'center',
 						position: 'absolute',
 						bottom: -30,
+
 					}}
 				>
 					<div
@@ -72,7 +67,6 @@ const News = () => {
 				</div>
 			);
 		},
-
 		customPaging: (i) => (
 			<div
 				style={{
@@ -93,7 +87,6 @@ const News = () => {
 
 					prevArrow: false,
 					nextArrow: false,
-
 				},
 			},
 			{
@@ -105,7 +98,6 @@ const News = () => {
 					dots: true,
 					prevArrow: false,
 					nextArrow: false,
-
 				},
 			},
 		],
@@ -159,7 +151,6 @@ const News = () => {
 			<Slider {...settings} ref={slider} className="pt-48">
 				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<div>
-
 						<Image
 							className="object-cover"
 							width={474}
@@ -167,29 +158,28 @@ const News = () => {
 							src={oneNew}
 							alt="newsImg"
 						/>
-
 					</div>
 					<div className="border-2 border-gray -mt-2 relative">
-						<p className="text-center mt-6 text-gray-quick-silver underline mb-2">
-							Онлайн-каталог Промоушен
-						</p>
+						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-quick-silver">
+							<p className="text-center mt-6 underline mb-2">Онлайн-каталог</p>
+							<p className="text-center mt-6 underline mb-2">Промоушен</p>
+						</div>
 						<p className="text-center text-lg font-bold">
 							Возвращение легенды: косметический <br /> спонж для умывания
 						</p>
-						<p className="text-center mt-2 mb-12">
+						<p className="text-center mt-2 px-2 mb-5 news_text">
 							Все помнят тот самый косметический спонж, который под струей воды
-							превращался из палочки в круглый диск...
+							превращался из палочки в круглый диск Все помнят тот самый
+							косметический спонж, который под струей воды превращался
 						</p>
 						<button className="relative ability left-1/2 bottom-3 text-black">
 							Читать
 							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
-
 						</button>
 					</div>
 				</div>
 				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<div>
-
 						<Image
 							className="object-cover"
 							src={twoNew}
@@ -197,30 +187,29 @@ const News = () => {
 							height={330}
 							alt="newsImg"
 						/>
-
 					</div>
 					<div className="border-2 border-gray -mt-2 relative">
-						<p className="text-center mt-6 text-gray-quick-silver underline mb-2">
-							Онлайн-каталог Промоушен
-						</p>
+						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-quick-silver">
+							<p className="text-center mt-6 underline mb-2">Онлайн-каталог</p>
+							<p className="text-center mt-6 underline mb-2">Промоушен</p>
+						</div>
 						<p className="text-center text-lg font-bold mb-9">
 							Алоэ - компонент многих продуктов TianDe
 						</p>
-						<p className="text-center mt-2 mb-12">
+						<p className="text-center mt-2 px-2 mb-5 news_text">
 							Все помнят тот самый косметический спонж, который под струей воды
-							превращался из палочки в круглый диск...
+							превращался из палочки в круглый диск Все помнят тот самый
+							косметический спонж, который под струей воды превращался
 						</p>
 
 						<button className="relative ability left-1/2 bottom-3 text-black">
 							Читать
 							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
-
 						</button>
 					</div>
 				</div>
 				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<div>
-
 						<Image
 							className="object-cover"
 							src={treeNew}
@@ -228,31 +217,30 @@ const News = () => {
 							height={330}
 							alt="newsImg"
 						/>
-
 					</div>
 					<div className="border-2 border-gray -mt-2 relative">
-						<p className="text-center mt-6 text-gray-quick-silver underline mb-2">
-							Онлайн-каталог Промоушен
-						</p>
+						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-quick-silver">
+							<p className="text-center mt-6 underline mb-2">Онлайн-каталог</p>
+							<p className="text-center mt-6 underline mb-2">Промоушен</p>
+						</div>
 						<p className="text-center text-lg font-bold">
 							Что нужно для идеального макияжа? Список необходимой косметики и
 							лайфхаков
 						</p>
-						<p className="text-center mt-2 mb-12">
+						<p className="text-center mt-2 px-2 mb-5 news_text">
 							Все помнят тот самый косметический спонж, который под струей воды
-							превращался из палочки в круглый диск...
+							превращался из палочки в круглый диск Все помнят тот самый
+							косметический спонж, который под струей воды превращался
 						</p>
 
 						<button className="relative ability left-1/2 bottom-3 text-black">
 							Читать
 							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
-
 						</button>
 					</div>
 				</div>
 				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<div>
-
 						<Image
 							className="object-cover"
 							src={treeNew}
@@ -260,25 +248,25 @@ const News = () => {
 							height={330}
 							alt="newsImg"
 						/>
-
 					</div>
 					<div className="border-2 border-gray -mt-2 relative">
-						<p className="text-center mt-6 text-gray-quick-silver underline mb-2">
-							Онлайн-каталог Промоушен
-						</p>
+						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-quick-silver">
+							<p className="text-center mt-6 underline mb-2">Онлайн-каталог</p>
+							<p className="text-center mt-6 underline mb-2">Промоушен</p>
+						</div>
 						<p className="text-center text-lg font-bold">
 							Что нужно для идеального макияжа? Список необходимой косметики и
 							лайфхаков
 						</p>
-						<p className="text-center mt-2 mb-12">
+						<p className="text-center mt-2 px-2 mb-5 news_text">
 							Все помнят тот самый косметический спонж, который под струей воды
-							превращался из палочки в круглый диск...
+							превращался из палочки в круглый диск Все помнят тот самый
+							косметический спонж, который под струей воды превращался
 						</p>
 
 						<button className="relative ability left-1/2 bottom-3 text-black">
 							Читать
 							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
-
 						</button>
 					</div>
 				</div>
