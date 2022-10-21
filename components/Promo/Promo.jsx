@@ -42,10 +42,10 @@ const Promo = () => {
 					На аквагель для лица серии «FreshClick»
 				</p>
 				<div>
-					<button className="border-2 .2x1:py-3 ..7x2:px-12 .2x1:px-16 border-gray bg-gray mt-8 text-gray-quick-silver px-24 py-5 transition-all hover:border-primary hover:text-white hover:bg-primary">
+					<button className="border-2 ..7x01:px-10 .2x1:py-3 ..7x2:px-12 .2x1:px-16 border-gray bg-gray mt-8 text-gray-quick-silver px-24 py-5 transition-all hover:border-primary hover:text-white hover:bg-primary">
 						CLICK
 					</button>
-					<button className=" border-2 border-gray ..7x2:px-9 ..7x2:pr-5 px-10 .2x1:py-3 py-5 relative ">
+					<button className=" ..7x01:pr-8 border-2 border-gray ..7x2:px-9 ..7x2:pr-5 px-10 .2x1:py-3 py-5 relative ">
 						{' '}
 						<svg
 							className="absolute .2x1:top-4 top-6 left-4"
@@ -117,7 +117,7 @@ const Promo = () => {
 				<div className="absolute ..6x1:h-72 ..6x1:w-72 ..6x1:-mt-2 ..5x3:-mt-8  ..5x3min:hidden  ..5x3:relative  ..5x3:-top-16 ..5x3:right-0 right-40 top-40 ..5x1:top-7 .4x1:right-0 .2x1:w-1/3 .5x1:top-16">
 					<div className=" bg-gray px-4 .1x1:top-36 .1x1:left-16 py-2 .2x1:top-56 text-lg moreP rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">
 						+
-						<section className="absolute  hidden flex-col justify-between text-black .1x1:-left-100px -left-60 -top-44 font-montserrat rounded-lg w-390px h-200px p-4 info cursor-default">
+						<section className="absolute ..7x2:w-72 ..7x2:-left-16 ..7x001:w-80 ..7x001:-left-20  hidden flex-col justify-between text-black .1x1:-left-100px -left-60 -top-44 font-montserrat rounded-lg w-390px h-200px p-4 info cursor-default">
 							<span className="flex">
 								<svg
 									width="16"
@@ -206,7 +206,7 @@ const Promo = () => {
 									Подробнее
 									<div className="bg-primary absolute bottom-0 opacity-40 h-6px w-full" />
 								</button>
-								<button className=" font-medium text-xs leading-100% px-4 py-3 text-primary bg-gray flex items-center transition-all hover:opacity-50">
+								<button className="..7x2:w-36 font-medium text-xs leading-100% px-4 py-3 text-primary bg-gray flex items-center transition-all hover:opacity-50">
 									<svg
 										className="mr-2"
 										width="16"
@@ -242,7 +242,7 @@ const Promo = () => {
 
 				<div className=" bg-gray px-4 .1x1:top-48 py-2 .2x1:top-56 text-lg moreP rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">
 					+
-					<section className="absolute hidden flex-col justify-between text-black -left-60 -top-44 font-montserrat rounded-lg w-390px h-200px p-4 info cursor-default">
+					<section className="  absolute hidden flex-col justify-between text-black -left-60 -top-44 font-montserrat rounded-lg w-390px h-200px p-4 info cursor-default">
 						<span className="flex">
 							<svg
 								width="16"
@@ -319,7 +319,7 @@ const Promo = () => {
 							</div>
 						</div>
 						<div className="flex justify-between">
-							<p className=" text-gray-quick-silver font-normal -mt-7 w-76% leading-140% text-13px">
+							<p className="..7x001:w-20 text-gray-quick-silver font-normal -mt-7 w-76% leading-140% text-13px">
 								Гель успокоит кожу, устранит чувство стянутости и предотвратит шелушение
 							</p>
 							<p className=" text-base font-normal leading-140% text-label-orange">
@@ -327,11 +327,11 @@ const Promo = () => {
 							</p>
 						</div>
 						<div className="flex justify-between items-center mt-3 ">
-							<button className="font-medium text-black text-13px leading-100% relative z-10 hover:text-primary transition-all">
+							<button className=" font-medium text-black text-13px leading-100% relative z-10 hover:text-primary transition-all">
 								Подробнее
 								<div className="bg-primary absolute bottom-0 opacity-40 h-6px w-full" />
 							</button>
-							<button className=" font-medium text-xs leading-100% px-4 py-3 text-primary bg-gray flex items-center transition-all hover:opacity-50">
+							<button className="..7x01:w-40 font-medium text-xs leading-100% px-4 py-3 text-primary bg-gray flex items-center transition-all hover:opacity-50">
 								<svg
 									className="mr-2"
 									width="16"

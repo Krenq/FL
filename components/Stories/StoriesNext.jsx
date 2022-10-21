@@ -1,7 +1,7 @@
 const NewsNext = ({ onClick, kolichestvo }) => {
 	let styleR = {
 
-		right: '2.2%',
+		right: '20px',
 
 		top: '45%',
 		zIndex: 20,

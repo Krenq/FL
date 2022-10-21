@@ -18,7 +18,7 @@ export default function DiscountSliderItem({ imgProd, img }) {
 
 						<div className=" bg-gray px-4 py-2 text-lg moreF rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">
 							+
-							<section className="absolute hidden flex-col justify-between text-black -top-40 font-montserrat rounded-lg w-390px h-200px p-4 info cursor-default">
+							<section className="absolute ..5x2:top-0 ..5x2:-left-40 ..7x1:-left-40 ..7x01:w-72 ..7x01:-left-36  ..7x1:w-80 hidden flex-col justify-between text-black -top-40 font-montserrat rounded-lg w-390px h-200px p-4 info cursor-default">
 								<span className="flex">
 									<svg
 										width="16"
@@ -107,7 +107,7 @@ export default function DiscountSliderItem({ imgProd, img }) {
 										Подробнее
 										<div className="bg-primary absolute bottom-0 opacity-40 h-6px w-full" />
 									</button>
-									<button className=" font-medium text-xs leading-100% px-4 py-3 text-primary bg-gray flex items-center transition-all hover:opacity-50">
+									<button className="..7x01:w-40 font-medium text-xs leading-100% px-4 py-3 text-primary bg-gray flex items-center transition-all hover:opacity-50">
 										<svg
 											className="mr-2"
 											width="16"

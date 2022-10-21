@@ -1,6 +1,6 @@
 const NewsPrev = ({ onClick, kolichestvo }) => {
 	let styleL = {
-		left: '2.2%',
+		left: '20px',
 		top: '45%',
 		zIndex: 20,
 		borderRadius: 25,
