@@ -130,6 +130,65 @@ const Stories = () => {
 			},
 
 			{
+				breakpoint: 850,
+
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					className: 'center',
+					centerMode: false,
+					variableWidth: false,
+					focusOnSelect: false,
+					infinite: true,
+					dots: true,
+					prevArrow: false,
+					nextArrow: false,
+					appendDots: (dots) => {
+
+						return (
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									position: 'absolute',
+									bottom: -30,
+								}}
+							>
+								<div
+									ref={divBlock}
+									style={{
+										width: 150,
+										display: 'flex',
+										justifyContent: 'center',
+										alignItems: 'center',
+									}}
+								>
+									<ul
+										style={{
+											margin: '0px',
+											display: 'flex',
+											alignItems: 'flex-end',
+											justifyContent: 'center',
+										}}
+									>
+										{dots}
+									</ul>
+								</div>
+							</div>
+						);
+					},
+					customPaging: (i) => (
+						<div
+							style={{
+								backgroundColor: ' rgb(218, 218, 218)',
+								width: `${widthDot}px`,
+								height: 4,
+							}}
+						/>
+					),
+				},
+			},
+			{
 				breakpoint: 600,
 
 				settings: {

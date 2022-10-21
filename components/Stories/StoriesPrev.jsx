@@ -9,7 +9,7 @@ const NewsPrev = ({ onClick, kolichestvo }) => {
 	return (
 		<button
 
-			className="prev_rotate absolute transition-all hover:bg-gray bg-white py-3 px-4"
+			className="prev_rotate prevStories absolute transition-all hover:bg-gray bg-white py-3 px-4"
 
 			onClick={onClick}
 			style={styleL}

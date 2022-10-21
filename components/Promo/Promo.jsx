@@ -227,9 +227,9 @@ const Promo = () => {
 							</div>
 						</section>
 					</div>
-					<div>
+					<div className='.1x1:mt-4 ..5x4:mt-7 ..6x1:mt-0'>
 						<Image
-							className="object-cover z-20"
+							className="object-cover z-20 "
 							src={itemleas}
 							width={497}
 							height={497}
