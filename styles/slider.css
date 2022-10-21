@@ -31,6 +31,8 @@
 	z-index: 100;
 }
 
+
+
 .moreF:hover .info {
 	transition: 0.3s ease all;
 	display: flex;
@@ -128,6 +130,10 @@
 	left: -242%;
 }
 
+.timer {
+	width: 210px;
+}
+
 .imgFilter {
 	height: 46px;
 	width: 46px;
@@ -207,6 +213,12 @@
 	width: 100%;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+@media (max-width: 500px) {
+	.timer {
+		width: 155px;
+	}
 }
 
 @media (max-width: 1536px) {

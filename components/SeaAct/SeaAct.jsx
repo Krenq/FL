@@ -261,7 +261,7 @@ const SeaAct = () => {
 						<div className="absolute top-10 left-10 z-10">
 							<p className="text-2xl text-primary">АКЦИЯ ВЕСНЫ</p>
 							<p className="text-3xl font-medium">Получай подарки за покупки</p>
-							<div className=" absolute -left-4 top-24 bg-white-80pe px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3  ">
+							<div className="timer absolute -left-4 top-24 bg-white-80pe px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3  ">
 								{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
 
 							</div>
