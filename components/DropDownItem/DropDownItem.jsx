@@ -6,16 +6,16 @@ import DropCompany from "../DropCompany/DropCompany"
 import DropLoal from "../DropLoal/DropLoal"
 
 
-const DropDownItem = ({ title, show, setShow, scrollMenu }) => {
+const DropDownItem = ({ title, show, setShow, scrollMenu, showDrop }) => {
 	switch (title) {
 		case ('О компании'):
-			return <DropCompany show={show} scrollMenu={scrollMenu} setShow={setShow} />
+			return <DropCompany show={show} showDrop={showDrop} scrollMenu={scrollMenu} setShow={setShow} />
 		case ('Бизнес-возможности'):
-			return <DropBusiness show={show} scrollMenu={scrollMenu} setShow={setShow} />
+			return <DropBusiness show={show} showDrop={showDrop} scrollMenu={scrollMenu} setShow={setShow} />
 		case ('Покупателям'):
-			return <DropBuyers show={show} scrollMenu={scrollMenu} setShow={setShow} />
+			return <DropBuyers show={show} showDrop={showDrop} scrollMenu={scrollMenu} setShow={setShow} />
 		case ('Программа лояльности'):
-			return <DropLoal show={show} scrollMenu={scrollMenu} setShow={setShow} />
+			return <DropLoal show={show} showDrop={showDrop} scrollMenu={scrollMenu} setShow={setShow} />
 		default:
 			return
 	}

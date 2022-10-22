@@ -11,9 +11,11 @@ export default function LinkHeaderItem({ title, show, setShow, scrollMenu }) {
 	const [showL, setShowL] = useState(false);
 
 	const setShowDropdown = () => {
+
 		setShowL((showL = !showL));
 
 		if (title === 'Каталог')
+
 			setShow(
 				(show = {
 					showCompany: false,
@@ -85,7 +87,7 @@ export default function LinkHeaderItem({ title, show, setShow, scrollMenu }) {
 				} py-6px .2x1:text-xs .3x1:px-2 px-4   hover:rounded-32px transition-all	 hover:bg-gray-light text-black font-montserrat font-medium text-sm`}
 		>
 			<article
-				onMouseLeave={() => setShowL(false)}
+				onMouseLeave={closeDrop}
 				onMouseEnter={setShowDropdown}
 				className="cursor-pointer hover:text-green-hov flex flex-row items-center"
 			>
@@ -103,9 +105,9 @@ export default function LinkHeaderItem({ title, show, setShow, scrollMenu }) {
 			</article>
 
 			{title === 'Каталог' ? (
-				<CatalDropdown show={show} scrollMenu={scrollMenu} setShow={closeDrop} />
+				<CatalDropdown show={show} scrollMenu={scrollMenu} showDrop={setShowDropdown} setShow={closeDrop} />
 			) : (
-				<DropDownItem title={title} scrollMenu={scrollMenu} show={show} setShow={closeDrop} />
+				<DropDownItem title={title} scrollMenu={scrollMenu} showDrop={setShowDropdown} show={show} setShow={closeDrop} />
 			)}
 		</article>
 	);

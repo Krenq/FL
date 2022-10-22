@@ -11,7 +11,7 @@ import DropFilterItem from '../DropFilterItem/DropFilterItem';
 import CatalDropDownItem from '../CatalDropDownItem/CatalDropDownItem';
 import CatalDropdownNext from '../CatalDropDownNext/CatalDropDownNext';
 import CatalDropdownPrev from '../CatalDropDownPrev/CatalDropDownPrev';
-const CatalDropdown = ({ show, setShow, scrollMenu }) => {
+const CatalDropdown = ({ show, setShow, scrollMenu, showDrop }) => {
 	const settings = {
 		dots: false,
 		Infinity: true,
@@ -41,9 +41,11 @@ const CatalDropdown = ({ show, setShow, scrollMenu }) => {
 
 	return (
 		<>
+			<div onMouseEnter={showDrop} onMouseLeave={setShow} className={`${show.showCatal ? 'active' : "hiddenCustom"} fixed top-70 left-0 right-0 bg-red h-10 z-30`}></div>
 			<section
 				onMouseLeave={setShow}
-				className={`absolute flex z-20 drop right-0 transition-all bg-white -mt-1 ${scrollMenu ? '-mt-5' : ""} ${show.showCatal ? 'active' : 'hiddenCustom'
+				onMouseEnter={showDrop}
+				className={`absolute flex z-20 drop  right-0 transition-all bg-white -mt-1 ${scrollMenu ? '-mt-5' : ""} ${show.showCatal ? 'active' : 'hiddenCustom'
 					}`}
 			>
 				<div className="bg-white-BG_FILTER w-48   pl-3 pt-3 pb-3">
