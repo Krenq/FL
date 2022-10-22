@@ -15,12 +15,24 @@ import useWindowSize from '../utils/useWindowSize';
 
 function Instrumensts({ refL }) {
 	const divBlock = useRef(null),
-		slider = useRef(null);
+		slider = useRef(null)
+
+	const [delivery, setDelivery] = useState({
+		isHover: false,
+		currentCountry: 'Россия'
+	}),
+		cntrs = ['Россия', 'Австрия', 'Беларусь', 'Бельгия', 'Болгария', 'Болгария', 'Болгария', 'Болгария']
 
 	const size = useWindowSize();
 
 	const [kol, setKol] = useState();
 	const [widthDot, setWidthDot] = useState();
+
+
+
+
+	const setCurrentCountry = country => setDelivery({ isHover: false, currentCountry: country })
+
 
 	useEffect(() => {
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
@@ -126,8 +138,8 @@ function Instrumensts({ refL }) {
 					alt="discountImg"
 				/>
 			</div>
-			<section className=" ..7x2:pb-20 ..5x3:mt-5 ..5x1:-mt-32  relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40 pb-36 ">
-				<p className="absolute left-1/2 ability text-2xl z-10">Сервисы</p>
+			<section className="..5x2:pt-60 ..7x2:pb-20 ..5x3:mt-5 ..5x1:-mt-32  relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40 pb-36 ">
+				<p className="absolute left-1/2 top-28 ability text-2xl z-10">Сервисы</p>
 
 				<svg
 					width="140"
@@ -179,15 +191,29 @@ function Instrumensts({ refL }) {
 							text="Вознаграждение консультантов с пятого уровня, 1-10%"
 							title="Online-бонус"
 						/>
+						<div className='relative'>
+							<InstrumentItem
+								icon={icons.ICON_DOSTAVKA}
+								country={delivery.currentCountry}
+								textImg={[yandex, pochtaRF, ozon, cdek, berry]}
+								variant="Dostavka"
+								title="Доставка от 1000 ₽"
+								underCountry="+ 31 страна"
+								setDelivery={setDelivery}
+								delivery={delivery}
+							/>
+							<section onMouseLeave={() => setDelivery({
+								currentCountry: delivery.currentCountry,
+								isHover: false
+							})} className={`dropmenuInstr ${delivery.isHover ? "block" : "hidden"} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-72 h-64 left-14 -bottom-40`}>
+								{cntrs.map((ctr, i) => <p key={i} onClick={() => setCurrentCountry(ctr)} className='px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between'>{ctr} {delivery.currentCountry === ctr ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z" fill="#337202" />
+								</svg>
+									: ''}</p>)}
 
-						<InstrumentItem
-							icon={icons.ICON_DOSTAVKA}
-							country="Россия"
-							textImg={[yandex, pochtaRF, ozon, cdek, berry]}
-							variant="Dostavka"
-							title="Доставка от 1000 ₽"
-							underCountry="+ 31 страна"
-						/>
+							</section>
+						</div>
+
 
 						<InstrumentItem
 							icon={icons.ICON_OPLATA}
@@ -231,14 +257,28 @@ function Instrumensts({ refL }) {
 						title="Online-бонус"
 					/>
 
-					<InstrumentItem
-						icon={icons.ICON_DOSTAVKA}
-						country="Россия"
-						title="Доставка от 1000 ₽"
-						underCountry="+ 31 страна"
-						variant="Dostavka"
-						textImg={[yandex, pochtaRF, ozon, cdek, berry]}
-					/>
+					<div className='relative'>
+						<InstrumentItem
+							icon={icons.ICON_DOSTAVKA}
+							country={delivery.currentCountry}
+							textImg={[yandex, pochtaRF, ozon, cdek, berry]}
+							variant="Dostavka"
+							title="Доставка от 1000 ₽"
+							underCountry="+ 31 страна"
+							setDelivery={setDelivery}
+							delivery={delivery}
+						/>
+						<section onMouseLeave={() => setDelivery({
+							currentCountry: delivery.currentCountry,
+							isHover: false
+						})} className={`dropmenuInstr ${delivery.isHover ? "block" : "hidden"} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-11/12 h-64 left-3 -bottom-24`}>
+							{cntrs.map((ctr, i) => <p key={i} onClick={() => setCurrentCountry(ctr)} className='px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between'>{ctr} {delivery.currentCountry === ctr ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z" fill="#337202" />
+							</svg>
+								: ''}</p>)}
+
+						</section>
+					</div>
 
 					<InstrumentItem
 						icon={icons.ICON_OPLATA}

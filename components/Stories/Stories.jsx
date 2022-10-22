@@ -31,7 +31,7 @@ const Stories = ({ refL }) => {
 
 		centerMode: true,
 		variableWidth: true,
-		focusOnSelect: true,
+
 
 
 		slidesToShow: 4,

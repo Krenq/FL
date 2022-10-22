@@ -877,3 +877,18 @@
 		width: auto;
 	}
 }
+
+.dropmenuInstr::-webkit-scrollbar {
+	width: 4px;
+
+
+}
+
+
+
+.dropmenuInstr::-webkit-scrollbar-thumb {
+	background-color: #DBDCDA;
+
+	border-radius: 20px;
+
+}
