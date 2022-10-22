@@ -20,8 +20,7 @@ export default function InstrumentItem({
 
 
 	const setDilHover = () => {
-		if (title !== 'Доставка от 1000 ₽') return
-		console.log(delivery)
+
 		setDelivery({
 			currentCountry: delivery.currentCountry,
 			isHover: true,

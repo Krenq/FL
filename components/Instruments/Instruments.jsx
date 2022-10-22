@@ -17,11 +17,17 @@ function Instrumensts({ refL }) {
 	const divBlock = useRef(null),
 		slider = useRef(null)
 
+
+	const [payments, setpayments] = useState({
+		isHover: false,
+		currentCountry: 'Россия'
+	})
+
 	const [delivery, setDelivery] = useState({
 		isHover: false,
 		currentCountry: 'Россия'
 	}),
-		cntrs = ['Россия', 'Австрия', 'Беларусь', 'Бельгия', 'Болгария', 'Болгария', 'Болгария', 'Болгария']
+		cntrs = ['Россия', 'Австрия', 'Беларусь', 'Бельгия', 'Франция', 'Германия', 'Италия', 'Казахстан']
 
 	const size = useWindowSize();
 
@@ -32,6 +38,8 @@ function Instrumensts({ refL }) {
 
 
 	const setCurrentCountry = country => setDelivery({ isHover: false, currentCountry: country })
+	const setCurrentPaymentCountry = country => setpayments({ isHover: false, currentCountry: country })
+
 
 
 	useEffect(() => {
@@ -214,14 +222,27 @@ function Instrumensts({ refL }) {
 							</section>
 						</div>
 
+						<div className='relative'>
+							<InstrumentItem
+								icon={icons.ICON_OPLATA}
+								title="Оплата"
+								country={payments.currentCountry}
+								underCountry="Услуга отсрочки платежа"
+								variant="Oplata"
+								setDelivery={setpayments}
+								delivery={payments}
+							/>
+							<section onMouseLeave={() => setpayments({
+								currentCountry: payments.currentCountry,
+								isHover: false
+							})} className={`dropmenuInstr ${payments.isHover ? "block" : "hidden"} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-72 h-64 left-32 -bottom-40`}>
+								{cntrs.map((ctr, i) => <p key={i} onClick={() => setCurrentPaymentCountry(ctr)} className='px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between'>{ctr} {payments.currentCountry === ctr ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z" fill="#337202" />
+								</svg>
+									: ''}</p>)}
 
-						<InstrumentItem
-							icon={icons.ICON_OPLATA}
-							title="Оплата"
-							country="Россия"
-							underCountry="Услуга отсрочки платежа"
-							variant="Oplata"
-						/>
+							</section>
+						</div>
 					</div>
 				</div>
 
@@ -279,14 +300,27 @@ function Instrumensts({ refL }) {
 
 						</section>
 					</div>
+					<div className='relative'>
+						<InstrumentItem
+							icon={icons.ICON_OPLATA}
+							title="Оплата"
+							country={payments.currentCountry}
+							underCountry="Услуга отсрочки платежа"
+							variant="Oplata"
+							setDelivery={setpayments}
+							delivery={payments}
+						/>
+						<section onMouseLeave={() => setpayments({
+							currentCountry: payments.currentCountry,
+							isHover: false
+						})} className={`dropmenuInstr ${payments.isHover ? "block" : "hidden"} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-11/12 h-64 left-3 -bottom-24`}>
+							{cntrs.map((ctr, i) => <p key={i} onClick={() => setCurrentPaymentCountry(ctr)} className='px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between'>{ctr} {payments.currentCountry === ctr ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z" fill="#337202" />
+							</svg>
+								: ''}</p>)}
 
-					<InstrumentItem
-						icon={icons.ICON_OPLATA}
-						title="Оплата"
-						country="Россия"
-						underCountry="Услуга отсрочки платежа"
-						variant="Oplata"
-					/>
+						</section>
+					</div>
 				</Slider>
 			</section>
 		</div>
