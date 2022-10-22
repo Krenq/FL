@@ -137,9 +137,9 @@ const Funds = () => {
     ],
   };
   return (
-    <section className="relative bg-gray-light">
+    <section className="relative bg-gray-light pt-80">
       <svg
-        className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-6 "
+        className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 top-6 "
         width="184"
         height="183"
         viewBox="0 0 184 183"
@@ -175,16 +175,18 @@ const Funds = () => {
           strokeLinejoin="round"
         />
       </svg>
-      <p className="ability absolute left-1/2 top-6 font-medium text-xl pt-10">
+      <div className=' bg-primary-active'>
+      <p className=" text-center font-medium text-xl">
         Что-то
       </p>
-      <p className="ability absolute left-1/2 top-24 w-full   text-center font-medium text-2xl italic mb-4 ..7x2:text-xl">
+      <p className=" text-center font-medium text-2xl italic ..7x2:text-xl">
         ПРО УХОДОВЫЕ СРЕДСТВА
       </p>
-      <p className="text-center text-lg mb-10 pt-32 ..7x2:text-sm">
+      <p className="text-center text-lg ..7x2:text-sm">
         Которые не так очевидны в каталоге, например, подкатегории, <br />{' '}
         наборы и идеи подарков
       </p>
+      </div>
 
       <Slider {...settings} ref={slider} className="funds">
         <div className=" pb-20 ..7x2:p-0">

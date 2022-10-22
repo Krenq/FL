@@ -31,13 +31,13 @@ function Home() {
 			<SpecialOffers />
 			<Buyers />
 			<Products />
+			<News />
 			<SeaAct />
 			<Promo />
 			<Instrumensts />
 			<Funds />
 			<Partners />
 			<Health />
-			<News />
 			<Stories />
 			<Clubs />
 			<Trands />

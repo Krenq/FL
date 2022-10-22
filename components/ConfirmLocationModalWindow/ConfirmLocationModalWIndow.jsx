@@ -11,10 +11,10 @@ const ConfirmLocationModalWindow = () => {
 				<p className="text-base">Ваш город <span className="font-semibold">Москва?</span></p>
 
 				<div className="flex">
-					<button className="px-9 ..7x01:px-5 ..7x11:px-7 text-sm py-3 mr-4 ..7x1:text-xs mt-4 text-primary border-2 border-primary">
+					<button className="px-9 ..7x01:px-5 ..7x11:px-7 text-sm py-3 mr-4 ..7x1:text-xs mt-4 text-primary border-2 border-primary whitespace-nowrap">
 						Нет, другой
 					</button>
-					<button onClick={handleSet} className="px-10 ..7x11:px-7 ..7x1:text-xs bg-primary text-white text-sm py-3 mt-4   border-2 border-primary">
+					<button onClick={handleSet} className="px-10 ..7x11:px-7 ..7x1:text-xs bg-primary text-white text-sm py-3 mt-4   border-2 border-primary whitespace-nowrap">
 						Да, верно
 					</button>
 

@@ -207,7 +207,7 @@ const SeaAct = () => {
 	};
 
 	return (
-		<div className="bg-gray-light">
+		<div className="bg-gray-light pt-10">
 			<section className="container__special relative pt-16 pb-24 ..5x2:pb-20">
 				<svg
 					className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-8 "

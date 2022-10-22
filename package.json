@@ -3,9 +3,10 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
+		"dev": "next dev -p 6006",
 		"build": "next build",
-		"start": "next start",
+		"start": "next start -p 6006",
+		"start:env": "source env/bin/activate; npm run dev",
 		"lint": "next lint",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
