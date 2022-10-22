@@ -23,7 +23,7 @@ export default function SectionWithStock() {
 
 
 	return (
-		<article className="flex flex-row justify-center items-center bg-primary-hover min-h-42px text-white font-noto-sans text-sm font-medium ..6x5:justify-arround ..6x5:p-2 ..7x01:justify-start">
+		<article id='stock' className="flex flex-row justify-center items-center bg-primary-hover min-h-42px text-white font-noto-sans text-sm font-medium ..6x5:justify-arround ..6x5:p-2 ..7x01:justify-start">
 			<div className='flex items-center ..6x5:flex-col ..6x5:items-start '>
 				<p className='..6x5:text-11px ..6x5:pl-14px'>Кешбэк-марафон</p>
 				<div className="timer bg-white px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3 ..6x5:font-noto-sans ..6x5:text-sm">

@@ -63,7 +63,7 @@ const Anchor = ({ elements }) => {
 		<section className="bg-red fixed left-8 top-56 ..5x2:hidden">
 			<small className="text-13px">{currentLenght}</small>
 			<div className=" w-full flex flex-col items-center">
-				<a href="#sec-1" className={`${currentElement[0]["sec-1"] ? 'activeAnchor' : ""} w-1 h-6 mt-1 cursor-pointer hover:bg-primary transition-all bg-gray-light2`}></a>
+				<a href="#stock" className={`${currentElement[0]["sec-1"] ? 'activeAnchor' : ""} w-1 h-6 mt-1 cursor-pointer hover:bg-primary transition-all bg-gray-light2`}></a>
 				<a href="#sec-2" className={`${currentElement[1]["sec-2"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
 				<a href="#sec-3" className={`${currentElement[2]["sec-3"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
 				<a href="#sec-4" className={`${currentElement[3]["sec-4"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>

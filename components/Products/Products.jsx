@@ -15,7 +15,7 @@ import ProductItem from '../ProductItem/ProductItem';
 function Products({ refL }) {
 	return (
 		<section ref={refL} id='sec-4' className="container__special relative pt-40 ..6x04:pb-0 .1x1:pb-20 .4x1:pb-12 ..5x2:pb-16 .1x1:pt-20 .4x1:pt-20 pb-32">
-			<a href="#sec-1" className='absolute bottom-80 -right-14 .6x3:hidden flex items-center text-13px font-medium flex-col'><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<a href="#stock" className='absolute bottom-80 -right-14 .6x3:hidden flex items-center text-13px font-medium flex-col'><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M11.8167 12.2L8 8.36788L4.175 12.2L3 11.0202L8 6L13 11.0202L11.8167 12.2Z" fill="#18202B" />
 			</svg>
 				TOP</a>
