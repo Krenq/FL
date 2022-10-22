@@ -8,53 +8,63 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
+.activeAnchor {
+	background-color: #337202 !important;
+}
+
 .container-base {
-  @apply max-w-screen-2xl mx-auto overflow-y-hidden overflow-x-hidden;
+	@apply max-w-screen-2xl mx-auto overflow-y-hidden overflow-x-hidden;
 }
 
 .slick-dots li {
-  width: auto;
-  height: auto;
-  margin: 0 !important;
+	width: auto;
+	height: auto;
+	margin: 0 !important;
 }
 
 li.slick-active div {
-  background-color: black !important;
+	background-color: black !important;
 }
 
 .cartinka span:first-child {
-  height: 100% !important;
-  width: 100% !important;
+	height: 100% !important;
+	width: 100% !important;
 }
 
 .card_text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* number of lines to show */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	/* number of lines to show */
 }
 
 .news_text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* number of lines to show */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	/* number of lines to show */
 }
 
 .sale:hover .procent {
-  color: rgba(231, 235, 234, 0.2);
+	color: rgba(231, 235, 234, 0.2);
 }
 
 .sale:hover .title_sale {
-  color: white;
+	color: white;
 }
 
 .sale:hover .sale_btn path {
-  fill: white;
+	fill: white;
 }
 
 .number_shopB {
-  box-shadow: 0px 2px 4px rgba(51, 114, 2, 0.3);
+	box-shadow: 0px 2px 4px rgba(51, 114, 2, 0.3);
 }

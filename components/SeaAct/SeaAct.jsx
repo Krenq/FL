@@ -11,7 +11,7 @@ import six from '../../images/templates/6seaAct.jpg';
 import SeaActItem from '../SeaActItem/SeaActItem';
 import useWindowSize from '../utils/useWindowSize';
 
-const SeaAct = () => {
+const SeaAct = ({ refL }) => {
 	const divBlock = useRef(null),
 		slider = useRef(null);
 	const size = useWindowSize();
@@ -207,7 +207,7 @@ const SeaAct = () => {
 	};
 
 	return (
-		<div className="bg-gray-light">
+		<div ref={refL} className="bg-gray-light" id='sec-5'>
 			<section className="container__special relative pt-16 pb-24 ..5x2:pb-20">
 				<svg
 					className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-8 "

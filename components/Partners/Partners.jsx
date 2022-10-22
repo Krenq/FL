@@ -6,7 +6,7 @@ import PartnersButtonNext from './PartnersButtonNext';
 import PartnersButtonPrev from './PartnersButtonPrev';
 import { useEffect, useRef, useState } from 'react';
 
-const Partners = () => {
+const Partners = ({ refL }) => {
 	const [kolichestvo, setKolichestvo] = useState(1),
 		slider = useRef(null)
 
@@ -89,7 +89,7 @@ const Partners = () => {
 	};
 
 	return (
-		<div className="relative">
+		<div ref={refL} className="relative" id='sec-9'>
 			<div className="absolute -left-0 ..6x2:w-32 ..6x2:h-32">
 				<Image
 					className="object-cover "

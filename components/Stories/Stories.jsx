@@ -10,7 +10,7 @@ import StoriesPrev from './StoriesPrev';
 import useWindowSize from '../utils/useWindowSize';
 import { useEffect, useRef, useState } from 'react';
 
-const Stories = () => {
+const Stories = ({ refL }) => {
 	const divBlock = useRef(null),
 		slider = useRef(null)
 	const size = useWindowSize();
@@ -252,7 +252,7 @@ const Stories = () => {
 	}
 	return (
 
-		<section className="my-0 mx-auto relative">
+		<section ref={refL} className="my-0 mx-auto relative" id='sec-12'>
 
 			<p className="ability left-1/2 -top-16 flex items-center text-3xl italic absolute">
 				<svg

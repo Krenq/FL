@@ -5,7 +5,7 @@ import { useTimerHook } from '../../hooks/useTimerHook';
 import bg from '../../images/templates/bgL.jpg';
 import itemleas from '../../images/templates/itemleas.png';
 
-const Promo = () => {
+const Promo = ({ refL }) => {
 	const [time, setTime] = useState({
 		days: '00',
 		hours: '00',
@@ -23,7 +23,7 @@ const Promo = () => {
 
 
 	return (
-		<div className="relative promo ">
+		<div className="relative promo " ref={refL} id='sec-6'>
 			<div className="absolute ">
 				<Image
 					className="object-cover ..5x3:!hidden"

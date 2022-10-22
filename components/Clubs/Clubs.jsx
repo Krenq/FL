@@ -2,9 +2,9 @@ import Image from 'next/image';
 import one from '../../images/templates/rembg.png';
 import two from '../../images/templates/2rembg.png';
 
-function Clubs() {
+function Clubs({ refL }) {
 	return (
-		<section className="relative bg-nude-2 mt-16 .1x1:mt-14">
+		<section ref={refL} id='sec-13' className="relative bg-nude-2 mt-16 .1x1:mt-14">
 			<div className="absolute right-0 bottom-0 ..6x2:w-40 ..6x2:h-40 .4x1:-bottom-32">
 				<Image className="object-cover " src={one} width={486} height={486} alt="specialOffersImg" />
 			</div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import { useRef } from 'react';
+import Anchor from '../components/Anchor/Anchor';
 import Buyers from '../components/Buyers/Buyers';
 import Clubs from '../components/Clubs/Clubs';
 import ConfirmLocationModalWindow from '../components/ConfirmLocationModalWindow/ConfirmLocationModalWIndow';
@@ -22,27 +24,58 @@ import Trands from '../components/Trands/Trands';
 
 
 function Home() {
-
+	const discount = useRef(null),
+		special = useRef(null),
+		buyers = useRef(null),
+		products = useRef(null),
+		sea = useRef(null),
+		promo = useRef(null),
+		Instruments = useRef(null),
+		funds = useRef(null),
+		partners = useRef(null),
+		health = useRef(null),
+		news = useRef(null),
+		stories = useRef(null),
+		clubs = useRef(null),
+		trands = useRef(null),
+		support = useRef(null)
 
 	return (
 		<section className="container-base relative bg-white">
 			<ConfirmLocationModalWindow />
-			<DiscountsSlider />
-			<SpecialOffers />
-			<Buyers />
-			<Products />
-			<SeaAct />
-			<Promo />
-			<Instrumensts />
-			<Funds />
-			<Partners />
-			<Health />
-			<News />
-			<Stories />
-			<Clubs />
-			<Trands />
-			<Support />
+			<DiscountsSlider refL={discount} />
+			<SpecialOffers refL={special} />
+			<Buyers refL={buyers} />
+			<Products refL={products} />
+			<SeaAct refL={sea} />
+			<Promo refL={promo} />
+			<Instrumensts refL={Instruments} />
+			<Funds refL={funds} />
+			<Partners refL={partners} />
+			<Health refL={health} />
+			<News refL={news} />
+			<Stories refL={stories} />
+			<Clubs refL={clubs} />
+			<Trands refL={trands} />
+			<Support refL={support} />
 			<PhoneNavigation />
+			<Anchor elements={[
+				discount,
+				special,
+				buyers,
+				products,
+				sea,
+				promo,
+				Instruments,
+				funds,
+				partners,
+				health,
+				news,
+				stories,
+				clubs,
+				trands,
+				support
+			]} />
 		</section>
 	);
 }

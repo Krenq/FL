@@ -9,7 +9,7 @@ import useWindowSize from '../utils/useWindowSize';
 import NewsPrev from './NewsPrev';
 import NewsNext from './NewsNext';
 
-const News = () => {
+const News = ({ refL }) => {
 	const divBlock = useRef(null),
 		slider = useRef(null);
 
@@ -103,7 +103,7 @@ const News = () => {
 		],
 	};
 	return (
-		<article className="container__special relative pb-24 ..5x1:pb-16">
+		<article ref={refL} id='sec-11' className="container__special relative pb-24 ..5x1:pb-16">
 			<svg
 				className="absolute ..5x5:h-36 ..5x5:mt-5 left-1/2 ability -top-5 "
 				width="184"

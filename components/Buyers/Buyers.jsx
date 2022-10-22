@@ -6,7 +6,7 @@ import three from '../../images/templates/3forBuyers.jpg';
 import groups from '../../images/templates/groups.png';
 import twoglos from '../../images/templates/2glos.jpg';
 
-function Buyers() {
+function Buyers({ refL }) {
 	const settings = {
 
 		dots: false,
@@ -62,7 +62,7 @@ function Buyers() {
 	};
 
 	return (
-		<div className="relative">
+		<div ref={refL} className="relative" id='sec-3'>
 			<div className="absolute left-0 bottom-0 ..6x2:w-40 ..6x2:h-40 .4x1:-bottom-32">
 
 				<Image

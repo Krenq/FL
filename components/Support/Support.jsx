@@ -1,6 +1,6 @@
-const Support = () => {
+const Support = ({ refL }) => {
 	return (
-		<section className="support rounded-32px max-w-1760px w-full left-1/2 ..6x6:px-3 ability px-10 ..6x6:w-full bg-white absolute -bottom-10 z-30 flex justify-between py-10 .2x1:flex-col .2x1:w-384px .2x1:p-0 .2x1:bg-gray-light .2x1:bottom-3">
+		<section ref={refL} id="sec-15" className="support rounded-32px max-w-1760px w-full left-1/2 ..6x6:px-3 ability px-10 ..6x6:w-full bg-white absolute -bottom-10 z-30 flex justify-between py-10 .2x1:flex-col .2x1:w-384px .2x1:p-0 .2x1:bg-gray-light .2x1:bottom-3">
 			<div className="flex relative .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded-xl items-center">
 				<svg
 					width="80"
