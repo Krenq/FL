@@ -8,6 +8,8 @@ export default function NavBar({ scrollMenu }) {
 	return (
 		<>
 			{scrollMenu ? (
+				<>
+				
 				<nav className="h-80px mt-5 transition-all duration-500 bg-white ..7x2:h-86px relative flex flex-row justify-between items-center">
 					<svg
 						className="hidden ..7x1:ml-3 ..5x2:block ml-5 cursor-pointer"
@@ -34,6 +36,8 @@ export default function NavBar({ scrollMenu }) {
 					{/* <SectionNavButtons /> */}
 					<Search />
 				</nav>
+				<div className='transition-all duration-500 bg-gray h-px w-91.7% .5x01:w-full mx-auto'></div>
+				</>
 			) : (
 				<nav className="h-100px bg-white ..7x2:h-86px relative flex flex-row justify-between items-center">
 					<svg

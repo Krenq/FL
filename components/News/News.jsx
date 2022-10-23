@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from 'react';
 import useWindowSize from '../utils/useWindowSize';
 import NewsPrev from './NewsPrev';
 import NewsNext from './NewsNext';
+import NewsDate from './NewsDate';
 
 const News = ({ refL }) => {
 	const divBlock = useRef(null),
@@ -149,7 +150,8 @@ const News = ({ refL }) => {
 				Смотреть все
 			</button>
 			<Slider {...settings} ref={slider} className="pt-48">
-				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className=" relative p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
 							className="object-cover"
@@ -178,7 +180,8 @@ const News = ({ refL }) => {
 						</button>
 					</div>
 				</div>
-				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className="relative p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+					<NewsDate title={'MAY 20, 2022'} />
 					<div>
 						<Image
 							className="object-cover"
@@ -208,7 +211,8 @@ const News = ({ refL }) => {
 						</button>
 					</div>
 				</div>
-				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className="relative p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+					<NewsDate title={'MAY 20, 2022'} />
 					<div>
 						<Image
 							className="object-cover"
@@ -239,7 +243,8 @@ const News = ({ refL }) => {
 						</button>
 					</div>
 				</div>
-				<div className="p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className="relative p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+					<NewsDate title={'MAY 20, 2022'} />
 					<div>
 						<Image
 							className="object-cover"
