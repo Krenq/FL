@@ -62,7 +62,7 @@ function Buyers({ refL }) {
 	};
 
 	return (
-		<div ref={refL} className="relative" id='sec-3'>
+		<div ref={refL} name="center-anchor" className="relative" id='sec-3'>
 			<div className="absolute left-0 bottom-0 ..6x2:w-40 ..6x2:h-40 .4x1:-bottom-32">
 
 				<Image

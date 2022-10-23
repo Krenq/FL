@@ -23,7 +23,7 @@ export default function InstrumentItem({
 
 		setDelivery({
 			currentCountry: delivery.currentCountry,
-			isHover: true,
+			isHover: !delivery.isHover,
 		})
 	}
 
@@ -44,19 +44,19 @@ export default function InstrumentItem({
 
 				{country ? (
 					<>
-						<p onMouseEnter={setDilHover} className={`hidden ..5x1:block text-center text-gray-quick-silver mt-1 mb-4 text-xs ..6x3:text-sm `}>
+						<p onClick={setDilHover} className={`hidden ..5x1:block text-center text-gray-quick-silver mt-1 mb-4 text-xs ..6x3:text-sm `}>
 							{title === 'Доставка от 1000 ₽' && `${country}, `}
 							{underCountry}
 						</p>
 
 						<div className="w-full flex justify-between items-center">
-							<small onMouseEnter={setDilHover} className={`  ..5x1:hidden max-h-21px flex items-center mr-5 font-medium border-b border-dashed border-gray-quick-silver cursor-pointer`}>
+							<small onClick={setDilHover} className={`  ..5x1:hidden max-h-21px flex items-center mr-5 font-medium border-b border-dashed border-gray-quick-silver cursor-pointer`}>
 								{country}{' '}
 
 
 
 								<svg
-									className="ml-1"
+									className={`ml-1 ${delivery.isHover ? 'activeArrow -mb-2' : ""}`}
 									width="10"
 									height="16"
 									viewBox="0 0 10 16"

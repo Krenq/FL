@@ -58,26 +58,36 @@ const Anchor = ({ elements }) => {
 		for (const elm of elements) observer.observe(elm.current)
 	}, [elements])
 
+	const sections = [
+		'sec-2',
+		'sec-3',
+		'sec-4',
+		'sec-5',
+		'sec-6',
+		'sec-7',
+		'sec-8',
+		'sec-9',
+		'sec-10',
+		'sec-11',
+		'sec-12',
+		'sec-13',
+		'sec-14',
+		'sec-15'
+	]
+
+	const scroll = (i) => {
+		elements[i + 1].current.scrollIntoView({ block: "end" })
+	}
 
 	return (
 		<section className="bg-red fixed ..5x1:left-4 left-8 top-56 ..5x2:hidden">
 			<small className="text-13px">{currentLenght}</small>
 			<div className=" w-full flex flex-col items-center">
 				<a href="#stock" className={`${currentElement[0]["sec-1"] ? 'activeAnchor' : ""} w-1 h-6 mt-1 cursor-pointer hover:bg-primary transition-all bg-gray-light2`}></a>
-				<a href="#sec-2" className={`${currentElement[1]["sec-2"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-3" className={`${currentElement[2]["sec-3"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-4" className={`${currentElement[3]["sec-4"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-5" className={`${currentElement[4]["sec-5"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-6" className={`${currentElement[5]["sec-6"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-7" className={`${currentElement[6]["sec-7"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-8" className={`${currentElement[7]["sec-8"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-9" className={`${currentElement[8]["sec-9"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-10" className={`${currentElement[9]["sec-10"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-11" className={`${currentElement[10]["sec-11"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-12" className={`${currentElement[11]["sec-12"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-13" className={`${currentElement[12]["sec-13"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-14" className={`${currentElement[13]["sec-14"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
-				<a href="#sec-15" className={`${currentElement[14]["sec-15"] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 mb-1.5 cursor-pointer hover:bg-primary transition-all`}></a>
+
+				{sections.map((sec, i) => <a onClick={() => scroll(i)} key={i} className={`${currentElement[i + 1][sec] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
+				)}
+
 
 
 			</div>
