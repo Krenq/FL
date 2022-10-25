@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Slider from 'react-slick';
-import oneHealth from '../../images/templates/1health.png';
+import oneHealth from '../../images/templates/1health.svg';
 import twoHealth from '../../images/templates/2health.jpg';
 import treeHealth from '../../images/templates/3health.jpg';
 const Health = ({ refL }) => {
