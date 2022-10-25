@@ -117,30 +117,36 @@ function Buyers({ refL }) {
 					ПОКУПАТЕЛЯМ
 				</p>
 
-				<Slider {...settings} className="">
+				<Slider {...settings} >
 					<div className="px-2">
-						<Image
-							className="object-cover"
-							src={one}
-							alt="specialOffersImg"
-							height={760}
-							width={710}
-						/>
+						<div className='imgIBuy'>
+							<Image
+								className="object-cover"
+								src={one}
+								alt="specialOffersImg"
+								height={760}
+								width={710}
+							/></div>
+
 					</div>
 
 					<div className="px-2">
-						<Image
-							className="object-cover"
-							src={one}
-							alt="specialOffersImg"
-							height={760}
-							width={710}
-						/>
+						<div className='imgIBuy'>
+							<Image
+								className="object-cover"
+								src={one}
+								alt="specialOffersImg"
+								height={760}
+								width={710}
+							/>
+						</div>
+
 					</div>
 
 					<div className="flex flex-col justify-between px-2 h-full ">
 
-						<div className="relative cartinka">
+						<div className="relative cartinka ..7x001:mb-1  ..7x002:mb-0 ">
+
 							<Image
 								className=" object-cover"
 								src={two}
@@ -156,7 +162,7 @@ function Buyers({ refL }) {
 								6%, 7%, 8%
 							</p>
 
-							<div className="absolute left-48 top-40 .1x01:top-32 .1x01:left-36 .1x01:w-50 .1x01:h-20 ..5x03:top-36 ..5x03:left-48 ..5x03:w-auto ..5x03:h-auto ..6x1:top-32 ..6x3:left-40 ..6x3:top-28 ..6x3:w-36 ..6x3:h-20 ..6x4:top-16 ..6x4:w-28 ..7x1:w-20 ..7x1:left-36 ..7x1:top-12">
+							<div className="absolute   left-48 top-40 .1x01:top-32 .1x01:left-36 .1x01:w-50 .1x01:h-20 ..5x03:top-36 ..5x03:left-48 ..5x03:w-auto ..5x03:h-auto ..6x1:top-32 ..6x3:left-40 ..6x3:top-28 ..6x3:w-36 ..6x3:h-20 ..6x4:top-16 ..6x4:w-28 ..7x1:w-20 ..7x1:left-36 ..7x1:top-12">
 								<Image
 									className="object-cover .1x01:object-contain ..5x03:object-cover ..6x3:object-contain"
 									src={groups}
@@ -170,7 +176,7 @@ function Buyers({ refL }) {
 							</button>
 						</div>
 
-						<div className="relative cartinka">
+						<div className="relative cartinka ">
 							<Image
 								className="object-cover"
 								src={three}
@@ -193,7 +199,7 @@ function Buyers({ refL }) {
 
 					<div className="flex flex-col justify-between px-2 h-full ">
 
-						<div className="relative cartinka">
+						<div className="relative cartinka ..7x002:mb-0 ..7x001:mb-1">
 							<Image
 								className=" object-cover"
 								src={two}

@@ -124,7 +124,7 @@ function Instrumensts({ refL }) {
 	};
 
 	return (
-		<div className="relative" ref={refL} id='sec-7'>
+		<div className="relative" ref={refL} id='sec-8'>
 
 
 

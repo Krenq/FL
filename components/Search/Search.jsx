@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 import * as icons from '../../images/constsIcons';
+import SearchWindow from '../SearchWindow/SearchWIndow';
 
 export default function Search() {
 	return (
-		<article className=".5x01:pr-2 pr-86px ..5x2:flex ..5x1:pl-5">
-			<Image className='..5x2:opacity-20'
+		<article className="relative cursor-pointer .5x01:pr-2  pr-86px ..5x2:flex ..5x1:pl-5">
+
+			<Image className='..5x2:opacity-20  '
 				src={icons.ICON_SEARCH}
 				height="24px"
 				width="24px"
@@ -16,7 +18,7 @@ export default function Search() {
 				<path d="M11.8621 14.1724C12.8905 14.1724 13.7241 13.3387 13.7241 12.3103C13.7241 11.282 12.8905 10.4483 11.8621 10.4483C10.8337 10.4483 10 11.282 10 12.3103C10 13.3387 10.8337 14.1724 11.8621 14.1724Z" fill="#DBDCDA" />
 				<path d="M11.8621 21C12.8905 21 13.7241 20.1663 13.7241 19.1379C13.7241 18.1095 12.8905 17.2759 11.8621 17.2759C10.8337 17.2759 10 18.1095 10 19.1379C10 20.1663 10.8337 21 11.8621 21Z" fill="#DBDCDA" />
 			</svg>
-
+			<SearchWindow />
 		</article>
 	);
 }

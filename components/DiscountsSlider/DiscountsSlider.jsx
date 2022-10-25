@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import { useRef, useState } from 'react';
 import Slider from 'react-slick';
-import { useSizeDiscount } from '../../hooks/useSizeDiscount';
 
 import imgDiscount from '../../images/templates/discountImg.jpg';
 import imgProduct from '../../images/templates/prdesc.png';

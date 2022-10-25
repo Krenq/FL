@@ -42,7 +42,7 @@ function SpecialOffers({ refL }) {
 		slidesToScroll: 1,
 		nextArrow: <SpecialOffersNext />,
 		prevArrow: <SpecialOffersPrev />,
-		dotsClass: 'slick-dots slick-thumb',
+		dotsClass: 'slick-dots slick-thumb specialSliderDots',
 		appendDots: (dots) => {
 			return (
 				<div
@@ -123,7 +123,7 @@ function SpecialOffers({ refL }) {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: -60,
+									bottom: -25,
 								}}
 							>
 								<div
@@ -177,7 +177,7 @@ function SpecialOffers({ refL }) {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: -60,
+									bottom: -25,
 								}}
 							>
 								<div
@@ -217,11 +217,11 @@ function SpecialOffers({ refL }) {
 		],
 	};
 	return (
-		<article ref={refL} id='sec-2' className="container__special bg-white pb-36 ..5x2:pb-14 .1x1:pb-28">
-			<div className="mt-16 flex items-center border-b-2 border-gray pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
+		<article ref={refL} id='sec-2' className="container__special bg-white pb-36 ..5x2:pb-0 .1x1:pb-28">
+			<div className="mt-16 flex items-center border-b border-gray-border pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
 				<p
 					onClick={() => currentTabHandler('all')}
-					className={`..6x3:text-sm ..6x3:mr-3 ..6x3:pr-3 ..6x1:text-base flex items-center h-8 hover:text-primary transition-all cursor-pointer mr-8 border-gray border-r-2  pr-8 ${currentTab === 'all' ? 'text-primary' : 'text-gray-quick-silver'
+					className={`..6x3:text-sm  ..6x3:mr-3 ..6x3:pr-3 ..6x1:text-base flex items-center h-8 hover:text-primary transition-all cursor-pointer mr-8 border-gray-border border-r  pr-8 ${currentTab === 'all' ? 'text-primary' : 'text-gray-quick-silver'
 						} text-lg`}
 				>
 					Все спецпредложения
@@ -264,6 +264,7 @@ function SpecialOffers({ refL }) {
 						hit: true,
 						priceDe: '3 750',
 						price: '764.00',
+						isSlider: true
 					}}
 				/>
 				<SpecialOfferItem

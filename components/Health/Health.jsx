@@ -23,7 +23,7 @@ const Health = ({ refL }) => {
 		],
 	};
 	return (
-		<div className="relative" ref={refL} id='sec-10'>
+		<div className="relative" ref={refL} id='sec-11'>
 			<svg
 				className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-6 "
 				width="184"

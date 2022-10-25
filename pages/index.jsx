@@ -47,13 +47,14 @@ function Home() {
 			<SpecialOffers refL={special} />
 			<Buyers refL={buyers} />
 			<Products refL={products} />
+			<News refL={news} />
 			<SeaAct refL={sea} />
 			<Promo refL={promo} />
 			<Instrumensts refL={Instruments} />
 			<Funds refL={funds} />
 			<Partners refL={partners} />
 			<Health refL={health} />
-			<News refL={news} />
+
 			<Stories refL={stories} />
 			<Clubs refL={clubs} />
 			<Trands refL={trands} />
@@ -64,13 +65,14 @@ function Home() {
 				special,
 				buyers,
 				products,
+				news,
 				sea,
 				promo,
 				Instruments,
 				funds,
 				partners,
 				health,
-				news,
+
 				stories,
 				clubs,
 				trands,

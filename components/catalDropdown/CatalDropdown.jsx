@@ -41,7 +41,7 @@ const CatalDropdown = ({ show, setShow, scrollMenu, showDrop }) => {
 
 	return (
 		<>
-			<div onMouseEnter={showDrop} onMouseLeave={setShow} className={`${show.showCatal ? 'active' : "hiddenCustom"} fixed top-70 left-0 right-0 bg-red h-10 z-30`}></div>
+			<div onMouseEnter={showDrop} onMouseLeave={setShow} className={`${show.showCatal ? 'active' : "hiddenCustom"} fixed top-70 ${scrollMenu ? 'top-10' : ""} left-0 right-0 bg-red h-10 z-30`}></div>
 			<section
 				onMouseLeave={setShow}
 				onMouseEnter={showDrop}

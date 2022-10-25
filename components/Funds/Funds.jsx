@@ -137,7 +137,7 @@ const Funds = ({ refL }) => {
 		],
 	};
 	return (
-		<section ref={refL} className="relative bg-gray-light" id='sec-8'>
+		<section ref={refL} className="relative bg-gray-light" id='sec-9'>
 			<svg
 				className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-6 "
 				width="184"

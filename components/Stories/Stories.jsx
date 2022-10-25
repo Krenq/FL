@@ -252,9 +252,9 @@ const Stories = ({ refL }) => {
 	}
 	return (
 
-		<section ref={refL} className="my-0 mx-auto relative" id='sec-12'>
+		<section ref={refL} className="pt-16 my-0 mx-auto relative" id='sec-12'>
 
-			<p className="ability left-1/2 -top-16 flex items-center text-3xl italic absolute">
+			<p className="ability left-1/2 top-14 font-montserrat font-medium flex items-center text-3xl italic absolute">
 				<svg
 					className="mr-3"
 					width="44"

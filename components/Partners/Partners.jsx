@@ -89,7 +89,7 @@ const Partners = ({ refL }) => {
 	};
 
 	return (
-		<div ref={refL} className="relative" id='sec-9'>
+		<div ref={refL} className="relative" id='sec-10'>
 			<div className="absolute -left-0 ..6x2:w-32 ..6x2:h-32">
 				<Image
 					className="object-cover "

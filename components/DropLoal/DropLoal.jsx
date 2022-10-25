@@ -4,7 +4,7 @@ import DropItemDown from "../DropItemDown/DropItemDown"
 const DropLoal = ({ show, setShow, scrollMenu, showDrop }) => {
 	return (
 		<>
-			<div onMouseEnter={showDrop} onMouseLeave={setShow} className={`${show.showLoal ? 'active' : "hiddenCustom"} fixed top-70 left-0 right-0 bg-red h-10 z-30`}></div>
+			<div onMouseEnter={showDrop} onMouseLeave={setShow} className={`${show.showLoal ? 'active' : "hiddenCustom"} fixed top-70 ${scrollMenu ? 'top-10' : ""} left-0 right-0 bg-red h-10 z-30`}></div>
 
 			<section onMouseEnter={showDrop} onMouseLeave={setShow} className={`itemDrop absolute flex z-20 .2x1:h-44 h-56  transition-all bg-white mt-9 ${scrollMenu ? 'mt-6' : ""} ${show.showLoal ? 'active' : "hiddenCustom"}`}>
 				<div className="w-1816px my-0 mx-auto flex items-center justify-center">

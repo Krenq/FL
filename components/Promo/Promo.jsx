@@ -23,7 +23,7 @@ const Promo = ({ refL }) => {
 
 
 	return (
-		<div className="relative promo " ref={refL} id='sec-6'>
+		<div className="relative promo " ref={refL} id='sec-7'>
 			<div className="absolute ">
 				<Image
 					className="object-cover ..5x3:!hidden"
