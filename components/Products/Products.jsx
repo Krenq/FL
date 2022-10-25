@@ -21,7 +21,7 @@ function Products({ refL }) {
 				TOP</a>
 
 			<svg
-				className="absolute ..6x2:h-36 ..6x2:mt-5 left-1/2 ability top-14 .4x1:-top-5"
+				className="absolute  ..6x2:h-36 ..6x2:mt-5 left-1/2 ability top-14 .4x1:-top-5"
 				width="184"
 				height="183"
 				viewBox="0 0 184 183"
@@ -57,15 +57,17 @@ function Products({ refL }) {
 					strokeLinejoin="round"
 				/>
 			</svg>
-			<p className="absolute left-1/2 ability text-3xl ..6x04:text-2xl z-10">
+			<p className="absolute font-montserrat font-medium ..7x11:text-base left-1/2 ability text-3xl ..6x04:text-2xl z-10">
 				Продукты
 			</p>
-			<p className="text-center italic text-4xl mb-2 mt-10 ..6x04:text-3xl z-10">
+			<p className="font-montserrat font-medium ..7x11:text-xl ..7x11:mt-7 text-center italic text-4xl mb-2 mt-10 ..6x04:text-3xl z-10">
 				КАТАЛОГА
 			</p>
-			<p className="text-center ..6x04:text-sm">
-				Более 500 наименований продуктов регулярного спроса. <br />
-				Каждый сезон — новые трендовые средства!
+			<p className="text-center ..5x2:hidden  font-montserrat">
+				Более 500 наименований продуктов регулярного спроса. <br /> Каждый сезон — новые трендовые средства!
+			</p>
+			<p className="text-center hidden ..5x2:block ..6x04:text-13px ..5x2:px-4 font-montserrat">
+				Более 500 наименований продуктов регулярного спроса. Каждый сезон — новые трендовые средства!
 			</p>
 
 			<div className="flex flex-col mt-4 ..7x2:m-0 .3x1:flex-row .3x1:justify-between .3x1:max-w-5xl .3x1:mx-auto .3x1:px-2">

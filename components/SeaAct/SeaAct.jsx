@@ -208,9 +208,9 @@ const SeaAct = ({ refL }) => {
 
 	return (
 		<div ref={refL} className="bg-gray-light" id='sec-6'>
-			<section className="container__special relative pt-16 pb-24 ..5x2:pb-20">
+			<section className="container__special relative pt-20 pb-24 ..5x2:pt-60 ..5x2:pb-20">
 				<svg
-					className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-8 "
+					className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 ..5x2:top-1  -top-8 "
 					width="184"
 					height="183"
 					viewBox="0 0 184 183"
@@ -247,15 +247,19 @@ const SeaAct = ({ refL }) => {
 					/>
 				</svg>
 
-				<p className="absolute left-1/2 ability  font-medium text-2xl  ..6x04:text-xl">
+				<p className="absolute left-1/2  ability titleSea ..5x2:top-24 font-montserrat ..6x04:text-base font-medium text-2xl ">
 					Каждый сезон
 				</p>
-				<p className="absolute left-1/2 ability top-24 text-center font-medium text-3xl italic ..6x04:text-2xl ..7x1:text-xl">
+				<p className="absolute left-1/2 w-full  ability top-28 ..5x2:top-32 font-montserrat ..6x3:text-22px ..6x03:top-32  text-center font-medium text-3xl italic   ">
 					НОВЫЕ АКЦИИ
 				</p>
-				<p className="mb-9 text-center mt-20">
+				<p className="mb-9 ..5x2:mb-14 text-center font-montserrat ..6x04:text-13px nabSea mt-20">
 					Покупай в наборах и получай подарок
+					<div className='w-24 h-3px ability absolute hrSea left-1/2 hidden ..5x2:block bg-white'></div>
 				</p>
+				<div className="timer absolute ability left-1/2 timerSea hidden ..5x2:block ..6x5:ml-0 bg-white px-2 text-primary border border-primary font-normal text-lg font-montserrat   ..6x5:font-noto-sans ..6x5:text-sm">
+					{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
+				</div>
 				<div className="flex justify-center ">
 					<div className="relative w-44% .4x1:hidden">
 						<div className="absolute top-10 left-10 z-10">

@@ -466,15 +466,43 @@
 		border-bottom: none !important;
 	}
 
+	.leading-120 {
+		line-height: 120% !important;
+	}
+
 	.headerAbility {
 		left: 50%;
 		transform: translateX(-50%);
+	}
+
+	.homeSVGINSTR svg {
+		height: 77px;
+		width: 77px;
+	}
+
+	.partners .slick-dots {
+		transform: translateX(-24px);
 	}
 
 	.logo img {
 		height: 50px !important;
 	}
 
+	.instItemText {
+		font-size: 110% !important;
+	}
+
+	.nabSea {
+		margin-top: -70px !important;
+	}
+
+	.timerSea {
+		top: 210px;
+	}
+
+	.hrSea {
+		top: 196px;
+	}
 }
 
 @media (max-width: 950px) {
@@ -769,6 +797,7 @@
 	}
 
 
+
 }
 
 .phoneOne {
@@ -999,5 +1028,9 @@
 @media (max-width: 600px) {
 	.confirm {
 		top: calc(100vh - 42px - 44px - 80px - 220px) !important;
+	}
+
+	.titleSea {
+		top: 108px !important;
 	}
 }

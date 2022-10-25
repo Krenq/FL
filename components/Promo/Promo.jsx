@@ -35,10 +35,10 @@ const Promo = ({ refL }) => {
 			</div>
 
 			<div className="absolute ..5x3:relative ..5x3:left-0 top-20 left-40 .4x1:top-7 .4x1:left-20 ..5x3:flex ..5x3:flex-col  ..5x3:items-center  text-white">
-				<p className="text-6xl .2x1:text-5xl ..5x1:text-4xl ..7x2:text-3xl ..5x3:text-center">
+				<p className="text-6xl .2x1:text-5xl ..5x1:text-4xl ..6x3:text-22px ..5x2:px-8 leading-120 font-montserrat  ..5x2:w-full">
 					Скидка 20% по <br /> промокоду «Click»
 				</p>
-				<p className="mt-6 font-medium text-xl .2x1:text-lg ..7x2:text-sm ..5x1:text-base ..5x3:text-center .2x1:mt-4">
+				<p className="mt-6 font-medium text-xl .2x1:text-lg  leading-120 font-montserrat ..5x2:px-8 ..5x1:text-base  ..5x2:w-full .2x1:mt-2">
 					На аквагель для лица серии «FreshClick»
 				</p>
 				<div>

@@ -47,7 +47,7 @@ const Trands = ({ refL }) => {
 				/>
 			</svg>
 
-			<p className="absolute left-1/2 ability top-20 ..5x2:top-10  text-4xl ..5x2:pt-16 ..5x2:mt-0 italic mt-2 mb-16 ..6x04:text-3xl">
+			<p className="absolute font-montserrat font-medium left-1/2 ability top-20 ..5x2:top-10  text-4xl ..5x2:pt-16 ..5x2:mt-0 italic mt-2 mb-16 ..5x2:text-22px">
 				TIANDESHOPPING
 			</p>
 			<div className="flex pt-52 ..5x2:pt-40">

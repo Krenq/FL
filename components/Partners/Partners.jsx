@@ -90,7 +90,7 @@ const Partners = ({ refL }) => {
 
 	return (
 		<div ref={refL} className="relative" id='sec-10'>
-			<div className="absolute -left-0 ..6x2:w-32 ..6x2:h-32">
+			<div className="absolute -left-0 ..6x2:w-32 ..5x2:hidden ..6x2:h-32">
 				<Image
 					className="object-cover "
 					src={twopartner}
@@ -137,14 +137,14 @@ const Partners = ({ refL }) => {
 						strokeLinejoin="round"
 					/>
 				</svg>
-				<p className="mt-36 absolute left-1/2 -top-16 ability text-3xl italic mb-40">
-					ПАРТНЕРАМ
+				<p className="mt-36 absolute left-1/2 font-montserrat font-medium ..5x2:text-22px -top-16 ability text-3xl italic mb-40">
+					ПАРТНЁРАМ
 				</p>
-				<button className="text-primary border-2 absolute ..6x5:text-sm left-1/2 ability top-40  ..7x2:px-2  z-10 border-primary mb-8 py-4 px-10 transition-all hover:bg-primary hover:text-white ..6x6:text-xs ..7x2:text-10px ..7x2:py-2">
+				<button className="text-primary font-montserrat font-medium border-2 absolute ..6x5:text-sm left-1/2 ability ..5x2:top-36 top-40 ..7x11:px-4 ..7x11:py-10px  ..7x2:px-2  z-10 border-primary mb-8 py-4 px-10 transition-all hover:bg-primary hover:text-white ..6x6:text-xs ..7x2:text-10px ..7x2:py-2">
 					Бизнес-возможности
 				</button>
 
-				<Slider ref={slider} {...settings} className="pt-64 ..7x2:pt-52 partners">
+				<Slider ref={slider} {...settings} className="pt-64 ..5x2:pt-52 ..5x2:px-6 partners">
 					<section className="pb-20 ">
 
 						<div className="flex ..5x2:flex-col bg-gray-light">

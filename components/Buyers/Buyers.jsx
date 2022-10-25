@@ -113,7 +113,7 @@ function Buyers({ refL }) {
 						strokeLinejoin="round"
 					/>
 				</svg>
-				<p className="text-center text-4xl italic mb-16 ..6x04:text-3xl z-10 ..6x04:mb-10 relative">
+				<p className="text-center text-4xl italic mb-16 font-medium ..6x04:text-22px font-montserrat z-10 ..6x04:mb-10 relative">
 					ПОКУПАТЕЛЯМ
 				</p>
 
