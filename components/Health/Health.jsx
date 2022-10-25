@@ -192,7 +192,7 @@ const Health = ({ refL }) => {
 									«Мужское здоровье», «антипаразитарная <br /> программа»,
 									«бодрость и энергия», «активное <br /> долголетие» и др.
 								</p>
-								<button className="ability border-2 ..5x2:bottom-0 border-gray absolute bottom-20   text-gray py-2 px-4  left-1/2 hover:text-white transition-all ..7x2:text-sm">
+								<button className="ability border ..5x2:text-sm font-medium font-montserrat ..5x2:py-1.5 ..5x2:px-5 ..5x2:bottom-3 border-gray absolute bottom-20   text-gray py-2 px-4  left-1/2 hover:text-white transition-all ..7x2:text-sm">
 									Все программы
 								</button>
 							</div>

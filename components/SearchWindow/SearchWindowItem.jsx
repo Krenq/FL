@@ -92,7 +92,7 @@ const SearchWindowItem = ({ sale, price, oldPrice, priceDe, like, counter }) => 
 
 							<svg className='ml-3' width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M4.33264 8.8199C4.24329 7.65831 5.16173 6.6665 6.32675 6.6665H13.6739C14.8389 6.6665 15.7574 7.65831 15.668 8.8199L15.1424 15.6532C15.0622 16.6952 14.1933 17.4998 13.1483 17.4998H6.85239C5.80732 17.4998 4.93843 16.6952 4.85828 15.6532L4.33264 8.8199Z" stroke="#DBDCDA" />
-								<path d="M16.25 4.1665H3.75" stroke="#DBDCDA" stroke-linecap="round" />
+								<path d="M16.25 4.1665H3.75" stroke="#DBDCDA" strokeLinecap="round" />
 								<path d="M8.33301 2.6665C8.33301 2.11422 8.78072 1.6665 9.33301 1.6665H10.6663C11.2186 1.6665 11.6663 2.11422 11.6663 2.6665V4.1665H8.33301V2.6665Z" stroke="#DBDCDA" />
 							</svg>
 						</div>
