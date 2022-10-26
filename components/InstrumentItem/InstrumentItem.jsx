@@ -30,7 +30,7 @@ export default function InstrumentItem({
 
 	return (
 		<div
-			className={` mx-2 py-26px ..5x1:px-3 px-5 mt-7 ..5x1:w-auto w-475px max-w-475px min-w-180px h-250px ..5x1:h-305px flex flex-col items-center justify-between ..5x1:bg-gray-light bg-gray-100 rounded-lg ${bottomImg1 ? '' : 'hover:bg-gray-light'
+			className={` mx-2 py-26px    ..5x1:px-3 px-5 mt-7 ..5x1:w-auto w-475px max-w-475px min-w-180px h-250px ..5x1:h-305px flex flex-col items-center justify-between ..5x1:bg-gray-light bg-gray-100 rounded-lg ${bottomImg1 ? '' : 'hover:bg-gray-light'
 				}`}
 		>
 			<div className="flex-shrink-0">

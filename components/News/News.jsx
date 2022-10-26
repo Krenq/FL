@@ -179,18 +179,18 @@ const News = ({ refL }) => {
 						</p>
 						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
+							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14" />
 						</button>
 					</div>
 				</div>
-				<div className="relative p-3   ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
-					<NewsDate title={'MAY 20, 2022'} />
+				<div className=" relative p-3  ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
+					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
 							className="object-cover"
-							src={twoNew}
 							width={474}
 							height={330}
+							src={oneNew}
 							alt="newsImg"
 						/>
 					</div>
@@ -212,18 +212,18 @@ const News = ({ refL }) => {
 						</p>
 						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
+							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14" />
 						</button>
 					</div>
 				</div>
-				<div className="relative p-3   ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
-					<NewsDate title={'MAY 20, 2022'} />
+				<div className=" relative p-3  ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
+					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
 							className="object-cover"
-							src={treeNew}
 							width={474}
 							height={330}
+							src={oneNew}
 							alt="newsImg"
 						/>
 					</div>
@@ -245,18 +245,18 @@ const News = ({ refL }) => {
 						</p>
 						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
+							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14" />
 						</button>
 					</div>
 				</div>
-				<div className="relative p-3   ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
-					<NewsDate title={'MAY 20, 2022'} />
+				<div className=" relative p-3  ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
+					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
 							className="object-cover"
-							src={treeNew}
 							width={474}
 							height={330}
+							src={oneNew}
 							alt="newsImg"
 						/>
 					</div>
@@ -278,7 +278,7 @@ const News = ({ refL }) => {
 						</p>
 						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
+							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14" />
 						</button>
 					</div>
 				</div>

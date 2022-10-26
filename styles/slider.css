@@ -297,7 +297,7 @@
 	height: 727px;
 }
 
-.timer {
+.timer-bg {
 	background: linear-gradient(270.09deg,
 			rgba(255, 255, 255, 0.2) -1.39%,
 			rgba(255, 255, 255, 0) 99.9%);
@@ -468,6 +468,13 @@
 
 
 @media (max-width: 1000px) {
+	.newsSlider .slick-dots ul li div {
+		width: 25px !important;
+	}
+
+	.plusDiscItem {
+		transform: translate(-1px, -1px) !important;
+	}
 
 	.foliagePart {
 		transform: rotateY(180deg);
@@ -948,7 +955,6 @@
 	.timer__wrapper {
 		transform: none !important;
 		display: flex;
-		justify-content: center;
 		height: 120px;
 		width: auto;
 	}
@@ -1013,6 +1019,9 @@
 .specialItemSliderDots .slick-dots li button:before {
 	font-size: 5px !important;
 	color: #bdbdbd;
+	width: 10px;
+	height: 10px;
+
 }
 
 .specialItemSliderDots .slick-dots li.slick-active button:before {

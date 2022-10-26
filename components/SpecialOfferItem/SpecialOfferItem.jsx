@@ -28,7 +28,7 @@ export default function SpecialOfferItem({ obj }) {
 						justifyContent: 'center',
 						position: 'absolute',
 						bottom: -5,
-						left: -5
+
 
 					}}
 				>

@@ -1,10 +1,10 @@
 const PhoneNavigation = () => {
 	return (
 		<nav className="hidden border-t border-stroke ..5x2:block bg-white pb-3 ..6x6:pb-0 ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
-			<ul className="flex justify-center ..6x4:justify-between">
+			<ul className="flex justify-center   ..6x4:justify-between">
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-14 ..6x6:mb-2 ..6x5:w-20"
+						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5  ..6x6:mb-2 ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -33,13 +33,13 @@ const PhoneNavigation = () => {
 							strokeWidth="0.7"
 						/>
 					</svg>
-					<p className="text-gray-quick-silver absolute left-1/2 ability ..6x6:text-xs -mt-6 ">
+					<p className="text-gray-quick-silver absolute left-1/2 ability  ..7x001:text-8px ..6x6:text-xs -mt-4">
 						Главная
 					</p>
 				</li>
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-14 ..6x6:mb-2 ..6x5:w-20"
+						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5 ..6x6:mb-2 ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -54,13 +54,13 @@ const PhoneNavigation = () => {
 						/>
 					</svg>
 
-					<p className="text-gray-quick-silver absolute left-1/2 ability -mt-6 ..6x6:text-xs">
+					<p className="   text-gray-quick-silver absolute left-1/2 ability  -mt-4 ..7x001:text-8px ..6x6:text-xs">
 						Каталог
 					</p>
 				</li>
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-14 ..6x6:mb-2 ..6x5:w-20"
+						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10  ..6x6:mb-2 ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -78,7 +78,7 @@ const PhoneNavigation = () => {
 							strokeLinejoin="round"
 						/>
 					</svg>
-					<p className="text-gray-quick-silver absolute left-1/2 ability -mt-6 ..6x6:text-xs ">
+					<p className=" ..7x001:text-8px text-gray-quick-silver absolute left-1/2 ability  -mt-4 ..6x6:text-xs ">
 						Корзина
 					</p>
 					<div className=" bg-primary absolute ..6x6:top-4 ..6x5:top-5 top-6  ..6x6:right-1.5 ..6x5:right-2 right-2.5 rounded-2xl ..6x6:px-1.5 px-10px ..6x6:py-px ..6x5:py-0.5 text-white ..6x6:text-8px ..6x5:text-11px font-montserrat font-medium number_shopB">
@@ -87,7 +87,7 @@ const PhoneNavigation = () => {
 				</li>
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-14 ..6x6:mb-2 ..6x5:w-20"
+						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10  ..6x6:mb-2 ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -108,13 +108,13 @@ const PhoneNavigation = () => {
 						/>
 					</svg>
 
-					<p className="text-gray-quick-silver absolute left-1/2 ..6x6:text-xs ability -mt-6 ">
+					<p className=" ..7x001:text-8px text-gray-quick-silver absolute left-1/2 ..6x6:text-xs ability  -mt-4 ">
 						Избранные
 					</p>
 				</li>
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-14 ..6x6:mb-2 ..6x5:w-20"
+						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10   ..6x6:mb-2  ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -129,7 +129,7 @@ const PhoneNavigation = () => {
 						/>
 					</svg>
 
-					<p className="text-gray-quick-silver absolute left-1/2 ..6x6:text-xs ability -mt-6 ">
+					<p className="  ..7x001:text-8px text-gray-quick-silver absolute left-1/2 ..6x6:text-xs ability -mt-4 ">
 						Меню
 					</p>
 				</li>

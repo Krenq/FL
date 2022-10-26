@@ -15,17 +15,17 @@ export default function SectionFooterAgreement() {
 				</div>
 
 			</div>
-			<div className="flex flex-row items-center">
-				<div className=" px-2">
+			<div className="flex flex-row ..5x2:justify-center items-center">
+				<div className="..5x2:w-10 ..5x2:h-6 ..5x2:mb-2 px-2">
 					<Image src={icons.ICON_MIR} width={46} height={13} />
 				</div>
-				<div className=" px-2">
+				<div className="..5x2:w-10 ..5x2:h-6 px-2">
 					<Image src={icons.ICON_UNIONPAY} width={46} height={30} />
 				</div>
-				<div className=" px-2">
+				<div className="..5x2:w-10 ..5x2:h-6 px-2">
 					<Image src={icons.ICON_MASTERCARD} width={26} height={16} />
 				</div>
-				<div className=" pl-2">
+				<div className="..5x2:w-10 ..5x2:mb-1 ..5x2:h-6 pl-2">
 					<Image src={icons.ICON_VISA} width={40} height={12} />
 				</div>
 			</div>
