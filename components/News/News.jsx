@@ -106,7 +106,7 @@ const News = ({ refL }) => {
 	return (
 		<article ref={refL} id='sec-5' className="container__special relative pb-24 ..5x1:pb-16">
 			<svg
-				className="absolute ..5x5:h-36 ..5x5:mt-5 left-1/2 ability -top-5 "
+				className="absolute ..6x2:h-32 ..6x2:-top-2  ..6x2:mt-5 left-1/2 ability -top-5 "
 				width="184"
 				height="183"
 				viewBox="0 0 184 183"
@@ -143,14 +143,14 @@ const News = ({ refL }) => {
 				/>
 			</svg>
 
-			<p className="mt-36 absolute left-1/2 ability -top-20 text-3xl italic  mb-28   ">
+			<p className="mt-36 absolute left-1/2 ability   -top-20 text-3xl italic   ">
 				НОВОСТИ
 			</p>
-			<button className="ability left-1/2 absolute top-32 text-primary border-2 boder-primary py-3 px-6 text-sm transition-all hover:text-white hover:bg-primary">
+			<button className="ability left-1/2 absolute   top-32 text-primary border boder-primary py-3 px-6 text-sm ..6x6:py-10px ..6x6:px-5 ..6x6:text-xs transition-all hover:text-white hover:bg-primary">
 				Смотреть все
 			</button>
-			<Slider {...settings} ref={slider} className="pt-48">
-				<div className=" relative p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+			<Slider {...settings} ref={slider} className="pt-48 ..6x6:pt-44 newsSlider ..7x001:px-3 ">
+				<div className=" relative p-3  ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
@@ -161,26 +161,29 @@ const News = ({ refL }) => {
 							alt="newsImg"
 						/>
 					</div>
-					<div className="border-2 border-gray -mt-2 relative">
-						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-quick-silver">
-							<p className="text-center mt-6 underline mb-2">Онлайн-каталог</p>
-							<p className="text-center mt-6 underline mb-2">Промоушен</p>
+					<div className="border border-t-0 border-gray -mt-4 relative">
+						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-light3">
+							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
+							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
 						</div>
-						<p className="text-center text-lg font-bold">
+						<p className="text-center ..5x2:hidden px-2 text-lg font-bold">
 							Возвращение легенды: косметический <br /> спонж для умывания
 						</p>
-						<p className="text-center mt-2 px-2 mb-5 news_text">
+						<p className="hidden ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
+							Возвращение легенды: косметический спонж для умывания
+						</p>
+						<p className="text-center mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
 							Все помнят тот самый косметический спонж, который под струей воды
 							превращался из палочки в круглый диск Все помнят тот самый
 							косметический спонж, который под струей воды превращался
 						</p>
-						<button className="relative ability left-1/2 bottom-3 text-black">
+						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
 							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
 						</button>
 					</div>
 				</div>
-				<div className="relative p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className="relative p-3   ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<NewsDate title={'MAY 20, 2022'} />
 					<div>
 						<Image
@@ -191,27 +194,29 @@ const News = ({ refL }) => {
 							alt="newsImg"
 						/>
 					</div>
-					<div className="border-2 border-gray -mt-2 relative">
-						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-quick-silver">
-							<p className="text-center mt-6 underline mb-2">Онлайн-каталог</p>
-							<p className="text-center mt-6 underline mb-2">Промоушен</p>
+					<div className="border border-t-0 border-gray -mt-4 relative">
+						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-light3">
+							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
+							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
 						</div>
-						<p className="text-center text-lg font-bold mb-9">
-							Алоэ - компонент многих продуктов TianDe
+						<p className="text-center ..5x2:hidden px-2 text-lg font-bold">
+							Возвращение легенды: косметический <br /> спонж для умывания
 						</p>
-						<p className="text-center mt-2 px-2 mb-5 news_text">
+						<p className="hidden ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
+							Возвращение легенды: косметический спонж для умывания
+						</p>
+						<p className="text-center mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
 							Все помнят тот самый косметический спонж, который под струей воды
 							превращался из палочки в круглый диск Все помнят тот самый
 							косметический спонж, который под струей воды превращался
 						</p>
-
-						<button className="relative ability left-1/2 bottom-3 text-black">
+						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
 							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
 						</button>
 					</div>
 				</div>
-				<div className="relative p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className="relative p-3   ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<NewsDate title={'MAY 20, 2022'} />
 					<div>
 						<Image
@@ -222,28 +227,29 @@ const News = ({ refL }) => {
 							alt="newsImg"
 						/>
 					</div>
-					<div className="border-2 border-gray -mt-2 relative">
-						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-quick-silver">
-							<p className="text-center mt-6 underline mb-2">Онлайн-каталог</p>
-							<p className="text-center mt-6 underline mb-2">Промоушен</p>
+					<div className="border border-t-0 border-gray -mt-4 relative">
+						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-light3">
+							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
+							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
 						</div>
-						<p className="text-center text-lg font-bold">
-							Что нужно для идеального макияжа? Список необходимой косметики и
-							лайфхаков
+						<p className="text-center ..5x2:hidden px-2 text-lg font-bold">
+							Возвращение легенды: косметический <br /> спонж для умывания
 						</p>
-						<p className="text-center mt-2 px-2 mb-5 news_text">
+						<p className="hidden ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
+							Возвращение легенды: косметический спонж для умывания
+						</p>
+						<p className="text-center mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
 							Все помнят тот самый косметический спонж, который под струей воды
 							превращался из палочки в круглый диск Все помнят тот самый
 							косметический спонж, который под струей воды превращался
 						</p>
-
-						<button className="relative ability left-1/2 bottom-3 text-black">
+						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
 							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
 						</button>
 					</div>
 				</div>
-				<div className="relative p-3 ..6x04:p-1 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className="relative p-3   ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
 					<NewsDate title={'MAY 20, 2022'} />
 					<div>
 						<Image
@@ -254,22 +260,23 @@ const News = ({ refL }) => {
 							alt="newsImg"
 						/>
 					</div>
-					<div className="border-2 border-gray -mt-2 relative">
-						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-quick-silver">
-							<p className="text-center mt-6 underline mb-2">Онлайн-каталог</p>
-							<p className="text-center mt-6 underline mb-2">Промоушен</p>
+					<div className="border border-t-0 border-gray -mt-4 relative">
+						<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-light3">
+							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
+							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
 						</div>
-						<p className="text-center text-lg font-bold">
-							Что нужно для идеального макияжа? Список необходимой косметики и
-							лайфхаков
+						<p className="text-center ..5x2:hidden px-2 text-lg font-bold">
+							Возвращение легенды: косметический <br /> спонж для умывания
 						</p>
-						<p className="text-center mt-2 px-2 mb-5 news_text">
+						<p className="hidden ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
+							Возвращение легенды: косметический спонж для умывания
+						</p>
+						<p className="text-center mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
 							Все помнят тот самый косметический спонж, который под струей воды
 							превращался из палочки в круглый диск Все помнят тот самый
 							косметический спонж, который под струей воды превращался
 						</p>
-
-						<button className="relative ability left-1/2 bottom-3 text-black">
+						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
 							<div className="bg-primary absolute bottom-1 opacity-40 h-9px w-full" />
 						</button>

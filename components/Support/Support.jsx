@@ -1,10 +1,10 @@
 const Support = ({ refL }) => {
 	return (
 		<section ref={refL} id="sec-15" className="support rounded-32px max-w-1760px w-full left-1/2 ..6x6:px-3 ability px-10 ..6x6:w-full bg-white absolute -bottom-10 z-30 flex justify-between py-10 .2x1:flex-col .2x1:w-384px .2x1:p-0 .2x1:bg-gray-light .2x1:bottom-3">
-			<div className="flex relative .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded-xl items-center">
+			<div className="flex relative ..6x6:py-5 .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded-xl items-center">
 				<svg
 					width="80"
-					className="mr-5 .3x1:h-16 .3x1:mr-0"
+					className="mr-5 ..6x6:h-9 ..6x6:ml-3 ..6x6:mr-4 ..6x6:w-9 .3x1:h-16 .3x1:mr-0"
 					height="80"
 					viewBox="0 0 80 80"
 					fill="none"
@@ -74,12 +74,12 @@ const Support = ({ refL }) => {
 					<p className="font-medium font-montserrat ..6x6:font-semibold ..6x6:text-sm">
 						Бесплатная доставка
 					</p>
-					<p className="text-gray-quick-silver font-montserrat ..6x6:font-normal ..6x6:text-xs">
+					<p className="text-gray-quick-silver font-montserrat ..6x6:font-normal ..6x6:text-13px">
 						При заказе от ₽ 2.500 +
 					</p>
 				</div>
 				<svg
-					className="hidden .2x1:block .2x1:absolute .2x1:right-4 .2x1:top-8"
+					className="hidden .2x1:block .2x1:absolute .2x1:right-4 ..6x6:top-9 .2x1:top-8"
 					width="7"
 					height="10"
 					viewBox="0 0 7 10"
@@ -92,10 +92,10 @@ const Support = ({ refL }) => {
 					/>
 				</svg>
 			</div>
-			<div className="flex relative .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded items-center">
+			<div className="flex relative ..6x6:py-5  .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded items-center">
 				<svg
 					width="80"
-					className="mr-5 .3x1:h-16 .3x1:mr-0"
+					className="mr-5 ..6x6:h-9 ..6x6:w-9  ..6x6:ml-3 ..6x6:mr-4 .3x1:h-16 .3x1:mr-0"
 					height="80"
 					viewBox="0 0 80 80"
 					fill="none"
@@ -143,12 +143,12 @@ const Support = ({ refL }) => {
 					<p className="font-medium font-montserrat ..6x6:font-semibold ..6x6:text-sm">
 						24/7 поддержка
 					</p>
-					<p className="text-gray-quick-silver font-montserrat ..6x6:font-normal ..6x6:text-xs">
+					<p className="text-gray-quick-silver font-montserrat ..6x6:font-normal ..6x6:text-13px">
 						support@OBC.com
 					</p>
 				</div>
 				<svg
-					className="hidden .2x1:block .2x1:absolute .2x1:right-4 .2x1:top-8"
+					className="hidden .2x1:block .2x1:absolute ..6x6:top-9 .2x1:right-4 .2x1:top-8"
 					width="7"
 					height="10"
 					viewBox="0 0 7 10"
@@ -161,10 +161,10 @@ const Support = ({ refL }) => {
 					/>
 				</svg>
 			</div>
-			<div className="flex relative .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded items-center">
+			<div className="flex relative ..6x6:py-5 .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded items-center">
 				<svg
 					width="80"
-					className="mr-5 .3x1:h-16 .3x1:mr-0"
+					className="mr-5 ..6x6:h-9 ..6x6:ml-3 ..6x6:mr-4 ..6x6:w-9 .3x1:h-16 .3x1:mr-0"
 					height="80"
 					viewBox="0 0 80 80"
 					fill="none"
@@ -199,12 +199,12 @@ const Support = ({ refL }) => {
 					<p className="font-medium font-montserrat ..6x6:font-semibold ..6x6:text-sm">
 						Программа лояльности
 					</p>
-					<p className="text-gray-quick-silver font-montserrat ..6x6:font-normal ..6x6:text-xs">
+					<p className="text-gray-quick-silver font-montserrat ..6x6:font-normal ..6x6:text-13px">
 						При заказе от ₽ 1.500 +
 					</p>
 				</div>
 				<svg
-					className="hidden .2x1:block .2x1:absolute .2x1:right-4 .2x1:top-8"
+					className="hidden .2x1:block .2x1:absolute ..6x6:top-9 .2x1:right-4 .2x1:top-8"
 					width="7"
 					height="10"
 					viewBox="0 0 7 10"
@@ -217,9 +217,9 @@ const Support = ({ refL }) => {
 					/>
 				</svg>
 			</div>
-			<div className="flex relative .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded items-center">
+			<div className="flex relative ..6x6:py-5 .2x1:mb-2 .2x1:bg-white .2x1:p-1 .2x1:rounded items-center">
 				<svg
-					className="mr-5 .3x1:h-16 .3x1:mr-0"
+					className="mr-5 ..6x6:ml-3 ..6x6:mr-4 ..6x6:h-9 ..6x6:w-9 .3x1:h-16 .3x1:mr-0"
 					width="80"
 					height="80"
 					viewBox="0 0 80 80"
@@ -267,12 +267,12 @@ const Support = ({ refL }) => {
 					<p className="font-medium font-montserrat ..6x6:font-semibold ..6x6:text-sm">
 						Online-бонус
 					</p>
-					<p className="text-gray-quick-silver font-montserrat ..6x6:font-normal ..6x6:text-xs">
+					<p className="text-gray-quick-silver font-montserrat ..6x6:font-normal ..6x6:text-13px">
 						Вознаграждение от 1 - 10%
 					</p>
 				</div>
 				<svg
-					className="hidden .2x1:block .2x1:absolute .2x1:right-4 .2x1:top-8"
+					className="hidden .2x1:block .2x1:absolute ..6x6:top-9 .2x1:right-4 .2x1:top-8"
 					width="7"
 					height="10"
 					viewBox="0 0 7 10"

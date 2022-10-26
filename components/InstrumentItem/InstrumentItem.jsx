@@ -44,7 +44,7 @@ export default function InstrumentItem({
 
 				{country ? (
 					<>
-						<p onClick={setDilHover} className={`hidden ..5x1:block text-center text-gray-quick-silver mt-1 mb-4 text-xs ..6x3:text-sm `}>
+						<p onClick={setDilHover} className={`hidden ..5x1:text-11px ..5x1:block text-center text-gray-quick-silver mt-1 mb-4 text-sm   `}>
 							{title === 'Доставка от 1000 ₽' && `${country}, `}
 							{underCountry}
 						</p>
@@ -84,7 +84,7 @@ export default function InstrumentItem({
 							<SectionImgs variant={variant} textImg={textImg} />
 						</div>
 
-						<p className="..5x1:hidden text-left text-gray-quick-silver mt-1 mb-4 text-xs ..6x3:text-sm">
+						<p className="..5x1:hidden  text-left text-gray-quick-silver mt-1 mb-4 text-sm  ">
 							{underCountry}
 						</p>
 					</>

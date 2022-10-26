@@ -273,7 +273,7 @@ const Stories = ({ refL }) => {
 				</svg>
 				ИСТОРИИ
 			</p>
-			<div className="mt-16">
+			<div className="mt-16 ..5x2:h-64 ..5x4:h-auto">
 				<Slider {...settings} ref={slider} className='storiesOpacity'>
 					<StoriesItem text="Reels" photo={oneStories} />
 					<StoriesItem text="LiveShop" photo={twoStories} />

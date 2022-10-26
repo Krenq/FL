@@ -140,7 +140,7 @@ const Funds = ({ refL }) => {
 	return (
 		<section ref={refL} className="relative bg-gray-light" id='sec-9'>
 			<svg
-				className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-6 "
+				className="ability ..6x2:h-32  ..6x2:mt-5 absolute left-1/2 -top-5 "
 				width="184"
 				height="183"
 				viewBox="0 0 184 183"
@@ -236,13 +236,15 @@ const Funds = ({ refL }) => {
 						</div>
 						<div className='..6x2:flex ..6x2:mt-3'>
 							<div className="relative transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+
 								<Image
-									className="object-cover"
+									className="object-cover  "
 									src={two}
-									width={720}
-									height={374}
+
 									alt="discountImg"
 								/>
+
+
 								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
 									<svg

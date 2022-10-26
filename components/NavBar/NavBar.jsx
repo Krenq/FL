@@ -10,9 +10,9 @@ export default function NavBar({ scrollMenu }) {
 			{scrollMenu ? (
 				<>
 
-					<nav className="h-80px ..5x2:h-20 ..6x3:h-11 mt-5 transition-all duration-500 bg-white ..7x2:h-86px relative flex flex-row justify-between items-center">
+					<nav className="h-80px ..5x2:h-20 ..6x3:h-11 mt-5 transition-all duration-500 bg-white   relative flex flex-row justify-between items-center">
 						<svg
-							className="hidden ..7x1:ml-3 ..5x2:block ml-5 cursor-pointer"
+							className="hidden ..7x1:ml-3 ..6x6:h-5 ..6x6:w-5 ..5x2:block ml-5 cursor-pointer"
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
@@ -31,7 +31,7 @@ export default function NavBar({ scrollMenu }) {
 							/>
 						</svg>
 
-						<Logo styles="top-5 ..6x3:pl-0 pl-20 ..6x3:top-2 .5x01:pl-2 ..7x2:w-100px  ..5x1:flex-1    headerAbility ..5x2:absolute " />
+						<Logo styles="top-5 ..6x3:pl-0 pl-20 ..6x3:top-2 .5x01:pl-2    ..5x1:flex-1    headerAbility ..5x2:absolute " />
 						<LinksHeader scrollMenu={scrollMenu} />
 						{/* <SectionNavButtons /> */}
 						<Search />
@@ -39,9 +39,9 @@ export default function NavBar({ scrollMenu }) {
 					<div className='transition-all duration-500 bg-gray h-px w-91.7% .5x01:w-full mx-auto'></div>
 				</>
 			) : (
-				<nav className="h-100px  flex-nowrap  ..5x2:h-20 ..6x3:h-11 bg-white   relative flex flex-row justify-between items-center">
+				<nav className="h-100px   flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center">
 					<svg
-						className="hidden ..7x1:ml-3 ..5x2:block ml-5 cursor-pointer"
+						className="hidden ..7x1:ml-3 ..6x6:h-5 ..6x6:w-5 ..5x2:block ml-5 cursor-pointer"
 						width="24"
 						height="24"
 						viewBox="0 0 24 24"
@@ -60,7 +60,7 @@ export default function NavBar({ scrollMenu }) {
 						/>
 					</svg>
 
-					<Logo styles="top-5 ..6x3:pl-0 pl-20 ..6x3:top-2 .5x01:pl-2 ..7x2:w-100px  ..5x1:flex-1    headerAbility ..5x2:absolute " />
+					<Logo styles="top-5 ..6x3:pl-0 pl-20 ..6x3:top-2 .5x01:pl-2    ..5x1:flex-1    headerAbility ..5x2:absolute " />
 					<LinksHeader />
 					<Search />
 				</nav>

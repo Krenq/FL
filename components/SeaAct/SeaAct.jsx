@@ -63,7 +63,7 @@ const SeaAct = ({ refL }) => {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: -40,
+									bottom: -25,
 								}}
 							>
 								<div
@@ -112,7 +112,7 @@ const SeaAct = ({ refL }) => {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: -40,
+									bottom: -25,
 								}}
 							>
 								<div
@@ -166,7 +166,7 @@ const SeaAct = ({ refL }) => {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: -40,
+									bottom: -25,
 								}}
 							>
 								<div
@@ -208,9 +208,9 @@ const SeaAct = ({ refL }) => {
 
 	return (
 		<div ref={refL} className="bg-gray-light" id='sec-6'>
-			<section className="container__special relative pt-20 pb-24 ..5x2:pt-60 ..5x2:pb-20">
+			<section className="container__special relative pt-20 pb-24 ..5x2:pt-60 ..5x2:pb-12">
 				<svg
-					className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 ..5x2:top-1  -top-8 "
+					className="ability ..6x2:h-32 ..6x2:mt-5 absolute left-1/2 ..5x2:top-3  -top-8 "
 					width="184"
 					height="183"
 					viewBox="0 0 184 183"

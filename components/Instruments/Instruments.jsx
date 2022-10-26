@@ -66,7 +66,7 @@ function Instrumensts({ refL }) {
 						display: 'flex',
 						justifyContent: 'center',
 						position: 'absolute',
-						bottom: -30,
+						bottom: -25,
 					}}
 				>
 					<div

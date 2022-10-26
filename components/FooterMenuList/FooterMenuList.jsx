@@ -41,8 +41,8 @@ export default function FooterMenuList() {
 	return (
 		<div className="flex flex-row .2x1.0:flex-col .2x1.0:w-full justify-around w-7/12">
 			<div className="flex  flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px">
-				<div onClick={showCompany} className={`${show.companyShow ? 'text-black' : ''}.2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b transition-all .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between`}>Компания <svg className={`hidden .2x1.0:block transition-all ${show.companyShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill="#949792" />
+				<div onClick={showCompany} className={`${show.companyShow ? '!text-primary' : ''} .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b transition-all .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between`}>Компания <svg className={`hidden .2x1.0:block transition-all ${show.companyShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill={`${show.companyShow ? '#337202' : '#949792'}`} />
 				</svg>
 				</div>
 				<div className={`${show.companyShow ? '!h-32' : "hiddenCustomFoot"} mt-7 .2x1.0:h-auto .3x1:h-56 h-222px transition-all .2x1.0:mt-0 flex flex-col justify-between .2x1.0:justify-start .2x1.0:mb-5 `}>
@@ -57,8 +57,8 @@ export default function FooterMenuList() {
 
 			</div>
 			<div className="flex  flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px">
-				<div onClick={showCatal} className={`${show.catalShow ? '!text-black' : ''} .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3 transition-all`}>Каталог <svg className={`hidden .2x1.0:block transition-all ${show.catalShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill="#949792" />
+				<div onClick={showCatal} className={`${show.catalShow ? '!text-primary' : ''}  .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3 transition-all`}>Каталог <svg className={`hidden .2x1.0:block transition-all ${show.catalShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill={`${show.catalShow ? '#337202' : '#949792'}`} />
 				</svg>
 				</div>
 				<div className={`${show.catalShow ? '!h-32' : "hiddenCustomFoot"} .2x1.0:h-auto .3x1:h-56 h-222px mt-7 transition-all .2x1.0:mt-0 flex flex-col justify-between .2x1.0:justify-start .2x1.0:mb-5   `}>
@@ -73,8 +73,8 @@ export default function FooterMenuList() {
 
 			</div>
 			<div className={` flex   flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px`}>
-				<div onClick={showbuyers} className={`${show.buyersShow ? '!text-black' : ''} transition-all .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3`}>Покупателям <svg className={`hidden .2x1.0:block transition-all ${show.buyersShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill="#949792" />
+				<div onClick={showbuyers} className={`${show.buyersShow ? '!text-primary' : ''}  transition-all .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3`}>Покупателям <svg className={`hidden .2x1.0:block transition-all ${show.buyersShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill={`${show.buyersShow ? '#337202' : '#949792'}`} />
 				</svg>
 				</div>
 				<div className={`${show.buyersShow ? '!h-32' : "hiddenCustomFoot"}  .2x1.0:h-auto .3x1:h-56 h-222px mt-7 transition-all .2x1.0:mt-0 flex flex-col justify-between .2x1.0:justify-start .2x1.0:mb-5`}>
@@ -92,8 +92,8 @@ export default function FooterMenuList() {
 
 			</div>
 			<div className="flex flex-col .2x1.0:w-full .2x1.0:h-auto justify-between .3x1:h-56 h-272px">
-				<div onClick={showbis} className={`${show.bisShow ? '!text-black' : ''} transition-all .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3`}>Бизнес-возможности <svg className={`hidden .2x1.0:block transition-all ${show.bisShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill="#949792" />
+				<div onClick={showbis} className={`${show.bisShow ? '!text-primary' : ''}  transition-all .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3`}>Бизнес-возможности <svg className={`hidden .2x1.0:block transition-all ${show.bisShow ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill={`${show.bisShow ? '#337202' : '#949792'}`} />
 				</svg>
 				</div>
 				<div className={`${show.bisShow ? '!h-32' : "hiddenCustomFoot"} mt-7 .2x1.0:h-auto .3x1:h-56 h-222px transition-all .2x1.0:mt-0 flex flex-col justify-between .2x1.0:justify-start .2x1.0:mb-5  `}>

@@ -76,6 +76,7 @@ module.exports = {
 				'quick-silver': '#828584',
 				smart: '#d1d1d1',
 				border: '#DCE0DF',
+				light3: '#A6A2A2'
 			},
 			primary: {
 				DEFAULT: '#337202',

@@ -13,7 +13,7 @@
 	opacity: 0.9;
 	top: 35%;
 	transition: 0.3s ease all;
-	z-index: 20;
+
 }
 
 .moreF:hover svg {
@@ -461,7 +461,18 @@
 	}
 }
 
+.rounded-50 {
+	border-radius: 50%;
+}
+
+
+
 @media (max-width: 1000px) {
+
+	.foliagePart {
+		transform: rotateY(180deg);
+	}
+
 	.special .slick-list .slick-track .slick-slide div {
 		border-bottom: none !important;
 	}
@@ -481,7 +492,15 @@
 	}
 
 	.partners .slick-dots {
-		transform: translateX(-24px);
+		transform: translate(-24px, -35px);
+	}
+
+	.prevPartner {
+		bottom: 20px;
+	}
+
+	.nextPartner {
+		bottom: 40px;
 	}
 
 	.logo img {
@@ -530,7 +549,7 @@
 	}
 
 	.funds {
-		padding-bottom: 50px;
+		padding-bottom: 60px;
 	}
 
 	.text {
@@ -806,6 +825,10 @@
 
 
 @media (max-width: 1000px) {
+	.storiesOpacity .slick-dots {
+		bottom: 90px !important;
+	}
+
 	.phoneOne {
 		height: unset !important;
 	}
@@ -1032,5 +1055,11 @@
 
 	.titleSea {
 		top: 108px !important;
+	}
+}
+
+@media (max-width: 850) {
+	.storiesOpacity .slick-dots {
+		bottom: -40px !important;
 	}
 }
