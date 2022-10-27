@@ -179,7 +179,7 @@ const News = ({ refL }) => {
 						</p>
 						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14" />
+							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px ..6x4:w-14 ..6x4:ml-0 ..5x2:w-16 ..5x2:ml-1" />
 						</button>
 					</div>
 				</div>
@@ -212,7 +212,7 @@ const News = ({ refL }) => {
 						</p>
 						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14" />
+							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px ..6x4:w-14 ..6x4:ml-0 ..5x2:w-16 ..5x2:ml-1" />
 						</button>
 					</div>
 				</div>
@@ -245,7 +245,7 @@ const News = ({ refL }) => {
 						</p>
 						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14" />
+							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px ..6x4:w-14 ..6x4:ml-0 ..5x2:w-16 ..5x2:ml-1" />
 						</button>
 					</div>
 				</div>
@@ -278,7 +278,7 @@ const News = ({ refL }) => {
 						</p>
 						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14" />
+							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px ..6x4:w-14 ..6x4:ml-0 ..5x2:w-16 ..5x2:ml-1" />
 						</button>
 					</div>
 				</div>
