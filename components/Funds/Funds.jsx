@@ -234,7 +234,7 @@ const Funds = ({ refL }) => {
 								</svg>
 							</small>
 						</div>
-						<div className='..6x2:flex ..6x2:mt-3'>
+						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-3'>
 							<div className="relative transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
 
 								<Image

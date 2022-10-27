@@ -75,14 +75,14 @@ const Health = ({ refL }) => {
 
 					<Slider {...settings} className="flex">
 						<div>
-							<div className=" border-primary border  ..7x11:px-1 bg-white relative  pb-96 ..5x2:pb-48 mx-3   mb-3 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
-								<p className="..6x04:text-5xl z-10 text-7xl ability transition-all leading-140% text-gray-platinum ..5x2:top-0 ..6x1:top-4 top-4 absolute font-montserrat font-bold left-1/2 procent">
+							<div className="..5x2:h-52 border-primary border  ..7x11:px-1 bg-white relative  pb-96 ..5x2:pb-48 mx-3   mb-3 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
+								<p className="..6x04:text-5xl z-10 ..6x04:top-5 text-7xl ability transition-all leading-140% text-gray-platinum ..5x2:-top-3 top-4 absolute font-montserrat font-bold left-1/2 procent">
 									-30%
 								</p>
-								<p className=" ability font-medium ..6x04:text-base ..5x2:text-lg text-2xl transition-all text-primary ..6x1:top-11 ..5x2:top-14 absolute top-12 z-10 left-1/2 title_sale">
+								<p className=" ability font-medium ..6x04:text-base ..5x2:text-lg text-2xl transition-all text-primary ..5x2:top-11   absolute top-12 z-10 left-1/2 title_sale">
 									«АНТИСТРЕСС»
 								</p>
-								<p className=" ability font-montserrat  w-full ..5x2:text-lg  ..6x04:text-13px text-2xl text-center  absolute top-20  ..6x1:top-14 z-10 left-1/2 ">
+								<p className=" ability font-montserrat  w-full ..5x2:text-lg  ..6x04:text-13px text-2xl text-center  absolute top-20   ..5x2:top-16 z-10 left-1/2 ">
 									Смотри на мир здоровыми глазами!
 								</p>
 								<div className="absolute  bottom-0  ..5x2:bottom-24    headerAbility">
@@ -117,20 +117,22 @@ const Health = ({ refL }) => {
 								</div>
 							</div>
 							<div className="relative mt-3.5 mx-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
-								<p className="absolute  font-montserrat ..5x2:top-4 ..5x2:left-4  ..6x04:text-base z-10 top-20 text-2xl text-black font-medium left-10  ">
+								<p className="absolute  font-montserrat ..5x2:top-4 ..5x2:left-4  ..7x1:text-base z-10 top-20 text-2xl text-black font-medium left-10  ">
 									«ЗДОРОВЫЙ СОН»
 								</p>
-								<p className="absolute font-montserrat text-primary ..7x1:text-13px ..5x2:text-xl !leading-140%  ..6x3:top-10 ..5x2:top-14 ..5x2:left-4    z-10 top-32 text-3xl   left-10  ">
+								<p className="absolute font-montserrat text-primary ..7x1:text-13px ..5x2:text-xl !leading-140%  ..7x1:top-10 ..5x2:top-16 ..5x2:left-4    z-10 top-32 text-3xl   left-10  ">
 									Чтобы каждое утро<br /> было добрым
 								</p>
-								<Image
-									className="object-cover"
-									src={twoHealth}
-									width={720}
-									height={900}
-									alt="discountImg"
-								/>
-								<p className="absolute ..6x2:text-13px  font-medium  ..6x3:top-24 ..5x2:top-28 font-montserrat ..5x2:left-4   top-52 cursor-pointer z-10 left-10 flex items-center text-sm ">
+								<div className='image-container'>
+									<Image
+										className="object-cover image"
+										src={twoHealth}
+
+										alt="discountImg"
+									/>
+								</div>
+
+								<p className="absolute ..6x2:text-13px  font-medium  ..7x1:top-24 ..5x2:top-32 font-montserrat ..5x2:left-4   top-52 cursor-pointer z-10 left-10 flex items-center text-sm ">
 									Подробнее{' '}
 									<svg
 										className="ml-2 mt-0.5"
@@ -150,13 +152,13 @@ const Health = ({ refL }) => {
 						</div>
 						<div>
 							<div className="relative mx-3 transition-all hover:text-primary hover:opacity-90 cursor-pointer">
-								<p className="absolute ..6x04:text-base font-montserrat z-10 top-20 text-2xl left-10 ..5x2:left-4 ..5x2:top-4 font-medium">
+								<p className="absolute ..7x1:text-base font-montserrat z-10 top-20 text-2xl left-10 ..5x2:left-4 ..5x2:top-4 font-medium">
 									«ЧИСТАЯ КОЖА»
 								</p>
-								<p className="absolute ..7x1:text-13px ..5x2:text-xl z-10 top-32 text-3xl text-primary left-10  ..5x2:top-11 !leading-140%  ..5x2:left-4">
+								<p className="absolute ..7x1:text-13px ..5x2:text-xl z-10 top-32 text-3xl text-primary left-10  ..7x1:top-11 ..5x2:top-14 !leading-140%  ..5x2:left-4">
 									Фитокоррекция <br /> проблемной кожи
 								</p>
-								<p className="absolute ..5x2:top-24 ..5x2:left-4 ..5x2:text-13px font-montserrat  font-medium top-52 cursor-pointer z-10 left-10 flex items-center text-sm  ">
+								<p className="absolute ..7x1:top-24 ..5x2:top-32 ..5x2:left-4 ..5x2:text-13px font-montserrat  font-medium top-52 cursor-pointer z-10 left-10 flex items-center text-sm  ">
 									Подробнее{' '}
 									<svg
 										className="ml-2 mt-0.5"
@@ -172,19 +174,23 @@ const Health = ({ refL }) => {
 										/>
 									</svg>
 								</p>
-								<Image
-									className="object-cover"
-									src={treeHealth}
-									width={720}
-									height={900}
-									alt="discountImg"
-								/>
+								<div className='image-container'>
+									<Image
+										className="object-cover image"
+										src={treeHealth}
+										width={720}
+										height={900}
+										alt="discountImg"
+									/>
+								</div>
+
+
 							</div>
-							<div className="mx-3 px-3 ..7x2:px-2 ..5x2:px-8  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
+							<div className="mx-3 ..5x2:h-52 px-3 ..7x2:px-2 ..5x2:px-8  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
 								<h1 className="text-32px font-montserrat text-center ..5x2:mb-0.5 mb-5 pt-11 ..5x2:text-22px ..5x2:pt-6  text-w text-white">
 									50+ программ
 								</h1>
-								<p className="text-center hidden   ..5x2:block ..5x2:pb-3 ..7x1:pb-0   ..5x2:text-13px  !leading-140% font-montserrat   text-2xl text-white   .1x1:text-xl    ">
+								<p className="text-center hidden ..7x1:px-0 ..6x5:px-10 ..6x4:px-24 ..6x03:px-28 ..6x2:px-32 ..5x5:px-40  ..5x2:block ..5x2:pb-3 ..7x1:pb-0   ..5x2:text-13px  !leading-140% font-montserrat   text-2xl text-white   .1x1:text-xl    ">
 									«Мужское здоровье», «антипаразитарная программа»,
 									«бодрость и энергия», «активное долголетие» и др.
 								</p>
@@ -192,7 +198,7 @@ const Health = ({ refL }) => {
 									«Мужское здоровье», «антипаразитарная <br /> программа»,
 									«бодрость и энергия», «активное <br /> долголетие» и др.
 								</p>
-								<button className="ability ..5x2:bottom-1 border ..7x001:w-40 ..5x2:text-sm font-medium font-montserrat ..5x2:py-1.5 ..5x2:px-5 ..6x1:bottom-3 border-gray absolute bottom-20   text-gray py-2 px-4  left-1/2 hover:text-white transition-all ">
+								<button className="ability ..5x2:bottom-8 border ..7x001:w-40 ..5x2:text-sm font-medium font-montserrat ..5x2:py-1.5 ..5x2:px-5 ..6x1:bottom-3 border-gray absolute bottom-20   text-gray py-2 px-4  left-1/2 hover:text-white transition-all ">
 									Все программы
 								</button>
 							</div>

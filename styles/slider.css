@@ -301,6 +301,7 @@
 	background: linear-gradient(270.09deg,
 			rgba(255, 255, 255, 0.2) -1.39%,
 			rgba(255, 255, 255, 0) 99.9%);
+
 }
 
 .timer__wrapper {
@@ -470,6 +471,23 @@
 @media (max-width: 1000px) {
 	.newsSlider .slick-dots ul li div {
 		width: 25px !important;
+	}
+
+	.image-container {
+		width: 100%;
+
+	}
+
+	.image-container div {
+		position: unset !important;
+	}
+
+	.image-container .image {
+		margin-top: -130% !important;
+		width: 100% !important;
+		position: relative !important;
+		max-height: 390px !important;
+		height: unset !important;
 	}
 
 	.plusDiscItem {

@@ -20,7 +20,7 @@ export default function InstrumentItem({
 
 
 	const setDilHover = () => {
-
+		if (window.innerWidth < 1000) return
 		setDelivery({
 			currentCountry: delivery.currentCountry,
 			isHover: !delivery.isHover,

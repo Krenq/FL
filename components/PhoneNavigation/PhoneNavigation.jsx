@@ -81,7 +81,7 @@ const PhoneNavigation = () => {
 					<p className=" ..7x001:text-8px text-gray-quick-silver absolute left-1/2 ability  -mt-4 ..6x6:text-xs ">
 						Корзина
 					</p>
-					<div className=" bg-primary absolute ..6x6:top-4 ..6x5:top-5 top-6  ..6x6:right-1.5 ..6x5:right-2 right-2.5 rounded-2xl ..6x6:px-1.5 px-10px ..6x6:py-px ..6x5:py-0.5 text-white ..6x6:text-8px ..6x5:text-11px font-montserrat font-medium number_shopB">
+					<div className=" bg-primary absolute ..6x6:top-2 ..6x5:top-5 top-6  ..6x6:right-1.5 ..6x5:right-2 right-2.5 rounded-2xl ..6x6:px-1.5 px-10px ..6x6:py-px ..6x5:py-0.5 text-white ..6x6:text-8px ..6x5:text-11px font-montserrat font-medium number_shopB">
 						12
 					</div>
 				</li>

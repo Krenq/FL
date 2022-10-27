@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRef } from 'react';
 import Anchor from '../components/Anchor/Anchor';
 import Buyers from '../components/Buyers/Buyers';
 import Clubs from '../components/Clubs/Clubs';
 import ConfirmLocationModalWindow from '../components/ConfirmLocationModalWindow/ConfirmLocationModalWIndow';
+import DiscountSliderItemHover from '../components/DiscountSliderItem/DiscountSliderItemHover';
 import DiscountsSlider from '../components/DiscountsSlider/DiscountsSlider';
 import Footer from '../components/Footer/Footer';
 import Funds from '../components/Funds/Funds';
@@ -40,16 +41,39 @@ function Home() {
 		trands = useRef(null),
 		support = useRef(null)
 
+	const [showProducts, setShowProducts] = useState({
+		central: false,
+		promo: false
+	})
+
+
+
+	const showCentral = () => {
+		if (window.innerWidth > 450) return
+		setShowProducts({ ...showProducts, central: !showProducts.central })
+	},
+		showPromo = () => {
+			if (window.innerWidth > 450) return
+			setShowProducts({ ...showProducts, promo: !showProducts.promo })
+		}
+
+
+
 	return (
 		<section className="container-base relative bg-white">
+			<DiscountSliderItemHover showProducts={showProducts.central} showCentral={showCentral} title={'Шампунь - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
+			<DiscountSliderItemHover showProducts={showProducts.promo} showCentral={showPromo} title={'Шампунь 2 - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
+
+
+
 			<ConfirmLocationModalWindow />
-			<DiscountsSlider refL={discount} />
+			<DiscountsSlider refL={discount} showCentral={showCentral} />
 			<SpecialOffers refL={special} />
 			<Buyers refL={buyers} />
 			<Products refL={products} />
 			<News refL={news} />
 			<SeaAct refL={sea} />
-			<Promo refL={promo} />
+			<Promo refL={promo} showPromo={showPromo} />
 			<Instrumensts refL={Instruments} />
 			<Funds refL={funds} />
 			<Partners refL={partners} />

@@ -14,7 +14,7 @@ import DiscounstsButtonsSliderPrev from '../DiscounstsButtonsSliderNext/Discount
 
 import DiscountSliderItem from '../DiscountSliderItem/DiscountSliderItem';
 
-function DiscountsSlider({ refL }) {
+function DiscountsSlider({ refL, showCentral }) {
 	const [kolichestvo, setKolichestvo] = useState(1),
 		slider = useRef(null),
 		containerSlider = useRef(null)
@@ -86,9 +86,9 @@ function DiscountsSlider({ refL }) {
 		<div ref={refL} id='sec-1'>
 			<div className="bg-white w-full tempSlider" ref={containerSlider}>
 				<Slider {...settings} ref={slider} className='tempSlider'>
-					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderItem showCentral={showCentral} imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderItem showCentral={showCentral} imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderItem showCentral={showCentral} imgProd={imgProduct} img={imgDiscount} />
 				</Slider>
 			</div>
 		</div>
