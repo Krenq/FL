@@ -123,7 +123,7 @@ const Promo = ({ refL, showPromo }) => {
 							<svg width="10" className='plusDiscItem' height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fillRule="evenodd" clipRule="evenodd" d="M4.25 8.33333C4.25 8.74755 4.58579 9.08333 5 9.08333C5.41422 9.08333 5.75 8.74755 5.75 8.33333V5.75H8.33333C8.74755 5.75 9.08333 5.41421 9.08333 5C9.08333 4.58579 8.74755 4.25 8.33333 4.25H5.75V1.66667C5.75 1.25245 5.41422 0.916668 5 0.916668C4.58579 0.916668 4.25 1.25245 4.25 1.66667V4.25H1.66667C1.25245 4.25 0.916668 4.58579 0.916668 5C0.916668 5.41421 1.25245 5.75 1.66667 5.75H4.25V8.33333Z" fill="black" />
 							</svg>
-							<section className="absolute ..6x6:!hidden ..7x2:w-72 ..7x2:-left-16 ..7x001:w-80 ..7x001:-left-20  hidden flex-col justify-between text-black .1x1:-left-100px -left-60 -top-44 font-montserrat rounded-lg w-390px h-200px p-4 info cursor-default">
+							<section className="absolute ..5x2:!hidden ..7x2:w-72 ..7x2:-left-16 ..7x001:w-80 ..7x001:-left-20  hidden flex-col justify-between text-black .1x1:-left-100px -left-60 -top-44 font-montserrat rounded-lg w-390px h-200px p-4 info cursor-default">
 								<span className="flex">
 									<svg
 										width="16"

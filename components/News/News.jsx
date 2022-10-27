@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Slider from 'react-slick';
 import twoNew from '../../images/templates/2news.jpg';
 import oneNew from '../../images/templates/1news.jpg';
-import treeNew from '../../images/templates/3news.jpg';
+
 
 import { useEffect, useRef, useState } from 'react';
 import useWindowSize from '../utils/useWindowSize';

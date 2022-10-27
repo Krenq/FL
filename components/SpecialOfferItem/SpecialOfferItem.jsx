@@ -16,6 +16,7 @@ export default function SpecialOfferItem({ obj }) {
 		infinite: true,
 		speed: 500,
 		slidesToShow: 1,
+		swipe: false,
 		slidesToScroll: 1,
 		dotsClass: 'slick-dots slick-thumb',
 		appendDots: (dots) => {

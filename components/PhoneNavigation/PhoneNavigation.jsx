@@ -1,6 +1,6 @@
 const PhoneNavigation = () => {
 	return (
-		<nav className="hidden border-t border-stroke ..5x2:block bg-white pb-3 ..6x6:pb-0 ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
+		<nav className="hidden border-t border-stroke ..5x2:block bg-white pb-10 ..6x6:pb-7  ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
 			<ul className="flex justify-center   ..6x4:justify-between">
 				<li className="relative cursor-pointer">
 					<svg

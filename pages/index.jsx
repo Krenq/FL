@@ -49,11 +49,11 @@ function Home() {
 
 
 	const showCentral = () => {
-		if (window.innerWidth > 450) return
+		if (window.innerWidth > 1000) return
 		setShowProducts({ ...showProducts, central: !showProducts.central })
 	},
 		showPromo = () => {
-			if (window.innerWidth > 450) return
+			if (window.innerWidth > 1000) return
 			setShowProducts({ ...showProducts, promo: !showProducts.promo })
 		}
 
