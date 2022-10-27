@@ -466,6 +466,11 @@
 	border-radius: 50%;
 }
 
+.slick-slider {
+	-ms-touch-action: pan-y !important;
+	touch-action: pan-y !important;
+}
+
 
 
 @media (max-width: 1000px) {
