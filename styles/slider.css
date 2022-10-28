@@ -467,10 +467,19 @@
 }
 
 .slick-slider {
-	-ms-touch-action: auto !important;
-	touch-action: auto !important;
+	-ms-touch-action: pan-y !important;
+	touch-action: pan-y !important;
 }
 
+.slick-slider .slick-list {
+	-ms-touch-action: pan-y !important;
+	touch-action: pan-y !important;
+}
+
+.slick-slider .slick-track {
+	-ms-touch-action: pan-y !important;
+	touch-action: pan-y !important;
+}
 
 
 @media (max-width: 1000px) {

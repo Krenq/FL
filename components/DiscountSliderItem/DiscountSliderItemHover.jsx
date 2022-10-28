@@ -1,7 +1,7 @@
 const DiscountSliderItemHover = ({ showProducts, showCentral, title, price, oldPrice, de, subTitle }) => {
 	return (
 
-		<section className={`${showProducts ? '!block' : ""} bg-white w-full z-50 fixed bottom-28 ..6x03:bottom-32 left-0 ..6x5:bottom-28 ..6x6:bottom-16 hidden flex-col justify-between text-black   font-montserrat    h-200px ..6x03:p-6  p-10 pt-5 info cursor-default`}>
+		<section className={`${showProducts ? '!block' : ""} bg-white w-full z-50 fixed bottom-28 ..6x03:bottom-24 left-0 ..6x5:bottom-24 ..6x6:bottom-16 hidden flex-col justify-between text-black   font-montserrat    h-200px ..6x03:p-6  p-10 pt-5 info cursor-default`}>
 			<button onClick={showCentral} className='absolute right-4 top-4'>
 				<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 1L1 9M1 1L9 9" stroke="black" strokeWidth="1.5" strokeLinecap="round"></path></svg>
 
