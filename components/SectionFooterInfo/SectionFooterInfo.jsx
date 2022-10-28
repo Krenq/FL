@@ -22,13 +22,13 @@ export default function SectionFooterInfo() {
 			</div>
 
 
-			<div className="flex flex-row items-center">
+			<div className="flex flex-row items-center .2x1.0:mb-2">
 				<Image src={icons.ICON_POCHTA} width={20} height={18} />
-				<span className=" ml-2 .3x1:text-11px .3x1:text-black .2x1.0:mb-2">support@OBC.com</span>
+				<span className=" ml-2 .3x1:text-11px .3x1:text-black  ">support@OBC.com</span>
 			</div>
 			<div className="flex flex-row items-center">
 				<Image src={icons.ICON_PHONE_GRAY} width={14} height={21} />
-				<span className=" ml-3.5 .3x1:text-11px .3x1:text-black">8-800-700-70-90</span>
+				<span className=" ml-3.5  .3x1:text-11px .3x1:text-black">8-800-700-70-90</span>
 			</div>
 			<div className="..6x4:top-16 flex flex-row items-center .2x1.0:absolute ..7x01:-right-7 .2x1.0:right-0 .2x1.0:top-12">
 				<div className=".2x1.0:w-5 flex items-center ..6x03:w-5 ..6x03:h-5 ..7x2:mr-3 .2x1.0:h-3 .2x1.0:mr-5 mr-7">

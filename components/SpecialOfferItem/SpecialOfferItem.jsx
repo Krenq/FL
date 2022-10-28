@@ -87,12 +87,12 @@ export default function SpecialOfferItem({ obj }) {
 
 				{obj.pDay && (
 					<>
-						<div className="absolute flex ..6x03:hidden items-center justify-center top-6 left-2 z-10 border-3.5px border-double border-label-green bg-white rounded-56px mt-2.5 p-px w-60px h-60px">
+						<div className="absolute flex ..6x03:hidden items-center justify-center top-6 left-2 z-20 border-3.5px border-double border-label-green bg-white rounded-56px mt-2.5 p-px w-60px h-60px">
 							<p className=" text-center text-label-green text-10px p-10">
 								ТОВАР ДНЯ
 							</p>
 						</div>
-						<div className="absolute hidden ..6x03:flex items-center justify-center top-6 left-2 z-10 border border-label-green bg-white rounded-56px mt-0.5 p-px w-9 h-9">
+						<div className="absolute hidden z-20 ..6x03:flex items-center justify-center top-6 left-2  border border-label-green bg-white rounded-56px mt-0.5 p-px w-9 h-9">
 							<p className=" text-center text-label-green text-7px p-10">
 								ТОВАР ДНЯ
 							</p>
@@ -112,7 +112,7 @@ export default function SpecialOfferItem({ obj }) {
 						height={218}
 					/>
 				</div>
-				{obj.isSlider ? <div className=" hidden  w-32 h-32 ..6x03:block">
+				{obj.isSlider ? <div className=" hidden z-0  w-32 h-32 ..6x03:block">
 					<Slider {...settings} className='specialItemSliderDots'>
 						<Image
 							className=" object-cover"
@@ -140,7 +140,7 @@ export default function SpecialOfferItem({ obj }) {
 							height={130}
 						/>
 					</Slider>
-				</div> : <div className=" hidden  w-32 h-32 ..6x03:block">
+				</div> : <div className="z-0 hidden  w-32 h-32 ..6x03:block">
 					<Image
 						className=" object-cover"
 						src={obj.img}

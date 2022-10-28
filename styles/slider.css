@@ -467,8 +467,8 @@
 }
 
 .slick-slider {
-	-ms-touch-action: pan-y !important;
-	touch-action: pan-y !important;
+	-ms-touch-action: auto !important;
+	touch-action: auto !important;
 }
 
 

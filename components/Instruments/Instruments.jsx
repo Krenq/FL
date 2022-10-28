@@ -6,7 +6,7 @@ import yandex from '../../images/templates/yandex.jpg';
 import ozon from '../../images/templates/ozon.png';
 import pochtaRF from '../../images/templates/pochta_rf.png';
 import cdek from '../../images/templates/cdek.jpg';
-import berry from '../../images/templates/berry.jpg';
+import berry from '../../images/templates/berry.png';
 import oneinsr from '../../images/templates/1instr.png';
 import twoinsr from '../../images/templates/2instr.jpg';
 import InstrumentItem from '../InstrumentItem/InstrumentItem';

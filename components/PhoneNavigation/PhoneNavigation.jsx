@@ -1,10 +1,10 @@
 const PhoneNavigation = () => {
 	return (
-		<nav className="hidden border-t border-stroke ..5x2:block bg-white pb-10 ..6x6:pb-7  ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
+		<nav className="hidden border-t border-stroke ..5x2:block bg-white pb-7    ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
 			<ul className="flex justify-center   ..6x4:justify-between">
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5  ..6x6:mb-2 ..6x5:w-20"
+						className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5  ..6x6:mb-2 ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -39,7 +39,7 @@ const PhoneNavigation = () => {
 				</li>
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5 ..6x6:mb-2 ..6x5:w-20"
+						className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5 ..6x6:mb-2 ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -60,7 +60,7 @@ const PhoneNavigation = () => {
 				</li>
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10  ..6x6:mb-2 ..6x5:w-20"
+						className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10  ..6x6:mb-2 ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -87,7 +87,7 @@ const PhoneNavigation = () => {
 				</li>
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10  ..6x6:mb-2 ..6x5:w-20"
+						className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10  ..6x6:mb-2 ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
@@ -114,7 +114,7 @@ const PhoneNavigation = () => {
 				</li>
 				<li className="relative cursor-pointer">
 					<svg
-						className="h-24 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10   ..6x6:mb-2  ..6x5:w-20"
+						className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10   ..6x6:mb-2  ..6x5:w-20"
 						width="54"
 						height="24"
 						viewBox="0 0 54 24"
