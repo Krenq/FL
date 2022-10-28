@@ -481,6 +481,15 @@
 	touch-action: pan-y !important;
 }
 
+.slick-slider .slick-track::before {
+	-ms-touch-action: pan-y !important;
+	touch-action: pan-y !important;
+}
+
+.slick-slider .slick-track::after {
+	-ms-touch-action: pan-y !important;
+	touch-action: pan-y !important;
+}
 
 @media (max-width: 1000px) {
 	.newsSlider .slick-dots ul li div {

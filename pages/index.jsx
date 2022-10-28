@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRef } from 'react';
+import { SwiperSlide, Swiper } from 'swiper/react';
 import Anchor from '../components/Anchor/Anchor';
 import Buyers from '../components/Buyers/Buyers';
 import Clubs from '../components/Clubs/Clubs';
@@ -22,6 +23,9 @@ import SpecialOffers from '../components/SpecialOffers/SpecialOffers';
 import Stories from '../components/Stories/Stories';
 import Support from '../components/Support/Support';
 import Trands from '../components/Trands/Trands';
+import 'swiper/css';
+
+
 
 
 function Home() {
@@ -66,6 +70,8 @@ function Home() {
 
 
 
+
+
 			<ConfirmLocationModalWindow />
 			<DiscountsSlider refL={discount} showCentral={showCentral} />
 			<SpecialOffers refL={special} />
@@ -78,7 +84,14 @@ function Home() {
 			<Funds refL={funds} />
 			<Partners refL={partners} />
 			<Health refL={health} />
+			<Swiper  >
+				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
+				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
+				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
+				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
+				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
 
+			</Swiper>
 			<Stories refL={stories} />
 			<Clubs refL={clubs} />
 			<Trands refL={trands} />
