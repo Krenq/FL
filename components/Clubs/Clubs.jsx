@@ -5,7 +5,7 @@ import two from '../../images/templates/2rembg.png';
 function Clubs({ refL }) {
 	return (
 		<section ref={refL} id='sec-13' className="relative bg-nude-2 mt-16 .1x1:mt-14">
-			<div className="absolute right-0 bottom-0 ..5x2:-bottom-10   ..5x2:w-40 ..5x2:h-40 .4x1:-bottom-32">
+			<div className="absolute ..5x2:blur-sm right-0 bottom-0 ..5x2:-bottom-10   ..5x2:w-40 ..5x2:h-40 .4x1:-bottom-32">
 				<Image className="object-cover " src={one} width={486} height={486} alt="specialOffersImg" />
 			</div>
 			<div className="absolute left-0 bottom-0 ..5x2:-left-7 ..5x2:-top-0 ..5x2:w-40 ..5x2:h-40 .4x1:-bottom-32">

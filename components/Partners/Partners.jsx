@@ -36,7 +36,7 @@ const Partners = ({ refL }) => {
 						display: 'flex',
 						justifyContent: 'center',
 						position: 'absolute',
-						bottom: 10,
+						bottom: 5,
 					}}
 				>
 					<div

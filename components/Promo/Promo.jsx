@@ -34,7 +34,7 @@ const Promo = ({ refL, showPromo }) => {
 				/>
 			</div>
 
-			<div className="absolute  ..7x01:-left-7 ..5x3:relative  ..5x3:left-0 top-20 left-40 .4x1:top-7 .4x1:left-20 ..5x3:flex ..5x3:flex-col     text-white">
+			<div className="absolute  ..7x01:-left-4 ..5x3:relative  ..5x3:left-0 top-20 left-40 .4x1:top-7 .4x1:left-20 ..5x3:flex ..5x3:flex-col     text-white">
 				<p className="text-6xl   .2x1:text-5xl ..5x1:text-4xl ..6x3:text-22px ..5x2:px-8 leading-120 font-montserrat  ..5x2:w-full">
 					Скидка 20% по <br /> промокоду «Click»
 				</p>
@@ -42,13 +42,13 @@ const Promo = ({ refL, showPromo }) => {
 					На аквагель для лица серии «FreshClick»
 				</p>
 				<div className='..5x2:ml-8 flex flex-nowrap mt-8'>
-					<button className="font-montserrat border ..7x001:px-15 .2x1:py-3 ..7x2:px-12 .2x1:px-16 border-gray bg-gray   text-gray-quick-silver px-24 py-5 transition-all hover:border-primary hover:text-white hover:bg-primary">
+					<button className="font-montserrat ..5x2:py-0 buttonClickPromo border ..7x001:px-15 .2x1:py-3 ..7x2:px-12 .2x1:px-16 border-gray bg-gray   text-gray-quick-silver px-24 py-5 transition-all hover:border-primary hover:text-white hover:bg-primary">
 						CLICK
 					</button>
-					<button className="font-montserrat ..7x001:pr-8 border border-gray ..7x2:px-9 ..7x2:pr-5 px-10 .2x1:py-3 py-5 relative ">
+					<button className="font-montserrat ..5x2:h-11  ..7x001:pr-7 ..7x001:pl-12  ..5x2:text-xs  border border-gray ..7x2:px-9 ..7x2:pr-5 px-10 .2x1:py-3 py-5 relative ">
 						{' '}
 						<svg
-							className="absolute   .2x1:top-4 top-6 left-4"
+							className="absolute ..7x2:left-3 ..7x001:left-6 ..5x2:top-3 ..5x2:mr-2 .2x1:top-4 top-6 left-4"
 							width="20"
 							height="20"
 							viewBox="0 0 20 20"
@@ -90,8 +90,8 @@ const Promo = ({ refL, showPromo }) => {
 						Copy <span className='..5x2:hidden'>HTML</span>
 					</button>
 				</div>
-				<div className="flex  ..5x2:ml-8 ..5x2:!w-auto mt-20 ..5x2:p-1 ..5x2:mt-8 ..5x2:!h-auto  ..6x04:pr-5    ..5x3:pl-0 ..5x3:translate-x-0  .5x1:mt-5 timer pl-80  pr-40   timer__wrapper">
-					<div className='flex timer-bg ..6x03:p-2 ..5x2:p-4  pr-20 pt-6 pb-6' >
+				<div className="flex ..7x2:ml-6 ..7x001:ml-3 ..5x2:ml-8 ..5x2:!w-auto mt-20 ..5x2:p-1 ..5x2:mt-8 ..5x2:!h-auto  ..6x04:pr-5    ..5x3:pl-0 ..5x3:translate-x-0  .5x1:mt-5 timer pl-80  pr-40   timer__wrapper">
+					<div className='flex ..7x001:!py-0.5 timer-bg ..6x03:p-2 ..5x2:p-4  pr-20 pt-6 pb-6' >
 						<div className="mr-3 ..7x2:mr-4 ..5x2:mr-8 flex flex-col items-center">
 							<div className="..5x2:mb-0 font-montserrat ..6x03:text-22px font-bold text-5xl ..6x04:mr-5  ..5x1:text-3xl mr-20 mb-4">
 								{time.days}
@@ -104,13 +104,13 @@ const Promo = ({ refL, showPromo }) => {
 							</div>
 							<div className="mr-20 font-montserrat text-white-80pe ..6x03:text-11px ..6x04:mr-5 ..5x1:text-sm">HOURS</div>
 						</div>
-						<div className="mr-3 ..7x2:mr-4 ..5x2:mr-8 flex  flex-col items-center">
+						<div className="mr-3  ..7x2:mr-4 ..5x2:mr-8 flex  flex-col items-center">
 							<div className="..5x2:mb-0 font-montserrat ..6x03:text-22px   font-bold text-5xl mr-20 mb-4 ..5x1:text-3xl ..6x04:mr-5">
 								{time.minutes}
 							</div>
 							<div className=" mr-20 font-montserrat text-white-80pe ..6x03:text-11px ..6x04:mr-5 ..5x1:text-sm ">MINS</div>
 						</div>
-						<div className="mr-3 w-10  flex flex-col items-center">
+						<div className="mr-3 ..7x001:mr-4 w-10  flex flex-col items-center">
 							<div className="..5x2:mb-0 font-montserrat ..6x03:text-22px font-bold text-5xl mb-4 ..5x1:text-3xl">{time.seconds}</div>
 							<div className="..5x1:text-sm font-montserrat text-white-80pe ..6x03:text-11px">SECS</div>
 						</div>
@@ -234,7 +234,7 @@ const Promo = ({ refL, showPromo }) => {
 								</div>
 							</section>
 						</div>
-						<div className='.1x1:mt-4 m-auto ..6x3:h-56 ..6x3:w-56 ..5x4:mt-7 ..6x3:mt-24 ..6x1:mt-6'>
+						<div className='.1x1:mt-4 ..7x01:mr-3 m-auto ..6x3:h-56 ..6x3:w-56 ..5x4:mt-7 ..6x3:mt-24 ..6x1:mt-6'>
 							<Image
 								className="object-cover z-20 "
 								src={itemleas}
@@ -247,9 +247,9 @@ const Promo = ({ refL, showPromo }) => {
 				</div>
 
 			</div>
-			<div className="absolute ..5x3:hidden ..5x3:relative  ..5x3:-top-16 ..5x3:right-0 right-40 top-40 ..5x1:top-7 .4x1:right-0 .2x1:w-1/3 .5x1:top-16">
+			<div className="absolute  ..5x3:hidden ..5x3:relative  ..5x3:-top-16 ..5x3:right-0 right-40 top-40 ..5x1:top-7 .4x1:right-0 .2x1:w-1/3 .5x1:top-16">
 
-				<div className=" bg-gray px-4 .1x1:top-48 py-2 .2x1:top-56 text-lg moreP rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">
+				<div className=" bg-gray px-4 .1x1:top-48 py-4 .2x1:top-56 text-lg moreP rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">
 					<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fillRule="evenodd" clipRule="evenodd" d="M4.25 8.33333C4.25 8.74755 4.58579 9.08333 5 9.08333C5.41422 9.08333 5.75 8.74755 5.75 8.33333V5.75H8.33333C8.74755 5.75 9.08333 5.41421 9.08333 5C9.08333 4.58579 8.74755 4.25 8.33333 4.25H5.75V1.66667C5.75 1.25245 5.41422 0.916668 5 0.916668C4.58579 0.916668 4.25 1.25245 4.25 1.66667V4.25H1.66667C1.25245 4.25 0.916668 4.58579 0.916668 5C0.916668 5.41421 1.25245 5.75 1.66667 5.75H4.25V8.33333Z" fill="black" />
 					</svg>

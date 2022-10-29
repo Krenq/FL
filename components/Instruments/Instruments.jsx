@@ -128,7 +128,7 @@ function Instrumensts({ refL }) {
 
 
 
-			<div className="absolute right-0 bottom-0 ..5x2:hidden ..6x2:w-40 ..6x2:h-40">
+			<div className="absolute right-0 bottom-0 w-72 h-72 ..5x2:hidden ..6x2:w-40 ..6x2:h-40">
 				<Image
 					className="object-cover"
 					width={486}

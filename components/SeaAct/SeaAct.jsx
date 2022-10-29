@@ -22,18 +22,17 @@ const SeaAct = ({ refL }) => {
 		days: '00',
 		hours: '00',
 		minutes: '00',
-		seconds: '00'
-	})
-
+		seconds: '00',
+	});
 
 	useEffect(() => {
 		setInterval(() => {
-			const timeLocal = useTimerHook('Thu Dec 30 2022 17:43:29 GMT+0300 (Москва, стандартное время)') // Пример присылаемой даты с бека
-			setTime(timeLocal)
-		}, 1000)
-	}, [])
-
-
+			const timeLocal = useTimerHook(
+				'Thu Dec 30 2022 17:43:29 GMT+0300 (Москва, стандартное время)'
+			); // Пример присылаемой даты с бека
+			setTime(timeLocal);
+		}, 1000);
+	}, []);
 
 	useEffect(() => {
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
@@ -46,171 +45,81 @@ const SeaAct = ({ refL }) => {
 		dots: true,
 		Infinity: true,
 		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		appendDots: (dots) => {
+			return (
+				<div
+					style={{
+						display: 'flex',
+						justifyContent: 'center',
+						position: 'absolute',
+						bottom: -40,
+					}}
+				>
+					<div
+						ref={divBlock}
+						style={{
+							width: 150,
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+						}}
+					>
+						<ul
+							style={{
+								margin: '0px',
+								display: 'flex',
+								alignItems: 'flex-end',
+								justifyContent: 'center',
+							}}
+						>
+							{dots}
+						</ul>
+					</div>
+				</div>
+			);
+		},
+		customPaging: (i) => (
+			<div
+				style={{
+					backgroundColor: ' rgb(218, 218, 218)',
+					width: `${widthDot}px`,
+					height: 4,
+				}}
+			/>
+		),
 		responsive: [
 			{
-				breakpoint: 100000,
-				settings: 'unslick',
-			},
-			{
-				breakpoint: 900,
+				breakpoint: 700,
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
-					appendDots: (dots) => {
-						return (
-							<div
-								style={{
-									display: 'flex',
-									justifyContent: 'center',
-									position: 'absolute',
-									bottom: -25,
-								}}
-							>
-								<div
-									ref={divBlock}
-									style={{
-										width: 150,
-										display: 'flex',
-										justifyContent: 'center',
-										alignItems: 'center',
-									}}
-								>
-									<ul
-										style={{
-											margin: '0px',
-											display: 'flex',
-											alignItems: 'flex-end',
-											justifyContent: 'center',
-										}}
-									>
-										{dots}
-									</ul>
-								</div>
-							</div>
-						);
-					},
-					customPaging: (i) => (
-						<div
-							style={{
-								backgroundColor: ' rgb(218, 218, 218)',
-								width: `${widthDot}px`,
-								height: 4,
-							}}
-						/>
-					),
+					infinite: true,
+					centerMode: true,
+					dots: true,
 				},
 			},
-			{
-				breakpoint: 760,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 1,
-					appendDots: (dots) => {
-						return (
-							<div
-								style={{
-									display: 'flex',
-									justifyContent: 'center',
-									position: 'absolute',
-									bottom: -25,
-								}}
-							>
-								<div
-									ref={divBlock}
-									style={{
-										width: 150,
-										display: 'flex',
-										justifyContent: 'center',
-										alignItems: 'center',
-									}}
-								>
-									<ul
-										style={{
-											margin: '0px',
-											display: 'flex',
-											alignItems: 'flex-end',
-											justifyContent: 'center',
-										}}
-									>
-										{dots}
-									</ul>
-								</div>
-							</div>
-						);
-					},
-					customPaging: (i) => (
-						<div
-							style={{
-								backgroundColor: ' rgb(218, 218, 218)',
-								width: `${widthDot}px`,
-								height: 4,
-							}}
-						/>
-					),
-				},
-			},
-			,
 			{
 				breakpoint: 600,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					centerMode: true,
-					centerPadding: '0px',
 					infinite: true,
+					// centerMode: true,
+					// centerPadding: '-250px',
 					dots: true,
-					appendDots: (dots) => {
-						return (
-							<div
-								style={{
-									display: 'flex',
-									justifyContent: 'center',
-									position: 'absolute',
-									bottom: -25,
-								}}
-							>
-								<div
-									ref={divBlock}
-									style={{
-										width: 150,
-										display: 'flex',
-										justifyContent: 'center',
-										alignItems: 'center',
-									}}
-								>
-									<ul
-										style={{
-											margin: '0px',
-											display: 'flex',
-											alignItems: 'flex-end',
-											justifyContent: 'center',
-										}}
-									>
-										{dots}
-									</ul>
-								</div>
-							</div>
-						);
-					},
-					customPaging: (i) => (
-						<div
-							style={{
-								backgroundColor: ' rgb(218, 218, 218)',
-								width: `${widthDot}px`,
-								height: 4,
-							}}
-						/>
-					),
 				},
 			},
-		],
+
+		]
 	};
 
 	return (
-		<div ref={refL} className="bg-gray-light" id='sec-6'>
-			<section className="container__special relative pt-20 pb-24 ..5x2:pt-60 ..5x2:pb-12">
+		<div ref={refL} className="bg-gray-light" id="sec-6">
+			<section className="container__special relative pb-24 pt-32  ..5x2:pt-60 ..5x2:pb-12">
 				<svg
-					className="ability ..6x2:h-32 ..6x2:mt-5 absolute left-1/2 ..5x2:top-3  -top-8 "
+					className="ability ..6x2:h-32 ..6x2:mt-5 absolute left-1/2 ..5x2:top-3 top-6 "
 					width="184"
 					height="183"
 					viewBox="0 0 184 183"
@@ -247,27 +156,26 @@ const SeaAct = ({ refL }) => {
 					/>
 				</svg>
 
-				<p className="absolute left-1/2  ability titleSea ..5x2:top-24 font-montserrat ..6x04:text-base font-medium text-2xl ">
+				<p className="absolute left-1/2 ability titleSea ..5x2:top-24 font-montserrat ..6x04:text-base  font-medium text-2xl  ">
 					Каждый сезон
 				</p>
-				<p className="absolute left-1/2 w-full  ability top-28 ..5x2:top-32 font-montserrat ..6x3:text-22px ..6x03:top-32  text-center font-medium text-3xl italic   ">
+				<p className="absolute left-1/2 w-full ability top-40 ..5x2:top-32 font-montserrat  ..6x3:text-22px ..6x03:top-32 text-center font-medium text-3xl italic ">
 					НОВЫЕ АКЦИИ
 				</p>
 				<div className="mb-9 ..5x2:mb-14 text-center font-montserrat ..6x04:text-13px nabSea mt-20">
 					Покупай в наборах и получай подарок
 					<div className='w-24 h-3px ability absolute hrSea left-1/2 hidden ..5x2:block bg-white'></div>
 				</div>
-				<div className="timer absolute ability left-1/2 timerSea hidden ..5x2:block ..6x5:ml-0 bg-white px-2 text-primary border border-primary font-normal text-lg font-montserrat   ..6x5:font-noto-sans ..6x5:text-sm">
+				<div className="timer absolute ability left-1/2 timerSea hidden ..5x2:block ..5x2:py-1 ..6x5:ml-0 bg-white px-2 text-primary border border-primary font-normal text-lg font-montserrat   ..6x5:font-noto-sans ..6x5:text-sm">
 					{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
 				</div>
-				<div className="flex justify-center ">
-					<div className="relative w-44% .4x1:hidden">
+				<div className="flex justify-center h-874px ..6x1:h-auto ">
+					<div className="relative w-44% h-874px .4x1:hidden mr-3">
 						<div className="absolute top-10 left-10 z-10">
 							<p className="text-2xl text-primary">АКЦИЯ ВЕСНЫ</p>
 							<p className="text-3xl font-medium">Получай подарки за покупки</p>
 							<div className="timer absolute -left-4 top-24 bg-white-80pe px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3  ">
 								{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
-
 							</div>
 						</div>
 						<p className="absolute bottom-10 cursor-pointer z-10 right-10 flex items-center text-sm transition-all hover:text-primary">
@@ -296,25 +204,143 @@ const SeaAct = ({ refL }) => {
 							/>
 						</div>
 					</div>
+
+					<div className=" flex flex-row justify-arround w-60% .4x1:w-2/3 ..6x1:hidden ..5x2:w-full .1x1:w-4/5 .4x1:justify-center">
+						<div className="flex flex-col justify-between .4x1:ml-0 ..6x3:ml-4">
+							<SeaActItem
+								obj={{
+									present: true,
+									img: two,
+									iTab: true,
+									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА  fsds  fsf sdf s ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+									date: true,
+									priceSale: { old: '920.00', new: '764.00' },
+								}}
+							/>
+							<SeaActItem
+								obj={{
+									present: true,
+									img: tree,
+									iTab: true,
+									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+									date: true,
+									priceSale: { old: '920.00', new: '764.00' },
+								}}
+							/>
+						</div>
+
+						<div className="flex flex-col justify-between .4x1:ml-0 ..6x3:ml-4">
+							<SeaActItem
+								obj={{
+									present: true,
+									img: two,
+									iTab: true,
+									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+									date: true,
+									priceSale: { old: '920.00', new: '764.00' },
+								}}
+							/>
+							<SeaActItem
+								obj={{
+									present: true,
+									img: tree,
+									iTab: true,
+									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+									date: true,
+									priceSale: { old: '920.00', new: '764.00' },
+								}}
+							/>
+						</div>
+
+						<div className="flex flex-col justify-between  ">
+							<SeaActItem
+								obj={{
+									present: true,
+									img: six,
+									iTab: true,
+									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+									date: true,
+									priceSale: { old: '920.00', new: '764.00' },
+								}}
+							/>
+							<SeaActItem
+								obj={{
+									present: true,
+									img: two,
+									iTab: true,
+									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+									date: true,
+									priceSale: { old: '920.00', new: '764.00' },
+								}}
+							/>
+						</div>
+					</div>
+
 					<Slider
 						ref={slider}
 						{...settings}
-						className="act_slider flex flex-row justify-between w-60% .4x1:w-2/3 ..5x2:w-full .1x1:w-4/5 .4x1:justify-center"
+						className=" hidden ..6x1:block w-full"
 					>
-						<div className="flex flex-col justify-between ml-4 .4x1:ml-0 ..6x3:ml-4">
-							<SeaActItem img={two} mb="mb-4" />
-							<SeaActItem img={tree} />
-						</div>
-
-						<div className="flex flex-col justify-between ml-4 ">
-							<SeaActItem img={four} mb="mb-4" />
-							<SeaActItem img={five} />
-						</div>
-
-						<div className="flex flex-col justify-between ml-4 ">
-							<SeaActItem img={six} mb="mb-4" />
-							<SeaActItem img={two} />
-						</div>
+						<SeaActItem
+							obj={{
+								present: true,
+								img: two,
+								iTab: true,
+								text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКАdf sdf sdf sdf s fsdf  ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+								date: true,
+								priceSale: { old: '920.00', new: '764.00' },
+							}}
+						/>
+						<SeaActItem
+							obj={{
+								present: true,
+								img: two,
+								iTab: true,
+								text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+								date: true,
+								priceSale: { old: '920.00', new: '764.00' },
+							}}
+						/>
+						<SeaActItem
+							obj={{
+								present: true,
+								img: two,
+								iTab: true,
+								text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+								date: true,
+								priceSale: { old: '920.00', new: '764.00' },
+							}}
+						/>
+						<SeaActItem
+							obj={{
+								present: true,
+								img: two,
+								iTab: true,
+								text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+								date: true,
+								priceSale: { old: '920.00', new: '764.00' },
+							}}
+						/>
+						<SeaActItem
+							obj={{
+								present: true,
+								img: two,
+								iTab: true,
+								text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+								date: true,
+								priceSale: { old: '920.00', new: '764.00' },
+							}}
+						/>
+						<SeaActItem
+							obj={{
+								present: true,
+								img: two,
+								iTab: true,
+								text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+								date: true,
+								priceSale: { old: '920.00', new: '764.00' },
+							}}
+						/>
 					</Slider>
 				</div>
 			</section>

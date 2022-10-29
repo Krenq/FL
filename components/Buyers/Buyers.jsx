@@ -121,7 +121,7 @@ function Buyers({ refL }) {
 					<div className="px-2 relative">
 						<p className='font-montserrat  ..6x3:text-base ..6x3:left-7 ..6x3:top-4 ..6x1:text-2xl z-10 absolute ..5x01:left-9   ..5x01:top-8 ..5x01:text-xl .2x1.0:top-10 .2x1.0:text-2xl top-10 left-12 text-32px  ..5x03:text-32px ..5x03:left-12 ..5x03:top-10 font-medium'>Программа лояльности</p>
 						<p className='font-montserrat ..6x3:text-sm ..6x3:left-7 ..6x3:top-42px ..6x1:text-xl ..6x1:left-11 ..6x1:top-16 .2x1.0:top-16 .2x1.0:text-xl z-10 ..5x01:top-14 ..5x01:left-9 ..5x01:text-lg text-26px font-medium absolute text-primary left-12 top-20 ..5x03:left-12 ..5x03:top-20 ..5x03:text-26px mt-2'>от 1500 ₽</p>
-						<div className='absolute right-3 overflow-hidden deCat .4x2:right-2  .3x1:h-80 .3x1:w-80 ..6x1:h-80 ..6x1:w-80 ..5x01:h-64 ..5x01:w-64 bottom-1.5 ..5x03:h-96 ..5x03:w-96 ..5x03:right-2 h-96 w-96 bg-nude-3 z-10'>
+						<div className='absolute right-3 overflow-hidden deCat .4x2:right-2  .3x1:h-80 .3x1:w-80 ..6x1:h-80 ..6x1:w-80 ..5x01:h-64 ..5x01:w-64 bottom-1.5 ..5x03:h-96 ..5x03:w-96 ..5x03:right-2 ..7x002:right-2 ..7x002:bottom-1.5 ..7x001:right-0.5 ..7x001:-bottom-0.5 h-96 w-96 bg-nude-3 z-10'>
 							<div className='relative ..6x3:pt-20 ..7x002:pt-16  ..6x3:px-0 px-8 ..5x03:px-8 .3x1:px-5 ..6x1:pt-36  .3x1:pt-36 pt-44 ..5x03:pt-44 ..5x01:pt-28 ..5x01:px-1 '>
 								<p className='font-lora absolute ..7x002:top-1 ..7x002:py-2 ..7x002:px-2 ..6x3:pb-3 ..6x3:pt-3 ..6x3:px-3 ..6x3:text-2xl ..6x1:text-5xl ..6x1:top-4 left-1/2 border-white .3x1:text-4xl ..5x01:top-0 .3x1:py-8 text-white pt-9 ability top-8 pb-9 px-7 ..5x03:top-8 ..5x03:pb-9 ..5x03:px-7 ..5x2:text-4xl text-6xl ..5x03:text-6xl headerAbility border-4 rounded-50 border-dashed'>De</p>
 								<p className='font-montserrat ..6x3:hidden ..6x1:text-base text-18px ..5x03:text-18px text-center lineH .3x1:text-base ..5x01:text-sm'>Покупай любимые продукты, зарабатывай DeCoins, оплачивай ими сдедующие заказы!</p>
@@ -143,7 +143,20 @@ function Buyers({ refL }) {
 
 					</div>
 
-					<div className="px-2">
+					<div className="px-2 relative">
+						<p className='font-montserrat  ..6x3:text-base ..6x3:left-7 ..6x3:top-4 ..6x1:text-2xl z-10 absolute ..5x01:left-9   ..5x01:top-8 ..5x01:text-xl .2x1.0:top-10 .2x1.0:text-2xl top-10 left-12 text-32px  ..5x03:text-32px ..5x03:left-12 ..5x03:top-10 font-medium'>Программа лояльности</p>
+						<p className='font-montserrat ..6x3:text-sm ..6x3:left-7 ..6x3:top-42px ..6x1:text-xl ..6x1:left-11 ..6x1:top-16 .2x1.0:top-16 .2x1.0:text-xl z-10 ..5x01:top-14 ..5x01:left-9 ..5x01:text-lg text-26px font-medium absolute text-primary left-12 top-20 ..5x03:left-12 ..5x03:top-20 ..5x03:text-26px mt-2'>от 1500 ₽</p>
+						<div className='absolute right-3 overflow-hidden deCat .4x2:right-2  .3x1:h-80 .3x1:w-80 ..6x1:h-80 ..6x1:w-80 ..5x01:h-64 ..5x01:w-64 bottom-1.5 ..5x03:h-96 ..5x03:w-96 ..5x03:right-2 ..7x002:right-2 ..7x002:bottom-1.5 ..7x001:right-0.5 ..7x001:-bottom-0.5 h-96 w-96 bg-nude-3 z-10'>
+							<div className='relative ..6x3:pt-20 ..7x002:pt-16  ..6x3:px-0 px-8 ..5x03:px-8 .3x1:px-5 ..6x1:pt-36  .3x1:pt-36 pt-44 ..5x03:pt-44 ..5x01:pt-28 ..5x01:px-1 '>
+								<p className='font-lora absolute ..7x002:top-1 ..7x002:py-2 ..7x002:px-2 ..6x3:pb-3 ..6x3:pt-3 ..6x3:px-3 ..6x3:text-2xl ..6x1:text-5xl ..6x1:top-4 left-1/2 border-white .3x1:text-4xl ..5x01:top-0 .3x1:py-8 text-white pt-9 ability top-8 pb-9 px-7 ..5x03:top-8 ..5x03:pb-9 ..5x03:px-7 ..5x2:text-4xl text-6xl ..5x03:text-6xl headerAbility border-4 rounded-50 border-dashed'>De</p>
+								<p className='font-montserrat ..6x3:hidden ..6x1:text-base text-18px ..5x03:text-18px text-center lineH .3x1:text-base ..5x01:text-sm'>Покупай любимые продукты, зарабатывай DeCoins, оплачивай ими сдедующие заказы!</p>
+								<p className='font-montserrat ..6x3:block hidden  text-11px  text-center lineH'>Зарабатывай DeCoins, оплачивай ими заказы!</p>
+								<div className='absolute left-1/2 .3x1:-bottom-2 ..6x3:-bottom-1 h-3px ..6x3:h-0.5 w-24 bg-white ability'></div>
+								<button className='font-montserrat ..7x002:py-2 ..7x002:px-10px ..7x002:-bottom-11 ..6x3:text-xs ..6x3:py-10px ..6x3:-bottom-12 ..6x3:px-5 font-medium text-xs ..5x03:text-xs ability left-1/2 absolute .3x1:-bottom-20 ..5x01:-bottom-12 ..5x01:text-xs ..5x01:py-2 ..5x01:px-6 -bottom-16 py-4 px-8 ..5x03:px-8 ..5x03:py-4 ..5x03:-bottom-16 bg-white-80pe'>Подробнее</button>
+							</div>
+
+						</div>
+
 						<div className='imgIBuy'>
 							<Image
 								className="object-cover"
@@ -151,8 +164,7 @@ function Buyers({ refL }) {
 								alt="specialOffersImg"
 								height={760}
 								width={710}
-							/>
-						</div>
+							/></div>
 
 					</div>
 

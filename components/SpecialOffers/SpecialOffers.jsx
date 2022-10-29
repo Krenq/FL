@@ -305,26 +305,53 @@ function SpecialOffers({ refL }) {
 					}}
 				/>
 				<SpecialOfferItem
-					obj={{ img: one, text: 'питательный шампунь с корнем имбиря' }}
+					obj={{
+						img: one,
+						text: 'питательный шампунь с корнем имбиря',
+						pDay: true,
+						hit: true,
+						priceDe: '3 750',
+						price: '764.00',
+					}}
 				/>
 				<SpecialOfferItem
 					obj={{
 						img: two,
 						text: 'Укрепляющая сыворотка для контура овала лица с коллагеном',
+						new: true,
+						sale: true,
+						iTab: true,
+						priceSale: { old: '999.00', new: '888.00' },
 					}}
 				/>
 				<SpecialOfferItem
-					obj={{ img: tree, text: 'бьюти - косметичка “сакура”' }}
+					obj={{
+						img: tree,
+						text: 'бьюти - косметичка “сакура”',
+						hit: true,
+						pDay: true,
+						colors: true,
+						price: '764.00',
+					}}
 				/>
 				<SpecialOfferItem
 					obj={{
 						img: four,
 						text: 'Укрепляющая сыворотка для контура овала лица с коллагеном ',
+						priceDe: '3 750',
+						price: '764.00',
 					}}
 				/>
 				<SpecialOfferItem
-					obj={{ img: five, text: 'ночная крем-маска с лавандой' }}
+					obj={{
+						img: five,
+						text: 'ночная крем-маска с лавандой',
+						hit: true,
+						priceDe: '3 750',
+						price: '764.00',
+					}}
 				/>
+				
 			</Slider>
 		</article>
 	);

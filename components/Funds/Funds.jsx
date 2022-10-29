@@ -40,7 +40,7 @@ const Funds = ({ refL }) => {
 						display: 'flex',
 						justifyContent: 'center',
 						position: 'absolute',
-						bottom: 25,
+						bottom: 35,
 					}}
 				>
 					<div
@@ -324,9 +324,9 @@ const Funds = ({ refL }) => {
 				</div>
 				<div className="..5x2:px-3 pb-20  ..7x2:p-0">
 					<div className="flex justify-center ..6x2:flex-col   ">
-						<div className=" relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
+						<div className="image-containerSIV relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
 							<Image
-								className="object-cover"
+								className="object-cover image"
 								src={one}
 								width={720}
 								height={768}
@@ -365,15 +365,17 @@ const Funds = ({ refL }) => {
 								</svg>
 							</small>
 						</div>
-						<div className='..6x2:flex ..6x2:mt-3'>
-							<div className="relative transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-2'>
+							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+
 								<Image
-									className="object-cover"
+									className="image "
 									src={two}
-									width={720}
-									height={374}
+
 									alt="discountImg"
 								/>
+
+
 								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
 									<svg
@@ -407,9 +409,9 @@ const Funds = ({ refL }) => {
 									</svg>
 								</small>
 							</div>
-							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative  image-containerS transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image
-									className="object-cover"
+									className="object-cover image"
 									src={tree}
 									width={720}
 									height={374}
@@ -453,9 +455,9 @@ const Funds = ({ refL }) => {
 				</div>
 				<div className="..5x2:px-3 pb-20  ..7x2:p-0">
 					<div className="flex justify-center ..6x2:flex-col   ">
-						<div className=" relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
+						<div className="image-containerSIV relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
 							<Image
-								className="object-cover"
+								className="object-cover image"
 								src={one}
 								width={720}
 								height={768}
@@ -494,15 +496,17 @@ const Funds = ({ refL }) => {
 								</svg>
 							</small>
 						</div>
-						<div className='..6x2:flex ..6x2:mt-3'>
-							<div className="relative transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-2'>
+							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+
 								<Image
-									className="object-cover"
+									className="image "
 									src={two}
-									width={720}
-									height={374}
+
 									alt="discountImg"
 								/>
+
+
 								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
 									<svg
@@ -536,9 +540,9 @@ const Funds = ({ refL }) => {
 									</svg>
 								</small>
 							</div>
-							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative  image-containerS transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image
-									className="object-cover"
+									className="object-cover image"
 									src={tree}
 									width={720}
 									height={374}

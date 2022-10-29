@@ -73,7 +73,7 @@ export default function SpecialOfferItem({ obj }) {
 					)}
 
 					{obj.new && (
-						<small className=" samples font-noto-sans font-medium text-xs ..6x03:text-9px border flex items-center   px-3 py-0.5 ..6x03:py-0 ..6x03:px-1.5 leading-120% border-gray-quick-silver">
+						<small className="mr-1 samples font-noto-sans font-medium text-xs ..6x03:text-9px border flex items-center   px-3 py-0.5 ..6x03:py-0 ..6x03:px-1.5 leading-120% border-gray-quick-silver">
 							NEW
 						</small>
 					)}

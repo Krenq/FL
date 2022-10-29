@@ -83,12 +83,32 @@ function DiscountsSlider({ refL, showCentral }) {
 	}, [slider.current])
 
 	return (
+		// <div ref={refL} id='sec-1'>
+		// 	<div className="bg-white w-full tempSlider" ref={containerSlider}>
+		// 		<Slider {...settings} ref={slider} className='tempSlider'>
+		// 			<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
+		// 			<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
+		// 			<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
+		// 		</Slider>
+		// 	</div>
+		// </div>
+
 		<div ref={refL} id='sec-1'>
-			<div className="bg-white w-full tempSlider" ref={containerSlider}>
-				<Slider {...settings} ref={slider} className='tempSlider'>
-					<DiscountSliderItem showCentral={showCentral} imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderItem showCentral={showCentral} imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderItem showCentral={showCentral} imgProd={imgProduct} img={imgDiscount} />
+			<div className="  w-full h-800px ..5x2:hidden discSlider" ref={containerSlider}>
+				<Slider {...settings} ref={slider} className=' w-full h-full'>
+					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
+				</Slider>
+			</div>
+
+
+
+			<div className="  w-full  ..5x2:block hidden discSliderPhone" ref={containerSlider}>
+				<Slider {...settings} ref={slider} className=' w-full h-full'>
+					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
+					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
+					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
 				</Slider>
 			</div>
 		</div>

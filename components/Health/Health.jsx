@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Slider from 'react-slick';
-import oneHealth from '../../images/templates/1health.png';
+import oneHealth from '../../images/templates/1health.svg';
 import twoHealth from '../../images/templates/2health.jpg';
 import treeHealth from '../../images/templates/3health.jpg';
 const Health = ({ refL }) => {
@@ -77,17 +77,17 @@ const Health = ({ refL }) => {
 					<Slider {...settings} className="flex  ">
 						<div >
 							<div className="anti  border-primary border  ..7x11:px-1 bg-white relative  pb-96 ..5x2:pb-48 mx-3   mb-3 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
-								<p className="..6x04:text-5xl z-10 ..6x04:top-5 text-7xl ability transition-all leading-140% text-gray-platinum ..5x2:-top-3 top-4 absolute font-montserrat font-bold left-1/2 procent">
+								<p className="..6x04:text-5xl z-10 ..6x04:top-5 text-8xl ability transition-all leading-140% text-gray-platinum ..5x2:-top-3 -top-2 absolute font-montserrat font-bold left-1/2 procent">
 									-30%
 								</p>
-								<p className=" ability font-medium ..6x04:text-base ..5x2:text-lg text-2xl transition-all text-primary ..5x2:top-11   absolute top-12 z-10 left-1/2 title_sale">
+								<p className=" ability font-medium ..6x04:text-base ..5x2:text-lg text-22px transition-all text-primary ..5x2:top-11 ..5x2:pt-0 pt-2  absolute top-16 z-10 left-1/2 title_sale">
 									«АНТИСТРЕСС»
 								</p>
-								<p className=" ability font-montserrat  w-full ..5x2:text-lg  ..6x04:text-13px text-2xl text-center  absolute top-20   ..5x2:top-16 z-10 left-1/2 ">
+								<p className=" ability font-montserrat font-medium w-full ..5x2:text-lg  ..6x04:text-13px text-2xl text-center  absolute top-24 ..5x2:pt-0 pt-2   ..5x2:top-16 z-10 left-1/2 ">
 									Смотри на мир здоровыми глазами!
 								</p>
-								<div className="absolute  bottom-0  ..5x2:bottom-24    headerAbility">
-									<p className="absolute ..5x2:top-3 ..6x2:font-medium ..6x2:text-13px     flex items-center text-sm top-50%  headerAbility z-10">
+								<div className="absolute  bottom-0  ..5x2:bottom-24 left-1/2   ability">
+									<p className="absolute left-1/2 ..5x2:top-3 font-medium text-13px     flex items-center text-sm top-50%  ability z-10">
 										Подробнее{' '}
 										<svg
 											className="ml-2 sale_btn mt-0.5 transition-all"
@@ -104,9 +104,9 @@ const Health = ({ refL }) => {
 											/>
 										</svg>
 									</p>
-									<div className='..5x2:absolute  ..5x2:w-36 ..5x2:h-36 headerAbility ..5x2:-top-14 '>
+									<div className='..5x2:absolute  ..5x2:w-36 ..5x2:h-36 headerAbility  left-1/2 ..5x2:-top-14 '>
 										<Image
-											className="object-cover"
+											className="object-cover opacity-40"
 											src={oneHealth}
 											width={300}
 											height={300}
@@ -187,7 +187,7 @@ const Health = ({ refL }) => {
 
 
 							</div>
-							<div className="mx-3  anti px-3 ..7x2:px-2 ..5x2:px-8  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-2 relative">
+							<div className="mx-3  anti px-3 ..7x2:px-2 ..5x2:px-8  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
 								<h1 className="text-32px font-montserrat text-center ..5x2:mb-0.5 mb-5 pt-11 ..5x2:text-22px ..5x2:pt-6  text-w text-white">
 									50+ программ
 								</h1>
