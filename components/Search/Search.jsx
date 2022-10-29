@@ -5,8 +5,8 @@ import SearchWindow from '../SearchWindow/SearchWIndow';
 
 export default function Search() {
 	return (
-		<article className="relative   cursor-pointer .5x01:pr-2  pr-86px ..5x2:flex ..5x1:pl-5">
-			<div className='..6x6:h-5 ..6x6:w-5'>
+		<article className="relative  ..5x2:mt-1 ..6x03:mt-0 cursor-pointer .5x01:pr-2  pr-86px ..5x2:flex ..5x1:pl-5">
+			<div className='searchA'>
 				<Image className='..5x2:opacity-20  '
 					src={icons.ICON_SEARCH}
 					height="24px"

@@ -111,10 +111,10 @@ const Trands = ({ refL }) => {
 			</div>
 
 			<div className="flex justify-center mt-5">
-				<button className="font-montserrat ..7x11:!text-10px mr-4 ..7x1:text-sm ..7x1:py-10px ..7x1:px-5 border-2 py-3 px-6 text-white bg-primary border-primary transition-all hover:bg-white hover:text-primary  ">
+				<button className="font-montserrat   ..7x1:h-8 ..7x11:!text-10px mr-4 ..7x1:text-sm ..7x1:py-5px ..7x1:px-5 border-2 py-3 px-6 text-white bg-primary border-primary transition-all hover:bg-white hover:text-primary  ">
 					Показать еще
 				</button>
-				<button className="font-montserrat ..7x11:!text-10px ..7x1:text-sm ..7x1:py-10px ..7x1:px-5 border-2 py-3 px-6 text-primary bg-white border-primary transition-all hover:bg-primary hover:text-white  ">
+				<button className="font-montserrat   ..7x1:h-8 ..7x11:!text-10px ..7x1:text-sm ..7x1:py-5px ..7x1:px-5 border-2 py-3 px-6 text-primary bg-white border-primary transition-all hover:bg-primary hover:text-white  ">
 					Посмотреть все
 				</button>
 			</div>

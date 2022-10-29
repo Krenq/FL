@@ -255,7 +255,7 @@ function SpecialOffers({ refL }) {
 					Наборы
 				</p>
 			</div>
-			<Slider {...settings} ref={slider}>
+			<Slider className='specialSlider' {...settings} ref={slider}>
 				<SpecialOfferItem
 					obj={{
 						img: one,

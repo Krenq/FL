@@ -47,7 +47,7 @@ const PartnersButtonPrev = ({ onClick, kolichestvo }) => {
 		>
 			<svg
 				width="10"
-				className="fill-black transition-all"
+				className="fill-black transition-all arrowAdapt"
 				height="16"
 				viewBox="0 0 10 16"
 				xmlns="http://www.w3.org/2000/svg"

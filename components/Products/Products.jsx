@@ -19,7 +19,6 @@ function Products({ refL }) {
 				<path d="M11.8167 12.2L8 8.36788L4.175 12.2L3 11.0202L8 6L13 11.0202L11.8167 12.2Z" fill="#18202B" />
 			</svg>
 				TOP</a>
-
 			<svg
 				className="absolute  ..6x2:h-32 ..6x2:mt-5 left-1/2 ability top-14 ..5x2:-top-0 .4x1:-top-5"
 				width="184"
@@ -66,9 +65,11 @@ function Products({ refL }) {
 			<p className="text-center ..5x2:hidden  font-montserrat">
 				Более 500 наименований продуктов регулярного спроса. <br /> Каждый сезон — новые трендовые средства!
 			</p>
-			<p className="text-center hidden ..5x2:block ..6x04:text-13px ..5x2:px-4 font-montserrat">
+			<div className="relative text-center hidden ..5x2:block ..6x04:text-13px ..5x2:px-4 font-montserrat">
 				Более 500 наименований продуктов регулярного спроса. Каждый сезон — новые трендовые средства!
-			</p>
+				<div className=' w-24 .5x2:block bg-label-bg absolute ability -bottom-2 left-1/2 h-3px'></div>
+
+			</div>
 
 			<div className="flex flex-col mt-4 ..7x2:m-0 .3x1:flex-row .3x1:justify-between .3x1:max-w-5xl .3x1:mx-auto .3x1:px-2">
 				<div className="flex flex-row justify-between .3x1:flex-col .3x1:w-50% .3x1:items-end">
@@ -91,7 +92,7 @@ function Products({ refL }) {
 			</div>
 
 			<div className=" hidden .3x1:flex .3x1:justify-center mt-26px mb-8 text-primary font-montserrat font-medium text-xs">
-				<button className=" border border-primary px-5 py-2.5">
+				<button className=" border border-primary px-5 buttonY">
 					В каталог
 				</button>
 			</div>

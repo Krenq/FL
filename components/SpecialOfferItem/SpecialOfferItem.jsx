@@ -63,23 +63,23 @@ export default function SpecialOfferItem({ obj }) {
 
 
 	return (
-		<div className=" min-h-317px ..6x03:h-317px h-428px flex justify-center  relative mt-2 p-2 border border-white hover:border-gray active_card mx-2">
+		<div className=" min-h-317px ..6x03:h-317px h-428px flex justify-center  relative mt-2 p-2 border border-white hover:border-gray active_card mx-3">
 			<div className="flex flex-col  items-center max-w-252px mx-auto mt-5">
 				<div className="absolute flex left-0 top-0 z-20 px-2 pt-2 gap-0.5">
 					{obj.hit && (
-						<small className=" bg-label-yellow  font-noto-sans font-medium text-xs ..6x03:text-9px leading-120% px-5 py-1 ..6x03:px-2.5 ..6x03:py-0.5">
+						<small className=" bg-label-yellow  font-noto-sans font-medium text-xs ..6x03:text-9px leading-120% px-5 py-1 samples ..6x03:px-2.5 ..6x03:py-0.5">
 							HIT!
 						</small>
 					)}
 
 					{obj.new && (
-						<small className=" font-noto-sans font-medium text-xs ..6x03:text-9px border flex items-center   px-3 py-0.5 ..6x03:py-0 ..6x03:px-1.5 leading-120% border-gray-quick-silver">
+						<small className=" samples font-noto-sans font-medium text-xs ..6x03:text-9px border flex items-center   px-3 py-0.5 ..6x03:py-0 ..6x03:px-1.5 leading-120% border-gray-quick-silver">
 							NEW
 						</small>
 					)}
 
 					{obj.sale && (
-						<small className="bg-label-pink-2  border-2 border-label-pink-2 text-white font-noto-sans font-medium ..6x03:text-9px text-xs leading-120% ..6x03:px-1.5 ..6x03:py-0 px-3 py-0.5 ">
+						<small className="samples bg-label-pink-2  border-2 border-label-pink-2 text-white font-noto-sans font-medium ..6x03:text-9px text-xs leading-120% ..6x03:px-1.5 ..6x03:py-0 px-3 py-0.5 ">
 							-15%
 						</small>
 					)}

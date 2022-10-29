@@ -408,6 +408,8 @@
 	.nextStories {
 		right: 130px !important;
 	}
+
+
 }
 
 @media (max-width: 1200px) {
@@ -496,6 +498,21 @@
 		width: 25px !important;
 	}
 
+	.anti {
+		height: 198px;
+	}
+
+	.arrowAdapt {
+		height: 14px !important;
+		width: 8px !important;
+		margin: 1px 0;
+	}
+
+	.buttonY {
+		padding-top: 7px !important;
+		padding-bottom: 7px !important;
+	}
+
 	.image-container {
 		width: 100%;
 
@@ -569,6 +586,25 @@
 
 	.hrSea {
 		top: 196px;
+	}
+
+
+
+	.image-containerPART {
+		width: 100%;
+
+	}
+
+	.image-containerPART div {
+		position: unset !important;
+	}
+
+	.image-containerPART .image {
+		margin-top: -50% !important;
+		width: 100% !important;
+		position: relative !important;
+		height: 215px !important;
+
 	}
 }
 
@@ -864,7 +900,6 @@
 	}
 
 
-
 }
 
 .phoneOne {
@@ -1052,6 +1087,11 @@
 		width: 69px !important;
 	}
 
+	.deCat {
+		height: 172px !important;
+		width: 172px !important;
+	}
+
 	.confirm {
 		top: calc(100vh - 42px - 44px - 80px - 230px) !important;
 	}
@@ -1089,12 +1129,19 @@
 		height: 330px;
 		width: 310px;
 	}
+
+
 }
+
 
 @media (max-width: 355px) {
 	.imgIBuy {
 		height: auto;
 		width: auto;
+	}
+
+	.deCat {
+		height: 150px !important;
 	}
 }
 
@@ -1106,6 +1153,16 @@
 	.titleSea {
 		top: 108px !important;
 	}
+
+	.samples {
+		height: 14px !important;
+		width: 36px !important;
+	}
+
+}
+
+.lineH {
+	line-height: 170% !important;
 }
 
 @media (max-width: 850) {
@@ -1113,3 +1170,58 @@
 		bottom: -40px !important;
 	}
 }
+
+@media (max-width: 450px) {
+	.searchA {
+		height: 18px !important;
+		width: 18px !important;
+	}
+
+	.image-containerS {
+		width: 100%;
+
+	}
+
+	.image-containerS div {
+		position: unset !important;
+	}
+
+	.image-containerS .image {
+		margin-top: -50% !important;
+		width: 100% !important;
+		position: relative !important;
+		height: 112px !important;
+
+	}
+
+
+	.image-containerSIV {
+		width: 100%;
+
+	}
+
+	.image-containerSIV div {
+		position: unset !important;
+	}
+
+	.image-containerSIV .image {
+		margin-top: -105% !important;
+		width: 100% !important;
+		position: relative !important;
+		height: 330px !important;
+
+	}
+
+}
+
+.slick-dots {
+	height: 32px !important;
+}
+
+/* .specialSlider .slick-slide {
+	margin: 0 8px 0 0 !important;
+}
+
+.specialSlider .slick-list {
+	margin: 0 -8px 0 0 !important;
+} */

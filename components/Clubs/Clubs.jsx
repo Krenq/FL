@@ -33,10 +33,10 @@ function Clubs({ refL }) {
 				следующие заказы!
 			</p>
 			<div className="..6x2:w-full ..6x2:flex ..6x2:justify-center ..7x001:ml-2 absolute left-1/2 ability z-10 bottom-20 ..5x2:bottom-28">
-				<button className="mr-4 ..7x11:text-10px border-2 py-3 px-6 text-white bg-primary border-primary transition-all font-montserrat ..5x2:py-10px ..5x2:px-5 ..5x2:text-xs hover:bg-white hover:text-primary ">
+				<button className="mr-4  ..7x11:text-10px border-2 py-3 px-6 text-white bg-primary border-primary transition-all font-montserrat ..5x2:py-6px ..5x2:px-5 ..5x2:text-xs hover:bg-white hover:text-primary ">
 					Вступить в клуб
 				</button>
-				<button className="mr-4 ..7x11:text-10px border py-3 px-6 text-primary bg-white border-primary transition-all font-montserrat font-medium hover:bg-primary hover:text-white ..5x2:py-10px ..5x2:px-8 ..5x2:text-xs">
+				<button className="mr-4 ..7x11:text-10px border py-3 px-6 text-primary bg-white border-primary transition-all font-montserrat font-medium hover:bg-primary hover:text-white ..5x2:py-6px ..5x2:px-8 ..5x2:text-xs">
 					Подробнее
 				</button>
 			</div>

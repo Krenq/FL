@@ -19,7 +19,7 @@ const DiscounstsButtonsSliderPrev = ({ onClick, kolichestvo }) => {
 	} else if (size.width <= 500 && size.width > 400) {
 		perc = '40%';
 	} else if (size.width <= 400) {
-		perc = '37%';
+		perc = '38%';
 	} else if (size.width > 1600) {
 		perc = '47.5%';
 	}
@@ -33,9 +33,10 @@ const DiscounstsButtonsSliderPrev = ({ onClick, kolichestvo }) => {
 			onClick={onClick}
 			style={styleL}
 		>
+
 			<svg
 				width="10"
-				className="fill-black transition-all"
+				className="fill-black transition-all arrowAdapt"
 				height="16"
 				viewBox="0 0 10 16"
 				xmlns="http://www.w3.org/2000/svg"

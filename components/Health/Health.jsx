@@ -6,7 +6,7 @@ import treeHealth from '../../images/templates/3health.jpg';
 const Health = ({ refL }) => {
 	const settings = {
 		dots: false,
-		Infinity: true,
+		infinite: false,
 		speed: 500,
 		responsive: [
 			{
@@ -15,6 +15,7 @@ const Health = ({ refL }) => {
 			},
 			{
 				breakpoint: 800,
+				infinite: false,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -73,9 +74,9 @@ const Health = ({ refL }) => {
 						Есть проблемы? У нас есть решения!
 					</p>
 
-					<Slider {...settings} className="flex">
-						<div>
-							<div className="..5x2:h-52 border-primary border  ..7x11:px-1 bg-white relative  pb-96 ..5x2:pb-48 mx-3   mb-3 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
+					<Slider {...settings} className="flex  ">
+						<div >
+							<div className="anti  border-primary border  ..7x11:px-1 bg-white relative  pb-96 ..5x2:pb-48 mx-3   mb-3 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
 								<p className="..6x04:text-5xl z-10 ..6x04:top-5 text-7xl ability transition-all leading-140% text-gray-platinum ..5x2:-top-3 top-4 absolute font-montserrat font-bold left-1/2 procent">
 									-30%
 								</p>
@@ -89,7 +90,7 @@ const Health = ({ refL }) => {
 									<p className="absolute ..5x2:top-3 ..6x2:font-medium ..6x2:text-13px     flex items-center text-sm top-50%  headerAbility z-10">
 										Подробнее{' '}
 										<svg
-											className="ml-2 sale_btn transition-all"
+											className="ml-2 sale_btn mt-0.5 transition-all"
 											width="12"
 											height="8"
 											viewBox="0 0 12 8"
@@ -150,8 +151,8 @@ const Health = ({ refL }) => {
 								</p>
 							</div>
 						</div>
-						<div>
-							<div className="relative mx-3 transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+						<div >
+							<div className="relative mx-3   transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<p className="absolute ..7x1:text-base font-montserrat z-10 top-20 text-2xl left-10 ..5x2:left-4 ..5x2:top-4 font-medium">
 									«ЧИСТАЯ КОЖА»
 								</p>
@@ -186,7 +187,7 @@ const Health = ({ refL }) => {
 
 
 							</div>
-							<div className="mx-3 ..5x2:h-52 px-3 ..7x2:px-2 ..5x2:px-8  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
+							<div className="mx-3  anti px-3 ..7x2:px-2 ..5x2:px-8  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-2 relative">
 								<h1 className="text-32px font-montserrat text-center ..5x2:mb-0.5 mb-5 pt-11 ..5x2:text-22px ..5x2:pt-6  text-w text-white">
 									50+ программ
 								</h1>

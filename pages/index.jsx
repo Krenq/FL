@@ -84,14 +84,14 @@ function Home() {
 			<Funds refL={funds} />
 			<Partners refL={partners} />
 			<Health refL={health} />
-			<Swiper  >
+			{/* <Swiper  >
 				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
 				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
 				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
 				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
 				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
 
-			</Swiper>
+			</Swiper> */}
 			<Stories refL={stories} />
 			<Clubs refL={clubs} />
 			<Trands refL={trands} />
