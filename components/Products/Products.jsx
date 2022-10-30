@@ -56,15 +56,17 @@ function Products({ refL }) {
 					strokeLinejoin="round"
 				/>
 			</svg>
-			<p className="absolute font-montserrat font-medium ..7x11:text-base left-1/2 ability text-3xl ..6x04:text-2xl z-10">
+			<p className="absolute font-montserrat font-medium ..7x11:text-base left-1/2 ability text-26px ..6x04:text-2xl z-10">
 				Продукты
 			</p>
-			<p className="font-montserrat font-medium ..7x11:text-xl ..7x11:mt-7 text-center italic text-4xl mb-2 mt-10 ..6x04:text-3xl z-10">
+			<p className="font-montserrat font-medium ..7x11:text-xl ..7x11:mt-7 text-center italic text-32px mb-2 mt-10 ..6x04:text-3xl z-10">
 				КАТАЛОГА
 			</p>
-			<p className="text-center ..5x2:hidden  font-montserrat">
+			<div className="relative text-center text-lg ..5x2:hidden  font-montserrat">
 				Более 500 наименований продуктов регулярного спроса. <br /> Каждый сезон — новые трендовые средства!
-			</p>
+				<div className=' w-24 bg-label-bg absolute ability -bottom-1 left-1/2 h-3px'></div>
+
+			</div>
 			<div className="relative text-center hidden ..5x2:block ..6x04:text-13px ..5x2:px-4 font-montserrat">
 				Более 500 наименований продуктов регулярного спроса. Каждый сезон — новые трендовые средства!
 				<div className=' w-24 .5x2:block bg-label-bg absolute ability -bottom-2 left-1/2 h-3px'></div>

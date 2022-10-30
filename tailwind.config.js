@@ -84,6 +84,7 @@ module.exports = {
 				DEFAULT: '#337202',
 				hover: '#1F5201',
 				active: '#3E7E0B',
+				border: 'rgba(51, 114, 2, 0.5)'
 			},
 			green: {
 				'50pe': 'rgba(51, 114, 2, 0.5)',

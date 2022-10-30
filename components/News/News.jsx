@@ -106,7 +106,7 @@ const News = ({ refL }) => {
 	return (
 		<article ref={refL} id='sec-5' className="container__special relative pb-24 ..5x1:pb-16">
 			<svg
-				className="absolute ..6x2:h-32 ..6x2:-top-2  ..6x2:mt-5 left-1/2 ability -top-5 "
+				className="absolute ..6x2:h-32 z ..6x2:-top-2  ..6x2:mt-5 left-1/2 ability -top-5 "
 				width="184"
 				height="183"
 				viewBox="0 0 184 183"
@@ -143,14 +143,14 @@ const News = ({ refL }) => {
 				/>
 			</svg>
 
-			<p className="mt-36 absolute left-1/2 ability   -top-20 text-3xl italic   ">
+			<p className="mt-36 absolute left-1/2 ability font-montserrat font-medium  -top-20 text-32px italic   ">
 				НОВОСТИ
 			</p>
-			<button className="ability left-1/2 absolute buttonY  top-32 text-primary border boder-primary py-3 px-6 text-sm ..6x6:py-10px ..6x6:px-5 ..6x6:text-xs transition-all hover:text-white hover:bg-primary">
+			<button className="ability z-10 cursor-pointer left-1/2 absolute buttonY  top-32 text-primary border boder-primary py-2 h-11 ..5x2:h-auto px-7 text-sm ..6x6:py-10px ..6x6:px-5 ..6x6:text-xs transition-all hover:text-white hover:bg-primary">
 				Смотреть все
 			</button>
 			<Slider {...settings} ref={slider} className="pt-48 ..6x6:pt-44 newsSlider ..7x001:px-3 ">
-				<div className=" relative p-3  ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className=" relative p-3  ..6x04:p-1.5 transition-all newsCardHover  cursor-pointer hover:scale-95">
 					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
@@ -166,24 +166,24 @@ const News = ({ refL }) => {
 							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
 							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
 						</div>
-						<p className="text-center ..5x2:hidden px-2 text-lg font-bold">
+						<p className="text-center titleNews leading-120% font-montserrat ..5x2:hidden px-2 text-lg font-bold">
 							Возвращение легенды: косметический <br /> спонж для умывания
 						</p>
-						<p className="hidden ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
+						<p className="hidden titleNews ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
 							Возвращение легенды: косметический спонж для умывания
 						</p>
-						<p className="text-center mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
+						<p className="text-center text-sm mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
 							Все помнят тот самый косметический спонж, который под струей воды
 							превращался из палочки в круглый диск Все помнят тот самый
 							косметический спонж, который под струей воды превращался
 						</p>
-						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
+						<button className="relative ability left-1/2 bottom-3 font-semibold  text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px ..6x4:w-14 ..6x4:ml-0 ..5x2:w-16 ..5x2:ml-1" />
+							<div className="bg-primary lineHover absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
 						</button>
 					</div>
 				</div>
-				<div className=" relative p-3  ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className=" relative p-3  ..6x04:p-1.5 transition-all newsCardHover  cursor-pointer hover:scale-95">
 					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
@@ -199,24 +199,24 @@ const News = ({ refL }) => {
 							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
 							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
 						</div>
-						<p className="text-center ..5x2:hidden px-2 text-lg font-bold">
+						<p className="text-center titleNews leading-120% font-montserrat ..5x2:hidden px-2 text-lg font-bold">
 							Возвращение легенды: косметический <br /> спонж для умывания
 						</p>
-						<p className="hidden ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
+						<p className="hidden titleNews ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
 							Возвращение легенды: косметический спонж для умывания
 						</p>
-						<p className="text-center mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
+						<p className="text-center text-sm mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
 							Все помнят тот самый косметический спонж, который под струей воды
 							превращался из палочки в круглый диск Все помнят тот самый
 							косметический спонж, который под струей воды превращался
 						</p>
-						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
+						<button className="relative ability left-1/2 bottom-3 font-semibold  text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px ..6x4:w-14 ..6x4:ml-0 ..5x2:w-16 ..5x2:ml-1" />
+							<div className="bg-primary lineHover absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
 						</button>
 					</div>
 				</div>
-				<div className=" relative p-3  ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className=" relative p-3  ..6x04:p-1.5 transition-all newsCardHover  cursor-pointer hover:scale-95">
 					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
@@ -232,24 +232,24 @@ const News = ({ refL }) => {
 							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
 							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
 						</div>
-						<p className="text-center ..5x2:hidden px-2 text-lg font-bold">
-							Возвращение легенды: косметический <br /> спонж для умывания
+						<p className="text-center titleNews leading-120% font-montserrat ..5x2:hidden px-2 text-lg font-bold">
+							Алоэ - компонент многих продуктов TianDe
 						</p>
-						<p className="hidden ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
+						<p className="hidden titleNews ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
 							Возвращение легенды: косметический спонж для умывания
 						</p>
-						<p className="text-center mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
+						<p className="text-center text-sm mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
 							Все помнят тот самый косметический спонж, который под струей воды
 							превращался из палочки в круглый диск Все помнят тот самый
 							косметический спонж, который под струей воды превращался
 						</p>
-						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
+						<button className="relative ability left-1/2 bottom-3 font-semibold  text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px ..6x4:w-14 ..6x4:ml-0 ..5x2:w-16 ..5x2:ml-1" />
+							<div className="bg-primary lineHover absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
 						</button>
 					</div>
 				</div>
-				<div className=" relative p-3  ..6x04:p-1.5 transition-all hover:text-primary cursor-pointer hover:scale-95">
+				<div className=" relative p-3  ..6x04:p-1.5 transition-all newsCardHover  cursor-pointer hover:scale-95">
 					<NewsDate title={'ВЧЕРА'} />
 					<div>
 						<Image
@@ -265,20 +265,20 @@ const News = ({ refL }) => {
 							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
 							<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
 						</div>
-						<p className="text-center ..5x2:hidden px-2 text-lg font-bold">
+						<p className="text-center titleNews leading-120% font-montserrat ..5x2:hidden px-2 text-lg font-bold">
 							Возвращение легенды: косметический <br /> спонж для умывания
 						</p>
-						<p className="hidden ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
+						<p className="hidden titleNews ..5x2:block font-montserrat ..6x4:text-sm text-center px-2 text-lg font-bold">
 							Возвращение легенды: косметический спонж для умывания
 						</p>
-						<p className="text-center mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
+						<p className="text-center text-sm mt-2 px-2 ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
 							Все помнят тот самый косметический спонж, который под струей воды
 							превращался из палочки в круглый диск Все помнят тот самый
 							косметический спонж, который под струей воды превращался
 						</p>
-						<button className="relative ability left-1/2 bottom-3 font-medium ..6x4:text-13px font-montserrat text-black">
+						<button className="relative ability left-1/2 bottom-3 font-semibold  text-13px font-montserrat text-black">
 							Читать
-							<div className="bg-primary absolute bottom-0.5 -left-1.5 opacity-40 h-9px ..6x4:w-14 ..6x4:ml-0 ..5x2:w-16 ..5x2:ml-1" />
+							<div className="bg-primary absolute lineHover bottom-0.5 -left-1.5 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
 						</button>
 					</div>
 				</div>

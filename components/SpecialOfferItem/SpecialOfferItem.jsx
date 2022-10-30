@@ -171,7 +171,8 @@ export default function SpecialOfferItem({ obj }) {
 							</p>
 						)}
 					</div>
-					<div className="flex flex-row items-center">
+					{obj.balls ? <div className="flex flex-row items-center">
+
 						<p className="mr-1 font-montserrat font-medium ..6x03:text-10px text-13px leading-140% text-gray-quick-silver">
 							1.4 Б
 						</p>
@@ -208,7 +209,10 @@ export default function SpecialOfferItem({ obj }) {
 							/>
 						</svg>
 
-					</div>
+					</div> : ""
+
+					}
+
 				</div>
 				<div className=" absolute bottom-20 px-2 ..6x03:px-0 ..6x03:bottom-70px">
 					<p className=" ..6x03:text-10px text-13px font-montserrat font-normal leading-150% text-center text-gray-quick-silver tracking-widest card_text uppercase">

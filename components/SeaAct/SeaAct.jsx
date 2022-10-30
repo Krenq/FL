@@ -164,7 +164,7 @@ const SeaAct = ({ refL }) => {
 				</p>
 				<div className="mb-9 ..5x2:mb-14 text-center font-montserrat ..6x04:text-13px nabSea mt-20">
 					Покупай в наборах и получай подарок
-					<div className='w-24 h-3px ability absolute hrSea left-1/2 hidden ..5x2:block bg-white'></div>
+					<div className='w-24 h-3px ability absolute hrSea left-1/2  bg-white'></div>
 				</div>
 				<div className="timer absolute ability left-1/2 timerSea hidden ..5x2:block ..5x2:py-1 ..6x5:ml-0 bg-white px-2 text-primary border border-primary font-normal text-lg font-montserrat   ..6x5:font-noto-sans ..6x5:text-sm">
 					{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s

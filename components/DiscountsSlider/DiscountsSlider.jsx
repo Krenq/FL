@@ -104,7 +104,7 @@ function DiscountsSlider({ refL, showCentral }) {
 
 
 
-			<div className="  w-full  ..5x2:block hidden discSliderPhone" ref={containerSlider}>
+			<div className="  w-full  ..5x2:block hidden  discSliderPhone" ref={containerSlider}>
 				<Slider {...settings} ref={slider} className=' w-full h-full'>
 					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
 					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />

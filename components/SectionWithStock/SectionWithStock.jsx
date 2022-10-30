@@ -16,7 +16,7 @@ export default function SectionWithStock() {
 
 	useEffect(() => {
 		setInterval(() => {
-			const timeLocal = useTimerHook('Thu Oct 30 2022 17:43:29 GMT+0300 (Москва, стандартное время)') // Пример присылаемой даты с бека
+			const timeLocal = useTimerHook('Thu Dec 30 2022 17:43:29 GMT+0300 (Москва, стандартное время)') // Пример присылаемой даты с бека
 			setTime(timeLocal)
 		}, 1000)
 	}, [])

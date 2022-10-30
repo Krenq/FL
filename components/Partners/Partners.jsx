@@ -141,7 +141,7 @@ const Partners = ({ refL }) => {
 				<p className="mt-36 absolute left-1/2 font-montserrat font-medium ..5x2:text-22px -top-16 ability text-3xl italic mb-40">
 					ПАРТНЁРАМ
 				</p>
-				<button className="text-primary font-montserrat ..6x04:text-10px font-medium border absolute  buttonY left-1/2 ability ..5x2:top-36 top-40 ..6x04:px-4 ..6x04:py-6px  ..7x2:px-2  z-10 border-primary mb-8 py-4 px-10 transition-all hover:bg-primary hover:text-white ..6x6:text-xs ..7x2:text-10px ..7x2:py-2">
+				<button className="text-primary  font-montserrat ..6x04:text-10px font-medium border absolute  buttonY left-1/2 ability ..5x2:top-36 top-40 ..6x04:px-4 ..6x04:py-6px  ..7x2:px-2  z-10 border-primary mb-8 py-3 h-11 ..5x2:h-auto px-10 transition-all hover:bg-primary hover:text-white  text-xs ..7x2:text-10px ..7x2:py-2">
 					Бизнес-возможности
 				</button>
 
@@ -190,7 +190,7 @@ const Partners = ({ refL }) => {
 								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
 									или бонусы сразу за две иномарки!
 								</small>
-								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-4 px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
+								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
 									Подробнее
 								</button>
 							</div>
@@ -241,7 +241,7 @@ const Partners = ({ refL }) => {
 								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
 									или бонусы сразу за две иномарки!
 								</small>
-								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-4 px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
+								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
 									Подробнее
 								</button>
 							</div>
@@ -293,13 +293,12 @@ const Partners = ({ refL }) => {
 								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
 									или бонусы сразу за две иномарки!
 								</small>
-								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-4 px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
+								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
 									Подробнее
 								</button>
 							</div>
 						</div>
 					</section>
-
 					<section className="pb-20 ">
 
 						<div className="flex ..5x2:flex-col bg-gray-light">
@@ -344,7 +343,7 @@ const Partners = ({ refL }) => {
 								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
 									или бонусы сразу за две иномарки!
 								</small>
-								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-4 px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
+								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
 									Подробнее
 								</button>
 							</div>

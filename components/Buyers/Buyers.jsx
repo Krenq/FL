@@ -5,7 +5,7 @@ import two from '../../images/templates/2forBuyres.jpg';
 import three from '../../images/templates/3forBuyers.jpg';
 import groups from '../../images/templates/groups.png';
 import twoglos from '../../images/templates/2glos.jpg';
-
+import twopartner from '../../images/templates/1partnergrow.png';
 function Buyers({ refL }) {
 	const settings = {
 
@@ -63,6 +63,15 @@ function Buyers({ refL }) {
 
 	return (
 		<div ref={refL} name="center-anchor" className="relative" id='sec-3'>
+			<div className="absolute buyersFoliage -right-0   ..6x2:w-32 ..5x2:-right-7    ..6x2:h-32">
+				<Image
+					className="object-cover "
+					src={twopartner}
+
+					alt="specialOffersImg"
+				/>
+			</div>
+
 			<div className="absolute left-0 bottom-0 ..6x2:w-40 ..5x2:hidden ..6x2:h-40 .4x1:-bottom-32">
 
 				<Image
@@ -77,7 +86,7 @@ function Buyers({ refL }) {
 
 			<section className="container__special relative pt-10 .4x1:pt-10 ..5x2:pt-28">
 				<svg
-					className="absolute ..6x2:h-32 ..6x2:mt-5 left-1/2 ability ..5x2:top-9 -top-8"
+					className="absolute ..6x2:h-32 ..6x2:mt-5 left-1/2 ability ..5x2:top-9 -top-10"
 					width="184"
 					height="183"
 					viewBox="0 0 184 183"
@@ -113,7 +122,7 @@ function Buyers({ refL }) {
 						strokeLinejoin="round"
 					/>
 				</svg>
-				<p className="text-center text-4xl italic mb-16 font-medium ..6x04:text-22px font-montserrat z-10 ..6x04:mb-5 relative">
+				<p className="text-center text-32px italic mb-14 font-medium ..6x04:text-22px font-montserrat z-10 ..6x04:mb-5 relative">
 					ПОКУПАТЕЛЯМ
 				</p>
 
@@ -179,13 +188,13 @@ function Buyers({ refL }) {
 								height={380}
 							/>
 
-							<p className="font-montserrat font-medium pr-5 ..6x2:text-3xl hidden ..5x2:block ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
+							<p className="font-montserrat font-medium pr-5 ..6x2:text-3xl hidden ..5x2:block ..6x4:text-base ..6x1:top-3 z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
 								Кешбэк-марафон +  розыгрыш бьюти-гаджетов
 							</p>
-							<p className="font-montserrat ..6x2:text-3xl ..5x2:hidden ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
+							<p className="font-montserrat font-medium ..6x2:text-3xl ..5x2:hidden ..6x4:text-base ..6x1:top-3 leading-120% text-32px z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
 								Кешбэк-марафон + <br /> розыгрыш бьюти-гаджетов
 							</p>
-							<p className="font-montserrat ..6x2:text-3xl ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-36 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
+							<p className="font-montserrat font-medium ..6x2:text-3xl ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-26px z-10 .2x1:text-2xl absolute  left-5 top-32 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
 								6%, 7%, 8%
 							</p>
 
@@ -198,7 +207,7 @@ function Buyers({ refL }) {
 									height={112}
 								/>
 							</div>
-							<button className=" absolute left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-10px ..7x1:top-20">
+							<button className=" absolute left-5 top-48 flex justify-center items-center py-3.5 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-10px ..7x1:top-20">
 								Подробнее
 							</button>
 						</div>
@@ -212,17 +221,18 @@ function Buyers({ refL }) {
 								height={380}
 							/>
 
-							<p className="font-montserrat font-medium ..6x2:text-3xl ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-base leading-120%">
+							<p className="font-montserrat font-medium ..6x2:text-3xl ..6x4:text-base ..6x1:top-3 text-32px z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-base leading-120%">
 								Бесплатная доставка <br /> от 1500 ₽
 							</p>
-							<p className="..6x2:text-3xl font-montserrat ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-36 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
+							<p className="..6x2:text-3xl font-montserrat ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-26px font-medium z-10 .2x1:text-2xl absolute  left-5 top-32 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
 								новичкам июня
 							</p>
-							<button className="absolute ..7x1:px-5 ..7x1:py-10px  left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2  ..7x1:top-20">
+							<button className="absolute ..7x1:px-5 ..7x1:py-10px  left-5 top-48 flex justify-center items-center py-3.5 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2  ..7x1:top-20">
 								Подробнее
 							</button>
 						</div>
 					</div>
+
 
 					<div className="flex flex-col justify-between px-2 h-full ">
 
@@ -235,13 +245,13 @@ function Buyers({ refL }) {
 								height={380}
 							/>
 
-							<p className="font-montserrat font-medium pr-5 ..6x2:text-3xl hidden ..5x2:block ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
+							<p className="font-montserrat font-medium pr-5 ..6x2:text-3xl hidden ..5x2:block ..6x4:text-base ..6x1:top-3 z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
 								Кешбэк-марафон +  розыгрыш бьюти-гаджетов
 							</p>
-							<p className="font-montserrat ..6x2:text-3xl ..5x2:hidden ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
+							<p className="font-montserrat font-medium ..6x2:text-3xl ..5x2:hidden ..6x4:text-base ..6x1:top-3 leading-120% text-32px z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-sm">
 								Кешбэк-марафон + <br /> розыгрыш бьюти-гаджетов
 							</p>
-							<p className="font-montserrat ..6x2:text-3xl ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-36 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
+							<p className="font-montserrat font-medium ..6x2:text-3xl ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-26px z-10 .2x1:text-2xl absolute  left-5 top-32 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
 								6%, 7%, 8%
 							</p>
 
@@ -254,7 +264,7 @@ function Buyers({ refL }) {
 									height={112}
 								/>
 							</div>
-							<button className=" absolute left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-10px ..7x1:top-20">
+							<button className=" absolute left-5 top-48 flex justify-center items-center py-3.5 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2 ..7x1:px-5 ..7x1:py-10px ..7x1:top-20">
 								Подробнее
 							</button>
 						</div>
@@ -268,17 +278,18 @@ function Buyers({ refL }) {
 								height={380}
 							/>
 
-							<p className="font-montserrat font-medium ..6x2:text-3xl ..6x4:text-base ..6x1:top-3 text-4xl z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-base leading-120%">
+							<p className="font-montserrat font-medium ..6x2:text-3xl ..6x4:text-base ..6x1:top-3 text-32px z-10 .2x1:text-3xl text-black absolute top-10 left-5 .1x01:top-6 ..5x2:text-2xl ..5x03:text-4xl ..6x3:text-2xl ..7x1:text-base leading-120%">
 								Бесплатная доставка <br /> от 1500 ₽
 							</p>
-							<p className="..6x2:text-3xl font-montserrat ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-3xl z-10 .2x1:text-2xl absolute  left-5 top-36 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
+							<p className="..6x2:text-3xl font-montserrat ..6x4:top-16 ..6x4:text-lg ..6x1:top-28 text-26px font-medium z-10 .2x1:text-2xl absolute  left-5 top-32 text-primary .1x01:top-28 .1x01:text-2xl ..5x03:text-4xl ..5x03:top-32 ..6x3:top-24 ..6x3:text-2xl ..7x11:top-16 ..7x1:text-sm ..7x1:top-14">
 								новичкам июня
 							</p>
-							<button className="absolute ..7x1:px-5 ..7x1:py-10px  left-5 top-52 flex justify-center items-center py-4 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2  ..7x1:top-20">
+							<button className="absolute ..7x1:px-5 ..7x1:py-10px  left-5 top-48 flex justify-center items-center py-3.5 px-34px mr-6 font-montserrat font-medium text-xs transition-all bg-primary text-white .1x01:top-40 ..5x03:top-48 ..6x1:top-44 ..6x3:top-36 ..6x4:top-24 ..6x4:px-7 ..6x4:py-2  ..7x1:top-20">
 								Подробнее
 							</button>
 						</div>
 					</div>
+
 				</Slider>
 			</section>
 		</div>

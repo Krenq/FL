@@ -70,9 +70,11 @@ const Health = ({ refL }) => {
 					<p className="text-center font-montserrat ..5x2:text-22px ..5x2:-mt-2 text-black pt-28 italic text-3xl font-medium  ">
 						КРАСОТЫ И ЗДОРОВЬЯ
 					</p>
-					<p className="text-center font-montserrat ..5x2:text-13px ..5x2:mb-5 mt-2 mb-12 text-sm">
+					<div className="relative text-center font-montserrat ..5x2:text-13px ..5x2:mb-5 mt-2 mb-12 text-sm">
 						Есть проблемы? У нас есть решения!
-					</p>
+						<div className=' w-24 bg-white absolute ability -bottom-2 left-1/2 h-3px'></div>
+
+					</div>
 
 					<Slider {...settings} className="flex  ">
 						<div >
@@ -199,7 +201,7 @@ const Health = ({ refL }) => {
 									«Мужское здоровье», «антипаразитарная <br /> программа»,
 									«бодрость и энергия», «активное <br /> долголетие» и др.
 								</p>
-								<button className="ability ..5x2:bottom-8 border ..7x001:w-40 ..5x2:text-sm font-medium font-montserrat ..5x2:py-1.5 ..5x2:px-5 ..6x1:bottom-3 border-gray absolute bottom-20   text-gray py-2 px-4  left-1/2 hover:text-white transition-all ">
+								<button className="ability ..5x2:bottom-8 border ..7x001:w-40 text-sm font-medium font-montserrat ..5x2:py-1.5 ..5x2:px-5 ..6x1:bottom-3 border-gray absolute bottom-20   text-gray py-2 ..5x2:h-8 h-11 px-4  left-1/2 hover:text-white transition-all ">
 									Все программы
 								</button>
 							</div>

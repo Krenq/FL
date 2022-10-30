@@ -264,7 +264,8 @@ function SpecialOffers({ refL }) {
 						hit: true,
 						priceDe: '3 750',
 						price: '764.00',
-						isSlider: true
+						isSlider: true,
+						balls: true
 					}}
 				/>
 				<SpecialOfferItem
@@ -351,7 +352,7 @@ function SpecialOffers({ refL }) {
 						price: '764.00',
 					}}
 				/>
-				
+
 			</Slider>
 		</article>
 	);
