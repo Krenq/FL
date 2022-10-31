@@ -120,11 +120,14 @@ const Health = ({ refL }) => {
 								</div>
 							</div>
 							<div className="relative mt-3.5 mx-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
-								<p className="absolute  font-montserrat ..5x2:top-4 ..5x2:left-4  ..7x1:text-base z-10 top-20 text-2xl text-black font-medium left-10  ">
+								<p className="absolute  font-montserrat ..5x2:top-4 ..5x2:left-4  ..7x1:text-base z-10 top-16 text-2xl ..5x2:text-black text-primary text-22px font-medium left-10  ">
 									«ЗДОРОВЫЙ СОН»
 								</p>
-								<p className="absolute font-montserrat text-primary ..7x1:text-13px ..5x2:text-xl !leading-140%  ..7x1:top-10 ..5x2:top-16 ..5x2:left-4    z-10 top-32 text-3xl   left-10  ">
+								<p className="absolute hidden ..5x2:block font-montserrat text-primary ..7x1:text-13px ..5x2:text-xl !leading-140%  ..7x1:top-10 ..5x2:top-16 ..5x2:left-4    z-10 top-32 text-3xl   left-10  ">
 									Чтобы каждое утро<br /> было добрым
+								</p>
+								<p className="absolute ..5x2:hidden font-montserrat text-black text-26px font-medium  ..7x1:text-13px ..5x2:text-xl !leading-120%  ..7x1:top-10 ..5x2:top-16 ..5x2:left-4    z-10 top-28 text-3xl   left-10  ">
+									Чтобы каждое утро было <br /> добрым
 								</p>
 								<div className='image-container'>
 									<Image
@@ -155,13 +158,13 @@ const Health = ({ refL }) => {
 						</div>
 						<div >
 							<div className="relative mx-3   transition-all hover:text-primary hover:opacity-90 cursor-pointer">
-								<p className="absolute ..7x1:text-base font-montserrat z-10 top-20 text-2xl left-10 ..5x2:left-4 ..5x2:top-4 font-medium">
+								<p className="absolute ..7x1:text-base font-montserrat z-10 top-16 text-2xl left-10 ..5x2:left-4 text-22px ..5x2:top-4 font-medium">
 									«ЧИСТАЯ КОЖА»
 								</p>
-								<p className="absolute ..7x1:text-13px ..5x2:text-xl z-10 top-32 text-3xl text-primary left-10  ..7x1:top-11 ..5x2:top-14 !leading-140%  ..5x2:left-4">
+								<p className="absolute ..7x1:text-13px ..5x2:text-xl z-10 top-24 text-3xl text-primary left-10  ..7x1:top-11 ..5x2:top-14 ..5x2:leading-140% leading-120% text-26px ..5x2:left-4">
 									Фитокоррекция <br /> проблемной кожи
 								</p>
-								<p className="absolute ..7x1:top-24 ..5x2:top-32 ..5x2:left-4 ..5x2:text-13px font-montserrat  font-medium top-52 cursor-pointer z-10 left-10 flex items-center text-sm  ">
+								<p className="absolute ..7x1:top-24 ..5x2:top-32 ..5x2:left-4 ..5x2:text-13px font-montserrat  font-medium top-48 cursor-pointer z-10 left-10 flex items-center text-sm  ">
 									Подробнее{' '}
 									<svg
 										className="ml-2 mt-0.5"

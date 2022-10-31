@@ -8,11 +8,23 @@ import SectionWithStock from '../SectionWithStock/SectionWithStock';
 import SectionWithWarnings from '../SectionWithWarnings/SectionWithWarnings';
 
 function Header() {
-	const [showWar, setShowWar] = useState(true);
-	const showWarHandler = () => {
-		setShowWar(false);
-	};
+	const [showWar, setShowWar] = useState(true),
+		showWarHandler = () => {
+			setShowWar(false);
+		};
+	const [scrollMenu, setScrollMenu] = useState(false)
 
+
+
+
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+
+			if (window.visualViewport.pageTop > 210) setScrollMenu(true)
+			else setScrollMenu(false)
+
+		})
+	}, [])
 
 	return (
 		<>
@@ -25,8 +37,8 @@ function Header() {
 
 			<SectionOverNavBar />
 
-			<header className=" max-w-screen-2xl mx-auto -top-1 z-40">
-				<NavBar />
+			<header className=" max-w-screen-2xl ..5x2:static sticky ..5x2:block mx-auto -top-1 z-40">
+				<NavBar scrollMenu={scrollMenu} />
 			</header>
 		</>
 	);

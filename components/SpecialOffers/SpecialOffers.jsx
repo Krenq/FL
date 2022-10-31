@@ -161,6 +161,60 @@ function SpecialOffers({ refL }) {
 				},
 			},
 			{
+				breakpoint: 600,
+
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+					nextArrow: false,
+					prevArrow: false,
+					appendDots: (dots) => {
+						return (
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									position: 'absolute',
+									bottom: -35,
+								}}
+							>
+								<div
+									ref={divBlock}
+									style={{
+										width: 150,
+										display: 'flex',
+										justifyContent: 'center',
+										alignItems: 'center',
+									}}
+								>
+									<ul
+										style={{
+											margin: '0px',
+											display: 'flex',
+											alignItems: 'flex-end',
+											justifyContent: 'center',
+										}}
+									>
+										{dots}
+									</ul>
+								</div>
+							</div>
+						);
+					},
+					customPaging: (i) => (
+						<div
+							style={{
+								backgroundColor: ' rgb(218, 218, 218)',
+								width: `${widthDot}px`,
+								height: 4,
+							}}
+						/>
+					),
+				},
+			},
+			{
 				breakpoint: 450,
 				settings: {
 					slidesToShow: 2,
@@ -177,7 +231,7 @@ function SpecialOffers({ refL }) {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: -25,
+									bottom: -35,
 								}}
 							>
 								<div

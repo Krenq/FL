@@ -66,7 +66,7 @@ function Instrumensts({ refL }) {
 						display: 'flex',
 						justifyContent: 'center',
 						position: 'absolute',
-						bottom: -25,
+						bottom: -35,
 					}}
 				>
 					<div
@@ -146,7 +146,7 @@ function Instrumensts({ refL }) {
 					alt="discountImg"
 				/>
 			</div>
-			<section className="..5x2:pt-20 ..5x2:pb-12   ..5x3:mt-5 ..5x1:-mt-32  relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40 pb-36 ">
+			<section className="..5x2:pt-20 ..5x1:pt-48 ..5x2:pb-12   ..5x3:mt-5 ..5x1:-mt-32  relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40 pb-36 ">
 				<p className="absolute left-1/2 top-28 ..5x2:top-12 ability text-2xl z-10 ..5x2:text-base font-montserrat font-medium">Сервисы</p>
 				<div className='homeSVGINSTR' >
 					<svg

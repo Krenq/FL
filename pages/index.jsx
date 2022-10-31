@@ -24,6 +24,7 @@ import Stories from '../components/Stories/Stories';
 import Support from '../components/Support/Support';
 import Trands from '../components/Trands/Trands';
 import 'swiper/css';
+import ButtonTop from '../components/ButtonTop/ButtonTop';
 
 
 
@@ -69,7 +70,7 @@ function Home() {
 			<DiscountSliderItemHover showProducts={showProducts.promo} showCentral={showPromo} title={'Шампунь 2 - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
 
 
-
+			<ButtonTop />
 
 
 			<ConfirmLocationModalWindow />

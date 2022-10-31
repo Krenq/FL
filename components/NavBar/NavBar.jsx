@@ -3,7 +3,7 @@ import LinksHeader from '../LinksNavBar/LinksNavBar';
 import Logo from '../ui/Logo/Logo';
 import Search from '../Search/Search';
 
-export default function NavBar() {
+export default function NavBar({ scrollMenu }) {
 	return (
 		<>
 
@@ -29,7 +29,7 @@ export default function NavBar() {
 				</svg>
 
 				<Logo styles="top-5 ..6x3:mt-0 ..5x2:-mt-1 ..6x3:pl-0 pl-20 ..6x3:top-2 .5x01:pl-2    ..5x1:flex-1    headerAbility ..5x2:absolute " />
-				<LinksHeader />
+				<LinksHeader scrollMenu={scrollMenu} />
 				<Search />
 			</nav>
 

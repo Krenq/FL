@@ -280,10 +280,10 @@ export default function SpecialOfferItem({ obj }) {
 
 				{obj.priceDe && (
 					<div className="sect_buttons absolute bottom-0 flex-row hidden w-full">
-						<button className="w-1/2 border border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white ..5x03:text-10px">
+						<button className="w-1/2 border hover:border-primary border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white ..5x03:text-10px">
 							КУПИТЬ
 						</button>
-						<button className="w-1/2 border border-gray-light2 px-3 py-2.5 font-montserrat leading-150% text-label-orange font-normal text-13px whitespace-nowrap hover:bg-label-orange hover:text-white ..5x03:text-10px">
+						<button className="w-1/2 border border-gray-light2 px-3 py-2.5 font-montserrat leading-150% text-label-orange font-normal text-13px whitespace-nowrap hover:bg-label-orange hover:border-label-orange hover:text-white ..5x03:text-10px">
 							КУПИТЬ ЗА <span className="font-lora">DE</span>
 						</button>
 					</div>
