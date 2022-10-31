@@ -45,7 +45,7 @@ const CatalDropdown = ({ show, setShow, scrollMenu, showDrop }) => {
 			<section
 				onMouseLeave={setShow}
 				onMouseEnter={showDrop}
-				className={`absolute  flex z-20 drop  right-0 transition-all bg-white -mt-1 ${scrollMenu ? '-mt-5' : ""} ${show.showCatal ? 'active' : 'hiddenCustom'
+				className={`absolute  flex z-20 drop  right-0 transition-all bg-white mt-0 ${scrollMenu ? '-mt-5' : ""} ${show.showCatal ? 'active' : 'hiddenCustom'
 					}`}
 			>
 				<div className="bg-white-BG_FILTER w-52   pl-3 pt-3 pb-3">
@@ -334,32 +334,32 @@ const CatalDropdown = ({ show, setShow, scrollMenu, showDrop }) => {
 					</Slider>
 					<div className="flex justify-center .3x1:ml-3">
 						<div>
-							<p className="w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md cursor-pointer">
+							<p className="w-32 h-9 font-normal border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-13px cursor-pointer">
 								Новинки
 							</p>
-							<p className="w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md cursor-pointer">
+							<p className="w-32 h-9 font-normal border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-13px cursor-pointer">
 								Наборы
 							</p>
-							<p className="w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md cursor-pointer">
+							<p className="w-32 h-9 font-normal border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-13px cursor-pointer">
 								Хит продаж
 							</p>
-							<p className="w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md cursor-pointer">
+							<p className="w-32 h-9 font-normal border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-13px cursor-pointer">
 								Идеи подарков
 							</p>
 						</div>
 						<div>
-							<p className="w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md cursor-pointer">
+							<p className="w-32 h-9 font-normal border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-13px cursor-pointer">
 								Акции
 							</p>
-							<p className="w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md cursor-pointer">
+							<p className="w-32 h-9 font-normal border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-13px cursor-pointer">
 								Товар дня
 							</p>
-							<p className="w-32 h-9 border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-md cursor-pointer">
+							<p className="w-32 h-9 font-normal border-2 mb-3 .3x1:text-xs .2x1:w-24 .3x1:w-28 ..5x1:w-20 ..5x1:h-8 border-gray justify-center items-center flex mr-3 text-13px cursor-pointer">
 								Суперцена
 							</p>
 						</div>
 					</div>
-					<button className="w-full border-2 mb-3 border-primary text-primary h-9">
+					<button className="w-full border mb-3 font-normal 13px border-primary text-primary h-9">
 						Все спецпредложения
 					</button>
 				</div>

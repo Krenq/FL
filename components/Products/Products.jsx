@@ -93,7 +93,7 @@ function Products({ refL }) {
 				</div>
 			</div>
 
-			<div className=" hidden .3x1:flex .3x1:justify-center mt-26px mb-8 text-primary font-montserrat font-medium text-xs">
+			<div className="h-11 ..5x2:h-8 hidden .3x1:flex .3x1:justify-center mt-26px mb-8 text-primary font-montserrat font-medium text-xs">
 				<button className=" border border-primary px-5 buttonY">
 					В каталог
 				</button>

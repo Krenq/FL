@@ -178,7 +178,7 @@
 
 .dropDownSliderAc .slick-dots li button:before {
 	font-family: 'slick';
-	font-size: 26px;
+	font-size: 19px;
 	line-height: 20px;
 	position: absolute;
 	top: -4px;
@@ -196,7 +196,7 @@
 
 .dropDownSliderAc .slick-dots li.slick-active button:before {
 	opacity: 1;
-	font-size: 12px;
+	font-size: 10px;
 	top: 0;
 	content: '•';
 }
@@ -507,6 +507,10 @@
 	.image-container {
 		width: 100%;
 
+	}
+
+	.image-container span {
+		width: 100% !important;
 	}
 
 	.image-container div {

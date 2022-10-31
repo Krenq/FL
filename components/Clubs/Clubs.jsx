@@ -32,7 +32,7 @@ function Clubs({ refL }) {
 			<div className="hidden relative ..5x2:block pt-36 text-18px font-montserrat font-normal px-3 text-center   pb-44 ..5x2:text-13px">
 				Покупай любимые продукты, зарабатывай DeCoins, оплачивай ими
 				следующие заказы!
-				<div className='w-24 h-3px ability absolute hrSea left-1/2  bg-white'></div>
+				<div className='w-24 ..7x01:top-52 h-3px ability absolute hrSea left-1/2  bg-white'></div>
 
 			</div>
 			<div className="..6x2:w-full ..6x2:flex ..6x2:justify-center ..7x001:ml-2 absolute left-1/2 ability z-10 bottom-20 ..5x2:bottom-28">

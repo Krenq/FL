@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 export default function LinksHeader({ scrollMenu }) {
 	const [show, setShow] = useState({
-		showCatal: true,
+		showCatal: false,
 		showCompany: false,
 		showBis: false,
 		showBuyers: false,
