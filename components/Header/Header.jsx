@@ -19,7 +19,7 @@ function Header() {
 
 	useEffect(() => {
 		window.addEventListener('scroll', () => {
-
+			if (window.innerWidth < 1000) return
 			if (window.visualViewport.pageTop > 210) setScrollMenu(true)
 			else setScrollMenu(false)
 
