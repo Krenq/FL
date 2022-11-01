@@ -26,7 +26,7 @@ const SetLanguage = ({ show, setShow, setCurrentLang }) => {
 
 	return (
 		<>
-			<section onClick={closeShow} className={`fixed top-0 left-0 right-0 bottom-0 z-30  ${show ? 'block' : "hidden"}`}></section>
+			<section onClick={closeShow} className={`fixed top-0 left-0 right-0 bottom-0 z-50  ${show ? 'block' : "hidden"}`}></section>
 			<section className={` z-50 bg-white   absolute top-8 right-0 ${show ? 'block' : "hidden"} `}>
 				{langs.map((lang, i) => <div key={i} onClick={() => changeLang(lang)} className={`w-16 py-1.5 px-2 -mt-0.5 hover:bg-primary transition-colors bg-white hover:text-white flex cursor-pointer items-center h-full text-13px font-normal font-montserrat text-black-70pe border-x border-gray-quick-silver  border-opacity-50 ..5x1:px-1`}>
 					<Image

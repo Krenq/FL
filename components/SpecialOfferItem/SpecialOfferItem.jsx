@@ -291,7 +291,7 @@ export default function SpecialOfferItem({ obj }) {
 
 				{!obj.priceDe && (
 					<div className="sect_buttons absolute bottom-0 flex-row hidden w-full">
-						<button className="w-full border border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white">
+						<button className="w-full border hover:border-primary border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white">
 							КУПИТЬ
 						</button>
 					</div>
@@ -299,10 +299,10 @@ export default function SpecialOfferItem({ obj }) {
 
 				{obj.priceDe && (
 					<div className=" absolute bottom-0 flex-row hidden ..6x03:flex w-full">
-						<button className="w-1/2 border border-r-0 border-gray-light2 px-3 py-2.5 font-montserrat font-medium text-xs text-primary leading-100%  hover:bg-primary hover:text-white">
+						<button className="w-1/2 border hover:border-primary border-r-0 border-gray-light2 px-3 py-2.5 font-montserrat font-medium text-xs text-primary leading-100%  hover:bg-primary hover:text-white">
 							Купить
 						</button>
-						<button className="w-1/2 border border-gray-light2 px-3 py-2.5 font-lora leading-100% text-label-orange font-medium text-xs whitespace-nowrap  hover:bg-label-orange hover:text-white">
+						<button className="w-1/2 border hover:border-label-orange border-gray-light2 px-3 py-2.5 font-lora leading-100% text-label-orange font-medium text-xs whitespace-nowrap  hover:bg-label-orange hover:text-white">
 							374 De
 						</button>
 					</div>
@@ -310,7 +310,7 @@ export default function SpecialOfferItem({ obj }) {
 
 				{!obj.priceDe && (
 					<div className=" absolute bottom-0 hidden ..6x03:block w-full">
-						<button className="w-full border border-gray-light2 px-3 py-2.5 font-montserrat font-medium text-xs text-primary leading-100% hover:bg-primary hover:text-white">
+						<button className="w-full hover:border-primary border border-gray-light2 px-3 py-2.5 font-montserrat font-medium text-xs text-primary leading-100% hover:bg-primary hover:text-white">
 							Купить
 						</button>
 					</div>

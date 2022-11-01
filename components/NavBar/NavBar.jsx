@@ -4,10 +4,11 @@ import Logo from '../ui/Logo/Logo';
 import Search from '../Search/Search';
 
 export default function NavBar({ scrollMenu }) {
+
 	return (
 		<>
 
-			<nav className="h-100px   flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center">
+			<nav className={`h-100px ${scrollMenu ? '!h-80px' : ''}  z-30 flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center`}>
 				<svg
 					className="hidden   ..7x1:ml-3 ..6x6:h-5 ..6x6:w-5 ..5x2:block ml-5 cursor-pointer"
 					width="24"
