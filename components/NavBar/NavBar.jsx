@@ -33,7 +33,8 @@ export default function NavBar({ scrollMenu }) {
 				<LinksHeader scrollMenu={scrollMenu} />
 				<Search />
 			</nav>
-
+			{scrollMenu && <div className='transition-all duration-500 bg-gray h-px w-91.7% .5x01:w-full mx-auto'></div>
+			}
 		</>
 	);
 }
