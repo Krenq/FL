@@ -80,7 +80,7 @@ const Anchor = ({ elements }) => {
 	}
 
 	return (
-		<section className="z-40 bg-red fixed ..5x1:left-4 left-8 top-56 ..5x2:hidden">
+		<section className="z-30 bg-red fixed ..5x1:left-4 left-8 top-56 ..5x2:hidden">
 			<small className="text-13px">{currentLenght}</small>
 			<div className=" w-full flex flex-col items-center">
 				<a href="#stock" className={`${currentElement[0]["sec-1"] ? 'activeAnchor' : ""} w-1 h-6 mt-1 cursor-pointer hover:bg-primary transition-all bg-gray-light2`}></a>

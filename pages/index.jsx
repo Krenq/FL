@@ -25,11 +25,16 @@ import Support from '../components/Support/Support';
 import Trands from '../components/Trands/Trands';
 import 'swiper/css';
 import ButtonTop from '../components/ButtonTop/ButtonTop';
+import SearchResult from '../components/SearchResult/SearchResult';
+import SearchWindow from '../components/SearchWindow/SearchWIndow';
 
 
 
 
 function Home() {
+	const [showSearch, setShowSearch] = useState(false)
+
+
 	const discount = useRef(null),
 		special = useRef(null),
 		buyers = useRef(null),
@@ -65,58 +70,55 @@ function Home() {
 
 
 	return (
-		<section className="container-base relative bg-white">
-			<DiscountSliderItemHover showProducts={showProducts.central} showCentral={showCentral} title={'Шампунь - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
-			<DiscountSliderItemHover showProducts={showProducts.promo} showCentral={showPromo} title={'Шампунь 2 - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
+		<>
+			<Header showSearch={showSearch} setShowSearch={setShowSearch} />
+			<section className="container-base relative bg-white">
+				<DiscountSliderItemHover showProducts={showProducts.central} showCentral={showCentral} title={'Шампунь - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
+				<DiscountSliderItemHover showProducts={showProducts.promo} showCentral={showPromo} title={'Шампунь 2 - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
 
 
-			<ButtonTop />
+				<ButtonTop />
+				<SearchResult isShow={showSearch} />
 
+				<ConfirmLocationModalWindow />
+				<DiscountsSlider refL={discount} showCentral={showCentral} />
+				<SpecialOffers refL={special} />
+				<Buyers refL={buyers} />
+				<Products refL={products} />
+				<News refL={news} />
+				<SeaAct refL={sea} />
+				<Promo refL={promo} showPromo={showPromo} />
+				<Instrumensts refL={Instruments} />
+				<Funds refL={funds} />
+				<Partners refL={partners} />
+				<Health refL={health} />
 
-			<ConfirmLocationModalWindow />
-			<DiscountsSlider refL={discount} showCentral={showCentral} />
-			<SpecialOffers refL={special} />
-			<Buyers refL={buyers} />
-			<Products refL={products} />
-			<News refL={news} />
-			<SeaAct refL={sea} />
-			<Promo refL={promo} showPromo={showPromo} />
-			<Instrumensts refL={Instruments} />
-			<Funds refL={funds} />
-			<Partners refL={partners} />
-			<Health refL={health} />
-			{/* <Swiper  >
-				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
-				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
-				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
-				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
-				<SwiperSlide><div className='h-60 bg-primary flex items-center justify-center'>ONE</div></SwiperSlide>
+				<Stories refL={stories} />
+				<Clubs refL={clubs} />
+				<Trands refL={trands} />
+				<Support refL={support} />
+				<PhoneNavigation />
+				<Anchor elements={[
+					discount,
+					special,
+					buyers,
+					products,
+					news,
+					sea,
+					promo,
+					Instruments,
+					funds,
+					partners,
+					health,
 
-			</Swiper> */}
-			<Stories refL={stories} />
-			<Clubs refL={clubs} />
-			<Trands refL={trands} />
-			<Support refL={support} />
-			<PhoneNavigation />
-			<Anchor elements={[
-				discount,
-				special,
-				buyers,
-				products,
-				news,
-				sea,
-				promo,
-				Instruments,
-				funds,
-				partners,
-				health,
+					stories,
+					clubs,
+					trands,
+					support
+				]} />
+			</section>
+		</>
 
-				stories,
-				clubs,
-				trands,
-				support
-			]} />
-		</section>
 	);
 }
 
@@ -125,7 +127,7 @@ export default Home;
 Home.getLayout = function getLayout(page) {
 	return (
 		<Layout title="Главная" description="Описание главной страницы">
-			<Header />
+
 			{page}
 			<Footer />
 		</Layout>

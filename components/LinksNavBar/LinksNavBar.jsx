@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 
-export default function LinksHeader({ scrollMenu }) {
+export default function LinksHeader({ scrollMenu, setCloseHover, setIsHover }) {
 	const [show, setShow] = useState({
 		showCatal: false,
 		showCompany: false,
@@ -24,7 +24,7 @@ export default function LinksHeader({ scrollMenu }) {
 			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="Покупателям" />
 			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="Программа лояльности" />
 
-			<ShoppingBag />
+			<ShoppingBag setIsHover={setIsHover} scrollMenu={scrollMenu} />
 		</article>
 	);
 }

@@ -61,11 +61,13 @@ module.exports = {
 			white: {
 				DEFAULT: '#FFFFFF',
 				'80pe': 'rgba(255, 255, 255, 0.8)',
+				'60pe': 'rgba(255, 255, 255, 0.6)',
 				BG_FILTER: '#FCFDFB',
 			},
 			black: {
 				DEFAULT: '#000000',
 				'70pe': 'rgba(0, 0, 0, 0.7)',
+				'80pe': 'rgba(0, 0, 0, 0.8)',
 			},
 			gray: {
 				DEFAULT: '#DBDCDA',
@@ -78,13 +80,15 @@ module.exports = {
 				'quick-silver': '#828584',
 				smart: '#d1d1d1',
 				border: '#DCE0DF',
-				light3: '#A6A2A2'
+				light3: '#A6A2A2',
+				deNum: '#949792'
 			},
 			primary: {
 				DEFAULT: '#337202',
 				hover: '#1F5201',
 				active: '#3E7E0B',
-				border: 'rgba(51, 114, 2, 0.5)'
+				border: 'rgba(51, 114, 2, 0.5)',
+				searchBG: 'rgba(51, 114, 2, 0.05)'
 			},
 			green: {
 				'50pe': 'rgba(51, 114, 2, 0.5)',

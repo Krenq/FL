@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LinksHeader from '../LinksNavBar/LinksNavBar';
 import Logo from '../ui/Logo/Logo';
 import Search from '../Search/Search';
+import InputItemSearch from '../InputItemSearch/InputItemSearch';
 
-export default function NavBar({ scrollMenu }) {
+export default function NavBar({ scrollMenu, showSearch, setShowSearch }) {
+	const [isHoverBasket, setIsHoverBasket] = useState(false)
+
+
+	const setIsHover = () => setIsHoverBasket(true),
+		setCloseHover = () => setIsHoverBasket(false)
 
 	return (
 		<>
 
-			<nav className={`h-100px ${scrollMenu ? '!h-80px' : ''}  z-30 flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center`}>
+			<nav className={`h-100px ${scrollMenu ? '!h-80px' : ''}   flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center`}>
 				<svg
 					className="hidden   ..7x1:ml-3 ..6x6:h-5 ..6x6:w-5 ..5x2:block ml-5 cursor-pointer"
 					width="24"
@@ -30,8 +36,11 @@ export default function NavBar({ scrollMenu }) {
 				</svg>
 
 				<Logo styles="top-5 ..6x3:mt-0 ..5x2:-mt-1 ..6x3:pl-0 pl-20 ..6x3:top-2 .5x01:pl-2    ..5x1:flex-1    headerAbility ..5x2:absolute " />
-				<LinksHeader scrollMenu={scrollMenu} />
-				<Search />
+				{
+					showSearch ? <InputItemSearch setCloseHover={setCloseHover} scrollMenu={scrollMenu} setShowSearch={setShowSearch} /> : <><LinksHeader isHoverBasket={isHoverBasket} setIsHover={setIsHover} scrollMenu={scrollMenu} />
+						<Search setCloseHover={setCloseHover} isHoverBasket={isHoverBasket} setIsHover={setIsHover} scrollMenu={scrollMenu} setShowSearch={setShowSearch} /></>
+				}
+
 			</nav>
 			{scrollMenu && <div className='transition-all duration-500 bg-gray h-px w-91.7% .5x01:w-full mx-auto'></div>
 			}
