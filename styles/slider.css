@@ -1898,6 +1898,15 @@
 
 }
 
+@media (max-width: 800px) {
+	.swiperAdapt .swiper-slide {
+		display: flex;
+		justify-content: center;
+	}
+
+
+}
+
 .height-idea-S {
 	height: 337px;
 

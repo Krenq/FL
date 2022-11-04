@@ -41,6 +41,7 @@ module.exports = {
 			'..5x4': { max: '850px' },
 			'..5x4min': { min: '850px' },
 			'..5x5': { max: '800px' },
+			'..5x5.2': { max: '780px' },
 			'..6x1': { max: '750px' },
 			'..6x2': { max: '700px' },
 			'..6x3': { max: '650px' },

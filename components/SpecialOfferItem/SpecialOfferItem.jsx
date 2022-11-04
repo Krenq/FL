@@ -165,10 +165,10 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						/>
 					</div>}
 
-					<div className=" absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3 ..6x03:bottom-110px ..6x03:px-1">
+					<div className={` absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3   ..6x03:bottom-110px ..6x03:px-1 ${showSost ? 'bottom-40 ..5x5:!bottom-36' : ""}`}>
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
-								<p onClick={showSlide} className=" ..6x03:text-11px text-13px font-normal font-montserrat flex   leading-140% text-black-70pe">
+								<p onClick={showSlide} className=" ..6x03:text-11px   text-13px font-normal font-montserrat flex   leading-140% text-black-70pe">
 									<svg
 										className=" mr-0.5"
 										width="16"
@@ -231,7 +231,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 					</div>
 
-					{showAct && <div className={`absolute  -mb-0.5 bottom-14  left-0 right-0 ${isSearchItem ? '!bottom-9' : ""}`}>
+					{showAct && <div className={`absolute  -mb-0.5 bottom-14  left-0 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
 						<div className='relative w-full  px-11 bg-input-typing py-3 pt-3'>
 							<Swiper ref={slider} slidesPerView={2} navigation={true} modules={[Navigation]} className="mySwiperAct">
 
@@ -291,15 +291,22 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 
 					{showSost &&
-						<div className={`absolute bottom-12 -mb-0.5 z-10 left-0 right-0 ${isSearchItem ? '!bottom-9' : ""}`}>
-							<div className='relative w-full  px-7 bg-input-typing  py-4 pt-6'>
-								<small className='absolute right-0 font-medium left-0 text-9px text-center top-6px font-montserrat z-20'>Экономия при покупке в акции:</small>
+						<div className={`absolute bottom-12 -mb-1.5 z-10 left-0 ..5x5:!bottom-14 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
+							<div className='relative w-full ..7x001:px-2 ..6x04:px-10 ..6x6:px-7 ..7x1:px-5 px-6 bg-input-typing  py-6 pt-6 ..5x5:py-5px ..5x5:px-14 ..5x5:pt-5'>
+								<small className='absolute right-0 ..5x5:hidden left-0  text-11px text-center top-9px font-montserrat z-20'>Экономия при покупке в акции:</small>
+								<small className='absolute right-0 ..5x5:block hidden left-0  text-10px text-center top-9px font-montserrat z-20'>Экономия </small>
 
-								<Swiper ref={slider} slidesPerView={3} navigation={true} modules={[Navigation]} className="mySwiper">
+								<Swiper ref={slider} breakpoints={{
 
-									<SwiperSlide> <div className='relative  ml-1.5   mt-1 itemSlideDrop'>
+									800: {
+										slidesPerView: 3
+									}
+								}
+								} slidesPerView={2} navigation={true} modules={[Navigation]} className="mySwiper swiperAdapt mt-3 ">
+
+									<SwiperSlide> <div className='relative h-60px ..7x01:h-11 ..7x01:w-11 ..5x5:h-52px ..5x5:w-52px w-60px ml-1.5   mt-1 itemSlideDrop'>
 										<div className='absolute left-0 right-0 bottom-0 top-0 rounded bg-white-60pe z-10 flex items-center justify-center'>
-											<small className='absolute -left-1 -top-1 font-montserrat text-10px text-white bg-black-70pe px-1 rounded-xl'>400 ₽</small>
+											<small className='absolute -left-1 -top-1 font-montserrat text-11px text-white bg-black-70pe px-1 rounded-xl'>400 ₽</small>
 
 											<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M1.91 7.91313H0.75V5.5925C0.75 5.01235 1.33 4.43219 1.91 4.43219H12.35C12.93 4.43219 13.51 5.01235 13.51 5.5925V7.91313H12.35M1.91 7.91313V13.7147C1.91 14.2948 2.49 14.875 3.07 14.875H11.19C11.77 14.875 12.35 14.2948 12.35 13.7147V7.91313M1.91 7.91313H12.35M7.13 4.43219L7.13 14.875M7.13 4.43219C6.35667 2.78841 4.752 0.139023 3.36 1.5314C1.968 2.92377 5.1 4.43219 7.13 4.43219ZM7.13 4.43219C7.13 1.82154 9.73999 0.081024 10.9 1.24131C12.35 2.69168 9.45 4.43213 7.13 4.43219Z" stroke="#C5C1AB" strokeWidth="1.2" stroke-linecap="round" stroke-linejoin="round" />
@@ -308,19 +315,22 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 										</div>
 										<Image src={srcSliderImgOne} className='!rounded' width={'100%'} height={'100%'} />
 									</div></SwiperSlide>
-									<SwiperSlide> <div className='ml-1.5  marker: mt-1 itemSlideDrop'>
-										<small className='absolute left-0.5 -top-0 z-10 font-montserrat text-10px text-white bg-black-70pe px-1 rounded-xl'>700 ₽</small>
+									<SwiperSlide> <div className='relative ml-1.5 ..7x01:h-11 ..7x01:w-11 h-60px w-60px marker: mt-1 itemSlideDrop ..5x5:h-52px ..5x5:w-52px '>
+
+
+										<small className='absolute -left-1  -top-1 z-10 font-montserrat text-11px text-white bg-black-70pe px-1 rounded-xl'>700 ₽</small>
+
 
 										<Image className='rounded' width={'100%'} height={'100%'} src={srcSliderImgTwo} />
 									</div></SwiperSlide>
-									<SwiperSlide> <div className='ml-1.5   mt-1 itemSlideDrop'>
-										<small className='absolute left-0.5 -top-0 z-10 font-montserrat text-10px text-white bg-black-70pe px-1 rounded-xl'>300 ₽</small>
+									<SwiperSlide> <div className='relative ..7x01:h-11 ..7x01:w-11 ml-1.5 h-60px w-60px  mt-1 itemSlideDrop ..5x5:h-52px ..5x5:w-52px '>
+										<small className='absolute -left-1  -top-1 z-10 font-montserrat text-11px text-white bg-black-70pe px-1 rounded-xl'>700 ₽</small>
 
 										<Image width={'100%'} className='rounded' height={'100%'} src={srcSliderImgTree} />
 									</div></SwiperSlide>
-									<SwiperSlide> <div className='relative ml-1.5    mt-1 itemSlideDrop'>
+									<SwiperSlide> <div className='relative ..7x01:h-11 ..7x01:w-11 h-60px ..5x5:h-52px ..5x5:w-52px w-60px ml-1.5   mt-1 itemSlideDrop'>
 										<div className='absolute left-0 right-0 bottom-0 top-0 rounded bg-white-60pe z-10 flex items-center justify-center'>
-											<small className='absolute -left-1 -top-1 font-montserrat text-10px text-white bg-black-70pe px-1 rounded-xl'>400 ₽</small>
+											<small className='absolute -left-1 -top-1 font-montserrat text-11px text-white bg-black-70pe px-1 rounded-xl'>400 ₽</small>
 
 											<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M1.91 7.91313H0.75V5.5925C0.75 5.01235 1.33 4.43219 1.91 4.43219H12.35C12.93 4.43219 13.51 5.01235 13.51 5.5925V7.91313H12.35M1.91 7.91313V13.7147C1.91 14.2948 2.49 14.875 3.07 14.875H11.19C11.77 14.875 12.35 14.2948 12.35 13.7147V7.91313M1.91 7.91313H12.35M7.13 4.43219L7.13 14.875M7.13 4.43219C6.35667 2.78841 4.752 0.139023 3.36 1.5314C1.968 2.92377 5.1 4.43219 7.13 4.43219ZM7.13 4.43219C7.13 1.82154 9.73999 0.081024 10.9 1.24131C12.35 2.69168 9.45 4.43213 7.13 4.43219Z" stroke="#C5C1AB" strokeWidth="1.2" stroke-linecap="round" stroke-linejoin="round" />
@@ -329,24 +339,27 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 										</div>
 										<Image src={srcSliderImgOne} className='!rounded' width={'100%'} height={'100%'} />
 									</div></SwiperSlide>
-									<SwiperSlide> <div className='ml-1.5  marker: mt-1 itemSlideDrop'>
-										<small className='absolute left-0.5 -top-0 z-10 font-montserrat text-10px text-white bg-black-70pe px-1 rounded-xl'>700 ₽</small>
+									<SwiperSlide> <div className='relative ..7x01:h-11 ..7x01:w-11 ml-1.5 h-60px w-60px marker: mt-1 itemSlideDrop ..5x5:h-52px ..5x5:w-52px '>
+
+
+										<small className='absolute -left-1  -top-1 z-10 font-montserrat text-11px text-white bg-black-70pe px-1 rounded-xl'>700 ₽</small>
+
 
 										<Image className='rounded' width={'100%'} height={'100%'} src={srcSliderImgTwo} />
 									</div></SwiperSlide>
-									<SwiperSlide> <div className='ml-1.5   mt-1 itemSlideDrop'>
-										<small className='absolute left-0.5 -top-0 z-10 font-montserrat text-10px text-white bg-black-70pe px-1 rounded-xl'>300 ₽</small>
+									<SwiperSlide> <div className='relative ..7x01:h-11 ..7x01:w-11 ml-1.5 h-60px w-60px  mt-1 itemSlideDrop ..5x5:h-52px ..5x5:w-52px '>
+										<small className='absolute -left-1  -top-1 z-10 font-montserrat text-11px text-white bg-black-70pe px-1 rounded-xl'>700 ₽</small>
 
 										<Image width={'100%'} className='rounded' height={'100%'} src={srcSliderImgTree} />
 									</div></SwiperSlide>
 
 								</Swiper>
-								<button onClick={prevSlide} className='absolute left-0.5 top-11'>
+								<button onClick={prevSlide} className='absolute ..7x001:left-0 left-3 ..7x1:left-1 top-16 -mt-1 ..5x5:top-14 ..5x5:mt-0'>
 									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 11.8167L7.16788 8L11 4.175L9.82024 3L4.8 8L9.82024 13L11 11.8167Z" fill="black" />
 									</svg>
 								</button>
-								<button onClick={nextSlide} className='absolute right-0.5 top-11'>
+								<button onClick={nextSlide} className='absolute ..7x001:right-0 right-3 ..7x1:right-1 top-16 -mt-1 ..5x5:top-14 ..5x5:mt-0'>
 									<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M5 11.8167L8.83212 8L5 4.175L6.17976 3L11.2 8L6.17976 13L5 11.8167Z" fill="black" fillOpacity="0.7" />
 									</svg>
@@ -392,7 +405,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					)}
 
 					{obj.priceDe && (
-						<div className=" absolute bottom-11 flex">
+						<div className={` absolute bottom-11 flex  `}>
 							<p className="text-label-orange text-center text-sm my-4 ..6x03:hidden">
 								{obj.priceDe}
 							</p>
@@ -403,7 +416,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					)}
 
 					{obj.priceSale && (
-						<div className="flex flex-col absolute bottom-8 ..6x03:bottom-6">
+						<div className={`${showSost ? '!opacity-0' : ""} flex flex-col absolute bottom-8 ..6x03:bottom-6`}>
 							<div className=" flex flex-row font-montserrat font-normal text-base ..6x03:text-11px mb-2 mt-1">
 								<p className="text-center mr-2 text-gray-quick-silver line-through">
 									₽ {obj.priceSale.old}
