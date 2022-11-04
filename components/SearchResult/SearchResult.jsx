@@ -1,7 +1,12 @@
 
 import { useEffect } from 'react';
 import { useState } from 'react';
-import SearchWindowItemSpec from '../SearchWIndowItem/SearchWindowItemSpec';
+import two from '../../images/templates/2seaAct.jpg';
+import one from '../../images/templates/oneItemSearchSlider.jpg'
+import tree from '../../images/templates/treeItemSearch.jpg'
+import twoI from '../../images/templates/twoItemSearch.jpg'
+
+import SpecialOfferItem from '../SpecialOfferItem/SpecialOfferItem';
 const SearchResult = ({ isShow }) => {
 	const [isScroll, setIsScroll] = useState(false)
 
@@ -98,17 +103,19 @@ const SearchResult = ({ isShow }) => {
 			<div className="w-full bg-white  ">
 				<p className="h-38px bg-gray-light2 flex justify-center items-center font-montserrat">Результат поискового запроса: <span className="font-semibold"> 23</span></p>
 				<div className="flex flex-wrap overflow-auto justify-center searchWrapperResult ">
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec isActions={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
-					<SearchWindowItemSpec buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} isActions={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+					<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} buttonDE={true} isSearchItem={true} />
+
 
 					<div className='w-idia  bg-primary-searchBG flex flex-col px-11 itemSeeAll justify-center items-center    overflow-hidden'>
 

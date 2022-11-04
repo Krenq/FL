@@ -12,6 +12,12 @@ import useWindowSize from '../utils/useWindowSize';
 import SpecialOffersNext from './SpecialOffersNext';
 import SpecialOffersPrev from './SpecialOffersPrev';
 
+
+
+import oneL from '../../images/templates/oneItemSearchSlider.jpg'
+import treeL from '../../images/templates/treeItemSearch.jpg'
+import twoI from '../../images/templates/twoItemSearch.jpg'
+
 function SpecialOffers({ refL }) {
 	const divBlock = useRef(null),
 		slider = useRef(null);
@@ -331,6 +337,7 @@ function SpecialOffers({ refL }) {
 						iTab: true,
 						priceSale: { old: '999.00', new: '888.00' },
 					}}
+					srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
 				/>
 				<SpecialOfferItem
 					obj={{
@@ -378,6 +385,7 @@ function SpecialOffers({ refL }) {
 						iTab: true,
 						priceSale: { old: '999.00', new: '888.00' },
 					}}
+					srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
 				/>
 				<SpecialOfferItem
 					obj={{

@@ -1,11 +1,14 @@
 
-
+import two from '../../images/templates/2seaAct.jpg';
+import SpecialOfferItem from '../SpecialOfferItem/SpecialOfferItem';
+import tree from '../../images/templates/treeItemSearch.jpg'
+import twoI from '../../images/templates/twoItemSearch.jpg'
 import one from '../../images/templates/basket1.png'
 import twoP from '../../images/templates/productSearch.jpg'
 import twoT from '../../images/templates/productSearchTr.jpg'
 import searchOne from '../../images/templates/dropSearchOne.jpg'
 import SearchWindowItem from './SearchWindowItem';
-import SearchWindowItemSpec from '../SearchWIndowItem/SearchWindowItemSpec'
+
 import { useState } from 'react';
 
 const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) => {
@@ -38,12 +41,18 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 					</div>
 					<div className='flex justify-center foryou pb-5 overflow-auto flex-wrap'>
 
-						<SearchWindowItemSpec />
-						<SearchWindowItemSpec isActions={true} ml={true} />
 
-						<SearchWindowItemSpec />
-						<SearchWindowItemSpec ml={true} />
-						<SearchWindowItemSpec />
+						<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} />
+
+						<SpecialOfferItem isSearchI={true} isActions={true} ml={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} />
+
+
+						<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} />
+
+						<SpecialOfferItem isSearchI={true} isActions={true} ml={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} />
+
+						<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} />
+
 
 						<div className=' height-idea-S bg-primary-searchBG flex flex-col px-11 itemSeeAll justify-center items-center  ml-3 mt-3  overflow-hidden'>
 
