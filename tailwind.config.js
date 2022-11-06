@@ -21,6 +21,7 @@ module.exports = {
 			xl: '1440px',
 			overBar: '1750px',
 			'2xl': '1920px',
+			'.2x10': { max: '1900px' },
 			'.6x3': { max: '1600px' },
 			'.5x1': { max: '1536px' },
 			'.5x01': { max: '1500px' },
@@ -54,8 +55,10 @@ module.exports = {
 			'..7x11': { max: '430px' },
 			'..7x1': { max: '400px' },
 			'..7x001': { max: '360px' },
+			'..7x59': { max: '359px' },
 			'..7x002': { max: '355px' },
 			'..7x01': { max: '350px' },
+			'..7x230': { max: '330px' },
 			'..7x2': { max: '320px' },
 		},
 		colors: {

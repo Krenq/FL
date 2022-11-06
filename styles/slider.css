@@ -421,6 +421,10 @@
 		right: 130px !important;
 	}
 
+	.widthDetails {
+		width: 540px !important;
+		margin-right: 0 !important;
+	}
 
 }
 
@@ -431,6 +435,11 @@
 
 	.nextStories {
 		right: 30px !important;
+	}
+
+	.widthDetails {
+		width: 450px !important;
+
 	}
 }
 
@@ -450,6 +459,8 @@
 	.storiesOpacity .slick-list .slick-track .slick-active .mx-auto {
 		opacity: 1 !important;
 	}
+
+
 }
 
 .storiesOpacity {
@@ -975,6 +986,11 @@
 		transform: translateX(-320px);
 		height: 120px;
 		width: 800px;
+	}
+
+	.widthDetails {
+		width: 350px !important;
+
 	}
 }
 
@@ -1851,6 +1867,8 @@
 	}
 
 
+
+
 }
 
 @media (max-width: 1200px) {
@@ -1898,16 +1916,100 @@
 
 }
 
+.bg-shadow {
+	box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
+}
+
 @media (max-width: 800px) {
 	.swiperAdapt .swiper-slide {
 		display: flex;
 		justify-content: center;
 	}
 
+	.sliderCenter .swiper-slide {
+		display: flex;
+		justify-content: center;
+	}
+}
 
+.widthDetails {
+	width: 672px;
+	margin-right: 52px;
+}
+
+.letterSpacing-4px {
+	letter-spacing: 4px;
+}
+
+.letterSpacing-2px {
+	letter-spacing: 2px;
 }
 
 .height-idea-S {
 	height: 337px;
 
+}
+
+.w-480px {
+	width: 1000px !important;
+}
+
+.itemTonHover {
+	filter: drop-shadow(0px 0px 20px rgba(132, 132, 132, 0.2));
+}
+
+.itemTon:hover .itemTonHover {
+	opacity: 1 !important;
+	display: flex !important;
+}
+
+.unrotSearchHover {
+	transform: rotate(-45deg);
+}
+
+@media (max-width: 430px) {
+	.textdots {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+
+}
+
+@media (max-width: 400px) {
+	.adaptSlide {
+		width: 360px !important;
+		height: 360px !important;
+	}
+}
+
+@media (max-width: 350px) {
+	.adaptSlide {
+		width: 330px !important;
+		height: 330px !important;
+	}
+}
+
+@media (max-width: 330px) {
+	.adaptSlide {
+		width: 310px !important;
+		height: 310px !important;
+	}
+}
+
+@media (max-width: 330px) {
+	.adaptSlide {
+		width: 290px !important;
+		height: 290px !important;
+	}
+}
+
+.activeCard {
+	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+
+.leading-180 {
+	line-height: 180% !important;
 }

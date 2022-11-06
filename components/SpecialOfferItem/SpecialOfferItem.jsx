@@ -79,7 +79,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 	};
 	if (!isSearchI) {
 		return (
-			<div className=" min-h-317px ..6x03:h-317px h-428px flex justify-center  relative mt-2 p-2 border border-white hover:border-gray active_card mx-3">
+			<div className={` min-h-317px ..6x03:h-317px h-428px flex justify-center  relative mt-2 p-2 border border-white hover:border-gray active_card mx-3 ${obj.isDetails ? '!ml-0 hover:border-white !mt-0 mr-42px' : ""}`}>
 				<div className="flex flex-col  items-center max-w-252px mx-auto mt-5">
 					<div className="absolute flex left-0 top-0 z-20 px-2 pt-2 gap-0.5">
 						{obj.hit && (
@@ -99,6 +99,13 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								-15%
 							</small>
 						)}
+						{obj.isGif && <div className='p-2 flex items-center'>
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+							<p className='font-montserrat ml-2 font-semibold mt-0.5 text-2xl text-black-70pe'>{obj.gifTitle}</p>
+						</div>}
+
 					</div>
 
 					{obj.pDay && (
@@ -115,10 +122,10 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 							</div>
 						</>
 					)}
-
-					<div className="absolute top-5 right-3 ..6x03:right-1 z-10 cursor-pointer">
+					{obj.noIsHeart ? '' : <div className="absolute top-5 right-3 ..6x03:right-1 z-10 cursor-pointer">
 						<Image src={icons.ICON_HEART_GRAY} width="22" height="18" />
-					</div>
+					</div>}
+
 
 					<div className=" ..6x03:hidden">
 						<Image
@@ -165,7 +172,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						/>
 					</div>}
 
-					<div className={` absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3   ..6x03:bottom-110px ..6x03:px-1 ${showSost ? 'bottom-40 ..5x5:!bottom-36' : ""}`}>
+					<div className={`${obj.timeOver ? 'bottom-40' : ''}  absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3   ..6x03:bottom-110px ..6x03:px-1 ${showSost ? 'bottom-40 ..5x5:!bottom-36' : ""}`}>
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
 								<p onClick={showSlide} className=" ..6x03:text-11px   text-13px font-normal font-montserrat flex   leading-140% text-black-70pe">
@@ -186,13 +193,28 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 									Акции
 								</p>
 							)}
+							{obj.isSost && (
+								<p onClick={showActL} className={` ..6x03:text-11px   text-13px ${obj.isDetails ? 'text-sm ' : ""} font-normal font-montserrat flex items-center  leading-140% text-black-70pe`}>
+									<svg
+										className={`mr-0.5 ${obj.isDetails ? 'mr-6px' : ""}`}
+										width="16"
+										height="16"
+										viewBox="0 0 16 16"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<circle cx="8" cy="8" r="7.5" stroke="#DBDCDA" />
+										<path
+											d="M8.83327 3.55469C8.61226 3.55469 8.4003 3.64248 8.24402 3.79877C8.08774 3.95505 7.99994 4.16701 7.99994 4.38802C7.99994 4.60903 8.08774 4.821 8.24402 4.97728C8.4003 5.13356 8.61226 5.22135 8.83327 5.22135C9.05429 5.22135 9.26625 5.13356 9.42253 4.97728C9.57881 4.821 9.66661 4.60903 9.66661 4.38802C9.66661 4.16701 9.57881 3.95505 9.42253 3.79877C9.26625 3.64248 9.05429 3.55469 8.83327 3.55469ZM8.63327 6.20469C7.97216 6.26024 6.16661 7.69913 6.16661 7.69913C6.0555 7.78247 6.08883 7.77691 6.17772 7.93247C6.26661 8.08247 6.2555 8.09358 6.36105 8.02135C6.47216 7.94913 6.6555 7.83247 6.96105 7.64358C8.13883 6.88802 7.14994 8.63247 6.64439 11.5714C6.44439 13.0269 7.7555 12.2769 8.09439 12.0547C8.42772 11.838 9.32216 11.2214 9.41105 11.1602C9.53327 11.0769 9.44439 11.0102 9.34994 10.8714C9.28327 10.7769 9.21661 10.8436 9.21661 10.8436C8.8555 11.0825 8.19439 11.5825 8.1055 11.2658C7.99994 10.9491 8.67772 8.77691 9.04994 7.28247C9.11105 6.92691 9.27772 6.14913 8.63327 6.20469Z"
+											fill="#DBDCDA"
+										/>
+									</svg>
+									Состав набора
+								</p>
+							)}
 						</div>
 						{obj.balls ? <div className="flex flex-row items-center">
-
-							<p className="mr-1 font-montserrat font-medium ..6x03:text-10px text-13px leading-140% text-gray-quick-silver">
-								1.4 Б
-							</p>
-							<svg className='..5x2:h-3 ..5x2:w-3'
+							{obj.isFirstFoliage && <svg className='..5x2:h-3 mr-1 ..5x2:w-3'
 								width="16"
 								height="16"
 								viewBox="0 0 16 16"
@@ -223,7 +245,43 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 									strokeLinecap="round"
 									strokeLinejoin="round"
 								/>
-							</svg>
+							</svg>}
+							<p className="mr-1 font-montserrat font-medium ..6x03:text-10px text-13px leading-140% text-black-70pe">
+								1.4 Б
+							</p>
+							{!obj.isFirstFoliage && <svg className='..5x2:h-3 ..5x2:w-3'
+								width="16"
+								height="16"
+								viewBox="0 0 16 16"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667"
+									stroke="#337202"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+								<path
+									d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325"
+									stroke="#337202"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+								<path
+									d="M8.66667 9.33333L9 5"
+									stroke="#337202"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+								<path
+									d="M8.66666 9.33333L5.33333 9"
+									stroke="#337202"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								/>
+							</svg>}
+
 
 						</div> : ""
 
@@ -297,7 +355,12 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								<small className='absolute right-0 ..5x5:block hidden left-0  text-10px text-center top-9px font-montserrat z-20'>Экономия </small>
 
 								<Swiper ref={slider} breakpoints={{
-
+									600: {
+										slidesPerView: 3
+									},
+									780: {
+										slidesPerView: 2
+									},
 									800: {
 										slidesPerView: 3
 									}
@@ -370,13 +433,32 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						</div>
 					}
 
+					{obj.timeOver && <div className=" absolute bottom-32 left-0 pb-3 px-2 z-20 ">
+						<p className={`font-noto-sans text-sm font-light text-black-70pe`}>
+							До {obj.timeOver}
+						</p>
+					</div>
+					}
 
 
 					<div className=" absolute bottom-20 px-2 ..6x03:px-0 ..6x03:bottom-70px">
-						<p className=" ..6x03:text-10px text-13px font-montserrat font-normal leading-150% text-center text-gray-quick-silver tracking-widest card_text uppercase">
+						<p className={` ..6x03:text-10px text-13px font-montserrat font-normal leading-150% text-center text-gray-quick-silver tracking-widest card_text uppercase ${obj.isDetails ? 'text-start text-black' : ""}`}>
 							{obj.text}
 						</p>
 					</div>
+					{
+						obj.DetailsPrice && <div className={`flex absolute bottom-11 left-2`}>
+							<div className=" flex flex-row font-montserrat font-normal text-base mb-2 mt-1">
+								<p className="text-center mr-2 text-gray-quick-silver line-through">
+									₽ {obj.DetailsPrice.oldPrice}
+								</p>
+								<p className="text-center text-label-pink-2">
+									₽ {obj.DetailsPrice.price}
+								</p>
+							</div>
+						</div>
+					}
+
 
 					{obj.colors && (
 						<div className=" absolute bottom-36 flex flex-row justify-center items-center mt-0.5 ..6x03:bottom-14">
@@ -447,9 +529,16 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						</div>
 					)}
 
-					{!obj.priceDe && (
+					{!obj.priceDe && !obj.DetailsPrice && (
 						<div className="sect_buttons absolute bottom-0 flex-row hidden w-full">
 							<button className="w-full border hover:border-primary border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white">
+								КУПИТЬ
+							</button>
+						</div>
+					)}
+					{obj.DetailsPrice && (
+						<div className="  absolute bottom-0 flex-row w-full">
+							<button className="w-full  text-primary font-medium text-xs    px-3 py-2.5 font-montserrat   leading-150%  bg-gray-light2 h-11">
 								КУПИТЬ
 							</button>
 						</div>

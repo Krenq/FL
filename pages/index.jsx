@@ -26,7 +26,7 @@ import Trands from '../components/Trands/Trands';
 import 'swiper/css';
 import ButtonTop from '../components/ButtonTop/ButtonTop';
 import SearchResult from '../components/SearchResult/SearchResult';
-import SearchWindow from '../components/SearchWindow/SearchWIndow';
+
 
 
 
