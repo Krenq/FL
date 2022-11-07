@@ -487,8 +487,8 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					)}
 
 					{obj.priceDe && (
-						<div className={` absolute bottom-11 flex  `}>
-							<p className="text-label-orange text-center text-sm my-4 ..6x03:hidden">
+						<div className={` absolute bottom-11 flex  items-center`}>
+							<p className="text-label-orange font-montserrat text-center text-sm my-4 ..6x03:hidden">
 								{obj.priceDe}
 							</p>
 							<p className=" ml-1 text-label-orange font-lora text-center text-sm my-4 ..6x03:hidden">

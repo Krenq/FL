@@ -190,7 +190,7 @@ const Partners = ({ refL }) => {
 								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
 									или бонусы сразу за две иномарки!
 								</small>
-								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
+								<button className="text-white ..5x2:h-8 font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
 									Подробнее
 								</button>
 							</div>
@@ -241,59 +241,7 @@ const Partners = ({ refL }) => {
 								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
 									или бонусы сразу за две иномарки!
 								</small>
-								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
-									Подробнее
-								</button>
-							</div>
-						</div>
-					</section>
-
-
-					<section className="pb-20 ">
-
-						<div className="flex ..5x2:flex-col bg-gray-light">
-
-							<div className="relative  ..6x6:hidden ..5x3:w-full">
-								<Image
-									className="object-cover h-full"
-									src={onepartner}
-									width={1028}
-									height={432}
-									alt="discountImg"
-								/>
-								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
-									Авто мечты ближе, чем <br /> кажется!
-								</p>
-							</div>
-
-							<div className="relative image-containerPART hidden ..6x6:block ..5x3:w-full">
-								<Image
-									className="object-cover h-full image"
-									src={partnersMobile}
-									width={1028}
-									height={432}
-									alt="discountImg"
-								/>
-								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
-									Авто мечты ближе,<br /> чем кажется!
-								</p>
-							</div>
-
-
-							<div className="p-10 ..6x3:p-5 ..6x3:h-44 ..6x6:px-3  relative font-montserrat font-medium text-26px ">
-								<p className="text-2xl mb-4  whitespace-nowrap ..6x3:hidden">
-									Авто за полцены <br /> совершенно <br />{' '}
-									<span className="italic">БЕСПЛАТНО</span>
-								</p>
-
-								<p className="text-2xl mb-2 text-16px font-montserrat ..7x01:text-sm leading-120% whitespace-nowrap hidden ..6x3:block">
-									Авто за полцены совершенно <br />
-									<span className="italic">БЕСПЛАТНО</span>
-								</p>
-								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
-									или бонусы сразу за две иномарки!
-								</small>
-								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
+								<button className="text-white ..5x2:h-8 font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
 									Подробнее
 								</button>
 							</div>
@@ -343,7 +291,57 @@ const Partners = ({ refL }) => {
 								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
 									или бонусы сразу за две иномарки!
 								</small>
-								<button className="text-white font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
+								<button className="text-white ..5x2:h-8 font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
+									Подробнее
+								</button>
+							</div>
+						</div>
+					</section>
+					<section className="pb-20 ">
+
+						<div className="flex ..5x2:flex-col bg-gray-light">
+
+							<div className="relative  ..6x6:hidden ..5x3:w-full">
+								<Image
+									className="object-cover h-full"
+									src={onepartner}
+									width={1028}
+									height={432}
+									alt="discountImg"
+								/>
+								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
+									Авто мечты ближе, чем <br /> кажется!
+								</p>
+							</div>
+
+							<div className="relative image-containerPART hidden ..6x6:block ..5x3:w-full">
+								<Image
+									className="object-cover h-full image"
+									src={partnersMobile}
+									width={1028}
+									height={432}
+									alt="discountImg"
+								/>
+								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
+									Авто мечты ближе,<br /> чем кажется!
+								</p>
+							</div>
+
+
+							<div className="p-10 ..6x3:p-5 ..6x3:h-44 ..6x6:px-3  relative font-montserrat font-medium text-26px ">
+								<p className="text-2xl mb-4  whitespace-nowrap ..6x3:hidden">
+									Авто за полцены <br /> совершенно <br />{' '}
+									<span className="italic">БЕСПЛАТНО</span>
+								</p>
+
+								<p className="text-2xl mb-2 text-16px font-montserrat ..7x01:text-sm leading-120% whitespace-nowrap hidden ..6x3:block">
+									Авто за полцены совершенно <br />
+									<span className="italic">БЕСПЛАТНО</span>
+								</p>
+								<small className="..7x2:text-xs ..6x6:absolute ..6x6:top-16 orBonus ..6x3:text-13px  text-base ..5x01:text-sm whitespace-nowrap">
+									или бонусы сразу за две иномарки!
+								</small>
+								<button className="text-white ..5x2:h-8 font-montserrat ..6x3:py-10px buttonY ..6x3:px-5 hover:bg-white hover:text-primary transition-all text-xs bg-primary py-3 h-11 ..5x2:h-auto px-10 absolute bottom-4 right-7 ..5x01:right-4 ..6x03:bottom-4">
 									Подробнее
 								</button>
 							</div>

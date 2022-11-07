@@ -37,7 +37,7 @@ export default function SeaActItem({ obj }) {
 										strokeLinejoin="round"
 									/>
 								</svg>
-								<small className="font-bold text-2xl leading-140% font-montserrat ml-2 text-gray-quick-silver">
+								<small className="font-semibold text-2xl leading-140% font-montserrat ml-4 text-gray-quick-silver">
 									4=5
 								</small>
 							</div>
@@ -63,7 +63,7 @@ export default function SeaActItem({ obj }) {
 							{obj.iTab && (
 								<p className="text-13px font-normal font-montserrat flex items-center leading-140% text-gray-quick-silver">
 									<svg
-										className=" mr-0.5"
+										className=" mr-1"
 										width="16"
 										height="16"
 										viewBox="0 0 16 16"
@@ -81,38 +81,14 @@ export default function SeaActItem({ obj }) {
 							)}
 						</div>
 						<div className="flex flex-row items-center">
-							<svg
-								width="16"
-								height="16"
-								viewBox="0 0 16 16"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667"
-									stroke="#5D986A"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-								<path
-									d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325"
-									stroke="#5D986A"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-								<path
-									d="M8.66667 9.33333L9 5"
-									stroke="#5D986A"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
-								<path
-									d="M8.66666 9.33333L5.33333 9"
-									stroke="#5D986A"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-								/>
+
+							<svg className='..6x5:w-3 ..6x5:h-3 mr-1' width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.75 10.75C7.75 10.75 4.5 11 2.75 9C1 7 1 1 1 1C1 1 7 0.75 9 2.25C11 3.75 10.5 8 10.5 8" stroke="#337202" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M11 11C11 11 8.20518 8.88788 6.5 7C4.79483 5.11213 4 3.25 4 3.25" stroke="#337202" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M6.5 7L6.75 3.75" stroke="#337202" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M6.5 7L4 6.75" stroke="#337202" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
 							</svg>
+
 							<p className=" font-montserrat font-medium text-13px leading-140% text-gray-quick-silver">
 								1.4 Б
 							</p>

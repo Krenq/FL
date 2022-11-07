@@ -16,7 +16,7 @@ export default function NavBar({ scrollMenu, showSearch, setShowSearch }) {
 
 			<nav className={`h-100px ${scrollMenu ? '!h-80px' : ''}   flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center`}>
 				<svg
-					className="hidden   ..7x1:ml-3 ..6x6:h-5 ..6x6:w-5 ..5x2:block ml-5 cursor-pointer"
+					className="hidden   ..7x1:ml-3 ..6x6:h-6 ..6x6:w-6 ..5x2:block ml-5 cursor-pointer"
 					width="24"
 					height="24"
 					viewBox="0 0 24 24"

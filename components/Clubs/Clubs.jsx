@@ -4,7 +4,7 @@ import two from '../../images/templates/2rembg.png';
 
 function Clubs({ refL }) {
 	return (
-		<section ref={refL} id='sec-13' className="relative bg-nude-2 mt-16 .1x1:mt-14">
+		<section ref={refL} id='sec-13' className="relative h360 bg-nude-2 mt-16 .1x1:mt-14">
 			<div className="absolute ..5x2:blur-sm h-80 w-80 right-0 bottom-0  ..5x2:-bottom-10   ..5x2:w-40 ..5x2:h-40 .4x1:-bottom-32">
 				<Image className="object-cover " src={one} width={486} height={486} alt="specialOffersImg" />
 			</div>
@@ -15,7 +15,7 @@ function Clubs({ refL }) {
 
 
 			<div>
-				<p className='font-lora text-6xl  border-white text-white pt-8 top-6 ..5x2:top-10 pb-7 px-6 ..5x2:text-4xl absolute ability left-1/2 border-4 rounded-50 border-dashed'>De</p>
+				<p className='font-lora text-6xl  border-white text-white pt-8 top-6 ..5x2:top-10 pb-7 px-6 ..5x2:text-4xl absolute ability left-1/2 border-4 customWB rounded-50 border-dashed'>De</p>
 			</div>
 
 			<p className="text-26px font-montserrat font-medium pt-32 -mt-1 absolute -top-8 left-1/2 ability ..5x2:text-16px w-full text-center">
@@ -35,7 +35,7 @@ function Clubs({ refL }) {
 				<div className='w-24 ..6x3:bottom-40   ..6x3:top-auto ..5x2:top-44  mt-1 ..7x01:bottom-38 h-3px ability absolute hrSea left-1/2  bg-white'></div>
 
 			</div>
-			<div className="..6x2:w-full ..6x2:flex ..6x2:justify-center ..7x001:ml-2 absolute left-1/2 ability z-10 bottom-20 ..5x2:bottom-28">
+			<div className="..6x2:w-full ..6x2:flex ..6x2:justify-center ..7x001:ml-2 absolute left-1/2 ability z-10 bottom-20 ..5x2:bottom-24 ">
 				<button className="mr-4  ..7x11:text-10px border-2   py-3 px-6 text-white bg-primary border-primary transition-all font-montserrat ..5x2:py-6px ..5x2:px-5  text-xs hover:bg-white hover:text-primary ">
 					Вступить в клуб
 				</button>

@@ -23,13 +23,29 @@ import tenTon from '../images/templates/ton10.png'
 
 import defailFilterTwo from '../images/templates/detailFilterTwo.jpg'
 
+
+import detailOne from '../images/templates/imageDetailVOne.jpg'
+import detailTwo from '../images/templates/imageDetailVTwo.jpg'
+import detailTree from '../images/templates/imageDetailVTree.jpg'
+import detailFour from '../images/templates/imageDetailVFour.jpg'
+import detailFive from '../images/templates/imageDetailFive.jpg'
+
+import detailSix from '../images/templates/imageDetailVSix.jpg'
+
+import commentsPhoto from '../images/templates/commentsPhoto.jpg'
+
+
+import avatar from '../images/templates/avatar.jpg'
+
 import 'swiper/css';
 import SpecialOfferItem from "../components/SpecialOfferItem/SpecialOfferItem";
+import Footer from "../components/Footer/Footer";
 
 const DetailsCard = () => {
 	const [showSearch, setShowSearch] = useState(false),
 		slider = useRef(null),
-		sliderFilt = useRef(null)
+		sliderFilt = useRef(null),
+		sliderPhoto = useRef(null)
 
 	const [filter, setFilter] = useState({
 		act: true,
@@ -66,7 +82,12 @@ const DetailsCard = () => {
 		}
 
 
-
+	const nextSlidePhoto = () => {
+		if (sliderPhoto.current !== null && sliderPhoto.current.swiper !== null) sliderPhoto.current.swiper.slideNext();
+	},
+		prevSlidePhoto = () => {
+			if (sliderPhoto.current !== null && sliderPhoto.current.swiper !== null) sliderPhoto.current.swiper.slidePrev();
+		}
 
 
 
@@ -705,9 +726,10 @@ const DetailsCard = () => {
 
 								</div>
 								<div className="flex w-full">
-									<p className="font-montserrat text-gray-quick-silver flex items-center">В наличии <span className="ml-1.5 font-medium text-primary flex items-center"> {'>'} 50 шт. <svg className="mx-5" width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M11.0025 3.07918L10.6023 2.54661C9.95611 1.6869 9.05598 1.05215 8.02922 0.732181C7.00247 0.412208 5.90109 0.423218 4.88094 0.763651C3.86079 1.10408 2.97353 1.7567 2.3447 2.62916C1.7159 3.50157 1.37735 4.54961 1.37695 5.62501L11.0025 3.07918ZM11.0025 3.07918L11.4021 2.54606M11.0025 3.07918L11.4021 2.54606M11.4021 2.54606C11.879 1.90963 12.4979 1.39328 13.2095 1.03808C13.9211 0.682885 14.7058 0.498642 15.5011 0.500008L15.502 8.2786e-06M11.4021 2.54606L15.502 8.2786e-06M15.502 8.2786e-06L15.5014 0.500008C16.8603 0.501548 18.1631 1.04206 19.124 2.00295C20.0849 2.96385 20.6254 4.26666 20.627 5.62557C20.6267 8.2878 19.0826 11.1106 15.8567 14.0139C14.3979 15.3216 12.8113 16.4794 11.121 17.4698C11.0845 17.4896 11.0436 17.5 11.002 17.5C10.9592 17.5 10.9171 17.489 10.8798 17.4681L10.6355 17.9044L10.8798 17.4681C10.695 17.3646 8.29377 16.0012 5.94542 13.8396C3.57592 11.6585 1.37703 8.77146 1.37695 5.62518L15.502 8.2786e-06Z" fill="white" stroke="#DCE0DF" />
-									</svg></span>
+									<p className="font-montserrat text-gray-quick-silver flex items-center">В наличии <span className="ml-1.5 font-medium text-primary flex items-center"> {'>'} 50 шт. <svg className="mx-4 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill="#EDEEEC" />
+									</svg>
+									</span>
 									</p>
 									<div className="h-14 border w-222px border-gray-light2 flex items-center justify-center">
 										<button><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -863,13 +885,8 @@ const DetailsCard = () => {
 									<path d="M16.3839 3.36612L15.9596 3.79038L15.9596 3.79038L16.3839 3.36612ZM26.4922 13.4744L26.9177 13.0514L26.9165 13.0502L26.4922 13.4744ZM26.4922 18.4094L26.9171 18.833L26.9177 18.8325L26.4922 18.4094ZM26.4896 18.4121L26.9138 18.8363L26.9145 18.8357L26.4896 18.4121ZM18.4238 26.4778L17.9996 26.0535L17.9994 26.0537L18.4238 26.4778ZM13.4713 26.4779L13.8958 26.0538L13.8954 26.0534L13.4713 26.4779ZM3.36661 16.3844L2.94258 16.8089L2.94258 16.8089L3.36661 16.3844ZM5.5 14.9818H4.9C4.9 15.1411 4.96331 15.2938 5.07597 15.4063L5.5 14.9818ZM5.5 5.5V4.9C5.16863 4.9 4.9 5.16863 4.9 5.5H5.5ZM15.24 24.711L15.6645 24.287L15.6641 24.2865L15.24 24.711ZM16.655 24.7111L16.2308 24.2868L16.2305 24.2871L16.655 24.7111ZM24.7192 16.6469L25.1435 17.0712L25.1448 17.0698L24.7192 16.6469ZM24.7203 16.6458L25.1459 17.0687L25.1465 17.0682L24.7203 16.6458ZM24.7203 15.2381L25.1465 14.8157L25.1459 14.8152L24.7203 15.2381ZM24.7192 15.2369L25.1448 14.814L25.1435 14.8127L24.7192 15.2369ZM14.9822 5.5L15.4065 5.07574C15.294 4.96321 15.1414 4.9 14.9822 4.9V5.5ZM4.25 2.4C3.22827 2.4 2.4 3.22827 2.4 4.25H3.6C3.6 3.89101 3.89101 3.6 4.25 3.6V2.4ZM15.5 2.4H4.25V3.6H15.5V2.4ZM16.8081 2.94185C16.4612 2.59491 15.9907 2.4 15.5 2.4V3.6C15.6724 3.6 15.8377 3.66848 15.9596 3.79038L16.8081 2.94185ZM26.9177 18.8325C28.5074 17.2333 28.5074 14.6506 26.9177 13.0514L26.0667 13.8974C27.1911 15.0285 27.1911 16.8554 26.0667 17.9864L26.9177 18.8325ZM26.9145 18.8357L26.9171 18.833L26.0672 17.9859L26.0646 17.9885L26.9145 18.8357ZM18.8481 26.9021L26.9138 18.8363L26.0653 17.9878L17.9996 26.0535L18.8481 26.9021ZM15.9476 28.1043C17.0355 28.1043 18.0794 27.6714 18.8483 26.9019L17.9994 26.0537C17.4554 26.5981 16.7169 26.9043 15.9476 26.9043V28.1043ZM13.0469 26.9019C13.8159 27.6717 14.8594 28.1043 15.9476 28.1043V26.9043C15.1779 26.9043 14.4398 26.5984 13.8958 26.0538L13.0469 26.9019ZM2.94258 16.8089L13.0473 26.9024L13.8954 26.0534L3.79064 15.9599L2.94258 16.8089ZM2.4 15.5C2.4 15.991 2.59519 16.4619 2.94258 16.8089L3.79064 15.9599C3.66858 15.838 3.6 15.6725 3.6 15.5H2.4ZM2.4 4.25V15.5H3.6V4.25H2.4ZM6.1 14.9818V5.5H4.9V14.9818H6.1ZM15.9476 24.4043C15.8414 24.4043 15.7396 24.3621 15.6645 24.287L14.8155 25.1351C15.1157 25.4355 15.5229 25.6043 15.9476 25.6043V24.4043ZM16.2305 24.2871C16.1556 24.3621 16.0538 24.4043 15.9476 24.4043V25.6043C16.3723 25.6043 16.7795 25.4355 17.0795 25.1351L16.2305 24.2871ZM24.2949 16.2227L16.2308 24.2868L17.0793 25.1353L25.1435 17.0712L24.2949 16.2227ZM24.2947 16.2229L24.2936 16.224L25.1448 17.0698L25.1459 17.0687L24.2947 16.2229ZM24.2941 15.6604C24.4486 15.8163 24.4486 16.0676 24.2941 16.2235L25.1465 17.0682C25.7645 16.4446 25.7645 15.4393 25.1465 14.8157L24.2941 15.6604ZM24.2936 15.6599L24.2947 15.661L25.1459 14.8152L25.1448 14.814L24.2936 15.6599ZM14.558 5.92426L24.2949 15.6612L25.1435 14.8127L15.4065 5.07574L14.558 5.92426ZM5.5 6.1H14.9822V4.9H5.5V6.1ZM26.9165 13.0502L16.8081 2.94185L15.9596 3.79038L26.0679 13.8987L26.9165 13.0502ZM15.6641 24.2865L5.92403 14.5573L5.07597 15.4063L14.816 25.1355L15.6641 24.2865ZM10.8125 12.975C12.0068 12.975 12.975 12.0068 12.975 10.8125H11.775C11.775 11.3441 11.3441 11.775 10.8125 11.775V12.975ZM12.975 10.8125C12.975 9.61819 12.0068 8.65 10.8125 8.65V9.85C11.3441 9.85 11.775 10.2809 11.775 10.8125H12.975ZM10.8125 8.65C9.61819 8.65 8.65 9.61819 8.65 10.8125H9.85C9.85 10.2809 10.2809 9.85 10.8125 9.85V8.65ZM8.65 10.8125C8.65 12.0068 9.61819 12.975 10.8125 12.975V11.775C10.2809 11.775 9.85 11.3441 9.85 10.8125H8.65Z" fill="white" mask="url(#path-1-inside-1_2585_696349)" />
 								</svg>
 
+								<p className='font-montserrat font-semibold ..6x04:text-13px   ..6x04:font-medium'>Промокод</p>
 
-								<div>
-									<p className='font-montserrat  font-semibold  ..6x04:text-13px   ..6x04:font-medium'>Промокод</p>
-
-
-
-								</div>
 							</div>
 						</div>
 					</div>
@@ -1116,7 +1133,7 @@ const DetailsCard = () => {
 						</button>
 					</div>
 				</section>
-				<section className="px-222px mx-2 pb-32">
+				<section className="px-222px mx-2 ">
 					<div className="flex w-full bg-label-bg rounded">
 						<p className="flex-1 activeCard h-86px flex font-montserrat font-medium text-lg justify-center items-center"><svg className="mr-3" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M5.33333 3.99999C4.96515 3.99999 4.66667 4.29847 4.66667 4.66666V27.3333C4.66667 27.7015 4.96513 28 5.33333 28H22V4.66666C22 4.29846 21.7015 3.99999 21.3333 3.99999H5.33333ZM24.6667 13.3333V4.66666C24.6667 2.82573 23.1743 1.33333 21.3333 1.33333H5.33333C3.49239 1.33333 2 2.82572 2 4.66666V27.3333C2 29.1743 3.4924 30.6667 5.33333 30.6667H26.6667C28.5076 30.6667 30 29.1743 30 27.3333V16C30 14.5272 28.8061 13.3333 27.3333 13.3333H24.6667ZM24.6667 16V28H26.6667C27.0349 28 27.3333 27.7015 27.3333 27.3333V16H24.6667ZM6 8C6 7.26362 6.59695 6.66666 7.33333 6.66666H12.6667C13.403 6.66666 14 7.26362 14 8C14 8.73637 13.403 9.33333 12.6667 9.33333H7.33333C6.59695 9.33333 6 8.73637 6 8ZM6 12.6667C6 11.9303 6.59695 11.3333 7.33333 11.3333H15.3333C16.0697 11.3333 16.6667 11.9303 16.6667 12.6667C16.6667 13.403 16.0697 14 15.3333 14H7.33333C6.59695 14 6 13.403 6 12.6667Z" fill="black" stroke="white" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -1139,7 +1156,7 @@ const DetailsCard = () => {
 						</svg>
 							Материалы</p>
 					</div>
-					<div className="mt-8 flex">
+					<div className="mt-8 flex  pb-32">
 						<div>
 							<h4 className="font-medium text-xl font-montserrat mb-3">О товаре</h4>
 							<p className="font-montserrat leading-180 mb-8">Маска отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения, придает коже ухоженный вид. Насыщает питательными элементами, удерживает влагу внутри клеток, повышая упругость кожи и замедляя процесс образования морщин</p>
@@ -1186,10 +1203,337 @@ const DetailsCard = () => {
 						</div>
 					</div>
 
+					<div>
+						<h4 className="font-montserrat font-medium text-xl mb-3">Фото и видео отзывы</h4>
+						<div className="mb-60px relative">
+							<Swiper ref={sliderPhoto} slidesPerView={7} navigation={true} modules={[Navigation]}  >
+
+
+								<SwiperSlide className="mr-2 cursor-pointer">
+									<Image src={detailOne} />
+								</SwiperSlide>
+								<SwiperSlide className="mr-2 cursor-pointer">
+									<Image src={detailTwo} />
+								</SwiperSlide>
+								<SwiperSlide className="mr-2 cursor-pointer">
+									<Image src={detailTree} />
+								</SwiperSlide>
+								<SwiperSlide className="mr-2 relative cursor-pointer">
+									<svg className="absolute ability left-1/2 top-16 z-10" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M38.8635 30.8286C39.4964 30.4632 40.2761 30.4632 40.909 30.8286L62.3863 43.2286C63.0191 43.5939 63.409 44.2692 63.409 45C63.409 45.7307 63.0191 46.406 62.3863 46.7714L40.909 59.1713C40.2761 59.5367 39.4964 59.5367 38.8635 59.1713C38.2307 58.806 37.8408 58.1307 37.8408 57.3999V32.6C37.8408 31.8692 38.2307 31.194 38.8635 30.8286ZM41.9317 36.1429V53.8571L57.2726 45L41.9317 36.1429Z" fill="white" />
+										<circle cx="45" cy="45" r="44.5" stroke="white" stroke-opacity="0.8" />
+									</svg>
+									<Image src={detailFour} />
+								</SwiperSlide>
+								<SwiperSlide className="mr-2 cursor-pointer">
+									<Image src={detailFive} />
+								</SwiperSlide>
+								<SwiperSlide className="mr-2 cursor-pointer">
+									<Image src={detailSix} />
+								</SwiperSlide>
+								<SwiperSlide className="mr-2 cursor-pointer">
+									<Image src={detailSix} />
+								</SwiperSlide>
+								<SwiperSlide className="mr-2 cursor-pointer">
+									<Image src={detailSix} />
+								</SwiperSlide>
+
+							</Swiper>
+
+							<button onClick={prevSlidePhoto} className='activeArrow absolute ..5x2:hidden h-8 w-8 bg-white  -left-8   top-20 flex justify-center  rounded-56px items-center  z-10'>
+								<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill="black" />
+								</svg>
+
+							</button>
+							<button onClick={nextSlidePhoto} className=' absolute  ..5x2:hidden right-36 h-8 w-8 top-20 bg-white z-10 flex justify-center items-center rounded-56px'>
+								<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill="black" />
+								</svg>
+
+
+
+							</button>
+
+						</div>
+						<div className="flex ">
+							<div className="mr-60px">
+								<div className="flex items-center mb-6 ">
+									<p className="font-montserrat mr-4 font-medium text-xl">5 отзывов со средней оценкой 4,4</p>
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1945_1209386)">
+											<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+										</g>
+										<defs>
+											<clipPath id="clip0_1945_1209386">
+												<rect width="18" height="18" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1945_1209386)">
+											<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+										</g>
+										<defs>
+											<clipPath id="clip0_1945_1209386">
+												<rect width="18" height="18" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1945_1209386)">
+											<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+										</g>
+										<defs>
+											<clipPath id="clip0_1945_1209386">
+												<rect width="18" height="18" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_1945_1209386)">
+											<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+										</g>
+										<defs>
+											<clipPath id="clip0_1945_1209386">
+												<rect width="18" height="18" fill="white" />
+											</clipPath>
+										</defs>
+									</svg>
+									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" fill="#DBDCDA" />
+									</svg>
+
+								</div>
+								<button className="h-11 px-5 mb-6 font-montserrat text-xs text-white font-medium bg-primary flex items-center justify-center"><svg className="mr-6px" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M7.96233 9.3066C7.57939 9.05131 7.062 9.15479 6.80671 9.53773C6.55141 9.92067 6.65489 10.4381 7.03783 10.6934L10.3256 12.8852C10.8854 13.2584 11.6147 13.2584 12.1746 12.8852L15.4623 10.6934C15.8453 10.4381 15.9488 9.92067 15.6935 9.53773C15.4382 9.15479 14.9208 9.05131 14.5378 9.3066L11.2501 11.4984L7.96233 9.3066Z" fill="white" />
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M1.66675 6.66665C1.66675 4.8257 3.15913 3.33331 5.00008 3.33331H12.5001C14.0835 3.33331 15.4091 4.43742 15.749 5.91777C17.2293 6.25761 18.3334 7.58318 18.3334 9.16665V14.1666C18.3334 16.0076 16.841 17.5 15.0001 17.5H7.50008C5.65913 17.5 4.16675 16.0076 4.16675 14.1666V14.1549C2.76464 14.0255 1.66675 12.8461 1.66675 11.4102V6.66665ZM12.5001 4.99998C13.117 4.99998 13.6556 5.33515 13.9438 5.83331H7.50008C5.65913 5.83331 4.16675 7.3257 4.16675 9.16665V12.4696C3.68862 12.3543 3.33341 11.9238 3.33341 11.4102V6.66665C3.33341 5.74617 4.07961 4.99998 5.00008 4.99998H12.5001ZM7.50008 7.49998C6.57961 7.49998 5.83342 8.24617 5.83342 9.16665V14.1666C5.83342 15.0871 6.57961 15.8333 7.50008 15.8333H15.0001C15.9206 15.8333 16.6667 15.0871 16.6667 14.1666V9.16665C16.6667 8.24617 15.9206 7.49998 15.0001 7.49998H7.50008Z" fill="white" />
+								</svg>
+									Оставить отзыв</button>
+
+
+								<div>
+									<div className="p-6 bg-gray-100">
+										<div className="flex items-center ">
+											<Image src={avatar} />
+											<div className="flex pb-4 border-disable w-full mt-4 ml-4 justify-between items-center border-b ">
+												<div className="flex items-center">
+													<p className=" font-montserrat font-medium">Марина Одинцова</p>
+													<div className="w-4 border-b mx-2">
+
+													</div>
+													<p className="font-montserrat text-black-70pe">May 20, 2022</p>
+
+												</div>
+												<div className="flex items-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" fill="#DBDCDA" />
+													</svg>
+												</div>
+											</div>
+
+										</div>
+										<p className="pl-74px mt-3 font-montserrat text-black-70pe">Мне показалось, что кожу стянуло после использования. Ощущение после применения среднее</p>
+
+
+									</div>
+									<div className="p-6 bg-gray-100">
+										<div className="flex items-center ">
+											<Image src={avatar} />
+											<div className="flex pb-4 border-disable w-full mt-4 ml-4 justify-between items-center border-b ">
+												<div className="flex items-center">
+													<p className=" font-montserrat font-medium">Ирина Самойлова</p>
+													<div className="w-4 border-b mx-2">
+
+													</div>
+													<p className="font-montserrat text-black-70pe">May 10, 2022</p>
+
+												</div>
+												<div className="flex items-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" fill="#DBDCDA" />
+													</svg>
+												</div>
+											</div>
+
+										</div>
+										<p className="pl-74px mt-3 font-montserrat text-black-70pe">Получила потрясающий эффект 🤣 после применения маски. Значительно улучшился цвет лица, кожа просто сияет красотой и здоровьем, маска сняла следы стресса, придала мягкость, бархатистость и упругость коже!!! Мгновенный эффект ухоженной кожи! Спасибо компания TianDe 😘</p>
+
+
+									</div>
+									<div className="p-6 bg-gray-100">
+										<div className="flex items-center ">
+											<Image src={avatar} />
+											<div className="flex pb-4 border-disable w-full mt-4 ml-4 justify-between items-center border-b ">
+												<div className="flex items-center">
+													<p className=" font-montserrat font-medium">Анна Мнемова</p>
+													<div className="w-4 border-b mx-2">
+
+													</div>
+													<p className="font-montserrat text-black-70pe">March 18, 2022</p>
+
+												</div>
+												<div className="flex items-center">
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<g clip-path="url(#clip0_1945_1209386)">
+															<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+														</g>
+														<defs>
+															<clipPath id="clip0_1945_1209386">
+																<rect width="18" height="18" fill="white" />
+															</clipPath>
+														</defs>
+													</svg>
+													<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" fill="#DBDCDA" />
+													</svg>
+												</div>
+											</div>
+
+										</div>
+										<p className="pl-74px mt-3 font-montserrat text-black-70pe">Шикарная маска. Всего за неделю применения кожа становится плотной, упругой и очень приятной на ощупь. Единственное, что мне не подошло - время нанесения. Два дня делала на ночь - вставала сильно отекшей. Перенесла применение на 5-6 часов вечера и все нормализовалось. Отеков нет. Зато есть реально помолодевшая кожа. Микро морщинок словно и не бывало.</p>
+
+
+									</div>
+								</div>
+								<button className="w-full h-11 flex justify-center items-center border border-stroke mb-24 font-montserrat text-xs font-medium">Показать ещё 2 из 5</button>
+							</div>
+							<div>
+								<p className="mb-4 font-montserrat text-xl font-medium leading-120%">Отмечай @TianDe  в социальных сетях и мы разместим ваш пост здесь!</p>
+								<div className="commentPhoto relative">
+									<Image src={commentsPhoto} />
+									<button className="absolute left-6 top-6 px-8 h-11 flex justify-center items-center font-montserrat text-xs font-medium">Подробнее</button>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</section>
+				<section className="  bg-gray-100">
+					<div className="px-80px ">
+						<h4 className="font-montserrat pt-10 text-26px font-medium mb-6 ">Специальные предложения</h4>
+					</div>
+
+					<div className="px-80px ">
+						<h4 className="font-montserrat pt-60px text-26px font-medium mb-6 ">Вы недавно смотрели</h4>
+					</div>
+
 				</section>
 
 
 			</section>
+			<Footer />
 		</>
 
 	)

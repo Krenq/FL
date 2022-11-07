@@ -41,11 +41,11 @@ const CatalDropdown = ({ show, setShow, scrollMenu, showDrop }) => {
 
 	return (
 		<>
-			<div onMouseEnter={showDrop} onMouseLeave={setShow} className={`${show.showCatal ? 'active  ' : "hiddenCustom"} absolute top-70 ${scrollMenu ? 'top-10 !fixed' : ""} left-0 right-0 bg-red h-10 z-30`}></div>
+			<div onMouseEnter={showDrop} onMouseLeave={setShow} className={`${show.showCatal ? 'active  ' : "hiddenCustom"}  absolute top-70 ${scrollMenu ? 'top-10 !fixed' : ""} left-0 right-0 bg-red h-10 z-30`}></div>
 			<section
 				onMouseLeave={setShow}
 				onMouseEnter={showDrop}
-				className={`absolute  flex z-20 drop  right-0 transition-all bg-white border-t border-gray -mt-1 ${scrollMenu ? '-mt-5' : ""} ${show.showCatal ? 'active' : 'hiddenCustom'
+				className={`absolute  flex z-20 drop  right-0 transition-all bg-white border-t border-gray dropDownShadow -mt-1 ${scrollMenu ? '-mt-5' : ""} ${show.showCatal ? 'active' : 'hiddenCustom'
 					}`}
 			>
 				<div className="bg-white-BG_FILTER w-52   pl-3 pt-3 pb-3">
