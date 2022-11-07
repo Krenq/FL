@@ -1273,6 +1273,21 @@
 	width: 95%;
 }
 
+.buttonShadow {
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activeButtonS {
+	height: 241px !important;
+	box-shadow: none !important;
+	background-color: #FCFDFB !important;
+
+}
+
+.activeButtonS .svgI {
+	transform: rotate(180deg);
+}
+
 
 @media (max-width: 450px) {
 	.searchA {
@@ -2004,12 +2019,22 @@
 		width: 330px !important;
 		height: 330px !important;
 	}
+
+	.activeButtonS {
+		height: 260px !important;
+
+	}
 }
 
 @media (max-width: 330px) {
 	.adaptSlide {
 		width: 310px !important;
 		height: 310px !important;
+	}
+
+	.activeButtonS {
+		height: 275px !important;
+
 	}
 }
 

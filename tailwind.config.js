@@ -22,6 +22,8 @@ module.exports = {
 			overBar: '1750px',
 			'2xl': '1920px',
 			'.2x10': { max: '1900px' },
+			'.2x50': { max: '1850px' },
+			'.6x2': { max: '1680px' },
 			'.6x3': { max: '1600px' },
 			'.5x1': { max: '1536px' },
 			'.5x01': { max: '1500px' },
