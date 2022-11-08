@@ -8,7 +8,9 @@ export default function Search({ scrollMenu, setIsHover, setShowSearch, setClose
 
 	return (
 		<article className="relative  ..5x2:mt-1 ..6x03:mt-0 cursor-pointer .5x01:pr-2  pr-86px ..5x2:flex ..5x1:pl-5">
-			<div className='..5x2:hidden opacity-20' onClick={show}>
+			<div className='..5x2:hidden opacity-20' 
+			// onClick={show}
+			>
 				<Image
 					src={icons.ICON_SEARCH}
 					height="24px"
