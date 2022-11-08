@@ -252,9 +252,9 @@ const Stories = ({ refL }) => {
 	}
 	return (
 
-		<section ref={refL} className="my-0 mx-auto relative" id='sec-12'>
+		<section ref={refL} className="pt-16 my-0 mx-auto relative" id='sec-12'>
 
-			<p className="ability left-1/2 -top-16 flex items-center text-3xl italic absolute">
+			<p className="ability ..5x2:text-22px left-1/2 top-14 font-montserrat font-medium flex items-center text-3xl italic absolute">
 				<svg
 					className="mr-3"
 					width="44"
@@ -273,7 +273,7 @@ const Stories = ({ refL }) => {
 				</svg>
 				ИСТОРИИ
 			</p>
-			<div className="mt-16">
+			<div className="mt-16 ..5x2:h-64 ..5x4:h-auto">
 				<Slider {...settings} ref={slider} className='storiesOpacity'>
 					<StoriesItem text="Reels" photo={oneStories} />
 					<StoriesItem text="LiveShop" photo={twoStories} />

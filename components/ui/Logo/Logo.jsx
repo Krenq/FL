@@ -5,9 +5,9 @@ import * as icons from '../../../images/constsIcons';
 
 export default function Logo({ styles }) {
 	return (
-		<article className={styles}>
+		<article className={`${styles} logo`}>
 			{/* <Link href="/"> */}
-			<Image width="140px" height="60px" src={icons.LOGO} alt="no image" />
+			<Image src={icons.LOGO} alt="no image" />
 			{/* </Link> */}
 		</article>
 	);

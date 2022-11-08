@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import { useRef, useState } from 'react';
 import Slider from 'react-slick';
-import { useSizeDiscount } from '../../hooks/useSizeDiscount';
 
 import imgDiscount from '../../images/templates/discountImg.jpg';
 import imgProduct from '../../images/templates/prdesc.png';
@@ -15,7 +14,7 @@ import DiscounstsButtonsSliderPrev from '../DiscounstsButtonsSliderNext/Discount
 
 import DiscountSliderItem from '../DiscountSliderItem/DiscountSliderItem';
 
-function DiscountsSlider({ refL }) {
+function DiscountsSlider({ refL, showCentral }) {
 	const [kolichestvo, setKolichestvo] = useState(1),
 		slider = useRef(null),
 		containerSlider = useRef(null)
@@ -95,7 +94,7 @@ function DiscountsSlider({ refL }) {
 		// </div>
 
 		<div ref={refL} id='sec-1'>
-			<div className="bg-primary w-full h-800px ..5x2:hidden discSlider" ref={containerSlider}>
+			<div className="  w-full h-800px ..5x2:hidden discSlider" ref={containerSlider}>
 				<Slider {...settings} ref={slider} className=' w-full h-full'>
 					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
 					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
@@ -105,11 +104,11 @@ function DiscountsSlider({ refL }) {
 
 
 
-			<div className="bg-primary w-full h-800px ..5x2:block hidden discSliderPhone" ref={containerSlider}>
+			<div className="  w-full  ..5x2:block hidden  discSliderPhone" ref={containerSlider}>
 				<Slider {...settings} ref={slider} className=' w-full h-full'>
-					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
+					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
+					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
 				</Slider>
 			</div>
 		</div>

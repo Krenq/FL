@@ -6,7 +6,7 @@ import treeHealth from '../../images/templates/3health.jpg';
 const Health = ({ refL }) => {
 	const settings = {
 		dots: false,
-		Infinity: true,
+		infinite: false,
 		speed: 500,
 		responsive: [
 			{
@@ -15,6 +15,7 @@ const Health = ({ refL }) => {
 			},
 			{
 				breakpoint: 800,
+				infinite: false,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -23,9 +24,9 @@ const Health = ({ refL }) => {
 		],
 	};
 	return (
-		<div className="relative" ref={refL} id='sec-10'>
+		<div className="relative" ref={refL} id='sec-11'>
 			<svg
-				className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-6 "
+				className="ability ..6x2:h-32 ..6x2:mt-5 absolute left-1/2 -top-6 ..6x2:-top-3 "
 				width="184"
 				height="183"
 				viewBox="0 0 184 183"
@@ -63,33 +64,35 @@ const Health = ({ refL }) => {
 			</svg>
 			<section className="bg-gray-light pb-28 .1x1:pb-10 ..5x1:pb-0">
 				<div className="container__special">
-					<p className="absolute ability left-1/2  text-black  text-2xl pt-20 font-medium ..6x04:text-xl">
+					<p className="absolute ability font-montserrat ..5x2:text-base left-1/2  text-black  text-2xl pt-20 font-medium  ">
 						Программы
 					</p>
-					<p className="text-center text-black pt-28 italic text-3xl font-medium ..6x04:text-2xl">
+					<p className="text-center font-montserrat ..5x2:text-22px ..5x2:-mt-2 text-black pt-28 italic text-3xl font-medium  ">
 						КРАСОТЫ И ЗДОРОВЬЯ
 					</p>
-					<p className="text-center mt-2 mb-12 text-sm">
+					<div className="relative text-center font-montserrat ..5x2:text-13px ..5x2:mb-5 mt-2 mb-12 text-sm">
 						Есть проблемы? У нас есть решения!
-					</p>
+						<div className=' w-24 bg-white absolute ability -bottom-2 left-1/2 h-3px'></div>
 
-					<Slider {...settings} className="flex">
-						<div>
-							<div className=" ..7x11:px-1 bg-white relative  pb-96 mx-3 ..7x2:pb-96 mb-3 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
-								<p className="..6x04:text-6xl text-7xl ability transition-all leading-140% text-gray-platinum absolute z- font-montserrat font-bold left-1/2 procent">
+					</div>
+
+					<Slider {...settings} className="flex  ">
+						<div >
+							<div className="anti  border-primary border  ..7x11:px-1 bg-white relative  pb-96 ..5x2:pb-48 mx-3   mb-3 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
+								<p className="..6x04:text-5xl z-10 ..6x04:top-5 text-8xl ability transition-all leading-140% text-gray-platinum ..5x2:-top-3 -top-2 absolute font-montserrat font-bold left-1/2 procent">
 									-30%
 								</p>
-								<p className=" ability ..6x04:text-xl text-2xl transition-all text-primary  absolute top-12 z-10 left-1/2 title_sale">
+								<p className=" ability font-medium ..6x04:text-base ..5x2:text-lg text-22px transition-all text-primary ..5x2:top-11 ..5x2:pt-0 pt-2  absolute top-16 z-10 left-1/2 title_sale">
 									«АНТИСТРЕСС»
 								</p>
-								<p className=" ability ..7x11:w-56 ..6x04:text-xl text-2xl text-center  absolute top-20 z-10 left-1/2 ">
+								<p className=" ability font-montserrat font-medium w-full ..5x2:text-lg  ..6x04:text-13px text-2xl text-center  absolute top-24 ..5x2:pt-0 pt-2   ..5x2:top-16 z-10 left-1/2 ">
 									Смотри на мир здоровыми глазами!
 								</p>
-								<div className="absolute  bottom-0 ..5x2:bottom-10 ..6x6:bottom-16 ..7x1:bottom-24  left-1/2 ability">
-									<p className="absolute ..6x2:font-medium ..6x2:text-lg ..7x001:left-4 ..6x5:left-22%  flex items-center text-sm top-50% left-30% z-10">
+								<div className="absolute  bottom-0  ..5x2:bottom-24 left-1/2   ability">
+									<p className="absolute left-1/2 ..5x2:top-3 font-medium text-13px     flex items-center text-sm top-50%  ability z-10">
 										Подробнее{' '}
 										<svg
-											className="ml-2 sale_btn transition-all"
+											className="ml-2 sale_btn mt-0.5 transition-all"
 											width="12"
 											height="8"
 											viewBox="0 0 12 8"
@@ -103,34 +106,42 @@ const Health = ({ refL }) => {
 											/>
 										</svg>
 									</p>
-									<Image
-										className="object-cover"
-										src={oneHealth}
-										width={300}
-										height={300}
-										quality={100}
-										alt="discountImg"
-									/>
+									<div className='..5x2:absolute  ..5x2:w-36 ..5x2:h-36 headerAbility  left-1/2 ..5x2:-top-14 '>
+										<Image
+											className="object-cover opacity-40"
+											src={oneHealth}
+											width={300}
+											height={300}
+											quality={100}
+											alt="discountImg"
+										/>
+									</div>
+
 								</div>
 							</div>
 							<div className="relative mt-3.5 mx-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
-								<p className="absolute ..7x1:left-2 ..6x4:top-5 ..6x4:left-5 ..6x3:top-10 ..6x04:text-xl z-10 top-20 text-2xl text-primary left-10 ..7x2:left-2">
+								<p className="absolute  font-montserrat ..5x2:top-4 ..5x2:left-4  ..7x1:text-base z-10 top-16 text-2xl ..5x2:text-black text-primary text-22px font-medium left-10  ">
 									«ЗДОРОВЫЙ СОН»
 								</p>
-								<p className="absolute ..7x1:text-xl ..7x1:top-14 ..7x1:left-2 ..6x4:top-16 ..6x4:left-5 ..6x3:top-20 ..6x04:text-2xl z-10 top-32 text-3xl   left-10 ..7x2:text-lg ..7x2:left-2">
+								<p className="absolute hidden ..5x2:block font-montserrat text-primary ..7x1:text-13px ..5x2:text-xl !leading-140%  ..7x1:top-10 ..5x2:top-16 ..5x2:left-4    z-10 top-32 text-3xl   left-10  ">
+									Чтобы каждое утро<br /> было добрым
+								</p>
+								<p className="absolute ..5x2:hidden font-montserrat text-black text-26px font-medium  ..7x1:text-13px ..5x2:text-xl !leading-120%  ..7x1:top-10 ..5x2:top-16 ..5x2:left-4    z-10 top-28 text-3xl   left-10  ">
 									Чтобы каждое утро было <br /> добрым
 								</p>
-								<Image
-									className="object-cover"
-									src={twoHealth}
-									width={720}
-									height={900}
-									alt="discountImg"
-								/>
-								<p className="absolute ..6x2:text-lg  ..6x2:font-medium ..7x1:left-2 ..7x1:top-32 ..6x4:top-40 ..6x4:left-5 ..6x3:top-44 top-52 cursor-pointer z-10 left-10 flex items-center text-sm ..7x2:left-2">
+								<div className='image-container'>
+									<Image
+										className="object-cover image"
+										src={twoHealth}
+
+										alt="discountImg"
+									/>
+								</div>
+
+								<p className="absolute ..6x2:text-13px  font-medium  ..7x1:top-24 ..5x2:top-32 font-montserrat ..5x2:left-4   top-52 cursor-pointer z-10 left-10 flex items-center text-sm ">
 									Подробнее{' '}
 									<svg
-										className="ml-2"
+										className="ml-2 mt-0.5"
 										width="12"
 										height="8"
 										viewBox="0 0 12 8"
@@ -145,18 +156,18 @@ const Health = ({ refL }) => {
 								</p>
 							</div>
 						</div>
-						<div>
-							<div className="relative mx-3 transition-all hover:text-primary hover:opacity-90 cursor-pointer">
-								<p className="absolute ..6x04:text-xl z-10 top-20 text-2xl left-10 ..7x2:left-2">
+						<div >
+							<div className="relative mx-3   transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+								<p className="absolute ..7x1:text-base font-montserrat z-10 top-16 text-2xl left-10 ..5x2:left-4 text-22px ..5x2:top-4 font-medium">
 									«ЧИСТАЯ КОЖА»
 								</p>
-								<p className="absolute ..6x04:text-2xl z-10 top-32 text-3xl text-primary left-10 ..7x2:text-lg ..7x2:left-2">
+								<p className="absolute ..7x1:text-13px ..5x2:text-xl z-10 top-24 text-3xl text-primary left-10  ..7x1:top-11 ..5x2:top-14 ..5x2:leading-140% leading-120% text-26px ..5x2:left-4">
 									Фитокоррекция <br /> проблемной кожи
 								</p>
-								<p className="absolute ..6x2:text-lg  ..6x2:font-medium top-52 cursor-pointer z-10 left-10 flex items-center text-sm  ..7x2:left-2">
+								<p className="absolute ..7x1:top-24 ..5x2:top-32 ..5x2:left-4 ..5x2:text-13px font-montserrat  font-medium top-48 cursor-pointer z-10 left-10 flex items-center text-sm  ">
 									Подробнее{' '}
 									<svg
-										className="ml-2"
+										className="ml-2 mt-0.5"
 										width="12"
 										height="8"
 										viewBox="0 0 12 8"
@@ -169,23 +180,31 @@ const Health = ({ refL }) => {
 										/>
 									</svg>
 								</p>
-								<Image
-									className="object-cover"
-									src={treeHealth}
-									width={720}
-									height={900}
-									alt="discountImg"
-								/>
+								<div className='image-container'>
+									<Image
+										className="object-cover image"
+										src={treeHealth}
+										width={720}
+										height={900}
+										alt="discountImg"
+									/>
+								</div>
+
+
 							</div>
-							<div className="mx-3 px-3 h-380px bg-primary pb-2 ..5x03:pb-8 .1x1:pb-5  mt-3 relative">
-								<h1 className="text-32px text-center mb-5 pt-11 ..5x4:pt-10 ..5x3:pt-12 text-w text-white">
+							<div className="mx-3 ..5x1:pb-0 anti px-3 ..7x2:px-2 ..5x2:px-8  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
+								<h1 className="text-32px font-montserrat text-center ..5x2:mb-0.5 mb-5 pt-11 ..5x2:text-22px ..5x2:pt-6  text-w text-white">
 									50+ программ
 								</h1>
-								<p className="text-center ..5x03:font-normal ..5x4:pb-24 text-2xl text-white pb-40 .1x1:text-xl ..5x3:pb-32 ..7x2:text-base ..7x2:pb-32">
+								<p className="text-center hidden ..7x1:px-0 ..6x5:px-10 ..6x4:px-24 ..6x03:px-28 ..6x2:px-32 ..5x5:px-40  ..5x2:block ..5x2:pb-3 ..7x1:pb-0   ..5x2:text-13px   !leading-140% font-montserrat   text-2xl text-white   .1x1:text-xl    ">
+									«Мужское здоровье», «антипаразитарная программа»,
+									«бодрость и энергия», «активное долголетие» и др.
+								</p>
+								<p className="text-center ..5x1:pb-44 ..5x01:pb-40 ..5x2:hidden ..5x2:text-13px !leading-140% font-montserrat ..5x4:pb-24 text-2xl text-white pb-40 .2x1.0:text-xl ..5x3:pb-32 ..7x2:text-base ..7x2:pb-32">
 									«Мужское здоровье», «антипаразитарная <br /> программа»,
 									«бодрость и энергия», «активное <br /> долголетие» и др.
 								</p>
-								<button className="ability border-2 border-gray absolute bottom-20 ..5x4:bottom-16 text-gray py-2 px-4  left-1/2 hover:text-white transition-all ..7x2:text-sm">
+								<button className="ability ..5x2:bottom-8 border ..7x001:w-40 text-sm font-medium font-montserrat ..5x2:py-1.5 ..5x2:px-5 ..6x1:bottom-3 border-gray absolute bottom-20   text-gray py-2 ..5x2:h-8 h-11 px-4  left-1/2 hover:text-white transition-all ">
 									Все программы
 								</button>
 							</div>

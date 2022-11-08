@@ -62,10 +62,10 @@ const SetLocation = ({ showL, setShowL, setCurrentCity, currentCity }) => {
 		}
 	return (
 		<>
-			<div className={`fixed top-0 right-0 left-0 bottom-0 z-50 bg-white opacity-80 cursor-pointer ${showL ? 'block' : "hidden"}`} onClick={handleSetShowLocal}></div>
-			<div className={`fixed bottom-0 top-20 left-0 right-0  z-100 ${showL ? "block" : "hidden"}`}>
+			<div className={`fixed top-0 right-0 left-0 bottom-0 z-100 bg-white opacity-80 cursor-pointer ${showL ? 'block' : "hidden"}`} onClick={handleSetShowLocal}></div>
+			<div className={`fixed  bottom-0 top-0 left-0   z-100 ${showL ? "block" : "hidden"}`}>
 				<div className="container__base relative h-full">
-					<section className={`px-8 bg-white py-6 bottom-0 w-460px h-full left-0 top-0 `}>
+					<section className={`px-8 bg-white dropDownShadow py-6 pt-8 bottom-0 w-460px h-full left-0 top-0 `}>
 						<div className="relative h-full">
 							<p className="flex text-primary-active  items-center">
 								<svg width="10" className="mr-1" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">

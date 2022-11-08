@@ -40,7 +40,7 @@ const Funds = ({ refL }) => {
 						display: 'flex',
 						justifyContent: 'center',
 						position: 'absolute',
-						bottom: 25,
+						bottom: 35,
 					}}
 				>
 					<div
@@ -94,7 +94,7 @@ const Funds = ({ refL }) => {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: 25,
+									bottom: 35,
 								}}
 							>
 								<div
@@ -134,12 +134,13 @@ const Funds = ({ refL }) => {
 					),
 				},
 			},
+
 		],
 	};
 	return (
-		<section ref={refL} className="relative bg-gray-light" id='sec-8'>
+		<section ref={refL} className="relative bg-gray-light" id='sec-9'>
 			<svg
-				className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 -top-6 "
+				className="ability ..6x2:h-32  ..6x2:mt-5 absolute left-1/2 -top-5 "
 				width="184"
 				height="183"
 				viewBox="0 0 184 183"
@@ -175,32 +176,48 @@ const Funds = ({ refL }) => {
 					strokeLinejoin="round"
 				/>
 			</svg>
-			<p className="ability absolute left-1/2 top-6 font-medium text-xl pt-10">
+			<p className="ability absolute left-1/2 top-6 ..5x2:top-8 font-medium ..5x2:text-base font-montserrat text-xl pt-10">
 				Что-то
 			</p>
-			<p className="ability absolute left-1/2 top-24 w-full   text-center font-medium text-2xl italic mb-4 ..7x2:text-xl">
+			<p className="ability ..7x01:text-lg absolute left-1/2 top-24 w-full text-center font-medium text-2xl italic mb-4 ..5x2:text-22px font-montserrat">
 				ПРО УХОДОВЫЕ СРЕДСТВА
 			</p>
-			<p className="text-center text-lg mb-10 pt-32 ..7x2:text-sm">
+			<p className="text-center ..5x2:hidden text-lg mb-10 pt-32 ..5x2:text-13px font-montserrat ">
 				Которые не так очевидны в каталоге, например, подкатегории, <br />{' '}
 				наборы и идеи подарков
 			</p>
+			<p className="text-center hidden ..5x2:block ..5x2:mb-5 text-lg mb-10 pt-32 leading-140% ..5x2:text-13px font-montserrat ">
+				Которые не так очевидны в каталоге, например, подкатегории,	наборы и идеи подарков
+			</p>
 
 			<Slider {...settings} ref={slider} className="funds">
-				<div className=" pb-20 ..7x2:p-0">
-					<div className="flex justify-center ..6x4:flex-wrap ">
-						<div className="..6x4:h-80 relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
+				<div className="..5x2:px-3 pb-20  ..7x2:p-0">
+					<div className="flex justify-center ..6x2:flex-col   ">
+						<div className="image-containerSIV relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
 							<Image
-								className="object-cover"
+								className="object-cover image"
 								src={one}
 								width={720}
 								height={768}
 								alt="discountImg"
 							/>
-							<p className="absolute bottom-10 left-10 text-xl font-medium ..7x2:left-2 ..7x2:bottom-5 ">
+							<p className="absolute flex items-center bottom-10 left-10 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
 								Сыворотки
+								<svg
+									className="ml-2 hidden ..5x2:block  "
+									width="12"
+									height="8"
+									viewBox="0 0 12 8"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+										fill="black"
+									/>
+								</svg>
 							</p>
-							<small className="flex items-center absolute bottom-10 right-10 ..7x2:right-2 ..7x2:bottom-5 z-10">
+							<small className="flex ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
 								Смотреть
 								<svg
 									className="ml-2"
@@ -217,19 +234,34 @@ const Funds = ({ refL }) => {
 								</svg>
 							</small>
 						</div>
-						<div>
-							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-2'>
+							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+
 								<Image
-									className="object-cover"
+									className="image "
 									src={two}
-									width={720}
-									height={374}
+
 									alt="discountImg"
 								/>
-								<p className="absolute bottom-10 left-10 text-xl font-medium  ..7x2:left-2 ..7x2:bottom-5">
+
+
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
+									<svg
+										className="ml-2 hidden ..5x2:block "
+										width="12"
+										height="8"
+										viewBox="0 0 12 8"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+											fill="black"
+										/>
+									</svg>
 								</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="..5x2:hidden flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
 									Смотреть
 									<svg
 										className="ml-2"
@@ -246,18 +278,31 @@ const Funds = ({ refL }) => {
 									</svg>
 								</small>
 							</div>
-							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative  image-containerS transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image
-									className="object-cover"
+									className="object-cover image"
 									src={tree}
 									width={720}
 									height={374}
 									alt="discountImg"
 								/>
-								<p className="absolute bottom-10 left-10 text-xl font-medium z-10  ..7x2:left-2 ..7x2:bottom-5">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
 									Идеи подарков
+									<svg
+										className="ml-2   hidden ..5x2:block"
+										width="12"
+										height="8"
+										viewBox="0 0 12 8"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+											fill="black"
+										/>
+									</svg>
 								</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 z-10  ">
 									Смотреть
 									<svg
 										className="ml-2"
@@ -277,20 +322,33 @@ const Funds = ({ refL }) => {
 						</div>
 					</div>
 				</div>
-				<div className="pb-20 ..7x2:p-0">
-					<div className="flex justify-center ..6x4:flex-wrap ">
-						<div className="..6x4:h-80 relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
+				<div className="..5x2:px-3 pb-20  ..7x2:p-0">
+					<div className="flex justify-center ..6x2:flex-col   ">
+						<div className="image-containerSIV relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
 							<Image
-								className="object-cover"
+								className="object-cover image"
 								src={one}
 								width={720}
 								height={768}
 								alt="discountImg"
 							/>
-							<p className="absolute bottom-10 left-10 text-xl font-medium ..7x2:left-2 ..7x2:bottom-5 ">
+							<p className="absolute flex items-center bottom-10 left-10 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
 								Сыворотки
+								<svg
+									className="ml-2 hidden ..5x2:block  "
+									width="12"
+									height="8"
+									viewBox="0 0 12 8"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+										fill="black"
+									/>
+								</svg>
 							</p>
-							<small className="flex items-center absolute bottom-10 right-10 ..7x2:right-2 ..7x2:bottom-5 z-10">
+							<small className="flex ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
 								Смотреть
 								<svg
 									className="ml-2"
@@ -307,19 +365,34 @@ const Funds = ({ refL }) => {
 								</svg>
 							</small>
 						</div>
-						<div>
-							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-2'>
+							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+
 								<Image
-									className="object-cover"
+									className="image "
 									src={two}
-									width={720}
-									height={374}
+
 									alt="discountImg"
 								/>
-								<p className="absolute bottom-10 left-10 text-xl font-medium  ..7x2:left-2 ..7x2:bottom-5">
+
+
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
+									<svg
+										className="ml-2 hidden ..5x2:block "
+										width="12"
+										height="8"
+										viewBox="0 0 12 8"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+											fill="black"
+										/>
+									</svg>
 								</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="..5x2:hidden flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
 									Смотреть
 									<svg
 										className="ml-2"
@@ -336,18 +409,31 @@ const Funds = ({ refL }) => {
 									</svg>
 								</small>
 							</div>
-							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative  image-containerS transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image
-									className="object-cover"
+									className="object-cover image"
 									src={tree}
 									width={720}
 									height={374}
 									alt="discountImg"
 								/>
-								<p className="absolute bottom-10 left-10 text-xl font-medium z-10  ..7x2:left-2 ..7x2:bottom-5">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
 									Идеи подарков
+									<svg
+										className="ml-2   hidden ..5x2:block"
+										width="12"
+										height="8"
+										viewBox="0 0 12 8"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+											fill="black"
+										/>
+									</svg>
 								</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 z-10  ">
 									Смотреть
 									<svg
 										className="ml-2"
@@ -367,20 +453,33 @@ const Funds = ({ refL }) => {
 						</div>
 					</div>
 				</div>
-				<div className="pb-20 ..7x2:p-0">
-					<div className="flex justify-center ..6x4:flex-wrap ">
-						<div className="..6x4:h-80 relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
+				<div className="..5x2:px-3 pb-20  ..7x2:p-0">
+					<div className="flex justify-center ..6x2:flex-col   ">
+						<div className="image-containerSIV relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
 							<Image
-								className="object-cover"
+								className="object-cover image"
 								src={one}
 								width={720}
 								height={768}
 								alt="discountImg"
 							/>
-							<p className="absolute bottom-10 left-10 text-xl font-medium ..7x2:left-2 ..7x2:bottom-5 ">
+							<p className="absolute flex items-center bottom-10 left-10 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
 								Сыворотки
+								<svg
+									className="ml-2 hidden ..5x2:block  "
+									width="12"
+									height="8"
+									viewBox="0 0 12 8"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+										fill="black"
+									/>
+								</svg>
 							</p>
-							<small className="flex items-center absolute bottom-10 right-10 ..7x2:right-2 ..7x2:bottom-5 z-10">
+							<small className="flex ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
 								Смотреть
 								<svg
 									className="ml-2"
@@ -397,19 +496,34 @@ const Funds = ({ refL }) => {
 								</svg>
 							</small>
 						</div>
-						<div>
-							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-2'>
+							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+
 								<Image
-									className="object-cover"
+									className="image "
 									src={two}
-									width={720}
-									height={374}
+
 									alt="discountImg"
 								/>
-								<p className="absolute bottom-10 left-10 text-xl font-medium  ..7x2:left-2 ..7x2:bottom-5">
+
+
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
+									<svg
+										className="ml-2 hidden ..5x2:block "
+										width="12"
+										height="8"
+										viewBox="0 0 12 8"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+											fill="black"
+										/>
+									</svg>
 								</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="..5x2:hidden flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
 									Смотреть
 									<svg
 										className="ml-2"
@@ -426,18 +540,31 @@ const Funds = ({ refL }) => {
 									</svg>
 								</small>
 							</div>
-							<div className="relative transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative  image-containerS transition-all hover:text-primary hover:opacity-90 cursor-pointer">
 								<Image
-									className="object-cover"
+									className="object-cover image"
 									src={tree}
 									width={720}
 									height={374}
 									alt="discountImg"
 								/>
-								<p className="absolute bottom-10 left-10 text-xl font-medium z-10  ..7x2:left-2 ..7x2:bottom-5">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
 									Идеи подарков
+									<svg
+										className="ml-2   hidden ..5x2:block"
+										width="12"
+										height="8"
+										viewBox="0 0 12 8"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M8.02523 0.935913L7.08463 1.70374L9.26479 3.46684L0.194763 3.47426L0.196105 4.55759L9.24128 4.5502L7.09785 6.2999L8.04286 7.06414L11.8053 3.99286L8.02523 0.935913Z"
+											fill="black"
+										/>
+									</svg>
 								</p>
-								<small className="flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 z-10  ">
 									Смотреть
 									<svg
 										className="ml-2"

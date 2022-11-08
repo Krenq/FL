@@ -8,9 +8,9 @@ import six from '../../images/templates/6tian.jpg';
 import seven from '../../images/templates/7tian.jpg';
 const Trands = ({ refL }) => {
 	return (
-		<section ref={refL} id='sec-14' className="relative bg-gray-light pb-80   .2x1:pb-460px">
+		<section ref={refL} id='sec-14' className="relative bg-gray-light pb-80 ..5x2:pb-400px  .2x1:pb-460px">
 			<svg
-				className="ability ..6x2:h-36 ..6x2:mt-5 absolute left-1/2 top-6 ..5x2:top-2"
+				className="ability ..6x2:h-32 ..6x2:top-5 ..6x2:mt-5 absolute left-1/2 top-6 ..5x2:top-2"
 				width="184"
 				height="183"
 				viewBox="0 0 184 183"
@@ -47,7 +47,7 @@ const Trands = ({ refL }) => {
 				/>
 			</svg>
 
-			<p className="absolute left-1/2 ability top-20 ..5x2:top-10  text-4xl ..5x2:pt-16 ..5x2:mt-0 italic mt-2 mb-16 ..6x04:text-3xl">
+			<p className="absolute font-montserrat font-medium left-1/2 ability top-20 ..5x2:top-10  text-4xl ..5x2:pt-16 ..5x2:mt-0 italic mt-2 mb-16 ..5x2:text-22px">
 				TIANDESHOPPING
 			</p>
 			<div className="flex pt-52 ..5x2:pt-40">
@@ -111,10 +111,10 @@ const Trands = ({ refL }) => {
 			</div>
 
 			<div className="flex justify-center mt-5">
-				<button className="mr-4 ..7x1:text-sm ..7x1:py-2 border-2 py-3 px-6 text-white bg-primary border-primary transition-all hover:bg-white hover:text-primary ..7x1:text-10px">
+				<button className="font-montserrat ..5x2:h-auto  ..7x1:h-8 ..7x11:!text-10px mr-4  text-xs ..7x1:py-5px ..7x1:px-5 border py-2 h-11 px-5 text-white bg-primary border-primary transition-all hover:bg-white hover:text-primary  ">
 					Показать еще
 				</button>
-				<button className=" ..7x1:text-sm ..7x1:py-2 border-2 py-3 px-6 text-primary bg-white border-primary transition-all hover:bg-primary hover:text-white ..7x1:text-10px">
+				<button className="font-montserrat  ..5x2:h-auto ..7x1:h-8 ..7x11:!text-10px text-xs ..7x1:py-5px ..7x1:px-5 h-11 border py-2 px-4 text-primary bg-white border-primary transition-all hover:bg-primary hover:text-white  ">
 					Посмотреть все
 				</button>
 			</div>

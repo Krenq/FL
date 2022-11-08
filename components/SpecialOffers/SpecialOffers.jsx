@@ -12,6 +12,12 @@ import useWindowSize from '../utils/useWindowSize';
 import SpecialOffersNext from './SpecialOffersNext';
 import SpecialOffersPrev from './SpecialOffersPrev';
 
+
+
+import oneL from '../../images/templates/oneItemSearchSlider.jpg'
+import treeL from '../../images/templates/treeItemSearch.jpg'
+import twoI from '../../images/templates/twoItemSearch.jpg'
+
 function SpecialOffers({ refL }) {
 	const divBlock = useRef(null),
 		slider = useRef(null);
@@ -42,7 +48,7 @@ function SpecialOffers({ refL }) {
 		slidesToScroll: 1,
 		nextArrow: <SpecialOffersNext />,
 		prevArrow: <SpecialOffersPrev />,
-		dotsClass: 'slick-dots slick-thumb',
+		dotsClass: 'slick-dots slick-thumb specialSliderDots',
 		appendDots: (dots) => {
 			return (
 				<div
@@ -123,7 +129,61 @@ function SpecialOffers({ refL }) {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: -60,
+									bottom: -25,
+								}}
+							>
+								<div
+									ref={divBlock}
+									style={{
+										width: 150,
+										display: 'flex',
+										justifyContent: 'center',
+										alignItems: 'center',
+									}}
+								>
+									<ul
+										style={{
+											margin: '0px',
+											display: 'flex',
+											alignItems: 'flex-end',
+											justifyContent: 'center',
+										}}
+									>
+										{dots}
+									</ul>
+								</div>
+							</div>
+						);
+					},
+					customPaging: (i) => (
+						<div
+							style={{
+								backgroundColor: ' rgb(218, 218, 218)',
+								width: `${widthDot}px`,
+								height: 4,
+							}}
+						/>
+					),
+				},
+			},
+			{
+				breakpoint: 600,
+
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					infinite: true,
+					dots: true,
+					nextArrow: false,
+					prevArrow: false,
+					appendDots: (dots) => {
+						return (
+							<div
+								style={{
+									display: 'flex',
+									justifyContent: 'center',
+									position: 'absolute',
+									bottom: -35,
 								}}
 							>
 								<div
@@ -177,7 +237,7 @@ function SpecialOffers({ refL }) {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: -60,
+									bottom: -35,
 								}}
 							>
 								<div
@@ -217,11 +277,11 @@ function SpecialOffers({ refL }) {
 		],
 	};
 	return (
-		<article ref={refL} id='sec-2' className="container__special bg-white pb-36 ..5x2:pb-14 .1x1:pb-28">
-			<div className="mt-16 flex items-center border-b-2 border-gray pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
+		<article ref={refL} id='sec-2' className="container__special bg-white pb-36 ..5x2:pb-0 .1x1:pb-28">
+			<div className="mt-16 flex items-center border-b border-gray-border pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
 				<p
 					onClick={() => currentTabHandler('all')}
-					className={`..6x3:text-sm ..6x3:mr-3 ..6x3:pr-3 ..6x1:text-base flex items-center h-8 hover:text-primary transition-all cursor-pointer mr-8 border-gray border-r-2  pr-8 ${currentTab === 'all' ? 'text-primary' : 'text-gray-quick-silver'
+					className={`..6x3:text-sm  ..6x3:mr-3 ..6x3:pr-3 ..6x1:text-base flex items-center h-8 hover:text-primary transition-all cursor-pointer mr-8 border-gray-border border-r  pr-8 ${currentTab === 'all' ? 'text-primary' : 'text-gray-quick-silver'
 						} text-lg`}
 				>
 					Все спецпредложения
@@ -255,7 +315,7 @@ function SpecialOffers({ refL }) {
 					Наборы
 				</p>
 			</div>
-			<Slider {...settings} ref={slider}>
+			<Slider className='specialSlider' {...settings} ref={slider}>
 				<SpecialOfferItem
 					obj={{
 						img: one,
@@ -264,6 +324,8 @@ function SpecialOffers({ refL }) {
 						hit: true,
 						priceDe: '3 750',
 						price: '764.00',
+						isSlider: true,
+						balls: true
 					}}
 				/>
 				<SpecialOfferItem
@@ -275,6 +337,7 @@ function SpecialOffers({ refL }) {
 						iTab: true,
 						priceSale: { old: '999.00', new: '888.00' },
 					}}
+					srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
 				/>
 				<SpecialOfferItem
 					obj={{
@@ -322,6 +385,7 @@ function SpecialOffers({ refL }) {
 						iTab: true,
 						priceSale: { old: '999.00', new: '888.00' },
 					}}
+					srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
 				/>
 				<SpecialOfferItem
 					obj={{
@@ -350,7 +414,7 @@ function SpecialOffers({ refL }) {
 						price: '764.00',
 					}}
 				/>
-				
+
 			</Slider>
 		</article>
 	);

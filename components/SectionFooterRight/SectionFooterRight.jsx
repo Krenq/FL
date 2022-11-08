@@ -24,8 +24,8 @@ export default function SectionFooterRight() {
 				<div className=".2x1.0:hidden font-semibold text-base .3x1:text-sm border-b border-gray-quick-silver w-fit">
 					Программа лояльности
 				</div>
-				<div onClick={showLoal} className={`${show.showLoal ? '!text-black' : ''} hidden transition-all .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3`}>Программа лояльности <svg className={`hidden .2x1.0:block transition-all ${show.showLoal ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill="#949792" />
+				<div onClick={showLoal} className={`${show.showLoal ? '!text-primary' : ''} hidden transition-all .2x1.0:text-gray-quick-silver font-semibold text-base .3x1:text-sm .2x1.0:border-b  .2x1.0:pb-3 .2x1.0:border-gray-light2 .2x1.0:flex .2x1.0:items-center .2x1.0:justify-between .2x1.0:mt-3`}>Программа лояльности <svg className={`hidden .2x1.0:block transition-all ${show.showLoal ? 'activeArrow' : ""}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M6.8625 0.35L4 3.22409L1.13125 0.35L0.25 1.23482L4 5L7.75 1.23482L6.8625 0.35Z" fill={`${show.showLoal ? '#337202' : '#949792'}`} />
 				</svg>
 				</div>
 				<div className={`${show.showLoal ? '!h-20' : "hiddenCustomFoot"} transition-all flex flex-col`}>

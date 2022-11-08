@@ -19,7 +19,7 @@ const PartnersButtonNext = ({ onClick, kolichestvo }) => {
 	} else if (size.width <= 500 && size.width > 400) {
 		perc = '38%';
 	} else if (size.width <= 400) {
-		perc = '33%';
+		perc = '38%';
 	} else if (size.width > 1600) {
 		perc = '46%';
 	}
@@ -39,14 +39,14 @@ const PartnersButtonNext = ({ onClick, kolichestvo }) => {
 	return (
 		<button
 			className={`${kolichestvo ? 'nextPartner' : ''
-				} absolute transition-all hover:bg-gray bg-white py-3 px-3.5`}
+				} absolute transition-all hover:bg-gray bg-white py-2 px-3`}
 			onClick={onClick}
 			style={kolichestvo ? styleR : styleRMod}
 
 		>
 			<svg
 				width="10"
-				className="fill-black transition-all"
+				className="fill-black transition-all arrowAdapt"
 				height="16"
 				viewBox="0 0 10 16"
 				xmlns="http://www.w3.org/2000/svg"

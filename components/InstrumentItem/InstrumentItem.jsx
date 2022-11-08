@@ -20,7 +20,7 @@ export default function InstrumentItem({
 
 
 	const setDilHover = () => {
-
+		if (window.innerWidth < 1100) return
 		setDelivery({
 			currentCountry: delivery.currentCountry,
 			isHover: !delivery.isHover,
@@ -30,11 +30,11 @@ export default function InstrumentItem({
 
 	return (
 		<div
-			className={` mx-2 py-26px ..5x1:px-1 px-5 mt-7 ..5x1:w-auto w-475px max-w-475px min-w-180px h-250px ..5x1:h-305px flex flex-col items-center justify-between ..5x1:bg-gray-light bg-gray-100 rounded-lg ${bottomImg1 ? '' : 'hover:bg-gray-light'
+			className={` mx-2 py-26px    ..5x1:px-3 px-5 mt-7 ..5x1:w-auto w-475px max-w-475px min-w-180px h-250px ..5x1:h-305px flex flex-col items-center justify-between ..5x1:bg-gray-light bg-gray-100 ${bottomImg1 ? '' : 'hover:bg-gray-light'
 				}`}
 		>
 			<div className="flex-shrink-0">
-				<div className="flex items-center mx-auto justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+				<div className="flex items-center mx-auto justify-center h-11 w-11 rounded-md bg-indigo-500 text-white">
 					<Image src={icon} width={64} height={64} />
 				</div>
 
@@ -44,7 +44,7 @@ export default function InstrumentItem({
 
 				{country ? (
 					<>
-						<p onClick={setDilHover} className={`hidden ..5x1:block text-center text-gray-quick-silver mt-1 mb-4 text-xs ..6x3:text-sm `}>
+						<p onClick={setDilHover} className={`font-montserrat hidden ..5x1:text-11px font-medium ..5x1:block text-center text-black-70pe mt-1 mb-4 text-sm   `}>
 							{title === 'Доставка от 1000 ₽' && `${country}, `}
 							{underCountry}
 						</p>
@@ -84,12 +84,12 @@ export default function InstrumentItem({
 							<SectionImgs variant={variant} textImg={textImg} />
 						</div>
 
-						<p className="..5x1:hidden text-left text-gray-quick-silver mt-1 mb-4 text-xs ..6x3:text-sm">
+						<p className="..5x1:hidden  leading-140% ..5x2:text-11px text-left text-gray-quick-silver mt-1 mb-4 text-sm  ">
 							{underCountry}
 						</p>
 					</>
 				) : (
-					<p className=" text-center ..5x1:text-11px leading-140% font-montserrat font-medium text-base text-black-70pe py-4">
+					<p className=" text-center ..5x1:text-11px  leading-140% font-montserrat font-medium text-base text-black-70pe py-4">
 						{text}
 					</p>
 				)}
