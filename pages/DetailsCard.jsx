@@ -1624,7 +1624,7 @@ const DetailsCard = () => {
 								<p className="mb-4 font-montserrat text-xl font-medium leading-120%">Отмечай @TianDe  в социальных сетях и мы разместим ваш пост здесь!</p>
 								<div className="commentPhoto relative">
 									<Image src={commentsPhoto} />
-									<button className="absolute left-6 top-6 px-8 h-11 flex justify-center items-center font-montserrat text-xs font-medium">Подробнее</button>
+									<button className=" bg-white-60pe absolute left-6 top-6 px-8 h-11 flex justify-center items-center font-montserrat text-xs font-medium">Подробнее</button>
 								</div>
 
 							</div>

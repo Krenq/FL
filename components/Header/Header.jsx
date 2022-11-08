@@ -7,7 +7,7 @@ import SectionOverNavBar from '../SectionOverNavBar/SectionOverNavBar';
 import SectionWithStock from '../SectionWithStock/SectionWithStock';
 import SectionWithWarnings from '../SectionWithWarnings/SectionWithWarnings';
 
-function Header({ showSearch, setShowSearch }) {
+function Header({ showSearch, setShowSearch, showBurger, setShowBurger }) {
 	const [showWar, setShowWar] = useState(true),
 		showWarHandler = () => {
 			setShowWar(false);
@@ -54,7 +54,7 @@ function Header({ showSearch, setShowSearch }) {
 			</div>
 
 			<header className=" max-w-screen-2xl ..5x2:static sticky ..5x2:block mx-auto -top-1 z-50">
-				<NavBar scrollMenu={scrollMenu} showSearch={showSearch} setShowSearch={setShowSearch} />
+				<NavBar showBurger={showBurger} setShowBurger={setShowBurger} scrollMenu={scrollMenu} showSearch={showSearch} setShowSearch={setShowSearch} />
 			</header>
 		</>
 	);

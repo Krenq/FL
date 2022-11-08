@@ -26,13 +26,16 @@ import Trands from '../components/Trands/Trands';
 import 'swiper/css';
 import ButtonTop from '../components/ButtonTop/ButtonTop';
 import SearchResult from '../components/SearchResult/SearchResult';
+import BurgerMenu from '../components/BurgerMenu/BurgerMenu';
+import previewBurger from '../images/templates/previewBurger.jpg'
 
 
 
 
 
 function Home() {
-	const [showSearch, setShowSearch] = useState(false)
+	const [showSearch, setShowSearch] = useState(false),
+		[showBurger, setShowBurger] = useState(false)
 
 
 	const discount = useRef(null),
@@ -71,11 +74,12 @@ function Home() {
 
 	return (
 		<>
-			<Header showSearch={showSearch} setShowSearch={setShowSearch} />
+			<Header showBurger={showBurger} setShowBurger={setShowBurger} showSearch={showSearch} setShowSearch={setShowSearch} />
 			<section className="container-base relative bg-white">
 				<DiscountSliderItemHover showProducts={showProducts.central} showCentral={showCentral} title={'Шампунь - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
 				<DiscountSliderItemHover showProducts={showProducts.promo} showCentral={showPromo} title={'Шампунь 2 - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
 
+				<BurgerMenu showBurger={showBurger} setShowBurger={setShowBurger} src={previewBurger} title={'Категории'} />
 
 				<ButtonTop />
 				<SearchResult isShow={showSearch} />

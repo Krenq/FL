@@ -68,6 +68,7 @@ module.exports = {
 				DEFAULT: '#FFFFFF',
 				'80pe': 'rgba(255, 255, 255, 0.8)',
 				'60pe': 'rgba(255, 255, 255, 0.6)',
+				'30pe': 'rgba(255, 255, 255, 0.3)',
 				BG_FILTER: '#FCFDFB',
 			},
 			black: {
@@ -139,6 +140,7 @@ module.exports = {
 				'9px': '9px',
 				'10px': '10px',
 				'14px': '14px',
+				'15px': '15px',
 				'18px': '18px',
 				'26px': '26px',
 				'27px': '27px',

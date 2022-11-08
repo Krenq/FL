@@ -2014,6 +2014,28 @@
 	}
 }
 
+.imageCustomBurger span {
+	width: 100% !important;
+}
+
+.activeDropBurgerMenu .arrowItem {
+	transform: rotate(180deg);
+	fill: black !important;
+}
+
+.activeDropBurgerMenu {
+
+	background-color: #FCFDFB;
+}
+
+.activeSubDrop {
+	height: 220px !important;
+}
+
+.activeSubDrop .subDr {
+	transform: rotate(180deg);
+}
+
 @media (max-width: 350px) {
 	.adaptSlide {
 		width: 330px !important;
