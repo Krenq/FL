@@ -172,7 +172,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						/>
 					</div>}
 
-					<div className={`${obj.timeOver ? 'bottom-40' : ''}  absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3   ..6x03:bottom-110px ..6x03:px-1 ${showSost ? 'bottom-40 ..5x5:!bottom-36' : ""}`}>
+					<div className={`${obj.timeOver ? 'bottom-40' : ''}  absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3   ..6x03:bottom-110px ..6x03:px-1   ${showSost ? 'bottom-40 ..5x5:!bottom-36' : ""}`}>
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
 								<p onClick={showSlide} className=" ..6x03:text-11px   text-13px font-normal font-montserrat flex   leading-140% text-black-70pe">
@@ -586,7 +586,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					<div className=" mt-4">
 						<Image className=" object-cover" src={src} width={146} height={146} />
 					</div>
-					<div className={`flex flex-row justify-between items-end w-full mb-1 ${showSost ? 'transform20px' : ''}`}>
+					<div className={`flex flex-row justify-between items-end w-full mb-1 ${showSost || showAct ? 'transform20px' : ''}`}>
 						{isActions ? <p onClick={showSlide} className="cursor-pointer text-sm flex items-center text-black-70pe font-montserrat">
 							<svg
 								className="mr-2"
@@ -659,8 +659,9 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						</div>
 					</div>
 
-					{showAct && <div className={`absolute -mb-0.5 bottom-14  left-0 right-0 ${isSearchItem ? '!bottom-9' : ""}`}>
-						<div className='relative w-full  px-11 bg-gray-light2 py-3 pt-3'>
+					{showAct && <div className={`absolute   -mb-0.5 bottom-14  left-0 right-0 ${isSearchItem ? '!bottom-9' : ""}`}>
+						<div className='relative w-full h-24  px-11 bg-gray-light2 py-4 pt-6'>
+
 							<Swiper ref={slider} slidesPerView={2} navigation={true} modules={[Navigation]} className="mySwiperAct">
 
 								<SwiperSlide>
@@ -701,12 +702,12 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								</div></SwiperSlide>
 
 							</Swiper>
-							<button onClick={prevSlide} className='absolute left-5 top-7'>
+							<button onClick={prevSlide} className='absolute left-5 top-10'>
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11 11.8167L7.16788 8L11 4.175L9.82024 3L4.8 8L9.82024 13L11 11.8167Z" fill="black" />
 								</svg>
 							</button>
-							<button onClick={nextSlide} className='absolute right-5 top-7'>
+							<button onClick={nextSlide} className='absolute right-5 top-10'>
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5 11.8167L8.83212 8L5 4.175L6.17976 3L11.2 8L6.17976 13L5 11.8167Z" fill="black" fillOpacity="0.7" />
 								</svg>

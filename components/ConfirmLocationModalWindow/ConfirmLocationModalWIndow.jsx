@@ -6,7 +6,7 @@ const ConfirmLocationModalWindow = () => {
 
 	const handleSet = () => setShow(!show)
 	return (
-		<section className={`absolute  z-10  ..5x2:fixed ..6x6:bottom-16 ..6x6:h-40 ..6x5:bottom-24 ..5x2:bottom-24 ..5x2:h-44 ..5x2:!top-auto ..5x2:left-0 ..5x2:right-0 ..5x2:w-auto ..5x2:flex ..5x2:justify-center confirm p-8 w-96 h-36 bg-white top-10 left-14 z-9   ${show ? "hiddenCustom" : "block"}`}>
+		<section className={`absolute  z-50  ..5x2:fixed ..6x6:bottom-16 ..6x6:h-40 ..6x5:bottom-24 ..5x2:bottom-24 ..5x2:h-44 ..5x2:!top-auto ..5x2:left-0 ..5x2:right-0 ..5x2:w-auto ..5x2:flex ..5x2:justify-center confirm p-8 w-96 h-36 bg-white top-10 left-14 z-9   ${show ? "hiddenCustom" : "block"}`}>
 			<div className="relative">
 				<p className="text-base ..5x2:text-center">Ваш город <span className="font-semibold">Москва?</span></p>
 
