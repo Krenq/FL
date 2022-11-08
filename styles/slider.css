@@ -2023,8 +2023,17 @@
 	fill: black !important;
 }
 
-.activeDropBurgerMenu {
+.transitionCustom {
+	transition: .3s ease all !important;
 
+}
+
+.customDrop {
+	height: 490px !important;
+}
+
+.activeDropBurgerMenu {
+	height: 320px;
 	background-color: #FCFDFB;
 }
 

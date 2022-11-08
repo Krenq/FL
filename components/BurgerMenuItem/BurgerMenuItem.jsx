@@ -60,11 +60,11 @@ const BurgerMenuItem = ({ title }) => {
 
 
 	return (
-		<div className={`p-3 border-b border-gray-light2 transition-all ${show ? 'activeDropBurgerMenu' : "h-11  overflow-hidden"}`}>
+		<div className={`p-3 border-b border-gray-light2 transitionCustom  ${showSub.anti || showSub.ns || showSub.mask || showSub.toniz || showSub.probl ? 'customDrop' : ''} ${show ? 'activeDropBurgerMenu' : "h-11  overflow-hidden"}`}>
 			<div onClick={setShowB} className=" flex justify-between items-center">
 				<p className="font-montserrat text-15px">{title}</p>
-				<svg className="arrowItem" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill="#DBDCDA" />
+				<svg className="arrowItem transitionCustom " width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill={show ? 'black' : `#DBDCDA`} />
 				</svg>
 			</div>
 			<div className="pl-3 pt-6 -mb-4 ">
@@ -75,11 +75,11 @@ const BurgerMenuItem = ({ title }) => {
 					</p>
 
 
-					<div className={`transition-all ${showSub.anti ? 'activeSubDrop' : 'overflow-hidden h-5 mb-6'}`}>
+					<div className={`transitionCustom ${showSub.anti ? 'activeSubDrop' : 'overflow-hidden h-5 mb-6'}`}>
 						<div onClick={() => setShowSubS('anti')} className="flex items-center justify-between">
 							<p className="font-montserrat text-13px">Антивозрастной уход</p>
-							<svg className="subDr" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill="#DBDCDA" />
+							<svg className="subDr transitionCustom" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill={showSub.anti ? 'black' : "#DBDCDA"} />
 							</svg>
 						</div>
 						<div className="pl-3">
@@ -95,11 +95,11 @@ const BurgerMenuItem = ({ title }) => {
 
 
 					</div>
-					<div className={`transition-all ${showSub.ns ? 'activeSubDrop' : 'overflow-hidden mb-6 h-5'}`}>
+					<div className={`transitionCustom ${showSub.ns ? 'activeSubDrop' : 'overflow-hidden mb-6 h-5'}`}>
 						<div onClick={() => setShowSubS('ns')} className="flex items-center justify-between">
 							<p className="font-montserrat text-13px">Глубокое очищение</p>
-							<svg className="subDr" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill="#DBDCDA" />
+							<svg className="subDr transitionCustom" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill={showSub.ns ? 'black' : "#DBDCDA"} />
 							</svg>
 						</div>
 						<div className="pl-3">
@@ -115,11 +115,11 @@ const BurgerMenuItem = ({ title }) => {
 
 
 					</div>
-					<div className={`transition-all ${showSub.mask ? 'activeSubDrop' : 'overflow-hidden mb-6 h-5'}`}>
+					<div className={`transitionCustom ${showSub.mask ? 'activeSubDrop' : 'overflow-hidden mb-6 h-5'}`}>
 						<div onClick={() => setShowSubS('mask')} className="flex items-center justify-between">
 							<p className="font-montserrat text-13px">Маски</p>
-							<svg className="subDr" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill="#DBDCDA" />
+							<svg className="subDr transitionCustom" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill={showSub.mask ? 'black' : "#DBDCDA"} />
 							</svg>
 						</div>
 						<div className="pl-3">
@@ -135,11 +135,11 @@ const BurgerMenuItem = ({ title }) => {
 
 
 					</div>
-					<div className={`transition-all ${showSub.toniz ? 'activeSubDrop' : 'overflow-hidden mb-6 h-5'}`}>
+					<div className={`transitionCustom ${showSub.toniz ? 'activeSubDrop' : 'overflow-hidden mb-6 h-5'}`}>
 						<div onClick={() => setShowSubS('toniz')} className="flex items-center justify-between">
 							<p className="font-montserrat text-13px">Очищение и тонизирование</p>
-							<svg className="subDr" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill="#DBDCDA" />
+							<svg className="subDr transitionCustom" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill={showSub.toniz ? 'black' : "#DBDCDA"} />
 							</svg>
 						</div>
 						<div className="pl-3">
@@ -155,11 +155,11 @@ const BurgerMenuItem = ({ title }) => {
 
 
 					</div>
-					<div className={`transition-all ${showSub.probl ? 'activeSubDrop' : 'overflow-hidden mb-6 h-5'}`}>
+					<div className={`transitionCustom ${showSub.probl ? 'activeSubDrop' : 'overflow-hidden mb-6 h-5'}`}>
 						<div onClick={() => setShowSubS('probl')} className="flex items-center justify-between">
 							<p className="font-montserrat text-13px">Проблемная кожа</p>
-							<svg className="subDr" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill="#DBDCDA" />
+							<svg className="subDr transitionCustom" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.2937 6.525L9 10.8361L4.69687 6.525L3.375 7.85223L9 13.5L14.625 7.85223L13.2937 6.525Z" fill={showSub.probl ? 'black' : "#DBDCDA"} />
 							</svg>
 						</div>
 						<div className="pl-3">
