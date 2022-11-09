@@ -5,8 +5,8 @@ import one from '../images/templates/DetailCardOne.jpg'
 import oneSmall from '../images/templates/DetaillCardSmallOne.jpg'
 import twoSmall from '../images/templates/DetailCardSmallTwo.jpg'
 import treeSmall from '../images/templates/DetailCardSmallTree.jpg'
-import Header from "../components/Header/Header"
-import SearchResult from "../components/SearchResult/SearchResult"
+import Header from "./Header/Header"
+import SearchResult from "./SearchResult/SearchResult"
 import Image from "next/image";
 import fourF from '../images/templates/4Offer.jpg';
 
@@ -50,8 +50,8 @@ import commentsPhoto from '../images/templates/commentsPhoto.jpg'
 import avatar from '../images/templates/avatar.jpg'
 
 import 'swiper/css';
-import SpecialOfferItem from "../components/SpecialOfferItem/SpecialOfferItem";
-import Footer from "../components/Footer/Footer";
+import SpecialOfferItem from "./SpecialOfferItem/SpecialOfferItem";
+import Footer from "./Footer/Footer";
 
 const DetailsCard = () => {
 	const [showSearch, setShowSearch] = useState(false),
@@ -1368,10 +1368,10 @@ const DetailsCard = () => {
 							</button>
 
 						</div>
-						<div className="flex ">
-							<div className="mr-60px">
+						<div className="flex ..5x2:flex-col ..5x2:overflow-hidden">
+							<div className="mr-60px .2x1.0:mr-2">
 								<div className="flex items-center mb-6 ">
-									<p className="font-montserrat mr-4 font-medium text-xl">5 отзывов со средней оценкой 4,4</p>
+									<p className="font-montserrat mr-4 ..5x01:text-sm font-medium text-xl">5 отзывов со средней оценкой 4,4</p>
 									<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<g clip-path="url(#clip0_1945_1209386)">
 											<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
@@ -1425,16 +1425,16 @@ const DetailsCard = () => {
 
 
 								<div>
-									<div className="p-6 bg-gray-100">
+									<div className="p-6 .2x1.0:p-3 bg-gray-100">
 										<div className="flex items-center ">
 											<Image src={avatar} />
 											<div className="flex pb-4 border-disable w-full mt-4 ml-4 justify-between items-center border-b ">
 												<div className="flex items-center">
-													<p className=" font-montserrat font-medium">Марина Одинцова</p>
+													<p className=" font-montserrat font-medium ..5x01:text-13px">Марина Одинцова</p>
 													<div className="w-4 border-b mx-2">
 
 													</div>
-													<p className="font-montserrat text-black-70pe">May 20, 2022</p>
+													<p className="font-montserrat text-black-70pe ..5x01:text-13px">May 20, 2022</p>
 
 												</div>
 												<div className="flex items-center">
@@ -1485,20 +1485,20 @@ const DetailsCard = () => {
 											</div>
 
 										</div>
-										<p className="pl-74px mt-3 font-montserrat text-black-70pe">Мне показалось, что кожу стянуло после использования. Ощущение после применения среднее</p>
+										<p className="pl-74px mt-3 font-montserrat .1x01:text-13px text-black-70pe">Мне показалось, что кожу стянуло после использования. Ощущение после применения среднее</p>
 
 
 									</div>
-									<div className="p-6 bg-gray-100">
+									<div className="p-6 .2x1.0:p-3 bg-gray-100">
 										<div className="flex items-center ">
 											<Image src={avatar} />
 											<div className="flex pb-4 border-disable w-full mt-4 ml-4 justify-between items-center border-b ">
 												<div className="flex items-center">
-													<p className=" font-montserrat font-medium">Ирина Самойлова</p>
+													<p className=" font-montserrat font-medium ..5x01:text-13px">Ирина Самойлова</p>
 													<div className="w-4 border-b mx-2">
 
 													</div>
-													<p className="font-montserrat text-black-70pe">May 10, 2022</p>
+													<p className="font-montserrat text-black-70pe ..5x01:text-13px">May 10, 2022</p>
 
 												</div>
 												<div className="flex items-center">
@@ -1549,20 +1549,20 @@ const DetailsCard = () => {
 											</div>
 
 										</div>
-										<p className="pl-74px mt-3 font-montserrat text-black-70pe">Получила потрясающий эффект 🤣 после применения маски. Значительно улучшился цвет лица, кожа просто сияет красотой и здоровьем, маска сняла следы стресса, придала мягкость, бархатистость и упругость коже!!! Мгновенный эффект ухоженной кожи! Спасибо компания TianDe 😘</p>
+										<p className="pl-74px mt-3 font-montserrat .1x01:text-13px text-black-70pe">Получила потрясающий эффект 🤣 после применения маски. Значительно улучшился цвет лица, кожа просто сияет красотой и здоровьем, маска сняла следы стресса, придала мягкость, бархатистость и упругость коже!!! Мгновенный эффект ухоженной кожи! Спасибо компания TianDe 😘</p>
 
 
 									</div>
-									<div className="p-6 bg-gray-100">
+									<div className="p-6 .2x1.0:p-3 bg-gray-100">
 										<div className="flex items-center ">
 											<Image src={avatar} />
 											<div className="flex pb-4 border-disable w-full mt-4 ml-4 justify-between items-center border-b ">
 												<div className="flex items-center">
-													<p className=" font-montserrat font-medium">Анна Мнемова</p>
+													<p className=" font-montserrat font-medium ..5x01:text-13px" >Анна Мнемова</p>
 													<div className="w-4 border-b mx-2">
 
 													</div>
-													<p className="font-montserrat text-black-70pe">March 18, 2022</p>
+													<p className="font-montserrat text-black-70pe ..5x01:text-13px">March 18, 2022</p>
 
 												</div>
 												<div className="flex items-center">
@@ -1613,14 +1613,14 @@ const DetailsCard = () => {
 											</div>
 
 										</div>
-										<p className="pl-74px mt-3 font-montserrat text-black-70pe">Шикарная маска. Всего за неделю применения кожа становится плотной, упругой и очень приятной на ощупь. Единственное, что мне не подошло - время нанесения. Два дня делала на ночь - вставала сильно отекшей. Перенесла применение на 5-6 часов вечера и все нормализовалось. Отеков нет. Зато есть реально помолодевшая кожа. Микро морщинок словно и не бывало.</p>
+										<p className="pl-74px mt-3 font-montserrat .1x01:text-13px text-black-70pe">Шикарная маска. Всего за неделю применения кожа становится плотной, упругой и очень приятной на ощупь. Единственное, что мне не подошло - время нанесения. Два дня делала на ночь - вставала сильно отекшей. Перенесла применение на 5-6 часов вечера и все нормализовалось. Отеков нет. Зато есть реально помолодевшая кожа. Микро морщинок словно и не бывало.</p>
 
 
 									</div>
 								</div>
 								<button className="w-full h-11 flex justify-center items-center border border-stroke mb-24 font-montserrat text-xs font-medium">Показать ещё 2 из 5</button>
 							</div>
-							<div>
+							<div className="..5x2:flex ..5x2:items-center ..5x2:flex-col">
 								<p className="mb-4 font-montserrat text-xl font-medium leading-120%">Отмечай @TianDe  в социальных сетях и мы разместим ваш пост здесь!</p>
 								<div className="commentPhoto relative">
 									<Image src={commentsPhoto} />

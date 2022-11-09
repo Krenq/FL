@@ -6,9 +6,9 @@ const PhoneNavigation = () => {
 
 	const setShowMenuF = () => {
 		setShowMenu(!showMenu)
-		if (showMenu) {
-			document.body.style.overflowY = 'auto'
-		} else document.body.style.overflowY = 'hidden'
+		// if (showMenu) {
+		// 	document.body.style.overflowY = 'auto'
+		// } else document.body.style.overflowY = 'hidden'
 
 	}
 	return (

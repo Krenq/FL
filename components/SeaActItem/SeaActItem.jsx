@@ -1,10 +1,19 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import * as icons from '../../images/constsIcons';
+
+import tree from '../../images/templates/treeItemSearch.jpg'
+import twoI from '../../images/templates/twoItemSearch.jpg'
+import one from '../../images/templates/basket1.png'
+import { Navigation } from 'swiper';
+import { useRef } from 'react';
 
 export default function SeaActItem({ obj }) {
 	const [currentColor, setCurrentColor] = useState('1');
-	const [buy, setBuy] = useState(false);
+	const slider = useRef(null)
+	const [buy, setBuy] = useState(false),
+		[showAct, setShowAct] = useState(false)
 
 	function truncate(str, maxlength) {
 		return str.length > maxlength ? str.slice(0, maxlength - 1) + '…' : str;
@@ -13,6 +22,16 @@ export default function SeaActItem({ obj }) {
 	const currentColorHandler = (num) => {
 		setCurrentColor(num);
 	};
+
+
+	const nextSlide = () => {
+		if (slider.current !== null && slider.current.swiper !== null) slider.current.swiper.slideNext();
+	},
+		prevSlide = () => {
+			if (slider.current !== null && slider.current.swiper !== null) slider.current.swiper.slidePrev();
+		},
+		showActL = () => setShowAct(!showAct)
+
 
 	return (
 		<div className=" min-h-317px max-w-278px ..6x03:mx-auto  h-428px flex justify-center card_hov bg-white transition-all relative p-2 mx-3">
@@ -61,7 +80,7 @@ export default function SeaActItem({ obj }) {
 					<div className=" absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3">
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
-								<p className="text-13px font-normal font-montserrat flex items-center leading-140% text-gray-quick-silver">
+								<p onClick={showActL} className="text-13px font-normal font-montserrat flex items-center leading-140% text-gray-quick-silver">
 									<svg
 										className=" mr-1"
 										width="16"
@@ -99,6 +118,64 @@ export default function SeaActItem({ obj }) {
 							{obj.text}
 						</p>
 					</div>
+					{showAct && <div className={`absolute  z-10  -mb-0.5 bottom-14  left-0 right-0  `}>
+						<div className='relative w-full h-24  px-11 bg-gray-light2 py-4 pt-6'>
+
+							<Swiper ref={slider} slidesPerView={2} navigation={true} modules={[Navigation]} className="mySwiperAct">
+
+								<SwiperSlide>
+									<div className='relative  rounded overflow-hidden itemSlideDrop'>
+
+
+										<div className='absolute left-0 right-0 bottom-0 top-0 bg-white-60pe z-10 flex items-center justify-center'>
+											<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.91 7.91313H0.75V5.5925C0.75 5.01235 1.33 4.43219 1.91 4.43219H12.35C12.93 4.43219 13.51 5.01235 13.51 5.5925V7.91313H12.35M1.91 7.91313V13.7147C1.91 14.2948 2.49 14.875 3.07 14.875H11.19C11.77 14.875 12.35 14.2948 12.35 13.7147V7.91313M1.91 7.91313H12.35M7.13 4.43219L7.13 14.875M7.13 4.43219C6.35667 2.78841 4.752 0.139023 3.36 1.5314C1.968 2.92377 5.1 4.43219 7.13 4.43219ZM7.13 4.43219C7.13 1.82154 9.73999 0.081024 10.9 1.24131C12.35 2.69168 9.45 4.43213 7.13 4.43219Z" stroke="#C5C1AB" strokeWidth="1.2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+
+										</div>
+										<Image src={one} width={'100%'} height={'100%'} />
+									</div></SwiperSlide>
+								<SwiperSlide> <div className=' rounded overflow-hidden itemSlideDrop'>
+									<Image width={'100%'} height={'100%'} src={twoI} />
+								</div></SwiperSlide>
+								<SwiperSlide> <div className='ml-1.5 rounded overflow-hidden itemSlideDrop'>
+									<Image width={'100%'} height={'100%'} src={tree} />
+								</div></SwiperSlide>
+								<SwiperSlide>
+									<div className='relative  rounded overflow-hidden itemSlideDrop'>
+
+
+										<div className='absolute left-0 right-0 bottom-0 top-0 bg-white-60pe z-10 flex items-center justify-center'>
+											<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.91 7.91313H0.75V5.5925C0.75 5.01235 1.33 4.43219 1.91 4.43219H12.35C12.93 4.43219 13.51 5.01235 13.51 5.5925V7.91313H12.35M1.91 7.91313V13.7147C1.91 14.2948 2.49 14.875 3.07 14.875H11.19C11.77 14.875 12.35 14.2948 12.35 13.7147V7.91313M1.91 7.91313H12.35M7.13 4.43219L7.13 14.875M7.13 4.43219C6.35667 2.78841 4.752 0.139023 3.36 1.5314C1.968 2.92377 5.1 4.43219 7.13 4.43219ZM7.13 4.43219C7.13 1.82154 9.73999 0.081024 10.9 1.24131C12.35 2.69168 9.45 4.43213 7.13 4.43219Z" stroke="#C5C1AB" strokeWidth="1.2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+
+										</div>
+										<Image src={one} width={'100%'} height={'100%'} />
+									</div></SwiperSlide>
+								<SwiperSlide> <div className=' rounded overflow-hidden itemSlideDrop'>
+									<Image width={'100%'} height={'100%'} src={twoI} />
+								</div></SwiperSlide>
+								<SwiperSlide> <div className='ml-1.5 rounded overflow-hidden itemSlideDrop'>
+									<Image width={'100%'} height={'100%'} src={tree} />
+								</div></SwiperSlide>
+
+							</Swiper>
+							<button onClick={prevSlide} className='absolute left-5 top-10'>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 11.8167L7.16788 8L11 4.175L9.82024 3L4.8 8L9.82024 13L11 11.8167Z" fill="black" />
+								</svg>
+							</button>
+							<button onClick={nextSlide} className='absolute right-5 top-10'>
+								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5 11.8167L8.83212 8L5 4.175L6.17976 3L11.2 8L6.17976 13L5 11.8167Z" fill="black" fillOpacity="0.7" />
+								</svg>
+
+							</button>
+						</div>
+
+					</div>}
+
 
 					{obj.date && (
 						<div className=" absolute bottom-133px flex flex-row justify-center items-center">
