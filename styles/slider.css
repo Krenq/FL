@@ -2032,7 +2032,7 @@
 }
 
 .transitionCustom {
-	transition: .3s ease all !important;
+	transition: 150ms ease all !important;
 
 }
 
