@@ -7,7 +7,7 @@ const BurgerMenu = ({ src, title, showBurger, setShowBurger }) => {
 			<div className="flex items-center justify-between p-3 h-11">
 				<p className="font-montserrat font-medium ">{title}</p>
 				<svg onClick={() => setShowBurger(!showBurger)} width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M12 4L4 12M4 4L12 12" stroke="black" stroke-width="1.2" stroke-linecap="round" />
+					<path d="M12 4L4 12M4 4L12 12" stroke="black" strokeWidth="1.2" strokeLinecap="round" />
 				</svg>
 
 			</div>

@@ -102,10 +102,10 @@ export default function SeaActItem({ obj }) {
 						<div className="flex flex-row items-center">
 
 							<svg className='..6x5:w-3 ..6x5:h-3 mr-1' width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M7.75 10.75C7.75 10.75 4.5 11 2.75 9C1 7 1 1 1 1C1 1 7 0.75 9 2.25C11 3.75 10.5 8 10.5 8" stroke="#337202" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M11 11C11 11 8.20518 8.88788 6.5 7C4.79483 5.11213 4 3.25 4 3.25" stroke="#337202" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M6.5 7L6.75 3.75" stroke="#337202" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M6.5 7L4 6.75" stroke="#337202" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M7.75 10.75C7.75 10.75 4.5 11 2.75 9C1 7 1 1 1 1C1 1 7 0.75 9 2.25C11 3.75 10.5 8 10.5 8" stroke="#337202" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round" />
+								<path d="M11 11C11 11 8.20518 8.88788 6.5 7C4.79483 5.11213 4 3.25 4 3.25" stroke="#337202" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round" />
+								<path d="M6.5 7L6.75 3.75" stroke="#337202" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round" />
+								<path d="M6.5 7L4 6.75" stroke="#337202" strokeWidth="0.7" strokeLinecap="round" strokeLinejoin="round" />
 							</svg>
 
 							<p className=" font-montserrat font-medium text-13px leading-140% text-gray-quick-silver">
@@ -129,7 +129,7 @@ export default function SeaActItem({ obj }) {
 
 										<div className='absolute left-0 right-0 bottom-0 top-0 bg-white-60pe z-10 flex items-center justify-center'>
 											<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1.91 7.91313H0.75V5.5925C0.75 5.01235 1.33 4.43219 1.91 4.43219H12.35C12.93 4.43219 13.51 5.01235 13.51 5.5925V7.91313H12.35M1.91 7.91313V13.7147C1.91 14.2948 2.49 14.875 3.07 14.875H11.19C11.77 14.875 12.35 14.2948 12.35 13.7147V7.91313M1.91 7.91313H12.35M7.13 4.43219L7.13 14.875M7.13 4.43219C6.35667 2.78841 4.752 0.139023 3.36 1.5314C1.968 2.92377 5.1 4.43219 7.13 4.43219ZM7.13 4.43219C7.13 1.82154 9.73999 0.081024 10.9 1.24131C12.35 2.69168 9.45 4.43213 7.13 4.43219Z" stroke="#C5C1AB" strokeWidth="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M1.91 7.91313H0.75V5.5925C0.75 5.01235 1.33 4.43219 1.91 4.43219H12.35C12.93 4.43219 13.51 5.01235 13.51 5.5925V7.91313H12.35M1.91 7.91313V13.7147C1.91 14.2948 2.49 14.875 3.07 14.875H11.19C11.77 14.875 12.35 14.2948 12.35 13.7147V7.91313M1.91 7.91313H12.35M7.13 4.43219L7.13 14.875M7.13 4.43219C6.35667 2.78841 4.752 0.139023 3.36 1.5314C1.968 2.92377 5.1 4.43219 7.13 4.43219ZM7.13 4.43219C7.13 1.82154 9.73999 0.081024 10.9 1.24131C12.35 2.69168 9.45 4.43213 7.13 4.43219Z" stroke="#C5C1AB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
 											</svg>
 
 										</div>
@@ -147,7 +147,7 @@ export default function SeaActItem({ obj }) {
 
 										<div className='absolute left-0 right-0 bottom-0 top-0 bg-white-60pe z-10 flex items-center justify-center'>
 											<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M1.91 7.91313H0.75V5.5925C0.75 5.01235 1.33 4.43219 1.91 4.43219H12.35C12.93 4.43219 13.51 5.01235 13.51 5.5925V7.91313H12.35M1.91 7.91313V13.7147C1.91 14.2948 2.49 14.875 3.07 14.875H11.19C11.77 14.875 12.35 14.2948 12.35 13.7147V7.91313M1.91 7.91313H12.35M7.13 4.43219L7.13 14.875M7.13 4.43219C6.35667 2.78841 4.752 0.139023 3.36 1.5314C1.968 2.92377 5.1 4.43219 7.13 4.43219ZM7.13 4.43219C7.13 1.82154 9.73999 0.081024 10.9 1.24131C12.35 2.69168 9.45 4.43213 7.13 4.43219Z" stroke="#C5C1AB" strokeWidth="1.2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M1.91 7.91313H0.75V5.5925C0.75 5.01235 1.33 4.43219 1.91 4.43219H12.35C12.93 4.43219 13.51 5.01235 13.51 5.5925V7.91313H12.35M1.91 7.91313V13.7147C1.91 14.2948 2.49 14.875 3.07 14.875H11.19C11.77 14.875 12.35 14.2948 12.35 13.7147V7.91313M1.91 7.91313H12.35M7.13 4.43219L7.13 14.875M7.13 4.43219C6.35667 2.78841 4.752 0.139023 3.36 1.5314C1.968 2.92377 5.1 4.43219 7.13 4.43219ZM7.13 4.43219C7.13 1.82154 9.73999 0.081024 10.9 1.24131C12.35 2.69168 9.45 4.43213 7.13 4.43219Z" stroke="#C5C1AB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
 											</svg>
 
 										</div>
