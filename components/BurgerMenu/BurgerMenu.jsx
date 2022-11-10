@@ -2,6 +2,7 @@ import Image from "next/image"
 import BurgerMenuItem from "../BurgerMenuItem/BurgerMenuItem"
 
 const BurgerMenu = ({ src, title, showBurger, setShowBurger }) => {
+
 	return (
 		<section className={`fixed top-0  left-0 right-0 bottom-0 z-100 bg-white ${showBurger ? 'fixed' : "hidden"}`}>
 			<div className="flex items-center justify-between p-3 h-11">

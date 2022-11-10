@@ -1,56 +1,55 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import MenuPhone from "../MenuPhone/MenuPhone";
 
 const PhoneNavigation = () => {
-	const [showMenu, setShowMenu] = useState(false)
+	const [showMenu, setShowMenu] = useState(false),
+		router = useRouter()
 
-	const setShowMenuF = () => {
-		setShowMenu(!showMenu)
-		// if (showMenu) {
-		// 	document.body.style.overflowY = 'auto'
-		// } else document.body.style.overflowY = 'hidden'
-
-	}
+	const setShowMenuF = () => setShowMenu(!showMenu)
 	return (
 		<>
-			< MenuPhone showMenu={showMenu} />
+
 			<nav className="hidden border-t border-stroke ..5x2:block bg-white pb-7    ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
 				<ul className="flex justify-center   ..6x4:justify-between">
-					<li className="relative cursor-pointer">
-						<svg
-							className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5  ..6x6:mb-2 ..6x5:w-20"
-							width="54"
-							height="24"
-							viewBox="0 0 54 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<rect
-								width="24"
+					<Link href='/'>
+						<li className="relative cursor-pointer">
+							<svg
+								className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5  ..6x6:mb-2 ..6x5:w-20"
+								width="54"
 								height="24"
-								transform="translate(15)"
-								fill="white"
-							/>
-							<path
-								d="M15.8 12L18.3 9.49999M38.2 12L35.8 9.59999M18.3 9.49999L21.2 6.59999L26.2929 1.50709C26.6834 1.11657 27.3166 1.11657 27.7071 1.50709L31.4 5.19999L35.8 9.59999M18.3 9.49999V20.6C18.3 21.1523 18.7477 21.6 19.3 21.6H34.8C35.3523 21.6 35.8 21.1523 35.8 20.6V9.59999M35.8 9.59999V4.39999H35V8.79999"
-								stroke="#337202"
-								strokeWidth="0.7"
-							/>
-							<path
-								d="M20.7263 10.2579L26.6263 3.62043C26.8252 3.39667 27.1748 3.39667 27.3737 3.62043L33.2737 10.2579C33.3551 10.3495 33.4 10.4677 33.4 10.5901V19.1C33.4 19.3762 33.1761 19.6 32.9 19.6H21.1C20.8239 19.6 20.6 19.3762 20.6 19.1V10.5901C20.6 10.4677 20.6449 10.3495 20.7263 10.2579Z"
-								stroke="#337202"
-								strokeWidth="0.7"
-							/>
-							<path
-								d="M23.0496 10.9093L26.8496 6.57171C26.9292 6.48077 27.0708 6.48077 27.1504 6.57171L30.9504 10.9093C30.9824 10.9457 31 10.9926 31 11.0411V16.6C31 16.7105 30.9105 16.8 30.8 16.8H23.2C23.0895 16.8 23 16.7105 23 16.6V11.0411C23 10.9926 23.0176 10.9457 23.0496 10.9093Z"
-								stroke="#337202"
-								strokeWidth="0.7"
-							/>
-						</svg>
-						<p className="text-gray-quick-silver absolute left-1/2 ability  ..7x001:text-8px ..6x6:text-xs -mt-4">
-							Главная
-						</p>
-					</li>
+								viewBox="0 0 54 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<rect
+									width="24"
+									height="24"
+									transform="translate(15)"
+									fill="white"
+								/>
+								<path
+									d="M15.8 12L18.3 9.49999M38.2 12L35.8 9.59999M18.3 9.49999L21.2 6.59999L26.2929 1.50709C26.6834 1.11657 27.3166 1.11657 27.7071 1.50709L31.4 5.19999L35.8 9.59999M18.3 9.49999V20.6C18.3 21.1523 18.7477 21.6 19.3 21.6H34.8C35.3523 21.6 35.8 21.1523 35.8 20.6V9.59999M35.8 9.59999V4.39999H35V8.79999"
+									stroke={`${router.pathname === '/' ? '#337202' : "#949792"}`}
+									strokeWidth="0.7"
+								/>
+								<path
+									d="M20.7263 10.2579L26.6263 3.62043C26.8252 3.39667 27.1748 3.39667 27.3737 3.62043L33.2737 10.2579C33.3551 10.3495 33.4 10.4677 33.4 10.5901V19.1C33.4 19.3762 33.1761 19.6 32.9 19.6H21.1C20.8239 19.6 20.6 19.3762 20.6 19.1V10.5901C20.6 10.4677 20.6449 10.3495 20.7263 10.2579Z"
+									stroke={`${router.pathname === '/' ? '#337202' : "#949792"}`}
+									strokeWidth="0.7"
+								/>
+								<path
+									d="M23.0496 10.9093L26.8496 6.57171C26.9292 6.48077 27.0708 6.48077 27.1504 6.57171L30.9504 10.9093C30.9824 10.9457 31 10.9926 31 11.0411V16.6C31 16.7105 30.9105 16.8 30.8 16.8H23.2C23.0895 16.8 23 16.7105 23 16.6V11.0411C23 10.9926 23.0176 10.9457 23.0496 10.9093Z"
+									stroke={`${router.pathname === '/' ? '#337202' : "#949792"}`}
+									strokeWidth="0.7"
+								/>
+							</svg>
+							<p className="text-gray-quick-silver absolute left-1/2 ability  ..7x001:text-8px ..6x6:text-xs -mt-4">
+								Главная
+							</p>
+						</li></Link>
+
 					<li className="relative cursor-pointer">
 						<svg
 							className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:h-10 ..6x6:mt-0.5 ..6x6:mb-2 ..6x5:w-20"
@@ -110,27 +109,30 @@ const PhoneNavigation = () => {
 							Избранные
 						</p>
 					</li>
-					<li className="relative cursor-pointer" onClick={setShowMenuF}>
-						<svg
-							className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10   ..6x6:mb-2  ..6x5:w-20"
-							width="54"
-							height="24"
-							viewBox="0 0 54 24"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M33.8463 13.7C32.8011 13.7 31.9925 12.9183 31.9925 12C31.9925 11.0817 32.8011 10.3 33.8463 10.3C34.8914 10.3 35.7 11.0817 35.7 12C35.7 12.9183 34.8914 13.7 33.8463 13.7ZM26.8462 13.7C25.8011 13.7 24.9925 12.9183 24.9925 12C24.9925 11.0817 25.8011 10.3 26.8462 10.3C27.8914 10.3 28.7 11.0817 28.7 12C28.7 12.9183 27.8914 13.7 26.8462 13.7ZM19.8463 13.7C18.8011 13.7 17.9925 12.9183 17.9925 12C17.9925 11.0817 18.8011 10.3 19.8463 10.3C20.8914 10.3 21.7 11.0817 21.7 12C21.7 12.9183 20.8914 13.7 19.8463 13.7Z"
-								fill="white"
-								stroke="#949792"
-								strokeWidth="0.6"
-							/>
-						</svg>
+					<Link href='/Menu'>
+						<li className={`relative cursor-pointer ${router.pathname === '/Menu' ? 'activeButtonPhone' : ""}`} onClick={setShowMenuF}>
+							<svg
+								className="h-20 w-24 ..6x5:h-20 ..6x6:w-14 ..6x6:mt-0.5 ..6x6:h-10   ..6x6:mb-2  ..6x5:w-20"
+								width="54"
+								height="24"
+								viewBox="0 0 54 24"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M33.8463 13.7C32.8011 13.7 31.9925 12.9183 31.9925 12C31.9925 11.0817 32.8011 10.3 33.8463 10.3C34.8914 10.3 35.7 11.0817 35.7 12C35.7 12.9183 34.8914 13.7 33.8463 13.7ZM26.8462 13.7C25.8011 13.7 24.9925 12.9183 24.9925 12C24.9925 11.0817 25.8011 10.3 26.8462 10.3C27.8914 10.3 28.7 11.0817 28.7 12C28.7 12.9183 27.8914 13.7 26.8462 13.7ZM19.8463 13.7C18.8011 13.7 17.9925 12.9183 17.9925 12C17.9925 11.0817 18.8011 10.3 19.8463 10.3C20.8914 10.3 21.7 11.0817 21.7 12C21.7 12.9183 20.8914 13.7 19.8463 13.7Z"
+									fill="white"
+									stroke={`${router.pathname === '/Menu' ? '#337202' : "#949792"}`}
+									strokeWidth="0.6"
+								/>
+							</svg>
 
-						<p className="  ..7x001:text-8px text-gray-quick-silver absolute left-1/2 ..6x6:text-xs ability -mt-4 ">
-							Меню
-						</p>
-					</li>
+							<p className="  ..7x001:text-8px text-gray-quick-silver absolute left-1/2 ..6x6:text-xs ability -mt-4 ">
+								Меню
+							</p>
+						</li>
+					</Link>
+
 				</ul>
 			</nav>
 		</>

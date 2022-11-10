@@ -2036,6 +2036,10 @@
 
 }
 
+.activeButtonPhone svg {
+	stroke: #337202 !important;
+}
+
 .customDrop {
 	height: 490px !important;
 }

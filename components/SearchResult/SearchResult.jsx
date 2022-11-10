@@ -21,7 +21,7 @@ const SearchResult = ({ isShow }) => {
 	}, [])
 
 	return (
-		<section className={`${isShow ? 'absolute' : "hidden"} ${isScroll ? '!fixed !top-20 !-mt-1' : "!absolute"} w-full flex searchWrapper bg-white z-40`}>
+		<section className={`${isShow ? 'absolute' : "hidden"} ${isScroll ? '!fixed !top-20 !-mt-1' : "!absolute"} dropDownShadow w-full flex searchWrapper bg-white z-40`}>
 			<div className="sidebarSearch pl-20 pt-8 border-r pr-4    border-gray">
 				<div className="flex justify-between items-center">
 					<p className="font-montserrat font-semibold text-gray-deNum">Последние поиски</p>
