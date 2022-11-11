@@ -14,18 +14,18 @@ const PhoneNavigation = () => {
 
 	useEffect(() => {
 		if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
-			navigation.current.add('scroll-down');
+			navigation.current.classList.add('scroll-down');
 			let CurrentScroll = 0;
 			window.scroll(function (event) {
 				let NextScroll = window.visualViewport.pageTop
 				if (NextScroll > CurrentScroll) { // скролл вниз
 					if (NextScroll - CurrentScroll > 20) { // проверяем был ли скролл больше чем на 20 пикселей
-						navigation.current.add('scroll-down');
+						navigation.current.classList.add('scroll-down');
 					}
 				}
 				else { // скролл вверх (обратно)
 					if (CurrentScroll - NextScroll > 20) {
-						navigation.current.remove('scroll-down');
+						navigation.current.classList.remove('scroll-down');
 					}
 				}
 
