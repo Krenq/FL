@@ -20,12 +20,12 @@ const PhoneNavigation = () => {
 				let NextScroll = window.visualViewport.pageTop
 				if (NextScroll > CurrentScroll) { // скролл вниз
 					if (NextScroll - CurrentScroll > 20) { // проверяем был ли скролл больше чем на 20 пикселей
-						navigation.addClass('scroll-down');
+						navigation.current.addClass('scroll-down');
 					}
 				}
 				else { // скролл вверх (обратно)
 					if (CurrentScroll - NextScroll > 20) {
-						navigation.removeClass('scroll-down');
+						navigation.current.removeClass('scroll-down');
 					}
 				}
 
