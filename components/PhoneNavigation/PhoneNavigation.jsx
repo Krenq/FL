@@ -1,17 +1,43 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
+import { useRef } from "react";
 import { useState } from "react";
 import MenuPhone from "../MenuPhone/MenuPhone";
 
 const PhoneNavigation = () => {
 	const [showMenu, setShowMenu] = useState(false),
-		router = useRouter()
+		router = useRouter(),
+		navigation = useRef(null)
 
 	const setShowMenuF = () => setShowMenu(!showMenu)
+
+	useEffect(() => {
+		if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+			navigation.current.addClass('scroll-down');
+			let CurrentScroll = 0;
+			window.scroll(function (event) {
+				let NextScroll = window.visualViewport.pageTop
+				if (NextScroll > CurrentScroll) { // скролл вниз
+					if (NextScroll - CurrentScroll > 20) { // проверяем был ли скролл больше чем на 20 пикселей
+						navigation.addClass('scroll-down');
+					}
+				}
+				else { // скролл вверх (обратно)
+					if (CurrentScroll - NextScroll > 20) {
+						navigation.removeClass('scroll-down');
+					}
+				}
+
+				CurrentScroll = NextScroll;  // обновление текущей позиции
+			});
+		}
+	}, [])
+
 	return (
 		<>
 
-			<nav className="hidden border-t border-stroke ..5x2:block bg-white pb-7    ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
+			<nav ref={navigation} className="hidden border-t border-stroke ..5x2:block bg-white pb-7    ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
 				<ul className="flex justify-center   ..6x4:justify-between">
 					<Link href='/'>
 						<li className="relative cursor-pointer">

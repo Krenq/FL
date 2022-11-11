@@ -2036,6 +2036,28 @@
 
 }
 
+.hoverWhiteCat:hover p {
+	color: #fff;
+}
+
+.hoverWhiteCat:hover p svg {
+	stroke: #fff !important;
+}
+
+.hoverWhitePromo:hover .noneF {
+	display: none;
+}
+
+.hoverWhitePromo:hover .noneFHover {
+	display: block;
+}
+
+
+
+.maxwidthCustom {
+	max-width: 1460px;
+}
+
 .activeButtonPhone svg {
 	stroke: #337202 !important;
 }
@@ -2052,6 +2074,10 @@
 .activeSubDrop {
 	height: 220px !important;
 
+}
+
+.scroll-down {
+	padding-bottom: 40px !important;
 }
 
 .activeSubDrop .subDr {

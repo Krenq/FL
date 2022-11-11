@@ -172,7 +172,7 @@ function Instrumensts({ refL }) {
 				</p>
 
 				<div className="..5x1:hidden flex flex-col .3x1:flex-row justify-center max-w-1600px w-full items-center mx-auto mt-20">
-					<div className="flex .3x1:flex-col flex-row">
+					<div className="flex .3x1:flex-col maxwidthCustom flex-row">
 						<InstrumentItem
 							icon={icons.ICON_LK}
 							text="Управление профилем в понятном и удобном интерфейсе"
@@ -195,7 +195,7 @@ function Instrumensts({ refL }) {
 						/>
 					</div>
 
-					<div className="flex .3x1:flex-col flex-row">
+					<div className="flex .3x1:flex-col maxwidthCustom -mt-3 flex-row">
 						<InstrumentItem
 							icon={icons.ICON_ONLINE_BONUS}
 							text="Вознаграждение консультантов с пятого уровня, 1-10%"

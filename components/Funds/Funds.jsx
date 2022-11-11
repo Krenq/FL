@@ -191,9 +191,9 @@ const Funds = ({ refL }) => {
 			</p>
 
 			<Slider {...settings} ref={slider} className="funds">
-				<div className="..5x2:px-3 pb-20  ..7x2:p-0">
-					<div className="flex justify-center ..6x2:flex-col   ">
-						<div className="image-containerSIV relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
+				<div className="..5x2:px-3 pb-20 maxwidthCustom  ..7x2:p-0">
+					<div className="flex justify-center !mx-3.5 ..6x2:flex-col   ">
+						<div className="image-containerSIV relative cursor-pointer transition-all   hover:opacity-90">
 							<Image
 								className="object-cover image"
 								src={one}
@@ -201,7 +201,7 @@ const Funds = ({ refL }) => {
 								height={768}
 								alt="discountImg"
 							/>
-							<p className="absolute flex items-center bottom-10 left-10 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
+							<p className="absolute flex items-center bottom-10 left-0 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
 								Сыворотки
 								<svg
 									className="ml-2 hidden ..5x2:block  "
@@ -217,7 +217,7 @@ const Funds = ({ refL }) => {
 									/>
 								</svg>
 							</p>
-							<small className="flex ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
+							<small className="flex font-medium  ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
 								Смотреть
 								<svg
 									className="ml-2"
@@ -235,7 +235,7 @@ const Funds = ({ refL }) => {
 							</small>
 						</div>
 						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-2'>
-							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h-   hover:opacity-90 cursor-pointer">
 
 								<Image
 									className="image "
@@ -245,7 +245,7 @@ const Funds = ({ refL }) => {
 								/>
 
 
-								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-0 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
 									<svg
 										className="ml-2 hidden ..5x2:block "
@@ -261,10 +261,10 @@ const Funds = ({ refL }) => {
 										/>
 									</svg>
 								</p>
-								<small className="..5x2:hidden flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="..5x2:hidden font-medium flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
 									Смотреть
 									<svg
-										className="ml-2"
+										className="ml-2 mt-0.5"
 										width="12"
 										height="8"
 										viewBox="0 0 12 8"
@@ -278,7 +278,7 @@ const Funds = ({ refL }) => {
 									</svg>
 								</small>
 							</div>
-							<div className="relative  image-containerS transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative  image-containerS transition-all  hover:opacity-90 cursor-pointer">
 								<Image
 									className="object-cover image"
 									src={tree}
@@ -286,7 +286,7 @@ const Funds = ({ refL }) => {
 									height={374}
 									alt="discountImg"
 								/>
-								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-0 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
 									Идеи подарков
 									<svg
 										className="ml-2   hidden ..5x2:block"
@@ -302,10 +302,10 @@ const Funds = ({ refL }) => {
 										/>
 									</svg>
 								</p>
-								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 z-10  ">
+								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 font-medium z-10  ">
 									Смотреть
 									<svg
-										className="ml-2"
+										className="ml-2 mt-0.5"
 										width="12"
 										height="8"
 										viewBox="0 0 12 8"
@@ -322,9 +322,9 @@ const Funds = ({ refL }) => {
 						</div>
 					</div>
 				</div>
-				<div className="..5x2:px-3 pb-20  ..7x2:p-0">
-					<div className="flex justify-center ..6x2:flex-col   ">
-						<div className="image-containerSIV relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
+				<div className="..5x2:px-3 pb-20 maxwidthCustom  ..7x2:p-0">
+					<div className="flex justify-center !mx-3.5 ..6x2:flex-col   ">
+						<div className="image-containerSIV relative cursor-pointer transition-all   hover:opacity-90">
 							<Image
 								className="object-cover image"
 								src={one}
@@ -332,7 +332,7 @@ const Funds = ({ refL }) => {
 								height={768}
 								alt="discountImg"
 							/>
-							<p className="absolute flex items-center bottom-10 left-10 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
+							<p className="absolute flex items-center bottom-10 left-0 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
 								Сыворотки
 								<svg
 									className="ml-2 hidden ..5x2:block  "
@@ -348,7 +348,7 @@ const Funds = ({ refL }) => {
 									/>
 								</svg>
 							</p>
-							<small className="flex ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
+							<small className="flex font-medium  ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
 								Смотреть
 								<svg
 									className="ml-2"
@@ -366,7 +366,7 @@ const Funds = ({ refL }) => {
 							</small>
 						</div>
 						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-2'>
-							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h-   hover:opacity-90 cursor-pointer">
 
 								<Image
 									className="image "
@@ -376,7 +376,7 @@ const Funds = ({ refL }) => {
 								/>
 
 
-								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-0 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
 									<svg
 										className="ml-2 hidden ..5x2:block "
@@ -392,10 +392,10 @@ const Funds = ({ refL }) => {
 										/>
 									</svg>
 								</p>
-								<small className="..5x2:hidden flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="..5x2:hidden font-medium flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
 									Смотреть
 									<svg
-										className="ml-2"
+										className="ml-2 mt-0.5"
 										width="12"
 										height="8"
 										viewBox="0 0 12 8"
@@ -409,7 +409,7 @@ const Funds = ({ refL }) => {
 									</svg>
 								</small>
 							</div>
-							<div className="relative  image-containerS transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative  image-containerS transition-all  hover:opacity-90 cursor-pointer">
 								<Image
 									className="object-cover image"
 									src={tree}
@@ -417,7 +417,7 @@ const Funds = ({ refL }) => {
 									height={374}
 									alt="discountImg"
 								/>
-								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-0 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
 									Идеи подарков
 									<svg
 										className="ml-2   hidden ..5x2:block"
@@ -433,10 +433,10 @@ const Funds = ({ refL }) => {
 										/>
 									</svg>
 								</p>
-								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 z-10  ">
+								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 font-medium z-10  ">
 									Смотреть
 									<svg
-										className="ml-2"
+										className="ml-2 mt-0.5"
 										width="12"
 										height="8"
 										viewBox="0 0 12 8"
@@ -453,9 +453,9 @@ const Funds = ({ refL }) => {
 						</div>
 					</div>
 				</div>
-				<div className="..5x2:px-3 pb-20  ..7x2:p-0">
-					<div className="flex justify-center ..6x2:flex-col   ">
-						<div className="image-containerSIV relative cursor-pointer transition-all hover:text-primary hover:opacity-90">
+				<div className="..5x2:px-3 pb-20 maxwidthCustom  ..7x2:p-0">
+					<div className="flex justify-center !mx-3.5 ..6x2:flex-col   ">
+						<div className="image-containerSIV relative cursor-pointer transition-all   hover:opacity-90">
 							<Image
 								className="object-cover image"
 								src={one}
@@ -463,7 +463,7 @@ const Funds = ({ refL }) => {
 								height={768}
 								alt="discountImg"
 							/>
-							<p className="absolute flex items-center bottom-10 left-10 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
+							<p className="absolute flex items-center bottom-10 left-0 text-xl ..5x2:text-13px font-medium ..5x2:left-5 ..5x2:bottom-5 ">
 								Сыворотки
 								<svg
 									className="ml-2 hidden ..5x2:block  "
@@ -479,7 +479,7 @@ const Funds = ({ refL }) => {
 									/>
 								</svg>
 							</p>
-							<small className="flex ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
+							<small className="flex font-medium  ..5x2:hidden items-center font-montserrat ..5x2:text-13px absolute bottom-10 right-10 ..5x2:right-5 ..5x2:bottom-5 z-10">
 								Смотреть
 								<svg
 									className="ml-2"
@@ -497,7 +497,7 @@ const Funds = ({ refL }) => {
 							</small>
 						</div>
 						<div className='..6x2:flex ml-1.5 ..6x2:ml-0 ..6x2:mt-2'>
-							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h- hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative image-containerS transition-all ..6x2:mr-3 ..6x2:h-   hover:opacity-90 cursor-pointer">
 
 								<Image
 									className="image "
@@ -507,7 +507,7 @@ const Funds = ({ refL }) => {
 								/>
 
 
-								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-0 text-xl font-medium  ..5x2:left-4 ..5x2:bottom-4">
 									Макияж
 									<svg
 										className="ml-2 hidden ..5x2:block "
@@ -523,10 +523,10 @@ const Funds = ({ refL }) => {
 										/>
 									</svg>
 								</p>
-								<small className="..5x2:hidden flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
+								<small className="..5x2:hidden font-medium flex items-center absolute bottom-10 right-10 z-10 ..7x2:right-2 ..7x2:bottom-5">
 									Смотреть
 									<svg
-										className="ml-2"
+										className="ml-2 mt-0.5"
 										width="12"
 										height="8"
 										viewBox="0 0 12 8"
@@ -540,7 +540,7 @@ const Funds = ({ refL }) => {
 									</svg>
 								</small>
 							</div>
-							<div className="relative  image-containerS transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative  image-containerS transition-all  hover:opacity-90 cursor-pointer">
 								<Image
 									className="object-cover image"
 									src={tree}
@@ -548,7 +548,7 @@ const Funds = ({ refL }) => {
 									height={374}
 									alt="discountImg"
 								/>
-								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-10 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
+								<p className="absolute flex ..5x2:text-13px  items-center bottom-10 left-0 text-xl font-medium z-10 ..5x2:left-4 ..5x2:bottom-4">
 									Идеи подарков
 									<svg
 										className="ml-2   hidden ..5x2:block"
@@ -564,10 +564,10 @@ const Funds = ({ refL }) => {
 										/>
 									</svg>
 								</p>
-								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 z-10  ">
+								<small className="flex ..5x2:hidden items-center absolute bottom-10 right-10 font-medium z-10  ">
 									Смотреть
 									<svg
-										className="ml-2"
+										className="ml-2 mt-0.5"
 										width="12"
 										height="8"
 										viewBox="0 0 12 8"

@@ -59,7 +59,7 @@ function Products({ refL }) {
 			<p className="font-montserrat font-medium ..7x11:text-xl ..7x11:mt-7 text-center italic text-32px mb-2 mt-10 ..6x04:text-3xl z-10">
 				КАТАЛОГА
 			</p>
-			<div className="relative text-center text-lg ..5x2:hidden  font-montserrat">
+			<div className="relative text-center text-lg mb-9 ..5x2:hidden  font-montserrat">
 				Более 500 наименований продуктов регулярного спроса. <br /> Каждый сезон — новые трендовые средства!
 				<div className=' w-24 bg-label-bg absolute ability -bottom-1 left-1/2 h-3px'></div>
 
@@ -90,8 +90,8 @@ function Products({ refL }) {
 				</div>
 			</div>
 
-			<div className="h-11 ..5x2:h-8 hidden .3x1:flex .3x1:justify-center mt-26px mb-8 text-primary font-montserrat font-medium text-xs">
-				<button className=" border border-primary px-5 buttonY">
+			<div className="h-11 ..5x2:h-8 hidden  .3x1:flex .3x1:justify-center mt-26px mb-8 text-primary font-montserrat font-medium text-xs">
+				<button className=" border hover border-primary px-5 buttonY">
 					В каталог
 				</button>
 			</div>

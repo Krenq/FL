@@ -14,7 +14,7 @@ export default function NavBar({ scrollMenu, showSearch, setShowSearch, showBurg
 	return (
 		<>
 
-			<nav className={`h-100px ${scrollMenu ? '!h-80px' : ''}   flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center`}>
+			<nav className={`h-100px transition-all ${scrollMenu ? '!h-80px' : ''}   flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center`}>
 				<svg onClick={() => setShowBurger(!showBurger)}
 					className="hidden   ..7x1:ml-3 ..6x6:h-6 ..6x6:w-6 ..5x2:block ml-5 cursor-pointer"
 					width="24"

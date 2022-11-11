@@ -34,7 +34,7 @@ export default function SeaActItem({ obj }) {
 
 
 	return (
-		<div className=" min-h-317px max-w-278px ..6x03:mx-auto  h-428px flex justify-center card_hov bg-white transition-all relative p-2 mx-3">
+		<div className=" min-h-317px max-w-278px w-full ..6x03:mx-auto  h-428px flex justify-center card_hov bg-white transition-all relative p-2 mx-3">
 			<div className="flex flex-col  items-center max-w-252px mx-auto mt-5">
 				<div className="content_card flex flex-col items-center transition-all">
 					<div className="absolute flex left-0 top-0 z-20 px-2 pt-2 gap-0.5">

@@ -170,7 +170,7 @@ const SeaAct = ({ refL }) => {
 					{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
 				</div>
 				<div className="flex justify-center h-874px ..6x1:h-auto ">
-					<div className="relative w-44% h-874px .4x1:hidden mr-3">
+					<div className="relative w-44% h-874px .4x1:hidden mr-1">
 						<div className="absolute top-10 left-10 z-10">
 							<p className="text-2xl text-primary">АКЦИЯ ВЕСНЫ</p>
 							<p className="text-3xl font-medium">Получай подарки за покупки</p>
@@ -205,8 +205,8 @@ const SeaAct = ({ refL }) => {
 						</div>
 					</div>
 
-					<div className=" flex flex-row justify-arround w-60% .4x1:w-2/3 ..6x1:hidden ..5x2:w-full .1x1:w-4/5 .4x1:justify-center">
-						<div className="flex flex-col justify-between .4x1:ml-0 ..6x3:ml-4">
+					<div className=" flex flex-row  justify-arround w-65% .4x1:w-2/3 ..6x1:hidden ..5x2:w-full .1x1:w-4/5 .4x1:justify-center">
+						<div className="flex flex-col flex-1 justify-between .4x1:ml-0 ..6x3:ml-4">
 							<SeaActItem
 								obj={{
 									present: true,
@@ -229,7 +229,7 @@ const SeaAct = ({ refL }) => {
 							/>
 						</div>
 
-						<div className="flex flex-col justify-between .4x1:ml-0 ..6x3:ml-4">
+						<div className="flex flex-col flex-1 justify-between .4x1:ml-0 ..6x3:ml-4">
 							<SeaActItem
 								obj={{
 									present: true,
@@ -252,7 +252,7 @@ const SeaAct = ({ refL }) => {
 							/>
 						</div>
 
-						<div className="flex flex-col justify-between  ">
+						<div className="flex flex-col flex-1 justify-between  ">
 							<SeaActItem
 								obj={{
 									present: true,

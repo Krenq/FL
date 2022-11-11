@@ -78,7 +78,7 @@ const Health = ({ refL }) => {
 
 					<Slider {...settings} className="flex  ">
 						<div >
-							<div className="anti  border-primary border  ..7x11:px-1 bg-white relative  pb-96 ..5x2:pb-48 mx-3   mb-3 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
+							<div className="anti  border-primary border  ..7x11:px-1 bg-white relative  pb-96 ..5x2:pb-48 mx-3   mb-5 cursor-pointer transition-all hover:text-white hover:bg-primary sale">
 								<p className="..6x04:text-5xl z-10 ..6x04:top-5 text-8xl ability transition-all leading-140% text-gray-platinum ..5x2:-top-3 -top-2 absolute font-montserrat font-bold left-1/2 procent">
 									-30%
 								</p>
@@ -119,7 +119,7 @@ const Health = ({ refL }) => {
 
 								</div>
 							</div>
-							<div className="relative mt-3.5 mx-3 cursor-pointer transition-all hover:text-primary hover:opacity-90">
+							<div className="relative mt-3.5 mx-3 cursor-pointer transition-all   hover:opacity-90">
 								<p className="absolute  font-montserrat ..5x2:top-4 ..5x2:left-4  ..7x1:text-base z-10 top-16 text-2xl ..5x2:text-black text-primary text-22px font-medium left-10  ">
 									«ЗДОРОВЫЙ СОН»
 								</p>
@@ -157,7 +157,7 @@ const Health = ({ refL }) => {
 							</div>
 						</div>
 						<div >
-							<div className="relative mx-3   transition-all hover:text-primary hover:opacity-90 cursor-pointer">
+							<div className="relative mx-2   transition-all   hover:opacity-90 cursor-pointer">
 								<p className="absolute ..7x1:text-base font-montserrat z-10 top-16 text-2xl left-10 ..5x2:left-4 text-22px ..5x2:top-4 font-medium">
 									«ЧИСТАЯ КОЖА»
 								</p>
@@ -192,7 +192,7 @@ const Health = ({ refL }) => {
 
 
 							</div>
-							<div className="mx-3 ..5x1:pb-0 anti px-3 ..7x2:px-2 ..5x2:px-8  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
+							<div className="mx-2 ..5x1:pb-0 anti px-3 ..7x2:px-2 ..5x2:px-8 hover:bg-primary-hover transition-all  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
 								<h1 className="text-32px font-montserrat text-center ..5x2:mb-0.5 mb-5 pt-11 ..5x2:text-22px ..5x2:pt-6  text-w text-white">
 									50+ программ
 								</h1>

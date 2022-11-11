@@ -503,29 +503,29 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 							<div
 								onClick={() => currentColorHandler('1')}
 								className={` bg-label-pink cursor-pointer ${currentColor === '1'
-									? 'w-2 h-2 border border-gray-border'
-									: 'w-1.5 h-1.5'
+									? 'w-10px h-10px border border-gray-border'
+									: 'w-10px h-10px'
 									}  rounded-56px mx-1 `}
 							></div>
 							<div
 								onClick={() => currentColorHandler('2')}
 								className={` bg-label-orange cursor-pointer ${currentColor === '2'
-									? 'w-2 h-2 border border-gray-border'
-									: 'w-1.5 h-1.5'
+									? 'w-10px h-10px border border-gray-border'
+									: 'w-10px h-10px'
 									}  rounded-56px mx-1 `}
 							></div>
 							<div
 								onClick={() => currentColorHandler('3')}
 								className={` bg-label-green cursor-pointer ${currentColor === '3'
-									? 'w-2 h-2 border border-gray-border'
-									: 'w-1.5 h-1.5'
+									? 'w-10px h-10px border border-gray-border'
+									: 'w-10px h-10px'
 									}  rounded-56px mx-1 `}
 							></div>
 						</div>
 					)}
 
 					{obj.priceDe && (
-						<div className={` absolute bottom-11 flex  items-center`}>
+						<div className={` absolute bottom-12 flex  items-center`}>
 							<p className="text-label-orange font-montserrat text-center text-sm my-4 ..6x03:hidden">
 								{obj.priceDe}
 							</p>
@@ -536,7 +536,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					)}
 
 					{obj.priceSale && (
-						<div className={`${showSost ? '!opacity-0' : ""} flex flex-col absolute bottom-8   ..6x03:bottom-6`}>
+						<div className={`${showSost ? '!opacity-0' : ""} flex flex-col absolute bottom-10   ..6x03:bottom-6`}>
 							<div className=" flex flex-row font-montserrat font-normal text-base ..6x03:text-11px mb-2 mt-1">
 								<p className="text-center mr-2 text-gray-quick-silver line-through">
 									₽ {obj.priceSale.old}
@@ -549,7 +549,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					)}
 
 					{obj.price && (
-						<div className="flex flex-col absolute bottom-8 ..6x03:bottom-6">
+						<div className="flex flex-col absolute bottom-9 ..6x03:bottom-6">
 							<div className=" flex flex-row font-montserrat font-normal text-base ..6x03:text-11px mb-2 mt-1">
 								<p className="text-center">₽ {obj.price}</p>
 							</div>
@@ -557,11 +557,11 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					)}
 
 					{obj.priceDe && (
-						<div className="sect_buttons absolute bottom-0 flex-row hidden w-full">
-							<button className="w-1/2 border hover:border-primary border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white ..5x03:text-10px">
+						<div className="sect_buttons absolute -bottom-0 flex-row hidden w-full">
+							<button className="w-1/2 border-t hover:border-primary border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white ..5x03:text-10px">
 								КУПИТЬ
 							</button>
-							<button className="w-1/2 border border-gray-light2 px-3 py-2.5 font-montserrat leading-150% text-label-orange font-normal text-13px whitespace-nowrap hover:bg-label-orange hover:border-label-orange hover:text-white ..5x03:text-10px">
+							<button className="w-1/2 border-t border-l border-gray-light2 px-3 py-2.5 font-montserrat leading-150% text-label-orange font-normal text-13px whitespace-nowrap hover:bg-label-orange hover:border-label-orange hover:text-white ..5x03:text-10px">
 								КУПИТЬ ЗА <span className="font-lora">DE</span>
 							</button>
 						</div>
@@ -569,7 +569,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 					{!obj.priceDe && !obj.DetailsPrice && (
 						<div className="sect_buttons absolute bottom-0 flex-row hidden w-full">
-							<button className="w-full border hover:border-primary border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white">
+							<button className="w-full border-t hover:border-primary border-gray-light2 px-3 py-2.5 font-montserrat font-normal text-13px text-primary leading-150% hover:bg-primary hover:text-white">
 								КУПИТЬ
 							</button>
 						</div>
