@@ -7,37 +7,17 @@ import MenuPhone from "../MenuPhone/MenuPhone";
 
 const PhoneNavigation = () => {
 	const [showMenu, setShowMenu] = useState(false),
-		router = useRouter(),
-		navigation = useRef(null)
+		router = useRouter()
+
 
 	const setShowMenuF = () => setShowMenu(!showMenu)
 
-	useEffect(() => {
-		if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
-			navigation.current.classList.add('scroll-down');
-			let CurrentScroll = 0;
-			window.scroll(function (event) {
-				let NextScroll = window.visualViewport.pageTop
-				if (NextScroll > CurrentScroll) { // скролл вниз
-					if (NextScroll - CurrentScroll > 20) { // проверяем был ли скролл больше чем на 20 пикселей
-						navigation.current.classList.add('scroll-down');
-					}
-				}
-				else { // скролл вверх (обратно)
-					if (CurrentScroll - NextScroll > 20) {
-						navigation.current.classList.remove('scroll-down');
-					}
-				}
 
-				CurrentScroll = NextScroll;  // обновление текущей позиции
-			});
-		}
-	}, [])
 
 	return (
 		<>
 
-			<nav ref={navigation} className="hidden border-t border-stroke ..5x2:block bg-white pb-7    ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
+			<nav className="hidden border-t border-stroke ..5x2:block bg-white pb-7    ..5x2:fixed ..5x2:bottom-0 ..5x2:w-full z-50">
 				<ul className="flex justify-center   ..6x4:justify-between">
 					<Link href='/'>
 						<li className="relative cursor-pointer">

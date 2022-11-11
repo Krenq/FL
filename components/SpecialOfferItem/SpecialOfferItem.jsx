@@ -505,22 +505,22 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 							<div
 								onClick={() => currentColorHandler('1')}
 								className={` bg-label-pink cursor-pointer ${currentColor === '1'
-									? 'w-10px h-10px ..5x2:h-6px ..5x2:w-6px border border-gray-border'
-									: 'w-10px h-10px ..5x2:h-6px ..5x2:w-6px'
+									? 'w-10px h-10px ..5x2:h-2 ..5x2:w-2 border border-gray-border'
+									: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 							<div
 								onClick={() => currentColorHandler('2')}
 								className={` bg-label-orange cursor-pointer ${currentColor === '2'
-									? 'w-10px h-10px border ..5x2:h-6px ..5x2:w-6px border-gray-border'
-									: 'w-10px h-10px ..5x2:h-6px ..5x2:w-6px'
+									? 'w-10px h-10px border ..5x2:h-2 ..5x2:w-2 border-gray-border'
+									: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 							<div
 								onClick={() => currentColorHandler('3')}
 								className={` bg-label-green cursor-pointer ${currentColor === '3'
-									? 'w-10px h-10px border border-gray-border ..5x2:h-6px ..5x2:w-6px'
-									: 'w-10px h-10px ..5x2:h-6px ..5x2:w-6px'
+									? 'w-10px h-10px border border-gray-border ..5x2:h-2 ..5x2:w-2'
+									: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 						</div>
