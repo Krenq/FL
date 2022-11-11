@@ -51,7 +51,7 @@ const MenuPhone = ({ showMenu, showBurger, setShowBurger }) => {
 				<BurgerMenuItem title={'Бизнес-возможности'} />
 				<BurgerMenuItem title={'Покупателям'} />
 				<BurgerMenuItem title={'Программа лояльности'} />
-				<div>
+				{/* <div>
 					<div className={`p-3 border-b border-gray-light2  overflow-hidden bg-white transitionCustom   h-11  `}>
 						<div className=" flex justify-between items-center">
 							<p className="font-montserrat text-10px text-primary flex items-center "><svg className="mr-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +142,7 @@ const MenuPhone = ({ showMenu, showBurger, setShowBurger }) => {
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</section>
 
 		</>

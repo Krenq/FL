@@ -189,10 +189,12 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						/>
 					</div>}
 
-					<div className={`${obj.timeOver ? 'bottom-40' : ''}  ${obj.isDetails ? '..6x1:!-mb-2 ..6x03:top-44 ..6x03:bottom-auto' : ""}  absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3   ..6x03:bottom-110px ..6x03:px-1   ${showSost ? 'bottom-40 ..5x5:!bottom-36' : ""} ${showSost && obj.isSpecialProductDetail ? '..7x1:!bottom-32' : ""}`}>
+					<div className={`${obj.timeOver ? 'bottom-40' : ''}  ${obj.isDetails ? '..6x1:!-mb-2 ..6x03:top-44 ..6x03:bottom-auto' : ""}  absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3   ..6x03:bottom-110px ..6x03:px-1    ${showSost ? 'bottom-40 ..6x3:!bottom-32 ..5x5:!bottom-36' : ""} ${showSost && obj.isSpecialProductDetail ? '..7x1:!bottom-32' : ""}`}>
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
 								<p onClick={showSlide} className=" ..6x03:text-11px   text-13px font-normal font-montserrat flex   leading-140% text-black-70pe">
+
+
 									<svg
 										className=" mr-0.5"
 										width="16"
@@ -201,10 +203,10 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 										fill="none"
 										xmlns="http://www.w3.org/2000/svg"
 									>
-										<circle cx="8" cy="8" r="7.5" stroke="#DBDCDA" />
+										<circle cx="8" cy="8" r="7.5" stroke={`${showSost ? '#337202' : "#DBDCDA"} `} />
 										<path
 											d="M8.83327 3.55469C8.61226 3.55469 8.4003 3.64248 8.24402 3.79877C8.08774 3.95505 7.99994 4.16701 7.99994 4.38802C7.99994 4.60903 8.08774 4.821 8.24402 4.97728C8.4003 5.13356 8.61226 5.22135 8.83327 5.22135C9.05429 5.22135 9.26625 5.13356 9.42253 4.97728C9.57881 4.821 9.66661 4.60903 9.66661 4.38802C9.66661 4.16701 9.57881 3.95505 9.42253 3.79877C9.26625 3.64248 9.05429 3.55469 8.83327 3.55469ZM8.63327 6.20469C7.97216 6.26024 6.16661 7.69913 6.16661 7.69913C6.0555 7.78247 6.08883 7.77691 6.17772 7.93247C6.26661 8.08247 6.2555 8.09358 6.36105 8.02135C6.47216 7.94913 6.6555 7.83247 6.96105 7.64358C8.13883 6.88802 7.14994 8.63247 6.64439 11.5714C6.44439 13.0269 7.7555 12.2769 8.09439 12.0547C8.42772 11.838 9.32216 11.2214 9.41105 11.1602C9.53327 11.0769 9.44439 11.0102 9.34994 10.8714C9.28327 10.7769 9.21661 10.8436 9.21661 10.8436C8.8555 11.0825 8.19439 11.5825 8.1055 11.2658C7.99994 10.9491 8.67772 8.77691 9.04994 7.28247C9.11105 6.92691 9.27772 6.14913 8.63327 6.20469Z"
-											fill="#DBDCDA"
+											fill={`${showSost ? '#337202' : "#DBDCDA"} `}
 										/>
 									</svg>
 									Акции
@@ -327,7 +329,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 					</div>
 
-					{showAct && <div className={`absolute ${obj.isSpecialProductDetail ? '..6x03:bottom-10' : ""}    bottom-12 -mb-1.5 z-10  left-0 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
+					{showAct && <div className={`absolute ${obj.isSpecialProductDetail ? '..6x03:bottom-10' : ""}    bottom-12 -mb-1.5 z-10   left-0 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
 						<div className='relative w-full ..6x4:px-7 py-6 px-11 bg-input-typing ..5x5:py-5px ..5x5:px-14 ..5x5:pt-5 pt-6'>
 							<Swiper ref={slider} slidesPerView={2} navigation={true} modules={[Navigation]} className="mySwiperAct">
 
@@ -387,7 +389,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 
 					{showSost &&
-						<div className={`absolute bottom-12 ${obj.isSpecialProductDetail ? '..6x03:!bottom-11 !-mb-2.5' : ""} -mb-1.5 z-20 left-0   ..5x5:!bottom-14 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
+						<div className={`absolute bottom-12 ..6x3:!bottom-10 ${obj.isSpecialProductDetail ? '..6x03:!bottom-11 !-mb-2.5' : ""} -mb-1.5 z-20 left-0   ..5x5:!bottom-14 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
 							<div className='relative w-full ..7x001:px-2 ..6x04:px-10 ..6x6:px-7 ..7x1:px-5 px-6 bg-input-typing  py-6 pt-6 ..5x5:py-5px ..5x5:px-14 ..5x5:pt-5'>
 								<small className='absolute right-0 ..5x5:hidden left-0  text-11px text-center top-9px font-montserrat z-20'>Экономия при покупке в акции:</small>
 								<small className='absolute right-0 ..5x5:block hidden left-0  text-10px text-center top-9px font-montserrat z-20'>Экономия </small>
@@ -499,26 +501,26 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 
 					{obj.colors && (
-						<div className=" absolute bottom-36 flex flex-row justify-center items-center mt-0.5 ..6x03:bottom-14">
+						<div className=" absolute bottom-36 flex flex-row justify-center items-center mt-0.5 ..6x03:bottom-16">
 							<div
 								onClick={() => currentColorHandler('1')}
 								className={` bg-label-pink cursor-pointer ${currentColor === '1'
-									? 'w-10px h-10px border border-gray-border'
-									: 'w-10px h-10px'
+									? 'w-10px h-10px ..5x2:h-6px ..5x2:w-6px border border-gray-border'
+									: 'w-10px h-10px ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 							<div
 								onClick={() => currentColorHandler('2')}
 								className={` bg-label-orange cursor-pointer ${currentColor === '2'
-									? 'w-10px h-10px border border-gray-border'
-									: 'w-10px h-10px'
+									? 'w-10px h-10px border ..5x2:h-6px ..5x2:w-6px border-gray-border'
+									: 'w-10px h-10px ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 							<div
 								onClick={() => currentColorHandler('3')}
 								className={` bg-label-green cursor-pointer ${currentColor === '3'
-									? 'w-10px h-10px border border-gray-border'
-									: 'w-10px h-10px'
+									? 'w-10px h-10px border border-gray-border ..5x2:h-6px ..5x2:w-6px'
+									: 'w-10px h-10px ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 						</div>
@@ -536,7 +538,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					)}
 
 					{obj.priceSale && (
-						<div className={`${showSost ? '!opacity-0' : ""} flex flex-col absolute bottom-10   ..6x03:bottom-6`}>
+						<div className={`${showSost ? '!opacity-0' : ""} flex flex-col absolute bottom-10   ..6x03:bottom-8`}>
 							<div className=" flex flex-row font-montserrat font-normal text-base ..6x03:text-11px mb-2 mt-1">
 								<p className="text-center mr-2 text-gray-quick-silver line-through">
 									₽ {obj.priceSale.old}
@@ -549,7 +551,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					)}
 
 					{obj.price && (
-						<div className="flex flex-col absolute bottom-9 ..6x03:bottom-6">
+						<div className="flex flex-col absolute bottom-9 ..6x03:bottom-8">
 							<div className=" flex flex-row font-montserrat font-normal text-base ..6x03:text-11px mb-2 mt-1">
 								<p className="text-center">₽ {obj.price}</p>
 							</div>

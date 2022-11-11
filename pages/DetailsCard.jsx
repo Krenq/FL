@@ -33,20 +33,13 @@ const DetailsCard = () => {
 	return (
 		<>
 			<Header showSearch={showSearch} setShowSearch={setShowSearch} />
-
-
 			<section className="container-base relative  ">
 				<SearchResult isShow={showSearch} />
-
 				<SectionNavDetail />
 				<DescriptionItemDetail />
 				<ActDescription />
 				<DetailComments />
-
 				<SeeLastDetails />
-
-
-
 			</section>
 			<Footer />
 			<PhoneNavigation />

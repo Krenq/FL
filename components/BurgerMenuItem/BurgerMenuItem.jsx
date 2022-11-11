@@ -11,7 +11,16 @@ const BurgerMenuItem = ({ title }) => {
 		})
 
 
-	const setShowB = () => setShow(!show),
+	const setShowB = () => {
+		setShow(!show)
+		setShowSub({
+			anti: false,
+			ns: false,
+			mask: false,
+			toniz: false,
+			probl: false
+		})
+	},
 		setShowSubS = (title) => {
 			switch (title) {
 				case 'anti':
