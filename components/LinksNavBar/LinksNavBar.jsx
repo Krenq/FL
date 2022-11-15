@@ -24,7 +24,7 @@ export default function LinksHeader({ scrollMenu, setCloseHover, setIsHover }) {
 			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="Покупателям" />
 			<LinkNavBarItem setShow={setShow} scrollMenu={scrollMenu} show={show} title="Программа лояльности" />
 
-			<ShoppingBag setIsHover={setIsHover} scrollMenu={scrollMenu} />
+			<ShoppingBag closeHover={setCloseHover} setIsHover={setIsHover} scrollMenu={scrollMenu} />
 		</article>
 	);
 }

@@ -30,8 +30,8 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 
 	return (
 		<>
-			<div onMouseEnter={setIsHover} onMouseLeave={setCloseHover} className={`${isHoverBasket ? 'active  ' : "hiddenCustom"} absolute top-5 ${scrollMenu ? 'top-10 !fixed' : ""} -left-1816px w-1816px  bg-red h-14 z-30`}></div>
-			<section onMouseEnter={setIsHover} onMouseLeave={setCloseHover} className={`absolute ${isHoverBasket ? '!flex' : "!hidden"} dropDownShadow border border-gray right-91.7% -mr-1.5 top-16 bg-white searchwindow ${scrollMenu ? '!top-12 !mt-1' : ''}`}>
+			<div onMouseEnter={() => setIsHover(true)} onMouseLeave={setCloseHover} className={`${isHoverBasket ? 'active  ' : "hiddenCustom"} absolute top-5 ${scrollMenu ? 'top-10 !fixed' : ""} -left-1816px w-1816px  bg-red h-14 z-30`}></div>
+			<section onMouseEnter={setIsHover} onMouseLeave={setCloseHover} className={`absolute ${isHoverBasket ? '!flex' : "!hidden"} dropDownShadow border border-gray right-91.7% -mr-1.5 top-16 bg-white searchwindow ${scrollMenu ? '!top-14 !-mt-3px' : ''}`}>
 				<div className="w-475px .4x2:w-380px">
 					<h3 className='text-22px text-center -mb-2 mt-4 font-montserrat'>Предложения для вас</h3>
 					<div className='flex justify-between  border-b border-gray   mt-5'>
@@ -54,7 +54,7 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 						<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} />
 
 
-						<div className=' height-idea-S bg-primary-searchBG flex flex-col px-11 itemSeeAll justify-center items-center  ml-3 mt-3  overflow-hidden'>
+						<div className='   bg-primary-searchBG flex flex-col px-11 itemSeeAll justify-center items-center  ml-3 mt-3  overflow-hidden'>
 
 							<p className='font-montserrat text-center  font-semibold text-2xl text-primary'>Идеи <br /> подарков</p>
 

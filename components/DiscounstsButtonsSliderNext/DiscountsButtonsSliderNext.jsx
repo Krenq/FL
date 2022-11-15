@@ -25,7 +25,7 @@ const DiscountsButtonsSliderNext = ({ onClick, kolichestvo }) => {
 	} else if (size.width <= 400) {
 		perc = '38%';
 	} else if (size.width > 1600) {
-		perc = '47.5%';
+		perc = '44.3%';
 	}
 
 	let styleR = {
@@ -34,7 +34,7 @@ const DiscountsButtonsSliderNext = ({ onClick, kolichestvo }) => {
 
 	return (
 		<button onMouseEnter={setHoverB} onMouseLeave={setHoverB}
-			className={`next absolute transition-all w-8 buttonHoverBlack hover:bg-black bg-white py-2 px-3 `}
+			className={`next absolute transition-all w-11 flex items-center justify-center bottom-2 rounded-56px ..5x2:h-8 ..5x2:w-8 h-11 buttonHoverBlack hover:bg-black bg-white py-2 px-3 `}
 			onClick={onClick}
 			style={styleR}
 		>

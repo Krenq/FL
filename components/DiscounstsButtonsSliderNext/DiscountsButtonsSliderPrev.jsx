@@ -27,7 +27,7 @@ const DiscounstsButtonsSliderPrev = ({ onClick, kolichestvo }) => {
 	} else if (size.width <= 400) {
 		perc = '38%';
 	} else if (size.width > 1600) {
-		perc = '47.5%';
+		perc = '44.3%';
 	}
 
 	let styleL = {
@@ -35,7 +35,7 @@ const DiscounstsButtonsSliderPrev = ({ onClick, kolichestvo }) => {
 	};
 	return (
 		<button onMouseEnter={setHoverB} onMouseLeave={setHoverB}
-			className="prev absolute transition-all w-8  hover:bg-black bg-white py-2 px-3"
+			className="prev absolute transition-all w-11 h-11 rounded-56px ..5x2:h-8 ..5x2:w-8 flex items-center justify-center bottom-2  hover:bg-black bg-white py-2 px-3"
 			onClick={onClick}
 			style={styleL}
 		>

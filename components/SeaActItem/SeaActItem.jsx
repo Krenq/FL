@@ -34,7 +34,7 @@ export default function SeaActItem({ obj }) {
 
 
 	return (
-		<div className=" min-h-317px max-w-278px w-full ..6x03:mx-auto  h-428px flex justify-center card_hov bg-white transition-all relative p-2 mx-3">
+		<div className=" min-h-317px max-w-278px w-full ..6x03:mx-auto  h-428px flex justify-center   bg-white transition-all relative p-2 mx-3">
 			<div className="flex flex-col  items-center max-w-252px mx-auto mt-5">
 				<div className="content_card flex flex-col items-center transition-all">
 					<div className="absolute flex left-0 top-0 z-20 px-2 pt-2 gap-0.5">
@@ -89,10 +89,10 @@ export default function SeaActItem({ obj }) {
 										fill="none"
 										xmlns="http://www.w3.org/2000/svg"
 									>
-										<circle cx="8" cy="8" r="7.5" stroke="#DBDCDA" />
+										<circle cx="8" cy="8" r="7.5" stroke={`${showAct ? '#337202' : "#DBDCDA"} `} />
 										<path
 											d="M8.83327 3.55469C8.61226 3.55469 8.4003 3.64248 8.24402 3.79877C8.08774 3.95505 7.99994 4.16701 7.99994 4.38802C7.99994 4.60903 8.08774 4.821 8.24402 4.97728C8.4003 5.13356 8.61226 5.22135 8.83327 5.22135C9.05429 5.22135 9.26625 5.13356 9.42253 4.97728C9.57881 4.821 9.66661 4.60903 9.66661 4.38802C9.66661 4.16701 9.57881 3.95505 9.42253 3.79877C9.26625 3.64248 9.05429 3.55469 8.83327 3.55469ZM8.63327 6.20469C7.97216 6.26024 6.16661 7.69913 6.16661 7.69913C6.0555 7.78247 6.08883 7.77691 6.17772 7.93247C6.26661 8.08247 6.2555 8.09358 6.36105 8.02135C6.47216 7.94913 6.6555 7.83247 6.96105 7.64358C8.13883 6.88802 7.14994 8.63247 6.64439 11.5714C6.44439 13.0269 7.7555 12.2769 8.09439 12.0547C8.42772 11.838 9.32216 11.2214 9.41105 11.1602C9.53327 11.0769 9.44439 11.0102 9.34994 10.8714C9.28327 10.7769 9.21661 10.8436 9.21661 10.8436C8.8555 11.0825 8.19439 11.5825 8.1055 11.2658C7.99994 10.9491 8.67772 8.77691 9.04994 7.28247C9.11105 6.92691 9.27772 6.14913 8.63327 6.20469Z"
-											fill="#DBDCDA"
+											fill={`${showAct ? '#337202' : "#DBDCDA"} `}
 										/>
 									</svg>
 									Состав

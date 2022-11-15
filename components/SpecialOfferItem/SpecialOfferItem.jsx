@@ -17,14 +17,20 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 	const [hoverHeart, setHoverHeart] = useState(false)
 	const [liked, setLike] = useState(false)
 
-	const setLikeF = () => setLike(!liked)
+	const setLikeF = () => {
+		setLike(!liked)
+		setHoverHeart(false)
+	}
 
 	const divBlock = useRef(null)
 	const currentColorHandler = (num) => {
 		setCurrentColor(num);
 	};
 
-	const showHoverHeart = () => setHoverHeart(!hoverHeart)
+	const showHoverHeart = () => {
+		if (hoverHeart) setHoverHeart(false)
+		else setHoverHeart(true)
+	}
 
 	const [showSost, setShowSost] = useState(false),
 		[showAct, setShowAct] = useState(false)
@@ -95,7 +101,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 				<div className={`hidden ${obj.fullImg ? '!block aboslute top-0 !h-56 left-0 w-full ..6x03:!hidden customWidthImg right-0' : ''}`}>
 					<Image
 						className=" object-cover  "
-						src={obj.img}
+						src={obj.img || treeN}
 						width={!obj.fullImg ? 218 : ''}
 						height={!obj.fullImg ? 218 : ''}
 					/>
@@ -120,7 +126,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								-15%
 							</small>
 						)}
-						{obj.isGif && <div className={`p-2  ${obj.fullImg ? ' bg-white py-0 absolute top-0 left-0 ' : ""}`}>
+						{obj.isGif && <div className={`p-2  ${obj.fullImg ? ' bg-white pr-5 treangle overflow-hidden py-0 absolute top-0 left-0 ' : ""}`}>
 							<div className='flex items-center relative w-full overflow-hidden'>
 								<svg className='..6x1:h-4 ..6x1:mr-1 ..6x1:w-4' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -170,8 +176,8 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								<path d="M25.5022 5.00001C24.6291 4.99851 23.7677 5.20077 22.9865 5.59072C22.2052 5.98066 21.5258 6.54752 21.0022 7.24621C20.293 6.30266 19.3051 5.606 18.1782 5.25482C17.0513 4.90365 15.8426 4.91573 14.7229 5.28936C13.6033 5.663 12.6295 6.37926 11.9393 7.3368C11.2492 8.29434 10.8776 9.44467 10.8772 10.625C10.8772 17.3621 20.2373 22.6813 20.6357 22.9044C20.7477 22.9671 20.8739 23 21.0022 23C21.1305 23 21.2567 22.9671 21.3687 22.9044C23.0902 21.8961 24.7059 20.7173 26.1914 19.3856C29.4665 16.438 31.1272 13.4905 31.1272 10.625C31.1255 9.13368 30.5323 7.70393 29.4778 6.6494C28.4233 5.59487 26.9935 5.0017 25.5022 5.00001Z" fill="#FF6363" />
 							</g>
 							<defs>
-								<filter id="filter0_d_1939_1125459" x="0.877197" y="0" width="40.25" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-									<feFlood flood-opacity="0" result="BackgroundImageFix" />
+								<filter id="filter0_d_1939_1125459" x="0.877197" y="0" width="40.25" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+									<feFlood floodOpacity="0" result="BackgroundImageFix" />
 									<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
 									<feOffset dy="5" />
 									<feGaussianBlur stdDeviation="5" />
@@ -184,30 +190,32 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 							:
 							<svg width="24" height="24" viewBox="0 0 24 24" fill='none' xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill={`${!liked && hoverHeart ? '#FF6363' : '#EDEEEC'}`}></path></svg>
 						}
+
+
 					</div>}
 					{obj.noIsHeart ? '' : obj.fullImg ? <svg className={`absolute ${liked ? 'top-4 right-0.5' : ''} top-3 ..7x1:top-2 right-3 ..6x03:right-3 z-20 ..5x2:h-9 ..5x2:w-9 cursor-pointer`} width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g filter="url(#filter0_b_3624_1022452)">
-							<circle cx="24" cy="24" r="24" fill="white" fill-opacity="0.8" />
+							<circle cx="24" cy="24" r="24" fill="white" fillOpacity="0.8" />
 						</g>
 						<path d="M23.9748 17.4793L24.3542 17.9214L24.7336 17.4793C25.7708 16.2709 27.3631 15.5 29.0136 15.5C31.9272 15.5 34.2084 17.7721 34.2084 20.6948C34.2084 22.4822 33.4069 24.1479 31.8945 25.9981C30.3767 27.8551 28.1958 29.8362 25.5197 32.2628L25.519 32.2635L24.3542 33.3238L23.1895 32.2635L23.1887 32.2628C20.5127 29.8362 18.3317 27.8551 16.8139 25.9981C15.3016 24.1479 14.5 22.4822 14.5 20.6948C14.5 17.7721 16.7813 15.5 19.6948 15.5C21.3453 15.5 22.9377 16.2709 23.9748 17.4793Z" fill="white" stroke="#EDEEEC" />
 						<defs>
-							<filter id="filter0_b_3624_1022452" x="-4" y="-4" width="56" height="56" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-								<feFlood flood-opacity="0" result="BackgroundImageFix" />
+							<filter id="filter0_b_3624_1022452" x="-4" y="-4" width="56" height="56" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+								<feFlood floodOpacity="0" result="BackgroundImageFix" />
 								<feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
 								<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3624_1022452" />
 								<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3624_1022452" result="shape" />
 							</filter>
 						</defs>
 					</svg>
-						: <div onClick={setLikeF} onMouseEnter={showHoverHeart} onMouseLeave={showHoverHeart} className={`absolute ${liked ? 'top-4 right-0.5' : ''} top-5 ..7x1:top-2 right-3 ..6x03:right-1 z-20 cursor-pointer`}>
+						: <div onClick={setLikeF} onMouseEnter={showHoverHeart} onMouseLeave={showHoverHeart} className={`absolute ${liked ? 'top-4 right-0.5' : ''} top-5  right-3   z-20 cursor-pointer`}>
 
-							{liked ? <svg width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+							{liked ? <svg className='absolute right-0 top-0.5' width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g filter="url(#filter0_d_1939_1125459)">
 									<path d="M25.5022 5.00001C24.6291 4.99851 23.7677 5.20077 22.9865 5.59072C22.2052 5.98066 21.5258 6.54752 21.0022 7.24621C20.293 6.30266 19.3051 5.606 18.1782 5.25482C17.0513 4.90365 15.8426 4.91573 14.7229 5.28936C13.6033 5.663 12.6295 6.37926 11.9393 7.3368C11.2492 8.29434 10.8776 9.44467 10.8772 10.625C10.8772 17.3621 20.2373 22.6813 20.6357 22.9044C20.7477 22.9671 20.8739 23 21.0022 23C21.1305 23 21.2567 22.9671 21.3687 22.9044C23.0902 21.8961 24.7059 20.7173 26.1914 19.3856C29.4665 16.438 31.1272 13.4905 31.1272 10.625C31.1255 9.13368 30.5323 7.70393 29.4778 6.6494C28.4233 5.59487 26.9935 5.0017 25.5022 5.00001Z" fill="#FF6363" />
 								</g>
 								<defs>
-									<filter id="filter0_d_1939_1125459" x="0.877197" y="0" width="40.25" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-										<feFlood flood-opacity="0" result="BackgroundImageFix" />
+									<filter id="filter0_d_1939_1125459" x="0.877197" y="0" width="40.25" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+										<feFlood floodOpacity="0" result="BackgroundImageFix" />
 										<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
 										<feOffset dy="5" />
 										<feGaussianBlur stdDeviation="5" />
@@ -218,7 +226,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								</defs>
 							</svg>
 								:
-								<svg width="24" height="24" viewBox="0 0 24 24" fill='none' xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill={`${!liked && hoverHeart ? '#FF6363' : '#EDEEEC'}`}></path></svg>
+								<svg className='absolute right-0 top-0' width="24" height="24" viewBox="0 0 24 24" fill='none' xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill={`${!liked && hoverHeart ? '#FF6363' : '#EDEEEC'}`}></path></svg>
 							}
 						</div>}
 
@@ -228,45 +236,45 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						</mask>
 						<g mask="url(#mask0_1939_1032750)">
 							<rect width="278" height="238" fill="#FCFDFB" />
-							<path d="M123.833 146.834C128.695 144.744 133.274 143.617 137.57 143.452C141.867 143.287 147.399 144.025 154.167 145.667" stroke="#DBDCDA" stroke-width="1.5" stroke-linecap="round" />
-							<path d="M137.886 150.333C136.991 139.32 137.362 130.764 139 124.667" stroke="#DBDCDA" stroke-width="1.5" stroke-linecap="round" />
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M139 126.039C140.855 119.018 144.121 114.831 148.799 113.478C153.477 112.125 157.988 112.745 162.333 115.338C162.355 121.045 159.878 125.226 154.901 127.881C149.925 130.535 144.624 129.921 139 126.039Z" fill="white" stroke="#DBDCDA" stroke-width="1.5" stroke-linejoin="round" />
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M138.757 124.8C139.729 116.415 137.781 110.51 132.913 107.083C128.044 103.657 122.406 102.892 115.999 104.788C114.88 112.522 116.59 118.371 121.13 122.333C125.67 126.296 131.546 127.118 138.757 124.8Z" fill="white" stroke="#DBDCDA" stroke-width="1.5" stroke-linejoin="round" />
+							<path d="M123.833 146.834C128.695 144.744 133.274 143.617 137.57 143.452C141.867 143.287 147.399 144.025 154.167 145.667" stroke="#DBDCDA" strokeWidth="1.5" strokeLinecap="round" />
+							<path d="M137.886 150.333C136.991 139.32 137.362 130.764 139 124.667" stroke="#DBDCDA" strokeWidth="1.5" strokeLinecap="round" />
+							<path fillRule="evenodd" clipRule="evenodd" d="M139 126.039C140.855 119.018 144.121 114.831 148.799 113.478C153.477 112.125 157.988 112.745 162.333 115.338C162.355 121.045 159.878 125.226 154.901 127.881C149.925 130.535 144.624 129.921 139 126.039Z" fill="white" stroke="#DBDCDA" strokeWidth="1.5" strokeLinejoin="round" />
+							<path fillRule="evenodd" clipRule="evenodd" d="M138.757 124.8C139.729 116.415 137.781 110.51 132.913 107.083C128.044 103.657 122.406 102.892 115.999 104.788C114.88 112.522 116.59 118.371 121.13 122.333C125.67 126.296 131.546 127.118 138.757 124.8Z" fill="white" stroke="#DBDCDA" strokeWidth="1.5" strokeLinejoin="round" />
 						</g>
 					</svg>
 						: <>
 							<div className={` ..6x03:hidden ${obj.fullImg ? '!hidden aboslute  image-container' : ''}`}>
 								<Image
 									className=" object-cover image"
-									src={obj.img}
+									src={obj.img || treeN}
 									width={!obj.fullImg ? 218 : ''}
 									height={!obj.fullImg ? 218 : ''}
 								/>
 							</div>
-							{obj.isSlider ? <div className=" hidden z-0  w-32 h-32 ..6x03:block">
+							{obj.isSlider ? <div className=" hidden z-0  w-32 overflow-hidden h-32 ..6x03:block">
 								<Slider {...settings} className='specialItemSliderDots'>
 									<Image
 										className=" object-cover"
-										src={obj.img}
+										src={obj.img || treeN}
 										width={130}
 										height={130}
 									/>
 
 									<Image
 										className=" object-cover"
-										src={obj.img}
+										src={obj.img || treeN}
 										width={130}
 										height={130}
 									/>
 									<Image
 										className=" object-cover"
-										src={obj.img}
+										src={obj.img || treeN}
 										width={130}
 										height={130}
 									/>
 									<Image
 										className=" object-cover"
-										src={obj.img}
+										src={obj.img || treeN}
 										width={130}
 										height={130}
 									/>
@@ -274,7 +282,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 							</div> : <div className="z-0 hidden  w-32 h-32 ..6x03:block">
 								<Image
 									className=" object-cover"
-									src={obj.img}
+									src={obj.img || treeN}
 									width={130}
 									height={130}
 								/>
@@ -284,14 +292,14 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 
 
-					<div className={`${obj.timeOver ? 'bottom-40' : ''} ${obj.fullImg ? 'left-0 !bottom-36 ..6x03:!bottom-28 z-30' : ''}  ${obj.isDetails ? '..6x1:!-mb-2  ..6x03:top-44 ..6x03:bottom-auto' : ""}  absolute bg-white py-1 bottom-36 ..6x03:bottom-28 flex flex-row justify-between items-end w-full mb-2 px-3    ..6x03:px-1    ${showSost ? 'bottom-40 ..6x3:!bottom-32 ..5x5:!bottom-36' : ""} ${showSost && obj.isSpecialProductDetail ? '..7x1:!bottom-32' : ""}`}>
+					<div className={`${obj.timeOver ? 'bottom-40' : ''} ${obj.fullImg ? 'left-0 !bottom-36 ..6x03:!bottom-32 !-mb-0 z-0' : ''}  ${obj.isDetails ? '..6x1:!-mb-2  ..6x03:top-44 ..6x03:bottom-auto' : ""}  absolute bg-white py-1 bottom-36 ..6x03:bottom-28 flex flex-row justify-between items-end w-full mb-2 px-3    ..6x03:px-1    ${showSost ? '!bottom-40 ..6x3:!bottom-32 ..5x5:!bottom-36' : ""} ${showSost && obj.isSpecialProductDetail ? '..7x1:!bottom-32' : ""}`}>
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
 								<p onClick={showSlide} className=" ..6x03:text-11px   text-13px font-normal font-montserrat flex   leading-140% text-black-70pe">
 
 
 									<svg
-										className=" mr-1"
+										className=" mr-1 "
 										width="16"
 										height="16"
 										viewBox="0 0 16 16"
@@ -318,10 +326,10 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
 										>
-											<circle cx="8" cy="8" r="7.5" stroke="#DBDCDA" />
+											<circle cx="8" cy="8" r="7.5" stroke={`${showActL ? '#337202' : "#DBDCDA"} `} />
 											<path
 												d="M8.83327 3.55469C8.61226 3.55469 8.4003 3.64248 8.24402 3.79877C8.08774 3.95505 7.99994 4.16701 7.99994 4.38802C7.99994 4.60903 8.08774 4.821 8.24402 4.97728C8.4003 5.13356 8.61226 5.22135 8.83327 5.22135C9.05429 5.22135 9.26625 5.13356 9.42253 4.97728C9.57881 4.821 9.66661 4.60903 9.66661 4.38802C9.66661 4.16701 9.57881 3.95505 9.42253 3.79877C9.26625 3.64248 9.05429 3.55469 8.83327 3.55469ZM8.63327 6.20469C7.97216 6.26024 6.16661 7.69913 6.16661 7.69913C6.0555 7.78247 6.08883 7.77691 6.17772 7.93247C6.26661 8.08247 6.2555 8.09358 6.36105 8.02135C6.47216 7.94913 6.6555 7.83247 6.96105 7.64358C8.13883 6.88802 7.14994 8.63247 6.64439 11.5714C6.44439 13.0269 7.7555 12.2769 8.09439 12.0547C8.42772 11.838 9.32216 11.2214 9.41105 11.1602C9.53327 11.0769 9.44439 11.0102 9.34994 10.8714C9.28327 10.7769 9.21661 10.8436 9.21661 10.8436C8.8555 11.0825 8.19439 11.5825 8.1055 11.2658C7.99994 10.9491 8.67772 8.77691 9.04994 7.28247C9.11105 6.92691 9.27772 6.14913 8.63327 6.20469Z"
-												fill="#DBDCDA"
+												fill={`${showActL ? '#337202' : "#DBDCDA"} `}
 											/>
 										</svg>
 										Состав набора
@@ -335,10 +343,10 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
 										>
-											<circle cx="8" cy="8" r="7.5" stroke="#DBDCDA" />
+											<circle cx="8" cy="8" r="7.5" stroke={`${showActL ? '#337202' : "#DBDCDA"} `} />
 											<path
 												d="M8.83327 3.55469C8.61226 3.55469 8.4003 3.64248 8.24402 3.79877C8.08774 3.95505 7.99994 4.16701 7.99994 4.38802C7.99994 4.60903 8.08774 4.821 8.24402 4.97728C8.4003 5.13356 8.61226 5.22135 8.83327 5.22135C9.05429 5.22135 9.26625 5.13356 9.42253 4.97728C9.57881 4.821 9.66661 4.60903 9.66661 4.38802C9.66661 4.16701 9.57881 3.95505 9.42253 3.79877C9.26625 3.64248 9.05429 3.55469 8.83327 3.55469ZM8.63327 6.20469C7.97216 6.26024 6.16661 7.69913 6.16661 7.69913C6.0555 7.78247 6.08883 7.77691 6.17772 7.93247C6.26661 8.08247 6.2555 8.09358 6.36105 8.02135C6.47216 7.94913 6.6555 7.83247 6.96105 7.64358C8.13883 6.88802 7.14994 8.63247 6.64439 11.5714C6.44439 13.0269 7.7555 12.2769 8.09439 12.0547C8.42772 11.838 9.32216 11.2214 9.41105 11.1602C9.53327 11.0769 9.44439 11.0102 9.34994 10.8714C9.28327 10.7769 9.21661 10.8436 9.21661 10.8436C8.8555 11.0825 8.19439 11.5825 8.1055 11.2658C7.99994 10.9491 8.67772 8.77691 9.04994 7.28247C9.11105 6.92691 9.27772 6.14913 8.63327 6.20469Z"
-												fill="#DBDCDA"
+												fill={`${showActL ? '#337202' : "#DBDCDA"} `}
 											/>
 										</svg>
 										Состав
@@ -426,7 +434,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					</div>
 
 					{showAct && <div className={`absolute ${obj.isSpecialProductDetail ? '..6x03:bottom-10' : ""}    bottom-12 -mb-1.5 z-10   left-0 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
-						<div className='relative w-full ..6x4:px-7 py-6 px-11 bg-input-typing ..5x5:py-5px ..5x5:px-14 ..5x5:pt-5 pt-6'>
+						<div className='relative w-full ..6x4:px-7 py-6 px-11  bg-input-typing ..5x5:py-5px ..5x5:px-14 ..5x5:pt-5 pt-6'>
 							<Swiper ref={slider} slidesPerView={2} navigation={true} modules={[Navigation]} className="mySwiperAct">
 
 								<SwiperSlide>
@@ -467,12 +475,12 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								</div></SwiperSlide>
 
 							</Swiper>
-							<button onClick={prevSlide} className='absolute ..6x5:left-2 left-5 top-10'>
+							<button onClick={prevSlide} className='!border-t-none absolute ..6x5:left-2 left-5 top-10'>
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11 11.8167L7.16788 8L11 4.175L9.82024 3L4.8 8L9.82024 13L11 11.8167Z" fill="black" />
 								</svg>
 							</button>
-							<button onClick={nextSlide} className='absolute right-5 ..6x5:right-2 top-10'>
+							<button onClick={nextSlide} className='!border-none absolute right-5 ..6x5:right-2 top-10'>
 								<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5 11.8167L8.83212 8L5 4.175L6.17976 3L11.2 8L6.17976 13L5 11.8167Z" fill="black" fillOpacity="0.7" />
 								</svg>
@@ -485,7 +493,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 
 					{showSost &&
-						<div className={`absolute bottom-12 ..6x3:!bottom-10 ${obj.isSpecialProductDetail ? '..6x03:!bottom-11 !-mb-2.5' : ""} -mb-1.5 z-30 left-0   ..5x5:!bottom-14 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
+						<div className={`absolute bottom-12 !-mb-2 ..6x3:!bottom-10 ${obj.isSpecialProductDetail ? '..6x03:!bottom-11 !-mb-2.5' : ""} -mb-1.5 z-30 left-0   ..5x5:!bottom-14 right-0 ${isSearchItem ? '!bottom-9 ' : ""}`}>
 							<div className='relative w-full ..7x001:px-2 ..6x04:px-10 ..6x6:px-7 ..7x1:px-5 px-6 bg-input-typing  py-6 pt-6 ..5x5:py-5px ..5x5:px-14 ..5x5:pt-5'>
 								<small className='absolute right-0 ..5x5:hidden left-0  text-11px text-center top-9px font-montserrat z-20'>Экономия при покупке в акции:</small>
 								<small className='absolute right-0 ..5x5:block hidden left-0  text-10px text-center top-9px font-montserrat z-20'>Экономия </small>
@@ -569,7 +577,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						</div>
 					}
 
-					{obj.timeOver && <div className={`w-full bg-white z-0 absolute bottom-32 left-0 pb-3 ${obj.timeCenter ? 'text-center' : ''} ${obj.isDetails ? '..6x1:pb-0 ..6x03:bottom-104px' : ""} px-2 z-20 `}>
+					{obj.timeOver && <div className={`w-full z-0 ${obj.fullImg ? '..6x5:!bottom-36' : ''} absolute bottom-32 left-0 pb-3 ${obj.timeCenter ? 'text-center' : ''} ${obj.isDetails ? '..6x1:pb-0 ..6x03:bottom-104px' : ""} px-2 z-20 `}>
 						<p className={` ..6x1:text-center ..6x1:text-11px ..6x1:font-montserrat font-noto-sans text-sm font-light text-black-70pe`}>
 							До {obj.timeOver}
 						</p>
@@ -720,14 +728,13 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 					<div onMouseEnter={showHoverHeart} onMouseLeave={showHoverHeart} className={`absolute top-5 ..7x1:top-2 right-5 ..6x03:right-1 z-20 cursor-pointer ${isSearchItem ? '!top-6' : ""}`}>
 
-
 						{liked ? <svg width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g filter="url(#filter0_d_1939_1125459)">
 								<path d="M25.5022 5.00001C24.6291 4.99851 23.7677 5.20077 22.9865 5.59072C22.2052 5.98066 21.5258 6.54752 21.0022 7.24621C20.293 6.30266 19.3051 5.606 18.1782 5.25482C17.0513 4.90365 15.8426 4.91573 14.7229 5.28936C13.6033 5.663 12.6295 6.37926 11.9393 7.3368C11.2492 8.29434 10.8776 9.44467 10.8772 10.625C10.8772 17.3621 20.2373 22.6813 20.6357 22.9044C20.7477 22.9671 20.8739 23 21.0022 23C21.1305 23 21.2567 22.9671 21.3687 22.9044C23.0902 21.8961 24.7059 20.7173 26.1914 19.3856C29.4665 16.438 31.1272 13.4905 31.1272 10.625C31.1255 9.13368 30.5323 7.70393 29.4778 6.6494C28.4233 5.59487 26.9935 5.0017 25.5022 5.00001Z" fill="#FF6363" />
 							</g>
 							<defs>
-								<filter id="filter0_d_1939_1125459" x="0.877197" y="0" width="40.25" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-									<feFlood flood-opacity="0" result="BackgroundImageFix" />
+								<filter id="filter0_d_1939_1125459" x="0.877197" y="0" width="40.25" height="38" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+									<feFlood floodOpacity="0" result="BackgroundImageFix" />
 									<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
 									<feOffset dy="5" />
 									<feGaussianBlur stdDeviation="5" />
@@ -749,13 +756,13 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						</mask>
 						<g mask="url(#mask0_1939_1032750)">
 							<rect width="278" height="238" fill="#FCFDFB" />
-							<path d="M123.833 146.834C128.695 144.744 133.274 143.617 137.57 143.452C141.867 143.287 147.399 144.025 154.167 145.667" stroke="#DBDCDA" stroke-width="1.5" stroke-linecap="round" />
-							<path d="M137.886 150.333C136.991 139.32 137.362 130.764 139 124.667" stroke="#DBDCDA" stroke-width="1.5" stroke-linecap="round" />
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M139 126.039C140.855 119.018 144.121 114.831 148.799 113.478C153.477 112.125 157.988 112.745 162.333 115.338C162.355 121.045 159.878 125.226 154.901 127.881C149.925 130.535 144.624 129.921 139 126.039Z" fill="white" stroke="#DBDCDA" stroke-width="1.5" stroke-linejoin="round" />
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M138.757 124.8C139.729 116.415 137.781 110.51 132.913 107.083C128.044 103.657 122.406 102.892 115.999 104.788C114.88 112.522 116.59 118.371 121.13 122.333C125.67 126.296 131.546 127.118 138.757 124.8Z" fill="white" stroke="#DBDCDA" stroke-width="1.5" stroke-linejoin="round" />
+							<path d="M123.833 146.834C128.695 144.744 133.274 143.617 137.57 143.452C141.867 143.287 147.399 144.025 154.167 145.667" stroke="#DBDCDA" strokeWidth="1.5" strokeLinecap="round" />
+							<path d="M137.886 150.333C136.991 139.32 137.362 130.764 139 124.667" stroke="#DBDCDA" strokeWidth="1.5" strokeLinecap="round" />
+							<path fillRule="evenodd" clipRule="evenodd" d="M139 126.039C140.855 119.018 144.121 114.831 148.799 113.478C153.477 112.125 157.988 112.745 162.333 115.338C162.355 121.045 159.878 125.226 154.901 127.881C149.925 130.535 144.624 129.921 139 126.039Z" fill="white" stroke="#DBDCDA" strokeWidth="1.5" strokeLinejoin="round" />
+							<path fillRule="evenodd" clipRule="evenodd" d="M138.757 124.8C139.729 116.415 137.781 110.51 132.913 107.083C128.044 103.657 122.406 102.892 115.999 104.788C114.88 112.522 116.59 118.371 121.13 122.333C125.67 126.296 131.546 127.118 138.757 124.8Z" fill="white" stroke="#DBDCDA" strokeWidth="1.5" strokeLinejoin="round" />
 						</g>
 					</svg> : <div className=" mt-4">
-						<Image className=" object-cover" src={src} width={146} height={146} />
+						<Image className=" object-cover" src={src || ''} width={146} height={146} />
 					</div>}
 
 
@@ -770,10 +777,10 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<circle cx="8" cy="8" r="7.5" stroke="#DBDCDA" />
+								<circle cx="8" cy="8" r="7.5" stroke={`${showSost ? '#337202' : "#DBDCDA"} `} />
 								<path
 									d="M8.83327 3.55469C8.61226 3.55469 8.4003 3.64248 8.24402 3.79877C8.08774 3.95505 7.99994 4.16701 7.99994 4.38802C7.99994 4.60903 8.08774 4.821 8.24402 4.97728C8.4003 5.13356 8.61226 5.22135 8.83327 5.22135C9.05429 5.22135 9.26625 5.13356 9.42253 4.97728C9.57881 4.821 9.66661 4.60903 9.66661 4.38802C9.66661 4.16701 9.57881 3.95505 9.42253 3.79877C9.26625 3.64248 9.05429 3.55469 8.83327 3.55469ZM8.63327 6.20469C7.97216 6.26024 6.16661 7.69913 6.16661 7.69913C6.0555 7.78247 6.08883 7.77691 6.17772 7.93247C6.26661 8.08247 6.2555 8.09358 6.36105 8.02135C6.47216 7.94913 6.6555 7.83247 6.96105 7.64358C8.13883 6.88802 7.14994 8.63247 6.64439 11.5714C6.44439 13.0269 7.7555 12.2769 8.09439 12.0547C8.42772 11.838 9.32216 11.2214 9.41105 11.1602C9.53327 11.0769 9.44439 11.0102 9.34994 10.8714C9.28327 10.7769 9.21661 10.8436 9.21661 10.8436C8.8555 11.0825 8.19439 11.5825 8.1055 11.2658C7.99994 10.9491 8.67772 8.77691 9.04994 7.28247C9.11105 6.92691 9.27772 6.14913 8.63327 6.20469Z"
-									fill="#DBDCDA"
+									fill={`${showSost ? '#337202' : "#DBDCDA"} `}
 								/>
 							</svg>
 							Акции
@@ -786,10 +793,10 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<circle cx="8" cy="8" r="7.5" stroke="#DBDCDA" />
+								<circle cx="8" cy="8" r="7.5" stroke={`${showAct ? '#337202' : "#DBDCDA"} `} />
 								<path
 									d="M8.83327 3.55469C8.61226 3.55469 8.4003 3.64248 8.24402 3.79877C8.08774 3.95505 7.99994 4.16701 7.99994 4.38802C7.99994 4.60903 8.08774 4.821 8.24402 4.97728C8.4003 5.13356 8.61226 5.22135 8.83327 5.22135C9.05429 5.22135 9.26625 5.13356 9.42253 4.97728C9.57881 4.821 9.66661 4.60903 9.66661 4.38802C9.66661 4.16701 9.57881 3.95505 9.42253 3.79877C9.26625 3.64248 9.05429 3.55469 8.83327 3.55469ZM8.63327 6.20469C7.97216 6.26024 6.16661 7.69913 6.16661 7.69913C6.0555 7.78247 6.08883 7.77691 6.17772 7.93247C6.26661 8.08247 6.2555 8.09358 6.36105 8.02135C6.47216 7.94913 6.6555 7.83247 6.96105 7.64358C8.13883 6.88802 7.14994 8.63247 6.64439 11.5714C6.44439 13.0269 7.7555 12.2769 8.09439 12.0547C8.42772 11.838 9.32216 11.2214 9.41105 11.1602C9.53327 11.0769 9.44439 11.0102 9.34994 10.8714C9.28327 10.7769 9.21661 10.8436 9.21661 10.8436C8.8555 11.0825 8.19439 11.5825 8.1055 11.2658C7.99994 10.9491 8.67772 8.77691 9.04994 7.28247C9.11105 6.92691 9.27772 6.14913 8.63327 6.20469Z"
-									fill="#DBDCDA"
+									fill={`${showAct ? '#337202' : "#DBDCDA"} `}
 								/>
 							</svg>
 							Состав

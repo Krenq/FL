@@ -45,7 +45,7 @@ const CatalDropdown = ({ show, setShow, scrollMenu, showDrop }) => {
 			<section
 				onMouseLeave={setShow}
 				onMouseEnter={showDrop}
-				className={`absolute  flex z-20 drop  right-0 transition-all bg-white border-t border-gray dropDownShadow -mt-1 ${scrollMenu ? '-mt-5' : ""} ${show.showCatal ? 'active' : 'hiddenCustom'
+				className={`absolute  flex z-20 drop  right-0 transition-all bg-white border-t border-gray dropDownShadow -mt-1 ${scrollMenu ? '-mt-3.5' : ""} ${show.showCatal ? 'active' : 'hiddenCustom'
 					}`}
 			>
 				<div className="bg-white-BG_FILTER w-52   pl-3 pt-3 pb-3">

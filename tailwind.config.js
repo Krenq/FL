@@ -218,6 +218,7 @@ module.exports = {
 				'22px': '22px',
 				'26px': '26px',
 				'32px': '32px',
+				'52px': '52px',
 				'5vw': '1.8vw',
 			},
 			backgroundImage: {

@@ -8,13 +8,20 @@ export default function NavBar({ scrollMenu, showSearch, setShowSearch, showBurg
 	const [isHoverBasket, setIsHoverBasket] = useState(false)
 
 
-	const setIsHover = () => setIsHoverBasket(true),
-		setCloseHover = () => setIsHoverBasket(false)
+	const setIsHover = (isOverlay) => {
+		if (isOverlay) return setIsHoverBasket(true)
+		if (isHoverBasket) setIsHoverBasket(false)
+		else setIsHoverBasket(true)
+	},
+		setCloseHover = () => {
+			console.log(32132)
+			setIsHoverBasket(false)
+		}
 
 	return (
 		<>
 
-			<nav className={`h-100px transition-all ${scrollMenu ? '!h-80px' : ''}   flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center`}>
+			<nav className={`h-100px transition-custom ${scrollMenu ? '!h-80px' : ''}   flex-nowrap  ..5x2:h-20 ..6x3:h-11   bg-white   relative flex flex-row justify-between items-center`}>
 				<svg onClick={() => setShowBurger(!showBurger)}
 					className="hidden   ..7x1:ml-3 ..6x6:h-6 ..6x6:w-6 ..5x2:block ml-5 cursor-pointer"
 					width="24"
@@ -37,7 +44,7 @@ export default function NavBar({ scrollMenu, showSearch, setShowSearch, showBurg
 
 				<Logo styles="top-5 ..6x3:mt-0 ..5x2:-mt-1 ..6x3:pl-0 pl-20 ..6x3:top-2 .5x01:pl-2    ..5x1:flex-1    headerAbility ..5x2:absolute " />
 				{
-					showSearch ? <InputItemSearch setCloseHover={setCloseHover} scrollMenu={scrollMenu} setShowSearch={setShowSearch} /> : <><LinksHeader isHoverBasket={isHoverBasket} setIsHover={setIsHover} scrollMenu={scrollMenu} />
+					showSearch ? <InputItemSearch setCloseHover={setCloseHover} scrollMenu={scrollMenu} setShowSearch={setShowSearch} /> : <><LinksHeader setCloseHover={setCloseHover} isHoverBasket={isHoverBasket} setIsHover={setIsHover} scrollMenu={scrollMenu} />
 						<Search setCloseHover={setCloseHover} isHoverBasket={isHoverBasket} setIsHover={setIsHover} scrollMenu={scrollMenu} setShowSearch={setShowSearch} /></>
 				}
 
