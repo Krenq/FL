@@ -956,9 +956,31 @@
 	height: calc(100vh - 42px - 44px - 31px - 100px) !important;
 }
 
+.customWidthImg span {
+	width: 100% !important;
+}
+
+.customWidthImg img {
+	width: 100% !important;
+}
+
+.rotGif {
+	transform: rotate(45deg);
+}
+
 @media (max-width: 1000px) {
 	.storiesOpacity .slick-dots {
 		bottom: 90px !important;
+	}
+
+	.hoverButton:hover .debuttonH {
+		border-left: 1px solid rgb(219 220 218);
+	}
+
+	.hoverButton:hover button {
+		border: none;
+		border-top: 1px solid rgb(219 220 218);
+
 	}
 
 	.phoneOne {
@@ -2061,6 +2083,8 @@
 .activeButtonPhone svg {
 	stroke: #337202 !important;
 }
+
+
 
 .customDrop {
 	height: 490px !important;

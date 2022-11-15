@@ -56,7 +56,7 @@ export default function SeaActItem({ obj }) {
 										strokeLinejoin="round"
 									/>
 								</svg>
-								<small className="font-semibold text-2xl leading-140% font-montserrat ml-4 text-gray-quick-silver">
+								<small className="font-semibold ..6x03:text-sm ..6x03:ml-3 text-2xl leading-140% font-montserrat ml-4 text-gray-quick-silver">
 									4=5
 								</small>
 							</div>
@@ -114,7 +114,7 @@ export default function SeaActItem({ obj }) {
 						</div>
 					</div>
 					<div className=" absolute bottom-76px  px-1.5 ">
-						<p className="card_text text-13px font-montserrat font-normal leading-140% text-center text-gray-quick-silver tracking-widest uppercase">
+						<p className="card_text ..6x2:text-10px text-13px font-montserrat font-normal leading-140% text-center text-gray-quick-silver tracking-widest uppercase">
 							{obj.text}
 						</p>
 					</div>
@@ -178,8 +178,8 @@ export default function SeaActItem({ obj }) {
 
 
 					{obj.date && (
-						<div className=" absolute bottom-133px flex flex-row justify-center items-center">
-							<p className="text-xs text-center text-black-70pe tracking-widest">
+						<div className=" absolute bottom-133px ..6x2:bottom-32 flex flex-row justify-center items-center">
+							<p className="text-xs ..6x2:text-11px text-center text-black-70pe tracking-widest">
 								До 15.06.22
 							</p>
 						</div>
@@ -211,7 +211,7 @@ export default function SeaActItem({ obj }) {
 								</button>
 								<button
 									onClick={() => setBuy(true)}
-									className="  ..6x03:block hidden w-full bg-gray-light2 text-primary py-3 font-montserrat whitespace-nowrap text-xs hover:text-white hover:bg-primary transition-all cursor-pointer"
+									className=" font-medium ..6x03:block hidden w-full bg-gray-light2 text-primary py-3 font-montserrat whitespace-nowrap text-xs hover:text-white hover:bg-primary transition-all cursor-pointer"
 								>
 									+ Купить
 								</button>

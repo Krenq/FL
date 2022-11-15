@@ -94,13 +94,11 @@ export default function LinkHeaderItem({ title, show, setShow, scrollMenu }) {
 				<article>{title}</article>
 
 				<article className=" pl-2 ..5x01:pl-0.5 pb-0.5">
-					<Image
-						src={icons.ICON_ARROW_DOWN}
-						className={`transition-all  ${showL ? 'activeArrow' : ''}`}
-						width="8px"
-						height="6px"
-						alt="no image"
-					/>
+
+					<svg className={`transition-all mt-1 ${showL ? 'activeArrow' : ''}`} width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M7.88542 3.625L5.5 6.02007L3.10937 3.625L2.375 4.36235L5.5 7.5L8.625 4.36235L7.88542 3.625Z" fill="#337202" />
+					</svg>
+
 				</article>
 			</article>
 

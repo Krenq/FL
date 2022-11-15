@@ -8,7 +8,7 @@ export default function SectionFooterStock(props) {
 					{props.text.map((el, index) => (
 
 						<p key={index}
-							className={`..6x1:text-11px ..5x2:flex leading-140% ..6x5:h-10 ..5x2:h-14 ..6x03:h-12 ..5x2:flex-wrap ${index === 0 ? 'pb-14' : ''} ..6x5:text-9px mt-4   container-base  ..6x6:items-start ..6x6:mt-2  h-20 font-noto-sans font-normal text-13px ${index + 1 < props.text.length ? 'border-b border-stroke' : ''
+							className={`..6x1:text-11px ..5x2:flex leading-140% ..6x5:h-10 ..5x2:h-14 ..6x03:h-12 ..5x2:flex-wrap ${index === 0 ? 'pb-16' : ''} ..6x5:text-9px mt-4   container-base  ..6x6:items-start ..6x6:mt-2  h-20 font-noto-sans font-normal text-13px ${index + 1 < props.text.length ? 'border-b border-stroke' : ''
 								}`}
 						>
 							{el}

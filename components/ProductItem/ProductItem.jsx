@@ -54,7 +54,7 @@ export default function ProductItem({ title, photo, lastItem }) {
 							height={228}
 						/>
 					</div>
-					<div className=".3x1:flex mt-3 .3x1:items-center .3x1:w-65% .3x1:h-full .3x1:pl-2">
+					<div className=".3x1:flex  .3x1:items-center .3x1:w-65% .3x1:h-full .3x1:pl-2">
 						<p className="text-center font-semibold text-13px font-montserrat .3x1:flex .3x1:justify-center .3x1:items-center .3x1:whitespace-nowrap .3x1:text-black-70pe .3x1:font-normal ..7x1:text-13px ..7x002:text-10px">
 							{title}
 						</p>

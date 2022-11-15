@@ -171,7 +171,7 @@ const Partners = ({ refL }) => {
 									height={432}
 									alt="discountImg"
 								/>
-								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
+								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-3 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
 									Авто мечты ближе,<br /> чем кажется!
 								</p>
 							</div>
@@ -222,7 +222,7 @@ const Partners = ({ refL }) => {
 									height={432}
 									alt="discountImg"
 								/>
-								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
+								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-3 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
 									Авто мечты ближе,<br /> чем кажется!
 								</p>
 							</div>
@@ -272,7 +272,7 @@ const Partners = ({ refL }) => {
 									height={432}
 									alt="discountImg"
 								/>
-								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
+								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-3 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
 									Авто мечты ближе,<br /> чем кажется!
 								</p>
 							</div>
@@ -322,7 +322,7 @@ const Partners = ({ refL }) => {
 									height={432}
 									alt="discountImg"
 								/>
-								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-2 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
+								<p className="absolute top-10 left-10 ..7x01:text-base ..6x3:text-22px ..6x3:top-4 ..6x3:left-4 font-montserrat font-medium text-white text-32px ..7x1:left-3 ..7x1:top-2 ..7x1:text-xl ..6x4:text-22px">
 									Авто мечты ближе,<br /> чем кажется!
 								</p>
 							</div>

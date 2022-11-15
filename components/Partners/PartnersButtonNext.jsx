@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import useWindowSize from '../utils/useWindowSize';
 
 const PartnersButtonNext = ({ onClick, kolichestvo }) => {
@@ -36,10 +37,16 @@ const PartnersButtonNext = ({ onClick, kolichestvo }) => {
 		borderRadius: 20,
 	};
 
+
+	const [hoverButton, setHover] = useState(false)
+
+	const setHoverB = () => setHover(!hoverButton)
+
+
 	return (
-		<button
+		<button onMouseEnter={setHoverB} onMouseLeave={setHoverB}
 			className={`${kolichestvo ? 'nextPartner' : ''
-				} absolute transition-all hover:bg-gray bg-white py-2 px-3`}
+				} absolute transition-all hover:bg-black bg-white py-2 px-3`}
 			onClick={onClick}
 			style={kolichestvo ? styleR : styleRMod}
 
@@ -53,7 +60,7 @@ const PartnersButtonNext = ({ onClick, kolichestvo }) => {
 			>
 				<path
 					d="M9.33 8L1.03 16L0 15L4 9L4.7 8L4 7L0 1L1.03 0L9.33 8Z"
-					fill="black"
+					fill={`${hoverButton ? 'white' : "black"}`}
 				/>
 			</svg>
 		</button>

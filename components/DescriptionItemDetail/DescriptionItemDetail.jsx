@@ -18,7 +18,15 @@ import treeSmall from '../../images/templates/DetailCardSmallTree.jpg'
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { Navigation } from "swiper";
+import { useState } from "react";
+import EffectsItemDetail from "../EffectsItemDetail/EffectsItemDetail";
 const DescriptionItemDetail = () => {
+	const [buttonHover, setButtonHover] = useState(false),
+		[buttonHoverNext, setButtonHoverNext] = useState(false)
+
+	const hoverSet = () => setButtonHover(!buttonHover),
+		hoverNext = () => setButtonHoverNext(!buttonHoverNext)
+
 	const slider = useRef(null)
 	const nextSlide = () => {
 		if (slider.current !== null && slider.current.swiper !== null) slider.current.swiper.slideNext();
@@ -148,41 +156,43 @@ const DescriptionItemDetail = () => {
 			<div className="flex .2x10:flex-col -mr-1 .2x10:items-center">
 				<div className="flex ..5x5:flex-col ..5x5:w-full">
 					<div className="relative mt-6 ..6x04:mt-2 widthDetails ..5x5:!w-auto">
+
+						<div className="absolute ..6x04:left-0 ..6x04:top-2 ..5x5:flex-col -left-2 top-0 flex z-10 w-48 .1x1:w-24 flex-wrap">
+							<div className="border ..5x5:hidden  .1x1:h-9 .1x1:w-9  mb-2 border-black-70pe mr-5 w-60px h-60px">
+								<Image src={oneSmall} />
+							</div>
+							<div className=" .1x1:h-9 .1x1:w-9  h-60px flex flex-col justify-end">
+								<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center bg-white justify-center .1x1:text-9px .1x1:h-14px .1x1:w-9">HIT!</p>
+								<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex items-center justify-center .1x1:h-14px .1x1:w-9 .1x1:text-9px ">NEW</p>
+							</div>
+							<div className=" .1x1:h-9 .1x1:w-9 ..5x5:hidden mr-5  w-60px h-60px mb-2">
+								<Image src={twoSmall} />
+							</div>
+							<div className="..5x5:mt-1 .1x1:h-9 .1x1:w-9  w-60px h-60px">
+								<Image src={treeSmall} />
+							</div>
+							<div className="..5x5:hidden .1x1:h-9 .1x1:w-10  w-60px h-60px flex flex-col justify-center items-center">
+								<svg className=".1x1:h-4 .1x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
+								</svg>
+								<p className="font-montserrat text-13px font-medium .1x1:text-xs .1x1:font-semibold text-primary">VIDEO</p>
+							</div>
+
+						</div>
+						<div className="..5x5:flex px-6px hidden absolute right-0 z-10 ..6x04:-right-2 ..6x04:rounded-r-none top-20 w-60px ..6x2:h-12 .1x1:h-9  rounded-xl  bg-shadow   flex-col justify-center items-center">
+							<svg className=".1x1:h-4 .1x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
+							</svg>
+							<p className="font-montserrat text-xs font-semibold text-primary ">VIDEO</p>
+						</div>
+
+						<div className="..5x5:block ..6x5:-right-3 hidden absolute right-1 top-6  z-10    ">
+							<svg class="mx-4 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill="#EDEEEC"></path></svg>
+						</div>
 						<Swiper ref={slider} slidesPerView={1} navigation={true} className='sliderCenter' modules={[Navigation]}  >
 
 							<SwiperSlide className="pl-16 ml-2 ..5x5:pl-0 ..6x04:ml-0 ..5x1:pl-7 relative">
-								<div className="absolute ..6x04:left-0 ..6x04:top-2 ..5x5:flex-col -left-2 top-0 flex z-10 w-48 .1x1:w-24 flex-wrap">
-									<div className="border ..5x5:hidden  .1x1:h-9 .1x1:w-9  mb-2 border-black-70pe mr-5 w-60px h-60px">
-										<Image src={oneSmall} />
-									</div>
-									<div className=" .1x1:h-9 .1x1:w-9  h-60px flex flex-col justify-end">
-										<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center justify-center .1x1:text-9px .1x1:h-14px .1x1:w-9">HIT!</p>
-										<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex items-center justify-center .1x1:h-14px .1x1:w-9 .1x1:text-9px ">NEW</p>
-									</div>
-									<div className=" .1x1:h-9 .1x1:w-9 ..5x5:hidden mr-5  w-60px h-60px mb-2">
-										<Image src={twoSmall} />
-									</div>
-									<div className="..5x5:mt-1 .1x1:h-9 .1x1:w-9  w-60px h-60px">
-										<Image src={treeSmall} />
-									</div>
-									<div className="..5x5:hidden .1x1:h-9 .1x1:w-10  w-60px h-60px flex flex-col justify-center items-center">
-										<svg className=".1x1:h-4 .1x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
-										</svg>
-										<p className="font-montserrat text-13px font-medium .1x1:text-xs .1x1:font-semibold text-primary">VIDEO</p>
-									</div>
 
-								</div>
-								<div className="..5x5:flex px-6px hidden absolute right-0 z-10 ..6x04:-right-2 top-20 w-60px ..6x2:h-12 .1x1:h-9  rounded-xl  bg-shadow   flex-col justify-center items-center">
-									<svg className=".1x1:h-4 .1x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
-									</svg>
-									<p className="font-montserrat text-xs font-semibold text-primary ">VIDEO</p>
-								</div>
-
-								<div className="..5x5:block ..6x5:-right-3 hidden absolute right-1 top-6  z-10    ">
-									<svg class="mx-4 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill="#EDEEEC"></path></svg>
-								</div>
 
 
 								<div className="..5x5:h-96 adaptSlide ..5x5:w-96">
@@ -192,38 +202,6 @@ const DescriptionItemDetail = () => {
 
 							</SwiperSlide>
 							<SwiperSlide className="pl-16 ml-2 ..5x5:pl-0 ..6x04:ml-0 ..5x1:pl-7 relative">
-								<div className="absolute ..6x04:left-0 ..6x04:top-2 ..5x5:flex-col -left-2 top-0 flex z-10 w-48 .1x1:w-24 flex-wrap">
-									<div className="border ..5x5:hidden  .1x1:h-9 .1x1:w-9  mb-2 border-black-70pe mr-5 w-60px h-60px">
-										<Image src={oneSmall} />
-									</div>
-									<div className=" .1x1:h-9 .1x1:w-9  h-60px flex flex-col justify-end">
-										<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center justify-center .1x1:text-9px .1x1:h-14px .1x1:w-9">HIT!</p>
-										<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex items-center justify-center .1x1:h-14px .1x1:w-9 .1x1:text-9px ">NEW</p>
-									</div>
-									<div className=" .1x1:h-9 .1x1:w-9 ..5x5:hidden mr-5  w-60px h-60px mb-2">
-										<Image src={twoSmall} />
-									</div>
-									<div className="..5x5:mt-1 .1x1:h-9 .1x1:w-9  w-60px h-60px">
-										<Image src={treeSmall} />
-									</div>
-									<div className="..5x5:hidden .1x1:h-9 .1x1:w-10  w-60px h-60px flex flex-col justify-center items-center">
-										<svg className=".1x1:h-4 .1x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
-										</svg>
-										<p className="font-montserrat text-13px font-medium .1x1:text-xs .1x1:font-semibold text-primary">VIDEO</p>
-									</div>
-
-								</div>
-								<div className="..5x5:flex px-6px hidden absolute right-0 z-10 ..6x04:-right-2 top-20 w-60px ..6x2:h-12 .1x1:h-9  rounded-xl  bg-shadow   flex-col justify-center items-center">
-									<svg className=".1x1:h-4 .1x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
-									</svg>
-									<p className="font-montserrat text-xs font-semibold text-primary ">VIDEO</p>
-								</div>
-
-								<div className="..5x5:block hidden absolute right-1 ..6x5:-right-3 top-6  z-10    ">
-									<svg class="mx-4 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill="#EDEEEC"></path></svg>
-								</div>
 
 
 								<div className="..5x5:h-96 adaptSlide ..5x5:w-96">
@@ -234,14 +212,14 @@ const DescriptionItemDetail = () => {
 							</SwiperSlide>
 
 						</Swiper>
-						<button onClick={prevSlide} className='..5x5:hidden absolute ..5x1:left-16 ..5x1:top-40 .3x1:top-52  left-86px  .3x1:left-110px  top-300px   z-10'>
+						<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlide} className='..5x5:hidden absolute ..5x1:left-16 ..5x1:top-40 hover:bg-black transition-all rounded-2xl .3x1:top-52  left-86px  .3x1:left-110px  top-300px   z-10'>
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M16.5 17.725L10.7518 12L16.5 6.2625L14.7304 4.5L7.2 12L14.7304 19.5L16.5 17.725Z" fill="black" fillOpacity="0.7" />
+								<path d="M16.5 17.725L10.7518 12L16.5 6.2625L14.7304 4.5L7.2 12L14.7304 19.5L16.5 17.725Z" fill={`${buttonHover ? 'white' : "black"}`} fillOpacity="0.7" />
 							</svg>
 						</button>
-						<button onClick={nextSlide} className='..5x5:hidden absolute ..5x1:right-7 ..5x1:top-40  right-4 .3x1:top-52 .3x1:right-10 top-300px z-10'>
+						<button onClick={nextSlide} onMouseEnter={hoverNext} onMouseLeave={hoverNext} className='..5x5:hidden absolute ..5x1:right-7 ..5x1:top-40 hover:bg-black transition-all rounded-2xl right-4 .3x1:top-52 .3x1:right-10 top-300px z-10'>
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M7.5 17.725L13.2482 12L7.5 6.2625L9.26964 4.5L16.8 12L9.26964 19.5L7.5 17.725Z" fill="black" fillOpacity="0.7" />
+								<path d="M7.5 17.725L13.2482 12L7.5 6.2625L9.26964 4.5L16.8 12L9.26964 19.5L7.5 17.725Z" fill={`${buttonHoverNext ? 'white' : "black"}`} fillOpacity="0.7" />
 							</svg>
 
 						</button>
@@ -256,12 +234,13 @@ const DescriptionItemDetail = () => {
 
 								</div>
 								<div className="flex items-center text-black-70pe font-montserrat text-13px">
-									<svg className="mr-0.5  " width="14" height="14" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12.9165 17.9167C12.9165 17.9167 7.49984 18.3333 4.58317 15C1.6665 11.6667 1.6665 1.66667 1.6665 1.66667C1.6665 1.66667 11.6665 1.25 14.9998 3.75C18.3332 6.25 17.4998 13.3333 17.4998 13.3333" stroke="#337202" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-										<path d="M18.3332 18.3333C18.3332 18.3333 13.6751 14.8131 10.8332 11.6666C7.99121 8.52017 6.6665 5.41663 6.6665 5.41663" stroke="#337202" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-										<path d="M10.8335 11.6667L11.2502 6.25" stroke="#337202" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-										<path d="M10.8332 11.6667L6.6665 11.25" stroke="#337202" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+									<svg width="16" className="mr-0.5" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10.3333 14.3333C10.3333 14.3333 5.99998 14.6667 3.66665 12C1.33331 9.33333 1.33331 1.33333 1.33331 1.33333C1.33331 1.33333 9.33331 1 12 3C14.6666 5 14 10.6667 14 10.6667" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M14.6666 14.6668C14.6666 14.6668 10.9402 11.8507 8.66665 9.3335C6.39308 6.81633 5.33331 4.3335 5.33331 4.3335" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M8.66669 9.33333L9.00002 5" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M8.66665 9.33333L5.33331 9" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
 									</svg>
+
 
 									1.8 Б
 								</div>
@@ -300,204 +279,21 @@ const DescriptionItemDetail = () => {
 						<p className=".1x1:text-13px ..6x04:hidden .1x1:mb-0 font-montserrat mb-3 text-gray-quick-silver flex  items-center ">Физические свойства: <span className="ml-6px font-montserrat text-gray-quick-silver">1 шт.</span></p>
 						<div className="mb-2 .1x1:mb-3 .1x1:mt-3">
 							<p className="font-montserrat mb-2 text-gray-quick-silver flex .1x1:text-13px .1x1:mb-1 items-center ">Эффекты:</p>
-							<div className="flex ..6x04:hidden">
-								<p className="font-noto-sans text-xs font-light py-2.5 h-9 px-4 .1x1:py-1.5 .1x1:h-8 text-black border border-dotted mr-2 rounded border-primary">против перхоти</p>
-								<p className="font-noto-sans text-xs font-light py-2.5 h-9 px-4 .1x1:py-1.5 .1x1:h-8 text-black border border-dotted mr-2 rounded border-primary">против седины</p>
-								<p className="font-noto-sans text-xs font-light py-2.5 h-9 px-4 .1x1:py-1.5 .1x1:h-8 text-black border border-dotted rounded border-primary">против выпадения</p>
+							<div className="flex  overflow-x-auto whitespace-nowrap">
+								<EffectsItemDetail title={'против перхоти'} />
+								<EffectsItemDetail title={'против седины'} />
+								<EffectsItemDetail title={'против выпадения'} />
+
 							</div>
-							<Swiper slidesPerView={3} navigation={true} className=' ..6x04:block hidden' modules={[Navigation]}  >
 
-								<SwiperSlide className="!w-104px ..7x1:!w-auto" >
-
-									<p className="font-noto-sans text-xs font-light ..7x1:px-2 py-2.5 h-9 px-0 text-center .1x1:py-1.5 .1x1:h-8 text-black border border-dotted mr-2 rounded border-primary">против перхоти</p>
-								</SwiperSlide >
-
-								<SwiperSlide className="!w-104px ..7x1:!w-auto">
-
-									<p className="font-noto-sans text-xs font-light py-2.5 h-9 ..7x1:px-2 px-0 text-center .1x1:py-1.5 .1x1:h-8 text-black border border-dotted mr-2 rounded border-primary">против седины</p></SwiperSlide >
-								<SwiperSlide className="..7x1:!w-auto">
-
-									<p className="font-noto-sans text-xs font-light py-2.5 h-9 text-center ..7x1:px-2  mr-2  .1x1:py-1.5 .1x1:h-8 text-black border border-dotted rounded border-primary">против выпадения</p>
-								</SwiperSlide >
-								<SwiperSlide >
-
-									<p className="font-noto-sans text-xs font-light py-2.5 h-9 text-center .1x1:py-1.5 .1x1:h-8 text-black border border-dotted mr-2 rounded border-primary">против перхоти</p>
-								</SwiperSlide >
-
-
-							</Swiper>
 						</div>
-						<div>
-							<p className="font-montserrat mb-2 .1x1:text-13px .1x1:mb-1 text-gray-quick-silver flex  items-center ">Тон: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px ">06</span></p>
-							<Swiper slidesPerView={5} breakpoints={{
-								350: {
-									slidesPerView: 6
-								},
-								359: {
-									slidesPerView: 7
-								},
-								450: {
-									slidesPerView: 8
-								},
-								500: {
-									slidesPerView: 9
-								}
-							}} navigation={true} className='..6x04:block hidden' modules={[Navigation]}  >
+						<p className="font-montserrat mb-2 .1x1:text-13px .1x1:mb-1 text-gray-quick-silver flex  items-center ">Тон: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px ">06</span></p>
 
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 .1x1:w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0">
-											<Image src={oneTon} />
-										</div>
-
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-											<p className="text-13px text-black-70pe font-montserrat">Тон: 01</p>
-											<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-											</div>
-										</div>
-									</div>
-
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={twoTon} /></div>
-
-										<div className="itemTonHover transition-all flex justify-center items-center !hidden opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-											<p className="text-13px text-black-70pe font-montserrat">Тон: 02</p>
-											<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-											</div>
-										</div>
-									</div>
-
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={treeTon} /></div>
-
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-											<p className="text-13px text-black-70pe font-montserrat">Тон: 03</p>
-											<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-											</div>
-										</div>
-									</div>
-
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={fourTon} /></div>
-
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-											<p className="text-13px text-black-70pe font-montserrat">Тон: 04</p>
-											<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-											</div>
-										</div>
-									</div>
-
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={fiveTon} /></div>
-
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-											<p className="text-13px text-black-70pe font-montserrat">Тон: 05</p>
-											<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-											</div>
-										</div>
-									</div>
-
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={sixTon} /> </div>
-
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-											<p className="text-13px text-black-70pe font-montserrat">Тон: 06</p>
-											<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-											</div>
-										</div>
-									</div>
-
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center   mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={sevenTon} /> </div>
-
-										<hr className="px w-14 text-gray absolute rotSearchHover" />
-										<hr className="px w-14 text-gray absolute unrotSearchHover" />
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-20 -top-14 h-42px w-48 bg-white">
-											<p className="text-13px text-black-70pe font-montserrat flex items-center">Тон: 07 / <span className="ml-1 text-label-pink-2">нет в наличии</span></p>
-											<div className="w-18px -bottom-1 rotSearchHover left-24 -z-10 h-18px bg-white absolute ">
-
-											</div>
-
-										</div>
-									</div>
-
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center  mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={eightTon} /> </div>
+						<div className="overflow-x-scroll whitespace-nowrap  ">
 
 
-										<hr className="px w-14 text-gray absolute rotSearchHover" />
-										<hr className="px w-14 text-gray absolute unrotSearchHover" />
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-20 -top-14 h-42px w-48 bg-white">
-											<p className="text-13px text-black-70pe font-montserrat flex items-center">Тон: 08 / <span className="ml-1 text-label-pink-2">нет в наличии</span></p>
-											<div className="w-18px -bottom-1 rotSearchHover left-24 -z-10 h-18px bg-white absolute ">
-
-											</div>
-
-										</div>
-									</div>
-
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={nineTon} /> </div>
-
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-											<p className="text-13px text-black-70pe font-montserrat">Тон: 09</p>
-											<div className="w-18px -bottom-1 rotSearchHover left-8 h-18px -z-10  bg-white absolute ">
-
-											</div>
-										</div>
-									</div>
-								</SwiperSlide>
-								<SwiperSlide >
-
-									<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
-										<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={tenTon} /></div>
-
-										<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-											<p className="text-13px text-black-70pe font-montserrat">Тон: 10</p>
-											<div className="w-18px -bottom-1 rotSearchHover left-8 h-18px -z-10  bg-white absolute ">
-
-											</div>
-										</div>
-									</div>
-
-								</SwiperSlide>
-
-
-							</Swiper>
-
-							<div className="flex  flex-wrap w-full ..6x04:hidden">
-								<div className="h-11 .1x1:h-8 .1x1:w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+							<div className="flex  flex-wrap w-full ..6x04:flex-nowrap  ..6x04:w-475px">
+								<div className="h-11 .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0">
 										<Image src={oneTon} />
 									</div>

@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import useWindowSize from '../utils/useWindowSize';
 
 const DiscountsButtonsSliderNext = ({ onClick, kolichestvo }) => {
+	const [hoverButton, setHover] = useState(false)
+
+	const setHoverB = () => setHover(!hoverButton)
 	let size = useWindowSize();
 	let perc = '47.5%';
 
@@ -29,21 +33,21 @@ const DiscountsButtonsSliderNext = ({ onClick, kolichestvo }) => {
 	};
 
 	return (
-		<button
-			className={`next absolute transition-all w-8 hover:bg-gray bg-white py-2 px-3 `}
+		<button onMouseEnter={setHoverB} onMouseLeave={setHoverB}
+			className={`next absolute transition-all w-8 buttonHoverBlack hover:bg-black bg-white py-2 px-3 `}
 			onClick={onClick}
 			style={styleR}
 		>
 			<svg
 				width="10"
-				className="fill-black transition-all arrowAdapt"
+				className={`fill-black   transition-all arrowAdapt`}
 				height="16"
 				viewBox="0 0 10 16"
 				xmlns="http://www.w3.org/2000/svg"
 			>
 				<path
 					d="M9.33 8L1.03 16L0 15L4 9L4.7 8L4 7L0 1L1.03 0L9.33 8Z"
-					fill="black"
+					fill={`${hoverButton ? 'white' : "black"}`}
 				/>
 			</svg>
 		</button>

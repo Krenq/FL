@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const NewsNext = ({ onClick, kolichestvo }) => {
 	let styleR = {
 
@@ -8,9 +10,14 @@ const NewsNext = ({ onClick, kolichestvo }) => {
 		borderRadius: 25,
 	};
 
+
+	const [hoverButton, setHover] = useState(false)
+
+	const setHoverB = () => setHover(!hoverButton)
+
 	return (
-		<button
-			className="nextStories absolute transition-all hover:bg-gray bg-white py-3 px-4"
+		<button onMouseEnter={setHoverB} onMouseLeave={setHoverB}
+			className="nextStories absolute transition-all hover:bg-black bg-white py-3 px-4"
 			onClick={onClick}
 			style={styleR}
 		>
@@ -23,7 +30,7 @@ const NewsNext = ({ onClick, kolichestvo }) => {
 			>
 				<path
 					d="M9.33 8L1.03 16L0 15L4 9L4.7 8L4 7L0 1L1.03 0L9.33 8Z"
-					fill="black"
+					fill={`${hoverButton ? 'white' : "black"}`}
 				/>
 			</svg>
 		</button>

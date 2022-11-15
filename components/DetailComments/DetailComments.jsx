@@ -26,6 +26,13 @@ const DetailComments = () => {
 		materials: false
 	})
 
+	const [buttonHover, setButtonHover] = useState(false),
+		[buttonHoverNext, setButtonHoverNext] = useState(false)
+
+	const hoverSet = () => setButtonHover(!buttonHover),
+		hoverNext = () => setButtonHoverNext(!buttonHoverNext)
+
+
 	const setShowLocal = (title) => {
 		switch (title) {
 			case ('desc'):
@@ -243,7 +250,7 @@ const DetailComments = () => {
 						<SwiperSlide className="mr-2 customWidth cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
-						<SwiperSlide className="mr-2 customWidth cursor-pointer">
+						<SwiperSlide className="mr-2 customWidth cursor-pointer ..5x2:!pl-48">
 							<Image src={detailSix} />
 						</SwiperSlide>
 
@@ -252,15 +259,15 @@ const DetailComments = () => {
 
 
 
-					<button onClick={prevSlidePhoto} className='activeArrow absolute ..5x2:hidden h-8 w-8 bg-white  -left-8   top-20 flex justify-center  rounded-56px items-center  z-10'>
+					<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlidePhoto} className='activeArrow absolute hover:bg-black transition-all   ..5x2:hidden h-8 w-8 bg-white  -left-8   top-20 flex justify-center  rounded-56px items-center  z-10'>
 						<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill="black" />
+							<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill={`${buttonHover ? 'white' : "black"}`} />
 						</svg>
 
 					</button>
-					<button onClick={nextSlidePhoto} className=' absolute  ..5x2:hidden right-36 h-8 w-8 top-20 bg-white z-10 flex justify-center items-center rounded-56px'>
+					<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhoto} className=' absolute  ..5x2:hidden right-36 hover:bg-black transition-all   h-8 w-8 top-20 bg-white z-10 flex justify-center items-center rounded-56px'>
 						<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill="black" />
+							<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill={`${buttonHoverNext ? 'white' : "black"}`} />
 						</svg>
 
 
