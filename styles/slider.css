@@ -974,6 +974,8 @@
 	width: 650px;
 }
 
+
+
 .bgLIN {
 	background: linear-gradient(138.93deg, #649802 17.79%, #1F5201 83.6%);
 }
@@ -1928,6 +1930,11 @@
 	.searchwindow {
 		right: 500% !important;
 		width: 1000px;
+
+	}
+
+	.w-550 {
+		width: 550px;
 	}
 
 	.buttonsSearch {

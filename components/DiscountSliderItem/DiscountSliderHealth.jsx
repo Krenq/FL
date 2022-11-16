@@ -17,14 +17,14 @@ const DiscountSliderHealth = ({ imgProd, img, title, isMedium, subTitle, bgGradi
 
 						/>
 
-						<div className='absolute right-16  top-80px w-650'>
-							<p className='font-montserrat font-medium text-26px text-primary'>{subTitle}</p>
-							<p className={`${isMedium ? 'font-medium' : ""} ${bgGradient ? 'bgLIN text-white font-medium px-3' : ""} font-montserrat font-semibold text-52px italic ${noItalic ? 'not-italic	' : ''} tracking-tighter leading-150%`}>{title}</p>
-							<p className='font-montserrat text-22px text-black-70pe mt-6 mb-14'>{desc}
+						<div className='absolute right-16  top-80px w-650 .3x1:-right-14 .2x1.0:-right-44 .5x1:right-0'>
+							<p className='font-montserrat font-medium .2x1.0:text-xl text-26px text-primary'>{subTitle}</p>
+							<p className={`${isMedium ? 'font-medium' : ""} ${bgGradient ? 'bgLIN .5x1:!w-full text-white font-medium px-3' : ""}  .2x1.0:text-2xl .5x1:text-4xl .5x1:py-7 .2x1.0:py-2 font-montserrat font-semibold text-52px italic ${noItalic ? 'not-italic	' : ''} tracking-tighter leading-150%`}>{title}</p>
+							<p className='font-montserrat text-22px text-black-70pe mt-6 .2x1.0:mb-10 .5x1:mt-1 mb-14 .2x1.0:text-base .2x1.0:w-428px'>{desc}
 							</p>
 							<div className='flex'>
-								<button className='mr-6 h-52px flex items-center justify-center bg-primary px-9 font-montserrat font-medium text-xs text-white'>Каталог</button>
-								{!onlyCat && <button className='h-52px flex items-center justify-center px-8 font-montserrat font-medium text-xs text-primary border border-primary '>О нас</button>
+								<button className='mr-6 h-52px .2x1.0:h-11 flex items-center justify-center bg-primary px-9 font-montserrat font-medium text-xs text-white'>Каталог</button>
+								{!onlyCat && <button className='h-52px .2x1.0:h-11 flex items-center justify-center px-8 font-montserrat font-medium text-xs text-primary border border-primary '>О нас</button>
 								}
 							</div>
 						</div>
