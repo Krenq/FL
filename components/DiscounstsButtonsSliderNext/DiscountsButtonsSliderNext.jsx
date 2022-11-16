@@ -9,23 +9,23 @@ const DiscountsButtonsSliderNext = ({ onClick, kolichestvo }) => {
 	let perc = '47.5%';
 
 	if (size.width <= 1600 && size.width > 1350) {
-		perc = '47%';
+		perc = '43%';
 	} else if (size.width <= 1350 && size.width > 1100) {
-		perc = '46.5%';
-	} else if (size.width <= 1100 && size.width > 990) {
-		perc = '46%';
-	} else if (size.width <= 990 && size.width > 780) {
-		perc = '45%';
-	} else if (size.width <= 780 && size.width > 650) {
-		perc = '44%';
-	} else if (size.width <= 650 && size.width > 500) {
 		perc = '42%';
+	} else if (size.width <= 1100 && size.width > 990) {
+		perc = '39%';
+	} else if (size.width <= 990 && size.width > 780) {
+		perc = '46.8%';
+	} else if (size.width <= 780 && size.width > 650) {
+		perc = '46%';
+	} else if (size.width <= 650 && size.width > 500) {
+		perc = '45%';
 	} else if (size.width <= 500 && size.width > 400) {
-		perc = '40%';
+		perc = '43.5%';
 	} else if (size.width <= 400) {
-		perc = '38%';
+		perc = '41.5%';
 	} else if (size.width > 1600) {
-		perc = '44.3%';
+		perc = '44.0%';
 	}
 
 	let styleR = {
