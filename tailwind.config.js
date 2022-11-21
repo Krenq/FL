@@ -98,6 +98,7 @@ module.exports = {
 				searchBG: 'rgba(51, 114, 2, 0.05)'
 			},
 			green: {
+				'05pe': 'rgba(51, 114, 2, 0.05)',
 				'50pe': 'rgba(51, 114, 2, 0.5)',
 				hov: '#1F5201',
 			},
@@ -144,6 +145,7 @@ module.exports = {
 				'18px': '18px',
 				'26px': '26px',
 				'27px': '27px',
+				'30px': '30px',
 				'34px': '34px',
 				'38px': '38px',
 				'42px': '42px',
@@ -175,6 +177,7 @@ module.exports = {
 				'475px': '475px',
 				'710px': '710px',
 				'717px': '717px',
+				'727px': '727px',
 				'760px': '760px',
 				'800px': '800px',
 				'874px': '874px',
@@ -243,8 +246,9 @@ module.exports = {
 				'228px': '228px',
 				'262px': '262px',
 				'305px': '305px',
-				'1100px': '1100px',
+				'727px': '727px',
 				'760px': '760px',
+				'1100px': '1100px',
 			},
 			minHeight: {
 				'42px': '42px',

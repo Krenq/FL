@@ -146,7 +146,7 @@ const News = ({ refL }) => {
 			<p className="mt-32 absolute left-1/2 ability font-montserrat font-medium  -top-20 text-32px italic   ">
 				НОВОСТИ
 			</p>
-			<button className="ability font-medium z-10 cursor-pointer left-1/2 absolute buttonY  top-32 text-primary border boder-primary py-2 h-11 ..5x2:h-auto px-7 text-sm ..6x6:py-10px ..6x6:px-5 ..6x6:text-xs transition-all hover:text-white hover:bg-primary">
+			<button className="ability font-montserrat ..5x2:font-medium ..5x2:text-xs font-medium z-10 cursor-pointer left-1/2 absolute buttonY  top-32 text-primary border boder-primary py-2 h-11 ..5x2:h-auto px-7 text-sm ..6x6:py-10px ..6x6:px-5 ..6x6:text-xs transition-all hover:text-white hover:bg-primary">
 				Смотреть все
 			</button>
 			<Slider {...settings} ref={slider} className="pt-48 ..6x6:pt-44 newsSlider ..7x001:px-3 ">

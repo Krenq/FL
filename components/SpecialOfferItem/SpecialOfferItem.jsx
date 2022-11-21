@@ -126,22 +126,19 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								-15%
 							</small>
 						)}
-						{obj.isGif && <div className={`p-2  ${obj.fullImg ? ' bg-white pr-5 treangle overflow-hidden py-0 absolute top-0 left-0 ' : ""}`}>
-							<div className='flex items-center relative w-full overflow-hidden'>
+						{obj.isGif && obj.fullImg && <svg className='absolute left-0 -top-0.5 ..6x5:h-7 ..6x5:w-20' width="106" height="36" viewBox="0 0 106 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0 0H106L94.6021 18L106 36H0V0Z" fill="white" />
+						</svg>}
+						{obj.isGif && <div className={`p-2  ${obj.fullImg ? '   pr-5   overflow-hidden py-0 absolute top-0 left-0 ' : ""}`}>
+							<div className='flex items-center relative w-full  '>
 								<svg className='..6x1:h-4 ..6x1:mr-1 ..6x1:w-4' width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M5.13551 13.062H3.25V9.29094C3.25 8.34819 4.19275 7.40543 5.13551 7.40543H22.1051C23.0478 7.40543 23.9906 8.34819 23.9906 9.29094V13.062H22.1051M5.13551 13.062V22.4895C5.13551 23.4322 6.07826 24.375 7.02101 24.375H20.2196C21.1623 24.375 22.1051 23.4322 22.1051 22.4895V13.062M5.13551 13.062H22.1051M13.6203 7.40543L13.6203 24.375M13.6203 7.40543C12.3633 4.7343 9.755 0.429038 7.49239 2.69165C5.22978 4.95426 10.3207 7.40543 13.6203 7.40543ZM13.6203 7.40543C13.6203 3.16313 17.8627 0.334789 19.7482 2.22026C22.1051 4.5771 17.3913 7.40533 13.6203 7.40543Z" stroke="#C5C1AB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
 								</svg>
 								<p className='font-montserrat ml-2 font-semibold mt-0.5 ..6x1:text-sm text-2xl text-black-70pe'>{obj.gifTitle}</p>
-								{obj.fullImg &&
-									<>
-										<div className='absolute rotGif -right-5 -top-2.5 h-5 w-5 bg-white'>
 
-										</div>
-
-									</>
-								}
 
 							</div>
+
 						</div>}
 
 					</div>
@@ -193,7 +190,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 
 					</div>}
-					{obj.noIsHeart ? '' : obj.fullImg ? <svg className={`absolute ${liked ? 'top-4 right-0.5' : ''} top-3 ..7x1:top-2 right-3 ..6x03:right-3 z-20 ..5x2:h-9 ..5x2:w-9 cursor-pointer`} width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+					{obj.noIsHeart ? '' : obj.fullImg ? <svg className={`absolute ${liked ? 'top-4 right-0.5' : ''} ..6x5:right-5 top-3 ..6x5:h-8 ..6x5:w-8 ..7x1:top-2 right-3 ..6x03:right-3 z-20 ..5x2:h-9 ..5x2:w-9 cursor-pointer`} width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g filter="url(#filter0_b_3624_1022452)">
 							<circle cx="24" cy="24" r="24" fill="white" fillOpacity="0.8" />
 						</g>
@@ -209,7 +206,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					</svg>
 						: <div onClick={setLikeF} onMouseEnter={showHoverHeart} onMouseLeave={showHoverHeart} className={`absolute ${liked ? 'top-4 right-0.5' : ''} top-5  right-3   z-20 cursor-pointer`}>
 
-							{liked ? <svg className='absolute right-0 top-0.5' width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+							{liked ? <svg className='absolute ..6x5:w-38px  ..6x5:h-34px right-0 top-0.5' width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<g filter="url(#filter0_d_1939_1125459)">
 									<path d="M25.5022 5.00001C24.6291 4.99851 23.7677 5.20077 22.9865 5.59072C22.2052 5.98066 21.5258 6.54752 21.0022 7.24621C20.293 6.30266 19.3051 5.606 18.1782 5.25482C17.0513 4.90365 15.8426 4.91573 14.7229 5.28936C13.6033 5.663 12.6295 6.37926 11.9393 7.3368C11.2492 8.29434 10.8776 9.44467 10.8772 10.625C10.8772 17.3621 20.2373 22.6813 20.6357 22.9044C20.7477 22.9671 20.8739 23 21.0022 23C21.1305 23 21.2567 22.9671 21.3687 22.9044C23.0902 21.8961 24.7059 20.7173 26.1914 19.3856C29.4665 16.438 31.1272 13.4905 31.1272 10.625C31.1255 9.13368 30.5323 7.70393 29.4778 6.6494C28.4233 5.59487 26.9935 5.0017 25.5022 5.00001Z" fill="#FF6363" />
 								</g>
@@ -226,11 +223,11 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								</defs>
 							</svg>
 								:
-								<svg className='absolute right-0 top-0' width="24" height="24" viewBox="0 0 24 24" fill='none' xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill={`${!liked && hoverHeart ? '#FF6363' : '#EDEEEC'}`}></path></svg>
+								<svg className='absolute right-0 top-0 ..6x5:h-5 ..6x5:w-5' width="24" height="24" viewBox="0 0 24 24" fill='none' xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill={`${!liked && hoverHeart ? '#FF6363' : '#EDEEEC'}`}></path></svg>
 							}
 						</div>}
 
-					{!obj.img ? <svg className=' ..6x03:w-full ..6x03:absolute top-0 left-0 right-0  ..6x03:h-40 ' width="278" height="238" viewBox="0 0 278 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+					{!obj.img ? <svg className=' ..6x03:w-full ..6x03:absolute top-0 ..6x5:-top-3  left-0 right-0  ..6x03:h-40 ' width="278" height="238" viewBox="0 0 278 238" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<mask id="mask0_1939_1032750" maskUnits="userSpaceOnUse" x="0" y="0" width="278" height="238">
 							<rect width="278" height="238" fill="white" />
 						</mask>
@@ -292,7 +289,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 
 
-					<div className={`${obj.timeOver ? 'bottom-40' : ''} ${obj.fullImg ? 'left-0 !bottom-36 ..6x03:!bottom-32 !-mb-0 z-0' : ''}  ${obj.isDetails ? '..6x1:!-mb-2  ..6x03:top-44 ..6x03:bottom-auto' : ""}  absolute bg-white py-1 bottom-36 ..6x03:bottom-28 flex flex-row justify-between items-end w-full mb-2 px-3    ..6x03:px-1    ${showSost ? '!bottom-40 ..6x3:!bottom-32 ..5x5:!bottom-36' : ""} ${showSost && obj.isSpecialProductDetail ? '..7x1:!bottom-32' : ""}`}>
+					<div className={`${obj.timeOver ? 'bottom-40' : ''} ${!obj.img ? '..6x5:bottom-36' : ''} ${obj.fullImg ? 'left-0 !bottom-36 ..6x03:!bottom-32 !-mb-0 z-0' : ''}  ${obj.isDetails ? '..6x1:!-mb-2  ..6x03:top-44 ..6x5:bottom-32 ..6x03:bottom-auto' : ""}  absolute bg-white py-1 bottom-36 ..6x03:bottom-28 flex flex-row justify-between items-end w-full mb-2 px-3    ..6x03:px-1    ${showSost ? '!bottom-40 ..6x3:!bottom-32 ..5x5:!bottom-36' : ""} ${showSost && obj.isSpecialProductDetail ? '..7x1:!bottom-32' : ""}`}>
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
 								<p onClick={showSlide} className=" ..6x03:text-11px   text-13px font-normal font-montserrat flex   leading-140% text-black-70pe">
@@ -356,7 +353,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 
 							)}
 						</div>
-						{obj.balls ? <div className="flex flex-row items-center">
+						{obj.balls ? <div className="flex  flex-row items-center">
 							{obj.isFirstFoliage && <svg className='..5x2:h-3 mr-1 ..5x2:w-3'
 								width="16"
 								height="16"
@@ -585,7 +582,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 					}
 
 
-					<div className={` absolute bg-white bottom-20 px-2 ..6x03:px-0  ${obj.fullImg ? 'left-0' : ''} ..6x03:bottom-70px ${obj.isDetails ? '..6x03:bottom-60px' : ''}`}>
+					<div className={` ${!obj.img ? '..6x5:bottom-24' : ''} absolute bg-white bottom-20 px-2 ..6x03:px-0  ${obj.fullImg ? 'left-0' : ''} ..6x03:bottom-70px ${obj.isDetails ? '..6x03:bottom-60px' : ''}`}>
 						<p className={` ..6x03:text-10px text-13px font-montserrat font-normal leading-150% text-center text-gray-quick-silver tracking-widest card_text uppercase ${obj.isDetails ? 'text-start text-black ..6x1:text-center ..6x1:text-10px' : ""}`}>
 							{obj.text}
 						</p>

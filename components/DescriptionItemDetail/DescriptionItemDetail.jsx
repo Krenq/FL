@@ -289,7 +289,7 @@ const DescriptionItemDetail = () => {
 						</div>
 						<p className="font-montserrat mb-2 .1x1:text-13px .1x1:mb-1 text-gray-quick-silver flex  items-center ">Тон: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px ">06</span></p>
 
-						<div className="overflow-x-scroll whitespace-nowrap  ">
+						<div className="..6x5:overflow-x-scroll ..6x5:whitespace-nowrap  ">
 
 
 							<div className="flex  flex-wrap w-full ..6x04:flex-nowrap  ..6x04:w-475px">

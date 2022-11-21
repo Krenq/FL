@@ -286,7 +286,7 @@ const SeaAct = ({ refL }) => {
 								present: true,
 								img: two,
 								iTab: true,
-								text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКАdf sdf sdf sdf s fsdf  ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+								text: '  увлажнение и восстановление кожи',
 								date: true,
 								priceSale: { old: '920.00', new: '764.00' },
 							}}

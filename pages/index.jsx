@@ -96,7 +96,6 @@ function Home() {
 				<Funds refL={funds} />
 				<Partners refL={partners} />
 				<Health refL={health} />
-
 				<Stories refL={stories} />
 				<Clubs refL={clubs} />
 				<Trands refL={trands} />
