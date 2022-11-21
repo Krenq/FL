@@ -1,15 +1,22 @@
+import { useState } from "react";
+
 const NewsPrev = ({ onClick, kolichestvo }) => {
 	let styleL = {
 		left: 0,
 		top: '60%',
 		zIndex: 20,
 		borderRadius: 25,
-	};
+	}
+
+
+	const [hoverButton, setHover] = useState(false)
+
+	const setHoverB = () => setHover(!hoverButton)
 
 	return (
 		<button
-
-			className="prev_rotate absolute transition-all hover:bg-gray bg-white py-3 px-4"
+			onMouseEnter={setHoverB} onMouseLeave={setHoverB}
+			className="prev_rotate absolute w-11 h-11 flex items-center justify-center  rounded-56px transition-all hover:bg-black bg-white py-3 px-4"
 
 			onClick={onClick}
 			style={styleL}
@@ -23,7 +30,7 @@ const NewsPrev = ({ onClick, kolichestvo }) => {
 			>
 				<path
 					d="M9.33 8L1.03 16L0 15L4 9L4.7 8L4 7L0 1L1.03 0L9.33 8Z"
-					fill="black"
+					fill={`${hoverButton ? 'white' : "black"}`}
 				/>
 			</svg>
 		</button>

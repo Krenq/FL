@@ -9,10 +9,10 @@ export default function ({ photo, text }) {
 
 	return (
 
-		<div onClick={setSeeItem} className="temp   px-1 mx-auto max-w-350px max-h-340px">
+		<div onClick={setSeeItem} className="temp   px-1 mx-auto  ">
 
 
-			<div className="relative p-1 flex items-center justify-center transition-all hover:opacity-80 cursor-pointer stories">
+			<div className="relative  p-1 flex items-center justify-center transition-all hover:opacity-80 cursor-pointer stories">
 				{isSee && <section className='absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center bg-white-80pe z-10'>
 					<div className='flex flex-col items-center'>
 						<svg className='..7x001:w-16 ..7x001:h-16' width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,7 +25,7 @@ export default function ({ photo, text }) {
 
 				</section>}
 
-				<Image className="object-cover" src={photo} width={340} height={340} alt="newsImg" />
+				<Image className="object-cover" src={photo} width={350} height={350} alt="newsImg" />
 				<p className="absolute bottom-5 left-5 font-montserrat font-medium text-xl text-white ..6x4:text-base">{text}</p>
 			</div>
 		</div>

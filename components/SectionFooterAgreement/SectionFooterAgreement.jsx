@@ -8,10 +8,10 @@ export default function SectionFooterAgreement() {
 			<div className=" text-13px font-medium font-montserrat flex .2x1.0:flex-col">
 				<span className='.2x1.0:mb-3 ..6x6:text-11px'>© 2022 «TianDe», Все права защищены </span>
 				<div className='.2x1.0:mb-3'>
-					<span className="  ..6x6:text-11px .2x1.0:text-gray-quick-silver  border-b border-black pb-0.5 .2x1.0:font-normal font-montserrat ml-100px .2x1.0:ml-0">
+					<span className="  ..6x6:text-11px .2x1.0:text-gray-quick-silver  border-b border-gray-quick-silver pb-0.5 .2x1.0:font-normal font-montserrat ml-100px .2x1.0:ml-0">
 						Пользовательское соглашение
 					</span>
-					<span className="..7x01:mr-0  ..6x6:text-11px .2x1.0:text-gray-quick-silver border-b font-montserrat .2x1.0:font-normal border-black mx-4 pb-0.5">Карта сайта</span>
+					<span className="..7x01:mr-0  ..6x6:text-11px  .2x1.0:text-gray-quick-silver border-gray-quick-silver  border-b font-montserrat .2x1.0:font-normal mx-4 pb-0.5">Карта сайта</span>
 				</div>
 
 			</div>

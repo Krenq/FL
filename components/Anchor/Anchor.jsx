@@ -76,7 +76,12 @@ const Anchor = ({ elements }) => {
 	]
 
 	const scroll = (i) => {
-		elements[i + 1].current.scrollIntoView({ block: "end" })
+		if (i + 1 === 5 || i + 1 === 8 || i + 1 === 10 || i + 1 === 13) {
+
+			elements[i + 1].current.scrollIntoView()
+		}
+		else elements[i + 1].current.scrollIntoView({ block: "end" })
+
 	}
 
 	return (

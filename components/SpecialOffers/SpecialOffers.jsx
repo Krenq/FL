@@ -12,7 +12,7 @@ import useWindowSize from '../utils/useWindowSize';
 import SpecialOffersNext from './SpecialOffersNext';
 import SpecialOffersPrev from './SpecialOffersPrev';
 
-
+import fullSc from '../../images/templates/FullScreen.jpg'
 
 import oneL from '../../images/templates/oneItemSearchSlider.jpg'
 import treeL from '../../images/templates/treeItemSearch.jpg'
@@ -278,7 +278,7 @@ function SpecialOffers({ refL }) {
 	};
 	return (
 		<article ref={refL} id='sec-2' className="container__special bg-white pb-36 ..5x2:pb-0 .1x1:pb-28">
-			<div className="mt-16 flex items-center border-b border-gray-border pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
+			<div className="mt-16 ..5x2:mt-2 flex items-center border-b border-gray-border pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
 				<p
 					onClick={() => currentTabHandler('all')}
 					className={`..6x3:text-sm  ..6x3:mr-3 ..6x3:pr-3 ..6x1:text-base flex items-center h-8 hover:text-primary transition-all cursor-pointer mr-8 border-gray-border border-r  pr-8 ${currentTab === 'all' ? 'text-primary' : 'text-gray-quick-silver'
@@ -318,7 +318,7 @@ function SpecialOffers({ refL }) {
 			<Slider className='specialSlider' {...settings} ref={slider}>
 				<SpecialOfferItem
 					obj={{
-						img: one,
+
 						text: 'питательный шампунь с корнем имбиря',
 						pDay: true,
 						hit: true,
@@ -327,6 +327,38 @@ function SpecialOffers({ refL }) {
 						isSlider: true,
 						balls: true
 					}}
+				/>
+				<SpecialOfferItem
+					obj={{
+						img: fullSc,
+						timeOver: '15.06.22',
+						isGif: true,
+						gifTitle: '1=2',
+						timeCenter: true,
+						fullImg: true,
+						text: 'Для сенсационного  увлажнения и восстановления кожи',
+						priceSale: { old: '999.00', new: '888.00' },
+						isSlider: true,
+						balls: true,
+						iTab: true,
+
+					}}
+					srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
+				/>
+				<SpecialOfferItem
+					obj={{
+						img: two,
+						text: 'Fresh click: дотянуться до звезды',
+						new: true,
+						sale: true,
+						hit: true,
+						pDay: true,
+						fiveNabor: true,
+						balls: true,
+						iTab: true,
+						priceSale: { old: '999.00', new: '888.00' },
+					}}
+					srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
 				/>
 				<SpecialOfferItem
 					obj={{

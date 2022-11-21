@@ -146,7 +146,8 @@ function Instrumensts({ refL }) {
 					alt="discountImg"
 				/>
 			</div>
-			<section className="..5x2:pt-20 ..5x1:pt-48 ..5x2:pb-12   ..5x3:mt-5 ..5x1:-mt-32  relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40 pb-36 ">
+			<section className="..5x2:pt-20 ..5x1:pt-48 ..5x2:pb-12 ..5x3:mt-5 ..5x1:-mt-32  relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40 pb-36 ">
+			{/* <section className="relative pt-32 pb-36 ..5x1:pt-48 ..5x1:-mt-32 ..5x2:pt-20 ..5x2:pb-12 ..5x2:-mt-40"> */}
 				<p className="absolute left-1/2 top-28 ..5x2:top-12 ability text-2xl z-10 ..5x2:text-base font-montserrat font-medium">Сервисы</p>
 				<div className='homeSVGINSTR' >
 					<svg
@@ -172,7 +173,7 @@ function Instrumensts({ refL }) {
 				</p>
 
 				<div className="..5x1:hidden flex flex-col .3x1:flex-row justify-center max-w-1600px w-full items-center mx-auto mt-20">
-					<div className="flex .3x1:flex-col flex-row">
+					<div className="flex .3x1:flex-col maxwidthCustom flex-row">
 						<InstrumentItem
 							icon={icons.ICON_LK}
 							text="Управление профилем в понятном и удобном интерфейсе"
@@ -195,7 +196,7 @@ function Instrumensts({ refL }) {
 						/>
 					</div>
 
-					<div className="flex .3x1:flex-col flex-row">
+					<div className="flex .3x1:flex-col maxwidthCustom -mt-3 flex-row">
 						<InstrumentItem
 							icon={icons.ICON_ONLINE_BONUS}
 							text="Вознаграждение консультантов с пятого уровня, 1-10%"

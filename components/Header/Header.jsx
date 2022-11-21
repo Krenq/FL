@@ -53,7 +53,7 @@ function Header({ showSearch, setShowSearch, showBurger, setShowBurger }) {
 				<SectionOverNavBar />
 			</div>
 
-			<header className=" max-w-screen-2xl ..5x2:static sticky ..5x2:block mx-auto -top-1 z-50">
+			<header className=" max-w-screen-2xl transition-all ..5x2:static sticky ..5x2:block mx-auto -top-1 z-50">
 				<NavBar showBurger={showBurger} setShowBurger={setShowBurger} scrollMenu={scrollMenu} showSearch={showSearch} setShowSearch={setShowSearch} />
 			</header>
 		</>

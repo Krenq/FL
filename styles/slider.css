@@ -133,7 +133,7 @@
 	width: 1440px;
 	height: 664px;
 	top: 70px;
-	left: -242%;
+	left: -262.5%;
 }
 
 .timer {
@@ -376,11 +376,76 @@
 
 }
 
-@media (max-width: 1470px) {
+
+
+
+
+@media (max-width: 1100px)  {
 	.promo {
-		height: 550px !important;
+		height: 545px !important;
 	}
 }
+
+
+@media (max-width: 1200px) and (min-width: 1100px) {
+	.promo {
+		height: 535px !important;
+	}
+}
+
+@media (max-width: 1300px) and (min-width: 1200px) {
+	.promo {
+		height: 490px !important;
+	}
+}
+
+@media (max-width: 1400px) and (min-width: 1300px) {
+	.promo {
+		height: 525px !important;
+	}
+}
+
+
+@media (max-width: 1500px) and (min-width: 1400px) {
+	.promo {
+		height: 565px !important;
+	}
+}
+
+
+@media (max-width: 1600px) and (min-width: 1500px) {
+	.promo {
+		height: 600px !important;
+	}
+}
+
+
+@media (max-width: 1700px) and (min-width: 1600px) {
+	.promo {
+		height: 635px !important;
+	}
+}
+
+
+@media (max-width: 1800px) and (min-width: 1700px) {
+	.promo {
+		height: 680px !important;
+	}
+}
+
+
+@media (max-width: 1870px) and (min-width: 1800px) {
+	.promo {
+		height: 700px !important;
+	}
+}
+
+
+
+
+
+
+
 
 @media (max-width: 1340px) {
 	.prevStories.absolute.transition-all.bg-white.py-3.px-4 {
@@ -477,8 +542,6 @@
 	}
 
 	.funds .slick-list .slick-track .slick-current div .pb-20 .flex {
-		margin-left: 50px;
-		margin-right: 50px;
 		opacity: 1;
 	}
 }
@@ -956,9 +1019,47 @@
 	height: calc(100vh - 42px - 44px - 31px - 100px) !important;
 }
 
+
+
+.transition-custom {
+	transition: .3s ease all !important;
+}
+
+.customWidthImg span {
+	width: 100% !important;
+}
+
+.customWidthImg img {
+	width: 100% !important;
+}
+
+.w-650 {
+	width: 650px;
+}
+
+
+
+.bgLIN {
+	background: linear-gradient(138.93deg, #649802 17.79%, #1F5201 83.6%);
+}
+
+.rotGif {
+	transform: rotate(45deg);
+}
+
 @media (max-width: 1000px) {
 	.storiesOpacity .slick-dots {
 		bottom: 90px !important;
+	}
+
+	.hoverButton:hover .debuttonH {
+		border-left: 1px solid rgb(219 220 218);
+	}
+
+	.hoverButton:hover button.text-primary {
+		border: none;
+		border-top: 1px solid rgb(219 220 218);
+
 	}
 
 	.phoneOne {
@@ -1187,6 +1288,8 @@
 	.confirm {
 		top: calc(100vh - 42px - 44px - 80px - 230px) !important;
 	}
+
+
 }
 
 .specialItemSliderDots .slick-dots li button:before {
@@ -1223,6 +1326,10 @@
 		width: 310px;
 	}
 
+	.customWidth {
+		width: 90px !important;
+		height: 90px !important;
+	}
 
 }
 
@@ -1324,6 +1431,7 @@
 
 	.image-containerSIV {
 		width: 100%;
+		
 
 	}
 
@@ -1538,6 +1646,17 @@
 		width: 300px;
 		height: 300px;
 		margin-top: -60px;
+	}
+
+	.discSliderPhone .slick-dots {
+		bottom: 8px !important;
+
+	}
+
+	.discSliderPhone .slick-dots>div {
+		padding: 10px 22px !important;
+
+
 	}
 }
 
@@ -1800,6 +1919,8 @@
 	.searchwindow {
 		right: 90% !important;
 	}
+
+
 }
 
 @media (max-width: 1590px) {
@@ -1873,6 +1994,11 @@
 	.searchwindow {
 		right: 500% !important;
 		width: 1000px;
+
+	}
+
+	.w-550 {
+		width: 550px;
 	}
 
 	.buttonsSearch {
@@ -2024,9 +2150,37 @@
 }
 
 .transitionCustom {
-	transition: .3s ease all !important;
+	transition: 150ms ease all !important;
 
 }
+
+.hoverWhiteCat:hover p {
+	color: #fff;
+}
+
+.hoverWhiteCat:hover p svg {
+	stroke: #fff !important;
+}
+
+.hoverWhitePromo:hover .noneF {
+	display: none;
+}
+
+.hoverWhitePromo:hover .noneFHover {
+	display: block;
+}
+
+
+
+.maxwidthCustom {
+	max-width: 1460px;
+}
+
+.activeButtonPhone svg {
+	stroke: #337202 !important;
+}
+
+
 
 .customDrop {
 	height: 490px !important;
@@ -2040,6 +2194,10 @@
 .activeSubDrop {
 	height: 220px !important;
 
+}
+
+.scroll-down {
+	padding-bottom: 0px !important;
 }
 
 .activeSubDrop .subDr {
@@ -2097,5 +2255,57 @@
 }
 
 .dropDownShadow {
-	box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
+	box-shadow: 0px 10px 20px rgba(132, 132, 132, 0.2);
+}
+
+@media (max-width: 650px) {
+	.commentPhoto {
+		width: auto !important;
+	}
+}
+
+@media (max-width: 400px) {
+	.commentPhoto {
+		height: 380px !important;
+
+	}
+}
+
+.sliderPaginationCustom .swiper-pagination {
+	display: flex;
+	justify-content: center;
+
+	margin-top: 12px;
+}
+
+.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet:first-child {
+	border-radius: 8px 0 0 8px;
+}
+
+.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet:last-child {
+	border-radius: 0px 8px 8px 0px;
+}
+
+.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet {
+
+	color: black;
+	width: 23px !important;
+	height: 3px !important;
+	background-color: #E5E6E4;
+	margin: 0;
+
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.16);
+	bottom: 15px;
+
+}
+
+
+@media (min-width: 1000px) {
+	.sliderPaginationCustom .swiper-pagination {
+		display: none !important;
+	}
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #000 !important;
 }

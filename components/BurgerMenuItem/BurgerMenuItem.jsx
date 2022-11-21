@@ -11,7 +11,16 @@ const BurgerMenuItem = ({ title }) => {
 		})
 
 
-	const setShowB = () => setShow(!show),
+	const setShowB = () => {
+		setShow(!show)
+		setShowSub({
+			anti: false,
+			ns: false,
+			mask: false,
+			toniz: false,
+			probl: false
+		})
+	},
 		setShowSubS = (title) => {
 			switch (title) {
 				case 'anti':
@@ -60,7 +69,7 @@ const BurgerMenuItem = ({ title }) => {
 
 
 	return (
-		<div className={`p-3 border-b border-gray-light2  overflow-hidden bg-white transitionCustom  ${showSub.anti || showSub.ns || showSub.mask || showSub.toniz || showSub.probl ? 'customDrop' : ''} ${show ? 'activeDropBurgerMenu' : "h-11   "}`}>
+		<div className={`p-3 border-b border-gray-light2  overflow-hidden bg-white transitionCustom  ${showSub.anti || showSub.ns || showSub.mask || showSub.toniz || showSub.probl ? 'customDrop' : ''} ${show ? 'activeDropBurgerMenu bg-white-BG_FILTER' : "h-11   "}`}>
 			<div onClick={setShowB} className=" flex justify-between items-center">
 				<p className="font-montserrat text-15px">{title}</p>
 				<svg className="arrowItem transitionCustom " width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -69,10 +78,10 @@ const BurgerMenuItem = ({ title }) => {
 			</div>
 			<div className="pl-3 pt-6 -mb-4 ">
 				<div className="overflow-auto ">
-					<p className="flex pb-6 items-center font-montserrat text-13px font-medium text-primary">Все товары <svg className="ml-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<div className="flex pb-6 items-center font-montserrat text-13px font-medium text-primary">Все товары <svg className="ml-1" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M4.375 10.3396L7.7281 7L4.375 3.65312L5.40729 2.625L9.8 7L5.40729 11.375L4.375 10.3396Z" fill="#337202" />
 					</svg>
-					</p>
+					</div>
 
 
 					<div className={`transitionCustom overflow-hidden ${showSub.anti ? 'activeSubDrop' : ' h-5 mb-6'}`}>

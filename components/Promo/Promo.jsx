@@ -23,8 +23,8 @@ const Promo = ({ refL, showPromo }) => {
 
 
 	return (
-		<div className="relative promo " ref={refL} id='sec-7'>
-			<div className="absolute ">
+		<div className="relative promo parallax" ref={refL} id='sec-7'>
+			<div className="absolute parralax-layer parallax-image">
 				<Image
 					className="object-cover ..5x3:!hidden"
 					src={bg}
@@ -42,13 +42,13 @@ const Promo = ({ refL, showPromo }) => {
 					На аквагель для лица серии «FreshClick»
 				</p>
 				<div className='..5x2:ml-8 flex flex-nowrap mt-8'>
-					<button className="font-montserrat ..5x2:py-0 buttonClickPromo border ..7x001:px-15 .2x1:py-3 ..7x2:px-12 .2x1:px-16 border-gray bg-gray   text-gray-quick-silver px-24 py-5 transition-all hover:border-primary hover:text-white hover:bg-primary">
+					<button className="font-montserrat ..5x2:py-0 buttonClickPromo border ..7x001:px-15 .2x1:py-3 ..7x2:px-12 .2x1:px-16 border-gray bg-gray   text-gray-quick-silver px-24 py-5 transition-all  ">
 						CLICK
 					</button>
-					<button className="font-montserrat ..5x2:h-11  ..7x001:pr-7 ..7x001:pl-12  ..5x2:text-xs  border border-gray ..7x2:px-9 ..7x2:pr-5 px-10 .2x1:py-3 py-5 relative ">
+					<button className="font-montserrat hover:bg-white hover:text-primary hoverWhitePromo transition-all  ..5x2:h-11  ..7x001:pr-7 ..7x001:pl-12  ..5x2:text-xs  border border-gray ..7x2:px-9 ..7x2:pr-5 px-10 .2x1:py-3 py-5 relative ">
 						{' '}
 						<svg
-							className="absolute ..7x2:left-3 ..7x001:left-6 ..5x2:top-3 ..5x2:mr-2 .2x1:top-4 top-6 left-4"
+							className="absolute noneF ..7x2:left-3 ..7x001:left-6 ..5x2:top-3 ..5x2:mr-2 .2x1:top-4 top-6 left-4"
 							width="20"
 							height="20"
 							viewBox="0 0 20 20"
@@ -87,6 +87,16 @@ const Promo = ({ refL, showPromo }) => {
 								</clipPath>
 							</defs>
 						</svg>
+
+						<svg className=" hidden z-20 absolute noneFHover ..7x2:left-3 ..7x001:left-6 ..5x2:top-3 ..5x2:mr-2 .2x1:top-4 top-6 left-4" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<mask id="mask0_3448_254678" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+								<path fillRule="evenodd" clipRule="evenodd" d="M6.50031 0.5H14.0003C14.8646 0.5 15.5004 1.13579 15.5004 2.00001V9.50004C15.5004 10.3643 14.8646 11 14.0003 11H11V14C11 14.8642 10.3643 15.5 9.50004 15.5H2.00001C1.13579 15.5 0.5 14.8642 0.5 14V6.49993C0.5 5.63571 1.13579 4.99992 2.00001 4.99992H5.0003V2.00001C5.0003 1.13579 5.63609 0.5 6.50031 0.5ZM5.0003 6.49993H2.00001V14H9.50004V11H6.50031C5.63609 11 5.0003 10.3643 5.0003 9.50004V6.49993ZM6.49959 1.9999V9.49994H13.9996V1.9999H6.49959Z" fill="white" />
+							</mask>
+							<g mask="url(#mask0_3448_254678)">
+								<rect x="-1.00049" y="-1" width="18.0001" height="18.0001" fill="#337202" />
+							</g>
+						</svg>
+
 						Copy <span className='..5x2:hidden'>HTML</span>
 					</button>
 				</div>
