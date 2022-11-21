@@ -20,7 +20,7 @@ export default function ShoppingBag({ scrollMenu, setIsHover, closeHover }) {
 							12
 						</div>
 					</div>
-					<span className=" ml-1 text-xs font-normal self-center">
+					<span className=" ml-1 text-13px font-normal self-center">
 						₽ 22323.00
 					</span>
 				</div>

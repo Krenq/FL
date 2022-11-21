@@ -586,6 +586,10 @@
 	touch-action: pan-y !important;
 }
 
+.programs {
+	height: 388px;
+}
+
 @media (max-width: 1000px) {
 	.newsSlider .slick-dots ul li div {
 		width: 25px !important;
@@ -2092,9 +2096,6 @@
 	order: 6;
 }
 
-.newsCardHover:hover .titleNews {
-	color: #337202;
-}
 
 .newsCardHover:hover .lineHover {
 	transform: translateX(-100%);

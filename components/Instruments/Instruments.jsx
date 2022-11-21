@@ -173,35 +173,42 @@ function Instrumensts({ refL }) {
 
 				<div className="..5x1:hidden flex flex-col .3x1:flex-row justify-center max-w-1600px w-full items-center mx-auto mt-20">
 					<div className="flex .3x1:flex-col maxwidthCustom flex-row">
-						<InstrumentItem
-							icon={icons.ICON_LK}
-							text="Управление профилем в понятном и удобном интерфейсе"
-							title="Личный кабинет"
-							btnText="Вход"
-						/>
-
-						<InstrumentItem
-							icon={icons.ICON_SKIDKA}
-							text="Персональная скидка от 35% начиная с первого заказа!"
-							title="Моя скидка"
-						/>
-
-						<InstrumentItem
-							icon={icons.ICON_MOB_APPS}
-							text="Все доступные функции в вашем смартфоне!"
-							title="Мобильное приложение"
-							bottomImg1={icons.ICON_GOOGLE_PLAY}
-							bottomImg2={icons.ICON_APP_STORE}
-						/>
+						<div className='flex-1'>
+							<InstrumentItem
+								icon={icons.ICON_LK}
+								text="Управление профилем в понятном и удобном интерфейсе"
+								title="Личный кабинет"
+								btnText="Вход"
+							/>
+						</div>
+						<div className='flex-1'>
+							<InstrumentItem
+								icon={icons.ICON_SKIDKA}
+								text="Персональная скидка от 35% начиная с первого заказа!"
+								title="Моя скидка"
+							/>
+						</div>
+						<div className='flex-1'>
+							<InstrumentItem
+								icon={icons.ICON_MOB_APPS}
+								text="Все доступные функции в вашем смартфоне!"
+								title="Мобильное приложение"
+								bottomImg1={icons.ICON_GOOGLE_PLAY}
+								bottomImg2={icons.ICON_APP_STORE}
+							/>
+						</div>
 					</div>
 
 					<div className="flex .3x1:flex-col maxwidthCustom -mt-3 flex-row">
-						<InstrumentItem
-							icon={icons.ICON_ONLINE_BONUS}
-							text="Вознаграждение консультантов с пятого уровня, 1-10%"
-							title="Online-бонус"
-						/>
-						<div className='relative'>
+						<div className='flex-1'>
+							<InstrumentItem
+								icon={icons.ICON_ONLINE_BONUS}
+								text="Вознаграждение консультантов с пятого уровня, 1-10%"
+								title="Online-бонус"
+							/>
+						</div>
+
+						<div className='flex-1 relative'>
 							<InstrumentItem
 								icon={icons.ICON_DOSTAVKA}
 								country={delivery.currentCountry}
@@ -224,7 +231,7 @@ function Instrumensts({ refL }) {
 							</section>
 						</div>
 
-						<div className='relative'>
+						<div className='flex-1 relative'>
 							<InstrumentItem
 								icon={icons.ICON_OPLATA}
 								title="Оплата"
