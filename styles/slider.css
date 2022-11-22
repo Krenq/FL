@@ -1209,6 +1209,16 @@
 .foryou {
 	height: 575px;
 }
+.foryou::-webkit-scrollbar {
+	width: 3px !important;
+}
+
+.foryou::-webkit-scrollbar-thumb {
+	background-color: #dbdcda;
+
+	border-radius: 20px;
+}
+
 
 .searchsearchwindow {
 	width: 562px;
@@ -1649,11 +1659,23 @@
 .itemSeeAll {
 	width: 210px;
 }
+.w-176px {
+	width: 176px !important;
+}
+.cardHover:hover p{
+	color: #fff;
 
+}
+.cardHover:hover svg {
+	stroke: #fff;
+}
 .basketItems::-webkit-scrollbar {
-	width: 4px;
+	width: 3px;
 	background: rgba(207, 210, 205, 0.5);
 
+}
+.tracking-widest-2px {
+	letter-spacing: 2px;
 }
 
 .basketItems::-webkit-scrollbar-thumb {

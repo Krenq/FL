@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { useState } from "react"
 
-const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart, oldPriceFr, isPresent, isNew, isHit, promo, text, sale, isFree, price, actions, oldPrice, balls, priceDe, like, counter }) => {
+const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart,noBorder, oldPriceFr, isPresent, isNew, isHit, promo, text, sale, isFree, price, actions, oldPrice, balls, priceDe, like, counter }) => {
 	const [numItems, setNumItem] = useState(1)
 
 	const addItem = () => setNumItem(numItems + 1),
@@ -11,7 +11,7 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart, oldPriceFr, 
 		}
 
 	return (
-		<div className={`bg-white p-4 .2x1:px-1 items-center flex relative ${actions ? 'pb-16' : ""}`}>
+		<div className={`bg-white p-4  .2x1:px-1 items-center flex relative ${actions ? 'pb-16' : ""}`}>
 			{isSearch && <>
 				<input className='hidden' id='checkSearchAll' type="checkbox" />
 				<label htmlFor="checkSearchAll" className='w-4 h-4 border-gray-deNum cursor-pointer border'></label>
@@ -32,25 +32,25 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart, oldPriceFr, 
 				>
 					<path
 						d="M10.3333 14.3333C10.3333 14.3333 6 14.6667 3.66666 12C1.33333 9.33333 1.33333 1.33333 1.33333 1.33333C1.33333 1.33333 9.33333 1 12 3C14.6667 5 14 10.6667 14 10.6667"
-						stroke="#5D986A"
+						stroke="#337202"
 						strokeLinecap="round"
 						strokeLinejoin="round"
 					/>
 					<path
 						d="M14.6667 14.6666C14.6667 14.6666 10.9402 11.8504 8.66666 9.33325C6.39309 6.81609 5.33333 4.33325 5.33333 4.33325"
-						stroke="#5D986A"
+						stroke="#337202"
 						strokeLinecap="round"
 						strokeLinejoin="round"
 					/>
 					<path
 						d="M8.66667 9.33333L9 5"
-						stroke="#5D986A"
+						stroke="#337202"
 						strokeLinecap="round"
 						strokeLinejoin="round"
 					/>
 					<path
 						d="M8.66666 9.33333L5.33333 9"
-						stroke="#5D986A"
+						stroke="#337202"
 						strokeLinecap="round"
 						strokeLinejoin="round"
 					/>
@@ -74,7 +74,7 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart, oldPriceFr, 
 						}
 					</div>
 					<p className={`text-11px text-black-70pe .2x1:w-36 .2x1:text-9px font-montserrat w-48 tracking-widest mt-1 ${isSearch ? 'w-auto' : ''}`}>{text}</p>
-					<p className='text-13px font-normal font-montserrat mt-1 text-gray-quick-silver'>Артикул: 2 0 11 5</p>
+					<p className='text-13px font-normal tracking-widest-2px font-montserrat mt-1 text-gray-quick-silver'>Артикул: 20115</p>
 				</div>
 
 
@@ -84,9 +84,9 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart, oldPriceFr, 
 						{sale && <small className="h-5 font-noto-sans bg-label-pink-2 border-2 border-label-pink-2 text-white  font-medium ..6x03:text-9px text-xs leading-120% ..6x03:px-1 ..6x03:py-0 px-1 py-0.5 ">
 							-{sale}%
 						</small>}
-						{price && <p className={`text-13px ${sale || oldPriceFr ? '' : "!text-black !ml-0"} ${oldPriceFr ? 'ml-0' : ''} text-13px font-montserrat text-label-pink-2 ml-1 mt-1`}>{price} ₽ </p>
+						{price && <p className={`text-13px ${sale || oldPriceFr ? '' : "!text-black !ml-0"} ${oldPriceFr ? 'ml-0' : ''} text-13px !font-montserrat text-label-pink-2 ml-1 mt-1`}>{price} ₽ </p>
 						}
-						{oldPriceFr && <p className=" text-center ml-2 mt-0.5 text-13px mr-2 text-gray-quick-silver line-through">
+						{oldPriceFr && <p className=" text-center ml-2 mt-0.5 !font-montserrat text-13px mr-2 text-gray-quick-silver line-through">
 							{oldPriceFr} ₽
 
 						</p>}
@@ -98,8 +98,8 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart, oldPriceFr, 
 
 						</p>}
 
-						{priceDe && <p className="  border-gray-light2  text-13px font-lora leading-100% text-label-orange font-medium   whitespace-nowrap   ">
-							{priceDe} De
+						{priceDe && <p className="  border-gray-light2  text-13px font-montserrat  leading-100% text-label-orange font-medium   whitespace-nowrap   ">
+							{priceDe} <span className='font-lora'>De</span>
 						</p>}
 						{isFree && <p className="text-center text-sm mr-2 text-label-pink-2 ">
 							Бесплатно
@@ -139,8 +139,8 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart, oldPriceFr, 
 
 							Выгодный START
 						</p>}
-						<div className={`flex mt-3 ${promo ? '!mt-1' : ''}`}>
-							{counter ? <div className='border  h-8 px-0.5 flex items-center border-gray'>
+						<div className={`flex mt-3  ${promo ? '!mt-1' : ''}`}>
+							{counter ? <div className='border w-66px justify-between  h-8 px-0.5 flex items-center border-gray'>
 								<svg onClick={removeItem} className='mr-1.5' width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M14.25 9.75H3.75V8.25H14.25V9.75Z" fill="#949792" />
 								</svg>
@@ -172,8 +172,9 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart, oldPriceFr, 
 
 
 				</div>
-				<div className={`transition-all duration-500 bg-gray h-px bordSearch absolute -bottom-4 ${actions ? '!-bottom-16' : ""} ${promo ? 'promoWidth' : ''} .5x01:w-full mx-auto`}></div>
-			</div>
+				{!noBorder && 	<div className={`transition-all duration-500 bg-gray h-px bordSearch absolute -bottom-4 ${actions ? '!-bottom-16' : ""} ${promo ? 'promoWidth' : ''} .5x01:w-full mx-auto`}></div>
+				}
+			 	</div>
 
 			{
 				actions && <section className="absolute h-6 bottom-4 flex items-center justify-between left-4 right-4 bg-white-BG_FILTER border border-gray-light2 rounded" >

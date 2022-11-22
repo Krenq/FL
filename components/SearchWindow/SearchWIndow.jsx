@@ -54,7 +54,7 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 						<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} />
 
 
-						<div className='   bg-primary-searchBG flex flex-col px-11 itemSeeAll justify-center items-center  ml-3 mt-3  overflow-hidden'>
+						<div className='   bg-primary-searchBG flex flex-col px-11 itemSeeAll justify-center items-center  ml-3 mt-4 transition-all hover:bg-primary cardHover overflow-hidden'>
 
 							<p className='font-montserrat text-center  font-semibold text-2xl text-primary'>Идеи <br /> подарков</p>
 
@@ -111,11 +111,11 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 							<SearchWindowItem isSearch={true} src={searchOne} isProductToDay={true} text={`ЗУБНАЯ ЩЕТКА «ПРОДЕНТАЛЬ» `} isHit={true} sale={15} balls={5.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
 
 						</> : <>
-							<SearchWindowItem src={one} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} sale={15} balls={1.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
-							<SearchWindowItem src={twoP} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} actions={true} balls={1.2} price={'620.00'} counter={true} like={true} priceDe={'3 750'} />
+							<SearchWindowItem src={one}  isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} sale={15} balls={1.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
+							<SearchWindowItem src={twoP} noBorder={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} actions={true} balls={1.2} price={'620.00'} counter={true} like={true} priceDe={'3 750'} />
 							<SearchWindowItem src={one} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} promo={true} balls={24} oldPrice={'740.00'} isFree={true} />
 							<SearchWindowItem src={twoT} text={'ПЕКТИНОВЫЙ КИСЕЛЬ С СОКОМ ОБЛЕПИХИ И ЯБЛОКАМИ «БАЛАНС»'} price={'0.00'} oldPriceFr={'89.00'} isPresent={true} isStart={true} />
-							<SearchWindowItem src={one} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} promo={true} balls={24} oldPrice={'740.00'} isFree={true} />
+							<SearchWindowItem src={one} noBorder={true}  isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} promo={true} balls={24} oldPrice={'740.00'} isFree={true} />
 							<div className='flex items-center justify-between px-4 py-10px'>
 								<p className='text-13px font-noto-sans'>Товары по программе лояльности (4)</p>
 								<button className='text-13px font-montserrat font-medium text-gray-deNum'>Очистить</button>
@@ -169,8 +169,8 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 
 						</div>
 						<div className='bg-gray-light buttonsSearch py-3 .2x1:px-2 .4x2:px-2 .4x2:flex px-4'>
-							<button className='px-7 py-2 h-8 .2x1:px-2 .2x1:text-9px .4x2:px-3 bg-white text-xs font-montserrat font-medium text-primary border border-primary'>Перейти в корзину</button>
-							<button className='px-8 py-2 h-8  .2x1:px-2 .2x1:text-9px .4x2:px-4  ml-4 text-xs font-montserrat  font-medium text-white bg-primary border border-primary'>Оформить заказ</button>
+							<button className='px-7 w-176px py-2 px-0 .2x10:w-auto h-8 .2x1:px-2 .2x1:text-9px .4x2:px-3 bg-white text-xs font-montserrat font-medium text-primary border border-primary'>Перейти в корзину</button>
+							<button className='px-8 w-176px py-2 h-8 .2x10:w-auto .2x1:px-2 .2x1:text-9px .4x2:px-4  ml-4 text-xs font-montserrat  font-medium text-white bg-primary border border-primary'>Оформить заказ</button>
 
 						</div>
 					</div>
@@ -215,7 +215,7 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 						</div>
 
 					</div>
-					<div className='bg-input-error-bg py-3 px-2'>
+					<div className='bg-input-error-bg pl-4 py-3 px-2'>
 						<p className='.2x1:text-10px font-montserrat leading-140% text-11px font-normal flex items-center'>
 							<svg className='mr-2' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M7.33301 10.0003H8.66634V11.3337H7.33301V10.0003ZM7.99968 2.66699C5.05968 2.66699 2.66634 5.06032 2.66634 8.00032C2.66634 10.9403 5.05968 13.3337 7.99968 13.3337C10.9397 13.3337 13.333 10.9403 13.333 8.00032C13.333 5.06032 10.9397 2.66699 7.99968 2.66699ZM7.99968 14.667C7.1242 14.667 6.25729 14.4946 5.44845 14.1595C4.63962 13.8245 3.90469 13.3334 3.28563 12.7144C2.03539 11.4641 1.33301 9.76843 1.33301 8.00032C1.33301 6.23221 2.03539 4.53652 3.28563 3.28628C3.90469 2.66722 4.63962 2.17616 5.44845 1.84112C6.25729 1.50609 7.1242 1.33366 7.99968 1.33365C9.76779 1.33366 11.4635 2.03603 12.7137 3.28628C13.964 4.53652 14.6663 6.23221 14.6663 8.00032C14.6663 8.8758 14.4939 9.74271 14.1589 10.5515C13.8238 11.3604 13.3328 12.0953 12.7137 12.7144C12.0947 13.3334 11.3597 13.8245 10.5509 14.1595C9.74206 14.4946 8.87516 14.667 7.99968 14.667ZM7.33301 4.66699H8.66634V8.66699H7.33301V4.66699Z" fill="black" />
@@ -224,7 +224,7 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 							Второй и последующий заказы - 35% на всю сумму заказа!</p>
 					</div>
 					<div>
-						<div className='flex items-center mt-3 relative pb-2 border-b border-dashed border-gray'>
+						<div className='flex items-center mt-3 pl-5 relative pb-2 border-b border-dashed border-gray'>
 							<svg className='absolute .2x1:right-0  right-3 top-3' width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
@@ -266,7 +266,7 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 
 							</div>
 						</div>
-						<div className='flex items-center mt-3 relative pb-2 border-b border-dashed border-gray'>
+						<div className='flex items-center pl-5 mt-3 relative pb-2 border-b border-dashed border-gray'>
 							<svg className='absolute .2x1:right-0 right-3 top-3' width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
@@ -284,7 +284,7 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 
 							</div>
 						</div>
-						<div className='flex items-center mt-3 relative pb-2 '>
+						<div className='flex items-center pl-5 mt-3 relative pb-2 '>
 							<svg className='absolute right-3 top-3 .2x1:right-0' width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
