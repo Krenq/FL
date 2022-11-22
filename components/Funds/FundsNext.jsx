@@ -29,7 +29,7 @@ const FundsNext = ({ onClick, kolichestvo }) => {
 		right: `calc(${perc} - 12.5px * ${kolichestvo})`,
 		zIndex: 1,
 		borderRadius: 20,
-		bottom: 35,
+		bottom: 25,
 	};
 
 	const [hoverButton, setHover] = useState(false)

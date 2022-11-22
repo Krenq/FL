@@ -40,7 +40,7 @@ const Funds = ({ refL }) => {
 						display: 'flex',
 						justifyContent: 'center',
 						position: 'absolute',
-						bottom: 35,
+						bottom: 25,
 					}}
 				>
 					<div
@@ -94,7 +94,7 @@ const Funds = ({ refL }) => {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: 35,
+									bottom: 25,
 								}}
 							>
 								<div
@@ -148,7 +148,7 @@ const Funds = ({ refL }) => {
 									display: 'flex',
 									justifyContent: 'center',
 									position: 'absolute',
-									bottom: 35,
+									bottom: 25,
 								}}
 							>
 								<div
@@ -342,8 +342,8 @@ const Funds = ({ refL }) => {
 									height={374}
 									alt="discountImg"
 								/>
-								<p className="absolute flex ..6x2:text-13px  items-center bottom-30px  left-30px text-xl  font-medium z-10 font-montserrat ..6x2:left-2 ..6x2:bottom-2.5">
-									Идеи подарков
+								<p className="absolute flex ..6x2:text-13px ..6x2:tracking-tighter items-center bottom-30px left-30px text-xl  font-medium z-10 font-montserrat ..6x2:left-2 ..6x2:bottom-2.5">
+									Идеи подарков 
 									<svg
 										className="ml-1.5 pt-px hidden ..5x2:block"
 										width="12"

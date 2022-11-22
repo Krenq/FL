@@ -8,11 +8,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-
-
 html {
   scroll-behavior: smooth;
 }
@@ -78,3 +73,4 @@ li.slick-active div {
 .card_hov:hover .content_card {
   opacity: 0.7;
 }
+
