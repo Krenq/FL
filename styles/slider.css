@@ -537,6 +537,10 @@
 
 }
 
+.blurButtons {
+	backdrop-filter: blur(2px);
+}
+
 .storiesOpacity {
 	height: 350px;
 }

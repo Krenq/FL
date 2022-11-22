@@ -178,7 +178,7 @@ const SeaAct = ({ refL }) => {
 								{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
 							</div>
 						</div>
-						<p className="absolute bottom-10 cursor-pointer z-10 right-10 flex items-center text-sm transition-all hover:text-primary">
+						<p className="absolute bottom-10 cursor-pointer z-10 right-10 flex items-center text-13px transition-all hover:text-primary">
 							Смотреть{' '}
 							<svg
 								className="ml-2"
@@ -206,7 +206,7 @@ const SeaAct = ({ refL }) => {
 					</div>
 
 					<div className=" flex flex-row  justify-arround w-65% .4x1:w-2/3 ..6x1:hidden ..5x2:w-full .1x1:w-4/5 .4x1:justify-center">
-						<div className="flex flex-col flex-1 justify-between .4x1:ml-0 ..6x3:ml-4">
+						<div className="flex flex-col mr-3 flex-1  .4x1:ml-0 ..6x3:ml-4">
 							<SeaActItem
 								obj={{
 									present: true,
@@ -225,11 +225,12 @@ const SeaAct = ({ refL }) => {
 									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
 									date: true,
 									priceSale: { old: '920.00', new: '764.00' },
+									lastItem: true
 								}}
 							/>
 						</div>
 
-						<div className="flex flex-col flex-1 justify-between .4x1:ml-0 ..6x3:ml-4">
+						<div className="flex flex-col mr-3 flex-1  .4x1:ml-0 ..6x3:ml-4">
 							<SeaActItem
 								obj={{
 									present: true,
@@ -248,11 +249,12 @@ const SeaAct = ({ refL }) => {
 									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
 									date: true,
 									priceSale: { old: '920.00', new: '764.00' },
+									lastItem: true
 								}}
 							/>
 						</div>
 
-						<div className="flex flex-col flex-1 justify-between  ">
+						<div className="flex flex-col flex-1   ">
 							<SeaActItem
 								obj={{
 									present: true,
@@ -271,6 +273,7 @@ const SeaAct = ({ refL }) => {
 									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
 									date: true,
 									priceSale: { old: '920.00', new: '764.00' },
+									lastItem: true
 								}}
 							/>
 						</div>

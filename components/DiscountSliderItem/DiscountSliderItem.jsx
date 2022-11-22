@@ -15,7 +15,7 @@ export default function DiscountSliderItem({ imgProd, img, showCentral }) {
 								/>
 							</div>
 
-							<div onClick={showCentral} className=" z-10 bg-gray px-4 py-4 text-lg moreF rounded-full absolute cursor-pointer hover:text-white hover:bg-nude-3">
+							<div onClick={showCentral} className=" blurButtons z-10 h-12 w-12 flex items-center justify-center ..5x2:h-auto ..5x2:w-auto bg-gray px-4 py-4 text-lg moreF rounded-full absolute cursor-pointer hover:text-white hover:bg-label-green">
 								<svg className='plusDiscItem' width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M4.25 8.33333C4.25 8.74755 4.58579 9.08333 5 9.08333C5.41422 9.08333 5.75 8.74755 5.75 8.33333V5.75H8.33333C8.74755 5.75 9.08333 5.41421 9.08333 5C9.08333 4.58579 8.74755 4.25 8.33333 4.25H5.75V1.66667C5.75 1.25245 5.41422 0.916668 5 0.916668C4.58579 0.916668 4.25 1.25245 4.25 1.66667V4.25H1.66667C1.25245 4.25 0.916668 4.58579 0.916668 5C0.916668 5.41421 1.25245 5.75 1.66667 5.75H4.25V8.33333Z" fill="black" />
 								</svg>
@@ -130,12 +130,12 @@ export default function DiscountSliderItem({ imgProd, img, showCentral }) {
 									</div>
 								</section>
 							</div>
-							<div className="bg-gray z-10 ..7x1:left-22% ..6x3:left-34% ..5x2:left-39.5%  px-4 py-4 text-lg rounded-full absolute opacity-90 top-50% left-22% transition-all duration-300  hover:bg-nude-3 hover:text-white cursor-pointer">
+							<div className="bg-gray z-10 blurButtons ..7x1:left-22% ..6x3:left-34% ..5x2:left-39.5%  px-4 h-12 w-12 flex items-center justify-center ..5x2:h-auto ..5x2:w-auto py-4 text-lg rounded-full absolute opacity-90 top-50% left-22% transition-all duration-300  hover:bg-label-green hover:text-white cursor-pointer">
 								<svg width="10" className='plusDiscItem' height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M4.25 8.33333C4.25 8.74755 4.58579 9.08333 5 9.08333C5.41422 9.08333 5.75 8.74755 5.75 8.33333V5.75H8.33333C8.74755 5.75 9.08333 5.41421 9.08333 5C9.08333 4.58579 8.74755 4.25 8.33333 4.25H5.75V1.66667C5.75 1.25245 5.41422 0.916668 5 0.916668C4.58579 0.916668 4.25 1.25245 4.25 1.66667V4.25H1.66667C1.25245 4.25 0.916668 4.58579 0.916668 5C0.916668 5.41421 1.25245 5.75 1.66667 5.75H4.25V8.33333Z" fill="black" />
 								</svg>
 							</div>
-							<div className=" bg-gray z-10 ..6x6:left-64% px-4 py-4 text-lg rounded-full absolute opacity-90 top-50% right-20% transition-all duration-300 hover:bg-nude-3 hover:text-white cursor-pointer">
+							<div className=" bg-gray z-10 blurButtons ..6x6:left-64% px-4 py-4 text-lg rounded-full absolute h-12 w-12 flex items-center justify-center ..5x2:h-auto ..5x2:w-auto opacity-90 top-50% right-20% transition-all duration-300 hover:bg-label-green hover:text-white cursor-pointer">
 								<svg width="10" className='plusDiscItem' height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M4.25 8.33333C4.25 8.74755 4.58579 9.08333 5 9.08333C5.41422 9.08333 5.75 8.74755 5.75 8.33333V5.75H8.33333C8.74755 5.75 9.08333 5.41421 9.08333 5C9.08333 4.58579 8.74755 4.25 8.33333 4.25H5.75V1.66667C5.75 1.25245 5.41422 0.916668 5 0.916668C4.58579 0.916668 4.25 1.25245 4.25 1.66667V4.25H1.66667C1.25245 4.25 0.916668 4.58579 0.916668 5C0.916668 5.41421 1.25245 5.75 1.66667 5.75H4.25V8.33333Z" fill="black" />
 								</svg>

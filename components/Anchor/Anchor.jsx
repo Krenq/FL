@@ -73,11 +73,45 @@ const Anchor = ({ elements }) => {
 	]
 
 	const scroll = (i) => {
-		if (i + 1 === 5 || i + 1 === 8 || i + 1 === 10 || i + 1 === 13) {
-
-			elements[i + 1].current.scrollIntoView()
+		switch (i + 1) {
+			case (0):
+				return window.scrollTo({ top: 0 })
+			case (1):
+				return window.scrollTo({ top: 850 })
+			case (2):
+				return window.scrollTo({ top: 1480 })
+			case (3):
+				return window.scrollTo({ top: 2480 })
+			case (4):
+				return window.scrollTo({ top: 3400 })
+			case (5):
+				return window.scrollTo({ top: 4320 })
+			case (6):
+				return window.scrollTo({ top: 5420 })
+			case (7):
+				return window.scrollTo({ top: 6250 })
+			case (8):
+				return window.scrollTo({ top: 7130 })
+			case (9):
+				return window.scrollTo({ top: 8200 })
+			case (10):
+				return window.scrollTo({ top: 9000 })
+			case (11):
+				return window.scrollTo({ top: 10450 })
+			case (12):
+				return window.scrollTo({ top: 11000 })
+			case (13):
+				return window.scrollTo({ top: 11650 })
 		}
-		else elements[i + 1].current.scrollIntoView({ block: "end" })
+		// if (i + 1 === 5 || i + 1 === 8 || i + 1 === 10 || i + 1 === 13) {
+
+		// 	elements[i + 1].current.scrollIntoView()
+		// }
+		// else {
+		// 	window.scrollTo({
+		// 		top: 1000
+		// 	})
+		// }
 
 	}
 
