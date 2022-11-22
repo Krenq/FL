@@ -51,8 +51,7 @@ function Home() {
 		news = useRef(null),
 		stories = useRef(null),
 		clubs = useRef(null),
-		trands = useRef(null),
-		support = useRef(null)
+		trands = useRef(null)
 
 	const [showProducts, setShowProducts] = useState({
 		central: false,
@@ -99,7 +98,7 @@ function Home() {
 				<Stories refL={stories} />
 				<Clubs refL={clubs} />
 				<Trands refL={trands} />
-				<Support refL={support} />
+				<Support />
 				<PhoneNavigation />
 				<Anchor elements={[
 					discount,
@@ -116,8 +115,8 @@ function Home() {
 
 					stories,
 					clubs,
-					trands,
-					support
+					trands
+
 				]} />
 			</section>
 		</>

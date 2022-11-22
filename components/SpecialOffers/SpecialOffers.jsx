@@ -355,6 +355,7 @@ function SpecialOffers({ refL }) {
 						pDay: true,
 						fiveNabor: true,
 						balls: true,
+						isSlider: true,
 						iTab: true,
 						priceSale: { old: '999.00', new: '888.00' },
 					}}

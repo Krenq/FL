@@ -98,7 +98,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 	if (!isSearchI) {
 		return (
 			<div className={`${obj.isSpecialProductDetail ? 'bg-white' : ""} ${obj.isSpecialProductDetail ? '..7x1:!m-0' : ""} ${!obj.img ? 'overflow-hidden' : ''} ${obj.fullImg ? '!p-0' : ''} min-h-317px relative ..6x03:h-317px ${obj.isDetails ? '..6x1:h-380px ..7x1:!w-full' : ""} h-428px flex justify-center  relative mt-2 p-2 border border-white hoverButton hover:border-gray active_card mx-3 ${obj.isDetails ? '!ml-0 hover:border-white !mt-0 ..7x1:!mr-0 ..5x2:mr-6 mr-42px' : ""}`}>
-				<div className={`hidden ${obj.fullImg ? '!block aboslute top-0 !h-56 left-0 w-full ..6x03:!hidden customWidthImg right-0' : ''}`}>
+				<div className={`hidden ${obj.fullImg ? '!block aboslute top-0 !h-56 left-0 w-full ..6x03:!hidden customWidthImg right-0' : ''} ${obj.isSlider ? '!hidden' : ""}`}>
 					<Image
 						className=" object-cover  "
 						src={obj.img || treeN}
@@ -126,7 +126,7 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 								-15%
 							</small>
 						)}
-						{obj.isGif && obj.fullImg && <svg className='absolute left-0 -top-0.5 ..6x5:h-7 ..6x5:w-20' width="106" height="36" viewBox="0 0 106 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+						{obj.isGif && obj.fullImg && <svg className='absolute left-0 -top-0.5 ..6x1:h-7 ..6x1:w-20' width="106" height="36" viewBox="0 0 106 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M0 0H106L94.6021 18L106 36H0V0Z" fill="white" />
 						</svg>}
 						{obj.isGif && <div className={`p-2  ${obj.fullImg ? '   pr-5   overflow-hidden py-0 absolute top-0 left-0 ' : ""}`}>
@@ -240,7 +240,8 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 						</g>
 					</svg>
 						: <>
-							<div className={` ..6x03:hidden ${obj.fullImg ? '!hidden aboslute  image-container' : ''}`}>
+
+							<div className={` ..6x03:hidden ${obj.isSlider ? '!hidden' : ""} ${obj.fullImg ? '!hidden aboslute  image-container' : ''}`}>
 								<Image
 									className=" object-cover image"
 									src={obj.img || treeN}
@@ -248,35 +249,64 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 									height={!obj.fullImg ? 218 : ''}
 								/>
 							</div>
-							{obj.isSlider ? <div className=" hidden z-0  w-32 overflow-hidden h-32 ..6x03:block">
-								<Slider {...settings} className='specialItemSliderDots'>
-									<Image
-										className=" object-cover"
-										src={obj.img || treeN}
-										width={130}
-										height={130}
-									/>
+							{obj.isSlider ? <>
+								<div className=" ..6x03:hidden  z-0  w-full overflow-hidden h-auto  ">
+									<Slider {...settings} className=' specialItemSliderBDots'>
+										<Image
+											className=" object-cover"
+											src={obj.img || treeN}
 
-									<Image
-										className=" object-cover"
-										src={obj.img || treeN}
-										width={130}
-										height={130}
-									/>
-									<Image
-										className=" object-cover"
-										src={obj.img || treeN}
-										width={130}
-										height={130}
-									/>
-									<Image
-										className=" object-cover"
-										src={obj.img || treeN}
-										width={130}
-										height={130}
-									/>
-								</Slider>
-							</div> : <div className="z-0 hidden  w-32 h-32 ..6x03:block">
+										/>
+
+										<Image
+											className=" object-cover"
+											src={obj.img || treeN}
+
+										/>
+										<Image
+											className=" object-cover"
+											src={obj.img || treeN}
+
+										/>
+										<Image
+											className=" object-cover"
+											src={obj.img || treeN}
+
+										/>
+									</Slider>
+								</div>
+
+								<div className=" hidden z-0  w-32 overflow-hidden h-32 ..6x03:block">
+
+									<Slider {...settings} className='specialItemSliderDots'>
+										<Image
+											className=" object-cover"
+											src={obj.img || treeN}
+											width={130}
+											height={130}
+										/>
+
+										<Image
+											className=" object-cover"
+											src={obj.img || treeN}
+											width={130}
+											height={130}
+										/>
+										<Image
+											className=" object-cover"
+											src={obj.img || treeN}
+											width={130}
+											height={130}
+										/>
+										<Image
+											className=" object-cover"
+											src={obj.img || treeN}
+											width={130}
+											height={130}
+										/>
+									</Slider>
+								</div>
+							</> : <div className="z-0 hidden  w-32 h-32 ..6x03:block">
 								<Image
 									className=" object-cover"
 									src={obj.img || treeN}
@@ -284,6 +314,8 @@ export default function SpecialOfferItem({ obj, isSearchI, srcSliderImgTwo, srcS
 									height={130}
 								/>
 							</div>}
+
+
 
 						</>}
 

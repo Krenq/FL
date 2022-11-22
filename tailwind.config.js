@@ -75,6 +75,7 @@ module.exports = {
 				DEFAULT: '#000000',
 				'70pe': 'rgba(0, 0, 0, 0.7)',
 				'80pe': 'rgba(0, 0, 0, 0.8)',
+				'20pe': 'rgba(0, 0, 0, 0.2)'
 			},
 			gray: {
 				DEFAULT: '#DBDCDA',

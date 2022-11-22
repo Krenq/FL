@@ -16,8 +16,7 @@ const Anchor = ({ elements }) => {
 		{ 'sec-11': false },
 		{ 'sec-12': false },
 		{ 'sec-13': false },
-		{ 'sec-14': false },
-		{ 'sec-15': false }
+		{ 'sec-14': false }
 	]),
 		[currentLenght, setCurrentLenght] = useState('01')
 
@@ -42,8 +41,7 @@ const Anchor = ({ elements }) => {
 						{ 'sec-11': false },
 						{ 'sec-12': false },
 						{ 'sec-13': false },
-						{ 'sec-14': false },
-						{ 'sec-15': false }
+						{ 'sec-14': false }
 					]
 					newms[i][`${change.target.id}`] = true
 					setCurrentElement(newms)
@@ -71,8 +69,7 @@ const Anchor = ({ elements }) => {
 		'sec-11',
 		'sec-12',
 		'sec-13',
-		'sec-14',
-		'sec-15'
+		'sec-14'
 	]
 
 	const scroll = (i) => {
@@ -96,7 +93,7 @@ const Anchor = ({ elements }) => {
 
 
 			</div>
-			<small className="text-13px">15</small>
+			<small className="text-13px">14</small>
 		</section>
 	)
 }
