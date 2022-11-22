@@ -15,32 +15,37 @@ import useWindowSize from '../utils/useWindowSize';
 
 function Instrumensts({ refL }) {
 	const divBlock = useRef(null),
-		slider = useRef(null)
-
+		slider = useRef(null);
 
 	const [payments, setpayments] = useState({
 		isHover: false,
-		currentCountry: 'Россия'
-	})
+		currentCountry: 'Россия',
+	});
 
 	const [delivery, setDelivery] = useState({
 		isHover: false,
-		currentCountry: 'Россия'
+		currentCountry: 'Россия',
 	}),
-		cntrs = ['Россия', 'Австрия', 'Беларусь', 'Бельгия', 'Франция', 'Германия', 'Италия', 'Казахстан']
+		cntrs = [
+			'Россия',
+			'Австрия',
+			'Беларусь',
+			'Бельгия',
+			'Франция',
+			'Германия',
+			'Италия',
+			'Казахстан',
+		];
 
 	const size = useWindowSize();
 
 	const [kol, setKol] = useState();
 	const [widthDot, setWidthDot] = useState();
 
-
-
-
-	const setCurrentCountry = country => setDelivery({ isHover: false, currentCountry: country })
-	const setCurrentPaymentCountry = country => setpayments({ isHover: false, currentCountry: country })
-
-
+	const setCurrentCountry = (country) =>
+		setDelivery({ isHover: false, currentCountry: country });
+	const setCurrentPaymentCountry = (country) =>
+		setpayments({ isHover: false, currentCountry: country });
 
 	useEffect(() => {
 		setWidthDot(divBlock?.current?.getBoundingClientRect()?.width / kol);
@@ -49,13 +54,12 @@ function Instrumensts({ refL }) {
 		if (slider.current) setKol(slider?.current.props?.children?.length);
 	}, [size.width, slider?.current]);
 
-
 	const settings = {
 		dots: true,
 		className: 'center',
 		centerMode: true,
 		infinite: true,
-		centerPadding: '-30px',
+		centerPadding: '100px',
 		speed: 500,
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -103,12 +107,55 @@ function Instrumensts({ refL }) {
 		),
 		responsive: [
 			{
-				breakpoint: 850,
+				breakpoint: 1120,
+				settings: {
+					dots: true,
+					className: 'center',
+					centerMode: true,
+					infinite: true,
+					centerPadding: '100px',
+					speed: 500,
+					slidesToShow: 4,
+					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 980,
 				settings: {
 					dots: true,
 					infinite: true,
 					slidesToShow: 3,
 					slidesToScroll: 1,
+				},
+			},
+			{
+				breakpoint: 760,
+				settings: {
+					dots: true,
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: '150px',
+				},
+			},
+			{
+				breakpoint: 680,
+				settings: {
+					dots: true,
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: '90px',
+				},
+			},
+			{
+				breakpoint: 590,
+				settings: {
+					dots: true,
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: '50px',
 				},
 			},
 			{
@@ -118,16 +165,44 @@ function Instrumensts({ refL }) {
 					infinite: true,
 					slidesToShow: 2,
 					slidesToScroll: 1,
+					centerPadding: '20px',
+				},
+			},
+			{
+				breakpoint: 450,
+				settings: {
+					dots: true,
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: '0px',
+				},
+			},
+			{
+				breakpoint: 400,
+				settings: {
+					dots: true,
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: '-30px',
+				},
+			},
+			{
+				breakpoint: 350,
+				settings: {
+					dots: true,
+					infinite: true,
+					slidesToShow: 2,
+					slidesToScroll: 1,
+					centerPadding: '-60px',
 				},
 			},
 		],
 	};
 
 	return (
-		<div className="relative" ref={refL} id='sec-8'>
-
-
-
+		<div className="relative" ref={refL} id="sec-8">
 			<div className="absolute right-0 bottom-0 w-72 h-72 ..5x2:hidden ..6x2:w-40 ..6x2:h-40">
 				<Image
 					className="object-cover"
@@ -146,9 +221,12 @@ function Instrumensts({ refL }) {
 					alt="discountImg"
 				/>
 			</div>
-			<section className="..5x2:pt-20 ..5x1:pt-48 ..5x2:pb-12   ..5x3:mt-5 ..5x1:-mt-32  relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40 pb-36 ">
-				<p className="absolute left-1/2 top-28 ..5x2:top-12 ability text-2xl z-10 ..5x2:text-base font-montserrat font-medium">Сервисы</p>
-				<div className='homeSVGINSTR' >
+			<section className="..5x2:pt-20 ..5x1:pt-48 ..5x2:pb-12 ..5x3:mt-5 ..5x1:-mt-32  relative .1x1:-mt-20 .1 pt-32 ..5x2:-mt-40 pb-36 ">
+				{/* <section className="relative pt-32 pb-36 ..5x1:pt-48 ..5x1:-mt-32 ..5x2:pt-20 ..5x2:pb-12 ..5x2:-mt-40"> */}
+				<p className="absolute left-1/2 top-28 ..5x2:top-12 ability text-2xl z-10 ..5x2:text-base font-montserrat font-medium">
+					Сервисы
+				</p>
+				<div className="homeSVGINSTR">
 					<svg
 						width="140"
 						className="absolute ..5x2:top-5  left-1/2 ability top-12"
@@ -166,49 +244,41 @@ function Instrumensts({ refL }) {
 					</svg>
 				</div>
 
-
 				<p className="text-center font-montserrat font-medium text-3xl italic mb-3 absolute left-1/2 ability top-40 ..5x2:text-22px ..5x2:top-16 whitespace-nowrap">
 					И ИНСТРУМЕНТЫ
 				</p>
 
 				<div className="..5x1:hidden flex flex-col .3x1:flex-row justify-center max-w-1600px w-full items-center mx-auto mt-20">
 					<div className="flex .3x1:flex-col maxwidthCustom flex-row">
-						<div className='flex-1'>
-							<InstrumentItem
-								icon={icons.ICON_LK}
-								text="Управление профилем в понятном и удобном интерфейсе"
-								title="Личный кабинет"
-								btnText="Вход"
-							/>
-						</div>
-						<div className='flex-1'>
-							<InstrumentItem
-								icon={icons.ICON_SKIDKA}
-								text="Персональная скидка от 35% начиная с первого заказа!"
-								title="Моя скидка"
-							/>
-						</div>
-						<div className='flex-1'>
-							<InstrumentItem
-								icon={icons.ICON_MOB_APPS}
-								text="Все доступные функции в вашем смартфоне!"
-								title="Мобильное приложение"
-								bottomImg1={icons.ICON_GOOGLE_PLAY}
-								bottomImg2={icons.ICON_APP_STORE}
-							/>
-						</div>
+						<InstrumentItem
+							icon={icons.ICON_LK}
+							text="Управление профилем в понятном и удобном интерфейсе"
+							title="Личный кабинет"
+							btnText="Вход"
+						/>
+
+						<InstrumentItem
+							icon={icons.ICON_SKIDKA}
+							text="Персональная скидка от 35% начиная с первого заказа!"
+							title="Моя скидка"
+						/>
+
+						<InstrumentItem
+							icon={icons.ICON_MOB_APPS}
+							text="Все доступные функции в вашем смартфоне!"
+							title="Мобильное приложение"
+							bottomImg1={icons.ICON_GOOGLE_PLAY}
+							bottomImg2={icons.ICON_APP_STORE}
+						/>
 					</div>
 
-					<div className="flex .3x1:flex-col maxwidthCustom -mt-3 flex-row">
-						<div className='flex-1'>
-							<InstrumentItem
-								icon={icons.ICON_ONLINE_BONUS}
-								text="Вознаграждение консультантов с пятого уровня, 1-10%"
-								title="Online-бонус"
-							/>
-						</div>
-
-						<div className='flex-1 relative'>
+					<div className="flex .3x1:flex-col maxwidthCustom flex-row">
+						<InstrumentItem
+							icon={icons.ICON_ONLINE_BONUS}
+							text="Вознаграждение консультантов с пятого уровня, 1-10%"
+							title="Online-бонус"
+						/>
+						<div className="relative">
 							<InstrumentItem
 								icon={icons.ICON_DOSTAVKA}
 								country={delivery.currentCountry}
@@ -219,19 +289,45 @@ function Instrumensts({ refL }) {
 								setDelivery={setDelivery}
 								delivery={delivery}
 							/>
-							<section onMouseLeave={() => setDelivery({
-								currentCountry: delivery.currentCountry,
-								isHover: false
-							})} className={`dropmenuInstr ${delivery.isHover ? "block" : "hidden"} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-72 h-64 left-14 -bottom-40`}>
-								{cntrs.map((ctr, i) => <p key={i} onClick={() => setCurrentCountry(ctr)} className='px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between'>{ctr} {delivery.currentCountry === ctr ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z" fill="#337202" />
-								</svg>
-									: ''}</p>)}
-
+							<section
+								onMouseLeave={() =>
+									setDelivery({
+										currentCountry: delivery.currentCountry,
+										isHover: false,
+									})
+								}
+								className={`dropmenuInstr ${delivery.isHover ? 'block' : 'hidden'
+									} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-72 h-64 left-14 -bottom-40`}
+							>
+								{cntrs.map((ctr, i) => (
+									<p
+										key={i}
+										onClick={() => setCurrentCountry(ctr)}
+										className="px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between"
+									>
+										{ctr}{' '}
+										{delivery.currentCountry === ctr ? (
+											<svg
+												width="16"
+												height="16"
+												viewBox="0 0 16 16"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z"
+													fill="#337202"
+												/>
+											</svg>
+										) : (
+											''
+										)}
+									</p>
+								))}
 							</section>
 						</div>
 
-						<div className='flex-1 relative'>
+						<div className="relative">
 							<InstrumentItem
 								icon={icons.ICON_OPLATA}
 								title="Оплата"
@@ -241,15 +337,41 @@ function Instrumensts({ refL }) {
 								setDelivery={setpayments}
 								delivery={payments}
 							/>
-							<section onMouseLeave={() => setpayments({
-								currentCountry: payments.currentCountry,
-								isHover: false
-							})} className={`dropmenuInstr ${payments.isHover ? "block" : "hidden"} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-72 h-64 left-32 -bottom-40`}>
-								{cntrs.map((ctr, i) => <p key={i} onClick={() => setCurrentPaymentCountry(ctr)} className='px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between'>{ctr} {payments.currentCountry === ctr ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z" fill="#337202" />
-								</svg>
-									: ''}</p>)}
-
+							<section
+								onMouseLeave={() =>
+									setpayments({
+										currentCountry: payments.currentCountry,
+										isHover: false,
+									})
+								}
+								className={`dropmenuInstr ${payments.isHover ? 'block' : 'hidden'
+									} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-72 h-64 left-32 -bottom-40`}
+							>
+								{cntrs.map((ctr, i) => (
+									<p
+										key={i}
+										onClick={() => setCurrentPaymentCountry(ctr)}
+										className="px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between"
+									>
+										{ctr}{' '}
+										{payments.currentCountry === ctr ? (
+											<svg
+												width="16"
+												height="16"
+												viewBox="0 0 16 16"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z"
+													fill="#337202"
+												/>
+											</svg>
+										) : (
+											''
+										)}
+									</p>
+								))}
 							</section>
 						</div>
 					</div>
@@ -258,7 +380,7 @@ function Instrumensts({ refL }) {
 				<Slider
 					{...settings}
 					ref={slider}
-					className="hidden ..5x1:block slider_instr"
+					className="hidden ..5x1:block mt-4 slider_instr"
 				>
 					<InstrumentItem
 						icon={icons.ICON_LK}
@@ -287,7 +409,7 @@ function Instrumensts({ refL }) {
 						title="Online-бонус"
 					/>
 
-					<div className='relative'>
+					<div className="relative">
 						<InstrumentItem
 							icon={icons.ICON_DOSTAVKA}
 							country={delivery.currentCountry}
@@ -298,18 +420,44 @@ function Instrumensts({ refL }) {
 							setDelivery={setDelivery}
 							delivery={delivery}
 						/>
-						<section onMouseLeave={() => setDelivery({
-							currentCountry: delivery.currentCountry,
-							isHover: false
-						})} className={`dropmenuInstr ${delivery.isHover ? "block" : "hidden"} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-11/12 h-64 left-3 -bottom-24`}>
-							{cntrs.map((ctr, i) => <p key={i} onClick={() => setCurrentCountry(ctr)} className='px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between'>{ctr} {delivery.currentCountry === ctr ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z" fill="#337202" />
-							</svg>
-								: ''}</p>)}
-
+						<section
+							onMouseLeave={() =>
+								setDelivery({
+									currentCountry: delivery.currentCountry,
+									isHover: false,
+								})
+							}
+							className={`dropmenuInstr ${delivery.isHover ? 'block' : 'hidden'
+								} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-11/12 h-64 left-3 -bottom-24`}
+						>
+							{cntrs.map((ctr, i) => (
+								<p
+									key={i}
+									onClick={() => setCurrentCountry(ctr)}
+									className="px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between"
+								>
+									{ctr}{' '}
+									{delivery.currentCountry === ctr ? (
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 16 16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z"
+												fill="#337202"
+											/>
+										</svg>
+									) : (
+										''
+									)}
+								</p>
+							))}
 						</section>
 					</div>
-					<div className='relative'>
+					<div className="relative">
 						<InstrumentItem
 							icon={icons.ICON_OPLATA}
 							title="Оплата"
@@ -319,15 +467,41 @@ function Instrumensts({ refL }) {
 							setDelivery={setpayments}
 							delivery={payments}
 						/>
-						<section onMouseLeave={() => setpayments({
-							currentCountry: payments.currentCountry,
-							isHover: false
-						})} className={`dropmenuInstr ${payments.isHover ? "block" : "hidden"} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-11/12 h-64 left-3 -bottom-24`}>
-							{cntrs.map((ctr, i) => <p key={i} onClick={() => setCurrentPaymentCountry(ctr)} className='px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between'>{ctr} {payments.currentCountry === ctr ? <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z" fill="#337202" />
-							</svg>
-								: ''}</p>)}
-
+						<section
+							onMouseLeave={() =>
+								setpayments({
+									currentCountry: payments.currentCountry,
+									isHover: false,
+								})
+							}
+							className={`dropmenuInstr ${payments.isHover ? 'block' : 'hidden'
+								} z-10 absolute pb-5 pt-1 overflow-auto bg-white w-11/12 h-64 left-3 -bottom-24`}
+						>
+							{cntrs.map((ctr, i) => (
+								<p
+									key={i}
+									onClick={() => setCurrentPaymentCountry(ctr)}
+									className="px-5 cursor-pointer transition-all hover:bg-gray-light py-3 text-13px font-medium flex items-center justify-between"
+								>
+									{ctr}{' '}
+									{payments.currentCountry === ctr ? (
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 16 16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M14 4.66656L6.00004 12.6666L2.33337 8.9999L3.27337 8.0599L6.00004 10.7799L13.06 3.72656L14 4.66656Z"
+												fill="#337202"
+											/>
+										</svg>
+									) : (
+										''
+									)}
+								</p>
+							))}
 						</section>
 					</div>
 				</Slider>

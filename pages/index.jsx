@@ -112,7 +112,6 @@ function Home() {
 					funds,
 					partners,
 					health,
-
 					stories,
 					clubs,
 					trands

@@ -127,7 +127,7 @@ function Buyers({ refL }) {
 				</p>
 
 				<Slider {...settings}  >
-					<div className="px-2 relative ..7x01:!h-auto ..6x5:!h-317px overflow-hidden">
+					<div className="px-2 relative ..7x01:!h-auto ..7x001:!h-317px overflow-hidden">
 						<p className='font-montserrat  ..6x3:text-base ..6x3:left-7 ..6x3:top-4 ..6x1:text-2xl z-10 absolute ..5x01:left-9   ..5x01:top-8 ..5x01:text-xl .2x1.0:top-10 .2x1.0:text-2xl top-10 left-12 text-32px  ..5x03:text-32px ..5x03:left-12 ..5x03:top-10 font-medium'>Программа лояльности</p>
 						<p className='font-montserrat ..6x3:text-sm ..6x3:left-7 ..6x3:top-8 ..6x1:text-xl ..6x1:left-11 ..6x1:top-16 .2x1.0:top-16 .2x1.0:text-xl z-10 ..5x01:top-14 ..5x01:left-9 ..5x01:text-lg text-26px font-medium absolute text-primary left-12 top-20 ..5x03:left-12 ..5x03:top-20 ..5x03:text-26px mt-2'>от 1500 ₽</p>
 						<div className='absolute right-3 overflow-hidden deCat .4x2:right-2  .3x1:h-80 .3x1:w-80 ..6x1:h-80 ..6x1:w-80 ..5x01:h-64 ..5x01:w-64 bottom-1.5 ..5x03:h-96 ..5x03:w-96 ..5x03:right-2 ..7x002:right-2 ..7x002:bottom-1.5 ..7x001:right-0 ..7x001:-bottom-0.5 h-96 w-96 bg-nude-3 z-10'>
@@ -152,7 +152,7 @@ function Buyers({ refL }) {
 
 					</div>
 
-					<div className="px-2 relative ..7x01:!h-auto ..6x5:!h-317px overflow-hidden">
+					<div className="px-2 relative ..7x01:!h-auto ..7x001:!h-317px overflow-hidden">
 						<p className='font-montserrat  ..6x3:text-base ..6x3:left-7 ..6x3:top-4 ..6x1:text-2xl z-10 absolute ..5x01:left-9   ..5x01:top-8 ..5x01:text-xl .2x1.0:top-10 .2x1.0:text-2xl top-10 left-12 text-32px  ..5x03:text-32px ..5x03:left-12 ..5x03:top-10 font-medium'>Программа лояльности</p>
 						<p className='font-montserrat ..6x3:text-sm ..6x3:left-7 ..6x3:top-8 ..6x1:text-xl ..6x1:left-11 ..6x1:top-16 .2x1.0:top-16 .2x1.0:text-xl z-10 ..5x01:top-14 ..5x01:left-9 ..5x01:text-lg text-26px font-medium absolute text-primary left-12 top-20 ..5x03:left-12 ..5x03:top-20 ..5x03:text-26px mt-2'>от 1500 ₽</p>
 						<div className='absolute right-3 overflow-hidden deCat .4x2:right-2  .3x1:h-80 .3x1:w-80 ..6x1:h-80 ..6x1:w-80 ..5x01:h-64 ..5x01:w-64 bottom-1.5 ..5x03:h-96 ..5x03:w-96 ..5x03:right-2 ..7x002:right-2 ..7x002:bottom-1.5 ..7x001:right-0 ..7x001:-bottom-0.5 h-96 w-96 bg-nude-3 z-10'>
@@ -177,9 +177,9 @@ function Buyers({ refL }) {
 
 					</div>
 
-					<div className="flex flex-col ..7x01:!h-auto ..6x5:!h-317px overflow-hidden justify-between px-2 h-full ">
+					<div className="flex flex-col  ..7x01:!h-auto ..7x001:!h-317px overflow-hidden justify-between px-2 h-full ">
 
-						<div className="relative cartinka ..7x002:mb-0 ..7x001:mb-1">
+						<div className="relative cartinka  mb-3px ..6x3:mb-px ..6x4:mb-0">
 							<Image
 								className=" object-cover"
 								src={two}
@@ -234,9 +234,9 @@ function Buyers({ refL }) {
 					</div>
 
 
-					<div className="flex flex-col ..7x01:!h-auto ..6x5:!h-317px overflow-hidden justify-between px-2 h-full ">
+					<div className="flex flex-col ..7x01:!h-auto ..7x001:!h-317px overflow-hidden justify-between px-2 h-full ">
 
-						<div className="relative cartinka ..7x002:mb-0 ..7x001:mb-1">
+						<div className="relative cartinka mb-3px ..6x3:mb-px ..6x4:mb-0">
 							<Image
 								className=" object-cover"
 								src={two}

@@ -12,11 +12,12 @@ import useWindowSize from '../utils/useWindowSize';
 import SpecialOffersNext from './SpecialOffersNext';
 import SpecialOffersPrev from './SpecialOffersPrev';
 
-import fullSc from '../../images/templates/FullScreen.jpg'
+import fullSc from '../../images/templates/FullScreen.jpg';
 
-import oneL from '../../images/templates/oneItemSearchSlider.jpg'
-import treeL from '../../images/templates/treeItemSearch.jpg'
-import twoI from '../../images/templates/twoItemSearch.jpg'
+import oneL from '../../images/templates/oneItemSearchSlider.jpg';
+import treeL from '../../images/templates/treeItemSearch.jpg';
+import twoI from '../../images/templates/twoItemSearch.jpg';
+import ProductCard from '../ProductCard/ProductCard';
 
 function SpecialOffers({ refL }) {
 	const divBlock = useRef(null),
@@ -40,9 +41,7 @@ function SpecialOffers({ refL }) {
 
 	const settings = {
 		dots: true,
-
 		infinite: true,
-
 		speed: 500,
 		slidesToShow: 5,
 		slidesToScroll: 1,
@@ -94,7 +93,6 @@ function SpecialOffers({ refL }) {
 		responsive: [
 			{
 				breakpoint: 1350,
-
 				settings: {
 					slidesToShow: 4,
 					slidesToScroll: 1,
@@ -104,7 +102,6 @@ function SpecialOffers({ refL }) {
 			},
 			{
 				breakpoint: 1100,
-
 				settings: {
 					slidesToShow: 3,
 					slidesToScroll: 1,
@@ -114,7 +111,6 @@ function SpecialOffers({ refL }) {
 			},
 			{
 				breakpoint: 780,
-
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
@@ -168,7 +164,6 @@ function SpecialOffers({ refL }) {
 			},
 			{
 				breakpoint: 600,
-
 				settings: {
 					slidesToShow: 2,
 					slidesToScroll: 1,
@@ -224,7 +219,6 @@ function SpecialOffers({ refL }) {
 				breakpoint: 450,
 				settings: {
 					slidesToShow: 2,
-
 					slidesToScroll: 1,
 					infinite: true,
 					dots: true,
@@ -277,8 +271,12 @@ function SpecialOffers({ refL }) {
 		],
 	};
 	return (
-		<article ref={refL} id='sec-2' className="container__special bg-white pb-36 ..5x2:pb-0 .1x1:pb-28">
-			<div className="mt-16 .4x2:mt-4 ..5x2:mt-2 flex items-center border-b border-gray-border pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
+		<article
+			ref={refL}
+			id="sec-2"
+			className="container__special bg-white pb-36 ..5x2:pb-0 .1x1:pb-28"
+		>
+			<div className="mt-16 ..5x2:mt-2 flex items-center border-b border-gray-border pb-2 overflow-x-auto scrol whitespace-nowrap font-medium font-montserrat ml-2">
 				<p
 					onClick={() => currentTabHandler('all')}
 					className={`..6x3:text-sm  ..6x3:mr-3 ..6x3:pr-3 ..6x1:text-base flex items-center h-8 hover:text-primary transition-all cursor-pointer mr-8 border-gray-border border-r  pr-8 ${currentTab === 'all' ? 'text-primary' : 'text-gray-quick-silver'
@@ -449,6 +447,152 @@ function SpecialOffers({ refL }) {
 				/>
 
 			</Slider>
+			{/* <Slider className="specialSlider" {...settings} ref={slider}>
+        <ProductCard obj={{ img: fullSc, priceDe: true }} />
+        <ProductCard obj={{ img: fullSc, priceDe: false }} />
+        <ProductCard obj={{ img: fullSc, priceDe: true }} />
+        <ProductCard obj={{ img: fullSc, priceDe: true }} />
+        <ProductCard obj={{ img: fullSc, priceDe: true }} />
+        <ProductCard obj={{ img: fullSc, priceDe: true }} />
+        <ProductCard obj={{ img: fullSc, priceDe: true }} /> */}
+
+			{/* <SpecialOfferItem
+          obj={{
+            text: 'питательный шампунь с корнем имбиря',
+            pDay: true,
+            hit: true,
+            priceDe: '3 750',
+            price: '764.00',
+            isSlider: true,
+            balls: true,
+          }}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: fullSc,
+            timeOver: '15.06.22',
+            isGif: true,
+            gifTitle: '1=2',
+            timeCenter: true,
+            fullImg: true,
+            text: 'Для сенсационного  увлажнения и восстановления кожи',
+            priceSale: { old: '999.00', new: '888.00' },
+            isSlider: true,
+            balls: true,
+            iTab: true,
+          }}
+          srcSliderImgTree={treeL}
+          srcSliderImgTwo={twoI}
+          srcSliderImgOne={oneL}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: two,
+            text: 'Fresh click: дотянуться до звезды',
+            new: true,
+            sale: true,
+            hit: true,
+            pDay: true,
+            fiveNabor: true,
+            balls: true,
+            iTab: true,
+            priceSale: { old: '999.00', new: '888.00' },
+          }}
+          srcSliderImgTree={treeL}
+          srcSliderImgTwo={twoI}
+          srcSliderImgOne={oneL}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: two,
+            text: 'Укрепляющая сыворотка для контура овала лица с коллагеном',
+            new: true,
+            sale: true,
+            iTab: true,
+            priceSale: { old: '999.00', new: '888.00' },
+          }}
+          srcSliderImgTree={treeL}
+          srcSliderImgTwo={twoI}
+          srcSliderImgOne={oneL}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: tree,
+            text: 'бьюти - косметичка “сакура”',
+            hit: true,
+            pDay: true,
+            colors: true,
+            price: '764.00',
+          }}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: four,
+            text: 'Укрепляющая сыворотка для контура овала лица с коллагеном ',
+            priceDe: '3 750',
+            price: '764.00',
+          }}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: five,
+            text: 'ночная крем-маска с лавандой',
+            hit: true,
+            priceDe: '3 750',
+            price: '764.00',
+          }}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: one,
+            text: 'питательный шампунь с корнем имбиря',
+            pDay: true,
+            hit: true,
+            priceDe: '3 750',
+            price: '764.00',
+          }}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: two,
+            text: 'Укрепляющая сыворотка для контура овала лица с коллагеном',
+            new: true,
+            sale: true,
+            iTab: true,
+            priceSale: { old: '999.00', new: '888.00' },
+          }}
+          srcSliderImgTree={treeL}
+          srcSliderImgTwo={twoI}
+          srcSliderImgOne={oneL}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: tree,
+            text: 'бьюти - косметичка “сакура”',
+            hit: true,
+            pDay: true,
+            colors: true,
+            price: '764.00',
+          }}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: four,
+            text: 'Укрепляющая сыворотка для контура овала лица с коллагеном ',
+            priceDe: '3 750',
+            price: '764.00',
+          }}
+        />
+        <SpecialOfferItem
+          obj={{
+            img: five,
+            text: 'ночная крем-маска с лавандой',
+            hit: true,
+            priceDe: '3 750',
+            price: '764.00',
+          }}
+        /> */}
+
 		</article>
 	);
 }
