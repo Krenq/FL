@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { useState } from "react"
 
-const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart,noBorder, oldPriceFr, isPresent, isNew, isHit, promo, text, sale, isFree, price, actions, oldPrice, balls, priceDe, like, counter }) => {
+const SearchWindowItem = ({ src, isSearch,access, isProductToDay, isStart,noBorder, oldPriceFr, isPresent, isNew, isHit, promo, text, sale, isFree, price, actions, oldPrice, balls, priceDe, like, counter }) => {
 	const [numItems, setNumItem] = useState(1)
 
 	const addItem = () => setNumItem(numItems + 1),
@@ -18,7 +18,7 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart,noBorder, old
 
 			</>}
 
-			<div className='w-24 h-24'>
+			<div className={`w-24 h-24 ${access ? 'opacity-50' : ''}`}>
 				<Image src={src} className='pr-7' />
 			</div>
 
@@ -81,10 +81,10 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart,noBorder, old
 
 				<div className={`ml-14  ${isSearch ? '!ml-5' : ''}`}>
 					<div className='flex items-center mb-1'>
-						{sale && <small className="h-5 font-noto-sans bg-label-pink-2 border-2 border-label-pink-2 text-white  font-medium ..6x03:text-9px text-xs leading-120% ..6x03:px-1 ..6x03:py-0 px-1 py-0.5 ">
+						{sale && <small className="h-5 flex items-center font-noto-sans bg-label-pink-2 border-2 border-label-pink-2 text-white  font-medium ..6x03:text-9px text-xs leading-120% ..6x03:px-1 ..6x03:py-0 px-1 py-0.5 ">
 							-{sale}%
 						</small>}
-						{price && <p className={`text-13px ${sale || oldPriceFr ? '' : "!text-black !ml-0"} ${oldPriceFr ? 'ml-0' : ''} text-13px !font-montserrat text-label-pink-2 ml-1 mt-1`}>{price} ₽ </p>
+						{price && <p className={`text-13px ${sale || oldPriceFr  ? '' : "!text-black !ml-0"} ${oldPriceFr ? 'ml-0' : ''} text-13px !font-montserrat text-label-pink-2 ml-1 mt-1`}>{price} ₽ </p>
 						}
 						{oldPriceFr && <p className=" text-center ml-2 mt-0.5 !font-montserrat text-13px mr-2 text-gray-quick-silver line-through">
 							{oldPriceFr} ₽
@@ -139,7 +139,12 @@ const SearchWindowItem = ({ src, isSearch, isProductToDay, isStart,noBorder, old
 
 							Выгодный START
 						</p>}
-						<div className={`flex mt-3  ${promo ? '!mt-1' : ''}`}>
+						{access && <small className='absolute flex items-center -bottom-3.5 text-13px font-montserrat text-gray-quick-silver'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 6L6 12M6 6L12 12" stroke="#F14155" stroke-width="1.5" stroke-linecap="round"/>
+						</svg>
+							Нет в наличии</small>}
+
+						<div className={`flex mt-3 ${access ? 'opacity-50' : ''} ${promo ? '!mt-1' : ''}`}>
 							{counter ? <div className='border w-66px justify-between  h-8 px-0.5 flex items-center border-gray'>
 								<svg onClick={removeItem} className='mr-1.5' width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M14.25 9.75H3.75V8.25H14.25V9.75Z" fill="#949792" />

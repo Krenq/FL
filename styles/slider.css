@@ -1279,7 +1279,7 @@
 .activeSpecialDrop {
 	color: black !important;
 	border-bottom: 1px solid black !important;
-	padding-bottom: 0 !important;
+
 }
 
 
@@ -1643,11 +1643,7 @@
 
 }
 
-.activeSpecialDrop {
-	color: black !important;
-	border-bottom: 1px solid black !important;
-	padding-bottom: 0 !important;
-}
+
 
 
 .basketItems {
