@@ -5,7 +5,7 @@ import Search from '../Search/Search';
 import InputItemSearch from '../InputItemSearch/InputItemSearch';
 
 export default function NavBar({ scrollMenu, showSearch, setShowSearch, showBurger, setShowBurger }) {
-	const [isHoverBasket, setIsHoverBasket] = useState( true)
+	const [isHoverBasket, setIsHoverBasket] = useState( false)
 
 
 	const setIsHover = (isOverlay) => {

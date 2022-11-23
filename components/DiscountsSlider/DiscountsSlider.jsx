@@ -125,10 +125,17 @@ function DiscountsSlider({ refL, showCentral }) {
 
 
 			<div className="  w-full  ..5x2:block hidden  discSliderPhone" ref={containerSlider}>
-				<Slider {...settings} ref={slider} className=' w-full h-full'>
+				<Slider {...settings} ref={slider} className='overflow-hidden w-full h-full'>
 					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
-					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
-					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
+					<DiscountSliderHealth subTitle={'Бьюти-эксперт'} desc={'> 700 единиц товара c доставкой в 32 страны Мира!'} title={'ТВОЕЙ КРАСОТЫ И ЗДОРОВЬЯ'} imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderHealth isMedium={true} desc={'> 700 единиц товара c доставкой в 32 страны Мира!'} title={'ТВОЕЙ КРАСОТЫ И ЗДОРОВЬЯ'} imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderHealth onlyCat={true} noItalic={true} desc={'Жаркие скидки  уже ждут тебя в каталоге, не откладывай красоту на завтра!'} title={'ПРОВОДНИК ТВОЕЙ КРАСОТЫ'} imgProd={imgProduct} img={imgDiscount} />
+					<DiscountSliderHealth bgGradient={true} onlyCat={true} noItalic={true} desc={'Жаркие скидки  уже ждут тебя в каталоге, не откладывай красоту на завтра!'} title={'ПРОВОДНИК ТВОЕЙ КРАСОТЫ'} imgProd={imgProduct} img={imgDiscount} />
+
+					<DiscountSliderFresh />
+					<DiscounstSliderDots rightImg={imgDiscount} discSubs={['против перхоти', 'против седины', 'против выпадения', 'еще эффект', 'еще эффект', 'еще эффект', 'еще эффект', 'еще эффект']} isOneIMG={imgProductF} one={true} two={true} tree={true} four={true} five={true} six={true} subTitle={'Эффекты:'} seven={true} eight={true} nine={true} ten={true} title={'Шампунь, маска, тоник «Bio Rehab»'} />
+					<DiscounstSliderDots imgEight={imgFive} imgTen={imgSix} imgTree={imgTwo} imgSix={imgFour} imgFive={imgTree} imgOne={imgOne} rightImg={productRight} discSubs={['лицо', 'тело', 'волосы', 'макияж', 'парфюм', 'мужчинам', 'детям', 'дом', 'гигиена', 'wellness', 'аксессуары']} one={true} tree={true} five={true} six={true} eight={true} ten={true} subTitle={'Категории:'} title={'Акция весны'} />
+
 				</Slider>
 			</div>
 		</div>

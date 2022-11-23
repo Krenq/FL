@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="05fd5d3b-9e0f-4ab1-8324-64e2a7c1fc40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchWindow/SearchWIndow.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchWindow/SearchWIndow.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/SearchWindow/SearchWindowItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SearchWindow/SearchWindowItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DiscounstsButtonsSliderNext/DiscountsButtonsSliderNext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DiscounstsButtonsSliderNext/DiscountsButtonsSliderNext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DiscounstsButtonsSliderNext/DiscountsButtonsSliderPrev.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DiscounstsButtonsSliderNext/DiscountsButtonsSliderPrev.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DiscountSliderItem/DiscSubItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DiscountSliderItem/DiscSubItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderDots.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderDots.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderFresh.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderFresh.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderHealth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderHealth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DiscountsSlider/DiscountsSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/DiscountsSlider/DiscountsSlider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NavBar/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NavBar/NavBar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SpecialOffers/SpecialOffers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SpecialOffers/SpecialOffers.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/slider.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/slider.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,81 +26,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/Search/Search.jsx">
+        <entry file="file://$PROJECT_DIR$/components/DiscountsSlider/DiscountsSlider.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
+            <state relative-caret-position="307">
+              <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#1704#2356#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/Header/Header.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/NavBar/NavBar.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/components/SearchWindow/SearchWIndow.jsx">
+        <entry file="file://$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderFresh.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="163" column="78" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
-              <folding>
-                <element signature="e#14818#19053#0" />
-                <element signature="e#19740#21090#0" />
-                <element signature="e#21098#21394#0" />
-                <element signature="e#21352#22651#0" />
-                <element signature="e#22923#33941#0" />
-                <element signature="e#29940#30877#0" />
-                <element signature="e#30041#30861#0" />
-                <element signature="e#28161#29511#0" />
-                <element signature="e#29519#29815#0" />
-                <element signature="e#29836#31135#0" />
-                <element signature="e#33982#41262#0" />
-                <element signature="e#34145#39936#0" />
-                <element signature="e#43395#43694#0" />
-                <element signature="e#43717#45022#0" />
-                <element signature="e#41302#50643#0" />
-                <element signature="e#45599#46960#0" />
-                <element signature="e#46969#47268#0" />
-                <element signature="e#47291#48596#0" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="17" column="87" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/SearchWindow/SearchWindowItem.jsx">
+        <entry file="file://$PROJECT_DIR$/components/DiscountSliderItem/DiscSubItem.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="88" column="23" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tailwind.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="121" column="10" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
+            <state relative-caret-position="34">
+              <caret line="2" column="87" selection-start-line="2" selection-start-column="87" selection-end-line="2" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -101,8 +58,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/slider.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="84" column="5" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="5" />
+            <state relative-caret-position="278">
+              <caret line="653" column="18" selection-start-line="653" selection-start-column="5" selection-end-line="653" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tailwind.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="181" column="14" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="14" />
+              <folding>
+                <element signature="e#1901#2032#0" />
+                <element signature="e#5045#5325#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -129,6 +99,9 @@
       <find>Заказы</find>
       <find>#F14155</find>
       <find>price</find>
+      <find>bg</find>
+      <find>discountImgWrap</find>
+      <find>header</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,12 +110,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/components/NavBar/NavBar.jsx" />
         <option value="$PROJECT_DIR$/tailwind.config.js" />
         <option value="$PROJECT_DIR$/components/SpecialOfferItem/SpecialOfferItem.jsx" />
-        <option value="$PROJECT_DIR$/styles/slider.css" />
         <option value="$PROJECT_DIR$/components/SearchWindow/SearchWindowItem.jsx" />
         <option value="$PROJECT_DIR$/components/SearchWindow/SearchWIndow.jsx" />
+        <option value="$PROJECT_DIR$/components/NavBar/NavBar.jsx" />
+        <option value="$PROJECT_DIR$/components/DiscounstsButtonsSliderNext/DiscountsButtonsSliderPrev.jsx" />
+        <option value="$PROJECT_DIR$/components/DiscounstsButtonsSliderNext/DiscountsButtonsSliderNext.jsx" />
+        <option value="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderDots.jsx" />
+        <option value="$PROJECT_DIR$/components/SpecialOffers/SpecialOffers.jsx" />
+        <option value="$PROJECT_DIR$/components/DiscountsSlider/DiscountsSlider.jsx" />
+        <option value="$PROJECT_DIR$/styles/slider.css" />
+        <option value="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderHealth.jsx" />
+        <option value="$PROJECT_DIR$/components/DiscountSliderItem/DiscSubItem.jsx" />
+        <option value="$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderFresh.jsx" />
       </list>
     </option>
   </component>
@@ -160,10 +141,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="337" />
-    <option name="y" value="100" />
+    <option name="x" value="352" />
+    <option name="y" value="269" />
     <option name="width" value="1400" />
-    <option name="height" value="922" />
+    <option name="height" value="605" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -189,6 +170,12 @@
               <item name="FL-master" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FL-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FL-master" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SpecialOffers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FL-master" type="b2602c69:ProjectViewProjectNode" />
@@ -238,18 +225,19 @@
       <updated>1669132471191</updated>
       <workItem from="1669132474332" duration="258000" />
       <workItem from="1669132748700" duration="4680000" />
-      <workItem from="1669208079245" duration="6914000" />
+      <workItem from="1669208079245" duration="7677000" />
+      <workItem from="1669222507423" duration="6035000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11852000" />
+    <option name="totallyTimeSpent" value="18650000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="337" y="100" width="1400" height="922" extended-state="0" />
+    <frame x="352" y="269" width="1400" height="605" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496329" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15271659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -263,7 +251,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.30490655" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.50635594" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -300,6 +288,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/lable.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/Search/Search.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1241">
@@ -310,51 +301,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/Header/Header.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="56" column="11" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/lable.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/slider.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="1" selection-end-line="84" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tailwind.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="121" column="10" selection-start-line="121" selection-start-column="10" selection-end-line="121" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/NavBar/NavBar.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/SearchWindow/SearchWindowItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="88" column="23" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/components/SearchWindow/SearchWIndow.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="163" column="78" selection-start-line="163" selection-start-column="78" selection-end-line="163" selection-end-column="78" />
+        <state relative-caret-position="158">
+          <caret line="183" column="104" selection-start-line="183" selection-start-column="104" selection-end-line="183" selection-end-column="104" />
           <folding>
             <element signature="e#14818#19053#0" />
             <element signature="e#19740#21090#0" />
@@ -375,6 +325,123 @@
             <element signature="e#46969#47268#0" />
             <element signature="e#47291#48596#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/SearchWindow/SearchWindowItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="88" column="23" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DiscounstsButtonsSliderNext/DiscountsButtonsSliderNext.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DiscounstsButtonsSliderNext/DiscountsButtonsSliderPrev.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderDots.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/templates/bgSlider.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/NavBar/NavBar.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-96">
+          <caret line="7" column="59" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/Header/Header.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/SpecialOffers/SpecialOffers.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="278" column="85" selection-start-line="278" selection-start-column="85" selection-end-line="278" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderHealth.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="25" column="154" selection-start-line="25" selection-start-column="154" selection-end-line="25" selection-end-column="154" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DiscountsSlider/DiscountsSlider.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
+          <folding>
+            <element signature="e#1704#2356#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tailwind.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="181" column="14" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="14" />
+          <folding>
+            <element signature="e#1901#2032#0" />
+            <element signature="e#5045#5325#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/slider.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="653" column="18" selection-start-line="653" selection-start-column="5" selection-end-line="653" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DiscountSliderItem/DiscSubItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="87" selection-start-line="2" selection-start-column="87" selection-end-line="2" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/DiscountSliderItem/DiscountSliderFresh.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="87" selection-start-line="17" selection-start-column="87" selection-end-line="17" selection-end-column="87" />
         </state>
       </provider>
     </entry>

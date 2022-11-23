@@ -6,7 +6,7 @@ import imgDiscount from '../../images/templates/discountImg.jpg';
 const DiscounstSliderDots = ({ title, imgSix, imgTen, imgEight, rightImg, imgFive, imgTree, discSubs, imgOne, isOneIMG, subTitle, one, two, tree, four, five, six, seven, eight, nine, ten }) => {
 	return (
 		<>
-			<section className="w-full ..5x2:hidden h-800px discSlider">
+			<section className="w-full   h-800px discSlider">
 				<div className="flex h-full ..5x2:flex-col">
 					<div className="discountImgWrap w-50%  h-full ..5x2:bg-trava ..5x2:bg-no-repeat ..5x2:bg-cover relative flex justify-center">
 						{isOneIMG && <div className="imgDiscount absolute !bottom-0">

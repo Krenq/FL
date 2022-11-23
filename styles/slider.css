@@ -1085,7 +1085,7 @@
 	}
 
 	.discountImgWrap {
-		height: 246px;
+		height: 246px !important;
 	}
 
 	.confirm {
@@ -1093,7 +1093,7 @@
 	}
 
 	.discountImgWrap {
-		height: 35vh;
+		height: 35vh !important;
 	}
 
 }
@@ -2104,7 +2104,7 @@
 	}
 
 	.discountImgWrap.cartinka {
-		height: 33vh;
+		height: 33vh !important;
 	}
 
 	.discSliderPhone {

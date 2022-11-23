@@ -11,11 +11,11 @@ const DiscounstsButtonsSliderPrev = ({ onClick, kolichestvo }) => {
 	let perc = '47.5%';
 
 	if (size.width <= 1600 && size.width > 1350) {
-		perc = '43%';
+		perc = '47%';
 	} else if (size.width <= 1350 && size.width > 1100) {
-		perc = '42%';
+		perc = '46.5%';
 	} else if (size.width <= 1100 && size.width > 990) {
-		perc = '39%';
+		perc = '45.5%';
 	} else if (size.width <= 990 && size.width > 780) {
 		perc = '46.8%';
 	} else if (size.width <= 780 && size.width > 650) {
@@ -27,7 +27,7 @@ const DiscounstsButtonsSliderPrev = ({ onClick, kolichestvo }) => {
 	} else if (size.width <= 400) {
 		perc = '41.5%';
 	} else if (size.width > 1600) {
-		perc = '44%';
+		perc = '47.5%';
 	}
 
 	let styleL = {
