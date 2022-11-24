@@ -34,7 +34,7 @@ export default function SeaActItem({ obj }) {
 
 
 	return (
-		<div className={` min-h-317px mb-18px ..6x5:w-44 ..6x5:h-80 max-w-278px w-full ..6x03:mx-auto  h-428px flex justify-center   bg-white transition-all relative p-2 mx-4 ${obj.lastItem ? '!mb-0' : ""}`}>
+		<div className=" min-h-317px ..6x5:w-44 ..6x5:h-80 max-w-278px w-full ..6x03:mx-auto  h-428px flex justify-center   bg-white transition-all relative p-2 mx-3">
 			<div className="flex flex-col  items-center max-w-252px mx-auto mt-5">
 				<div className="content_card flex flex-col items-center transition-all">
 					<div className="absolute flex left-0 top-0 z-20 px-2 pt-2 gap-0.5">
@@ -80,7 +80,7 @@ export default function SeaActItem({ obj }) {
 					<div className=" absolute bottom-36 ..6x5:bottom-28  flex flex-row justify-between items-end w-full mb-2 px-3">
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
-								<p onClick={showActL} className="text-sm  ..6x5:text-11px font-normal font-montserrat flex items-center leading-140% text-black-70pe">
+								<p onClick={showActL} className="text-13px  ..6x5:text-11px font-normal font-montserrat flex items-center leading-140% text-black-70pe">
 									<svg
 										className=" mr-1 ..6x5:-mt-1 "
 										width="16"
@@ -179,7 +179,7 @@ export default function SeaActItem({ obj }) {
 
 					{obj.date && (
 						<div className=" absolute bottom-133px bottomCustom ..6x2:bottom-32  flex flex-row justify-center items-center">
-							<p className="text-sm font-montserrat ..6x2:text-11px text-center text-black-70pe tracking-widest">
+							<p className="text-xs font-montserrat ..6x2:text-11px text-center text-black-70pe tracking-widest">
 								До 15.06.22
 							</p>
 						</div>

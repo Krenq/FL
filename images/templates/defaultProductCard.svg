@@ -1,0 +1,12 @@
+<svg width="278" height="238" viewBox="0 0 278 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_1939_1028647" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="278" height="238">
+<rect width="278" height="238" fill="white"/>
+</mask>
+<g mask="url(#mask0_1939_1028647)">
+<rect width="278" height="238" fill="#FCFDFB"/>
+<path d="M123.833 146.834C128.695 144.744 133.274 143.617 137.57 143.452C141.867 143.287 147.399 144.025 154.167 145.667" stroke="#DBDCDA" stroke-width="1.5" stroke-linecap="round"/>
+<path d="M137.886 150.333C136.991 139.32 137.362 130.764 139 124.667" stroke="#DBDCDA" stroke-width="1.5" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M139 126.039C140.855 119.018 144.121 114.831 148.799 113.478C153.477 112.125 157.988 112.745 162.333 115.338C162.355 121.045 159.878 125.226 154.901 127.881C149.925 130.535 144.624 129.921 139 126.039Z" fill="white" stroke="#DBDCDA" stroke-width="1.5" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M138.757 124.8C139.729 116.415 137.781 110.51 132.913 107.083C128.044 103.657 122.406 102.892 115.999 104.788C114.88 112.522 116.59 118.371 121.13 122.333C125.67 126.296 131.546 127.118 138.757 124.8Z" fill="white" stroke="#DBDCDA" stroke-width="1.5" stroke-linejoin="round"/>
+</g>
+</svg>

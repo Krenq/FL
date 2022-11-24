@@ -26,7 +26,7 @@ export default function ProductItem({ title, photo, lastItem }) {
 						</p>
 					</div>
 
-					<div className="hidden max-w-228px w-95  max-h-262px cursor-pointer hover:opacity-90 hover:text-primary transition-all .3x1:flex .3x1:flex-row-reverse .3x1:border .3x1:border-gray-light2 .3x1:m-1 ..6x3:h-16">
+					<div className="hidden max-w-228px w-95  max-h-262px cursor-pointer hover:opacity-90 hover:text-primary transition-all .3x1:flex .3x1:flex-row-reverse .3x1:border .3x1:border-gray-light2 .3x1:m-1 h-full">
 						<div className="cartinka .3x1:w-35%  ..6x5:h-full">
 							<div className='DEC w-full flex justify-center items-center h-full bg-nude-2'>
 								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

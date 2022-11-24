@@ -27,7 +27,7 @@ const DiscounstSliderDots = ({ title, imgSix, imgTen, imgEight, rightImg, imgFiv
 
 							</div>
 
-							<div className=" mt-7   .2x1:-mt-6   ..5x2:justify-center  w-full flex-wrap absolute   flex">
+							<div className=" mt-7   .2x1:-mt-6  absolute ..5x2:justify-center  w-full flex-wrap     flex">
 								<div className="w-52 ..7x01:w-86px ..7x01:h-86px ..6x6:mr-0 ..6x6:ml-0 ..6x4:mr-10 ..5x2:w-112px ..5x2:mr-16 ..5x2:h-112px relative h-52  flex items-center justify-center">
 									{one && <div className="bg-white-80pe ..5x2:h-8 ..5x2:w-8 z-10 rounded-full h-12 w-12 flex items-center justify-center">
 										<svg className='..5x2:h-2 ..5x2:w-2' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
