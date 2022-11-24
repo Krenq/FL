@@ -34,7 +34,7 @@ export default function SeaActItem({ obj }) {
 
 
 	return (
-		<div className=" min-h-317px max-w-278px w-full ..6x03:mx-auto  h-428px flex justify-center   bg-white transition-all relative p-2 mx-3">
+		<div className=" min-h-317px ..6x5:w-44 ..6x5:h-80 max-w-278px w-full ..6x03:mx-auto  h-428px flex justify-center   bg-white transition-all relative p-2 mx-3">
 			<div className="flex flex-col  items-center max-w-252px mx-auto mt-5">
 				<div className="content_card flex flex-col items-center transition-all">
 					<div className="absolute flex left-0 top-0 z-20 px-2 pt-2 gap-0.5">
@@ -77,12 +77,12 @@ export default function SeaActItem({ obj }) {
 						/>
 					</div>
 
-					<div className=" absolute bottom-36 flex flex-row justify-between items-end w-full mb-2 px-3">
+					<div className=" absolute bottom-36 ..6x5:bottom-28  flex flex-row justify-between items-end w-full mb-2 px-3">
 						<div className="flex items-center cursor-pointer">
 							{obj.iTab && (
-								<p onClick={showActL} className="text-13px font-normal font-montserrat flex items-center leading-140% text-gray-quick-silver">
+								<p onClick={showActL} className="text-13px  ..6x5:text-11px font-normal font-montserrat flex items-center leading-140% text-black-70pe">
 									<svg
-										className=" mr-1"
+										className=" mr-1 ..6x5:-mt-1 "
 										width="16"
 										height="16"
 										viewBox="0 0 16 16"
@@ -113,7 +113,7 @@ export default function SeaActItem({ obj }) {
 							</p>
 						</div>
 					</div>
-					<div className=" absolute bottom-76px  px-1.5 ">
+					<div className=" absolute bottom-76px ..6x5:bottom-14  px-1.5 ">
 						<p className="card_text ..6x2:text-10px text-13px font-montserrat font-normal leading-140% text-center text-gray-quick-silver tracking-widest uppercase">
 							{obj.text}
 						</p>
@@ -178,20 +178,20 @@ export default function SeaActItem({ obj }) {
 
 
 					{obj.date && (
-						<div className=" absolute bottom-133px ..6x2:bottom-32 flex flex-row justify-center items-center">
-							<p className="text-xs ..6x2:text-11px text-center text-black-70pe tracking-widest">
+						<div className=" absolute bottom-133px bottomCustom ..6x2:bottom-32  flex flex-row justify-center items-center">
+							<p className="text-xs font-montserrat ..6x2:text-11px text-center text-black-70pe tracking-widest">
 								До 15.06.22
 							</p>
 						</div>
 					)}
 
 					{obj.priceSale && (
-						<div className="flex flex-col absolute bottom-11 ">
+						<div className="flex flex-col absolute bottom-11 ..6x5:bottom-9">
 							<div className=" flex flex-row font-montserrat font-normal leading-140% text-base mb-2 mt-1">
-								<p className="text-center mr-2 text-gray-quick-silver line-through">
+								<p className="text-center mr-2 text-gray-quick-silver line-through font-montserrat ..6x5:text-11px">
 									₽ {obj.priceSale.old}
 								</p>
-								<p className="text-center text-label-pink-2">
+								<p className="text-center text-label-pink-2 font-montserrat ..6x5:text-11px">
 									₽ {obj.priceSale.new}
 								</p>
 							</div>
@@ -205,20 +205,20 @@ export default function SeaActItem({ obj }) {
 							<>
 								<button
 									onClick={() => setBuy(true)}
-									className="  ..6x03:hidden w-full bg-gray-light2 text-primary py-3 font-montserrat whitespace-nowrap text-xs hover:text-white hover:bg-primary transition-all cursor-pointer"
+									className="..6x5:!h-8 ..6x5:py-0 ..6x03:hidden w-full bg-gray-light2 text-primary py-3 font-montserrat whitespace-nowrap text-xs hover:text-white hover:bg-primary transition-all cursor-pointer"
 								>
 									+ Добавить в заказ
 								</button>
 								<button
 									onClick={() => setBuy(true)}
-									className=" font-medium ..6x03:block hidden w-full bg-gray-light2 text-primary py-3 font-montserrat whitespace-nowrap text-xs hover:text-white hover:bg-primary transition-all cursor-pointer"
+									className="..6x5:!h-8 ..6x5:py-0 font-medium ..6x03:block hidden w-full bg-gray-light2 text-primary py-3 font-montserrat whitespace-nowrap text-xs hover:text-white hover:bg-primary transition-all cursor-pointer"
 								>
 									+ Купить
 								</button>
 							</>
 						) : (
 							<button
-								className="w-full bg-primary text-white py-3 font-montserrat whitespace-nowrap text-xs transition-all cursor-pointer"
+								className="..6x5:!h-8 ..6x5:py-0 w-full bg-primary text-white py-3 font-montserrat whitespace-nowrap text-xs transition-all cursor-pointer"
 							>
 								В корзине
 							</button>

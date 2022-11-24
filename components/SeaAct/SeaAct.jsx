@@ -172,8 +172,8 @@ const SeaAct = ({ refL }) => {
 				<div className="flex justify-center h-874px ..6x1:h-auto ">
 					<div className="relative w-44% h-874px .4x1:hidden mr-1">
 						<div className="absolute top-10 left-10 z-10">
-							<p className="text-22px font-montserrat font-medium text-primary">АКЦИЯ ВЕСНЫ</p>
-							<p className="text-26px font-montserrat font-medium ">Получай подарки за покупки</p>
+							<p className="text-2xl text-primary">АКЦИЯ ВЕСНЫ</p>
+							<p className="text-3xl font-medium">Получай подарки за покупки</p>
 							<div className="timer absolute -left-4 top-24 bg-white-80pe px-2 text-primary border-2 border-primary font-normal text-lg font-montserrat mx-3  ">
 								{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
 							</div>
@@ -286,7 +286,7 @@ const SeaAct = ({ refL }) => {
 								present: true,
 								img: two,
 								iTab: true,
-								text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКАdf sdf sdf sdf s fsdf  ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
+								text: '  увлажнение и восстановление кожи',
 								date: true,
 								priceSale: { old: '920.00', new: '764.00' },
 							}}

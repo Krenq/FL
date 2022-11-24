@@ -289,7 +289,7 @@ const Funds = ({ refL }) => {
 								</svg>
 							</small>
 						</div>
-						
+
 						<div className='..6x2:flex ml-5 ..6x2:ml-0 ..6x2:mt-2'>
 							<div className=" relative image-containerS ..6x2:mb-0 mb-15px transition-all ..6x2:mr-3 ..6x2:h-   hover:opacity-90 cursor-pointer">
 
@@ -343,7 +343,7 @@ const Funds = ({ refL }) => {
 									alt="discountImg"
 								/>
 								<p className="absolute flex ..6x2:text-13px ..6x2:tracking-tighter items-center bottom-30px left-30px text-xl  font-medium z-10 font-montserrat ..6x2:left-2 ..6x2:bottom-2.5">
-									Идеи подарков 
+									Идеи подарков
 									<svg
 										className="ml-1.5 pt-px hidden ..5x2:block"
 										width="12"

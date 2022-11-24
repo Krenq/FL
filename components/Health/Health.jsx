@@ -192,7 +192,7 @@ const Health = ({ refL }) => {
 
 
 							</div>
-							<div className="mx-2 ..5x1:pb-0 anti px-3 ..7x2:px-2 ..5x2:px-8 hover:bg-primary-hover transition-all  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
+							<div className="mx-2 ..5x1:pb-0 anti programs px-3 ..7x2:px-2 ..5x2:px-8   transition-all  bg-primary pb-2 ..7x1:pb-14 ..6x6:pb-14  ..6x5:pb-20 ..5x2:pb-8 .1x1:pb-5  mt-3 relative">
 								<h1 className="text-32px font-montserrat text-center ..5x2:mb-0.5 mb-5 pt-11 ..5x2:text-22px ..5x2:pt-6  text-w text-white">
 									50+ программ
 								</h1>

@@ -51,8 +51,7 @@ function Home() {
 		news = useRef(null),
 		stories = useRef(null),
 		clubs = useRef(null),
-		trands = useRef(null),
-		support = useRef(null)
+		trands = useRef(null)
 
 	const [showProducts, setShowProducts] = useState({
 		central: false,
@@ -78,9 +77,12 @@ function Home() {
 			<section className="container-base relative bg-white">
 				<DiscountSliderItemHover showProducts={showProducts.central} showCentral={showCentral} title={'Шампунь - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
 				<DiscountSliderItemHover showProducts={showProducts.promo} showCentral={showPromo} title={'Шампунь 2 - активатор роста Bio Rehab'} price={'764.00'} oldPrice={'764.00'} subTitle={'Сила - в длине'} de={64} />
+
 				<BurgerMenu showBurger={showBurger} setShowBurger={setShowBurger} src={previewBurger} title={'Категории'} />
+
 				<ButtonTop />
 				<SearchResult isShow={showSearch} />
+
 				<ConfirmLocationModalWindow />
 				<DiscountsSlider refL={discount} showCentral={showCentral} />
 				<SpecialOffers refL={special} />
@@ -96,7 +98,7 @@ function Home() {
 				<Stories refL={stories} />
 				<Clubs refL={clubs} />
 				<Trands refL={trands} />
-				<Support refL={support} />
+				<Support />
 				<PhoneNavigation />
 				<Anchor elements={[
 					discount,
@@ -112,8 +114,8 @@ function Home() {
 					health,
 					stories,
 					clubs,
-					trands,
-					support
+					trands
+
 				]} />
 			</section>
 		</>
