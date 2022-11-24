@@ -6,7 +6,7 @@ const DiscountSliderHealth = ({ imgProd, img, title, isMedium, subTitle, bgGradi
 	return (
 		<>
 			<section className="w-full  ..5x2:h-auto ..5x2:w-full  h-800px discSlider">
-				<div className="flex h-full ..5x2:flex-col">
+				<div className="flex h-full   ..5x2:flex-col">
 					<div className="discountImgWrap w-50%  h-full  ..5x2:w-full ..5x2:bg-no-repeat ..5x2:bg-cover relative flex justify-center">
 
 						<Image
