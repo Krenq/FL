@@ -279,7 +279,7 @@
 	}
 
 	.storiesOpacity {
-		height: 275px;
+		height: 275px !important;
 	}
 
 	.drop {
@@ -515,9 +515,6 @@
 	backdrop-filter: blur(2px);
 }
 
-.storiesOpacity {
-	height: 350px;
-}
 
 @media (min-width: 1450px) {
 	.funds .slick-list .slick-track .slick-cloned div .pb-20 .flex {
@@ -627,7 +624,7 @@
 
 .headerAbility {
 	left: 50%;
-	transform: translateX(-50%);
+	/* transform: translateX(-50%); */
 }
 
 .homeSVGINSTR svg {
@@ -1143,7 +1140,7 @@
 
 @media (max-width: 1000px) {
 	.storiesOpacity .slick-dots {
-		bottom: 90px !important;
+		bottom: 0px !important;
 	}
 
 	.hoverButton:hover .debuttonH {
@@ -2027,10 +2024,6 @@
 	width: 52px;
 }
 
-.image-containerSIV {
-	width: 100%;
-
-}
 
 .foryou::-webkit-scrollbar {
 	width: 4px;
