@@ -1,43 +1,63 @@
+import useWindowSize from '../utils/useWindowSize';
+
 export default function BtnsCardProduct({
-  clickBuy,
   clickBtnR,
   clickBtnL,
   clickBtnBig,
+  clickBtnRDesk,
+  clickBtnLDesk,
+  clickBtnBigDesk,
   showBtns,
   priceDe,
-  setClickBuy,
   setClickBtnR,
   setClickBtnL,
   setClickBtnBig,
+  setClickBtnRDesk,
+  setClickBtnLDesk,
+  setClickBtnBigDesk,
 }) {
+  // let size = useWindowSize();
   return (
     <>
       {showBtns && (
         <>
-          {clickBuy ? (
-            <button className="absolute bottom-0 h-11 w-276px border-t border-gray font-montserrat font-normal text-13px leading-150% bg-primary text-white ..5x2:hidden">
-              В корзине
-            </button>
-          ) : (
-            <>
-              {priceDe ? (
-                <div className=" absolute bottom-0 h-11 w-276px flex flex-row ..5x2:hidden">
-                  <button
-                    onClick={() => setClickBuy(true)}
-                    className="w-1/2 h-full border-t border-r border-gray text-primary font-montserrat font-normal text-13px leading-150% hover:bg-primary hover:text-white"
-                  >
-                    Купить
-                  </button>
-                  <button
-                    onClick={() => setClickBuy(true)}
-                    className="w-1/2 h-full border-t border-gray text-label-orange font-montserrat font-normal text-13px leading-150% hover:bg-label-orange hover:text-white"
-                  >
-                    Купить за <span className=" font-lora">De</span>
-                  </button>
-                </div>
+          {priceDe ? (
+            <div className=" absolute bottom-0 h-11 w-276px flex flex-row ..5x2:hidden">
+              {clickBtnLDesk ? (
+                <button className="w-1/2 h-full border-t border-r border-gray font-montserrat font-normal text-13px leading-150% bg-primary text-white">
+                  В корзине
+                </button>
               ) : (
                 <button
-                  onClick={() => setClickBuy(true)}
+                  onClick={() => setClickBtnLDesk(true)}
+                  className="w-1/2 h-full border-t border-r border-gray text-primary font-montserrat font-normal text-13px leading-150% hover:bg-primary hover:text-white"
+                >
+                  Купить
+                </button>
+              )}
+
+              {clickBtnRDesk ? (
+                <button className="w-1/2 h-full border-t border-gray font-montserrat font-normal text-13px leading-150% bg-label-orange text-white">
+                  В корзине
+                </button>
+              ) : (
+                <button
+                  onClick={() => setClickBtnRDesk(true)}
+                  className="w-1/2 h-full border-t border-gray text-label-orange font-montserrat font-normal text-13px leading-150% hover:bg-label-orange hover:text-white"
+                >
+                  Купить за <span className=" font-lora">De</span>
+                </button>
+              )}
+            </div>
+          ) : (
+            <>
+              {clickBtnBigDesk ? (
+                <button className="absolute bottom-0 h-11 w-276px border-t border-gray font-montserrat font-normal text-13px leading-150% bg-primary text-white ..5x2:hidden">
+                  В корзине
+                </button>
+              ) : (
+                <button
+                  onClick={() => setClickBtnBigDesk(true)}
                   className="absolute bottom-0 h-11 w-276px border-t border-gray text-primary font-montserrat font-normal text-13px leading-150% hover:bg-primary hover:text-white ..5x2:hidden"
                 >
                   Купить
@@ -114,9 +134,9 @@ export default function BtnsCardProduct({
           ) : (
             <button
               onClick={() => setClickBtnR(true)}
-              className="w-1/2 h-full border border-gray text-label-orange font-lora font-medium text-12px leading-100% hover:bg-label-orange hover:text-white"
+              className="w-1/2 h-full border border-l-0 border-gray text-label-orange font-montserrat font-medium text-12px leading-100% hover:bg-label-orange hover:text-white"
             >
-              {priceDe} De
+              {priceDe} <span className=" font-lora font-medium">De</span>
             </button>
           )}
         </div>

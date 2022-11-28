@@ -6,6 +6,9 @@ import three from '../../images/templates/3forBuyers.jpg';
 import groups from '../../images/templates/groups.png';
 import twoglos from '../../images/templates/2glos.jpg';
 import twopartner from '../../images/templates/1partnergrow.png';
+import test333 from '../../images/templates/test333.jpg';
+
+
 function Buyers({ refL }) {
 	const settings = {
 
@@ -169,7 +172,9 @@ function Buyers({ refL }) {
 						<div className='imgIBuy'>
 							<Image
 								className="object-cover"
-								src={one}
+								// src={one}
+								quality={100}
+								src={test333}
 								alt="specialOffersImg"
 								height={760}
 								width={710}

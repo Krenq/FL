@@ -42,7 +42,6 @@ li.slick-active div {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   height: 4.5em;
-  /* number of lines to show */
 }
 
 .news_text {
@@ -51,7 +50,6 @@ li.slick-active div {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  /* number of lines to show */
 }
 
 .sale:hover .procent {
@@ -74,7 +72,23 @@ li.slick-active div {
   opacity: 0.7;
 }
 
-/* --------------- slider Product Card */
+/* --------------- slider 2 block */
+
+.swiper-scrollbar {
+  background: #e5e6e4 !important;
+  height: 3px !important;
+}
+
+.swiper-scrollbar:hover {
+  cursor: pointer !important;
+}
+
+.swiper-scrollbar-drag {
+  background: black !important;
+  height: 3px !important;
+}
+
+/* --------------- slider in ProductCard */
 
 .product-card-photo-slider .swiper-pagination {
   background: rgba(0, 0, 0, 0.2) !important;
@@ -84,6 +98,11 @@ li.slick-active div {
   position: absolute !important;
   left: 76px !important;
   top: 138px !important;
+  display: none !important;
+}
+
+.product-card-photo-slider .swiper-slide-active {
+  margin-right: 2px !important;
 }
 
 .product-card-photo-slider .swiper-pagination-bullet {
@@ -101,6 +120,10 @@ li.slick-active div {
   background: #ffffff !important;
 }
 
+.card_prod_con:hover .product-card-photo-slider .swiper-pagination {
+  display: block !important;
+}
+
 @media (max-width: 1000px) {
   .card_prod_con:hover .card_text {
     text-decoration-line: underline !important;
@@ -116,7 +139,7 @@ li.slick-active div {
     width: 152px !important;
     height: 10px !important;
     position: absolute !important;
-    left: 15px !important;
+    left: 12px !important;
     top: 154px !important;
   }
 
@@ -133,5 +156,10 @@ li.slick-active div {
     width: 4px !important;
     height: 4px !important;
     background: #337202 !important;
+  }
+
+  .secondSlider .swiper-scrollbar-horizontal {
+    width: 100px !important;
+    margin-left: calc(50% - 50px) !important;
   }
 }
