@@ -111,9 +111,7 @@ const DetailComments = ({ setShowL, refF }) => {
 						Рекомендуется использовать маску ежедневно в течение 10 дней, затем 2-3 раза в неделю.</p>
 					<h4 className="font-montserrat text-xl font-medium mb-3 ..5x1:mb-0">О товаре</h4>
 					<p className="font-montserrat ..5x2:mb-3 leading-180 italic ..5x1:text-sm ..5x1:leading-120%">Dimethicone, Dimethiconol, Avena Sativa Kernel Oil, Tocopherol, Hexyl Cinnamal, Linalool</p>
-
 				</div>
-
 				<div className="hidden ..5x2:block">
 					<div>
 						<div onClick={() => setShowLocal('desc')} className={`mt-1 h-12 buttonShadow p-3.5 rounded transition-all ${show.desc ? 'activeButtonS' : 'overflow-hidden'} `}>
