@@ -25,10 +25,15 @@ import DescriptionItemDetail from "../components/DescriptionItemDetail/Descripti
 import ActDescription from "../components/ActDescription/ActDescription";
 import DetailComments from "../components/DetailComments/DetailComments";
 import SeeLastDetails from "../components/SeeLastDetails/SeeLastDetails";
+import LeftComment from "../components/LeftComment/LeftComment";
+import { useRef } from "react";
 
 const DetailsCard = () => {
 	const [showSearch, setShowSearch] = useState(false)
+	const [show, setShow] = useState(false),
+		description = useRef(null)
 
+	const setShowL = () => setShow(!show)
 
 	return (
 		<>
@@ -36,11 +41,13 @@ const DetailsCard = () => {
 			<section className="container-base relative  ">
 				<SearchResult isShow={showSearch} />
 				<SectionNavDetail />
-				<DescriptionItemDetail />
+				<DescriptionItemDetail description={description} />
 				<ActDescription />
-				<DetailComments />
+				<DetailComments refF={description} setShowL={setShowL} />
 				<SeeLastDetails />
+
 			</section>
+			<LeftComment show={show} setShow={setShowL} />
 			<Footer />
 			<PhoneNavigation />
 		</>

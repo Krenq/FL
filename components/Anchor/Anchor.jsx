@@ -103,15 +103,7 @@ const Anchor = ({ elements }) => {
 			case (13):
 				return window.scrollTo({ top: 11650 })
 		}
-		// if (i + 1 === 5 || i + 1 === 8 || i + 1 === 10 || i + 1 === 13) {
 
-		// 	elements[i + 1].current.scrollIntoView()
-		// }
-		// else {
-		// 	window.scrollTo({
-		// 		top: 1000
-		// 	})
-		// }
 
 	}
 

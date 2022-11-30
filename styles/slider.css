@@ -805,9 +805,17 @@
 	width: 102%;
 }
 
+.transform10px {
+	transform: translateX(-5px);
+}
+
 .buttonsSearch {
 	width: 111.6%;
 	margin-left: -16px;
+}
+
+.leading-180 {
+	line-height: 180%;
 }
 
 .rotSearchHover {
@@ -2412,6 +2420,11 @@
 		margin-top: -60px;
 	}
 
+	.sliderCenter .swiper-slide {
+		display: flex;
+		justify-content: center;
+	}
+
 	.discSliderPhone .slick-dots {
 		bottom: 8px !important;
 	}
@@ -2659,7 +2672,25 @@
 	.searchwindow {
 		right: 90% !important;
 	}
+
+	.transformD {
+		transform: translateX(-70px);
+		z-index: 10;
+		background: #fff;
+	}
+
+
 }
+
+.activeSlide {
+	height: auto !important;
+	overflow: visible !important;
+	background-color: #FCFDFB;
+
+}
+
+/* pt-2 onClick={() => setFilter('sale')} bg-white-BG_FILTER */
+
 
 @media (max-width: 1590px) {
 	.searchPos {
@@ -2792,10 +2823,7 @@
 		justify-content: center;
 	}
 
-	.sliderCenter .swiper-slide {
-		display: flex;
-		justify-content: center;
-	}
+
 }
 
 .widthDetails {
@@ -2938,6 +2966,16 @@
 .activeCard {
 	box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
 	background-color: #fff;
+	border: none !important;
+	border-radius: 4px;
+}
+
+.mr-110px {
+	margin-right: 100px !important;
+}
+
+.w-91 {
+	width: 91% !important;
 }
 
 .leading-180 {
@@ -3003,4 +3041,8 @@
 
 .swiper-pagination-bullet-active {
 	background-color: #000 !important;
+}
+
+.w-85 {
+	width: 380% !important;
 }
