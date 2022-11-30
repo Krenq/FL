@@ -14,7 +14,7 @@ export default function CardSliderItem({ photo, iText }) {
           </p>
         </div>
       )}
-      <div className=" ..5x2:hidden">
+      <div className=" ..5x2:hidden bg-white rounded w-60px h-60px">
         <Image
           className="rounded"
           src={photo}
@@ -24,7 +24,7 @@ export default function CardSliderItem({ photo, iText }) {
         />
       </div>
 
-      <div className="hidden ..5x2:block">
+      <div className="hidden ..5x2:block bg-white rounded w-52px h-52px">
         <Image
           className="rounded"
           src={photo}

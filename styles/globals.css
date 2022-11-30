@@ -72,6 +72,10 @@ li.slick-active div {
   opacity: 0.7;
 }
 
+.buyerScr::-webkit-scrollbar {
+  width: 0 !important;
+}
+
 /* --------------- slider 2 block */
 
 .swiper-scrollbar {

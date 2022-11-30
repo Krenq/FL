@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useRef, useState } from 'react';
-import photo from '../../images/templates/treeItemSearch.jpg';
+import imgSCard from '../../images/templates/imgSCard.png';
+import defImg from '../../images/templates/defImg.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import ProductPrevButton from './ProductPrevButton';
@@ -473,7 +474,7 @@ export default function ProductCard({ obj }) {
         </Swiper>
       ) : (
         <div className="mt-5 mx-29px !w-218px !h-218px ..5x2:!w-130px ..5x2:!h-130px ..5x2:mx-22px">
-          <Image src={obj.img[0]} quality={100} />
+          <Image src={obj.img[0] && defImg} quality={100} />
         </div>
       )}
 
@@ -624,14 +625,22 @@ export default function ProductCard({ obj }) {
         </div>
       )}
 
-      <div className="absolute w-full bottom-12 flex justify-center ..5x2:bottom-12">
-        <p className=" font-montserrat text-gray-quick-silver font-normal leading-140% text-base line-through mr-3 ..5x2:mr-2 ..5x2:text-11px">
-          {obj.price?.old}
-        </p>
-        <p className=" font-montserrat text-label-pink-2 font-normal text-base leading-140% ..5x2:text-11px">
-          {obj.price?.new}
-        </p>
-      </div>
+      {obj.price.currentPrice ? (
+        <div className="absolute w-full bottom-12 flex justify-center ..5x2:bottom-12">
+          <p className=" font-montserrat font-normal text-base leading-140% ..5x2:text-11px">
+            {obj.price.currentPrice}
+          </p>
+        </div>
+      ) : (
+        <div className="absolute w-full bottom-12 flex justify-center ..5x2:bottom-12">
+          <p className=" font-montserrat text-gray-quick-silver font-normal leading-140% text-base line-through mr-3 ..5x2:mr-2 ..5x2:text-11px">
+            {obj.price?.old}
+          </p>
+          <p className=" font-montserrat text-label-pink-2 font-normal text-base leading-140% ..5x2:text-11px">
+            {obj.price?.new}
+          </p>
+        </div>
+      )}
 
       <BtnsCardProduct
         clickBtnR={clickBtnR}
@@ -683,19 +692,19 @@ export default function ProductCard({ obj }) {
             }}
           >
             <SwiperSlide className={`${obj.iText === 'Акции' ? 'ml-0.5' : ''}`}>
-              <CardSliderItem photo={photo} iText={obj.iText} />
+              <CardSliderItem photo={imgSCard} iText={obj.iText} />
             </SwiperSlide>
 
             <SwiperSlide>
-              <CardSliderItem photo={photo} iText={obj.iText} />
+              <CardSliderItem photo={imgSCard} iText={obj.iText} />
             </SwiperSlide>
 
             <SwiperSlide>
-              <CardSliderItem photo={photo} iText={obj.iText} />
+              <CardSliderItem photo={imgSCard} iText={obj.iText} />
             </SwiperSlide>
 
             <SwiperSlide>
-              <CardSliderItem photo={photo} iText={obj.iText} />
+              <CardSliderItem photo={imgSCard} iText={obj.iText} />
             </SwiperSlide>
           </Swiper>
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 import fullSc from '../../images/templates/FullScreen.jpg';
 import ProductCard from '../ProductCard/ProductCard';
-import photoNabor from '../../images/templates/photoNabor.svg';
+import naborN from '../../images/templates/naborN.png';
 import tttt from '../../images/templates/tttt.png';
 
 // import Swiper core and required modules
@@ -129,16 +129,13 @@ function SpecialOffers({ refL }) {
           <ProductCard
             obj={{
               img: [tttt],
-              text: ' Укрепляющая сыворотка для контура овала лица с коллагеном ',
+              text: ' для очищения и тонизирования ',
               iText: 'Акции',
-              colors: true,
               balls: '1.4 Б',
               priceDe: '3 750',
-              packLabel: 3,
               prodDayLabel: true,
               newLabel: true,
               hitLabel: true,
-              saleLabel: true,
               price: {
                 old: '₽ 920.00',
                 new: '₽ 764.00',
@@ -152,10 +149,9 @@ function SpecialOffers({ refL }) {
             obj={{
               img: [tttt, fullSc, fullSc],
               text: ' Укрепляющая сыворотка для контура овала лица с коллагеном ',
-              iText: 'Акции',
+              iText: 'Состав набора',
               packLabel: 5,
               prodDayLabel: true,
-              newLabel: true,
               hitLabel: true,
               saleLabel: true,
               price: {
@@ -170,8 +166,8 @@ function SpecialOffers({ refL }) {
           <ProductCard
             obj={{
               img: [tttt, fullSc, fullSc, fullSc],
-              text: ' Укрепляющая сыворотка для контура овала лица с коллагеном ',
-              iText: 'Акции',
+              text: ' питательный шампунь с корнем имбиря ',
+              iText: 'Состав акции',
               colors: true,
               balls: '1.4 Б',
               priceDe: '3 750',
@@ -193,17 +189,13 @@ function SpecialOffers({ refL }) {
             obj={{
               img: [tttt, fullSc],
               text: ' Укрепляющая сыворотка для контура овала лица с коллагеном ',
-              iText: 'Акции',
-              colors: true,
-              balls: '1.4 Б',
-              priceDe: '3 750',
-              prodDayLabel: true,
+              iText: 'Состав набора',
+              packLabel: 4,
               newLabel: true,
               hitLabel: true,
               saleLabel: true,
               price: {
-                old: '₽ 920.00',
-                new: '₽ 764.00',
+                currentPrice: '₽ 900.00',
               },
             }}
           />
@@ -213,18 +205,14 @@ function SpecialOffers({ refL }) {
           <ProductCard
             obj={{
               img: [tttt, fullSc, fullSc, fullSc],
-              text: ' Укрепляющая сыворотка для контура овала лица с коллагеном ',
+              text: ' Fresh click: дотянуться до звезды',
               iText: 'Акции',
-              colors: true,
               balls: '1.4 Б',
               priceDe: '3 750',
               prodDayLabel: true,
               newLabel: true,
-              hitLabel: true,
-              saleLabel: true,
               price: {
-                old: '₽ 920.00',
-                new: '₽ 764.00',
+                currentPrice: '₽ 1634.00',
               },
             }}
           />
@@ -233,16 +221,10 @@ function SpecialOffers({ refL }) {
         <SwiperSlide>
           <ProductCard
             obj={{
-              img: [photoNabor, fullSc],
+              img: [naborN, fullSc],
               text: ' Укрепляющая сыворотка для контура овала лица с коллагеном ',
               iText: 'Акции',
-              colors: true,
               balls: '1.4 Б',
-              priceDe: '3 750',
-              packLabel: 5,
-              prodDayLabel: true,
-              newLabel: true,
-              hitLabel: true,
               saleLabel: true,
               price: {
                 old: '₽ 920.00',
@@ -257,14 +239,6 @@ function SpecialOffers({ refL }) {
             obj={{
               img: [tttt, fullSc, fullSc],
               text: ' Укрепляющая сыворотка для контура овала лица с коллагеном ',
-              iText: 'Акции',
-              colors: true,
-              balls: '1.4 Б',
-              priceDe: '3 750',
-              prodDayLabel: true,
-              newLabel: true,
-              hitLabel: true,
-              saleLabel: true,
               price: {
                 old: '₽ 920.00',
                 new: '₽ 764.00',
