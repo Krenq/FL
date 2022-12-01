@@ -68,7 +68,7 @@ const ActDescription = () => {
 					1850: {
 						slidesPerView: 6
 					}
-				}} slidesPerView={2} navigation={true} modules={[Navigation]}  >
+				}} slidesPerView={2}  >
 
 					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
 						<SpecialOfferItem

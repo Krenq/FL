@@ -442,7 +442,7 @@ const DetailComments = ({ setShowL, refF }) => {
 						1450: {
 							slidesPerView: 7
 						}
-					}} slidesPerView={4} navigation={true} pagination={{ clickable: true, type: 'bullets', renderBullet: (i, clas) => '<div class="swiper-pagination-bullet"></div>' }} modules={[Navigation, Pagination]}  >
+					}} slidesPerView={4} pagination={{ clickable: true, type: 'bullets', renderBullet: (i, clas) => '<div class="swiper-pagination-bullet"></div>' }} modules={[Navigation, Pagination]}  >
 
 
 						<SwiperSlide className="mr-2 customWidth cursor-pointer">

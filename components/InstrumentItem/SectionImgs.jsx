@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function SectionImgs({ variant, textImg, noCenter, mr3 }) {
+export default function SectionImgs({ variant, textImg, adapt, noCenter, mr3 }) {
 	return (
 		<>
 			{variant === 'Oplata' && (
@@ -186,7 +186,7 @@ export default function SectionImgs({ variant, textImg, noCenter, mr3 }) {
 			)}
 
 			{variant === 'Dostavka' && <div className={`flex flex-wrap justify-center items-center ${noCenter ? '!justify-start' : ''}`}>
-				{textImg.map((el, i) => <div key={i} className={`flex justify-center items-center mr-2 my-2 ${mr3 ? '!mr-3' : ""}`}><Image key={i} src={el} width={el.width} height={el.height} /></div>)}
+				{textImg.map((el, i) => <div key={i} className={`flex justify-center items-center mr-2 my-2 ${mr3 ? '!mr-3' : ""} ${adapt ? '.2x00:h-1 .2x00:w-8 .2x00:!mr-1' : ""}`}><Image key={i} src={el} width={el.width} height={el.height} /></div>)}
 			</div>
 			}
 		</>

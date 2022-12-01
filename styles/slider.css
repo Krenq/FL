@@ -3014,15 +3014,15 @@
 	margin-top: 12px;
 }
 
-.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet:first-child {
+.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet.Cus:first-child {
 	border-radius: 8px 0 0 8px;
 }
 
-.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet:last-child {
+.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet.Cus:last-child {
 	border-radius: 0px 8px 8px 0px;
 }
 
-.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet {
+.sliderPaginationCustom .swiper-pagination .swiper-pagination-bullet.Cus {
 	color: black;
 	width: 23px !important;
 	height: 3px !important;

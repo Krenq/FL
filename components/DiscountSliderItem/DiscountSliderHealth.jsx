@@ -17,10 +17,10 @@ const DiscountSliderHealth = ({ imgProd, img, title, isMedium, subTitle, bgGradi
 
 						/>
 
-						<div className='absolute ..7x11:top-0 ..7x230:p-6 ..7x11:p-3 !right-100px -translate-x-50% headerAbility  ..5x2:w-auto ..5x5:top-10 top-80px w-650 .3x1:-right-14 .2x1.0:-right-44 .5x1:right-0'>
+						<div className='absolute ..7x11:top-0 ..7x230:p-6 ..7x11:p-3 right-100px .5x01:translate-x-0 .5x01:!left-auto .5x01:-right-10 .2x1:-right-16 .2x1.0:-right-56 -translate-x-50% headerAbility  ..5x2:w-auto   top-80px w-650 .3x1:-right-14  ..5x2:-translate-x-50% ..5x2:!left-1/2 ..5x2:!right-auto ..5x2:top-5 .5x1:right-0'>
 							<p className='font-montserrat font-medium .2x1.0:text-xl ..6x3:text-base text-26px   text-primary'>{subTitle}</p>
 							<p className={`${isMedium ? 'font-medium' : ""} ${bgGradient ? 'bgLIN .5x1:!w-full text-white font-medium px-3' : ""} ..6x3:text-22px ..7x11:-mt-2 .2x1.0:text-2xl .5x1:text-4xl .5x1:py-7 .2x1.0:py-2 font-montserrat font-semibold text-52px italic ${noItalic ? 'not-italic	' : ''} tracking-tighter leading-150%`}>{title}</p>
-							<p className={`${bgGradient ? '..5x2:!mt-2' : ''} font-montserrat text-22px text-black-70pe mt-6 ..7x11:-mt-1 .2x1.0:mb-10 ..5x2:leading-140% .5x1:mt-1 mb-14 ..6x3:mb-3 ..6x3:text-13px .2x1.0:text-base ..7x11:w-auto .2x1.0:w-428px`}>{desc}
+							<p className={`${bgGradient ? '..5x2:!mt-2' : ''} font-montserrat text-22px text-black-70pe mt-6 ..7x11:-mt-1 .2x1.0:mb-10 ..5x2:leading-140% .5x1:mt-1 mb-14 ..6x3:mb-3 ..6x3:text-13px .2x1.0:text-base ..7x11:w-350px ..7x002:w-310px ..7x2:w-280px .2x1.0:w-428px`}>{desc}
 							</p>
 							<div className='flex'>
 								<button className='mr-6 h-52px ..6x3:!mr-2 ..6x3:text-xs .2x1.0:h-11 ..6x3:h-8 flex items-center justify-center bg-primary px-9 ..5x2:px-5 font-montserrat font-medium text-xs text-white'>Каталог</button>

@@ -7,7 +7,7 @@ import four from '../../images/templates/4Offer.jpg';
 import five from '../../images/templates/5Offer.jpg';
 import specialOne from '../../images/templates/detailCardOneSpecial.jpg'
 import specialTwo from '../../images/templates/detailCardTwoSpecial.jpg'
-
+import tttt from '../../images/templates/tttt.png';
 import oneL from '../../images/templates/oneItemSearchSlider.jpg'
 import treeL from '../../images/templates/treeItemSearch.jpg'
 import twoI from '../../images/templates/twoItemSearch.jpg'
@@ -16,6 +16,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import SpecialOfferItem from '../SpecialOfferItem/SpecialOfferItem';
 import SliderSeeLast from '../SliderSeeLast/SliderSeeLast';
+import ProductCard from '../ProductCard/ProductCard';
 
 
 
@@ -40,12 +41,12 @@ const SeeLastDetails = () => {
 		}
 
 
-
+	//className='sliderPaginationCustom  ' pagination={{ clickable: true, type: 'bullets', renderBullet: (i, clas) => '<div class="swiper-pagination-bullet Cus"></div>' }}
 	return (
 		<section className="  bg-gray-100">
 			<div className="px-80px relative .3x1:px-10 ..5x2:px-3">
 				<h4 className="font-montserrat pt-10 ..5x2:pt-6 ..5x2:mb-2 ..6x3:text-sm ..5x2:text-base  text-26px font-medium mb-6 ">Специальные предложения</h4>
-				<Swiper ref={sliderSpecial} slidesPerView={2} className='sliderPaginationCustom' breakpoints={{
+				<Swiper ref={sliderSpecial} slidesPerView={2} breakpoints={{
 					750: {
 						slidesPerView: 3
 					},
@@ -58,166 +59,243 @@ const SeeLastDetails = () => {
 					1600: {
 						slidesPerView: 6
 					}
-				}} navigation={true} pagination={{ clickable: true, type: 'bullets', renderBullet: (i, clas) => '<div class="swiper-pagination-bullet"></div>' }} modules={[Navigation, Pagination]}  >
+				}} modules={[Navigation, Pagination]}  >
 
-					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
+					<SwiperSlide className="..7x1:!w-44 pb-10 ..7x1:mr-2 ">
+						<ProductCard
 							obj={{
-								img: specialOne,
+								img: [specialOne],
+								bgWhite: true,
 								text: 'шампунь для глубоко очищения с углем',
-								sale: true,
-								hit: true,
+								iText: 'Акции',
+								balls: '1.4 Б',
 								priceDe: '3 750',
-								priceSale: { old: '999.00', new: '888.00' },
-								isSlider: true,
-								balls: true,
-								isFirstFoliage: true,
-
-								iTab: true,
-								isSpecialProductDetail: true
+								prodDayLabel: true,
+								newLabel: true,
+								hitLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
 							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
 						/>
+
 					</SwiperSlide>
 					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
+						<ProductCard
 							obj={{
-								img: specialTwo,
-								text: 'детская зубная паста BABY BAMBO',
-								pDay: true,
+								img: [tttt, tttt],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
 								priceDe: '3 750',
-								price: '764.00',
-								isSpecialProductDetail: true,
-								onePday: true,
-								balls: true,
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
 							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
 						/>
 					</SwiperSlide>
 
 					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
+						<ProductCard
 							obj={{
-								img: specialTree,
-								text: 'уход за кожей каждый день”',
-								fourNabor: true,
-
-								isSpecialProductDetail: true,
-								balls: true,
+								img: [specialTree, specialTree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
 								priceDe: '3 750',
-								isSost: true,
-								price: '764.00',
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
 							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
 						/>
 					</SwiperSlide>
 
 					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
+						<ProductCard
 							obj={{
-								img: two,
-								sale: true,
-								text: 'Fresh click: дотянуться до звезды ',
+								img: [two, two],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
 								priceDe: '3 750',
-								priceSale: { old: '999.00', new: '888.00' },
-								isSost: true,
-								balls: true,
-								fiveNabor: true,
-								isSpecialProductDetail: true
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
 							}}
 						/>
 					</SwiperSlide>
 					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
+						<ProductCard
 							obj={{
-								img: five,
-								text: 'детокс очищение организма',
-								balls: true,
-								isSost: true,
+								img: [five, five],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
 								priceDe: '3 750',
-								treeNabor: true,
-								priceSale: { old: '999.00', new: '888.00' },
-								isSpecialProductDetail: true
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
 							}}
 						/>
 					</SwiperSlide>
 					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
+						<ProductCard
 							obj={{
-								img: tree,
-								text: 'бьюти - косметичка “сакура”',
-								hit: true,
-								sale: true,
-								isSpecialProductDetail: true,
-								colors: true,
-								price: '764.00',
-							}}
-						/>
-					</SwiperSlide>
-
-
-
-					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
-							obj={{
-								img: two,
-								text: 'Укрепляющая сыворотка для контура овала лица с коллагеном',
-								new: true,
-								sale: true,
-								iTab: true,
-								priceSale: { old: '999.00', new: '888.00' },
-								isSpecialProductDetail: true
-							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
-						/>
-					</SwiperSlide>
-
-
-
-					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
-							obj={{
-								img: tree,
-								text: 'бьюти - косметичка “сакура”',
-								hit: true,
-								pDay: true,
-								colors: true,
-								price: '764.00',
-								isSpecialProductDetail: true
-							}}
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
-							obj={{
-								img: four,
-								text: 'Укрепляющая сыворотка для контура овала лица с коллагеном ',
+								img: [tree, tree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
 								priceDe: '3 750',
-								price: '764.00',
-								isSpecialProductDetail: true
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
+							}}
+						/>
+					</SwiperSlide>
+
+
+
+					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
+						<ProductCard
+							obj={{
+								img: [tree, tree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
+								priceDe: '3 750',
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
+							}}
+						/>
+					</SwiperSlide>
+
+
+
+					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
+						<ProductCard
+							obj={{
+								img: [tree, tree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
+								priceDe: '3 750',
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
+							}}
+						/>
+					</SwiperSlide>
+					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
+						<ProductCard
+							obj={{
+								img: [tree, tree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
+								priceDe: '3 750',
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
 							}}
 						/>
 					</SwiperSlide>
 					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
 
-						<SpecialOfferItem
+						<ProductCard
 							obj={{
-								img: four,
-								text: 'Укрепляющая сыворотка для контура овала лица с коллагеном ',
+								img: [tree, tree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
 								priceDe: '3 750',
-								price: '764.00',
-								isSpecialProductDetail: true
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
 							}}
 						/>	</SwiperSlide>
 					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<SpecialOfferItem
+						<ProductCard
 							obj={{
-								img: five,
-								text: 'ночная крем-маска с лавандой',
-								hit: true,
+								img: [tree, tree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
 								priceDe: '3 750',
-								price: '764.00',
-								isSpecialProductDetail: true
+								packS: '4=5',
+
+								newLabel: true,
+
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
 							}}
 						/>	</SwiperSlide>
 

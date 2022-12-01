@@ -246,7 +246,7 @@ const DescriptionItemDetail = ({ description }) => {
 						<div className="..5x2:block ..6x5:-right-3 hidden absolute right-1 top-6  z-10    ">
 							<svg class="mx-4 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill="#EDEEEC"></path></svg>
 						</div>
-						<Swiper ref={slider} slidesPerView={1} navigation={true} className='sliderCenter  .1x1:!w-96 ' modules={[Navigation]}  >
+						<Swiper ref={slider} slidesPerView={1} className='sliderCenter  .1x1:!w-96 '  >
 
 							<SwiperSlide className="pl-16 ml-2 .3x1:ml-0   .3x1:pl-0 .6x2:pl-7 ..5x2:pl-0 .1x1:!w-96 ..5x2:!w-auto ..6x04:ml-0   relative">
 
@@ -657,16 +657,16 @@ const DescriptionItemDetail = ({ description }) => {
 
 
 										<div>
-											<p className="font-montserrat mb-0.5">Курьерская</p>
-											<p className="font-montserrat text-13px to-black-70pe ">2-3 дня</p>
+											<p className="font-montserrat mb-0.5 .2x00:text-xs">Курьерская</p>
+											<p className="font-montserrat text-13px to-black-70pe .2x00:text-xs">2-3 дня</p>
 
-											<SectionImgs variant={'Dostavka'} noCenter={true} mr3={true} textImg={[yandex, pochtaRF, ozon, cdek]} />
+											<SectionImgs variant={'Dostavka'} adapt={true} noCenter={true} mr3={true} textImg={[yandex, pochtaRF, ozon, cdek]} />
 
 										</div>
 										<div>
-											<p className="font-montserrat text-13px text-gray-quick-silver mb-0.5">Бесплатно от:</p>
-											<p className="font-montserrat text-sm mb-6px">2 500.00 ₽ </p>
-											<p className="font-montserrat font-medium text-primary text-13px">
+											<p className="font-montserrat text-13px text-gray-quick-silver mb-0.5 .2x00:text-xs">Бесплатно от:</p>
+											<p className="font-montserrat text-sm mb-6px .2x00:text-xs">2 500.00 ₽ </p>
+											<p className="font-montserrat font-medium text-primary text-13px .2x00:text-xs">
 												Подробнее
 											</p>
 										</div>
@@ -692,16 +692,16 @@ const DescriptionItemDetail = ({ description }) => {
 
 
 										<div>
-											<p className="font-montserrat mb-0.5">ПВЗ/постаматы</p>
-											<p className="font-montserrat text-13px to-black-70pe ">4-6 дней</p>
+											<p className="font-montserrat mb-0.5 .2x00:text-xs">ПВЗ/постаматы</p>
+											<p className="font-montserrat text-13px to-black-70pe .2x00:text-xs">4-6 дней</p>
 
-											<SectionImgs variant={'Dostavka'} noCenter={true} mr3={true} textImg={[ozon, cdek, berry]} />
+											<SectionImgs variant={'Dostavka'} adapt={true} noCenter={true} mr3={true} textImg={[ozon, cdek, berry]} />
 
 										</div>
 										<div>
-											<p className="font-montserrat text-13px text-gray-quick-silver mb-0.5">Бесплатно от:</p>
-											<p className="font-montserrat text-sm mb-6px">1 500.00 ₽  </p>
-											<p className="font-montserrat font-medium text-primary text-13px">
+											<p className="font-montserrat text-13px text-gray-quick-silver mb-0.5 .2x00:text-xs">Бесплатно от:</p>
+											<p className="font-montserrat text-sm mb-6px .2x00:text-xs">1 500.00 ₽  </p>
+											<p className="font-montserrat font-medium text-primary text-13px .2x00:text-xs">
 												На карте
 											</p>
 										</div>
@@ -727,8 +727,8 @@ const DescriptionItemDetail = ({ description }) => {
 
 
 										<div>
-											<p className="font-montserrat mb-0.5">Бутики TianDe</p>
-											<p className="font-montserrat text-13px to-black-70pe ">4-6 дней</p>
+											<p className="font-montserrat mb-0.5 .2x00:text-xs">Бутики TianDe</p>
+											<p className="font-montserrat text-13px to-black-70pe .2x00:text-xs">4-6 дней</p>
 
 											<div className="mt-6px flex items-center">
 												<svg className="mr-0.5" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -742,9 +742,9 @@ const DescriptionItemDetail = ({ description }) => {
 
 										</div>
 										<div>
-											<p className="font-montserrat text-13px text-gray-quick-silver mb-0.5">Бесплатно от:</p>
-											<p className="font-montserrat text-sm mb-6px">0.00 ₽  </p>
-											<p className="font-montserrat font-medium text-primary text-13px">
+											<p className="font-montserrat text-13px text-gray-quick-silver mb-0.5 .2x00:text-xs">Бесплатно от:</p>
+											<p className="font-montserrat text-sm mb-6px .2x00:text-xs">0.00 ₽  </p>
+											<p className="font-montserrat font-medium text-primary text-13px .2x00:text-xs">
 												На карте
 											</p>
 										</div>
@@ -777,14 +777,14 @@ const DescriptionItemDetail = ({ description }) => {
 
 
 							<div>
-								<p className='font-montserrat font-semibold ..6x04:text-13px  ..6x04:font-medium .1x1:text-13px'>Программа лояльности</p>
+								<p className='font-montserrat font-semibold ..6x04:text-13px  ..6x04:font-medium .1x1:text-13px '>Программа лояльности</p>
 								<p className='font-lora font-medium text-gray-quick-silver ..6x04:text-13px .1x1:text-13px '>De<span className=' font-normal font-montserrat'>-счёт:</span> <span className='font-montserrat  font-normal text-label-orange '>9 000 De</span></p>
 
 							</div>
 						</div>
 						<div className={`p-4 pt-0 ${dropDownds.loal ? 'block' : "hidden"}`}>
 							<div className="bg-white border p-3 border-gray">
-								<p className="font-montserrat text-13px uppercase text-gray-quick-silver mb-2">Место получения заказа:</p>
+								<p className="font-montserrat text-13px uppercase text-gray-quick-silver mb-2 .2x00:text-xs">Место получения заказа:</p>
 								<div>
 									<div className="flex items-center   ">
 										<div className="mr-3  -mt-4 relative">
@@ -805,8 +805,8 @@ const DescriptionItemDetail = ({ description }) => {
 
 
 											<div>
-												<p className="font-montserrat mb-1">Online Bisiness Center</p>
-												<p className="font-montserrat text-13px to-black-70pe ">Товары будут оформлены в текущем заказе</p>
+												<p className="font-montserrat mb-1 .2x00:text-xs">Online Bisiness Center</p>
+												<p className="font-montserrat text-13px to-black-70pe .2x00:text-xs">Товары будут оформлены в текущем заказе</p>
 
 
 											</div>
@@ -833,10 +833,10 @@ const DescriptionItemDetail = ({ description }) => {
 
 
 											<div>
-												<p className="font-montserrat mb-6px">Бутик TianDe: </p>
-												<p className="font-noto-sans text-13px mb-6px font-medium to-black-70pe ">Респ. Татарстан, Казань, Московская ул., №31 оф. 217 </p>
+												<p className="font-montserrat mb-6px .2x00:text-xs">Бутик TianDe: </p>
+												<p className="font-noto-sans text-13px mb-6px font-medium to-black-70pe .2x00:text-xs">Респ. Татарстан, Казань, Московская ул., №31 оф. 217 </p>
 
-												<p className="font-medium text-13px text-black-70pe font-montserrat">Товары будут оформлены отдельно от корзины</p>
+												<p className="font-medium text-13px text-black-70pe font-montserrat .2x00:text-xs">Товары будут оформлены отдельно от корзины</p>
 											</div>
 
 										</div>
@@ -845,18 +845,18 @@ const DescriptionItemDetail = ({ description }) => {
 								</div>
 								<div className="mt-3">
 									<div className="flex mb-2 items-center justify-between">
-										<p className="font-montserrat text-black-70pe">В корзине:</p>
-										<p className="font-montserrat">3 750 <span className="font-lora">De</span></p>
+										<p className="font-montserrat text-black-70pe .2x00:text-xs">В корзине:</p>
+										<p className="font-montserrat .2x00:text-xs">3 750 <span className="font-lora">De</span></p>
 									</div>
 									<div className="flex items-center justify-between">
-										<p className="font-montserrat text-black-70pe">Доступно:</p>
-										<p className="font-montserrat">5 080 <span className="font-lora">De</span></p>
+										<p className="font-montserrat text-black-70pe .2x00:text-xs">Доступно:</p>
+										<p className="font-montserrat .2x00:text-xs">5 080 <span className="font-lora">De</span></p>
 									</div>
 								</div>
 							</div>
 							<div className="flex justify-between items-center mt-3">
-								<p className="font-montserrat text-sm text-gray-quick-silver">Минимальная сумма: от 1 500 ₽ </p>
-								<button className="h-11 bg-gray-light2 rounded px-5 flex items-center font-lora text-label-orange text-xs font-medium">De- каталог</button>
+								<p className="font-montserrat text-sm text-gray-quick-silver .2x00:text-xs .4x11:mr-1 .4x11:text-11px">Минимальная сумма: от 1 500 ₽ </p>
+								<button className="h-11 bg-gray-light2 rounded px-5 flex items-center font-lora text-label-orange text-xs font-medium .4x11:text-9px">De- каталог</button>
 							</div>
 
 
@@ -900,13 +900,13 @@ const DescriptionItemDetail = ({ description }) => {
 							</div>
 							<div className={`bg-white p-3 border rounded-sm border-stroke  ${dropDownds.promo ? 'block' : 'hidden'}`}>
 								<div className="flex mb-3 items-center">
-									<p className="font-montserrat text-13px mr-1">-5% на заказ</p>
-									<div className="px-6px py-3px mr-3 bg-green-05pe rounded-32px font-montserrat text-13px text-black-70pe">
+									<p className="font-montserrat text-13px mr-1 .2x00:text-xs">-5% на заказ</p>
+									<div className="px-6px py-3px mr-3 bg-green-05pe rounded-32px font-montserrat text-13px .2x00:text-xs text-black-70pe">
 										от 1500 ₽
 									</div>
-									<p className="font-montserrat text-sm text-label-pink-2">Осталось: <span className="font-medium">451 ₽</span></p>
+									<p className="font-montserrat text-sm text-label-pink-2 .2x00:text-xs">Осталось: <span className="font-medium">451 ₽</span></p>
 								</div>
-								<p className="font-montserrat text-sm text-gray-quick-silver mb-3">Применяется после оформления при:</p>
+								<p className="font-montserrat text-sm text-gray-quick-silver mb-3 .2x00:text-xs">Применяется после оформления при:</p>
 								<div>
 									<div className="flex items-center">
 										<svg className="mr-10px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -915,21 +915,21 @@ const DescriptionItemDetail = ({ description }) => {
 											<path d="M6 7C5.44772 7 5 7.44772 5 8C5 8.55228 5.44772 9 6 9H10C10.5523 9 11 8.55228 11 8C11 7.44772 10.5523 7 10 7H6Z" stroke="white" stroke-width="0.4" stroke-linecap="round" />
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M2 8C2 5.79086 3.79086 4 6 4H18C20.2091 4 22 5.79086 22 8V16C22 18.2091 20.2091 20 18 20H6C3.79086 20 2 18.2091 2 16V8ZM18 6C19.1046 6 20 6.89543 20 8V10H4V8C4 6.89543 4.89543 6 6 6H18ZM20 12H4V16C4 17.1046 4.89543 18 6 18H18C19.1046 18 20 17.1046 20 16V12Z" stroke="white" stroke-width="0.4" stroke-linecap="round" />
 										</svg>
-										<p className="font-montserrat text-sm">Оплате онлайн</p>
+										<p className="font-montserrat text-sm .2x00:text-xs">Оплате онлайн</p>
 									</div>
 									<div className="flex mt-18px items-center">
 										<svg className="mr-10px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5939 2.08619C11.8524 1.97127 12.1476 1.97127 12.4061 2.08619L21.4061 6.08619C21.7673 6.24669 22 6.60481 22 7V17C22 17.3952 21.7673 17.7533 21.4061 17.9138L12.4061 21.9138C12.1476 22.0287 11.8524 22.0287 11.5939 21.9138L2.59386 17.9138C2.23273 17.7533 2 17.3952 2 17V7C2 6.60481 2.23273 6.24669 2.59386 6.08619L11.5939 2.08619ZM4 8.53876L11 11.6499V19.4612L4 16.3501V8.53876ZM13 19.4612L20 16.3501V8.53876L13 11.6499V19.4612ZM12 9.90568L18.5378 7L12 4.09432L5.46221 7L12 9.90568Z" fill="black" fill-opacity="0.7" stroke="white" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round" />
 										</svg>
 
-										<p className="font-montserrat text-sm">Доставке: <span className="font-medium">ПВЗ, курьер, посылка, бутик</span> </p>
+										<p className="font-montserrat text-sm .2x00:text-xs">Доставке: <span className="font-medium">ПВЗ, курьер, посылка, бутик</span> </p>
 									</div>
 								</div>
 							</div>
 
 						</div>
 						<div className={`h-16 px-18px flex items-center bg-input-error-bg ${dropDownds.promo ? 'block' : 'hidden'}`}>
-							<p className="flex font-montserrat text-sm items-center"><svg className="mr-10px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<p className="flex .2x00:text-xs font-montserrat text-sm items-center"><svg className="mr-10px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M11 15H13V17H11V15ZM12 4C7.59 4 4 7.59 4 12C4 16.41 7.59 20 12 20C16.41 20 20 16.41 20 12C20 7.59 16.41 4 12 4ZM12 22C10.6868 22 9.38642 21.7413 8.17317 21.2388C6.95991 20.7362 5.85752 19.9997 4.92893 19.0711C3.05357 17.1957 2 14.6522 2 12C2 9.34783 3.05357 6.80429 4.92893 4.92893C5.85752 4.00034 6.95991 3.26375 8.17317 2.7612C9.38642 2.25865 10.6868 2 12 2C14.6522 2 17.1957 3.05356 19.0711 4.92893C20.9464 6.80429 22 9.34783 22 12C22 13.3132 21.7413 14.6136 21.2388 15.8268C20.7363 17.0401 19.9997 18.1425 19.0711 19.0711C18.1425 19.9997 17.0401 20.7362 15.8268 21.2388C14.6136 21.7413 13.3132 22 12 22ZM11 7H13V13H11V7Z" fill="black" fill-opacity="0.7" />
 							</svg>
 								Не применяется на акции и суперцены</p>
