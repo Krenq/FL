@@ -18,7 +18,7 @@ import cdek from '../../images/templates/cdek.jpg';
 import berry from '../../images/templates/berry.png';
 import oneSmall from '../../images/templates/DetaillCardSmallOne.jpg'
 import twoSmall from '../../images/templates/DetailCardSmallTwo.jpg'
-import treeSmall from '../../images/templates/DetailCardSmallTree.jpg'
+import treeSmall from '../../images/templates/productToDayDet.png'
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import { Navigation } from "swiper";
@@ -35,8 +35,8 @@ const DescriptionItemDetail = ({ description }) => {
 		hoverNext = () => setButtonHoverNext(!buttonHoverNext)
 
 
-	const increment = () => setCurrentLenghtProduct(currentLenghtProduct++),
-		decrement = () => setCurrentLenghtProduct(currentLenghtProduct--),
+	const increment = () => setCurrentLenghtProduct(currentLenghtProduct + 1),
+		decrement = () => setCurrentLenghtProduct(currentLenghtProduct - 1),
 		[dropDownds, setDropDowns] = useState({
 			sale: false,
 			free: false,
@@ -219,8 +219,8 @@ const DescriptionItemDetail = ({ description }) => {
 								<Image src={oneSmall} />
 							</div>
 							<div className=" .3x1:h-9 .3x1:w-9  h-60px flex flex-col justify-end">
-								<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center bg-white justify-center .3x1:text-9px .3x1:h-14px .3x1:w-9">HIT!</p>
-								<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex items-center justify-center .3x1:h-14px .3x1:w-9 .3x1:text-9px ">NEW</p>
+								<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center   justify-center .3x1:text-9px .3x1:h-14px .3x1:w-9">HIT!</p>
+								<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex bg-white items-center justify-center .3x1:h-14px .3x1:w-9 .3x1:text-9px ">NEW</p>
 							</div>
 							<div className=" .3x1:h-9 .3x1:w-9 ..5x2:hidden mr-5  w-60px h-60px mb-2">
 								<Image src={twoSmall} />
@@ -315,9 +315,9 @@ const DescriptionItemDetail = ({ description }) => {
 
 						</div>
 					</div>
-					<div className="mt-6 transformD  w-full ..5x2:w-full ..5x2:!translate-x-0 .6x3:w-96  mr-12 .4x1:w-80 .2x10:mr-2 .1x1:mr-0">
-						<p className="font-montserrat font-medium text-xl mb-2 .1x1:mb-0.5 ..7x1:text-sm">Забота о себе каждый день</p>
-						<p className="font-montserrat .6x3:w-full text-black-70pe w-475px ..5x1:w-auto .6x3:text-13px .1x1:text-gray-quick-silver ..7x11:h-9 textdots leading-140%">Маска отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения, придает коже ухоженный вид. Насыщает питательными элементами, удерживает влагу внутри, отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения</p>
+					<div className="mt-6 transformD ..5x1:w-64 ..5x1:mx-4  w-full ..5x2:w-full ..5x2:!translate-x-0 .6x3:w-96  mr-12 .4x1:w-80 .2x10:mr-2 .1x1:mr-0">
+						<p className="font-montserrat font-medium text-xl mb-2 .1x1:mb-0.5 .5x1:text-sm ..7x1:text-sm">Забота о себе каждый день</p>
+						<p className="font-montserrat .6x3:w-full  text-black-70pe w-475px ..5x1:w-auto .6x3:text-13px .1x1:text-gray-quick-silver ..7x11:h-9 textdots leading-140%">Маска отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения, придает коже ухоженный вид. Насыщает питательными элементами, удерживает влагу внутри, отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения</p>
 						<button onClick={scrollDescription} className="..6x04:hidden font-montserrat font-medium text-13px text-primary  mb-5 .1x1:mb-1">Всё о товаре</button>
 						<button className="..6x04:block hidden font-montserrat font-medium text-13px border-b border-dashed border-primary text-primary  mb-5 mt-1 .1x1:mb-1">Подробнее о товаре</button>
 
@@ -505,8 +505,8 @@ const DescriptionItemDetail = ({ description }) => {
 						</div>
 
 						<div className="mt-3 flex justify-between">
-							<button className="h-14 flex-1 .1x1:h-12 border border-gray-light2 font-montserrat text-13px font-medium text-label-orange tracking-wider  mr-1.5 .4x1:text-10px">ДОБАВЛЕНО ЗА DE</button>
-							<button className="h-14 flex-1 .1x1:h-12 bg-primary   w-222px tracking-wider font-montserrat font-semibold text-13px text-white ml-1.5 .4x1:text-10px">В КОРЗИНЕ</button>
+							<button className="h-14 flex-1 .1x1:h-12 border border-gray-light2 font-montserrat text-13px font-medium text-label-orange tracking-wider transition-all hover:bg-input-disable hover:text-white mr-1.5 .4x1:text-10px">ДОБАВЛЕНО ЗА DE</button>
+							<button className="h-14 flex-1 .1x1:h-12 bg-primary   w-222px tracking-wider font-montserrat font-semibold text-13px hover:bg-primary-hover transition-all text-white ml-1.5 .4x1:text-10px">В КОРЗИНЕ</button>
 
 						</div>
 					</div>
@@ -621,7 +621,7 @@ const DescriptionItemDetail = ({ description }) => {
 										</svg>от 1 500 ₽</span>
 									</div>
 									<div className={`flex items-center mt-6px ${dropDownds.free ? 'block' : 'hidden'}`}>
-										<p className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px'>Бутики</p>
+										<p className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Бутики</p>
 										<span className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg> от 0 ₽</span>
