@@ -574,7 +574,7 @@ const DescriptionItemDetail = ({ description }) => {
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
 
-							<svg className={`mr-4 ..5x1:mr-1.5 ..6x04:hidden ${dropDownds.free ? '-mt-8 h-8 w-8' : ''}`} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg className={`mr-4 absolute left-3 top-2.5 ..5x1:mr-1.5 ..6x04:hidden .1x1:top-0`} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M25.1615 19.9048C25.8452 19.6313 26.1778 18.8554 25.9043 18.1716C25.6308 17.4879 24.8549 17.1554 24.1712 17.4289L23.4767 17.7066C22.793 17.9801 22.4604 18.7561 22.7339 19.4398C23.0074 20.1235 23.7834 20.4561 24.4671 20.1826L25.1615 19.9048Z" fill="black" fillOpacity="0.7" />
 								<path d="M20.3004 21.8492C20.9841 21.5758 21.3167 20.7998 21.0432 20.1161C20.7697 19.4324 19.9938 19.0998 19.31 19.3733L17.9212 19.9289C17.2374 20.2023 16.9049 20.9783 17.1784 21.662C17.4519 22.3457 18.2278 22.6783 18.9115 22.4048L20.3004 21.8492Z" fill="black" fillOpacity="0.7" />
 								<path d="M14.7449 24.0715C15.4286 23.798 15.7611 23.022 15.4876 22.3383C15.2142 21.6546 14.4382 21.322 13.7545 21.5955L12.3656 22.1511C11.6819 22.4246 11.3493 23.2005 11.6228 23.8842C11.8963 24.5679 12.6723 24.9005 13.356 24.627L14.7449 24.0715Z" fill="black" fillOpacity="0.7" />
@@ -608,7 +608,7 @@ const DescriptionItemDetail = ({ description }) => {
 							</svg>
 
 
-							<div>
+							<div className="ml-12">
 								<p className='font-montserrat font-semibold ..6x04:text-13px    ..6x04:font-medium .1x1:text-13px'>Бесплатная доставка</p>
 								<div className={`flex items-center ${dropDownds.free ? 'flex-wrap' : ''}`}>
 									<div className='flex items-center'>
@@ -639,7 +639,7 @@ const DescriptionItemDetail = ({ description }) => {
 
 							</div>
 						</div>
-						<div className={`px-4 pb-4 ${dropDownds.free ? 'block' : 'hidden'}`}>
+						<div className={` px-4 pb-4 ${dropDownds.free ? 'block' : 'hidden'}`}>
 							<div className="bg-white border border-stroke px-4 py-3">
 								<div className="flex items-center   ">
 									<div className="mr-3 -mt-6 relative">

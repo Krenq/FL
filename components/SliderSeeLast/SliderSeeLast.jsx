@@ -33,7 +33,19 @@ const SliderSeeLast = () => {
 		<div className="relative px-80px pb-60px .3x1:px-10 ..5x2:px-3">
 			<h4 className="font-montserrat pt-60px ..5x2:pt-6 ..5x2:mb-2 ..6x3:text-sm ..5x2:text-base text-26px font-medium mb-6 ">Вы недавно смотрели</h4>
 			<Swiper ref={seeSlider} slidesPerView={2} breakpoints={{
+				360: {
+					slidesPerView: 2
+				},
+				575: {
+					slidesPerView: 3
+				},
 				750: {
+					slidesPerView: 4
+				},
+				930: {
+					slidesPerView: 5
+				},
+				1000: {
 					slidesPerView: 3
 				},
 				1230: {
