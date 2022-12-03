@@ -50,13 +50,13 @@ const SeeLastDetails = () => {
 					750: {
 						slidesPerView: 3
 					},
-					1000: {
+					1230: {
 						slidesPerView: 4
 					},
-					1300: {
+					1565: {
 						slidesPerView: 5
 					},
-					1600: {
+					1850: {
 						slidesPerView: 6
 					}
 				}} modules={[Navigation, Pagination]}  >

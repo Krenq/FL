@@ -36,7 +36,10 @@ const DescriptionItemDetail = ({ description }) => {
 
 
 	const increment = () => setCurrentLenghtProduct(currentLenghtProduct + 1),
-		decrement = () => setCurrentLenghtProduct(currentLenghtProduct - 1),
+		decrement = () => {
+			if (currentLenghtProduct > 0) setCurrentLenghtProduct(currentLenghtProduct - 1)
+
+		},
 		[dropDownds, setDropDowns] = useState({
 			sale: false,
 			free: false,
