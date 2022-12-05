@@ -47,7 +47,7 @@ export default function ProductCard({ obj }) {
     <div
       onMouseEnter={() => setShowBtns(true)}
       onMouseLeave={() => setShowBtns(false)}
-      className="card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px"
+      className={`card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
     >
       {obj.packS && (
         <div className="absolute top-0 left-0 z-10">
@@ -343,7 +343,7 @@ export default function ProductCard({ obj }) {
             <svg
               // onClick={() => setClickHeart(false)}
               onTouchStart={() => setClickHeart(false)}
-              className="absolute top-3 right-3 z-10 ..5x2:w-8 ..5x2:h-8 ..5x2:right-1.5 ..5x2:top-1.5"
+              className="absolute top-3 right-3 z-10  ..5x2:w-8 ..5x2:h-8 ..5x2:right-1.5 ..5x2:top-1.5"
               width="48"
               height="49"
               viewBox="0 0 48 49"

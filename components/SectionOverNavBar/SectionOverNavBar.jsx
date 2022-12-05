@@ -5,22 +5,17 @@ import SetLanguage from '../SetLanguage/SetLanguage';
 import SetLocation from '../SetLocation/SetLocation';
 import ru from '../../images/Icons/flag.png';
 
-export default function SectionOverNavBar() {
+export default function SectionOverNavBar({logIn,boolLogIn}) {
   const [show, setShow] = useState(false),
     [showLang, setShowLang] = useState(false),
     [currentLang, setCurrentLang] = useState({ name: 'RU', src: ru }),
     [currentCity, setCurrentCity] = useState(false),
-    [boolLogIn, setBoolLogIn] = useState(false),
     [userN, setUserN] = useState('Александринfdgrddfdf dfge  sdfsd ');
 
   const handleSetShow = () => setShow(!show),
     handleSetShowLang = () => setShowLang(!showLang);
 
-  function logIn() {
-    return setTimeout(() => {
-      setBoolLogIn(true);
-    }, 3000);
-  }
+  
 
   function limitStr(str, n, symb) {
     if (!n && !symb) return str;

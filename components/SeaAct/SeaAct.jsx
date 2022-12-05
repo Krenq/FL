@@ -117,9 +117,9 @@ const SeaAct = ({ refL }) => {
 
 	return (
 		<div ref={refL} className="bg-gray-light" id="sec-6">
-			<section className="container__special relative pb-24 pt-32  ..5x2:pt-60 ..5x2:pb-12">
+			<section className="container__special relative pb-24 pt-60   ..5x2:pb-12">
 				<svg
-					className="ability ..6x2:h-32 ..6x2:mt-5 absolute left-1/2 ..5x2:top-3 top-6 "
+					className="ability ..6x2:h-32 ..6x2:mt-5 absolute left-1/2  top-3 top-6 "
 					width="184"
 					height="183"
 					viewBox="0 0 184 183"
@@ -156,10 +156,10 @@ const SeaAct = ({ refL }) => {
 					/>
 				</svg>
 
-				<p className="absolute left-1/2 ability titleSea ..5x2:top-24 font-montserrat ..6x04:text-base  font-medium text-2xl  ">
+				<p className="absolute left-1/2 ability titleSea    top-24 font-montserrat ..6x04:text-base  font-medium text-2xl  ">
 					Каждый сезон
 				</p>
-				<p className="absolute left-1/2 w-full ability top-40 ..5x2:top-32 font-montserrat  ..6x3:text-22px ..6x03:top-32 text-center font-medium text-3xl italic ">
+				<p className="absolute left-1/2 w-full ability top-32  font-montserrat  ..6x3:text-22px ..6x03:top-32 text-center font-medium text-3xl italic ">
 					НОВЫЕ АКЦИИ
 				</p>
 				<div className="mb-9 ..5x2:mb-14 text-center font-montserrat ..6x04:text-13px nabSea mt-20">
@@ -169,7 +169,7 @@ const SeaAct = ({ refL }) => {
 				<div className="timer absolute ability left-1/2 timerSea hidden ..5x2:block ..6x5:!pt-1 !pt-0 ..5x2:py-1 ..6x5:ml-0 bg-white px-2 text-primary border border-primary font-normal text-lg font-montserrat   ..6x5:font-noto-sans ..6x5:text-sm">
 					{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
 				</div>
-				<div className="flex justify-center h-874px ..6x1:h-auto ">
+				<div className="flex  justify-center h-874px ..6x1:h-auto ">
 					<div className="relative w-44% h-874px .4x1:hidden mr-1">
 						<div className="absolute top-10 left-10 z-10">
 							<p className="text-2xl text-primary">АКЦИЯ ВЕСНЫ</p>
@@ -178,7 +178,7 @@ const SeaAct = ({ refL }) => {
 								{time.days}d : {time.hours}h : {time.minutes}m : {time.seconds}s
 							</div>
 						</div>
-						<p className="absolute bottom-10 cursor-pointer z-10 right-10 flex items-center text-sm transition-all hover:text-primary">
+						<p className="absolute bottom-10 cursor-pointer z-10 right-10 flex items-center text-13px transition-all hover:text-primary">
 							Смотреть{' '}
 							<svg
 								className="ml-2"
@@ -206,7 +206,7 @@ const SeaAct = ({ refL }) => {
 					</div>
 
 					<div className=" flex flex-row  justify-arround w-65% .4x1:w-2/3 ..6x1:hidden ..5x2:w-full .1x1:w-4/5 .4x1:justify-center">
-						<div className="flex flex-col flex-1 justify-between .4x1:ml-0 ..6x3:ml-4">
+						<div className="flex justify-between flex-col mr-3 flex-1  .4x1:ml-0 ..6x3:ml-4">
 							<SeaActItem
 								obj={{
 									present: true,
@@ -225,11 +225,12 @@ const SeaAct = ({ refL }) => {
 									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
 									date: true,
 									priceSale: { old: '920.00', new: '764.00' },
+									lastItem: true
 								}}
 							/>
 						</div>
 
-						<div className="flex flex-col flex-1 justify-between .4x1:ml-0 ..6x3:ml-4">
+						<div className="flex justify-between flex-col mr-3 flex-1  .4x1:ml-0 ..6x3:ml-4">
 							<SeaActItem
 								obj={{
 									present: true,
@@ -248,11 +249,12 @@ const SeaAct = ({ refL }) => {
 									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
 									date: true,
 									priceSale: { old: '920.00', new: '764.00' },
+									lastItem: true
 								}}
 							/>
 						</div>
 
-						<div className="flex flex-col flex-1 justify-between  ">
+						<div className="flex justify-between flex-col flex-1   ">
 							<SeaActItem
 								obj={{
 									present: true,
@@ -271,6 +273,7 @@ const SeaAct = ({ refL }) => {
 									text: 'УКРЕПЛЯЮЩАЯ СЫВОРОТКА ДЛЯ КОНТУРА ОВАЛА ЛИЦА С КОЛЛАГЕНОМ',
 									date: true,
 									priceSale: { old: '920.00', new: '764.00' },
+									lastItem: true
 								}}
 							/>
 						</div>

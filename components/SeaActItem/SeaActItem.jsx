@@ -121,7 +121,7 @@ export default function SeaActItem({ obj }) {
 					{showAct && <div className={`absolute  z-10  -mb-0.5 bottom-14  left-0 right-0  `}>
 						<div className='relative w-full h-24  px-11 bg-gray-light2 py-4 pt-6'>
 
-							<Swiper ref={slider} slidesPerView={2} navigation={true} modules={[Navigation]} className="mySwiperAct">
+							<Swiper ref={slider} slidesPerView={2} className="mySwiperAct">
 
 								<SwiperSlide>
 									<div className='relative  rounded overflow-hidden itemSlideDrop'>

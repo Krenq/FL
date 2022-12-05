@@ -16,6 +16,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import SliderBtnNext from './SliderBtnNext';
 import SliderBtnPrev from './SliderBtnPrev';
+import NewSaleCardProduct from '../NewSaleCardProduct/NewSaleCardProduct';
 
 function SpecialOffers({ refL }) {
   const slider = useRef(null);
@@ -125,6 +126,25 @@ function SpecialOffers({ refL }) {
           },
         }}
       >
+        <SwiperSlide>
+          <NewSaleCardProduct
+            obj={{
+              img: [tttt, fullSc, fullSc],
+              text: 'Для сенсационного  увлажнения и восстановления кожи',
+              iText: 'Состав набора',
+              balls: '1.4 Б',
+              packS: '4=5',
+              dateEnd: 'До 15.06.22',
+              //   packLabel: 5,
+              priceDe: '3 750',
+              price: {
+                old: '₽ 920.00',
+                new: '₽ 764.00',
+              },
+            }}
+          />
+        </SwiperSlide>
+
         <SwiperSlide>
           <ProductCard
             obj={{
