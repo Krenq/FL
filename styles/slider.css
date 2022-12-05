@@ -3046,3 +3046,7 @@
 .w-85 {
 	width: 380% !important;
 }
+
+.hoverI:hover .hoverShowI {
+	display: flex !important;
+}
