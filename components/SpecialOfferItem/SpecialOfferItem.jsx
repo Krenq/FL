@@ -114,8 +114,8 @@ export default function SpecialOfferItem({
 			>
 				<div
 					className={`hidden ${obj.fullImg
-							? '!block aboslute top-0 !h-56 left-0 w-full ..6x03:!hidden customWidthImg right-0'
-							: ''
+						? '!block aboslute top-0 !h-56 left-0 w-full ..6x03:!hidden customWidthImg right-0'
+						: ''
 						} ${obj.isSlider ? '!hidden' : ''}`}
 				>
 					<Image
@@ -165,8 +165,8 @@ export default function SpecialOfferItem({
 						{obj.isGif && (
 							<div
 								className={`p-2  ${obj.fullImg
-										? '   pr-5   overflow-hidden py-0 absolute top-0 left-0 '
-										: ''
+									? '   pr-5   overflow-hidden py-0 absolute top-0 left-0 '
+									: ''
 									}`}
 							>
 								<div className="flex items-center relative w-full  ">
@@ -207,8 +207,8 @@ export default function SpecialOfferItem({
 							</div>
 							<div
 								className={`absolute hidden z-20   ..6x03:flex items-center justify-center top-6 left-2  border border-label-green bg-white rounded-56px mt-0.5 p-px w-9 h-9 ${obj.fiveNabor && obj.pDay
-										? '!top-14 !left-14 ..6x03:!left-3 ..6x03:!top-7  !z-20'
-										: ''
+									? '!top-14 !left-14 ..6x03:!left-3 ..6x03:!top-7  !z-20'
+									: ''
 									}`}
 							>
 								<p className=" text-center text-label-green text-7px p-10">
@@ -225,8 +225,8 @@ export default function SpecialOfferItem({
 					{obj.fiveNabor && (
 						<div
 							className={`absolute ..7x1:h-9 ..7x1:w-9 top-9 left-2 z-10 ${obj.fiveNabor && obj.pDay
-									? '!top-14 !left-14 !z-20 ..6x03:!top-7 ..6x03:h-9 ..6x03:w-9 ..6x03:!left-10 ..6x03:!mt-0.5'
-									: ''
+								? '!top-14 !left-14 !z-20 ..6x03:!top-7 ..6x03:h-9 ..6x03:w-9 ..6x03:!left-10 ..6x03:!mt-0.5'
+								: ''
 								}`}
 						>
 							<Image src={fiveN} />
@@ -1085,7 +1085,7 @@ export default function SpecialOfferItem({
 								} px-2 z-20 `}
 						>
 							<p
-								className={` ..6x1:text-center ..6x1:text-11px ..6x1:font-montserrat font-noto-sans text-sm font-light text-black-70pe`}
+								className={` text-center ..6x1:text-11px ..6x1:font-montserrat font-noto-sans text-sm font-light text-black-70pe`}
 							>
 								До {obj.timeOver}
 							</p>
@@ -1099,8 +1099,8 @@ export default function SpecialOfferItem({
 					>
 						<p
 							className={` ..6x03:text-10px text-13px font-montserrat font-normal leading-150% text-center text-gray-quick-silver tracking-widest card_text uppercase ${obj.isDetails
-									? 'text-start text-black ..6x1:text-center ..6x1:text-10px'
-									: ''
+								? ' text-black ..6x1:text-center ..6x1:text-10px'
+								: ''
 								}`}
 						>
 							{obj.text}
@@ -1111,11 +1111,11 @@ export default function SpecialOfferItem({
 							className={`flex ..6x1:bottom-10  ${obj.isDetails ? '..6x03:!bottom-6' : ''
 								}  absolute bottom-11 left-0 pl-2 ..6x1:pl-0 right-0 w-full`}
 						>
-							<div className=" flex  ..6x1:justify-center flex-row font-montserrat w-full font-normal text-base mb-2 mt-1">
-								<p className="text-center mr-2 ..6x1:text-11px font-montserrat text-gray-quick-silver line-through">
+							<div className=" flex justify-center flex-row font-montserrat w-full font-normal text-base mb-2 mt-1">
+								<p className=" text-center mr-2 ..6x1:text-11px font-montserrat text-gray-quick-silver line-through">
 									₽ {obj.DetailsPrice.oldPrice}
 								</p>
-								<p className="text-center ..6x1:text-11px font-montserrat text-label-pink-2">
+								<p className=" text-center ..6x1:text-11px font-montserrat text-label-pink-2">
 									₽ {obj.DetailsPrice.price}
 								</p>
 							</div>
@@ -1127,22 +1127,22 @@ export default function SpecialOfferItem({
 							<div
 								onClick={() => currentColorHandler('1')}
 								className={` bg-label-pink cursor-pointer ${currentColor === '1'
-										? 'w-10px h-10px ..5x2:h-2 ..5x2:w-2 border border-gray-border'
-										: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
+									? 'w-10px h-10px ..5x2:h-2 ..5x2:w-2 border border-gray-border'
+									: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 							<div
 								onClick={() => currentColorHandler('2')}
 								className={` bg-label-orange cursor-pointer ${currentColor === '2'
-										? 'w-10px h-10px border ..5x2:h-2 ..5x2:w-2 border-gray-border'
-										: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
+									? 'w-10px h-10px border ..5x2:h-2 ..5x2:w-2 border-gray-border'
+									: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 							<div
 								onClick={() => currentColorHandler('3')}
 								className={` bg-label-green cursor-pointer ${currentColor === '3'
-										? 'w-10px h-10px border border-gray-border ..5x2:h-2 ..5x2:w-2'
-										: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
+									? 'w-10px h-10px border border-gray-border ..5x2:h-2 ..5x2:w-2'
+									: 'w-2 h-2 ..5x2:h-6px ..5x2:w-6px'
 									}  rounded-56px mx-1 `}
 							></div>
 						</div>

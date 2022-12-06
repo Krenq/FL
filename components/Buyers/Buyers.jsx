@@ -1,69 +1,11 @@
 import Image from 'next/image';
-import Slider from 'react-slick';
-import one from '../../images/templates/1forBuyers.jpg';
-import two from '../../images/templates/2forBuyres.jpg';
-import three from '../../images/templates/3forBuyers.jpg';
 import groups from '../../images/templates/groups.png';
 import twoglos from '../../images/templates/2glos.jpg';
 import twopartner from '../../images/templates/1partnergrow.png';
-import test333 from '../../images/templates/test333.jpg';
 import postTest from '../../images/templates/postTest.png';
-import bgTestPok from '../../images/templates/bgTestPok.png';
 import postSmall2 from '../../images/templates/postSmall2.png';
 
 function Buyers({ refL }) {
-  //   const settings = {
-  //     dots: false,
-
-  //     Infinity: true,
-  //     speed: 500,
-  //     slidesToShow: 2,
-  //     slidesToScroll: 1,
-  //     responsive: [
-  //       {
-  //         breakpoint: 900,
-  //         settings: {
-  //           slidesToShow: 1,
-  //           slidesToScroll: 1,
-  //           infinite: true,
-
-  //           dots: false,
-
-  //           className: 'center',
-  //           centerMode: true,
-  //           centerPadding: '75px',
-  //         },
-  //       },
-  //       {
-  //         breakpoint: 540,
-  //         settings: {
-  //           slidesToShow: 1,
-  //           slidesToScroll: 1,
-  //           infinite: true,
-
-  //           dots: false,
-
-  //           className: 'center',
-  //           centerMode: true,
-  //           centerPadding: '50px',
-  //         },
-  //       },
-  //       {
-  //         breakpoint: 500,
-  //         settings: {
-  //           slidesToShow: 1,
-  //           slidesToScroll: 1,
-  //           infinite: true,
-
-  //           dots: false,
-
-  //           className: 'center',
-  //           centerMode: true,
-  //           centerPadding: '20px',
-  //         },
-  //       },
-  //     ],
-  //   };
 
   return (
     <div ref={refL} name="center-anchor" className="relative" id="sec-3">

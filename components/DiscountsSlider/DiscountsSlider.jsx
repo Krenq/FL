@@ -1,146 +1,443 @@
-
-
-import { useEffect } from 'react';
 import { useRef, useState } from 'react';
-import Slider from 'react-slick';
 
 import imgDiscount from '../../images/templates/discountImg.jpg';
-import imgProduct from '../../images/templates/prdesc.png';
-import productRight from '../../images/templates/productRight.jpg'
 
-import imgOne from '../../images/templates/prLeftOne.jpg'
-import imgTwo from '../../images/templates/prLeftTwo.jpg'
-import imgTree from '../../images/templates/prLeftTree.jpg'
-import imgFour from '../../images/templates/prLeftFour.jpg'
-import imgFive from '../../images/templates/prLeftFive.jpg'
-import imgSix from '../../images/templates/prLeftSix.jpg'
+import testFon from '../../images/templates/testFon.jpg';
+import fonTestSlidePlus from '../../images/templates/fonTestSlidePluses.jpg';
 
+import SlidePOne from '../../images/templates/SlidePOne.png';
+import SlidePTwo from '../../images/templates/SlidePTwo.png';
+import SlidePThree from '../../images/templates/SlidePThree.png';
+import SlidePFour from '../../images/templates/SlidePFour.png';
+import SlidePFive from '../../images/templates/SlidePFive.png';
+import SlidePSix from '../../images/templates/SlidePSix.png';
 
-import DiscountsButtonsSliderNext from '../DiscounstsButtonsSliderNext/DiscountsButtonsSliderNext';
-import DiscounstsButtonsSliderPrev from '../DiscounstsButtonsSliderNext/DiscountsButtonsSliderPrev';
-import DiscounstSliderDots from '../DiscountSliderItem/DiscountSliderDots';
-import DiscountSliderFresh from '../DiscountSliderItem/DiscountSliderFresh';
-import DiscountSliderHealth from '../DiscountSliderItem/DiscountSliderHealth';
+import SlideTwo from '../../images/templates/SlideTwo.jpg';
+import SlideThree from '../../images/templates/SlideThree.jpg';
+import SlideFour from '../../images/templates/SlideFour.jpg';
+import SlideFive from '../../images/templates/SlideFive.jpg';
+import SlideSix from '../../images/templates/SlideSix.jpg';
+import SlideSeven from '../../images/templates/SlideSeven.jpg';
+import SlideLast from '../../images/templates/SlideLast.jpg';
+import SlidePrePreLast from '../../images/templates/SlidePrePreLast.jpg';
 
-import imgProductF from '../../images/templates/productOneDiscSl.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+	Navigation,
+	Pagination,
+	Scrollbar,
+	Autoplay,
+	EffectCreative,
+} from 'swiper';
 
-import DiscountSliderItem from '../DiscountSliderItem/DiscountSliderItem';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/effect-creative';
 
-function DiscountsSlider({ refL, showCentral }) {
-	const [kolichestvo, setKolichestvo] = useState(1),
-		slider = useRef(null),
-		containerSlider = useRef(null)
+import SlideItem from './SlideItem';
+import SliderBtnNext from './SliderBtnNext';
+import SliderBtnPrev from './SliderBtnPrev';
+import SlideItemWithoutPluses from './SlideItemWithoutPluses';
 
+function DiscountsSlider({ refL, setWindowInfo }) {
+	const slider = useRef(null);
 
-
-	// useSizeDiscount()
-	const settings = {
-		dots: true,
-		Infinity: true,
-		speed: 500,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		nextArrow: <DiscountsButtonsSliderNext kolichestvo={kolichestvo} />,
-		prevArrow: <DiscounstsButtonsSliderPrev kolichestvo={kolichestvo} />,
-		appendDots: (dots) => {
-			return (
-				<div
-					style={{
-						display: 'flex',
-						justifyContent: 'center',
-						position: 'absolute',
-						bottom: 20,
+	const nextSlideFilt = () => {
+		if (slider.current !== null && slider.current.swiper !== null)
+			slider.current.swiper.slideNext(1000);
+	},
+		prevSlideFilt = () => {
+			if (slider.current !== null && slider.current.swiper !== null)
+				slider.current.swiper.slidePrev(1000);
+		};
+	return (
+		<div ref={refL} id="sec-1">
+			<section className="container-base h-800px ..5x2:h-492px">
+				<Swiper
+					ref={slider}
+					className="firstSlider !h-full"
+					modules={[
+						Navigation,
+						Pagination,
+						Scrollbar,
+						Autoplay,
+						EffectCreative,
+					]}
+					autoplay={{
+						delay: 4000,
+						disableOnInteraction: false,
+					}}
+					effect={'creative'}
+					creativeEffect={{
+						prev: {
+							shadow: false,
+							translate: [0, 0, -400],
+						},
+						next: {
+							translate: ['100%', 0, 0],
+						},
+					}}
+					grabCursor={true}
+					speed={1000}
+					scrollbar={{
+						hide: false,
+						draggable: true,
 					}}
 				>
-					<div
-						style={{
-							backgroundColor: 'rgba(255, 255, 255, 0.8)',
-							borderRadius: '54px',
-							padding: '22px',
-							paddingInline: '40px',
-							width: 'auto',
-							display: 'flex',
-							justifyContent: 'center',
-							alignItems: 'center',
-						}}
-					>
-						<ul
-							style={{
-								margin: '0px',
-								display: 'flex',
-								alignItems: 'flex-end',
-								justifyContent: 'center',
+					<SwiperSlide>
+						<SlideItem
+							fon={fonTestSlidePlus}
+							setWindowInfo={setWindowInfo}
+							pluses={[
+								{
+									num: '3',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила',
+									price: { old: '₽ 900.00', new: '₽ 724.00', De: '20' },
+								},
+								{
+									num: '7',
+									title: ' Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '321' },
+								},
+								{
+									num: '9',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+							]}
+							imgRight={imgDiscount}
+							imgLeft={SlidePOne}
+							text="Шампунь, маска, тоник «Bio Rehab»"
+							titleTag=" Эффекты:"
+							tags={[
+								'против перхоти',
+								'против седины',
+								'против выпадения',
+								'еще эффект',
+								'еще эффект',
+								'еще эффект',
+								'еще эффект',
+								'еще эффект',
+							]}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItem
+							setWindowInfo={setWindowInfo}
+							pluses={[
+								{
+									num: '3',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '2',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '4',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '7',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '9',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+							]}
+							imgRight={SlideTwo}
+							imgLeft={SlidePTwo}
+							text="Бьюти-маски для лица"
+							titleTag=" Эффекты:"
+							tags={[
+								'восстановление',
+								'питание',
+								'антиоксидантный эффект',
+								'мимические морщины',
+								'следы усталости',
+								'защита',
+								'увлажнение',
+							]}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItem
+							setWindowInfo={setWindowInfo}
+							pluses={[
+								{
+									num: '8',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+							]}
+							imgRight={SlideThree}
+							imgLeft={SlidePThree}
+							text="Сыворотка с коллагеном"
+							titleTag=" Эффекты:"
+							tags={[
+								'восстановление',
+								'питание',
+								'мимические морщины',
+								'водоросли',
+							]}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItem
+							setWindowInfo={setWindowInfo}
+							pluses={[
+								{
+									num: '3',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '1',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '6',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '8',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '10',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+							]}
+							imgRight={SlideFour}
+							imgLeft={SlidePFour}
+							text="Прокладки на травах с лечебными компонентами"
+							titleTag=" Эффекты:"
+							tags={[
+								'защита',
+								'комфорт',
+								'сухость',
+								'нормализация цикла',
+								'дышащие',
+								'абсорбент',
+								'натуральные',
+								'энергия трав',
+							]}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItem
+							setWindowInfo={setWindowInfo}
+							pluses={[
+								{
+									num: '3',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '4',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+							]}
+							imgRight={SlideFive}
+							imgLeft={SlidePFive}
+							text="Легендарный шампунь и бальзам 
+с экстрактом женьшеня"
+							titleTag=" Эффекты:"
+							tags={[
+								'восстановление структуры',
+								'эффект роста',
+								'против перхоти',
+								'объем',
+								'сила',
+								'защита от потери влаги',
+								'для ослабленных волос',
+							]}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItem
+							setWindowInfo={setWindowInfo}
+							pluses={[
+								{
+									num: '1',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '3',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '5',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '6',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '8',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+								{
+									num: '10',
+									title: 'Шампунь - активатор роста Bio Rehab',
+									text: 'Сила - в длине',
+									price: { old: '₽ 900.00', new: '₽ 764.00', De: '200' },
+								},
+							]}
+							imgRight={SlideSeven}
+							imgLeft={SlidePSix}
+							text="Акция весны"
+							titleTag=" Категории:"
+							tags={[
+								'лицо',
+								'тело',
+								'волосы',
+								'макияж',
+								'парфюм',
+								'мужчинам',
+								'детям',
+								'дом',
+								'гигиена',
+								'wellness',
+								'аксессуары',
+							]}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItem
+							label="new"
+							textStyles={{
+								fontSize: 52,
+								fontWeight: 500,
+								lineHeight: '160%',
+								fontFamily: 'Montserrat',
+								fontStyle: 'italic',
 							}}
-						>
-							{dots}
-						</ul>
+							underText="Шампунь, маска, сыворотка, бальзам, пенка, лосьон"
+							imgRight={SlideSix}
+							text="CЕРИЯ «FRESH CLICK»"
+							titleTag=" Эффекты:"
+							tags={[
+								'восстановление структуры',
+								'эффект роста',
+								'против перхоти',
+								'объем',
+								'сила',
+								'защита от потери влаги',
+								'для ослабленных волос',
+							]}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItemWithoutPluses
+							testFon={testFon}
+							imgRight={SlideThree}
+							textLabel="Бьюти-эксперт"
+							title="ТВОЕЙ КРАСОТЫ И ЗДОРОВЬЯ"
+							text="&gt; 700 единиц товара c доставкой в 32 страны Мира!"
+							titleStyle={{
+								fontStyle: 'italic',
+								fontWeight: 600,
+							}}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItemWithoutPluses
+							testFon={testFon}
+							imgRight={SlidePrePreLast}
+							textLabel="Бьюти-эксперт"
+							title="ТВОЕЙ КРАСОТЫ И ЗДОРОВЬЯ"
+							text="&gt; 700 единиц товара c доставкой в 32 страны Мира!"
+							titleStyle={{
+								fontStyle: 'italic',
+								fontWeight: 500,
+							}}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItemWithoutPluses
+							testFon={testFon}
+							imgRight={SlideLast}
+							title="ПРОВОДНИК ТВОЕЙ КРАСОТЫ"
+							text="Жаркие скидки  уже ждут тебя в каталоге, не откладывай красоту на завтра!"
+							titleStyle={{
+								fontWeight: 600,
+							}}
+						/>
+					</SwiperSlide>
+
+					<SwiperSlide>
+						<SlideItemWithoutPluses
+							testFon={testFon}
+							imgRight={SlideLast}
+							title="ПРОВОДНИК ТВОЕЙ КРАСОТЫ"
+							text="Жаркие скидки  уже ждут тебя в каталоге, не откладывай красоту на завтра!"
+							titleStyle={{
+								fontWeight: 500,
+								color: 'white',
+								padding: 12,
+								background:
+									'linear-gradient(138.93deg, #649802 17.79%, #1F5201 83.6%)',
+							}}
+						/>
+					</SwiperSlide>
+
+					<div className="absolute w-220px h-11 bg-white-80pe rounded-56px flex justify-between z-10 plus conBtnsFirstSlider ..5x2:w-180px ..5x2:h-8">
+						<SliderBtnPrev onClick={prevSlideFilt} />
+						<SliderBtnNext onClick={nextSlideFilt} />
 					</div>
-				</div>
-			);
-		},
-		customPaging: (i) => (
-			<div
-				style={{
-					background: '#E5E6E4',
-					width: 25,
-					height: 3,
-				}}
-			/>
-		),
-	};
-
-	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
-	useEffect(() => {
-		if (slider.current) setKolichestvo(slider?.current.props?.children?.length);
-	}, [slider.current])
-
-	return (
-		// <div ref={refL} id='sec-1'>
-		// 	<div className="bg-white w-full tempSlider" ref={containerSlider}>
-		// 		<Slider {...settings} ref={slider} className='tempSlider'>
-		// 			<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
-		// 			<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
-		// 			<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
-		// 		</Slider>
-		// 	</div>
-		// </div>
-
-		<div ref={refL} id='sec-1'>
-			<div className="  w-full h-800px ..5x2:hidden discSlider" ref={containerSlider}>
-				<Slider {...settings} ref={slider} className=' w-full h-full'>
-					<DiscountSliderItem imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderHealth subTitle={'Бьюти-эксперт'} desc={'> 700 единиц товара c доставкой в 32 страны Мира!'} title={'ТВОЕЙ КРАСОТЫ И ЗДОРОВЬЯ'} imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderHealth isMedium={true} desc={'> 700 единиц товара c доставкой в 32 страны Мира!'} title={'ТВОЕЙ КРАСОТЫ И ЗДОРОВЬЯ'} imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderHealth onlyCat={true} noItalic={true} desc={'Жаркие скидки  уже ждут тебя в каталоге, не откладывай красоту на завтра!'} title={'ПРОВОДНИК ТВОЕЙ КРАСОТЫ'} imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderHealth bgGradient={true} onlyCat={true} noItalic={true} desc={'Жаркие скидки  уже ждут тебя в каталоге, не откладывай красоту на завтра!'} title={'ПРОВОДНИК ТВОЕЙ КРАСОТЫ'} imgProd={imgProduct} img={imgDiscount} />
-
-					<DiscountSliderFresh />
-					<DiscounstSliderDots rightImg={imgDiscount} discSubs={['против перхоти', 'против седины', 'против выпадения', 'еще эффект', 'еще эффект', 'еще эффект', 'еще эффект', 'еще эффект']} isOneIMG={imgProductF} one={true} two={true} tree={true} four={true} five={true} six={true} subTitle={'Эффекты:'} seven={true} eight={true} nine={true} ten={true} title={'Шампунь, маска, тоник «Bio Rehab»'} />
-					<DiscounstSliderDots imgEight={imgFive} imgTen={imgSix} imgTree={imgTwo} imgSix={imgFour} imgFive={imgTree} imgOne={imgOne} rightImg={productRight} discSubs={['лицо', 'тело', 'волосы', 'макияж', 'парфюм', 'мужчинам', 'детям', 'дом', 'гигиена', 'wellness', 'аксессуары']} one={true} tree={true} five={true} six={true} eight={true} ten={true} subTitle={'Категории:'} title={'Акция весны'} />
-
-
-				</Slider>
-			</div>
-
-
-
-			<div className="  w-full  ..5x2:block hidden  discSliderPhone" ref={containerSlider}>
-				<Slider {...settings} ref={slider} className='overflow-hidden w-full h-full'>
-					<DiscountSliderItem imgProd={imgProduct} showCentral={showCentral} img={imgDiscount} />
-					<DiscountSliderHealth subTitle={'Бьюти-эксперт'} desc={'> 700 единиц товара c доставкой в 32 страны Мира!'} title={'ТВОЕЙ КРАСОТЫ И ЗДОРОВЬЯ'} imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderHealth isMedium={true} desc={'> 700 единиц товара c доставкой в 32 страны Мира!'} title={'ТВОЕЙ КРАСОТЫ И ЗДОРОВЬЯ'} imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderHealth onlyCat={true} noItalic={true} desc={'Жаркие скидки  уже ждут тебя в каталоге, не откладывай красоту на завтра!'} title={'ПРОВОДНИК ТВОЕЙ КРАСОТЫ'} imgProd={imgProduct} img={imgDiscount} />
-					<DiscountSliderHealth bgGradient={true} onlyCat={true} noItalic={true} desc={'Жаркие скидки  уже ждут тебя в каталоге, не откладывай красоту на завтра!'} title={'ПРОВОДНИК ТВОЕЙ КРАСОТЫ'} imgProd={imgProduct} img={imgDiscount} />
-
-					<DiscountSliderFresh />
-					<DiscounstSliderDots rightImg={imgDiscount} discSubs={['против перхоти', 'против седины', 'против выпадения', 'еще эффект', 'еще эффект', 'еще эффект', 'еще эффект', 'еще эффект']} isOneIMG={imgProductF} one={true} two={true} tree={true} four={true} five={true} six={true} subTitle={'Эффекты:'} seven={true} eight={true} nine={true} ten={true} title={'Шампунь, маска, тоник «Bio Rehab»'} />
-					<DiscounstSliderDots imgEight={imgFive} imgTen={imgSix} imgTree={imgTwo} imgSix={imgFour} imgFive={imgTree} imgOne={imgOne} rightImg={productRight} discSubs={['лицо', 'тело', 'волосы', 'макияж', 'парфюм', 'мужчинам', 'детям', 'дом', 'гигиена', 'wellness', 'аксессуары']} one={true} tree={true} five={true} six={true} eight={true} ten={true} subTitle={'Категории:'} title={'Акция весны'} />
-
-				</Slider>
-			</div>
+				</Swiper>
+			</section>
 		</div>
-
 	);
-
 }
 export default DiscountsSlider;

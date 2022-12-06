@@ -248,7 +248,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',

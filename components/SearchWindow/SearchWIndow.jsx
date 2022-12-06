@@ -1,4 +1,3 @@
-
 import two from '../../images/templates/2seaAct.jpg';
 import SpecialOfferItem from '../SpecialOfferItem/SpecialOfferItem';
 import tree from '../../images/templates/treeItemSearch.jpg'
@@ -22,39 +21,39 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 		[dropDownds, setDropDowns] = useState({
 			sale: true,
 			free: false,
-			loal:false,
+			loal: false,
 			promo: false
 		})
 
 
 	const setFilter = (filt) => {
-		switch(filt) {
-			case('sale'):
+		switch (filt) {
+			case ('sale'):
 				return setDropDowns({
 					sale: !dropDownds.sale,
 					free: false,
-					loal:false,
+					loal: false,
 					promo: false
 				})
-			case('free'):
+			case ('free'):
 				return setDropDowns({
 					sale: false,
 					free: !dropDownds.free,
-					loal:false,
+					loal: false,
 					promo: false
 				})
-			case('loal'):
+			case ('loal'):
 				return setDropDowns({
 					sale: false,
 					free: false,
-					loal:!dropDownds.loal,
+					loal: !dropDownds.loal,
 					promo: false
 				})
-			case('promo'):
+			case ('promo'):
 				return setDropDowns({
 					sale: false,
 					free: false,
-					loal:false,
+					loal: false,
 					promo: !dropDownds.promo
 				})
 		}
@@ -157,9 +156,9 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 								<button className='text-13px font-montserrat font-medium   text-label-pink-2'>Удалить все</button>
 							</div>
 							<SearchWindowItem src={one} access={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} sale={15} balls={1.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
-							<SearchWindowItem src={twoP} access={true}  isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true}   balls={1.2} price={'620.00'} counter={true} like={true} priceDe={'3 750'} />
+							<SearchWindowItem src={twoP} access={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} balls={1.2} price={'620.00'} counter={true} like={true} priceDe={'3 750'} />
 
-							<SearchWindowItem src={one}  isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} sale={15} balls={1.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
+							<SearchWindowItem src={one} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} sale={15} balls={1.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
 							<SearchWindowItem src={twoP} noBorder={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} actions={true} balls={1.2} price={'620.00'} counter={true} like={true} priceDe={'3 750'} />
 							<SearchWindowItem src={one} isProductToDay={true} price={'0.00'} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} promo={true} balls={24} oldPriceFr={'740.00'} isFree={true} />
 							<SearchWindowItem src={twoT} text={'ПЕКТИНОВЫЙ КИСЕЛЬ С СОКОМ ОБЛЕПИХИ И ЯБЛОКАМИ «БАЛАНС»'} price={'0.00'} oldPriceFr={'89.00'} isPresent={true} isStart={true} />

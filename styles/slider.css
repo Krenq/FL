@@ -698,6 +698,119 @@
 
 	.image-container {
 		width: 100%;
+
+	}
+
+	.image-container span {
+		width: 100% !important;
+	}
+
+	.image-container div {
+		position: unset !important;
+	}
+
+	.image-container .image {
+		margin-top: -130% !important;
+		width: 100% !important;
+		position: relative !important;
+		max-height: 390px !important;
+		height: unset !important;
+		object-fit: cover !important;
+	}
+
+	.plusDiscItem {
+		transform: translate(-1px, -1px) !important;
+	}
+}
+
+.foliagePart {
+	transform: rotateY(180deg);
+}
+
+.special .slick-list .slick-track .slick-slide div {
+	border-bottom: none !important;
+}
+
+.leading-120 {
+	line-height: 120% !important;
+}
+
+.headerAbility {
+	left: 50%;
+	/* transform: translateX(-50%); */
+}
+
+.homeSVGINSTR svg {
+	height: 77px;
+	width: 77px;
+}
+
+.partners .slick-dots {
+	transform: translate(-24px, -35px);
+}
+
+.prevPartner {
+	bottom: 20px;
+}
+
+.nextPartner {
+	bottom: 40px;
+}
+
+.logo img {
+	height: 50px !important;
+}
+
+.instItemText {
+	font-size: 110% !important;
+}
+
+.nabSea {
+	margin-top: -70px !important;
+}
+
+.timerSea {
+	top: 210px;
+	height: 28px;
+}
+
+.hrSea {
+	top: 196px;
+}
+
+
+
+.image-containerPART {
+	width: 100%;
+
+}
+
+.image-containerPART div {
+	position: unset !important;
+}
+
+@media (max-width: 1000px) {
+	.newsSlider .slick-dots ul li div {
+		width: 25px !important;
+	}
+
+	.anti {
+		height: 198px;
+	}
+
+	.arrowAdapt {
+		height: 14px !important;
+		width: 8px !important;
+		margin: 1px 0;
+	}
+
+	.buttonY {
+		padding-top: 7px !important;
+		padding-bottom: 7px !important;
+	}
+
+	.image-container {
+		width: 100%;
 	}
 
 	.image-container span {
@@ -1522,6 +1635,7 @@
 	height: 4px;
 }
 
+
 .specialItemSliderDots .slick-dots li.slick-active button:before {
 	background-color: #337202;
 	opacity: 1;
@@ -1736,6 +1850,315 @@
 	height: 52px;
 	width: 52px;
 }
+
+.foryou::-webkit-scrollbar {
+	width: 4px;
+	background: rgba(207, 210, 205, 0.5);
+
+
+}
+
+@media (max-height: 885px) {
+	.discSliderPhone {
+		height: 73vh !important;
+	}
+
+	.w-idia {
+		width: 208px !important;
+	}
+}
+
+@media (max-height: 810px) {
+	.discSliderPhone {
+		height: 70vh !important;
+	}
+}
+
+.searchwindow {
+	width: 1440px;
+	right: 215% !important;
+}
+
+.mySwiperAct .swiper-slide {
+	display: flex;
+	justify-content: center;
+}
+
+.foryou::-webkit-scrollbar-thumb {
+	background-color: #979797;
+
+	border-radius: 20px;
+
+}
+
+
+
+
+.basketItems {
+	height: 610px;
+	overflow-x: hidden !important;
+	overflow: auto;
+}
+
+.itemSeeAll {
+	width: 210px;
+}
+
+.w-176px {
+	width: 176px !important;
+}
+
+.cardHover:hover p {
+	color: #fff;
+
+}
+
+.cardHover:hover svg {
+	stroke: #fff;
+}
+
+.basketItems::-webkit-scrollbar {
+	width: 3px;
+	background: rgba(207, 210, 205, 0.5);
+
+}
+
+.tracking-widest-2px {
+	letter-spacing: 2px;
+}
+
+.basketItems::-webkit-scrollbar-thumb {
+	background-color: #979797;
+
+	border-radius: 20px;
+
+}
+
+@media (max-width: 650px) {
+	.logo img {
+		height: 28px !important;
+		width: 69px !important;
+	}
+
+	.deCat {
+		height: 172px !important;
+		width: 172px !important;
+	}
+
+	.confirm {
+		top: calc(100vh - 42px - 44px - 80px - 230px) !important;
+	}
+
+
+}
+
+
+.slick-slider div ul li:first-child div {
+	border-radius: 20px 0 0 20px !important;
+}
+
+.slick-slider div ul li:last-child div {
+	border-radius: 0 20px 20px 0 !important;
+}
+
+@media (max-width: 360px) {
+	.imgIBuy {
+		height: 330px;
+		width: 310px;
+	}
+
+	.customWidth {
+		width: 90px !important;
+		height: 90px !important;
+	}
+}
+
+
+@media (max-width: 355px) {
+	.imgIBuy {
+		height: auto;
+		width: auto;
+	}
+
+	.deCat {
+		height: 150px !important;
+	}
+}
+
+@media (max-width: 600px) {
+	.confirm {
+		top: calc(100vh - 42px - 44px - 80px - 220px) !important;
+	}
+
+	.titleSea {
+		top: 108px !important;
+	}
+
+	.samples {
+		height: 14px !important;
+		width: 36px !important;
+	}
+}
+
+.lineH {
+	line-height: 170% !important;
+}
+
+@media (max-width: 850) {
+	.storiesOpacity .slick-dots {
+		bottom: -40px !important;
+	}
+}
+
+.DEC {
+	width: 228px;
+	height: 228px;
+}
+
+.w-95 {
+	width: 95%;
+}
+
+.buttonShadow {
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activeButtonS {
+	height: 241px !important;
+	box-shadow: none !important;
+	background-color: #fcfdfb !important;
+}
+
+.activeButtonS .svgI {
+	transform: rotate(180deg);
+}
+
+
+@media (max-width: 450px) {
+	.searchA {
+		height: 24px !important;
+		width: 24px !important;
+	}
+
+	.h360 {
+		height: 360px;
+	}
+
+	.buttonClickPromo {
+		width: 200px !important;
+		height: 44px !important;
+	}
+
+	.image-containerS {
+		width: 100%;
+	}
+
+	.image-containerS div {
+		position: unset !important;
+	}
+
+	.image-containerS .image {
+		margin-top: -50% !important;
+		width: 100% !important;
+		position: relative !important;
+		height: 112px !important;
+		object-fit: cover !important;
+	}
+
+	.image-containerSIV {
+		width: 100%;
+	}
+
+	.image-containerSIV div {
+		position: unset !important;
+	}
+
+	.image-containerSIV .image {
+		margin-top: -105% !important;
+		width: 100% !important;
+		position: relative !important;
+		height: 330px !important;
+		object-fit: cover !important;
+	}
+}
+
+.slick-dots {
+	height: 32px !important;
+}
+
+/* .specialSlider .slick-slide {
+	margin: 0 8px 0 0 !important;
+}
+
+.specialSlider .slick-list {
+	margin: 0 -8px 0 0 !important;
+} */
+
+
+@media (max-height: 735px) {
+	.discSlider {
+		height: 67vh !important;
+	}
+}
+
+
+@media (max-height: 665px) {
+	.discSlider {
+		height: 64vh !important;
+	}
+}
+
+
+@media (max-height: 610px) {
+	.discSlider {
+		height: 61vh !important;
+	}
+}
+
+
+@media (max-height: 565px) {
+	.discSlider {
+		height: 58vh !important;
+	}
+}
+
+
+@media (max-height: 525px) {
+	.discSlider {
+		height: 55vh !important;
+	}
+}
+
+/* Checked */
+.inputRadio[type=radio]:checked+.catalCurc {
+	background: url('../images/templates/checked.png') -1px 0 no-repeat;
+	border: none;
+}
+
+@media (max-height: 490px) {
+	.discSlider {
+		height: 52vh !important;
+	}
+}
+
+
+@media (max-height: 460px) {
+	.discSlider {
+		height: 49vh !important;
+	}
+}
+
+@media (max-height: 1020px) {
+	.discSliderPhone {
+		height: 75vh !important;
+	}
+}
+
+.itemSlideDrop {
+	height: 52px;
+	width: 52px;
+}
+
 
 .foryou::-webkit-scrollbar {
 	width: 4px;

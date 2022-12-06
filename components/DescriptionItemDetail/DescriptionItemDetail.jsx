@@ -586,6 +586,7 @@ const DescriptionItemDetail = ({ description }) => {
 							</div>
 
 						</div>
+
 						<div className='bg-input-error-bg pl-4 py-3 px-2'>
 							<p className='.2x1:text-10px font-montserrat leading-140% text-11px font-normal flex items-center'>
 								<svg className='mr-2' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
