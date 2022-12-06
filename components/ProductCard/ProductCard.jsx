@@ -460,7 +460,7 @@ export default function ProductCard({ obj }) {
 
 						return (
 							<SwiperSlide>
-								<div className={` ${styles}`}>
+								<div className={` ${obj.isDetailCard ? 'mt-5 mx-29px !w-218px !h-218px ..5x2:!w-130px ..5x2:!h-130px ..5x2:mx-22px' : styles} `}>
 									<Image src={el} quality={100} />
 								</div>
 							</SwiperSlide>
@@ -584,22 +584,22 @@ export default function ProductCard({ obj }) {
 					<div
 						onClick={() => currentColorHandler('1')}
 						className={` bg-label-pink cursor-pointer ${currentColor === '1'
-								? 'w-10px h-10px border border-gray-border'
-								: 'w-6px h-6px'
+							? 'w-10px h-10px border border-gray-border'
+							: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 					<div
 						onClick={() => currentColorHandler('2')}
 						className={` bg-label-orange cursor-pointer ${currentColor === '2'
-								? 'w-10px h-10px border border-gray-border'
-								: 'w-6px h-6px'
+							? 'w-10px h-10px border border-gray-border'
+							: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 					<div
 						onClick={() => currentColorHandler('3')}
 						className={` bg-label-green cursor-pointer ${currentColor === '3'
-								? 'w-10px h-10px border border-gray-border '
-								: 'w-6px h-6px'
+							? 'w-10px h-10px border border-gray-border '
+							: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 				</div>

@@ -77,6 +77,7 @@ const SeeLastDetails = () => {
 						<ProductCard
 							obj={{
 								img: [specialOne],
+								isDetailCard: true,
 								bgWhite: true,
 								text: 'шампунь для глубоко очищения с углем',
 								iText: 'Акции',
@@ -103,7 +104,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -125,7 +126,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -147,7 +148,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -168,7 +169,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -189,31 +190,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
-								newLabel: true,
-
-								saleLabel: true,
-								price: {
-									old: '₽ 920.00',
-									new: '₽ 764.00',
-								},
-							}}
-						/>
-					</SwiperSlide>
-
-
-
-					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<ProductCard
-							obj={{
-								img: [tree, tree],
-								text: ' питательный шампунь с корнем имбиря ',
-								iText: 'Состав акции',
-								bgWhite: true,
-								balls: '1.4 Б',
-								priceDe: '3 750',
-								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -237,9 +214,33 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
+							}}
+						/>
+					</SwiperSlide>
+
+
+
+					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
+						<ProductCard
+							obj={{
+								img: [tree, tree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
+								priceDe: '3 750',
+								packS: '4=5',
+
+								newLabel: true,
+								isDetailCard: true,
 								saleLabel: true,
 								price: {
 									old: '₽ 920.00',
@@ -260,7 +261,7 @@ const SeeLastDetails = () => {
 								packS: '4=5',
 
 								newLabel: true,
-
+								isDetailCard: true,
 								saleLabel: true,
 								price: {
 									old: '₽ 920.00',
@@ -282,7 +283,7 @@ const SeeLastDetails = () => {
 								packS: '4=5',
 
 								newLabel: true,
-
+								isDetailCard: true,
 								saleLabel: true,
 								price: {
 									old: '₽ 920.00',
@@ -300,7 +301,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,

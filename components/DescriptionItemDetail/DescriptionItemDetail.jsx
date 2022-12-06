@@ -31,6 +31,20 @@ const DescriptionItemDetail = ({ description }) => {
 		[currentLenghtProduct, setCurrentLenghtProduct] = useState(1),
 		[hoverHeart, setHoverHeart] = useState(false)
 
+	const [showCopy, setShowCopy] = useState(false),
+		copy = () => {
+			navigator.clipboard.writeText('30115/01')
+				.then(() => {
+					setShowCopy(true)
+					setTimeout(() => {
+						setShowCopy(false)
+					}, 1500)
+				})
+				.catch(err => {
+					console.log('error copy text', err);
+				})
+		}
+
 	const hoverSet = () => setButtonHover(!buttonHover),
 		hoverNext = () => setButtonHoverNext(!buttonHoverNext)
 
@@ -89,7 +103,8 @@ const DescriptionItemDetail = ({ description }) => {
 		prevSlide = () => {
 			if (slider.current !== null && slider.current.swiper !== null) slider.current.swiper.slidePrev();
 		},
-		scrollDescription = () => window.scrollTo({ top: 1500 })
+		scrollDescription = () => window.scrollTo({ top: 1500 }),
+		scrollDescriptionPhone = () => window.scrollTo({ top: 1200 })
 
 
 
@@ -318,20 +333,32 @@ const DescriptionItemDetail = ({ description }) => {
 
 						</div>
 					</div>
-					<div className="mt-6 transformD ..5x1:w-64 ..5x1:mx-4  w-full ..5x2:w-full ..5x2:!translate-x-0 .6x3:w-96  mr-12 .4x1:w-80 .2x10:mr-2 .1x1:mr-0">
+					<div className="mt-6 transformD ..5x1:w-64 ..5x2:mx-0 ..5x1:mx-4  w-full ..5x2:w-full ..5x2:!translate-x-0 .6x3:w-96  mr-12 .4x1:w-80 .2x10:mr-2 .1x1:mr-0">
 						<p className="font-montserrat font-medium text-xl mb-2 .1x1:mb-0.5 .5x1:text-sm ..7x1:text-sm">Забота о себе каждый день</p>
 						<p className="font-montserrat .6x3:w-full  text-black-70pe w-475px ..5x1:w-auto .6x3:text-13px .1x1:text-gray-quick-silver ..7x11:h-9 textdots leading-140%">Маска отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения, придает коже ухоженный вид. Насыщает питательными элементами, удерживает влагу внутри, отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения</p>
 						<button onClick={scrollDescription} className="..6x04:hidden font-montserrat font-medium text-13px text-primary  mb-5 .1x1:mb-1">Всё о товаре</button>
-						<button className="..6x04:block hidden font-montserrat font-medium text-13px border-b border-dashed border-primary text-primary  mb-5 mt-1 .1x1:mb-1">Подробнее о товаре</button>
+						<button onClick={scrollDescriptionPhone} className="..6x04:block hidden font-montserrat font-medium text-13px border-b border-dashed border-primary text-primary  mb-5 mt-1 .1x1:mb-1">Подробнее о товаре</button>
 
-						<p className=".3x1:text-13px ..6x04:hidden .1x1:mb-1.5 font-montserrat mb-3 text-gray-quick-silver flex  items-center ">Артикул: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px flex items-center ">30115/01 <svg className=" ml-6px" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<p onClick={copy} className="cursor-pointer .3x1:text-13px ..6x04:hidden .1x1:mb-1.5 font-montserrat mb-3 relative text-gray-quick-silver flex  items-center ">Артикул: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px flex items-center ">30115/01 <svg className=" ml-6px" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<mask id="mask0_2812_712213" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
 								<path fillRule="evenodd" clipRule="evenodd" d="M7.35034 0.75H15.6004C16.551 0.75 17.2504 1.44937 17.2504 2.40001V10.65C17.2504 11.6007 16.551 12.3001 15.6004 12.3001H12.3001V15.6C12.3001 16.5506 11.6007 17.25 10.65 17.25H2.40001C1.44937 17.25 0.75 16.5506 0.75 15.6V7.34992C0.75 6.39929 1.44937 5.69992 2.40001 5.69992H5.70033V2.40001C5.70033 1.44937 6.3997 0.75 7.35034 0.75ZM5.70033 7.34992H2.40001V15.6H10.65V12.3001H7.35034C6.3997 12.3001 5.70033 11.6007 5.70033 10.65V7.34992ZM7.34955 2.39989V10.6499H15.5996V2.39989H7.34955Z" fill="white" />
 							</mask>
 							<g mask="url(#mask0_2812_712213)">
 								<rect x="-0.900391" y="-0.899902" width="19.8001" height="19.8001" fill="#DBDCDA" />
 							</g>
-						</svg></span>  </p>
+						</svg></span>
+							{showCopy && <div className="absolute h-42px right-120px bg-black-70pe w-36 flex items-center justify-center">
+								<div className="relative text-11px font-montserrat text-white-80pe leading-140% px-2">
+									Скопировано в буфер обмена
+									<div className="absolute h-7px w-7px -left-1 top-3 rotSearchHover bg-trean">
+
+									</div>
+								</div>
+
+
+							</div>}
+
+						</p>
 						<p className=".3x1:text-13px ..6x04:hidden .1x1:mb-1.5 font-montserrat mb-3 text-gray-quick-silver flex  items-center ">Серия: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-2px underline">COLLAGEN ACTIVE</span></p>
 						<p className=".3x1:text-13px ..6x04:hidden .1x1:mb-1.5 font-montserrat mb-3 text-gray-quick-silver flex  items-center ">Вес: <span className="ml-6px font-montserrat text-gray-quick-silver">18г.</span></p>
 						<p className=".3x1:text-13px ..6x04:hidden .1x1:mb-1.5 font-montserrat mb-3 text-gray-quick-silver flex  items-center ">Возраст: <span className="ml-6px font-montserrat text-gray-quick-silver">любой возраст</span></p>
@@ -508,8 +535,8 @@ const DescriptionItemDetail = ({ description }) => {
 						</div>
 
 						<div className="mt-3 flex justify-between">
-							<button className="h-14 flex-1 .1x1:h-12 border border-gray-light2 font-montserrat text-13px font-medium text-label-orange tracking-wider transition-all hover:bg-input-disable hover:text-white mr-1.5 .4x1:text-10px">ДОБАВЛЕНО ЗА DE</button>
-							<button className="h-14 flex-1 .1x1:h-12 bg-primary   w-222px tracking-wider font-montserrat font-semibold text-13px hover:bg-primary-hover transition-all text-white ml-1.5 .4x1:text-10px">В КОРЗИНЕ</button>
+							<button className="h-14 flex-1 .1x1:h-12 border border-gray-light2 font-montserrat text-13px font-medium text-label-orange tracking-wider transition-all hover:bg-label-orange hover:text-white mr-1.5 .4x1:text-10px">ДОБАВЛЕНО ЗА DE</button>
+							<button className="h-14 flex-1 .1x1:h-12 bg-primary   w-222px tracking-wider border border-primary font-montserrat font-semibold text-13px hover:bg-white hover:text-primary hover:border-gray-light2 transition-all text-white ml-1.5 .4x1:text-10px">В КОРЗИНЕ</button>
 
 						</div>
 					</div>
@@ -610,20 +637,20 @@ const DescriptionItemDetail = ({ description }) => {
 
 							<div className="ml-12">
 								<p className='font-montserrat font-semibold ..6x04:text-13px    ..6x04:font-medium .1x1:text-13px'>Бесплатная доставка</p>
-								<div className={`flex items-center ${dropDownds.free ? 'flex-wrap' : ''}`}>
-									<div className='flex items-center'>
+								<div className={`flex items-center  ${dropDownds.free ? 'flex-wrap' : ''}`}>
+									<div className='flex items-center mb-6px'>
 										<p className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Курьер</p>
 										<span className='..7x230:text-9px ..5x1:text-8px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 .4x1:hidden ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg> от 2 500 ₽</span>
 									</div>
-									<div className={`${dropDownds.free ? 'mr-2' : ""} flex items-center`}>
+									<div className={`${dropDownds.free ? 'mr-2' : ""} mb-6px flex items-center`}>
 										<p className='font-montserrat  ..7x230:text-10px   text-13px font-normal mr-1  ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>ПВЗ</p>
 										<span className='..7x230:text-9px ..5x1:text-8px .2x00:text-10px rounded-xl .2x00:mr-0.5 ..7x230:px-1 ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center' ><svg className="mr-1 .4x1:hidden ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg>от 1 500 ₽</span>
 									</div>
-									<div className={`flex items-center mt-6px ${dropDownds.free ? 'block' : 'hidden'}`}>
+									<div className={`flex items-center mb-6px ${dropDownds.free ? 'block' : 'hidden'}`}>
 										<p className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Бутики</p>
 										<span className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />

@@ -822,6 +822,11 @@
 	transform: rotate(45deg);
 }
 
+.bg-trean {
+	background-color: rgb(76 76 76);
+}
+
+
 .promoH:hover section {
 	display: block;
 }

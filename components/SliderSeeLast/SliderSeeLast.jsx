@@ -68,7 +68,7 @@ const SliderSeeLast = () => {
 							bgWhite: true,
 							balls: '1.4 Б',
 							priceDe: '3 750',
-
+							isDetailCard: true,
 
 
 							price: {
@@ -88,7 +88,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -108,7 +108,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -127,7 +127,7 @@ const SliderSeeLast = () => {
 							bgWhite: true,
 							balls: '1.4 Б',
 							priceDe: '3 750',
-
+							isDetailCard: true,
 
 
 							price: {
@@ -146,7 +146,7 @@ const SliderSeeLast = () => {
 							bgWhite: true,
 							balls: '1.4 Б',
 							priceDe: '3 750',
-
+							isDetailCard: true,
 
 
 							price: {
@@ -165,7 +165,29 @@ const SliderSeeLast = () => {
 							bgWhite: true,
 							balls: '1.4 Б',
 							priceDe: '3 750',
+							isDetailCard: true,
 
+
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							},
+						}}
+					/>
+				</SwiperSlide>
+
+
+
+				<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 " >
+					<ProductCard
+						obj={{
+							img: [two, two],
+							text: ' питательный шампунь с корнем имбиря ',
+							iText: 'Состав акции',
+							bgWhite: true,
+							balls: '1.4 Б',
+							priceDe: '3 750',
+							isDetailCard: true,
 
 
 							price: {
@@ -188,29 +210,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
-
-							price: {
-								old: '₽ 920.00',
-								new: '₽ 764.00',
-							},
-						}}
-					/>
-				</SwiperSlide>
-
-
-
-				<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 " >
-					<ProductCard
-						obj={{
-							img: [two, two],
-							text: ' питательный шампунь с корнем имбиря ',
-							iText: 'Состав акции',
-							bgWhite: true,
-							balls: '1.4 Б',
-							priceDe: '3 750',
-
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -229,7 +229,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -266,7 +266,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',

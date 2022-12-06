@@ -24,6 +24,7 @@ import { Navigation, Pagination } from "swiper"
 import EffectsItemDetail from "../EffectsItemDetail/EffectsItemDetail"
 const DetailComments = ({ setShowL, refF }) => {
 	const sliderPhoto = useRef(null)
+
 	const [currentFilter, setCurrentFilter] = useState({
 		photo: true,
 		video: false,
@@ -336,7 +337,7 @@ const DetailComments = ({ setShowL, refF }) => {
 							</div>
 							<div className="flex mt-3 flex-wrap">
 								<div className="w-150px mr-3 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-									<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-14px top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 									</svg>
 									<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
@@ -355,8 +356,8 @@ const DetailComments = ({ setShowL, refF }) => {
 
 									</div>
 								</div>
-								<div className="w-150px   mb-3 relative ..7x59:w-130px ..7x2:w-120px ..7x59:mb-1 flex justify-end bg-gray-light">
-									<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-14px top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<div className="w-150px mr-3 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
+									<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 									</svg>
 									<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
@@ -375,8 +376,8 @@ const DetailComments = ({ setShowL, refF }) => {
 
 									</div>
 								</div>
-								<div className="w-150px mr-3 ..7x59:mr-1 ..7x2:mr-0 ..7x59:w-130px ..7x2:w-120px ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-									<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-14px top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<div className="w-150px mr-3 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
+									<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 									</svg>
 									<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
@@ -554,130 +555,167 @@ const DetailComments = ({ setShowL, refF }) => {
 
 						</p>
 					</div>
+
 					<div className="flex flex-wrap ">
-						<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
-							<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
-								<input className='hidden' id='checkSearchAll' type="checkbox" />
-								<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
-							</div>
 
-							<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-							</svg>
+						{currentFilter.photo && <>
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
+									<input className='hidden' id='checkSearchAll' type="checkbox" />
+									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
+								</div>
 
-							<div className="pb-3 ..5x1:w-56 ..5x1:h-56">
+								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
+								</svg>
 
-								<Image src={matOne} />
-							</div>
-						</div>
-						<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
-							<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
-								<input className='hidden' id='checkSearchAll' type="checkbox" />
-								<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
-							</div>
-
-							<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-							</svg>
-
-							<div className="pb-3 ..5x1:w-56 ..5x1:h-56">
-
-								<Image src={matOne} />
-							</div>
-						</div>
-						<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
-							<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
-								<input className='hidden' id='checkSearchAll' type="checkbox" />
-								<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
-							</div>
-
-							<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-							</svg>
-
-							<div className="pb-3 ..5x1:w-56 ..5x1:h-56">
-
-								<Image src={matOne} />
-							</div>
-						</div>
-						<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
-							<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
-								<input className='hidden' id='checkSearchAll' type="checkbox" />
-								<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
-							</div>
-
-							<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-							</svg>
-
-							<div className="pb-3 ..5x1:w-56 ..5x1:h-56">
-
-								<Image src={matOne} />
-							</div>
-						</div>
-						<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI h-52 transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
-							<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
-								<input className='hidden' id='checkSearchAll' type="checkbox" />
-								<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
-							</div>
-
-							<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-							</svg>
-
-							<div className="pb-3 relative ..5x1:w-56 ">
-								<div className="absolute z-10 left-0 right-0 bottom-0 top-0 flex items-center justify-center">
-									<svg className="" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path fill-rule="evenodd" clip-rule="evenodd" d="M38.8635 30.8286C39.4964 30.4632 40.2761 30.4632 40.909 30.8286L62.3863 43.2286C63.0191 43.594 63.409 44.2692 63.409 45C63.409 45.7308 63.0191 46.406 62.3863 46.7714L40.909 59.1714C40.2761 59.5368 39.4964 59.5368 38.8635 59.1714C38.2307 58.806 37.8408 58.1307 37.8408 57.4V32.6001C37.8408 31.8693 38.2307 31.194 38.8635 30.8286ZM41.9317 36.1429V53.8571L57.2726 45L41.9317 36.1429Z" fill="white" />
-										<path d="M89.4999 45C89.4999 69.5767 69.5766 89.5 45 89.5C20.4233 89.5 0.5 69.5767 0.5 45C0.5 20.4233 20.4233 0.5 45 0.5C69.5766 0.5 89.4999 20.4233 89.4999 45Z" stroke="white" stroke-opacity="0.8" />
+								<div className="pb-3 ..5x1:w-56 ..5x1:h-56 relative">
+									<svg className="absolute right-3 hidden top-3 hoverShowI z-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.9997 9.33337C14.3416 9.33337 14.6233 9.59073 14.6619 9.92229L14.6663 10V14C14.6663 14.3419 14.409 14.6237 14.0774 14.6622L13.9997 14.6667H9.99967C9.63148 14.6667 9.33301 14.3682 9.33301 14C9.33301 13.6581 9.59037 13.3764 9.92193 13.3379L9.99967 13.3334H13.333V10C13.333 9.65815 13.5904 9.37637 13.9219 9.33786L13.9997 9.33337ZM6.80441 9.1953C7.04473 9.43563 7.06322 9.81378 6.85987 10.0753L6.80441 10.1381L3.60901 13.3334H5.99967C6.34156 13.3334 6.62335 13.5907 6.66186 13.9223L6.66634 14C6.66634 14.3419 6.40898 14.6237 6.07742 14.6622L5.99967 14.6667H1.99967L1.97817 14.6664C1.96616 14.666 1.95416 14.6653 1.94219 14.6642L1.99967 14.6667C1.96593 14.6667 1.93277 14.6642 1.90037 14.6594C1.88904 14.6576 1.87742 14.6556 1.86586 14.6532C1.85118 14.6503 1.83672 14.6468 1.82245 14.6429C1.81203 14.64 1.80177 14.6369 1.79158 14.6335C1.77848 14.6293 1.76529 14.6245 1.7523 14.6193C1.74048 14.6146 1.72894 14.6096 1.71753 14.6043C1.70375 14.5978 1.69015 14.5908 1.67682 14.5835C1.66874 14.579 1.6606 14.5743 1.65254 14.5694C1.63549 14.5589 1.61892 14.5477 1.6029 14.5358C1.59794 14.5322 1.59311 14.5285 1.58833 14.5248C1.54622 14.4917 1.50804 14.4535 1.47487 14.4112L1.52827 14.4714C1.50467 14.4478 1.48322 14.4229 1.4639 14.3969C1.452 14.3808 1.44082 14.3642 1.43039 14.3471C1.42541 14.3391 1.42067 14.331 1.41612 14.3227C1.40887 14.3096 1.40193 14.296 1.39544 14.2821C1.39013 14.2708 1.38514 14.2592 1.38049 14.2476C1.37522 14.2344 1.37042 14.2212 1.36604 14.2079C1.36283 14.1979 1.35974 14.1877 1.3569 14.1774C1.3529 14.163 1.34943 14.1485 1.34645 14.1339C1.34414 14.1223 1.34209 14.1107 1.34035 14.099C1.33929 14.0922 1.33833 14.085 1.33749 14.0778L1.33565 14.0595C1.33427 14.044 1.33343 14.0285 1.33313 14.0129L1.33301 14V10C1.33301 9.63185 1.63148 9.33337 1.99967 9.33337C2.34156 9.33337 2.62335 9.59073 2.66186 9.92229L2.66634 10V12.3894L5.8616 9.1953C6.12195 8.93495 6.54406 8.93495 6.80441 9.1953ZM13.9997 1.33337L14.0126 1.3335C14.0281 1.3338 14.0437 1.33464 14.0592 1.33602L13.9997 1.33337C14.0334 1.33337 14.0666 1.33588 14.099 1.34072C14.1103 1.34246 14.1219 1.34451 14.1335 1.34687C14.1482 1.3498 14.1626 1.35326 14.1769 1.35719C14.1873 1.36011 14.1976 1.36319 14.2078 1.36653C14.2209 1.37079 14.2341 1.37558 14.247 1.38078C14.2589 1.38551 14.2704 1.39049 14.2818 1.39582C14.2956 1.40229 14.3092 1.40924 14.3225 1.41662C14.3306 1.42104 14.3387 1.42578 14.3468 1.4307C14.3639 1.44119 14.3804 1.45237 14.3964 1.46425C14.4014 1.46788 14.4062 1.47156 14.411 1.47533C14.4531 1.50841 14.4913 1.54659 14.5245 1.58887L14.4711 1.52864C14.4947 1.55223 14.5161 1.57716 14.5355 1.60317C14.5473 1.61929 14.5585 1.63586 14.569 1.65293C14.5739 1.66097 14.5787 1.66911 14.5832 1.67733C14.5905 1.69051 14.5974 1.70411 14.6039 1.71797C14.6092 1.72931 14.6142 1.74084 14.6189 1.75248C14.6241 1.76565 14.6289 1.77884 14.6333 1.79222C14.6365 1.80214 14.6396 1.8124 14.6424 1.82271C14.6465 1.83708 14.6499 1.85154 14.6529 1.86618C14.6552 1.87779 14.6573 1.88941 14.659 1.90106C14.6601 1.90788 14.661 1.91507 14.6619 1.92229L14.6639 1.94255C14.6649 1.95453 14.6656 1.96653 14.666 1.97854L14.6663 2.00004V6.00004C14.6663 6.36823 14.3679 6.66671 13.9997 6.66671C13.6578 6.66671 13.376 6.40935 13.3375 6.07779L13.333 6.00004V3.60937L10.1377 6.80478C9.8774 7.06513 9.45529 7.06513 9.19494 6.80478C8.95461 6.56446 8.93613 6.1863 9.13948 5.92477L9.19494 5.86197L12.389 2.66671H9.99967C9.65778 2.66671 9.376 2.40935 9.33749 2.07779L9.33301 2.00004C9.33301 1.65815 9.59037 1.37637 9.92193 1.33786L9.99967 1.33337H13.9997ZM5.99967 1.33337C6.36786 1.33337 6.66634 1.63185 6.66634 2.00004C6.66634 2.34193 6.40898 2.62371 6.07742 2.66222L5.99967 2.66671H2.66634V6.00004C2.66634 6.34193 2.40898 6.62371 2.07742 6.66222L1.99967 6.66671C1.65778 6.66671 1.376 6.40935 1.33749 6.07779L1.33301 6.00004V2.00004C1.33301 1.65815 1.59037 1.37637 1.92193 1.33786L1.99967 1.33337H5.99967Z" fill="white" fill-opacity="0.8" />
 									</svg>
+
+									<Image src={matOne} />
+								</div>
+							</div>
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
+									<input className='hidden' id='checkSearchAll' type="checkbox" />
+									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
 								</div>
 
+								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
+								</svg>
 
-								<Image src={videoPreview} />
+								<div className="pb-3 ..5x1:w-56 ..5x1:h-56 relative">
+									<svg className="absolute right-3 hidden top-3 hoverShowI z-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.9997 9.33337C14.3416 9.33337 14.6233 9.59073 14.6619 9.92229L14.6663 10V14C14.6663 14.3419 14.409 14.6237 14.0774 14.6622L13.9997 14.6667H9.99967C9.63148 14.6667 9.33301 14.3682 9.33301 14C9.33301 13.6581 9.59037 13.3764 9.92193 13.3379L9.99967 13.3334H13.333V10C13.333 9.65815 13.5904 9.37637 13.9219 9.33786L13.9997 9.33337ZM6.80441 9.1953C7.04473 9.43563 7.06322 9.81378 6.85987 10.0753L6.80441 10.1381L3.60901 13.3334H5.99967C6.34156 13.3334 6.62335 13.5907 6.66186 13.9223L6.66634 14C6.66634 14.3419 6.40898 14.6237 6.07742 14.6622L5.99967 14.6667H1.99967L1.97817 14.6664C1.96616 14.666 1.95416 14.6653 1.94219 14.6642L1.99967 14.6667C1.96593 14.6667 1.93277 14.6642 1.90037 14.6594C1.88904 14.6576 1.87742 14.6556 1.86586 14.6532C1.85118 14.6503 1.83672 14.6468 1.82245 14.6429C1.81203 14.64 1.80177 14.6369 1.79158 14.6335C1.77848 14.6293 1.76529 14.6245 1.7523 14.6193C1.74048 14.6146 1.72894 14.6096 1.71753 14.6043C1.70375 14.5978 1.69015 14.5908 1.67682 14.5835C1.66874 14.579 1.6606 14.5743 1.65254 14.5694C1.63549 14.5589 1.61892 14.5477 1.6029 14.5358C1.59794 14.5322 1.59311 14.5285 1.58833 14.5248C1.54622 14.4917 1.50804 14.4535 1.47487 14.4112L1.52827 14.4714C1.50467 14.4478 1.48322 14.4229 1.4639 14.3969C1.452 14.3808 1.44082 14.3642 1.43039 14.3471C1.42541 14.3391 1.42067 14.331 1.41612 14.3227C1.40887 14.3096 1.40193 14.296 1.39544 14.2821C1.39013 14.2708 1.38514 14.2592 1.38049 14.2476C1.37522 14.2344 1.37042 14.2212 1.36604 14.2079C1.36283 14.1979 1.35974 14.1877 1.3569 14.1774C1.3529 14.163 1.34943 14.1485 1.34645 14.1339C1.34414 14.1223 1.34209 14.1107 1.34035 14.099C1.33929 14.0922 1.33833 14.085 1.33749 14.0778L1.33565 14.0595C1.33427 14.044 1.33343 14.0285 1.33313 14.0129L1.33301 14V10C1.33301 9.63185 1.63148 9.33337 1.99967 9.33337C2.34156 9.33337 2.62335 9.59073 2.66186 9.92229L2.66634 10V12.3894L5.8616 9.1953C6.12195 8.93495 6.54406 8.93495 6.80441 9.1953ZM13.9997 1.33337L14.0126 1.3335C14.0281 1.3338 14.0437 1.33464 14.0592 1.33602L13.9997 1.33337C14.0334 1.33337 14.0666 1.33588 14.099 1.34072C14.1103 1.34246 14.1219 1.34451 14.1335 1.34687C14.1482 1.3498 14.1626 1.35326 14.1769 1.35719C14.1873 1.36011 14.1976 1.36319 14.2078 1.36653C14.2209 1.37079 14.2341 1.37558 14.247 1.38078C14.2589 1.38551 14.2704 1.39049 14.2818 1.39582C14.2956 1.40229 14.3092 1.40924 14.3225 1.41662C14.3306 1.42104 14.3387 1.42578 14.3468 1.4307C14.3639 1.44119 14.3804 1.45237 14.3964 1.46425C14.4014 1.46788 14.4062 1.47156 14.411 1.47533C14.4531 1.50841 14.4913 1.54659 14.5245 1.58887L14.4711 1.52864C14.4947 1.55223 14.5161 1.57716 14.5355 1.60317C14.5473 1.61929 14.5585 1.63586 14.569 1.65293C14.5739 1.66097 14.5787 1.66911 14.5832 1.67733C14.5905 1.69051 14.5974 1.70411 14.6039 1.71797C14.6092 1.72931 14.6142 1.74084 14.6189 1.75248C14.6241 1.76565 14.6289 1.77884 14.6333 1.79222C14.6365 1.80214 14.6396 1.8124 14.6424 1.82271C14.6465 1.83708 14.6499 1.85154 14.6529 1.86618C14.6552 1.87779 14.6573 1.88941 14.659 1.90106C14.6601 1.90788 14.661 1.91507 14.6619 1.92229L14.6639 1.94255C14.6649 1.95453 14.6656 1.96653 14.666 1.97854L14.6663 2.00004V6.00004C14.6663 6.36823 14.3679 6.66671 13.9997 6.66671C13.6578 6.66671 13.376 6.40935 13.3375 6.07779L13.333 6.00004V3.60937L10.1377 6.80478C9.8774 7.06513 9.45529 7.06513 9.19494 6.80478C8.95461 6.56446 8.93613 6.1863 9.13948 5.92477L9.19494 5.86197L12.389 2.66671H9.99967C9.65778 2.66671 9.376 2.40935 9.33749 2.07779L9.33301 2.00004C9.33301 1.65815 9.59037 1.37637 9.92193 1.33786L9.99967 1.33337H13.9997ZM5.99967 1.33337C6.36786 1.33337 6.66634 1.63185 6.66634 2.00004C6.66634 2.34193 6.40898 2.62371 6.07742 2.66222L5.99967 2.66671H2.66634V6.00004C2.66634 6.34193 2.40898 6.62371 2.07742 6.66222L1.99967 6.66671C1.65778 6.66671 1.376 6.40935 1.33749 6.07779L1.33301 6.00004V2.00004C1.33301 1.65815 1.59037 1.37637 1.92193 1.33786L1.99967 1.33337H5.99967Z" fill="white" fill-opacity="0.8" />
+									</svg>
+
+									<Image src={matOne} />
+								</div>
 							</div>
-						</div>
-						<div className="p-4 h-379px w-278px bg-gray-light">
-							<div className="h-full p-4 bg-white flex items-center justify-center">
-								<div className="flex items-center flex-col">
-									<p className="font-montserrat text-22px font-medium leading-120% text-center">Сертификат соответствия</p>
-									<p className="font-montserrat font-medium text-gray-quick-silver leading-120% mt-3 mb-11 text-center">Евразийский экономический союз</p>
-									<button>
-										<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g filter="url(#filter0_b_3037_526760)">
-												<circle cx="22" cy="22" r="22" fill="white" fill-opacity="0.8" />
-											</g>
-											<path d="M14 32H30.4706V29.6471H14M30.4706 19.0588H25.7647V12H18.7059V19.0588H14L22.2353 27.2941L30.4706 19.0588Z" fill="black" />
-											<defs>
-												<filter id="filter0_b_3037_526760" x="-4" y="-4" width="52" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-													<feFlood flood-opacity="0" result="BackgroundImageFix" />
-													<feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
-													<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3037_526760" />
-													<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3037_526760" result="shape" />
-												</filter>
-											</defs>
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
+									<input className='hidden' id='checkSearchAll' type="checkbox" />
+									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
+								</div>
+
+								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
+								</svg>
+
+								<div className="pb-3 ..5x1:w-56 ..5x1:h-56 relative">
+									<svg className="absolute right-3 hidden top-3 hoverShowI z-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.9997 9.33337C14.3416 9.33337 14.6233 9.59073 14.6619 9.92229L14.6663 10V14C14.6663 14.3419 14.409 14.6237 14.0774 14.6622L13.9997 14.6667H9.99967C9.63148 14.6667 9.33301 14.3682 9.33301 14C9.33301 13.6581 9.59037 13.3764 9.92193 13.3379L9.99967 13.3334H13.333V10C13.333 9.65815 13.5904 9.37637 13.9219 9.33786L13.9997 9.33337ZM6.80441 9.1953C7.04473 9.43563 7.06322 9.81378 6.85987 10.0753L6.80441 10.1381L3.60901 13.3334H5.99967C6.34156 13.3334 6.62335 13.5907 6.66186 13.9223L6.66634 14C6.66634 14.3419 6.40898 14.6237 6.07742 14.6622L5.99967 14.6667H1.99967L1.97817 14.6664C1.96616 14.666 1.95416 14.6653 1.94219 14.6642L1.99967 14.6667C1.96593 14.6667 1.93277 14.6642 1.90037 14.6594C1.88904 14.6576 1.87742 14.6556 1.86586 14.6532C1.85118 14.6503 1.83672 14.6468 1.82245 14.6429C1.81203 14.64 1.80177 14.6369 1.79158 14.6335C1.77848 14.6293 1.76529 14.6245 1.7523 14.6193C1.74048 14.6146 1.72894 14.6096 1.71753 14.6043C1.70375 14.5978 1.69015 14.5908 1.67682 14.5835C1.66874 14.579 1.6606 14.5743 1.65254 14.5694C1.63549 14.5589 1.61892 14.5477 1.6029 14.5358C1.59794 14.5322 1.59311 14.5285 1.58833 14.5248C1.54622 14.4917 1.50804 14.4535 1.47487 14.4112L1.52827 14.4714C1.50467 14.4478 1.48322 14.4229 1.4639 14.3969C1.452 14.3808 1.44082 14.3642 1.43039 14.3471C1.42541 14.3391 1.42067 14.331 1.41612 14.3227C1.40887 14.3096 1.40193 14.296 1.39544 14.2821C1.39013 14.2708 1.38514 14.2592 1.38049 14.2476C1.37522 14.2344 1.37042 14.2212 1.36604 14.2079C1.36283 14.1979 1.35974 14.1877 1.3569 14.1774C1.3529 14.163 1.34943 14.1485 1.34645 14.1339C1.34414 14.1223 1.34209 14.1107 1.34035 14.099C1.33929 14.0922 1.33833 14.085 1.33749 14.0778L1.33565 14.0595C1.33427 14.044 1.33343 14.0285 1.33313 14.0129L1.33301 14V10C1.33301 9.63185 1.63148 9.33337 1.99967 9.33337C2.34156 9.33337 2.62335 9.59073 2.66186 9.92229L2.66634 10V12.3894L5.8616 9.1953C6.12195 8.93495 6.54406 8.93495 6.80441 9.1953ZM13.9997 1.33337L14.0126 1.3335C14.0281 1.3338 14.0437 1.33464 14.0592 1.33602L13.9997 1.33337C14.0334 1.33337 14.0666 1.33588 14.099 1.34072C14.1103 1.34246 14.1219 1.34451 14.1335 1.34687C14.1482 1.3498 14.1626 1.35326 14.1769 1.35719C14.1873 1.36011 14.1976 1.36319 14.2078 1.36653C14.2209 1.37079 14.2341 1.37558 14.247 1.38078C14.2589 1.38551 14.2704 1.39049 14.2818 1.39582C14.2956 1.40229 14.3092 1.40924 14.3225 1.41662C14.3306 1.42104 14.3387 1.42578 14.3468 1.4307C14.3639 1.44119 14.3804 1.45237 14.3964 1.46425C14.4014 1.46788 14.4062 1.47156 14.411 1.47533C14.4531 1.50841 14.4913 1.54659 14.5245 1.58887L14.4711 1.52864C14.4947 1.55223 14.5161 1.57716 14.5355 1.60317C14.5473 1.61929 14.5585 1.63586 14.569 1.65293C14.5739 1.66097 14.5787 1.66911 14.5832 1.67733C14.5905 1.69051 14.5974 1.70411 14.6039 1.71797C14.6092 1.72931 14.6142 1.74084 14.6189 1.75248C14.6241 1.76565 14.6289 1.77884 14.6333 1.79222C14.6365 1.80214 14.6396 1.8124 14.6424 1.82271C14.6465 1.83708 14.6499 1.85154 14.6529 1.86618C14.6552 1.87779 14.6573 1.88941 14.659 1.90106C14.6601 1.90788 14.661 1.91507 14.6619 1.92229L14.6639 1.94255C14.6649 1.95453 14.6656 1.96653 14.666 1.97854L14.6663 2.00004V6.00004C14.6663 6.36823 14.3679 6.66671 13.9997 6.66671C13.6578 6.66671 13.376 6.40935 13.3375 6.07779L13.333 6.00004V3.60937L10.1377 6.80478C9.8774 7.06513 9.45529 7.06513 9.19494 6.80478C8.95461 6.56446 8.93613 6.1863 9.13948 5.92477L9.19494 5.86197L12.389 2.66671H9.99967C9.65778 2.66671 9.376 2.40935 9.33749 2.07779L9.33301 2.00004C9.33301 1.65815 9.59037 1.37637 9.92193 1.33786L9.99967 1.33337H13.9997ZM5.99967 1.33337C6.36786 1.33337 6.66634 1.63185 6.66634 2.00004C6.66634 2.34193 6.40898 2.62371 6.07742 2.66222L5.99967 2.66671H2.66634V6.00004C2.66634 6.34193 2.40898 6.62371 2.07742 6.66222L1.99967 6.66671C1.65778 6.66671 1.376 6.40935 1.33749 6.07779L1.33301 6.00004V2.00004C1.33301 1.65815 1.59037 1.37637 1.92193 1.33786L1.99967 1.33337H5.99967Z" fill="white" fill-opacity="0.8" />
+									</svg>
+
+									<Image src={matOne} />
+								</div>
+							</div>
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
+									<input className='hidden' id='checkSearchAll' type="checkbox" />
+									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
+								</div>
+
+								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
+								</svg>
+
+								<div className="pb-3 ..5x1:w-56 ..5x1:h-56 relative">
+									<svg className="absolute right-3 hidden top-3 hoverShowI z-10" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.9997 9.33337C14.3416 9.33337 14.6233 9.59073 14.6619 9.92229L14.6663 10V14C14.6663 14.3419 14.409 14.6237 14.0774 14.6622L13.9997 14.6667H9.99967C9.63148 14.6667 9.33301 14.3682 9.33301 14C9.33301 13.6581 9.59037 13.3764 9.92193 13.3379L9.99967 13.3334H13.333V10C13.333 9.65815 13.5904 9.37637 13.9219 9.33786L13.9997 9.33337ZM6.80441 9.1953C7.04473 9.43563 7.06322 9.81378 6.85987 10.0753L6.80441 10.1381L3.60901 13.3334H5.99967C6.34156 13.3334 6.62335 13.5907 6.66186 13.9223L6.66634 14C6.66634 14.3419 6.40898 14.6237 6.07742 14.6622L5.99967 14.6667H1.99967L1.97817 14.6664C1.96616 14.666 1.95416 14.6653 1.94219 14.6642L1.99967 14.6667C1.96593 14.6667 1.93277 14.6642 1.90037 14.6594C1.88904 14.6576 1.87742 14.6556 1.86586 14.6532C1.85118 14.6503 1.83672 14.6468 1.82245 14.6429C1.81203 14.64 1.80177 14.6369 1.79158 14.6335C1.77848 14.6293 1.76529 14.6245 1.7523 14.6193C1.74048 14.6146 1.72894 14.6096 1.71753 14.6043C1.70375 14.5978 1.69015 14.5908 1.67682 14.5835C1.66874 14.579 1.6606 14.5743 1.65254 14.5694C1.63549 14.5589 1.61892 14.5477 1.6029 14.5358C1.59794 14.5322 1.59311 14.5285 1.58833 14.5248C1.54622 14.4917 1.50804 14.4535 1.47487 14.4112L1.52827 14.4714C1.50467 14.4478 1.48322 14.4229 1.4639 14.3969C1.452 14.3808 1.44082 14.3642 1.43039 14.3471C1.42541 14.3391 1.42067 14.331 1.41612 14.3227C1.40887 14.3096 1.40193 14.296 1.39544 14.2821C1.39013 14.2708 1.38514 14.2592 1.38049 14.2476C1.37522 14.2344 1.37042 14.2212 1.36604 14.2079C1.36283 14.1979 1.35974 14.1877 1.3569 14.1774C1.3529 14.163 1.34943 14.1485 1.34645 14.1339C1.34414 14.1223 1.34209 14.1107 1.34035 14.099C1.33929 14.0922 1.33833 14.085 1.33749 14.0778L1.33565 14.0595C1.33427 14.044 1.33343 14.0285 1.33313 14.0129L1.33301 14V10C1.33301 9.63185 1.63148 9.33337 1.99967 9.33337C2.34156 9.33337 2.62335 9.59073 2.66186 9.92229L2.66634 10V12.3894L5.8616 9.1953C6.12195 8.93495 6.54406 8.93495 6.80441 9.1953ZM13.9997 1.33337L14.0126 1.3335C14.0281 1.3338 14.0437 1.33464 14.0592 1.33602L13.9997 1.33337C14.0334 1.33337 14.0666 1.33588 14.099 1.34072C14.1103 1.34246 14.1219 1.34451 14.1335 1.34687C14.1482 1.3498 14.1626 1.35326 14.1769 1.35719C14.1873 1.36011 14.1976 1.36319 14.2078 1.36653C14.2209 1.37079 14.2341 1.37558 14.247 1.38078C14.2589 1.38551 14.2704 1.39049 14.2818 1.39582C14.2956 1.40229 14.3092 1.40924 14.3225 1.41662C14.3306 1.42104 14.3387 1.42578 14.3468 1.4307C14.3639 1.44119 14.3804 1.45237 14.3964 1.46425C14.4014 1.46788 14.4062 1.47156 14.411 1.47533C14.4531 1.50841 14.4913 1.54659 14.5245 1.58887L14.4711 1.52864C14.4947 1.55223 14.5161 1.57716 14.5355 1.60317C14.5473 1.61929 14.5585 1.63586 14.569 1.65293C14.5739 1.66097 14.5787 1.66911 14.5832 1.67733C14.5905 1.69051 14.5974 1.70411 14.6039 1.71797C14.6092 1.72931 14.6142 1.74084 14.6189 1.75248C14.6241 1.76565 14.6289 1.77884 14.6333 1.79222C14.6365 1.80214 14.6396 1.8124 14.6424 1.82271C14.6465 1.83708 14.6499 1.85154 14.6529 1.86618C14.6552 1.87779 14.6573 1.88941 14.659 1.90106C14.6601 1.90788 14.661 1.91507 14.6619 1.92229L14.6639 1.94255C14.6649 1.95453 14.6656 1.96653 14.666 1.97854L14.6663 2.00004V6.00004C14.6663 6.36823 14.3679 6.66671 13.9997 6.66671C13.6578 6.66671 13.376 6.40935 13.3375 6.07779L13.333 6.00004V3.60937L10.1377 6.80478C9.8774 7.06513 9.45529 7.06513 9.19494 6.80478C8.95461 6.56446 8.93613 6.1863 9.13948 5.92477L9.19494 5.86197L12.389 2.66671H9.99967C9.65778 2.66671 9.376 2.40935 9.33749 2.07779L9.33301 2.00004C9.33301 1.65815 9.59037 1.37637 9.92193 1.33786L9.99967 1.33337H13.9997ZM5.99967 1.33337C6.36786 1.33337 6.66634 1.63185 6.66634 2.00004C6.66634 2.34193 6.40898 2.62371 6.07742 2.66222L5.99967 2.66671H2.66634V6.00004C2.66634 6.34193 2.40898 6.62371 2.07742 6.66222L1.99967 6.66671C1.65778 6.66671 1.376 6.40935 1.33749 6.07779L1.33301 6.00004V2.00004C1.33301 1.65815 1.59037 1.37637 1.92193 1.33786L1.99967 1.33337H5.99967Z" fill="white" fill-opacity="0.8" />
+									</svg>
+
+									<Image src={matOne} />
+								</div>
+							</div>
+						</>}
+						{currentFilter.video && <>
+							<div className="w-full flex pb-3">
+								<p className="font-montserrat font-medium  text-gray-quick-silver mr-4">Сортировка:</p>
+								<p className="mr-3 font-montserrat pb-0.5 font-medium text-primary border-b border-b-primary border-dotted">По умолчанию</p>
+								<p className="font-montserrat font-medium pb-0.5  border-b border-gray-quick-silver border-dotted text-black-70pe ">Без подписей</p>
+							</div>
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI h-52 transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
+									<input className='hidden' id='checkSearchAll' type="checkbox" />
+									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
+								</div>
+
+								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
+								</svg>
+
+								<div className="pb-3 relative ..5x1:w-56 ">
+									<div className="absolute z-10 left-0 right-0 bottom-0 top-0 flex items-center justify-center">
+										<svg className="" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M38.8635 30.8286C39.4964 30.4632 40.2761 30.4632 40.909 30.8286L62.3863 43.2286C63.0191 43.594 63.409 44.2692 63.409 45C63.409 45.7308 63.0191 46.406 62.3863 46.7714L40.909 59.1714C40.2761 59.5368 39.4964 59.5368 38.8635 59.1714C38.2307 58.806 37.8408 58.1307 37.8408 57.4V32.6001C37.8408 31.8693 38.2307 31.194 38.8635 30.8286ZM41.9317 36.1429V53.8571L57.2726 45L41.9317 36.1429Z" fill="white" />
+											<path d="M89.4999 45C89.4999 69.5767 69.5766 89.5 45 89.5C20.4233 89.5 0.5 69.5767 0.5 45C0.5 20.4233 20.4233 0.5 45 0.5C69.5766 0.5 89.4999 20.4233 89.4999 45Z" stroke="white" stroke-opacity="0.8" />
 										</svg>
+									</div>
 
-									</button>
+
+									<Image src={videoPreview} />
 								</div>
 							</div>
-						</div>
-						<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
-							<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
-								<input className='hidden' id='checkSearchAll' type="checkbox" />
-								<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
+						</>}
+						{currentFilter.service && <>
+
+							<div className="p-4 h-379px w-278px bg-gray-light">
+								<div className="h-full p-4 bg-white flex items-center justify-center">
+									<div className="flex items-center flex-col">
+										<p className="font-montserrat text-22px font-medium leading-120% text-center">Сертификат соответствия</p>
+										<p className="font-montserrat font-medium text-gray-quick-silver leading-120% mt-3 mb-11 text-center">Евразийский экономический союз</p>
+										<button>
+											<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g filter="url(#filter0_b_3037_526760)">
+													<circle cx="22" cy="22" r="22" fill="white" fill-opacity="0.8" />
+												</g>
+												<path d="M14 32H30.4706V29.6471H14M30.4706 19.0588H25.7647V12H18.7059V19.0588H14L22.2353 27.2941L30.4706 19.0588Z" fill="black" />
+												<defs>
+													<filter id="filter0_b_3037_526760" x="-4" y="-4" width="52" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+														<feFlood flood-opacity="0" result="BackgroundImageFix" />
+														<feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
+														<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3037_526760" />
+														<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3037_526760" result="shape" />
+													</filter>
+												</defs>
+											</svg>
+
+										</button>
+									</div>
+								</div>
 							</div>
-
-							<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-							</svg>
-
-							<div className=" ..5x1:w-56 ">
-
-								<Image src={filtOne} />
+						</>}
+						{currentFilter.product && <>
+							<div className="w-full flex pb-3">
+								<p className="font-montserrat font-medium  text-gray-quick-silver mr-4">Сортировка:</p>
+								<p className="mr-3 font-montserrat pb-0.5 font-medium text-primary border-b border-b-primary border-dotted">Все</p>
+								<p className="font-montserrat font-medium pb-0.5  border-b mr-3 border-gray-quick-silver border-dotted text-black-70pe ">Буклеты</p>
+								<p className="font-montserrat font-medium pb-0.5  border-b mr-3 border-gray-quick-silver border-dotted text-black-70pe ">Ролл апы</p>
+								<p className="font-montserrat font-medium pb-0.5  border-b border-gray-quick-silver border-dotted text-black-70pe ">PDF</p>
 							</div>
-							<p className="text-center font-montserrat pb-4 font-medium text-13px text-gray-quick-silver">PDF</p>
-						</div>
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
+									<input className='hidden' id='checkSearchAll' type="checkbox" />
+									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
+								</div>
+
+								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
+								</svg>
+
+								<div className=" ..5x1:w-56 ">
+
+									<Image src={filtOne} />
+								</div>
+								<p className="text-center font-montserrat pb-4 font-medium text-13px text-gray-quick-silver">PDF</p>
+							</div>
+						</>}
+
+
 					</div>
 				</div>
 			</div>}
@@ -700,16 +738,16 @@ const DetailComments = ({ setShowL, refF }) => {
 					}} slidesPerView={4} pagination={{ clickable: true, type: 'bullets', renderBullet: (i, clas) => '<div class="swiper-pagination-bullet"></div>' }} modules={[Navigation, Pagination]}  >
 
 
-						<SwiperSlide className="mr-2 customWidth cursor-pointer">
+						<SwiperSlide className="pr-2 cursor-pointer">
 							<Image src={detailOne} />
 						</SwiperSlide>
-						<SwiperSlide className="mr-2 customWidth cursor-pointer">
+						<SwiperSlide className="pr-2 cursor-pointer">
 							<Image src={detailTwo} />
 						</SwiperSlide>
-						<SwiperSlide className="mr-2 customWidth cursor-pointer">
+						<SwiperSlide className="pr-2 cursor-pointer">
 							<Image src={detailTree} />
 						</SwiperSlide>
-						<SwiperSlide className="mr-2 customWidth relative cursor-pointer">
+						<SwiperSlide className="pr-2 relative cursor-pointer">
 							<div className="absolute flex items-center justify-center left-0 right-0 bottom-0 top-0 z-10">
 								<svg className="..5x4:h-38px ..5x4:w-38px" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M38.8635 30.8286C39.4964 30.4632 40.2761 30.4632 40.909 30.8286L62.3863 43.2286C63.0191 43.5939 63.409 44.2692 63.409 45C63.409 45.7307 63.0191 46.406 62.3863 46.7714L40.909 59.1713C40.2761 59.5367 39.4964 59.5367 38.8635 59.1713C38.2307 58.806 37.8408 58.1307 37.8408 57.3999V32.6C37.8408 31.8692 38.2307 31.194 38.8635 30.8286ZM41.9317 36.1429V53.8571L57.2726 45L41.9317 36.1429Z" fill="white" />
@@ -719,16 +757,16 @@ const DetailComments = ({ setShowL, refF }) => {
 
 							<Image src={detailFour} />
 						</SwiperSlide>
-						<SwiperSlide className="mr-2 customWidth cursor-pointer">
+						<SwiperSlide className="pr-2  cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
-						<SwiperSlide className="mr-2 customWidth cursor-pointer">
+						<SwiperSlide className="pr-2  cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
-						<SwiperSlide className="mr-2 customWidth cursor-pointer">
+						<SwiperSlide className="pr-2   cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
-						<SwiperSlide className="mr-2 customWidth cursor-pointer ..5x2:!pl-48">
+						<SwiperSlide className="pr-2   cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
 
