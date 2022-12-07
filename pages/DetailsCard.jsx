@@ -27,13 +27,16 @@ import DetailComments from "../components/DetailComments/DetailComments";
 import SeeLastDetails from "../components/SeeLastDetails/SeeLastDetails";
 import LeftComment from "../components/LeftComment/LeftComment";
 import { useRef } from "react";
+import ViewPhoto from "../components/ViewPhoto/ViewPhoto";
 
 const DetailsCard = () => {
 	const [showSearch, setShowSearch] = useState(false)
 	const [show, setShow] = useState(false),
+		[view, setShowView] = useState(false),
 		description = useRef(null)
 
-	const setShowL = () => setShow(!show)
+	const setShowL = () => setShow(!show),
+		close = () => setShowView(!view)
 
 	return (
 		<>
@@ -41,12 +44,13 @@ const DetailsCard = () => {
 			<section className="container-base relative  ">
 				<SearchResult isShow={showSearch} />
 				<SectionNavDetail />
-				<DescriptionItemDetail description={description} />
+				<DescriptionItemDetail close={close} isShow={view} description={description} />
 				<ActDescription />
 				<DetailComments refF={description} setShowL={setShowL} />
 				<SeeLastDetails />
 
 			</section>
+			<ViewPhoto close={close} isShow={view} />
 			<LeftComment show={show} setShow={setShowL} />
 			<Footer />
 			<PhoneNavigation />

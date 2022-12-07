@@ -25,7 +25,7 @@ import { Navigation } from "swiper";
 import { useState } from "react";
 import EffectsItemDetail from "../EffectsItemDetail/EffectsItemDetail";
 import SectionImgs from "../InstrumentItem/SectionImgs";
-const DescriptionItemDetail = ({ description }) => {
+const DescriptionItemDetail = ({ description, close, isShow }) => {
 	const [buttonHover, setButtonHover] = useState(false),
 		[buttonHoverNext, setButtonHoverNext] = useState(false),
 		[currentLenghtProduct, setCurrentLenghtProduct] = useState(1),
@@ -270,8 +270,14 @@ const DescriptionItemDetail = ({ description }) => {
 
 
 
-								<div className="..5x2:h-96 adaptSlide ..5x1:w-80 ..5x1:h-80 ..5x2:w-96">
+								<div className="..5x2:h-96 adaptSlide ..5x1:w-80		hoverI  ..5x1:h-80 ..5x2:w-96">
 									<Image src={one} width='608px' height='608px' />
+									<div onClick={close} className="hidden cursor-pointer hoverShowI absolute z-10 left-14 right-0 flex justify-center bottom-32">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 11C3.75 6.99594 6.99594 3.75 11 3.75C15.0041 3.75 18.25 6.99594 18.25 11C18.25 15.0041 15.0041 18.25 11 18.25C6.99594 18.25 3.75 15.0041 3.75 11ZM11 2.25C6.16751 2.25 2.25 6.16751 2.25 11C2.25 15.8325 6.16751 19.75 11 19.75C13.1462 19.75 15.112 18.9773 16.6342 17.6949L20.4697 21.5303C20.7626 21.8232 21.2374 21.8232 21.5303 21.5303C21.8232 21.2374 21.8232 20.7626 21.5303 20.4697L17.6949 16.6342C18.9773 15.112 19.75 13.1462 19.75 11C19.75 6.16751 15.8325 2.25 11 2.25Z" fill="black" />
+										</svg>
+
+									</div>
 								</div>
 
 
@@ -279,7 +285,7 @@ const DescriptionItemDetail = ({ description }) => {
 							<SwiperSlide className="pl-16 ml-2 .3x1:ml-0  .3x1:pl-0   ..5x2:pl-0 .6x2:pl-7 .1x1:!w-96  ..5x2:!w-auto ..6x04:ml-0 .  relative">
 
 
-								<div className="..5x5:h-96 adaptSlide ..5x1:w-80 ..5x1:h-80 ..5x5:w-96">
+								<div onClick={close} className="..5x5:h-96 adaptSlide ..5x1:w-80 ..5x1:h-80 ..5x5:w-96">
 									<Image src={one} width='608px' height='608px' />
 								</div>
 

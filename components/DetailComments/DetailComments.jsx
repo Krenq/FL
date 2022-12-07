@@ -20,7 +20,7 @@ import matOne from '../../images/templates/materialsone.jpg'
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination } from "swiper"
+import { Navigation, Pagination, Scrollbar } from "swiper"
 import EffectsItemDetail from "../EffectsItemDetail/EffectsItemDetail"
 const DetailComments = ({ setShowL, refF }) => {
 	const sliderPhoto = useRef(null)
@@ -735,7 +735,10 @@ const DetailComments = ({ setShowL, refF }) => {
 						1450: {
 							slidesPerView: 7
 						}
-					}} slidesPerView={4} pagination={{ clickable: true, type: 'bullets', renderBullet: (i, clas) => '<div class="swiper-pagination-bullet"></div>' }} modules={[Navigation, Pagination]}  >
+					}} slidesPerView={4} scrollbar={{
+						hide: false,
+						draggable: true,
+					}} modules={[Navigation, Scrollbar]}  >
 
 
 						<SwiperSlide className="pr-2 cursor-pointer">

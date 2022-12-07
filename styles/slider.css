@@ -2848,6 +2848,10 @@
 		margin-top: -60px;
 	}
 
+	.ability1000 {
+		transform: translateX(-50%) !important;
+	}
+
 	.sliderCenter .swiper-slide {
 		display: flex;
 		justify-content: center;
@@ -3462,7 +3466,7 @@
 }
 
 @media (min-width: 1000px) {
-	.sliderPaginationCustom .swiper-pagination {
+	.sliderPaginationCustom .swiper-scrollbar {
 		display: none !important;
 	}
 }
