@@ -3465,10 +3465,37 @@
 	bottom: 15px;
 }
 
+.sliderPaginationCustom {
+	overflow: visible !important;
+}
+
+.sliderPaginationCustom .swiper-scrollbar-drag {
+	width: 25px !important;
+
+}
+
+.sliderPaginationCustom .swiper-scrollbar {
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+
+	margin-top: 12px;
+
+}
+
 @media (min-width: 1000px) {
 	.sliderPaginationCustom .swiper-scrollbar {
 		display: none !important;
+
 	}
+
+	.sliderPaginationCustom {
+		overflow: hidden !important;
+	}
+}
+
+.hoverCustom:hover {
+	cursor: url('../images/templates/Search.png'), pointer;
 }
 
 .swiper-pagination-bullet-active {

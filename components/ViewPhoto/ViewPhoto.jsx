@@ -3,14 +3,25 @@ import { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import one from '../../images/templates/seeMoreOneI.jpg'
 import oneHoriz from '../../images/templates/horizOne.jpg'
+import { useState } from "react";
 const ViewPhoto = ({ isShow, close }) => {
 	const slider = useRef(null)
+	const [currentSlide, setCurrentSlide] = useState(1),
+		[allSlides, setAllSlides] = useState(0)
 	const nextSlide = () => {
 		if (slider.current !== null && slider.current.swiper !== null) slider.current.swiper.slideNext();
 	},
 		prevSlide = () => {
 			if (slider.current !== null && slider.current.swiper !== null) slider.current.swiper.slidePrev();
 		}
+
+	const imagesDots = [
+		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+		oneHoriz
+	]
+
 	return (
 		<section className={`fixed left-0 right-0 z-100 bottom-0 top-0 bg-white ${isShow ? 'block' : "hidden"}`}>
 			<div className="h-full relative    ">
@@ -34,10 +45,30 @@ const ViewPhoto = ({ isShow, close }) => {
 
 				<div className="relative">
 					<div className="absolute ..5x2:right-1/2 ..7x001:bottom-10 w-20 ability1000  ..5x2:w-20 ..5x2:bg-white ..5x2:text-13px ..5x2:text-black .6x3:right-460px .5x01:right-390px .2x1:right-180px right-531px text-white text-base bottom-0 flex justify-center items-center px-4 font-montserrat font-semibold z-10 bg-black-70pe h-8 ">
-						2 / 20
+						{currentSlide} / {allSlides}
 					</div>
-					<Swiper ref={slider} slidesPerView={1} className=' '  >
+					<Swiper onSwiper={(arg) => setAllSlides(arg.imagesLoaded / 2)} onSlideChange={(arg) => setCurrentSlide(arg.snapIndex + 1)} ref={slider} slidesPerView={1} className=' '  >
 
+						<SwiperSlide className="flex justify-center mt-60px ..5x2:mt-100px ">
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px  ..5x2:mt-100px">
+
+
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+						</SwiperSlide>
 						<SwiperSlide className="flex justify-center mt-60px ..5x2:mt-100px ">
 
 							<div className="..5x2:!w-379px ..5x2:!h-379px">
@@ -75,18 +106,12 @@ const ViewPhoto = ({ isShow, close }) => {
 				</button>
 
 				<div className="absolute left-0 z-10  flex justify-center items-center right-0 bottom-0 bg-gray-light2 h-120px">
-					<div className="px-1.5 border-t-4 border-primary pt-3 -mt-4">
-						<Image src={oneHoriz} />
-					</div>
-					<div className="px-1.5">
-						<Image src={oneHoriz} />
-					</div>
-					<div className="px-1.5">
-						<Image src={oneHoriz} />
-					</div>
-					<div className="px-1.5">
-						<Image src={oneHoriz} />
-					</div>
+
+					{imagesDots.map((image, i) => <div key={i} onClick={() => slider.current.swiper.slideTo(i)} className={`px-1.5 cursor-pointer ${i === currentSlide - 1 ? 'border-t-4 border-primary pt-3 -mt-4' : ""}`}>
+						<Image src={image} />
+					</div>)}
+
+
 
 				</div>
 			</div >

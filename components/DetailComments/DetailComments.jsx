@@ -1,5 +1,5 @@
-import { useRef, useState } from "react"
-
+import { useEffect, useRef, useState } from "react"
+import oneNew from '../../images/templates/1news.jpg';
 
 import detailOne from '../../images/templates/imageDetailVOne.jpg'
 import detailTwo from '../../images/templates/imageDetailVTwo.jpg'
@@ -22,8 +22,19 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Scrollbar } from "swiper"
 import EffectsItemDetail from "../EffectsItemDetail/EffectsItemDetail"
+import Slider from "react-slick"
+import NewsDate from "../News/NewsDate"
+import NewsPrev from "../News/NewsPrev"
+import NewsNext from "../News/NewsNext"
+import useWindowSize from "../utils/useWindowSize";
 const DetailComments = ({ setShowL, refF }) => {
 	const sliderPhoto = useRef(null)
+	const divBlock = useRef(null),
+		slider = useRef(null);
+
+
+	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
+
 
 	const [currentFilter, setCurrentFilter] = useState({
 		photo: true,
@@ -106,6 +117,7 @@ const DetailComments = ({ setShowL, refF }) => {
 			default: return
 		}
 	}
+
 	const setShowLocal = (title) => {
 		switch (title) {
 			case ('desc'):
@@ -127,6 +139,8 @@ const DetailComments = ({ setShowL, refF }) => {
 			if (sliderPhoto.current !== null && sliderPhoto.current.swiper !== null) sliderPhoto.current.swiper.slidePrev();
 		}
 
+
+
 	return (
 		<section className="px-222px mx-2 ..5x2:px-3  ..5x2:m-0 .2x50:px-36 .6x2:px-24 .6x3:px-10">
 			<div ref={refF} className={`flex w-full ..5x2:hidden ..5x1:h-16 bg-label-bg rounded `}>
@@ -136,8 +150,8 @@ const DetailComments = ({ setShowL, refF }) => {
 					{showDesc.desc && <div className="absolute left-1/2 ability -bottom-2 h-30px w-30px bg-white rotSearchHover"></div>}
 
 					Описание</div>
-				<div className="flex-1 h-86px relative ..5x1:h-16 flex justify-center items-center">
-					<div onClick={() => setShowLocalDesc('activeComoonents')} className={`w-full ${showDesc.activeComponents ? 'activeCard !h-full' : ""} cursor-pointer border-x ..5x1:text-base ..5x1:leading-120%  border-gray  flex font-montserrat font-medium text-lg text-center leading-120% justify-center items-center`}><svg className="..5x1:h-5 ..5x1:w-5 mr-3" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<div onClick={() => setShowLocalDesc('activeComoonents')} className="flex-1   cursor-pointer h-86px relative ..5x1:h-16 flex justify-center items-center">
+					<div className={`w-full ${showDesc.activeComponents ? 'activeCard !h-full' : ""}  border-x ..5x1:text-base ..5x1:leading-120%  border-gray  flex font-montserrat font-medium text-lg text-center leading-120% justify-center items-center`}><svg className="..5x1:h-5 ..5x1:w-5 mr-3" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fillRule="evenodd" clipRule="evenodd" d="M13.1831 1.42602C13.7512 0.857988 14.6721 0.857994 15.2402 1.42603L17.2851 3.47099L17.2971 3.48284L25.5252 11.711C26.0933 12.279 26.0933 13.2 25.5252 13.768L14.2116 25.0818C13.9388 25.3545 13.5688 25.5078 13.1831 25.5078C12.7973 25.5078 12.4273 25.3545 12.1545 25.0818L3.92638 16.8536C3.35835 16.2856 3.35835 15.3646 3.92638 14.7966L14.2115 4.51143L13.1831 3.48306C12.6151 2.91502 12.6151 1.99405 13.1831 1.42602ZM7.01194 15.8251L8.13655 14.7005L17.4249 17.7543L13.183 21.9962L7.01194 15.8251ZM19.7295 15.4497L10.4411 12.3959L16.2686 6.5684L22.4397 12.7395L19.7295 15.4497Z" fill="black" />
 						<path d="M25.9545 25.3608C27.5612 25.3608 28.8636 24.0583 28.8636 22.4517C28.8636 21.3806 27.894 19.926 25.9545 18.0881C24.0151 19.926 23.0455 21.3806 23.0455 22.4517C23.0455 24.0583 24.3479 25.3608 25.9545 25.3608Z" fill="black" />
 						<path d="M1.95455 28.2699C1.15122 28.2699 0.5 28.9211 0.5 29.7244C0.5 30.5278 1.15122 31.179 1.95455 31.179H31.0455C31.8488 31.179 32.5 30.5278 32.5 29.7244C32.5 28.9211 31.8488 28.2699 31.0455 28.2699H1.95455Z" fill="black" />
@@ -714,6 +728,16 @@ const DetailComments = ({ setShowL, refF }) => {
 								<p className="text-center font-montserrat pb-4 font-medium text-13px text-gray-quick-silver">PDF</p>
 							</div>
 						</>}
+						{currentFilter.active && <>
+							<div className="p-3 w-full">
+								<div className="w-full flex ">
+									<p>Статьи</p>
+									<p>3</p>
+								</div>
+
+
+							</div>
+						</>}
 
 
 					</div>
@@ -725,7 +749,7 @@ const DetailComments = ({ setShowL, refF }) => {
 			<div>
 				<h4 className="font-montserrat font-medium text-xl mb-3 ..6x3:mb-6px ..6x3:text-sm">Фото и видео отзывы</h4>
 				<div className="mb-12 relative ..6x3:-mr-3 ..6x3:mb-6">
-					<Swiper ref={sliderPhoto} className='sliderPaginationCustom' breakpoints={{
+					<Swiper ref={sliderPhoto} className='firstSlider sliderPaginationCustom ' breakpoints={{
 						950: {
 							slidesPerView: 5
 						},
