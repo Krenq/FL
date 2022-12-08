@@ -2,17 +2,37 @@ import { useState } from 'react';
 import useWindowSize from '../utils/useWindowSize';
 import WindowInfoPlus from '../WindowInfoPlus/WindowInfoPlus';
 
-export default function Plus({ styles, windowInfo, setWindowInfo }) {
+export default function Plus({
+  styles,
+  windowInfo,
+  setWindowInfo,
+  stopAutoPlay,
+  startAutoPlay,
+}) {
   const [vis, setVis] = useState(false);
 
   let size = useWindowSize();
+
+  const handlerMobileClick = () => {
+    stopAutoPlay();
+    setWindowInfo(windowInfo);
+    setInterval(() => {
+      startAutoPlay();
+    }, 20000);
+  };
 
   return (
     <>
       {size.width > 1000 ? (
         <div
-          onMouseEnter={() => setVis(true)}
-          onMouseLeave={() => setVis(false)}
+          onMouseEnter={() => {
+            stopAutoPlay();
+            setVis(true);
+          }}
+          onMouseLeave={() => {
+            startAutoPlay();
+            setVis(false);
+          }}
           className={`${
             styles ? styles : ''
           } flex items-center justify-center w-12 h-12 rounded-full transition-all duration-500 bg-white-80pe hover:cursor-pointer hover:bg-label-green plus`}
@@ -37,7 +57,7 @@ export default function Plus({ styles, windowInfo, setWindowInfo }) {
       ) : (
         <div
           // onTouchStart={() => setWindowInfo(windowInfo)}
-          onClick={() => setWindowInfo(windowInfo)}
+          onClick={() => handlerMobileClick()}
           className={`${
             styles ? styles : ''
           } flex items-center justify-center w-8 h-8 rounded-full transition-all duration-500  bg-white-80pe hover:cursor-pointer hover:bg-label-green plus`}

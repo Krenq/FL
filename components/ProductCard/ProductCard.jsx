@@ -26,6 +26,7 @@ export default function ProductCard({ obj }) {
 	const [clickBtnRDesk, setClickBtnRDesk] = useState(false);
 	const [clickBtnLDesk, setClickBtnLDesk] = useState(false);
 	const [clickBtnBigDesk, setClickBtnBigDesk] = useState(false);
+	const [underL, setUnderL] = useState(false);
 
 	const sliderFilt = useRef(null);
 	let size = useWindowSize();
@@ -46,8 +47,14 @@ export default function ProductCard({ obj }) {
 	return (
 		<div
 			onMouseEnter={() => setShowBtns(true)}
-			onMouseLeave={() => setShowBtns(false)}
-			className={`card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px ${obj.bgWhite ? 'bg-white' : ""}`}
+			onMouseLeave={() => {
+				setShowBtns(false);
+				setUnderL(false);
+			}}
+			onClick={() => setUnderL(true)}
+			// className={`card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
+			className={`${underL ? 'underL' : ''
+				} card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
 		>
 			{obj.packS && (
 				<div className="absolute top-0 left-0 z-10">
@@ -338,7 +345,7 @@ export default function ProductCard({ obj }) {
 						<svg
 							// onClick={() => setClickHeart(false)}
 							onTouchStart={() => setClickHeart(false)}
-							className="absolute top-3 right-3 z-10 ..5x2:w-8 ..5x2:h-8 ..5x2:right-1.5 ..5x2:top-1.5"
+							className="absolute top-3 right-3 z-10  ..5x2:w-8 ..5x2:h-8 ..5x2:right-1.5 ..5x2:top-1.5"
 							width="48"
 							height="49"
 							viewBox="0 0 48 49"
@@ -460,7 +467,7 @@ export default function ProductCard({ obj }) {
 
 						return (
 							<SwiperSlide>
-								<div className={` ${obj.isDetailCard ? 'mt-5 mx-29px !w-218px !h-218px ..5x2:!w-130px ..5x2:!h-130px ..5x2:mx-22px' : styles} `}>
+								<div className={` ${styles}`}>
 									<Image src={el} quality={100} />
 								</div>
 							</SwiperSlide>
@@ -584,22 +591,22 @@ export default function ProductCard({ obj }) {
 					<div
 						onClick={() => currentColorHandler('1')}
 						className={` bg-label-pink cursor-pointer ${currentColor === '1'
-							? 'w-10px h-10px border border-gray-border'
-							: 'w-6px h-6px'
+								? 'w-10px h-10px border border-gray-border'
+								: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 					<div
 						onClick={() => currentColorHandler('2')}
 						className={` bg-label-orange cursor-pointer ${currentColor === '2'
-							? 'w-10px h-10px border border-gray-border'
-							: 'w-6px h-6px'
+								? 'w-10px h-10px border border-gray-border'
+								: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 					<div
 						onClick={() => currentColorHandler('3')}
 						className={` bg-label-green cursor-pointer ${currentColor === '3'
-							? 'w-10px h-10px border border-gray-border '
-							: 'w-6px h-6px'
+								? 'w-10px h-10px border border-gray-border '
+								: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 				</div>

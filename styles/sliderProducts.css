@@ -13,7 +13,7 @@
 }
 
 @media (max-width: 1000px) {
-  .card_prod_con:hover .card_text {
+  .underL .card_text {
     text-decoration-line: underline !important;
   }
 

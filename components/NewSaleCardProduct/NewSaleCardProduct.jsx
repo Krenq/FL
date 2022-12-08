@@ -23,6 +23,7 @@ export default function NewSaleCardProduct({ obj }) {
   const [clickBtnRDesk, setClickBtnRDesk] = useState(false);
   const [clickBtnLDesk, setClickBtnLDesk] = useState(false);
   const [clickBtnBigDesk, setClickBtnBigDesk] = useState(false);
+  const [underL, setUnderL] = useState(false);
 
   const sliderFilt = useRef(null);
   let size = useWindowSize();
@@ -38,7 +39,11 @@ export default function NewSaleCardProduct({ obj }) {
 
   return (
     <div
-      className={`card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
+      onClick={() => setUnderL(true)}
+      onMouseLeave={() => setUnderL(false)}
+      className={`${
+        underL ? 'underL' : ''
+      } card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
     >
       {obj.packS && (
         <div className="absolute top-0 left-0 z-10">
@@ -448,8 +453,8 @@ export default function NewSaleCardProduct({ obj }) {
               </div>
             ) : (
               <div
-                // onClick={() => setVisSliderProd(!visSliderProd)}
-                onTouchStart={() => setVisSliderProd(!visSliderProd)}
+                onClick={() => setVisSliderProd(!visSliderProd)}
+                // onTouchStart={() => setVisSliderProd(!visSliderProd)}
                 className=" cursor-pointer absolute top-1 left-4 ..5x2:left-2"
               >
                 <p className=" text-sm font-normal font-montserrat flex items-center leading-140% text-black-70pe ..5x2:text-11px">
@@ -522,8 +527,8 @@ export default function NewSaleCardProduct({ obj }) {
       </div>
 
       {obj.dateEnd && obj.packS && (
-        <div className="absolute w-full bottom-36 flex justify-center">
-          <p className="font-montserrat font-normal text-sm leading-140% text-black-70pe">
+        <div className="absolute w-full bottom-36 flex justify-center ..5x2:bottom-111px">
+          <p className="font-montserrat font-normal text-sm leading-140% text-black-70pe ..5x2:text-11px">
             {obj.dateEnd}
           </p>
         </div>
@@ -531,8 +536,10 @@ export default function NewSaleCardProduct({ obj }) {
 
       <div
         className={`${
-          obj.packS ? ' bottom-84px' : 'bottom-104px'
-        } card_text absolute font-montserrat font-normal text-13px leading-150% uppercase text-center px-4 ..5x2:px-2 ..5x2:text-10px ..5x2:tracking-1px ..5x2:bottom-83px`}
+          obj.packS
+            ? ' bottom-84px ..5x2:bottom-66px'
+            : 'bottom-104px ..5x2:bottom-83px'
+        } card_text absolute font-montserrat font-normal text-13px leading-150% uppercase text-center px-4 ..5x2:px-2 ..5x2:text-10px ..5x2:tracking-1px `}
       >
         {obj.text}
       </div>
@@ -558,7 +565,7 @@ export default function NewSaleCardProduct({ obj }) {
         </div>
       )}
 
-      <div className="absolute bottom-3 px-3 w-full flex justify-between">
+      <div className="absolute bottom-3 px-3 w-full flex justify-between ..5x2:hidden">
         {obj.priceDe ? (
           <>
             {clickBtnLDesk ? (
@@ -599,6 +606,119 @@ export default function NewSaleCardProduct({ obj }) {
                 className=" whitespace-nowrap w-full py-4 bg-gray-light2 text-primary font-montserrat font-medium text-xs leading-100% hover:text-white hover:bg-primary"
               >
                 + Добавить в заказ
+              </button>
+            )}
+          </>
+        )}
+      </div>
+
+      <div className="absolute bottom-2 left-7px hidden h-8 w-40 ..5x2:flex">
+        {obj.priceDe ? (
+          <>
+            {clickBtnL ? (
+              <button className="w-1/2 h-full bg-primary">
+                <svg
+                  className="mx-auto"
+                  width="67"
+                  height="14"
+                  viewBox="0 0 67 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22.5 1.74999C21.6946 1.74999 21.0417 2.40291 21.0417 3.20833V3.5H23.9583V3.20833C23.9583 2.40291 23.3054 1.74999 22.5 1.74999ZM25.125 3.5V3.20833C25.125 1.75858 23.9497 0.583328 22.5 0.583328C21.0502 0.583328 19.875 1.75858 19.875 3.20833V3.5H18.4167C17.7723 3.5 17.25 4.02233 17.25 4.66666V12.25C17.25 12.8943 17.7723 13.4167 18.4167 13.4167H26.5833C27.2277 13.4167 27.75 12.8943 27.75 12.25V4.66666C27.75 4.02233 27.2277 3.5 26.5833 3.5H25.125ZM23.9583 4.66666V5.25C23.9583 5.57216 24.2195 5.83333 24.5417 5.83333C24.8638 5.83333 25.125 5.57216 25.125 5.25V4.66666H26.5833V12.25H18.4167V4.66666H19.875V5.25C19.875 5.57216 20.1362 5.83333 20.4583 5.83333C20.7805 5.83333 21.0417 5.57216 21.0417 5.25V4.66666H23.9583Z"
+                    fill="#337202"
+                    stroke="white"
+                    stroke-width="0.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M49.7498 4.08333L42.7498 11.0833L39.5415 7.875L40.364 7.0525L42.7498 9.4325L48.9273 3.26083L49.7498 4.08333Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            ) : (
+              <button
+                onClick={() => setClickBtnL(true)}
+                className="w-1/2 h-full border border-gray-light2 text-primary bg-gray-light2 font-montserrat font-normal text-12px leading-100% hover:bg-primary-hover hover:text-white"
+              >
+                Купить
+              </button>
+            )}
+
+            {clickBtnR ? (
+              <button className="w-1/2 h-full bg-label-orange">
+                <svg
+                  className="mx-auto"
+                  width="68"
+                  height="14"
+                  viewBox="0 0 68 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M23 1.74999C22.1946 1.74999 21.5417 2.40291 21.5417 3.20833V3.5H24.4583V3.20833C24.4583 2.40291 23.8054 1.74999 23 1.74999ZM25.625 3.5V3.20833C25.625 1.75858 24.4497 0.583328 23 0.583328C21.5502 0.583328 20.375 1.75858 20.375 3.20833V3.5H18.9167C18.2723 3.5 17.75 4.02233 17.75 4.66666V12.25C17.75 12.8943 18.2723 13.4167 18.9167 13.4167H27.0833C27.7277 13.4167 28.25 12.8943 28.25 12.25V4.66666C28.25 4.02233 27.7277 3.5 27.0833 3.5H25.625ZM24.4583 4.66666V5.25C24.4583 5.57216 24.7195 5.83333 25.0417 5.83333C25.3638 5.83333 25.625 5.57216 25.625 5.25V4.66666H27.0833V12.25H18.9167V4.66666H20.375V5.25C20.375 5.57216 20.6362 5.83333 20.9583 5.83333C21.2805 5.83333 21.5417 5.57216 21.5417 5.25V4.66666H24.4583Z"
+                    fill="#FF7F37"
+                    stroke="white"
+                    stroke-width="0.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M50.2501 4.08333L43.2501 11.0833L40.0417 7.875L40.8642 7.0525L43.2501 9.4325L49.4276 3.26083L50.2501 4.08333Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            ) : (
+              <button
+                onClick={() => setClickBtnR(true)}
+                className="w-1/2 h-full border border-l-0 border-gray-light2 text-label-orange font-montserrat font-medium text-12px leading-100% hover:bg-label-orange hover:text-white"
+              >
+                {obj.priceDe} <span className=" font-lora font-medium">De</span>
+              </button>
+            )}
+          </>
+        ) : (
+          <>
+            {clickBtnBig ? (
+              <button className=" w-40 h-8 bg-primary ">
+                <svg
+                  className="mx-auto"
+                  width="67"
+                  height="14"
+                  viewBox="0 0 67 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22.5 1.74999C21.6946 1.74999 21.0417 2.40291 21.0417 3.20833V3.5H23.9583V3.20833C23.9583 2.40291 23.3054 1.74999 22.5 1.74999ZM25.125 3.5V3.20833C25.125 1.75858 23.9497 0.583328 22.5 0.583328C21.0502 0.583328 19.875 1.75858 19.875 3.20833V3.5H18.4167C17.7723 3.5 17.25 4.02233 17.25 4.66666V12.25C17.25 12.8943 17.7723 13.4167 18.4167 13.4167H26.5833C27.2277 13.4167 27.75 12.8943 27.75 12.25V4.66666C27.75 4.02233 27.2277 3.5 26.5833 3.5H25.125ZM23.9583 4.66666V5.25C23.9583 5.57216 24.2195 5.83333 24.5417 5.83333C24.8638 5.83333 25.125 5.57216 25.125 5.25V4.66666H26.5833V12.25H18.4167V4.66666H19.875V5.25C19.875 5.57216 20.1362 5.83333 20.4583 5.83333C20.7805 5.83333 21.0417 5.57216 21.0417 5.25V4.66666H23.9583Z"
+                    fill="#337202"
+                    stroke="white"
+                    stroke-width="0.3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M49.7498 4.08333L42.7498 11.0833L39.5415 7.875L40.364 7.0525L42.7498 9.4325L48.9273 3.26083L49.7498 4.08333Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            ) : (
+              <button
+                onClick={() => setClickBtnBig(true)}
+                className="items-center justify-center w-40 h-8 border border-gray-light2 text-primary bg-gray-light2 font-montserrat font-normal text-12px leading-100% hover:bg-primary-hover hover:text-white"
+              >
+                Купить
               </button>
             )}
           </>
