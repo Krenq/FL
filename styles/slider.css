@@ -906,12 +906,18 @@
 	}
 }
 
+
+
 .productNum {
 	width: 25%;
 }
 
+.w-1200 {
+	width: 1160px;
+}
+
 .bordSearch {
-	width: 111%;
+	width: 106%;
 }
 
 .promoWidth {
@@ -1409,7 +1415,7 @@
 }
 
 .foryou::-webkit-scrollbar {
-	width: 3px !important;
+	width: 4px !important;
 }
 
 .foryou::-webkit-scrollbar-thumb {
@@ -2498,11 +2504,7 @@
 	border-radius: 20px;
 }
 
-.activeSpecialDrop {
-	color: black !important;
-	border-bottom: 1px solid black !important;
-	padding-bottom: 0 !important;
-}
+
 
 .basketItems {
 	height: 610px;

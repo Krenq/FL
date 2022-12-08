@@ -75,9 +75,9 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 				<div className="w-475px .4x2:w-380px">
 					<h3 className='text-22px text-center -mb-2 mt-4 font-montserrat'>Предложения для вас</h3>
 					<div className='flex justify-between  border-b border-gray   mt-5'>
-						<p onClick={setGifs} className={`ml-9 text-13px text-black-70pe px-2 .2x1:ml-2 .2x1:text-10px font-medium transition-all cursor-pointer hover:text-black hover:border-b   pb-1 font-montserrat ${nowFilter.gifts ? 'activeSpecialDrop' : ''}`}>Акции и подарки</p>
-						<p onClick={setIdea} className={`text-13px text-black-70pe font-medium px-2 .2x1:text-10px transition-all cursor-pointer hover:text-black hover:border-b   pb-1 font-montserrat ${nowFilter.idea ? 'activeSpecialDrop' : ''}`}>Идеи подарков</p>
-						<p onClick={setRecomend} className={`mr-9 text-13px text-black-70pe px-2 .2x1:mr-2 .2x1:text-10px font-medium transition-all cursor-pointer hover:text-black hover:border-b   pb-1 font-montserrat ${nowFilter.recomend ? 'activeSpecialDrop' : ''}`}>Рекомендации</p>
+						<p onClick={setGifs} className={`ml-9 text-13px text-black-70pe px-2 .2x1:ml-2 .2x1:text-10px font-medium transition-all cursor-pointer hover:text-black hover:border-b   hover:pb-3px pb-1 font-montserrat ${nowFilter.gifts ? 'activeSpecialDrop hover:pb-1' : ''}`}>Акции и подарки</p>
+						<p onClick={setIdea} className={`text-13px text-black-70pe font-medium px-2 .2x1:text-10px transition-all cursor-pointer hover:text-black hover:border-b hover:pb-3px   pb-1 font-montserrat ${nowFilter.idea ? 'activeSpecialDrop hover:pb-1' : ''}`}>Идеи подарков</p>
+						<p onClick={setRecomend} className={`mr-9 text-13px text-black-70pe px-2 .2x1:mr-2 .2x1:text-10px font-medium transition-all cursor-pointer hover:text-black hover:border-b  hover:pb-3px pb-1 font-montserrat ${nowFilter.recomend ? 'activeSpecialDrop hover:pb-1' : ''}`}>Рекомендации</p>
 					</div>
 					<div className='flex justify-center foryou pb-5 overflow-auto flex-wrap'>
 
@@ -94,7 +94,7 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 						<SpecialOfferItem isSearchI={true} src={two} srcSliderImgTree={tree} srcSliderImgTwo={twoI} srcSliderImgOne={one} />
 
 
-						<div className='   bg-primary-searchBG flex flex-col px-11 itemSeeAll justify-center items-center  ml-3 mt-4 transition-all hover:bg-primary cardHover overflow-hidden'>
+						<div className='   bg-primary-searchBG flex flex-col px-11 itemSeeAll justify-center items-center  ml-3 mt-3 transition-all hover:bg-primary cardHover overflow-hidden'>
 
 							<p className='font-montserrat text-center  font-semibold text-2xl text-primary'>Идеи <br /> подарков</p>
 
@@ -130,6 +130,17 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 					}
 
 					<div className='basketItems pb-5'>
+
+						{search.length > 0 ? '' : <>
+							<div className='flex items-center bg-input-error-bg justify-between px-4 py-10px'>
+								<p className='text-13px font-noto-sans'>Недоступны для заказа (2)</p>
+								<button className='text-13px font-montserrat font-medium   text-label-pink-2'>Удалить все</button>
+							</div>
+							<SearchWindowItem src={one} access={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} sale={15} balls={1.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
+							<SearchWindowItem src={twoP} access={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} balls={1.2} price={'620.00'} counter={true} like={true} priceDe={'3 750'} />
+						</>}
+
+
 						<div className='py-2 px-4 flex justify-between'>
 							{search.length > 0 ? <>
 								<div className='flex items-center'>
@@ -151,12 +162,6 @@ const SearchWindow = ({ scrollMenu, setIsHover, isHoverBasket, setCloseHover }) 
 							<SearchWindowItem isSearch={true} src={searchOne} isProductToDay={true} text={`ЗУБНАЯ ЩЕТКА «ПРОДЕНТАЛЬ» `} isHit={true} sale={15} balls={5.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
 
 						</> : <>
-							<div className='flex items-center bg-input-error-bg justify-between px-4 py-10px'>
-								<p className='text-13px font-noto-sans'>Недоступны для заказа (2)</p>
-								<button className='text-13px font-montserrat font-medium   text-label-pink-2'>Удалить все</button>
-							</div>
-							<SearchWindowItem src={one} access={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} sale={15} balls={1.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
-							<SearchWindowItem src={twoP} access={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} balls={1.2} price={'620.00'} counter={true} like={true} priceDe={'3 750'} />
 
 							<SearchWindowItem src={one} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} sale={15} balls={1.2} price={'620.00'} counter={true} like={true} oldPrice={'740.00'} priceDe={'3 750'} />
 							<SearchWindowItem src={twoP} noBorder={true} isProductToDay={true} text={`ВОССТАНОВЛЯЮЩИЙ ШАМПУНЬ С ЭКСТРАКТОМ ЖЕНЬШЕНЯ`} isNew={true} isHit={true} actions={true} balls={1.2} price={'620.00'} counter={true} like={true} priceDe={'3 750'} />

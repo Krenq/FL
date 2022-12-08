@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { useState } from "react"
 
-const SearchWindowItem = ({ src, isSearch,access, isProductToDay, isStart,noBorder, oldPriceFr, isPresent, isNew, isHit, promo, text, sale, isFree, price, actions, oldPrice, balls, priceDe, like, counter }) => {
+const SearchWindowItem = ({ src, isSearch, access, isProductToDay, isStart, noBorder, oldPriceFr, isPresent, isNew, isHit, promo, text, sale, isFree, price, actions, oldPrice, balls, priceDe, like, counter }) => {
 	const [numItems, setNumItem] = useState(1)
 
 	const addItem = () => setNumItem(numItems + 1),
@@ -11,7 +11,7 @@ const SearchWindowItem = ({ src, isSearch,access, isProductToDay, isStart,noBord
 		}
 
 	return (
-		<div className={`bg-white p-4  .2x1:px-1 items-center flex relative ${actions ? 'pb-16' : ""}`}>
+		<div className={`bg-white p-4  .2x1:px-1 items-center pr-4 flex relative ${actions ? 'pb-16' : ""}`}>
 			{isSearch && <>
 				<input className='hidden' id='checkSearchAll' type="checkbox" />
 				<label htmlFor="checkSearchAll" className='w-4 h-4 border-gray-deNum cursor-pointer border'></label>
@@ -84,7 +84,7 @@ const SearchWindowItem = ({ src, isSearch,access, isProductToDay, isStart,noBord
 						{sale && <small className="h-5 flex items-center font-noto-sans bg-label-pink-2 border-2 border-label-pink-2 text-white  font-medium ..6x03:text-9px text-xs leading-120% ..6x03:px-1 ..6x03:py-0 px-1 py-0.5 ">
 							-{sale}%
 						</small>}
-						{price && <p className={`text-13px ${sale || oldPriceFr  ? '' : "!text-black !ml-0"} ${oldPriceFr ? 'ml-0' : ''} text-13px !font-montserrat text-label-pink-2 ml-1 mt-1`}>{price} ₽ </p>
+						{price && <p className={`text-13px ${price === '0.00' ? '!mt-0.5' : ''} ${sale || oldPriceFr ? '' : "!text-black !ml-0"} ${oldPriceFr ? 'ml-0' : ''} text-13px !font-montserrat text-label-pink-2 ml-1 mt-1`}>{price} ₽ </p>
 						}
 						{oldPriceFr && <p className=" text-center ml-2 mt-0.5 !font-montserrat text-13px mr-2 text-gray-quick-silver line-through">
 							{oldPriceFr} ₽
@@ -93,7 +93,7 @@ const SearchWindowItem = ({ src, isSearch,access, isProductToDay, isStart,noBord
 
 					</div>
 					<div className={`flex flex-row items-center ${isFree ? '!flex-col !items-start' : ''}`}>
-						{oldPrice && <p className="text-center text-sm mr-2 text-gray-quick-silver line-through">
+						{oldPrice && <p className="text-center font-montserrat text-sm mr-2 text-gray-quick-silver line-through">
 							{oldPrice} ₽
 
 						</p>}
@@ -140,7 +140,7 @@ const SearchWindowItem = ({ src, isSearch,access, isProductToDay, isStart,noBord
 							Выгодный START
 						</p>}
 						{access && <small className='absolute flex items-center -bottom-3.5 text-13px font-montserrat text-gray-quick-silver'><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M12 6L6 12M6 6L12 12" stroke="#F14155" stroke-width="1.5" stroke-linecap="round"/>
+							<path d="M12 6L6 12M6 6L12 12" stroke="#F14155" stroke-width="1.5" stroke-linecap="round" />
 						</svg>
 							Нет в наличии</small>}
 
@@ -177,9 +177,9 @@ const SearchWindowItem = ({ src, isSearch,access, isProductToDay, isStart,noBord
 
 
 				</div>
-				{!noBorder && 	<div className={`transition-all duration-500 bg-gray h-px bordSearch absolute -bottom-4 ${actions ? '!-bottom-16' : ""} ${promo ? 'promoWidth' : ''} .5x01:w-full mx-auto`}></div>
+				{!noBorder && <div className={`transition-all duration-500 bg-gray h-px pr-4 bordSearch absolute -bottom-4 ${actions ? '!-bottom-16' : ""} ${promo ? 'promoWidth' : ''} .5x01:w-full mx-auto`}></div>
 				}
-			 	</div>
+			</div>
 
 			{
 				actions && <section className="absolute h-6 bottom-4 flex items-center justify-between left-4 right-4 bg-white-BG_FILTER border border-gray-light2 rounded" >

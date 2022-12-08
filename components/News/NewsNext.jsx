@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const NewsNext = ({ onClick, kolichestvo }) => {
+const NewsNext = ({ onClick, kolichestvo, isDetail }) => {
 	let styleR = {
-		right: 0,
+		right: isDetail ? -25 : 0,
 		top: '60%',
 		zIndex: 20,
 		borderRadius: 25,
@@ -14,7 +14,7 @@ const NewsNext = ({ onClick, kolichestvo }) => {
 
 	return (
 		<button onMouseEnter={setHoverB} onMouseLeave={setHoverB}
-			className=" absolute w-11 h-11 flex items-center justify-center rounded-56px  transition-all hover:bg-black bg-white py-3 px-4"
+			className={`absolute w-11 h-11 flex items-center justify-center rounded-56px  transition-all hover:bg-black  ${isDetail ? '!bg-white-80pe' : ""} bg-white py-3 px-4`}
 			onClick={onClick}
 			style={styleR}
 		>
