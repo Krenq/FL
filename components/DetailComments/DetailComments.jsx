@@ -29,14 +29,20 @@ import NewsNext from "../News/NewsNext"
 import useWindowSize from "../utils/useWindowSize";
 const DetailComments = ({ setShowL, refF }) => {
 	const sliderPhoto = useRef(null)
-	const divBlock = useRef(null),
-		slider = useRef(null);
+
 
 
 	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
 
 
 	const [currentFilter, setCurrentFilter] = useState({
+		photo: true,
+		video: false,
+		service: false,
+		product: false,
+		active: false
+	})
+	const [currentFilterMobile, setCurrentFilterMobile] = useState({
 		photo: true,
 		video: false,
 		service: false,
@@ -71,65 +77,128 @@ const DetailComments = ({ setShowL, refF }) => {
 			default: return
 		}
 	}
-	const setFilterItem = (title) => {
-		switch (title) {
-			case ('photo'):
-				return setCurrentFilter({
-					photo: true,
-					video: false,
-					service: false,
-					product: false,
-					active: false
-				})
-			case ('video'):
-				return setCurrentFilter({
-					photo: false,
-					video: true,
-					service: false,
-					product: false,
-					active: false
-				})
-			case ('service'):
-				return setCurrentFilter({
-					photo: false,
-					video: false,
-					service: true,
-					product: false,
-					active: false
-				})
-			case ('product'):
-				return setCurrentFilter({
-					photo: false,
-					video: false,
-					service: false,
-					product: true,
-					active: false
-				})
-			case ('active'):
-				return setCurrentFilter({
-					photo: false,
-					video: false,
-					service: false,
-					product: false,
-					active: true
-				})
 
-			default: return
+	const setShowLocal = (title, e) => {
+
+		if (e.target.classList.value === 'flex items-center justify-between') {
+			switch (title) {
+				case ('desc'):
+					return setShow({ materials: false, desc: !show.desc, activeComponents: false })
+				case ('activeComoonents'):
+					return setShow({ activeComponents: !show.activeComponents, materials: false, desc: false })
+				case ('materials'):
+					return setShow({ activeComponents: false, desc: false, materials: !show.materials })
+				default: return
+			}
+
+
 		}
+
+
+
+
 	}
 
-	const setShowLocal = (title) => {
-		switch (title) {
-			case ('desc'):
-				return setShow({ materials: false, desc: !show.desc, activeComponents: false })
-			case ('activeComoonents'):
-				return setShow({ activeComponents: !show.activeComponents, materials: false, desc: false })
-			case ('materials'):
-				return setShow({ activeComponents: false, desc: false, materials: !show.materials })
-			default: return
-		}
-	}
 
+	const setFilterItem = (title, e) => {
+
+		if (window.innerWidth < 1000) {
+
+			switch (title) {
+				case ('photo'):
+					return setCurrentFilterMobile({
+						photo: true,
+						video: false,
+						service: false,
+						product: false,
+						active: false
+					})
+				case ('video'):
+					return setCurrentFilterMobile({
+						photo: false,
+						video: true,
+						service: false,
+						product: false,
+						active: false
+					})
+				case ('service'):
+					return setCurrentFilterMobile({
+						photo: false,
+						video: false,
+						service: true,
+						product: false,
+						active: false
+					})
+				case ('product'):
+					return setCurrentFilterMobile({
+						photo: false,
+						video: false,
+						service: false,
+						product: true,
+						active: false
+					})
+				case ('active'):
+					return setCurrentFilterMobile({
+						photo: false,
+						video: false,
+						service: false,
+						product: false,
+						active: true
+					})
+
+				default: return
+			}
+		} else {
+			switch (title) {
+				case ('photo'):
+					return setCurrentFilter({
+						photo: true,
+						video: false,
+						service: false,
+						product: false,
+						active: false
+					})
+				case ('video'):
+					return setCurrentFilter({
+						photo: false,
+						video: true,
+						service: false,
+						product: false,
+						active: false
+					})
+				case ('service'):
+					return setCurrentFilter({
+						photo: false,
+						video: false,
+						service: true,
+						product: false,
+						active: false
+					})
+				case ('product'):
+					return setCurrentFilter({
+						photo: false,
+						video: false,
+						service: false,
+						product: true,
+						active: false
+					})
+				case ('active'):
+					return setCurrentFilter({
+						photo: false,
+						video: false,
+						service: false,
+						product: false,
+						active: true
+					})
+
+				default: return
+			}
+		}
+
+
+
+
+	}
 
 
 	const nextSlidePhoto = () => {
@@ -182,7 +251,7 @@ const DetailComments = ({ setShowL, refF }) => {
 				</div>
 				<div className="hidden ..5x2:block">
 					<div className=" ">
-						<div onClick={() => setShowLocal('desc')} className={`mt-1 h-12 buttonShadow p-3 py-3.5 rounded transition-all ${show.desc ? 'activeButtonS' : 'overflow-hidden'} `}>
+						<div onClick={(e) => setShowLocal('desc', e)} className={`mt-1 h-12 buttonShadow p-3 py-3.5 rounded transition-all ${show.desc ? 'activeButtonS' : 'overflow-hidden'} `}>
 							<div className="flex items-center justify-between">
 								<p className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg className="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M2.66667 1.99996C2.48257 1.99996 2.33333 2.1492 2.33333 2.33329V13.6666C2.33333 13.8507 2.48257 14 2.66667 14H11V2.33329C11 2.14919 10.8508 1.99996 10.6667 1.99996H2.66667ZM12.3333 6.66663V2.33329C12.3333 1.41283 11.5872 0.666626 10.6667 0.666626H2.66667C1.74619 0.666626 1 1.41282 1 2.33329V13.6666C1 14.5871 1.7462 15.3333 2.66667 15.3333H13.3333C14.2538 15.3333 15 14.5871 15 13.6666V7.99996C15 7.26357 14.4031 6.66663 13.6667 6.66663H12.3333ZM12.3333 7.99996V14H13.3333C13.5174 14 13.6667 13.8507 13.6667 13.6666V7.99996H12.3333ZM3 3.99996C3 3.63177 3.29848 3.33329 3.66667 3.33329H6.33333C6.70152 3.33329 7 3.63177 7 3.99996C7 4.36815 6.70152 4.66663 6.33333 4.66663H3.66667C3.29848 4.66663 3 4.36815 3 3.99996ZM3 6.33329C3 5.9651 3.29848 5.66663 3.66667 5.66663H7.66667C8.03486 5.66663 8.33333 5.9651 8.33333 6.33329C8.33333 6.70148 8.03486 6.99996 7.66667 6.99996H3.66667C3.29848 6.99996 3 6.70148 3 6.33329Z" fill="white" stroke="#337202" strokeWidth="0.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -203,7 +272,7 @@ const DetailComments = ({ setShowL, refF }) => {
 
 
 						</div>
-						<div onClick={() => setShowLocal('activeComoonents')} className={`mt-1  h-12 buttonShadow py-3.5 p-3 rounded transition-all ${show.activeComponents ? 'activeButtonS !h-300px ..6x5:!h-317px ..6x6:!h-350px ..7x001:!h-387px' : 'overflow-hidden'}`}>
+						<div onClick={(e) => setShowLocal('activeComoonents',)} className={`mt-1  h-12 buttonShadow py-3.5 p-3 rounded transition-all ${show.activeComponents ? 'activeButtonS !h-300px ..6x5:!h-317px ..6x6:!h-350px ..7x001:!h-387px' : 'overflow-hidden'}`}>
 							<div className="flex items-center justify-between">
 								<p className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg className="mr-2" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M7.09157 0.71301C7.37559 0.428994 7.83607 0.428997 8.12009 0.713016L9.14255 1.73549L9.14855 1.74142L13.2626 5.85549C13.5466 6.13951 13.5466 6.59999 13.2626 6.88401L7.60579 12.5409C7.4694 12.6773 7.28441 12.7539 7.09153 12.7539C6.89864 12.7539 6.71366 12.6773 6.57727 12.5409L2.46319 8.42681C2.17917 8.14279 2.17917 7.68231 2.46319 7.39829L7.60574 2.25572L7.09156 1.74153C6.80755 1.45751 6.80755 0.997026 7.09157 0.71301ZM4.00597 7.91255L4.56828 7.35024L9.21247 8.87714L7.09152 10.9981L4.00597 7.91255ZM10.3648 7.72485L5.72057 6.19794L8.63429 3.2842L11.7198 6.36975L10.3648 7.72485Z" fill="white" />
@@ -273,7 +342,7 @@ const DetailComments = ({ setShowL, refF }) => {
 								<EffectsItemDetail title={'ещё'} mb={true} arrow={true} />
 							</div>
 						</div>
-						<div onClick={() => setShowLocal('materials')} className={`mt-1 mb-3  h-12 buttonShadow p-3 py-3.5 rounded transition-all ${show.materials ? 'activeButtonS !h-300px ..6x4:!h-428px' : 'overflow-hidden'}`}>
+						<div onClick={(e) => setShowLocal('materials', e)} className={`mt-1 mb-3  h-12 buttonShadow p-3 py-3.5 rounded transition-all ${show.materials ? 'activeButtonS !h-300px ..6x4:!h-428px' : 'overflow-hidden'}`}>
 							<div className="flex items-center justify-between">
 								<p className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg className="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M0.666748 1.83329C0.666748 1.4651 0.965225 1.16663 1.33341 1.16663H14.6667C15.0349 1.16663 15.3334 1.4651 15.3334 1.83329C15.3334 2.20148 15.0349 2.49996 14.6667 2.49996H14.3334V11.1666C14.3334 11.5348 14.0349 11.8333 13.6667 11.8333H9.60956L11.1382 13.3619C11.3985 13.6222 11.3985 14.0443 11.1382 14.3047C10.8778 14.565 10.4557 14.565 10.1953 14.3047L8.00008 12.1094L5.80482 14.3047C5.54447 14.565 5.12236 14.565 4.86201 14.3047C4.60166 14.0443 4.60166 13.6222 4.86201 13.3619L6.39061 11.8333H2.33341C1.96522 11.8333 1.66675 11.5348 1.66675 11.1666V2.49996H1.33341C0.965225 2.49996 0.666748 2.20148 0.666748 1.83329ZM3.00008 2.49996V10.5H13.0001V2.49996H3.00008ZM11.7933 4.03503C12.0539 4.29511 12.0544 4.71722 11.7943 4.97783L8.47475 8.30421C8.21651 8.56298 7.79804 8.56551 7.53669 8.30988L6.52172 7.3171L5.10706 8.69798C4.84358 8.95516 4.4215 8.95006 4.16432 8.68658C3.90713 8.42311 3.91224 8.00103 4.17571 7.74384L6.05652 5.90794C6.3157 5.65495 6.72945 5.65517 6.98836 5.90842L7.99719 6.89519L10.8505 4.036C11.1106 3.77538 11.5327 3.77495 11.7933 4.03503Z" fill="white" stroke="#337202" strokeWidth="0.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -287,30 +356,30 @@ const DetailComments = ({ setShowL, refF }) => {
 							</div>
 
 							<div className=" overflow-x-auto whitespace-nowrap flex py-2 border-t  border-t-gray-light2">
-								<p onClick={() => setFilterItem('photo')} className={`flex items-center font-montserrat p-6px rounded-sm transition-all text-11px  hover:bg-gray-light2 cursor-pointer ${currentFilter.photo ? '!bg-gray-light2' : ""}`}><svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<p onClick={(e) => setFilterItem('photo', e)} className={`flex items-center font-montserrat p-6px rounded-sm transition-all text-11px  hover:bg-gray-light2 cursor-pointer ${currentFilter.photo ? '!bg-gray-light2' : ""}`}><svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 5C1.5 3.89543 2.39543 3 3.5 3H20.5C21.6046 3 22.5 3.89543 22.5 5V19C22.5 20.1046 21.6046 21 20.5 21H3.5C2.39543 21 1.5 20.1046 1.5 19V5ZM3.5 17.4142V19H20.5V17.4942L13.1438 11.8688L10.7593 14.6508C10.4084 15.0601 9.79627 15.1176 9.37531 14.7809L7.57422 13.34L3.5 17.4142ZM20.5 14.9764V5H3.5V14.5858L6.79289 11.2929C7.1532 10.9326 7.7268 10.9008 8.12469 11.2191L9.86985 12.6153L12.2407 9.84921C12.5861 9.44633 13.1859 9.38331 13.6075 9.70564L20.5 14.9764ZM7.25 8.5C7.38807 8.5 7.5 8.38807 7.5 8.25C7.5 8.11193 7.38807 8 7.25 8C7.11193 8 7 8.11193 7 8.25C7 8.38807 7.11193 8.5 7.25 8.5ZM5.5 8.25C5.5 7.2835 6.2835 6.5 7.25 6.5C8.2165 6.5 9 7.2835 9 8.25C9 9.2165 8.2165 10 7.25 10C6.2835 10 5.5 9.2165 5.5 8.25Z" fill="black" fill-opacity="0.7" />
 								</svg>
 									Фотографии
 								</p>
-								<p onClick={() => setFilterItem('video')} className={`flex items-center p-6px  text-11px rounded-sm font-montserrat   transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.video ? '!bg-gray-light2' : ""}`}>
+								<p onClick={(e) => setFilterItem('video', e)} className={`flex items-center p-6px  text-11px rounded-sm font-montserrat   transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.video ? '!bg-gray-light2' : ""}`}>
 									<svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 3C7.02943 3 3 7.02943 3 12C3 16.9706 7.02943 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02943 16.9706 3 12 3ZM9.5 7.66987C9.8094 7.49124 10.1906 7.49124 10.5 7.66987L16.5 11.134C16.8094 11.3126 17 11.6427 17 12C17 12.3573 16.8094 12.6874 16.5 12.866L10.5 16.3301C10.1906 16.5088 9.8094 16.5088 9.5 16.3301C9.1906 16.1515 9 15.8214 9 15.4641V8.5359C9 8.17863 9.1906 7.84851 9.5 7.66987ZM11 10.268V13.732L14 12L11 10.268Z" fill="black" fill-opacity="0.7" />
 									</svg>
 									Видео
 								</p>
-								<p onClick={() => setFilterItem('service')} className={`flex items-center  font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.service ? '!bg-gray-light2' : ""}`}>
+								<p onClick={(e) => setFilterItem('service', e)} className={`flex items-center  font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.service ? '!bg-gray-light2' : ""}`}>
 									<svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M21 2C22.018 2 22.87 2.76384 22.9916 3.82579L23 4V17C23 18.018 22.2362 18.87 21.1742 18.9916L21 19H18V21C18 21.7043 17.2979 22.1753 16.6586 21.9402L16.5528 21.8944L15 21.118L13.4472 21.8944C12.8173 22.2094 12.082 21.792 12.0064 21.1151L12 21V19H3C2.03562 19 1.22018 18.3145 1.03358 17.3393L1.00839 17.1742L1 17V4C1 2.98205 1.76385 2.13004 2.82579 2.00839L3 2H21ZM16 17.391L15.7664 17.4378C15.6053 17.465 15.438 17.4836 15.2646 17.4929L15.2198 17.4941C15.147 17.498 15.0737 17.5 15 17.5L14.8004 17.4951C14.7983 17.495 14.7963 17.4949 14.7943 17.4948C14.5133 17.4842 14.2487 17.4491 14.0002 17.393L14 19.381L14.5528 19.1056C14.8343 18.9648 15.1657 18.9648 15.4472 19.1056L16 19.382V17.391ZM3.05759 3.99834L3 4L2.99834 16.9424L3.00003 17L12 17L11.999 16.1447C11.3772 15.4397 11 14.5139 11 13.5C11 11.2909 12.7909 9.5 15 9.5C17.2091 9.5 19 11.2909 19 13.5C19 14.5139 18.6227 15.4397 18.001 16.1447L18 17L20.9424 17.0017L21 16.999L21.0017 4.05759L20.999 4L3.05759 3.99834ZM15 11.5C13.8954 11.5 13 12.3954 13 13.5C13 14.6046 13.8954 15.5 15 15.5L14.923 15.497L15 15.5C15.0267 15.5 15.0529 15.4997 15.0788 15.499C15.5643 15.48 16.0066 15.2874 16.3439 14.9812C16.3459 14.9773 16.3486 14.9749 16.3513 14.9726L16.3439 14.9812C16.7469 14.6154 17 14.0872 17 13.5C17 12.3954 16.1046 11.5 15 11.5ZM8 13C8.55228 13 9 13.4477 9 14C9 14.5128 8.61396 14.9355 8.11662 14.9933L8 15H6C5.44772 15 5 14.5523 5 14C5 13.4872 5.38604 13.0645 5.88338 13.0067L6 13H8ZM9 9.5C9.55229 9.5 10 9.94772 10 10.5C10 11.0128 9.61396 11.4355 9.11662 11.4933L9 11.5H6C5.44772 11.5 5 11.0523 5 10.5C5 9.98716 5.38604 9.56449 5.88338 9.50673L6 9.5H9ZM18 6C18.5523 6 19 6.44772 19 7C19 7.51284 18.614 7.93551 18.1166 7.99327L18 8H6C5.44772 8 5 7.55228 5 7C5 6.48716 5.38604 6.06449 5.88338 6.00673L6 6H18Z" fill="black" fill-opacity="0.7" />
 									</svg>
 									Сертификаты
 								</p>
-								<p onClick={() => setFilterItem('product')} className={`flex items-center font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.product ? '!bg-gray-light2' : ""}`}>
+								<p onClick={(e) => setFilterItem('product', e)} className={`flex items-center font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.product ? '!bg-gray-light2' : ""}`}>
 									<svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C4 1.44772 4.44772 1 5 1H19C19.5523 1 20 1.44772 20 2V9H22C22.5523 9 23 9.44772 23 10V19C23 19.5523 22.5523 20 22 20H19.5V22C19.5 22.5523 19.0523 23 18.5 23H5.5C4.94772 23 4.5 22.5523 4.5 22V20H2C1.44772 20 1 19.5523 1 19V10C1 9.44772 1.44772 9 2 9H4V2ZM6 9H18V3H6V9ZM3 11V18H4.49025V16C4.49025 15.4477 4.93797 15 5.49025 15H18.5086C19.0609 15 19.5086 15.4477 19.5086 16V18H21V11H3ZM6.5 17V21H17.5V17H6.5Z" fill="black" fill-opacity="0.7" />
 									</svg>
 									Печатная продукция
 								</p>
-								<p onClick={() => setFilterItem('active')} className={`flex  items-center font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.active ? '!bg-gray-light2' : ""}`}>
+								<p onClick={(e) => setFilterItem('active', e)} className={`flex  items-center font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.active ? '!bg-gray-light2' : ""}`}>
 									<svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5002 5C14.5002 3.067 16.0672 1.5 18.0002 1.5C19.9332 1.5 21.5002 3.067 21.5002 5C21.5002 6.93298 19.9332 8.5 18.0002 8.5C16.0672 8.5 14.5002 6.93298 14.5002 5ZM18.0002 3.5C17.1718 3.5 16.5002 4.17158 16.5002 5C16.5002 5.82841 17.1718 6.5 18.0002 6.5C18.8286 6.5 19.5002 5.82841 19.5002 5C19.5002 4.17158 18.8286 3.5 18.0002 3.5ZM9.67453 6.05404C9.92294 5.96803 10.1952 5.98329 10.4325 6.09652L15.9309 8.72082C16.2471 8.87173 16.4613 9.17712 16.4954 9.52582C16.5296 9.87451 16.3787 10.2157 16.0978 10.425L11.7431 13.6712L16.05 16.5064C16.2805 16.6582 16.438 16.8984 16.4854 17.1702C16.5327 17.442 16.4656 17.7213 16.2999 17.942L12.8041 22.5993C12.4725 23.041 11.8457 23.1303 11.404 22.7988C10.9623 22.4672 10.873 21.8404 11.2046 21.3987L14.0619 17.5921L9.45188 14.5574C9.17951 14.3781 9.01167 14.0772 9.00215 13.7513C8.99263 13.4254 9.14263 13.1152 9.40407 12.9204L13.5739 9.81198L9.94124 8.07819L6.32737 9.32951C5.80549 9.51021 5.23592 9.23363 5.05522 8.71174C4.87452 8.18986 5.1511 7.6203 5.67298 7.43959L9.67453 6.05404ZM22.7289 8.04814C23.107 8.45063 23.0873 9.08349 22.6848 9.46167L19.6857 12.2797C19.3711 12.5752 18.9024 12.6356 18.5232 12.4294L17.1823 11.7002C16.6971 11.4363 16.5177 10.8291 16.7816 10.3439C17.0454 9.85877 17.6527 9.67935 18.1378 9.94321L18.8433 10.3269L21.3153 8.00413C21.7178 7.62595 22.3507 7.64565 22.7289 8.04814ZM9.02934 14.9762C9.46922 15.3102 9.55511 15.9375 9.22116 16.3774L7.73631 18.3333C7.65333 18.4426 7.54873 18.5336 7.42903 18.6008L2.49134 21.3704C2.00965 21.6405 1.40015 21.4691 1.12996 20.9874C0.859782 20.5057 1.03124 19.8962 1.51292 19.626L6.26915 16.9582L7.62819 15.168C7.96214 14.7282 8.58945 14.6423 9.02934 14.9762Z" fill="black" fill-opacity="0.7" />
 									</svg>
