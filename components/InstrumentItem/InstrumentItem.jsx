@@ -49,10 +49,10 @@ export default function InstrumentItem({
               {underCountry}
             </p>
 
-            <div className="w-full flex justify-between items-center">
+            <div className="w-full flex justify-between items-center ..5x1:w-156px ..5x1:mx-auto">
               <small
                 onClick={setDilHover}
-                className={`  ..5x1:hidden max-h-21px flex items-center mr-5 font-medium border-b border-dashed border-gray-quick-silver cursor-pointer`}
+                className={`  ..5x1:hidden max-h-21px flex items-center mr-10 font-medium border-b border-dashed border-gray-quick-silver cursor-pointer`}
               >
                 {country}{' '}
                 <svg

@@ -26,6 +26,7 @@ export default function ProductCard({ obj }) {
   const [clickBtnRDesk, setClickBtnRDesk] = useState(false);
   const [clickBtnLDesk, setClickBtnLDesk] = useState(false);
   const [clickBtnBigDesk, setClickBtnBigDesk] = useState(false);
+  const [underL, setUnderL] = useState(false);
 
   const sliderFilt = useRef(null);
   let size = useWindowSize();
@@ -46,8 +47,15 @@ export default function ProductCard({ obj }) {
   return (
     <div
       onMouseEnter={() => setShowBtns(true)}
-      onMouseLeave={() => setShowBtns(false)}
-      className={`card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
+      onMouseLeave={() => {
+        setShowBtns(false);
+        setUnderL(false);
+      }}
+      onClick={() => setUnderL(true)}
+      // className={`card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
+      className={`${
+        underL ? 'underL' : ''
+      } card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
     >
       {obj.packS && (
         <div className="absolute top-0 left-0 z-10">

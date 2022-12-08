@@ -15,6 +15,8 @@ export default function SlideItem({
   pluses,
   setWindowInfo,
   fon,
+  stopAutoPlay,
+  startAutoPlay,
 }) {
   const [plus1, setPlus1] = useState(false);
   const [plus2, setPlus2] = useState(false);
@@ -125,6 +127,8 @@ export default function SlideItem({
               <div className="absolute top-0 mx-auto w-full h-444px ..5x2:w-336px ..5x2:top-3 ..5x2:h-56 conPlusesM">
                 {plus1 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute left-13.1% top-19.6%"
                     windowInfo={plus1}
@@ -132,6 +136,8 @@ export default function SlideItem({
                 )}
                 {plus2 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute left-29.82% top-19.6%"
                     windowInfo={plus2}
@@ -139,6 +145,8 @@ export default function SlideItem({
                 )}
                 {plus3 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute left-46.39% top-19.6%"
                     windowInfo={plus3}
@@ -146,6 +154,8 @@ export default function SlideItem({
                 )}
                 {plus4 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute right-28.8% top-19.6%"
                     windowInfo={plus4}
@@ -153,6 +163,8 @@ export default function SlideItem({
                 )}
                 {plus5 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute right-13.1% top-19.6%"
                     windowInfo={plus5}
@@ -161,6 +173,8 @@ export default function SlideItem({
 
                 {plus6 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute left-13.1% bottom-19.6%"
                     windowInfo={plus6}
@@ -168,6 +182,8 @@ export default function SlideItem({
                 )}
                 {plus7 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute left-29.82% bottom-19.6%"
                     windowInfo={plus7}
@@ -175,6 +191,8 @@ export default function SlideItem({
                 )}
                 {plus8 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute left-46.39% bottom-19.6%"
                     windowInfo={plus8}
@@ -182,6 +200,8 @@ export default function SlideItem({
                 )}
                 {plus9 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute right-28.8% bottom-19.6%"
                     windowInfo={plus9}
@@ -189,6 +209,8 @@ export default function SlideItem({
                 )}
                 {plus10 && (
                   <Plus
+                    stopAutoPlay={stopAutoPlay}
+                    startAutoPlay={startAutoPlay}
                     setWindowInfo={setWindowInfo}
                     styles="absolute right-13.1% bottom-19.6%"
                     windowInfo={plus10}

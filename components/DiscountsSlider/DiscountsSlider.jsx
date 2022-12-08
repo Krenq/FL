@@ -52,6 +52,15 @@ function DiscountsSlider({ refL, setWindowInfo }) {
       if (slider.current !== null && slider.current.swiper !== null)
         slider.current.swiper.slidePrev(1000);
     };
+
+  const startAutoPlay = () => {
+      if (slider.current !== null && slider.current.swiper !== null)
+        slider.current.swiper.autoplay.start();
+    },
+    stopAutoPlay = () => {
+      if (slider.current !== null && slider.current.swiper !== null)
+        slider.current.swiper.autoplay.stop();
+    };
   return (
     <div ref={refL} id="sec-1">
       <section className="container-base h-800px ..5x2:h-492px">
@@ -88,6 +97,8 @@ function DiscountsSlider({ refL, setWindowInfo }) {
         >
           <SwiperSlide>
             <SlideItem
+              stopAutoPlay={stopAutoPlay}
+              startAutoPlay={startAutoPlay}
               fon={fonTestSlidePlus}
               setWindowInfo={setWindowInfo}
               pluses={[
@@ -129,6 +140,8 @@ function DiscountsSlider({ refL, setWindowInfo }) {
 
           <SwiperSlide>
             <SlideItem
+              stopAutoPlay={stopAutoPlay}
+              startAutoPlay={startAutoPlay}
               setWindowInfo={setWindowInfo}
               pluses={[
                 {
@@ -180,6 +193,8 @@ function DiscountsSlider({ refL, setWindowInfo }) {
 
           <SwiperSlide>
             <SlideItem
+              stopAutoPlay={stopAutoPlay}
+              startAutoPlay={startAutoPlay}
               setWindowInfo={setWindowInfo}
               pluses={[
                 {
@@ -204,6 +219,8 @@ function DiscountsSlider({ refL, setWindowInfo }) {
 
           <SwiperSlide>
             <SlideItem
+              stopAutoPlay={stopAutoPlay}
+              startAutoPlay={startAutoPlay}
               setWindowInfo={setWindowInfo}
               pluses={[
                 {
@@ -256,6 +273,8 @@ function DiscountsSlider({ refL, setWindowInfo }) {
 
           <SwiperSlide>
             <SlideItem
+              stopAutoPlay={stopAutoPlay}
+              startAutoPlay={startAutoPlay}
               setWindowInfo={setWindowInfo}
               pluses={[
                 {
@@ -290,6 +309,8 @@ function DiscountsSlider({ refL, setWindowInfo }) {
 
           <SwiperSlide>
             <SlideItem
+              stopAutoPlay={stopAutoPlay}
+              startAutoPlay={startAutoPlay}
               setWindowInfo={setWindowInfo}
               pluses={[
                 {
@@ -351,6 +372,8 @@ function DiscountsSlider({ refL, setWindowInfo }) {
 
           <SwiperSlide>
             <SlideItem
+              stopAutoPlay={stopAutoPlay}
+              startAutoPlay={startAutoPlay}
               label="new"
               textStyles={{
                 fontSize: 52,

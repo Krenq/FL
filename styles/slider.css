@@ -633,7 +633,7 @@
 }
 
 .partners .slick-dots {
-	transform: translate(-24px, -35px);
+	transform: translate(0px, -35px);
 }
 
 .prevPartner {
