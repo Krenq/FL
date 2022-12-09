@@ -19,7 +19,18 @@ const ViewPhoto = ({ isShow, close }) => {
 		oneHoriz,
 		oneHoriz,
 		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+		oneHoriz,
+
 		oneHoriz
+
 	]
 
 	return (
@@ -89,7 +100,96 @@ const ViewPhoto = ({ isShow, close }) => {
 
 
 						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px ..5x2:mt-100px ">
 
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px  ..5x2:mt-100px">
+
+
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px ..5x2:mt-100px ">
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px  ..5x2:mt-100px">
+
+
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px ..5x2:mt-100px ">
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px  ..5x2:mt-100px">
+
+
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px ..5x2:mt-100px ">
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px  ..5x2:mt-100px">
+
+
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+						</SwiperSlide>
+						<SwiperSlide className="flex justify-center mt-60px  ..5x2:mt-100px">
+
+
+
+							<div className="..5x2:!w-379px ..5x2:!h-379px">
+								<Image src={one} />
+							</div>
+
+
+						</SwiperSlide>
 					</Swiper>
 				</div>
 
@@ -105,9 +205,9 @@ const ViewPhoto = ({ isShow, close }) => {
 
 				</button>
 
-				<div className="absolute left-0 z-10  flex justify-center items-center right-0 bottom-0 bg-gray-light2 h-120px">
+				<div className="absolute overflow-x-auto whitespace-nowrap left-0 z-10  flex justify-center items-center right-0 bottom-0 bg-gray-light2 h-120px">
 
-					{imagesDots.map((image, i) => <div key={i} onClick={() => slider.current.swiper.slideTo(i)} className={`px-1.5 cursor-pointer ${i === currentSlide - 1 ? 'border-t-4 border-primary pt-3 -mt-4' : ""}`}>
+					{imagesDots.map((image, i) => <div key={i} onClick={() => slider.current.swiper.slideTo(i)} className={`px-1.5 w-104px h-24 cursor-pointer ${i === currentSlide - 1 ? 'border-t-4 h-28 border-primary pt-3 -mt-4' : ""}`}>
 						<Image src={image} />
 					</div>)}
 

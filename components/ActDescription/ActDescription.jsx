@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import { Navigation } from "swiper"
+
 import { Swiper, SwiperSlide } from "swiper/react"
 import SpecialOfferItem from "../SpecialOfferItem/SpecialOfferItem"
 import defailFilterTwo from '../../images/templates/detailFilterTwo.jpg'
@@ -7,6 +7,8 @@ import fourF from '../../images/templates/4Offer.jpg';
 import treeL from '../../images/templates/treeItemSearch.jpg'
 import twoI from '../../images/templates/twoItemSearch.jpg'
 import oneL from '../../images/templates/oneItemSearchSlider.jpg'
+
+import NewSaleCardProduct from '../NewSaleCardProduct/NewSaleCardProduct';
 const ActDescription = () => {
 
 	const sliderFilt = useRef(null)
@@ -56,13 +58,25 @@ const ActDescription = () => {
 			</div>
 			<div className="px-80px relative ..5x2:px-3">
 				<Swiper ref={sliderFilt} breakpoints={{
-					500: {
+					360: {
+						slidesPerView: 2
+					},
+					575: {
 						slidesPerView: 3
 					},
-					1250: {
+					750: {
 						slidesPerView: 4
 					},
-					1560: {
+					930: {
+						slidesPerView: 5
+					},
+					1000: {
+						slidesPerView: 3
+					},
+					1230: {
+						slidesPerView: 4
+					},
+					1565: {
 						slidesPerView: 5
 					},
 					1850: {
@@ -71,186 +85,165 @@ const ActDescription = () => {
 				}} slidesPerView={2}  >
 
 					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
-						<SpecialOfferItem
-							obj={{
-								img: fourF,
-								text: 'Для сенсационного  увлажнения и восстановления кожи',
-								isActions: true,
-								isDetails: true,
-								DetailsPrice: {
-									price: '920.00',
-									oldPrice: '764.00'
-								},
-								isFirstFoliage: true,
-								noIsHeart: true,
-								isGif: true,
-								gifTitle: '4=5',
-								timeOver: '15.06.22',
+						<NewSaleCardProduct obj={{
+							img: [defailFilterTwo, defailFilterTwo],
+							text: 'Для сенсационного  увлажнения и восстановления кожи',
+							iText: 'Состав акции',
 
-								isSlider: true,
-								balls: true
-							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
-						/>
+							balls: '1.4 Б',
+							timeOver: '14.03.22',
+							prodDayLabel: true,
+							newLabel: true,
+							hitLabel: true,
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							}
+
+						}
+						} />
+
 					</SwiperSlide>
-					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6 ..5x2:justify-center">
-						<SpecialOfferItem
-							obj={{
-								img: defailFilterTwo,
-								text: 'Для сенсационного  увлажнения и восстановления кожи',
-								isSost: true,
-								isDetails: true,
-								DetailsPrice: {
-									price: '920.00',
-									oldPrice: '764.00'
-								},
-								isFirstFoliage: true,
-								noIsHeart: true,
-								isGif: true,
-								gifTitle: '2=3',
-								timeOver: '15.06.22',
+					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
+						<NewSaleCardProduct obj={{
+							img: [defailFilterTwo, defailFilterTwo],
+							text: 'Для сенсационного  увлажнения и восстановления кожи',
+							iText: 'Состав акции',
 
-								isSlider: true,
-								balls: true
-							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
-						/>
+							balls: '1.4 Б',
+							timeOver: '14.03.22',
+							prodDayLabel: true,
+							newLabel: true,
+							hitLabel: true,
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							}
+
+						}
+						} />
+
+					</SwiperSlide>
+					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
+						<NewSaleCardProduct obj={{
+							img: [defailFilterTwo, defailFilterTwo],
+							text: 'Для сенсационного  увлажнения и восстановления кожи',
+							iText: 'Состав акции',
+
+							balls: '1.4 Б',
+							timeOver: '14.03.22',
+							prodDayLabel: true,
+							newLabel: true,
+							hitLabel: true,
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							}
+
+						}
+						} />
+
+					</SwiperSlide>
+					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
+						<NewSaleCardProduct obj={{
+							img: [defailFilterTwo, defailFilterTwo],
+							text: 'Для сенсационного  увлажнения и восстановления кожи',
+							iText: 'Состав акции',
+
+							balls: '1.4 Б',
+							timeOver: '14.03.22',
+							prodDayLabel: true,
+							newLabel: true,
+							hitLabel: true,
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							}
+
+						}
+						} />
+
 					</SwiperSlide>
 
-					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6 ..5x2:justify-center">
-						<SpecialOfferItem
-							obj={{
-								img: defailFilterTwo,
-								text: 'Для сенсационного  увлажнения и восстановления кожи',
-								isSost: true,
-								isDetails: true,
-								DetailsPrice: {
-									price: '920.00',
-									oldPrice: '764.00'
-								},
-								isFirstFoliage: true,
-								noIsHeart: true,
-								isGif: true,
-								gifTitle: '1=2',
-								timeOver: '15.06.22',
+					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
+						<NewSaleCardProduct obj={{
+							img: [defailFilterTwo, defailFilterTwo],
+							text: 'Для сенсационного  увлажнения и восстановления кожи',
+							iText: 'Состав акции',
 
-								isSlider: true,
-								balls: true
-							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
-						/>
+							balls: '1.4 Б',
+							timeOver: '14.03.22',
+							prodDayLabel: true,
+							newLabel: true,
+							hitLabel: true,
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							}
+
+						}
+						} />
+
 					</SwiperSlide>
-					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6 ..5x2:justify-center">
-						<SpecialOfferItem
-							obj={{
-								img: fourF,
-								text: 'Для сенсационного  увлажнения и восстановления кожи',
-								isSost: true,
-								isDetails: true,
-								DetailsPrice: {
-									price: '920.00',
-									oldPrice: '764.00'
-								},
-								isFirstFoliage: true,
-								noIsHeart: true,
-								isGif: true,
-								gifTitle: '4=5',
-								timeOver: '15.06.22',
+					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
+						<NewSaleCardProduct obj={{
+							img: [defailFilterTwo, defailFilterTwo],
+							text: 'Для сенсационного  увлажнения и восстановления кожи',
+							iText: 'Состав акции',
 
-								isSlider: true,
-								balls: true
-							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
-						/>
+							balls: '1.4 Б',
+							timeOver: '14.03.22',
+							prodDayLabel: true,
+							newLabel: true,
+							hitLabel: true,
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							}
+
+						}
+						} />
+
 					</SwiperSlide>
-					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6 ..5x2:justify-center">
-						<SpecialOfferItem
-							obj={{
-								img: fourF,
-								text: 'Для сенсационного  увлажнения и восстановления кожи',
+					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
+						<NewSaleCardProduct obj={{
+							img: [defailFilterTwo, defailFilterTwo],
+							text: 'Для сенсационного  увлажнения и восстановления кожи',
+							iText: 'Состав акции',
 
-								isDetails: true,
-								DetailsPrice: {
-									price: '920.00',
-									oldPrice: '764.00'
-								},
-								isFirstFoliage: true,
-								noIsHeart: true,
-								isGif: true,
-								gifTitle: '4=5',
-								timeOver: '15.06.22',
+							balls: '1.4 Б',
+							timeOver: '14.03.22',
+							prodDayLabel: true,
+							newLabel: true,
+							hitLabel: true,
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							}
 
-								isSlider: true,
-								balls: true
-							}}
-							srcSliderImgTree={treeL} srcSliderImgTwo={twoI} srcSliderImgOne={oneL}
-						/>
+						}
+						} />
+
 					</SwiperSlide>
-					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6 ..5x2:justify-center">
-						<SpecialOfferItem
-							obj={{
-								img: fourF,
-								text: 'Для сенсационного  увлажнения и восстановления кожи',
-								isSost: true,
-								isDetails: true,
-								DetailsPrice: {
-									price: '920.00',
-									oldPrice: '764.00'
-								},
-								isFirstFoliage: true,
-								noIsHeart: true,
-								isGif: true,
-								gifTitle: '4=5',
-								timeOver: '15.06.22',
+					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6  ..5x2:justify-center">
+						<NewSaleCardProduct obj={{
+							img: [defailFilterTwo, defailFilterTwo],
+							text: 'Для сенсационного  увлажнения и восстановления кожи',
+							iText: 'Состав акции',
 
-								isSlider: true,
-								balls: true
-							}}
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6 ..5x2:justify-center">
-						<SpecialOfferItem
-							obj={{
-								img: fourF,
-								text: 'Для сенсационного  увлажнения и восстановления кожи',
-								isSost: true,
-								isDetails: true,
-								DetailsPrice: {
-									price: '920.00',
-									oldPrice: '764.00'
-								},
-								isFirstFoliage: true,
-								noIsHeart: true,
-								isGif: true,
-								gifTitle: '4=5',
-								timeOver: '15.06.22',
+							balls: '1.4 Б',
+							timeOver: '14.03.22',
+							prodDayLabel: true,
+							newLabel: true,
+							hitLabel: true,
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							}
 
-								isSlider: true,
-								balls: true
-							}}
-						/>
-					</SwiperSlide>
-					<SwiperSlide className="..5x2:flex ..7x1:!w-44 ..7x1:mr-6 ..5x2:justify-center">
-						<SpecialOfferItem
-							obj={{
-								img: fourF,
-								text: 'Для сенсационного  увлажнения и восстановления кожи',
-								isSost: true,
-								isDetails: true,
-								DetailsPrice: {
-									price: '920.00',
-									oldPrice: '764.00'
-								},
-								isFirstFoliage: true,
-								noIsHeart: true,
-								isGif: true,
-								gifTitle: '4=5',
-								timeOver: '15.06.22',
+						}
+						} />
 
-								isSlider: true,
-								balls: true
-							}}
-						/>
 					</SwiperSlide>
 
 				</Swiper>

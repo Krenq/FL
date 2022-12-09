@@ -10,7 +10,7 @@ import eightTon from '../../images/templates/ton8.jpg'
 import nineTon from '../../images/templates/ton9.jpg'
 import tenTon from '../../images/templates/ton10.png'
 import one from '../../images/templates/DetailCardOne.jpg'
-
+import oneMini from '../../images/templates/miniOne.jpg'
 import yandex from '../../images/templates/yandex.jpg';
 import ozon from '../../images/templates/ozon.png';
 import pochtaRF from '../../images/templates/pochta_rf.png';
@@ -62,37 +62,42 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 		})
 
 
-	const setFilter = (filt) => {
-		switch (filt) {
-			case ('sale'):
-				return setDropDowns({
-					sale: !dropDownds.sale,
-					free: false,
-					loal: false,
-					promo: false
-				})
-			case ('free'):
-				return setDropDowns({
-					sale: false,
-					free: !dropDownds.free,
-					loal: false,
-					promo: false
-				})
-			case ('loal'):
-				return setDropDowns({
-					sale: false,
-					free: false,
-					loal: !dropDownds.loal,
-					promo: false
-				})
-			case ('promo'):
-				return setDropDowns({
-					sale: false,
-					free: false,
-					loal: false,
-					promo: !dropDownds.promo
-				})
+	const setFilter = (filt, e) => {
+
+		if (e.target.id === 'click') {
+			switch (filt) {
+				case ('sale'):
+					return setDropDowns({
+						sale: !dropDownds.sale,
+						free: false,
+						loal: false,
+						promo: false
+					})
+				case ('free'):
+					return setDropDowns({
+						sale: false,
+						free: !dropDownds.free,
+						loal: false,
+						promo: false
+					})
+				case ('loal'):
+					return setDropDowns({
+						sale: false,
+						free: false,
+						loal: !dropDownds.loal,
+						promo: false
+					})
+				case ('promo'):
+					return setDropDowns({
+						sale: false,
+						free: false,
+						loal: false,
+						promo: !dropDownds.promo
+					})
+			}
+
 		}
+
 	}
 
 
@@ -230,23 +235,43 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 			<div className="flex   -mr-1  ">
 				<div className="flex ..5x2:flex-col ..5x2:w-full">
-					<div className="relative mt-6 ..6x04:mt-2 widthDetails .6x2:mr-0 ..5x2:!w-auto">
+					<div className="relative mt-6 mb-7  ..6x04:mt-2 widthDetails .6x2:mr-0 ..5x2:!w-auto">
 
-						<div className="absolute ..6x04:left-0 ..6x04:top-2 ..5x2:flex-col -left-2 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
-							<div className="border ..5x2:hidden  .3x1:h-9 .3x1:w-9  mb-2 border-black-70pe mr-5 w-60px h-60px">
+						<div className="absolute ..6x04:left-0   ..6x04:top-2 ..5x2:flex-col -left-2 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
+							<div onClick={() => slider.current.swiper.slideTo(0)} className="border ..5x2:hidden  .3x1:h-9 .3x1:w-9  mb-2 border-black-70pe mr-5 w-60px h-60px">
 								<Image src={oneSmall} />
 							</div>
-							<div className=" .3x1:h-9 .3x1:w-9  h-60px flex flex-col justify-end">
+							<div className=" .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
 								<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center   justify-center .3x1:text-9px .3x1:h-14px .3x1:w-9">HIT!</p>
 								<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex bg-white items-center justify-center .3x1:h-14px .3x1:w-9 .3x1:text-9px ">NEW</p>
 							</div>
-							<div className=" .3x1:h-9 .3x1:w-9 ..5x2:hidden mr-5  w-60px h-60px mb-2">
+							<div onClick={() => slider.current.swiper.slideTo(1)} className=" .3x1:h-9 relative .3x1:w-9 ..5x2:hidden mr-5  w-60px h-60px mb-2">
 								<Image src={twoSmall} />
+								<div onClick={() => slider.current.swiper.slideTo(2)} className=" .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
+									<Image src={oneMini} />
+								</div>
+								<div onClick={() => slider.current.swiper.slideTo(3)} className=" .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
+									<Image src={oneMini} />
+								</div>
 							</div>
-							<div className="..5x2:mt-1 .3x1:h-9 .3x1:w-9  w-60px h-60px">
+							<div className="..5x2:mt-1 relative  .3x1:h-9 .3x1:w-9  w-60px h-60px">
 								<Image src={treeSmall} />
+								<svg className="absolute -bottom-12 .3x1:h-9 .3x1:w-9 left-1/2 ability" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="30" cy="30" r="29.5" fill="white" fill-opacity="0.3" stroke="#C5C1AB" />
+									<circle cx="30" cy="30" r="27.5" fill="white" fill-opacity="0.7" stroke="#C5C1AB" />
+									<path d="M7.74756 30.4751C7.46102 30.4462 7.236 30.3753 7.0725 30.2623C6.90304 30.1488 6.78763 30.0075 6.72628 29.8385C6.66552 29.6635 6.64508 29.4775 6.66494 29.2805C6.6848 29.0835 6.74166 28.9083 6.83552 28.7549C6.92938 28.6016 7.07066 28.4862 7.25939 28.4087C7.44274 28.3247 7.67769 28.2971 7.96424 28.326C8.24482 28.3543 8.46954 28.4282 8.6384 28.5478C8.80189 28.6607 8.9173 28.802 8.98462 28.9716C9.04598 29.1406 9.06673 29.3236 9.04686 29.5206C9.027 29.7176 8.96984 29.8958 8.87538 30.0551C8.77556 30.2079 8.63427 30.3233 8.45151 30.4014C8.26279 30.4788 8.02814 30.5034 7.74756 30.4751Z" fill="#337202" />
+									<path d="M15.354 19.3274L14.8366 20.1502L12.3528 18.5884L10.7192 21.1865L13.2029 22.7483L12.6855 23.5711L7.24559 20.1505L7.763 19.3277L10.0182 20.7457L11.6519 18.1477L9.39666 16.7296L9.91406 15.9068L15.354 19.3274Z" fill="#337202" />
+									<path d="M22.5139 14.2807L21.0186 12.9887L18.8444 14.1899L19.1422 16.1435L18.2599 16.6309L17.2742 9.80313L18.1566 9.31568L23.404 13.7889L22.5139 14.2807ZM18.9312 11.1087C18.8835 11.0596 18.8068 10.9889 18.7009 10.8966C18.5974 10.7961 18.4939 10.6956 18.3904 10.5951C18.284 10.4894 18.1986 10.4029 18.134 10.3358C18.1658 10.4553 18.1981 10.5883 18.231 10.7346C18.2662 10.8728 18.2971 11.0031 18.3236 11.1256C18.3472 11.2428 18.3659 11.3387 18.3797 11.4133L18.6873 13.3101L20.3732 12.3787L18.9312 11.1087Z" fill="#337202" />
+									<path d="M27.3084 13.0949L27.1674 6.67046L31.0544 6.58515L31.0728 7.42195L28.1575 7.48593L28.1972 9.2945L29.025 9.27633C29.6609 9.26237 30.1605 9.33243 30.524 9.48649C30.8934 9.64042 31.1563 9.8567 31.3124 10.1353C31.4744 10.4079 31.5594 10.7241 31.5673 11.084C31.576 11.4799 31.4995 11.8236 31.3379 12.1153C31.1822 12.4067 30.9292 12.6344 30.5787 12.7981C30.228 12.9558 29.7648 13.041 29.1889 13.0536L27.3084 13.0949ZM29.099 12.2364C29.6269 12.2248 30.0059 12.1295 30.236 11.9504C30.466 11.7653 30.5768 11.4838 30.5685 11.1059C30.5627 10.842 30.5012 10.6363 30.3839 10.4888C30.2667 10.3413 30.0873 10.2372 29.846 10.1765C29.6106 10.1157 29.3009 10.0895 28.917 10.0979L28.2152 10.1133L28.2622 12.2548L29.099 12.2364Z" fill="#337202" />
+									<path d="M42.6139 13.985C42.3731 14.4209 42.0989 14.787 41.7913 15.0832C41.4919 15.377 41.1608 15.5917 40.798 15.7272C40.4405 15.8655 40.0586 15.9116 39.6523 15.8654C39.2513 15.822 38.8328 15.6799 38.3969 15.4391C37.9505 15.1925 37.5996 14.9095 37.3442 14.5902C37.0969 14.2685 36.9326 13.9207 36.8513 13.5467C36.7781 13.1704 36.7877 12.7747 36.8799 12.3595C36.9722 11.9444 37.1388 11.5189 37.3796 11.083C37.6987 10.5053 38.0718 10.0533 38.4988 9.72712C38.9258 9.40093 39.4003 9.22439 39.9224 9.19752C40.4498 9.17354 41.0102 9.32549 41.6036 9.65335C42.1813 9.97251 42.5951 10.3588 42.8451 10.8122C43.1031 11.2632 43.2089 11.7604 43.1624 12.3036C43.1188 12.8416 42.936 13.4021 42.6139 13.985ZM38.2733 11.587C38.0238 12.0387 37.8694 12.4607 37.8103 12.853C37.7541 13.2401 37.8054 13.594 37.9641 13.9147C38.1257 14.2302 38.4034 14.4968 38.7973 14.7144C39.1964 14.9349 39.5699 15.0281 39.9178 14.9941C40.2685 14.9548 40.5928 14.8083 40.8905 14.5547C41.1912 14.2958 41.4663 13.9406 41.7158 13.4889C42.0901 12.8114 42.2452 12.2082 42.181 11.6792C42.125 11.1478 41.7976 10.7167 41.1989 10.386C40.7997 10.1655 40.4236 10.0708 40.0705 10.1019C39.7175 10.1331 39.392 10.2754 39.0942 10.5291C38.7965 10.7827 38.5228 11.1353 38.2733 11.587Z" fill="#337202" />
+									<path d="M50.8611 18.7419C51.2925 19.4627 51.4601 20.0756 51.3639 20.5807C51.2729 21.0828 50.9673 21.4894 50.4474 21.8007C50.2157 21.9394 49.9712 22.0333 49.7139 22.0824C49.4597 22.1367 49.1968 22.1297 48.9252 22.0615C48.6588 21.9902 48.3919 21.8423 48.1246 21.6177C47.8655 21.3952 47.6143 21.0805 47.3708 20.6738L47.0149 20.0792L44.9222 21.3319L44.4229 20.4979L49.9366 17.1975L50.8611 18.7419ZM50.1214 19.1008L49.7331 18.4521L47.7176 19.6586L48.0181 20.1605C48.2061 20.4746 48.3967 20.7171 48.59 20.8881C48.7884 21.056 48.9931 21.1468 49.204 21.1604C49.4231 21.1761 49.6563 21.1099 49.9034 20.962C50.2329 20.7648 50.4158 20.5154 50.4521 20.214C50.4967 19.9146 50.3864 19.5435 50.1214 19.1008Z" fill="#337202" />
+									<path d="M51.0218 28.1881C51.3084 28.1592 51.543 28.1838 51.7258 28.2618C51.9145 28.3393 52.0558 28.4547 52.1496 28.608C52.2441 28.7674 52.3013 28.9455 52.3211 29.1425C52.341 29.3395 52.3202 29.5225 52.2589 29.6915C52.1975 29.8606 52.0821 30.0018 51.9127 30.1154C51.7498 30.2344 51.525 30.3083 51.2385 30.3372C50.9579 30.3655 50.723 30.3379 50.5336 30.2545C50.3509 30.1764 50.2096 30.061 50.1098 29.9082C50.0159 29.7549 49.9591 29.5797 49.9392 29.3827C49.9193 29.1857 49.9398 28.9997 50.0005 28.8247C50.0679 28.6551 50.1833 28.5138 50.3468 28.4008C50.5162 28.2873 50.7412 28.2163 51.0218 28.1881Z" fill="#337202" />
+									<path d="M27.4859 36L32.0459 26.08H26.0459V24.576H33.8699V25.792L29.3259 36H27.4859Z" fill="#337202" />
+									<path d="M30.1932 42.568V49H21.4692V42.568H22.5252V48.112H25.2972V42.568H26.3532V48.112H29.1372V42.568H30.1932ZM36.6905 43.456H34.5905V49H33.5465V43.456H31.4705V42.568H36.6905V43.456ZM37.2038 48.352C37.2038 48.056 37.2758 47.848 37.4198 47.728C37.5638 47.608 37.7358 47.548 37.9358 47.548C38.1438 47.548 38.3198 47.608 38.4638 47.728C38.6158 47.848 38.6918 48.056 38.6918 48.352C38.6918 48.64 38.6158 48.848 38.4638 48.976C38.3198 49.104 38.1438 49.168 37.9358 49.168C37.7358 49.168 37.5638 49.104 37.4198 48.976C37.2758 48.848 37.2038 48.64 37.2038 48.352Z" fill="#337202" />
+								</svg>
+
 							</div>
-							<div className="..5x2:hidden .3x1:h-9 .3x1:w-10  w-60px h-60px flex flex-col justify-center items-center">
+							<div className="..5x2:hidden mt-28 .3x1:h-9 .3x1:w-10  w-60px h-60px flex flex-col justify-center items-center">
 								<svg className=".3x1:h-4 .3x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
 								</svg>
@@ -254,7 +279,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 							</div>
 
 						</div>
-						<div className="..5x2:flex px-6px hidden absolute right-0 z-10 ..6x04:-right-2 ..6x04:rounded-r-none top-20 w-60px ..6x2:h-12 .1x1:h-9  rounded-xl  bg-shadow   flex-col justify-center items-center">
+						<div className="..5x2:flex px-6px  hidden absolute right-0 z-10 ..6x04:-right-2 ..6x04:rounded-r-none top-20 w-60px ..6x2:h-12 .1x1:h-9  rounded-xl  bg-shadow   flex-col justify-center items-center">
 							<svg className=".1x1:h-4 .1x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
 							</svg>
@@ -266,7 +291,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 						</div>
 						<Swiper ref={slider} slidesPerView={1} className='sliderCenter  .1x1:!w-96 '  >
 
-							<SwiperSlide className="pl-16 ml-2 .3x1:ml-0   .3x1:pl-0 .6x2:pl-7 ..5x2:pl-0 .1x1:!w-96 ..5x2:!w-auto ..6x04:ml-0   relative">
+							<SwiperSlide className="pl-16  .3x1:ml-0   .3x1:pl-0 .6x2:pl-7 ..5x2:pl-0 .1x1:!w-96 ..5x2:!w-auto ..6x04:ml-0   relative">
 
 
 
@@ -286,7 +311,24 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 
 							</SwiperSlide>
+							<SwiperSlide className="pl-16 ml-2 .3x1:ml-0  .3x1:pl-0   ..5x2:pl-0 .6x2:pl-7 .1x1:!w-96  ..5x2:!w-auto ..6x04:ml-0 .  relative">
 
+
+								<div onClick={close} className="..5x5:h-96 hoverCustom adaptSlide ..5x1:w-80 ..5x1:h-80 ..5x5:w-96">
+									<Image src={one} width='608px' height='608px' />
+								</div>
+
+
+							</SwiperSlide>
+							<SwiperSlide className="pl-16 ml-2 .3x1:ml-0  .3x1:pl-0   ..5x2:pl-0 .6x2:pl-7 .1x1:!w-96  ..5x2:!w-auto ..6x04:ml-0 .  relative">
+
+
+								<div onClick={close} className="..5x5:h-96 hoverCustom adaptSlide ..5x1:w-80 ..5x1:h-80 ..5x5:w-96">
+									<Image src={one} width='608px' height='608px' />
+								</div>
+
+
+							</SwiperSlide>
 						</Swiper>
 						<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlide} className='..5x2:hidden ..5x1:left-6 absolute .1x1:top-44  ..5x1:top-40 .3x1:left-16  hover:bg-black transition-all rounded-2xl .3x1:top-52  left-86px     top-300px   z-10'>
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -543,8 +585,9 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 					</div>
 
 
-					<div onClick={() => setFilter('sale')} className={`  h-110px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.sale ? 'activeSlide' : ''}`}>
-						<div className={`flex px-3 ..6x04:pl-0 ..6x04:mt-0 transiton-all mt-8 .1x1:pb-1 .1x1:mt-0   items-center mt-3 relative ..6x04:pb-10px pb-4 border-b border-dashed border-gray ${dropDownds.sale ? 'border-none pb-0' : ''}`}>
+					<div onClick={(e) => setFilter('sale', e)} className={`  h-110px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.sale ? 'activeSlide' : ''}`}>
+
+						<div id="click" className={`flex px-3 ..6x04:pl-0 ..6x04:mt-0 transiton-all mt-8 .1x1:pb-1 .1x1:mt-0   items-center mt-3 relative ..6x04:pb-10px pb-4 border-b border-dashed border-gray ${dropDownds.sale ? 'border-none pb-0' : ''}`}>
 							<svg className={`absolute .1x1:right-1  right-3 transition-all top-5 ${dropDownds.sale ? 'prev_rotate' : ''}`} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
@@ -558,8 +601,8 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 
 							<div>
-								<p className='font-montserrat font-semibold ..6x04:font-medium ..6x04:text-13px pt-2 .1x1:text-13px'>Скидка 35%</p>
-								<p className='font-montserrat text-label-pink-2 ..6x04:mt-1 ..6x04:text-13px .1x1:text-13px'>1 532.30 ₽ </p>
+								<p id="click" className='font-montserrat font-semibold ..6x04:font-medium ..6x04:text-13px pt-2 .1x1:text-13px'>Скидка 35%</p>
+								<p id="click" className='font-montserrat text-label-pink-2 ..6x04:mt-1 ..6x04:text-13px .1x1:text-13px'>1 532.30 ₽ </p>
 
 							</div>
 
@@ -596,9 +639,10 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 								Второй и последующий заказы - 35% на всю сумму заказа!</p>
 						</div>
+
 					</div>
-					<div onClick={() => setFilter('free')} className={` h-100px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.free ? 'activeSlide mb-3' : ''}`}>
-						<div className={`flex ..6x04:pl-0 px-3 .1x1:pb-1 .1x1:pt-0 pt-2 ..5x1:pr-0 .1x1:mt-0 pb-4 items-center mt-5px relative ..6x04:pb-10px  border-b border-dashed border-gray ${dropDownds.free ? 'border-none pb-0' : ''}`}>
+					<div onClick={(e) => setFilter('free', e)} className={` h-100px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.free ? 'activeSlide mb-3' : ''}`}>
+						<div id="click" className={`flex ..6x04:pl-0 px-3 .1x1:pb-1 .1x1:pt-0 pt-2 ..5x1:pr-0 .1x1:mt-0 pb-4 items-center mt-5px relative ..6x04:pb-10px  border-b border-dashed border-gray ${dropDownds.free ? 'border-none pb-0' : ''}`}>
 							<svg className={`absolute  .1x1:right-1  right-3 top-5 transition-all ${dropDownds.free ? 'prev_rotate ' : ''} `} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
@@ -638,23 +682,23 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 
 							<div className="ml-12">
-								<p className='font-montserrat font-semibold ..6x04:text-13px    ..6x04:font-medium .1x1:text-13px'>Бесплатная доставка</p>
+								<p id="click" className='font-montserrat font-semibold ..6x04:text-13px    ..6x04:font-medium .1x1:text-13px'>Бесплатная доставка</p>
 								<div className={`flex items-center  ${dropDownds.free ? 'flex-wrap' : ''}`}>
 									<div className='flex items-center mb-6px'>
-										<p className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Курьер</p>
-										<span className='..7x230:text-9px ..5x1:text-8px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 .4x1:hidden ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<p id="click" className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Курьер</p>
+										<span id="click" className='..7x230:text-9px ..5x1:text-8px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 .4x1:hidden ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg> от 2 500 ₽</span>
 									</div>
 									<div className={`${dropDownds.free ? 'mr-2' : ""} mb-6px flex items-center`}>
-										<p className='font-montserrat  ..7x230:text-10px   text-13px font-normal mr-1  ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>ПВЗ</p>
-										<span className='..7x230:text-9px ..5x1:text-8px .2x00:text-10px rounded-xl .2x00:mr-0.5 ..7x230:px-1 ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center' ><svg className="mr-1 .4x1:hidden ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<p id="click" className='font-montserrat  ..7x230:text-10px   text-13px font-normal mr-1  ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>ПВЗ</p>
+										<span id="click" className='..7x230:text-9px ..5x1:text-8px .2x00:text-10px rounded-xl .2x00:mr-0.5 ..7x230:px-1 ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center' ><svg className="mr-1 .4x1:hidden ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg>от 1 500 ₽</span>
 									</div>
 									<div className={`flex items-center mb-6px ${dropDownds.free ? 'block' : 'hidden'}`}>
-										<p className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Бутики</p>
-										<span className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<p id="click" className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Бутики</p>
+										<span id="click" className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg> от 0 ₽</span>
 									</div>
@@ -788,8 +832,8 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 						</div>
 					</div>
 
-					<div onClick={() => setFilter('loal')} className={` h-80px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.loal ? 'activeSlide mb-3' : ''}`}>
-						<div className={`flex px-3 ..6x04:pl-0  pt-2 .1x1:pt-0 .1x1:mt-0  items-center -mt-2 relative pb-4 border-b ..6x04:pb-10px  border-dashed border-gray ${dropDownds.loal ? 'border-none' : ""}`}>
+					<div onClick={(e) => setFilter('loal', e)} className={` h-80px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.loal ? 'activeSlide mb-3' : ''}`}>
+						<div id="click" className={`flex px-3 ..6x04:pl-0  pt-2 .1x1:pt-0 .1x1:mt-0  items-center -mt-2 relative pb-4 border-b ..6x04:pb-10px  border-dashed border-gray ${dropDownds.loal ? 'border-none' : ""}`}>
 							<svg className={`absolute transition-all .1x1:right-1  right-3 top-5 ..6x04:top-3 ${dropDownds.loal ? 'prev_rotate' : ''}`} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
@@ -809,8 +853,8 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 
 							<div>
-								<p className='font-montserrat font-semibold ..6x04:text-13px  ..6x04:font-medium .1x1:text-13px '>Программа лояльности</p>
-								<p className='font-lora font-medium text-gray-quick-silver ..6x04:text-13px .1x1:text-13px '>De<span className=' font-normal font-montserrat'>-счёт:</span> <span className='font-montserrat  font-normal text-label-orange '>9 000 De</span></p>
+								<p id="click" className='font-montserrat font-semibold ..6x04:text-13px  ..6x04:font-medium .1x1:text-13px '>Программа лояльности</p>
+								<p id="click" className='font-lora font-medium text-gray-quick-silver ..6x04:text-13px .1x1:text-13px '>De<span className=' font-normal font-montserrat'>-счёт:</span> <span className='font-montserrat  font-normal text-label-orange '>9 000 De</span></p>
 
 							</div>
 						</div>
@@ -895,8 +939,8 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 						</div>
 					</div>
 
-					<div onClick={() => setFilter('promo')} className={` h-80px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.promo ? 'activeSlide' : ''}`}>
-						<div className={`flex px-3 ..6x04:pl-0 pt-6px .1x1:pb-4 items-center   relative pb-6 border-b ..6x04:pb-10px ${dropDownds.promo ? 'border-none' : ''} border-dashed border-gray `}>
+					<div onClick={(e) => setFilter('promo', e)} className={` h-80px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.promo ? 'activeSlide' : ''}`}>
+						<div id="click" className={`flex px-3 ..6x04:pl-0 pt-6px .1x1:pb-4 items-center   relative pb-6 border-b ..6x04:pb-10px ${dropDownds.promo ? 'border-none' : ''} border-dashed border-gray `}>
 							<svg className={`absolute right-3 top-3 .1x1:right-1 ..6x04:top-1 transition-all ${dropDownds.promo ? 'prev_rotate' : ''}`} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
@@ -920,7 +964,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 								<path d="M16.3839 3.36612L15.9596 3.79038L15.9596 3.79038L16.3839 3.36612ZM26.4922 13.4744L26.9177 13.0514L26.9165 13.0502L26.4922 13.4744ZM26.4922 18.4094L26.9171 18.833L26.9177 18.8325L26.4922 18.4094ZM26.4896 18.4121L26.9138 18.8363L26.9145 18.8357L26.4896 18.4121ZM18.4238 26.4778L17.9996 26.0535L17.9994 26.0537L18.4238 26.4778ZM13.4713 26.4779L13.8958 26.0538L13.8954 26.0534L13.4713 26.4779ZM3.36661 16.3844L2.94258 16.8089L2.94258 16.8089L3.36661 16.3844ZM5.5 14.9818H4.9C4.9 15.1411 4.96331 15.2938 5.07597 15.4063L5.5 14.9818ZM5.5 5.5V4.9C5.16863 4.9 4.9 5.16863 4.9 5.5H5.5ZM15.24 24.711L15.6645 24.287L15.6641 24.2865L15.24 24.711ZM16.655 24.7111L16.2308 24.2868L16.2305 24.2871L16.655 24.7111ZM24.7192 16.6469L25.1435 17.0712L25.1448 17.0698L24.7192 16.6469ZM24.7203 16.6458L25.1459 17.0687L25.1465 17.0682L24.7203 16.6458ZM24.7203 15.2381L25.1465 14.8157L25.1459 14.8152L24.7203 15.2381ZM24.7192 15.2369L25.1448 14.814L25.1435 14.8127L24.7192 15.2369ZM14.9822 5.5L15.4065 5.07574C15.294 4.96321 15.1414 4.9 14.9822 4.9V5.5ZM4.25 2.4C3.22827 2.4 2.4 3.22827 2.4 4.25H3.6C3.6 3.89101 3.89101 3.6 4.25 3.6V2.4ZM15.5 2.4H4.25V3.6H15.5V2.4ZM16.8081 2.94185C16.4612 2.59491 15.9907 2.4 15.5 2.4V3.6C15.6724 3.6 15.8377 3.66848 15.9596 3.79038L16.8081 2.94185ZM26.9177 18.8325C28.5074 17.2333 28.5074 14.6506 26.9177 13.0514L26.0667 13.8974C27.1911 15.0285 27.1911 16.8554 26.0667 17.9864L26.9177 18.8325ZM26.9145 18.8357L26.9171 18.833L26.0672 17.9859L26.0646 17.9885L26.9145 18.8357ZM18.8481 26.9021L26.9138 18.8363L26.0653 17.9878L17.9996 26.0535L18.8481 26.9021ZM15.9476 28.1043C17.0355 28.1043 18.0794 27.6714 18.8483 26.9019L17.9994 26.0537C17.4554 26.5981 16.7169 26.9043 15.9476 26.9043V28.1043ZM13.0469 26.9019C13.8159 27.6717 14.8594 28.1043 15.9476 28.1043V26.9043C15.1779 26.9043 14.4398 26.5984 13.8958 26.0538L13.0469 26.9019ZM2.94258 16.8089L13.0473 26.9024L13.8954 26.0534L3.79064 15.9599L2.94258 16.8089ZM2.4 15.5C2.4 15.991 2.59519 16.4619 2.94258 16.8089L3.79064 15.9599C3.66858 15.838 3.6 15.6725 3.6 15.5H2.4ZM2.4 4.25V15.5H3.6V4.25H2.4ZM6.1 14.9818V5.5H4.9V14.9818H6.1ZM15.9476 24.4043C15.8414 24.4043 15.7396 24.3621 15.6645 24.287L14.8155 25.1351C15.1157 25.4355 15.5229 25.6043 15.9476 25.6043V24.4043ZM16.2305 24.2871C16.1556 24.3621 16.0538 24.4043 15.9476 24.4043V25.6043C16.3723 25.6043 16.7795 25.4355 17.0795 25.1351L16.2305 24.2871ZM24.2949 16.2227L16.2308 24.2868L17.0793 25.1353L25.1435 17.0712L24.2949 16.2227ZM24.2947 16.2229L24.2936 16.224L25.1448 17.0698L25.1459 17.0687L24.2947 16.2229ZM24.2941 15.6604C24.4486 15.8163 24.4486 16.0676 24.2941 16.2235L25.1465 17.0682C25.7645 16.4446 25.7645 15.4393 25.1465 14.8157L24.2941 15.6604ZM24.2936 15.6599L24.2947 15.661L25.1459 14.8152L25.1448 14.814L24.2936 15.6599ZM14.558 5.92426L24.2949 15.6612L25.1435 14.8127L15.4065 5.07574L14.558 5.92426ZM5.5 6.1H14.9822V4.9H5.5V6.1ZM26.9165 13.0502L16.8081 2.94185L15.9596 3.79038L26.0679 13.8987L26.9165 13.0502ZM15.6641 24.2865L5.92403 14.5573L5.07597 15.4063L14.816 25.1355L15.6641 24.2865ZM10.8125 12.975C12.0068 12.975 12.975 12.0068 12.975 10.8125H11.775C11.775 11.3441 11.3441 11.775 10.8125 11.775V12.975ZM12.975 10.8125C12.975 9.61819 12.0068 8.65 10.8125 8.65V9.85C11.3441 9.85 11.775 10.2809 11.775 10.8125H12.975ZM10.8125 8.65C9.61819 8.65 8.65 9.61819 8.65 10.8125H9.85C9.85 10.2809 10.2809 9.85 10.8125 9.85V8.65ZM8.65 10.8125C8.65 12.0068 9.61819 12.975 10.8125 12.975V11.775C10.2809 11.775 9.85 11.3441 9.85 10.8125H8.65Z" fill="white" mask="url(#path-1-inside-1_2585_696349)" />
 							</svg>
 
-							<p className='font-montserrat font-semibold ..6x04:text-13px .1x1:text-13px   ..6x04:font-medium'>Промокод</p>
+							<p id="click" className='font-montserrat font-semibold ..6x04:text-13px .1x1:text-13px   ..6x04:font-medium'>Промокод</p>
 
 						</div>
 						<div className={`p-3 pt-0 ${dropDownds.promo ? 'block' : 'hidden'}`}>
