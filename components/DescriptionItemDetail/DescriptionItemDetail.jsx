@@ -245,12 +245,15 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 								<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center   justify-center .3x1:text-9px .3x1:h-14px .3x1:w-9">HIT!</p>
 								<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex bg-white items-center justify-center .3x1:h-14px .3x1:w-9 .3x1:text-9px ">NEW</p>
 							</div>
-							<div onClick={() => slider.current.swiper.slideTo(1)} className=" .3x1:h-9 relative .3x1:w-9 ..5x2:hidden mr-5  w-60px h-60px mb-2">
+							<div id="one" onClick={(e) => {
+								console.log(e.target.src)
+								if (e.target.src === 'http://localhost:6006/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDetailCardSmallTwo.229bdfcb.jpg&w=128&q=75' && e.target.id !== '2' && e.target.id !== '3') slider.current.swiper.slideTo(1)
+							}} className=" .3x1:h-9 relative .3x1:w-9 ..5x2:hidden mr-5  w-60px h-60px mb-2">
 								<Image src={twoSmall} />
-								<div onClick={() => slider.current.swiper.slideTo(2)} className=" .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
+								<div onClick={() => slider.current.swiper.slideTo(2)} id='2' className=" .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
 									<Image src={oneMini} />
 								</div>
-								<div onClick={() => slider.current.swiper.slideTo(3)} className=" .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
+								<div onClick={() => slider.current.swiper.slideTo(3)} id='2' className=" .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
 									<Image src={oneMini} />
 								</div>
 							</div>
