@@ -29,7 +29,8 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 	const [buttonHover, setButtonHover] = useState(false),
 		[buttonHoverNext, setButtonHoverNext] = useState(false),
 		[currentLenghtProduct, setCurrentLenghtProduct] = useState(1),
-		[hoverHeart, setHoverHeart] = useState(false)
+		[hoverHeart, setHoverHeart] = useState(false),
+		[isLike, setLike] = useState(false)
 
 	const [showCopy, setShowCopy] = useState(false),
 		copy = () => {
@@ -246,7 +247,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 								<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex bg-white items-center justify-center .3x1:h-14px .3x1:w-9 .3x1:text-9px ">NEW</p>
 							</div>
 							<div id="one" onClick={(e) => {
-								console.log(e.target.src)
+
 								if (e.target.src === 'http://localhost:6006/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDetailCardSmallTwo.229bdfcb.jpg&w=128&q=75' && e.target.id !== '2' && e.target.id !== '3') slider.current.swiper.slideTo(1)
 							}} className=" .3x1:h-9 relative .3x1:w-9 ..5x2:hidden mr-5  w-60px h-60px mb-2">
 								<Image src={twoSmall} />
@@ -562,9 +563,11 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 						</div>
 						<div className="flex w-full justify-between">
 
-							<p className=" font-montserrat text-gray-quick-silver flex items-center .2x50:text-sm .4x1:text-xs">В наличии <span className="ml-1.5  font-medium text-primary flex items-center"> {'>'} 50 шт. <svg onMouseEnter={() => setHoverHeart(true)} onMouseLeave={() => setHoverHeart(false)} className="mx-4 .4x1:mx-1 mr-5 cursor-pointer transition-all" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill={`${hoverHeart ? '#F14155' : "#EDEEEC"}`} />
-							</svg>
+							<p className=" font-montserrat text-gray-quick-silver flex items-center .2x50:text-sm .4x1:text-xs">В наличии <span className="ml-1.5  font-medium relative text-primary flex items-center"> {'>'} 50 шт.
+								{isLike ? <svg className="ml-1 mr-2   cursor-pointer transition-all" onClick={() => setLike(false)} width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><g filter="url(#filter0_d_3587_1020586)"><path d="M29.0136 15C27.212 15 25.4828 15.8387 24.3542 17.1537C23.2256 15.8387 21.4965 15 19.6948 15C16.5057 15 14 17.4954 14 20.6948C14 24.5984 17.5204 27.7978 22.8529 32.6332L24.3542 34L25.8556 32.6332C31.188 27.7978 34.7084 24.5984 34.7084 20.6948C34.7084 17.4954 32.2027 15 29.0136 15Z" fill="#FF6363"></path></g><defs><filter id="filter0_d_3587_1020586" x="4" y="10" width="40.7084" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="5"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.388235 0 0 0 0 0.388235 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3587_1020586"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3587_1020586" result="shape"></feBlend></filter></defs></svg>
+									: <svg onClick={() => setLike(true)} onMouseEnter={() => setHoverHeart(true)} onMouseLeave={() => setHoverHeart(false)} className="mx-4 .4x1:mx-1 mr-5 cursor-pointer transition-all" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill={`${hoverHeart ? '#F14155' : "#EDEEEC"}`} />
+									</svg>}
 							</span>
 							</p>
 							<div className="h-14 .1x1:h-12 .2x50:ml-6 ml-4 .2x00:ml-1  border  flex-1 border-gray-light2 flex items-center justify-center">

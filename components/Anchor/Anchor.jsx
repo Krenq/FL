@@ -73,35 +73,36 @@ const Anchor = ({ elements }) => {
 	]
 
 	const scroll = (i) => {
+
 		switch (i + 1) {
 			case (0):
 				return window.scrollTo({ top: 0 })
 			case (1):
-				return window.scrollTo({ top: 850 })
+				return window.scrollTo({ top: elements[1].current.offsetTop })
 			case (2):
-				return window.scrollTo({ top: 1480 })
+				return window.scrollTo({ top: elements[2].current.offsetTop })
 			case (3):
-				return window.scrollTo({ top: 2480 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (4):
-				return window.scrollTo({ top: 3400 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (5):
-				return window.scrollTo({ top: 4320 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (6):
-				return window.scrollTo({ top: 5420 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (7):
-				return window.scrollTo({ top: 6250 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (8):
-				return window.scrollTo({ top: 7130 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (9):
-				return window.scrollTo({ top: 8200 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (10):
-				return window.scrollTo({ top: 9000 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (11):
-				return window.scrollTo({ top: 10450 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (12):
-				return window.scrollTo({ top: 11000 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 			case (13):
-				return window.scrollTo({ top: 11650 })
+				return window.scrollTo({ top: elements[i + 1].current.offsetTop })
 		}
 
 
@@ -111,7 +112,7 @@ const Anchor = ({ elements }) => {
 		<section className="z-30 bg-red fixed ..5x1:left-4 left-8 top-56 ..5x2:hidden">
 			<small className="text-13px">{currentLenght}</small>
 			<div className=" w-full flex flex-col items-center">
-				<a href="#stock" className={`${currentElement[0]["sec-1"] ? 'activeAnchor' : ""} w-1 h-6 mt-1 cursor-pointer hover:bg-primary transition-all bg-gray-light2`}></a>
+				<a onClick={() => scroll(-1)} href="#stock" className={`${currentElement[0]["sec-1"] ? 'activeAnchor' : ""} w-1 h-6 mt-1 cursor-pointer hover:bg-primary transition-all bg-gray-light2`}></a>
 
 				{sections.map((sec, i) => <a onClick={() => scroll(i)} key={i} className={`${currentElement[i + 1][sec] ? 'activeAnchor' : ""} w-1 h-6 mt-1.5 bg-gray-light2 cursor-pointer hover:bg-primary transition-all`}></a>
 				)}

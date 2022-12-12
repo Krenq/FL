@@ -26,112 +26,129 @@ import SearchResult from '../components/SearchResult/SearchResult';
 import BurgerMenu from '../components/BurgerMenu/BurgerMenu';
 import previewBurger from '../images/templates/previewBurger.jpg';
 import WindowInfoPlusMobile from '../components/WindowInfoPlusMobile/WindowInfoPlusMobile';
+import MenuPhone from '../components/MenuPhone/MenuPhone';
 
 function Home() {
-  const [showSearch, setShowSearch] = useState(false),
-    [showBurger, setShowBurger] = useState(false);
-  const [windowInfo, setWindowInfo] = useState(false);
+	const [showSearch, setShowSearch] = useState(false),
+		[showBurger, setShowBurger] = useState(false);
+	const [windowInfo, setWindowInfo] = useState(false);
+	const [showMenu, setShowMenu] = useState(false)
 
-  const discount = useRef(null),
-    special = useRef(null),
-    buyers = useRef(null),
-    products = useRef(null),
-    sea = useRef(null),
-    promo = useRef(null),
-    Instruments = useRef(null),
-    funds = useRef(null),
-    partners = useRef(null),
-    health = useRef(null),
-    news = useRef(null),
-    stories = useRef(null),
-    clubs = useRef(null),
-    trands = useRef(null);
+	const close = () => setShowBurgerI(false),
+		setShow = () => setShowMenu(!showMenu)
 
-  const [showProducts, setShowProducts] = useState({
-    central: false,
-    promo: false,
-  });
 
-  const showCentral = () => {
-      if (window.innerWidth > 1000) return;
-      setShowProducts({ ...showProducts, central: !showProducts.central });
-    },
-    showPromo = () => {
-      if (window.innerWidth > 1000) return;
-      setShowProducts({ ...showProducts, promo: !showProducts.promo });
-    };
+	const discount = useRef(null),
+		special = useRef(null),
+		buyers = useRef(null),
+		products = useRef(null),
+		sea = useRef(null),
+		promo = useRef(null),
+		Instruments = useRef(null),
+		funds = useRef(null),
+		partners = useRef(null),
+		health = useRef(null),
+		news = useRef(null),
+		stories = useRef(null),
+		clubs = useRef(null),
+		trands = useRef(null);
 
-  return (
-    <>
-      <Header
-        showBurger={showBurger}
-        setShowBurger={setShowBurger}
-        showSearch={showSearch}
-        setShowSearch={setShowSearch}
-      />
-      <section className="container-base relative bg-white">
-        <BurgerMenu
-          showBurger={showBurger}
-          setShowBurger={setShowBurger}
-          src={previewBurger}
-          title={'Категории'}
-        />
-        <ButtonTop />
-        <SearchResult isShow={showSearch} />
-        <ConfirmLocationModalWindow />
-        <DiscountsSlider refL={discount} setWindowInfo={setWindowInfo} />
-        <SpecialOffers refL={special} />
-        <Buyers refL={buyers} />
-        <Products refL={products} />
-        <News refL={news} />
-        <SeaAct refL={sea} />
-        <Promo refL={promo} showPromo={showPromo} />
-        <Instrumensts refL={Instruments} />
-        <Funds refL={funds} />
-        <Partners refL={partners} />
-        <Health refL={health} />
-        <Stories refL={stories} />
-        <Clubs refL={clubs} />
-        <Trands refL={trands} />
-        <Support />
+	const [showProducts, setShowProducts] = useState({
+		central: false,
+		promo: false,
+	});
 
-        {windowInfo && (
-          <WindowInfoPlusMobile
-            windowInfo={windowInfo}
-            setWindowInfo={setWindowInfo}
-          />
-        )}
-        <PhoneNavigation />
-        <Anchor
-          elements={[
-            discount,
-            special,
-            buyers,
-            products,
-            news,
-            sea,
-            promo,
-            Instruments,
-            funds,
-            partners,
-            health,
-            stories,
-            clubs,
-            trands,
-          ]}
-        />
-      </section>
-    </>
-  );
+	const showCentral = () => {
+		if (window.innerWidth > 1000) return;
+		setShowProducts({ ...showProducts, central: !showProducts.central });
+	},
+		showPromo = () => {
+			if (window.innerWidth > 1000) return;
+			setShowProducts({ ...showProducts, promo: !showProducts.promo });
+		};
+
+
+
+	return (
+		<>
+			<>
+
+				<BurgerMenu showBurger={showBurger} close={close} setShowBurger={setShowBurger} src={previewBurger} title={'Категории'} />
+
+				< MenuPhone showMenu={showMenu} showBurger={showBurger} setShowBurger={setShowBurger} />
+
+
+			</>
+			<Header
+				showBurger={showBurger}
+				setShowBurger={setShowBurger}
+				showSearch={showSearch}
+				setShowSearch={setShowSearch}
+			/>
+			<section className="container-base relative bg-white">
+				<BurgerMenu
+					showBurger={showBurger}
+					setShowBurger={setShowBurger}
+					src={previewBurger}
+					title={'Категории'}
+				/>
+				<ButtonTop />
+				<SearchResult isShow={showSearch} />
+				<ConfirmLocationModalWindow />
+				<DiscountsSlider refL={discount} setWindowInfo={setWindowInfo} />
+				<SpecialOffers refL={special} />
+				<Buyers refL={buyers} />
+				<Products refL={products} />
+				<News refL={news} />
+				<SeaAct refL={sea} />
+				<Promo refL={promo} showPromo={showPromo} />
+				<Instrumensts refL={Instruments} />
+				<Funds refL={funds} />
+				<Partners refL={partners} />
+				<Health refL={health} />
+				<Stories refL={stories} />
+				<Clubs refL={clubs} />
+				<Trands refL={trands} />
+				<Support />
+
+				{windowInfo && (
+					<WindowInfoPlusMobile
+						windowInfo={windowInfo}
+						setWindowInfo={setWindowInfo}
+					/>
+				)}
+				<PhoneNavigation setShow={setShow} />
+				<Anchor
+					elements={[
+						discount,
+						special,
+						buyers,
+						products,
+						news,
+						sea,
+						promo,
+						Instruments,
+						funds,
+						partners,
+						health,
+						stories,
+						clubs,
+						trands,
+					]}
+				/>
+			</section>
+
+		</>
+	);
 }
 
 export default Home;
 
 Home.getLayout = function getLayout(page) {
-  return (
-    <Layout title="Главная" description="Описание главной страницы">
-      {page}
-      <Footer />
-    </Layout>
-  );
+	return (
+		<Layout title="Главная" description="Описание главной страницы">
+			{page}
+			<Footer />
+		</Layout>
+	);
 };

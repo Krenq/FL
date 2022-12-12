@@ -5,7 +5,7 @@ const MenuPhone = ({ showMenu, showBurger, setShowBurger }) => {
 	return (
 		<>
 
-			<section className={`fixed top-0 overflow-auto bottom-28 ..6x04:bottom-20 -mb-1 -mt-1   z-50 left-0 right-0 bg-white ${showMenu ? '' : "hidden"}`}>
+			<section className={`fixed top-0 overflow-auto bottom-24 ..6x04:bottom-16 -mb-1 -mt-1   z-50 left-0 right-0 bg-white ${showMenu ? '' : "hidden"}`}>
 				<Header showBurger={showBurger} setShowBurger={setShowBurger} />
 				<section>
 					<div className="p-3 border-t border-stroke">
