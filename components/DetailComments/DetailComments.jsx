@@ -24,7 +24,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Scrollbar } from "swiper"
 import DetailDescription from "../DetailDescription/DetailDescription";
 
-const DetailComments = ({ setShowL, refF }) => {
+const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 	const sliderPhoto = useRef(null)
 
 
@@ -53,7 +53,7 @@ const DetailComments = ({ setShowL, refF }) => {
 	return (
 		<section className="px-222px mx-2 ..5x2:px-3  ..5x2:m-0 .2x50:px-36 .6x2:px-24 .6x3:px-10">
 
-			<DetailDescription refF={refF} />
+			<DetailDescription close={close} setVideo={setVideo} refF={refF} />
 
 			<div>
 				<h4 className="font-montserrat font-medium text-xl mb-3 ..6x3:mb-6px ..6x3:text-sm">Фото и видео отзывы</h4>
@@ -74,16 +74,16 @@ const DetailComments = ({ setShowL, refF }) => {
 					}} modules={[Navigation, Scrollbar]}  >
 
 
-						<SwiperSlide className="pr-2 cursor-pointer">
+						<SwiperSlide onClick={setVideo} className="pr-2 cursor-pointer">
 							<Image src={detailOne} />
 						</SwiperSlide>
-						<SwiperSlide className="pr-2 cursor-pointer">
+						<SwiperSlide onClick={setVideo} className="pr-2 cursor-pointer">
 							<Image src={detailTwo} />
 						</SwiperSlide>
-						<SwiperSlide className="pr-2 cursor-pointer">
+						<SwiperSlide onClick={setVideo} className="pr-2 cursor-pointer">
 							<Image src={detailTree} />
 						</SwiperSlide>
-						<SwiperSlide className="pr-2 relative cursor-pointer">
+						<SwiperSlide onClick={setVideo} className="pr-2 relative cursor-pointer">
 							<div className="absolute flex items-center justify-center left-0 right-0 bottom-0 top-0 z-10">
 								<svg className="..5x4:h-38px ..5x4:w-38px" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M38.8635 30.8286C39.4964 30.4632 40.2761 30.4632 40.909 30.8286L62.3863 43.2286C63.0191 43.5939 63.409 44.2692 63.409 45C63.409 45.7307 63.0191 46.406 62.3863 46.7714L40.909 59.1713C40.2761 59.5367 39.4964 59.5367 38.8635 59.1713C38.2307 58.806 37.8408 58.1307 37.8408 57.3999V32.6C37.8408 31.8692 38.2307 31.194 38.8635 30.8286ZM41.9317 36.1429V53.8571L57.2726 45L41.9317 36.1429Z" fill="white" />
@@ -93,16 +93,16 @@ const DetailComments = ({ setShowL, refF }) => {
 
 							<Image src={detailFour} />
 						</SwiperSlide>
-						<SwiperSlide className="pr-2  cursor-pointer">
+						<SwiperSlide onClick={setVideo} className="pr-2  cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
-						<SwiperSlide className="pr-2  cursor-pointer">
+						<SwiperSlide onClick={setVideo} className="pr-2  cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
-						<SwiperSlide className="pr-2   cursor-pointer">
+						<SwiperSlide onClick={setVideo} className="pr-2   cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
-						<SwiperSlide className="pr-2   cursor-pointer">
+						<SwiperSlide onClick={setVideo} className="pr-2   cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
 

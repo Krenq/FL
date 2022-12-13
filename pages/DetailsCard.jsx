@@ -33,10 +33,24 @@ const DetailsCard = () => {
 	const [showSearch, setShowSearch] = useState(false)
 	const [show, setShow] = useState(false),
 		[view, setShowView] = useState(false),
+		[isFullView, setIsFullView] = useState(false),
+		[isFullViewVideo, setIsFullViewVideo] = useState(false),
 		description = useRef(null)
 
 	const setShowL = () => setShow(!show),
-		close = () => setShowView(!view)
+		close = () => {
+			setShowView(!view)
+			setIsFullView(false)
+			setIsFullViewVideo(false)
+		},
+		setF = () => {
+			setShowView(!view)
+			setIsFullView(!isFullView)
+		},
+		setVideo = () => {
+			setIsFullViewVideo(!isFullViewVideo)
+			setShowView(!view)
+		}
 
 	return (
 		<>
@@ -46,11 +60,11 @@ const DetailsCard = () => {
 				<SectionNavDetail />
 				<DescriptionItemDetail close={close} isShow={view} description={description} />
 				<ActDescription />
-				<DetailComments refF={description} setShowL={setShowL} />
+				<DetailComments setVideo={setVideo} refF={description} close={setF} setShowL={setShowL} />
 				<SeeLastDetails />
 
 			</section>
-			<ViewPhoto close={close} isShow={view} />
+			<ViewPhoto isFullViewVideo={isFullViewVideo} isFullView={isFullView} close={close} isShow={view} />
 			<LeftComment show={show} setShow={setShowL} />
 			<Footer />
 			<PhoneNavigation />
