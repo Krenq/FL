@@ -396,6 +396,7 @@ module.exports = {
 				'0.5px': '0.5px',
 				'1.5px': '1.5px',
 				'3.5px': '3.5px',
+				'3px': '3px',
 				'9px': '9px',
 			},
 			lineHeight: {

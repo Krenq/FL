@@ -3511,3 +3511,22 @@
 .hoverI:hover .hoverShowI {
 	display: flex !important;
 }
+
+#checkSearchAll:checked+label {
+
+
+	border: none;
+	background: url('../images//templates/Subtract.jpg') 0px 2.5px;
+}
+
+.hoverCus:hover .hov {
+	display: flex !important;
+}
+
+.hoverCus:hover .hid {
+	display: none !important;
+}
+
+.hoverCustVideo:hover p {
+	color: #fff !important;
+}

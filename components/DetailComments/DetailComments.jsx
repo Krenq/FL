@@ -25,11 +25,12 @@ import { Navigation, Pagination, Scrollbar } from "swiper"
 import DetailDescription from "../DetailDescription/DetailDescription";
 
 const DetailComments = ({ setShowL, refF, close, setVideo }) => {
-	const sliderPhoto = useRef(null)
+	const sliderPhoto = useRef(null),
+		[show, setShow] = useState(false)
+
+	const setS = () => setShow(!show)
 
 
-
-	// Этот useEffect тоже самое если бы мы сеттили количество в appendDots просто убрали в консоли ошибку
 
 
 
@@ -117,7 +118,7 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 						</svg>
 
 					</button>
-					<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhoto} className=' absolute  ..5x2:hidden right-36 hover:bg-black transition-all   h-8 w-8 top-20 bg-white z-10 flex justify-center items-center rounded-56px'>
+					<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhoto} className=' absolute  ..5x2:hidden  -right-8  hover:bg-black transition-all   h-8 w-8 top-20 bg-white z-10 flex justify-center items-center rounded-56px'>
 						<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill={`${buttonHoverNext ? 'white' : "black"}`} />
 						</svg>
@@ -406,8 +407,156 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 
 
 							</div>
+							{show && <>
+								<div className="p-6 .2x1.0:p-3 ..6x3:mb-3 mb-18px bg-gray-100">
+									<div className="flex items-center ">
+										<div className="-mt-0.5 ..6x3:hidden">
+											<Image src={avatar} />
+										</div>
+
+										<div className="flex pb-4 ..6x3:pb-3 ..6x3:m-0 border-disable w-full mt-4 ml-4 justify-between items-center border-b ">
+											<div className="flex items-center">
+												<div className="h-11 mr-3 w-11 hidden ..6x3:block">
+													<Image src={avatar} />
+												</div>
+												<div className="flex items-center ..6x3:flex-col ..6x3:items-start">
+													<p className=" font-montserrat font-medium ..5x01:text-13px ..6x3:mb-0.5">Марина Одинцова</p>
+													<div className="w-4 border-b mx-2 ..6x3:hidden">
+
+													</div>
+													<p className="font-montserrat text-black-70pe ..5x01:text-13px">May 20, 2022</p>
+
+												</div>
+
+											</div>
+											<div className="flex items-center  ..6x3:pt-5">
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clipPath="url(#clip0_1945_1209386)">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+													</g>
+													<defs>
+														<clipPath id="clip0_1945_1209386">
+															<rect width="18" height="18" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clipPath="url(#clip0_1945_1209386)">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+													</g>
+													<defs>
+														<clipPath id="clip0_1945_1209386">
+															<rect width="18" height="18" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clipPath="url(#clip0_1945_1209386)">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+													</g>
+													<defs>
+														<clipPath id="clip0_1945_1209386">
+															<rect width="18" height="18" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clipPath="url(#clip0_1945_1209386)">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+													</g>
+													<defs>
+														<clipPath id="clip0_1945_1209386">
+															<rect width="18" height="18" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" fill="#DBDCDA" />
+												</svg>
+											</div>
+										</div>
+
+									</div>
+									<p className="pl-74px ..6x3:pl-0 mt-3 font-montserrat .1x01:text-13px text-black-70pe">Мне очень понравилась маска, не ожидала такого эффекта после первого применения...)) рекомендую!</p>
+
+
+								</div>
+								<div className="p-6 .2x1.0:p-3 ..6x3:mb-3 mb-18px bg-gray-100">
+									<div className="flex items-center ">
+										<div className="-mt-0.5 ..6x3:hidden">
+											<Image src={avatar} />
+										</div>
+
+										<div className="flex pb-4 ..6x3:pb-3 ..6x3:m-0 border-disable w-full mt-4 ml-4 justify-between items-center border-b ">
+											<div className="flex items-center">
+												<div className="h-11 mr-3 w-11 hidden ..6x3:block">
+													<Image src={avatar} />
+												</div>
+												<div className="flex items-center ..6x3:flex-col ..6x3:items-start">
+													<p className=" font-montserrat font-medium ..5x01:text-13px ..6x3:mb-0.5">Марина Одинцова</p>
+													<div className="w-4 border-b mx-2 ..6x3:hidden">
+
+													</div>
+													<p className="font-montserrat text-black-70pe ..5x01:text-13px">May 20, 2022</p>
+
+												</div>
+
+											</div>
+											<div className="flex items-center  ..6x3:pt-5">
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clipPath="url(#clip0_1945_1209386)">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+													</g>
+													<defs>
+														<clipPath id="clip0_1945_1209386">
+															<rect width="18" height="18" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clipPath="url(#clip0_1945_1209386)">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+													</g>
+													<defs>
+														<clipPath id="clip0_1945_1209386">
+															<rect width="18" height="18" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clipPath="url(#clip0_1945_1209386)">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+													</g>
+													<defs>
+														<clipPath id="clip0_1945_1209386">
+															<rect width="18" height="18" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<g clipPath="url(#clip0_1945_1209386)">
+														<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202" />
+													</g>
+													<defs>
+														<clipPath id="clip0_1945_1209386">
+															<rect width="18" height="18" fill="white" />
+														</clipPath>
+													</defs>
+												</svg>
+												<svg className="..6x3:h-3 ..6x3:w-3" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" fill="#DBDCDA" />
+												</svg>
+											</div>
+										</div>
+
+									</div>
+									<p className="pl-74px ..6x3:pl-0 mt-3 font-montserrat .1x01:text-13px text-black-70pe">Получила потрясающий эффект 🤣 после применения маски. Значительно улучшился цвет лица, кожа просто сияет красотой и здоровьем, маска сняла следы стресса, придала мягкость, бархатистость и упругость коже!!! Мгновенный эффект ухоженной кожи! Спасибо компания TianDe 😘</p>
+
+
+								</div>
+							</>}
 						</div>
-						<button className="w-full h-11 flex justify-center items-center border border-stroke mb-24 font-montserrat text-xs ..6x3:text-13px ..6x3:h-10 ..5x2:mb-6 ..6x3:hidden font-medium">Показать ещё 2 из 5</button>
+						<button onClick={setS} className="w-full h-11 flex justify-center items-center border border-stroke mb-24 font-montserrat text-xs ..6x3:text-13px ..6x3:h-10 hover:bg-gray-light hover:border-white ..5x2:mb-6 ..6x3:hidden font-medium">{show ? 'Свернуть' : "Показать ещё 2 из 5"}</button>
 						<button className="w-full h-11  justify-center items-center border border-stroke mb-24 font-montserrat text-xs ..6x3:text-13px ..6x3:h-10 ..6x3:flex hidden ..5x2:mb-6 ">Показать ещё </button>
 					</div>
 					<div className="..5x2:flex ..5x2:items-center ..5x2:flex-col">

@@ -25,6 +25,59 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 		product: false,
 		active: false
 	})
+	const [filterSortProduct, setFilterSortProduct] = useState({
+		all: true,
+		bucl: false,
+		rolls: false,
+		pdf: false
+	})
+	const setFilterSortLocalPr = (title) => {
+		switch (title) {
+			case ('all'):
+				return setFilterSortProduct({
+					all: true,
+					bucl: false,
+					rolls: false,
+					pdf: false
+				})
+			case ('bucl'):
+				return setFilterSortProduct({
+					all: false,
+					bucl: true,
+					rolls: false,
+					pdf: false
+				})
+			case ('rolls'):
+				return setFilterSortProduct({
+					all: false,
+					bucl: false,
+					rolls: true,
+					pdf: false
+				})
+			case ('pdf'):
+				return setFilterSortProduct({
+					all: false,
+					bucl: false,
+					rolls: false,
+					pdf: true
+				})
+			default: return
+		}
+	}
+	const [filterSort, setFilterSort] = useState({
+		default: true,
+		notP: false
+	})
+	const setFilterSortLocal = (title) => {
+		switch (title) {
+			case ('default'):
+				return setFilterSort({ default: true, notP: false })
+			case ('notP'):
+				return setFilterSort({ default: false, notP: true })
+
+			default: return
+		}
+	}
 	const [currentFilterMobile, setCurrentFilterMobile] = useState({
 		photo: true,
 		video: false,
@@ -252,7 +305,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 					{showDesc.desc && <div className="absolute left-1/2 ability -bottom-2 h-30px w-30px bg-white rotSearchHover"></div>}
 
 					Описание</div>
-				<div onClick={() => setShowLocalDesc('activeComoonents')} className="flex-1   cursor-pointer h-86px relative ..5x1:h-16 flex justify-center items-center">
+				<div onClick={() => setShowLocalDesc('activeComoonents')} className="flex-1 z-10  cursor-pointer h-86px relative ..5x1:h-16 flex justify-center items-center">
 					<div className={`w-full ${showDesc.activeComponents ? 'activeCard !h-full' : ""}  border-x ..5x1:text-base ..5x1:leading-120%  border-gray  flex font-montserrat font-medium text-lg text-center leading-120% justify-center items-center`}><svg className="..5x1:h-5 ..5x1:w-5 mr-3" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path fillRule="evenodd" clipRule="evenodd" d="M13.1831 1.42602C13.7512 0.857988 14.6721 0.857994 15.2402 1.42603L17.2851 3.47099L17.2971 3.48284L25.5252 11.711C26.0933 12.279 26.0933 13.2 25.5252 13.768L14.2116 25.0818C13.9388 25.3545 13.5688 25.5078 13.1831 25.5078C12.7973 25.5078 12.4273 25.3545 12.1545 25.0818L3.92638 16.8536C3.35835 16.2856 3.35835 15.3646 3.92638 14.7966L14.2115 4.51143L13.1831 3.48306C12.6151 2.91502 12.6151 1.99405 13.1831 1.42602ZM7.01194 15.8251L8.13655 14.7005L17.4249 17.7543L13.183 21.9962L7.01194 15.8251ZM19.7295 15.4497L10.4411 12.3959L16.2686 6.5684L22.4397 12.7395L19.7295 15.4497Z" fill="black" />
 						<path d="M25.9545 25.3608C27.5612 25.3608 28.8636 24.0583 28.8636 22.4517C28.8636 21.3806 27.894 19.926 25.9545 18.0881C24.0151 19.926 23.0455 21.3806 23.0455 22.4517C23.0455 24.0583 24.3479 25.3608 25.9545 25.3608Z" fill="black" />
@@ -261,7 +314,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 						<path d="M25.9545 25.3608C27.5612 25.3608 28.8636 24.0583 28.8636 22.4517C28.8636 21.3806 27.894 19.926 25.9545 18.0881C24.0151 19.926 23.0455 21.3806 23.0455 22.4517C23.0455 24.0583 24.3479 25.3608 25.9545 25.3608Z" stroke="#E9EDEC" strokeWidth="0.8" strokeLinecap="round" />
 						<path d="M1.95455 28.2699C1.15122 28.2699 0.5 28.9211 0.5 29.7244C0.5 30.5278 1.15122 31.179 1.95455 31.179H31.0455C31.8488 31.179 32.5 30.5278 32.5 29.7244C32.5 28.9211 31.8488 28.2699 31.0455 28.2699H1.95455Z" stroke="#E9EDEC" strokeWidth="0.8" strokeLinecap="round" />
 					</svg>
-						{showDesc.activeComponents && <div className="absolute left-1/2 ability -bottom-2 h-30px w-30px bg-white rotSearchHover"></div>}
+						{showDesc.activeComponents && <div className="absolute left-1/2 ability -bottom-2.5 h-30px w-30px bg-white rotSearchHover"></div>}
 
 						Активные <br /> компоненты</div>
 				</div>
@@ -389,30 +442,30 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 							</div>
 
 							<div className=" overflow-x-auto whitespace-nowrap flex py-2 border-t  border-t-gray-light2">
-								<p onClick={(e) => setFilterItem('photo', e)} className={`flex items-center font-montserrat p-6px rounded-sm transition-all text-11px  hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.photo ? '!bg-gray-light2' : ""}`}><svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<p onClick={(e) => setFilterItem('photo', e)} className={`flex items-center font-montserrat p-6px rounded-sm transition-all text-11px  hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.photo ? '!bg-gray-light2 rounded' : ""}`}><svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 5C1.5 3.89543 2.39543 3 3.5 3H20.5C21.6046 3 22.5 3.89543 22.5 5V19C22.5 20.1046 21.6046 21 20.5 21H3.5C2.39543 21 1.5 20.1046 1.5 19V5ZM3.5 17.4142V19H20.5V17.4942L13.1438 11.8688L10.7593 14.6508C10.4084 15.0601 9.79627 15.1176 9.37531 14.7809L7.57422 13.34L3.5 17.4142ZM20.5 14.9764V5H3.5V14.5858L6.79289 11.2929C7.1532 10.9326 7.7268 10.9008 8.12469 11.2191L9.86985 12.6153L12.2407 9.84921C12.5861 9.44633 13.1859 9.38331 13.6075 9.70564L20.5 14.9764ZM7.25 8.5C7.38807 8.5 7.5 8.38807 7.5 8.25C7.5 8.11193 7.38807 8 7.25 8C7.11193 8 7 8.11193 7 8.25C7 8.38807 7.11193 8.5 7.25 8.5ZM5.5 8.25C5.5 7.2835 6.2835 6.5 7.25 6.5C8.2165 6.5 9 7.2835 9 8.25C9 9.2165 8.2165 10 7.25 10C6.2835 10 5.5 9.2165 5.5 8.25Z" fill="black" fill-opacity="0.7" />
 								</svg>
 									Фотографии
 								</p>
-								<p onClick={(e) => setFilterItem('video', e)} className={`flex items-center p-6px  text-11px rounded-sm font-montserrat   transition-all hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.video ? '!bg-gray-light2' : ""}`}>
+								<p onClick={(e) => setFilterItem('video', e)} className={`flex items-center p-6px  text-11px rounded-sm font-montserrat   transition-all hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.video ? '!bg-gray-light2 rounded' : ""}`}>
 									<svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 3C7.02943 3 3 7.02943 3 12C3 16.9706 7.02943 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02943 16.9706 3 12 3ZM9.5 7.66987C9.8094 7.49124 10.1906 7.49124 10.5 7.66987L16.5 11.134C16.8094 11.3126 17 11.6427 17 12C17 12.3573 16.8094 12.6874 16.5 12.866L10.5 16.3301C10.1906 16.5088 9.8094 16.5088 9.5 16.3301C9.1906 16.1515 9 15.8214 9 15.4641V8.5359C9 8.17863 9.1906 7.84851 9.5 7.66987ZM11 10.268V13.732L14 12L11 10.268Z" fill="black" fill-opacity="0.7" />
 									</svg>
 									Видео
 								</p>
-								<p onClick={(e) => setFilterItem('service', e)} className={`flex items-center  font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.service ? '!bg-gray-light2' : ""}`}>
+								<p onClick={(e) => setFilterItem('service', e)} className={`flex items-center  font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.service ? '!bg-gray-light2 rounded' : ""}`}>
 									<svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M21 2C22.018 2 22.87 2.76384 22.9916 3.82579L23 4V17C23 18.018 22.2362 18.87 21.1742 18.9916L21 19H18V21C18 21.7043 17.2979 22.1753 16.6586 21.9402L16.5528 21.8944L15 21.118L13.4472 21.8944C12.8173 22.2094 12.082 21.792 12.0064 21.1151L12 21V19H3C2.03562 19 1.22018 18.3145 1.03358 17.3393L1.00839 17.1742L1 17V4C1 2.98205 1.76385 2.13004 2.82579 2.00839L3 2H21ZM16 17.391L15.7664 17.4378C15.6053 17.465 15.438 17.4836 15.2646 17.4929L15.2198 17.4941C15.147 17.498 15.0737 17.5 15 17.5L14.8004 17.4951C14.7983 17.495 14.7963 17.4949 14.7943 17.4948C14.5133 17.4842 14.2487 17.4491 14.0002 17.393L14 19.381L14.5528 19.1056C14.8343 18.9648 15.1657 18.9648 15.4472 19.1056L16 19.382V17.391ZM3.05759 3.99834L3 4L2.99834 16.9424L3.00003 17L12 17L11.999 16.1447C11.3772 15.4397 11 14.5139 11 13.5C11 11.2909 12.7909 9.5 15 9.5C17.2091 9.5 19 11.2909 19 13.5C19 14.5139 18.6227 15.4397 18.001 16.1447L18 17L20.9424 17.0017L21 16.999L21.0017 4.05759L20.999 4L3.05759 3.99834ZM15 11.5C13.8954 11.5 13 12.3954 13 13.5C13 14.6046 13.8954 15.5 15 15.5L14.923 15.497L15 15.5C15.0267 15.5 15.0529 15.4997 15.0788 15.499C15.5643 15.48 16.0066 15.2874 16.3439 14.9812C16.3459 14.9773 16.3486 14.9749 16.3513 14.9726L16.3439 14.9812C16.7469 14.6154 17 14.0872 17 13.5C17 12.3954 16.1046 11.5 15 11.5ZM8 13C8.55228 13 9 13.4477 9 14C9 14.5128 8.61396 14.9355 8.11662 14.9933L8 15H6C5.44772 15 5 14.5523 5 14C5 13.4872 5.38604 13.0645 5.88338 13.0067L6 13H8ZM9 9.5C9.55229 9.5 10 9.94772 10 10.5C10 11.0128 9.61396 11.4355 9.11662 11.4933L9 11.5H6C5.44772 11.5 5 11.0523 5 10.5C5 9.98716 5.38604 9.56449 5.88338 9.50673L6 9.5H9ZM18 6C18.5523 6 19 6.44772 19 7C19 7.51284 18.614 7.93551 18.1166 7.99327L18 8H6C5.44772 8 5 7.55228 5 7C5 6.48716 5.38604 6.06449 5.88338 6.00673L6 6H18Z" fill="black" fill-opacity="0.7" />
 									</svg>
 									Сертификаты
 								</p>
-								<p onClick={(e) => setFilterItem('product', e)} className={`flex items-center font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.product ? '!bg-gray-light2' : ""}`}>
+								<p onClick={(e) => setFilterItem('product', e)} className={`flex items-center font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.product ? '!bg-gray-light2 rounded' : ""}`}>
 									<svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C4 1.44772 4.44772 1 5 1H19C19.5523 1 20 1.44772 20 2V9H22C22.5523 9 23 9.44772 23 10V19C23 19.5523 22.5523 20 22 20H19.5V22C19.5 22.5523 19.0523 23 18.5 23H5.5C4.94772 23 4.5 22.5523 4.5 22V20H2C1.44772 20 1 19.5523 1 19V10C1 9.44772 1.44772 9 2 9H4V2ZM6 9H18V3H6V9ZM3 11V18H4.49025V16C4.49025 15.4477 4.93797 15 5.49025 15H18.5086C19.0609 15 19.5086 15.4477 19.5086 16V18H21V11H3ZM6.5 17V21H17.5V17H6.5Z" fill="black" fill-opacity="0.7" />
 									</svg>
 									Печатная продукция
 								</p>
-								<p onClick={(e) => setFilterItem('active', e)} className={`flex  items-center font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.active ? '!bg-gray-light2' : ""}`}>
+								<p onClick={(e) => setFilterItem('active', e)} className={`flex  items-center font-montserrat p-6px  text-11px rounded-sm transition-all hover:bg-gray-light2 cursor-pointer ${currentFilterMobile.active ? '!bg-gray-light2 rounded' : ""}`}>
 									<svg className="mr-3 ..5x2:w-14px ..5x2:mr-1 ..5x2:h-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5002 5C14.5002 3.067 16.0672 1.5 18.0002 1.5C19.9332 1.5 21.5002 3.067 21.5002 5C21.5002 6.93298 19.9332 8.5 18.0002 8.5C16.0672 8.5 14.5002 6.93298 14.5002 5ZM18.0002 3.5C17.1718 3.5 16.5002 4.17158 16.5002 5C16.5002 5.82841 17.1718 6.5 18.0002 6.5C18.8286 6.5 19.5002 5.82841 19.5002 5C19.5002 4.17158 18.8286 3.5 18.0002 3.5ZM9.67453 6.05404C9.92294 5.96803 10.1952 5.98329 10.4325 6.09652L15.9309 8.72082C16.2471 8.87173 16.4613 9.17712 16.4954 9.52582C16.5296 9.87451 16.3787 10.2157 16.0978 10.425L11.7431 13.6712L16.05 16.5064C16.2805 16.6582 16.438 16.8984 16.4854 17.1702C16.5327 17.442 16.4656 17.7213 16.2999 17.942L12.8041 22.5993C12.4725 23.041 11.8457 23.1303 11.404 22.7988C10.9623 22.4672 10.873 21.8404 11.2046 21.3987L14.0619 17.5921L9.45188 14.5574C9.17951 14.3781 9.01167 14.0772 9.00215 13.7513C8.99263 13.4254 9.14263 13.1152 9.40407 12.9204L13.5739 9.81198L9.94124 8.07819L6.32737 9.32951C5.80549 9.51021 5.23592 9.23363 5.05522 8.71174C4.87452 8.18986 5.1511 7.6203 5.67298 7.43959L9.67453 6.05404ZM22.7289 8.04814C23.107 8.45063 23.0873 9.08349 22.6848 9.46167L19.6857 12.2797C19.3711 12.5752 18.9024 12.6356 18.5232 12.4294L17.1823 11.7002C16.6971 11.4363 16.5177 10.8291 16.7816 10.3439C17.0454 9.85877 17.6527 9.67935 18.1378 9.94321L18.8433 10.3269L21.3153 8.00413C21.7178 7.62595 22.3507 7.64565 22.7289 8.04814ZM9.02934 14.9762C9.46922 15.3102 9.55511 15.9375 9.22116 16.3774L7.73631 18.3333C7.65333 18.4426 7.54873 18.5336 7.42903 18.6008L2.49134 21.3704C2.00965 21.6405 1.40015 21.4691 1.12996 20.9874C0.859782 20.5057 1.03124 19.8962 1.51292 19.626L6.26915 16.9582L7.62819 15.168C7.96214 14.7282 8.58945 14.6423 9.02934 14.9762Z" fill="black" fill-opacity="0.7" />
 									</svg>
@@ -458,7 +511,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 											<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 										</svg>
 										<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
-											<input className='hidden' id='checkSearchAll' type="checkbox" />
+											<input className='hidden inputRadio' id='checkSearchAll' type="checkbox" />
 											<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-quick-silver cursor-pointer border'></label>
 										</div>
 										<div className="relative ..7x2:w-20 ..7x2:h-20">
@@ -964,30 +1017,30 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 				</div>
 				<div className="flex  ">
 					<div className="mr-18px .1x1:mr-0">
-						<p onClick={() => setFilterItem('photo')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.photo ? '!bg-gray-light2' : ""}`}><svg className="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<p onClick={() => setFilterItem('photo')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 hover:rounded cursor-pointer ${currentFilter.photo ? '!bg-gray-light2 rounded' : ""}`}><svg className="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 5C1.5 3.89543 2.39543 3 3.5 3H20.5C21.6046 3 22.5 3.89543 22.5 5V19C22.5 20.1046 21.6046 21 20.5 21H3.5C2.39543 21 1.5 20.1046 1.5 19V5ZM3.5 17.4142V19H20.5V17.4942L13.1438 11.8688L10.7593 14.6508C10.4084 15.0601 9.79627 15.1176 9.37531 14.7809L7.57422 13.34L3.5 17.4142ZM20.5 14.9764V5H3.5V14.5858L6.79289 11.2929C7.1532 10.9326 7.7268 10.9008 8.12469 11.2191L9.86985 12.6153L12.2407 9.84921C12.5861 9.44633 13.1859 9.38331 13.6075 9.70564L20.5 14.9764ZM7.25 8.5C7.38807 8.5 7.5 8.38807 7.5 8.25C7.5 8.11193 7.38807 8 7.25 8C7.11193 8 7 8.11193 7 8.25C7 8.38807 7.11193 8.5 7.25 8.5ZM5.5 8.25C5.5 7.2835 6.2835 6.5 7.25 6.5C8.2165 6.5 9 7.2835 9 8.25C9 9.2165 8.2165 10 7.25 10C6.2835 10 5.5 9.2165 5.5 8.25Z" fill="black" fill-opacity="0.7" />
 						</svg>
 							Фотографии
 						</p>
-						<p onClick={() => setFilterItem('video')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.video ? '!bg-gray-light2' : ""}`}>
+						<p onClick={() => setFilterItem('video')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 hover:rounded cursor-pointer ${currentFilter.video ? '!bg-gray-light2 rounded' : ""}`}>
 							<svg className="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 3C7.02943 3 3 7.02943 3 12C3 16.9706 7.02943 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02943 16.9706 3 12 3ZM9.5 7.66987C9.8094 7.49124 10.1906 7.49124 10.5 7.66987L16.5 11.134C16.8094 11.3126 17 11.6427 17 12C17 12.3573 16.8094 12.6874 16.5 12.866L10.5 16.3301C10.1906 16.5088 9.8094 16.5088 9.5 16.3301C9.1906 16.1515 9 15.8214 9 15.4641V8.5359C9 8.17863 9.1906 7.84851 9.5 7.66987ZM11 10.268V13.732L14 12L11 10.268Z" fill="black" fill-opacity="0.7" />
 							</svg>
 							Видео
 						</p>
-						<p onClick={() => setFilterItem('service')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.service ? '!bg-gray-light2' : ""}`}>
+						<p onClick={() => setFilterItem('service')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 hover:rounded cursor-pointer ${currentFilter.service ? '!bg-gray-light2 rounded' : ""}`}>
 							<svg className="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M21 2C22.018 2 22.87 2.76384 22.9916 3.82579L23 4V17C23 18.018 22.2362 18.87 21.1742 18.9916L21 19H18V21C18 21.7043 17.2979 22.1753 16.6586 21.9402L16.5528 21.8944L15 21.118L13.4472 21.8944C12.8173 22.2094 12.082 21.792 12.0064 21.1151L12 21V19H3C2.03562 19 1.22018 18.3145 1.03358 17.3393L1.00839 17.1742L1 17V4C1 2.98205 1.76385 2.13004 2.82579 2.00839L3 2H21ZM16 17.391L15.7664 17.4378C15.6053 17.465 15.438 17.4836 15.2646 17.4929L15.2198 17.4941C15.147 17.498 15.0737 17.5 15 17.5L14.8004 17.4951C14.7983 17.495 14.7963 17.4949 14.7943 17.4948C14.5133 17.4842 14.2487 17.4491 14.0002 17.393L14 19.381L14.5528 19.1056C14.8343 18.9648 15.1657 18.9648 15.4472 19.1056L16 19.382V17.391ZM3.05759 3.99834L3 4L2.99834 16.9424L3.00003 17L12 17L11.999 16.1447C11.3772 15.4397 11 14.5139 11 13.5C11 11.2909 12.7909 9.5 15 9.5C17.2091 9.5 19 11.2909 19 13.5C19 14.5139 18.6227 15.4397 18.001 16.1447L18 17L20.9424 17.0017L21 16.999L21.0017 4.05759L20.999 4L3.05759 3.99834ZM15 11.5C13.8954 11.5 13 12.3954 13 13.5C13 14.6046 13.8954 15.5 15 15.5L14.923 15.497L15 15.5C15.0267 15.5 15.0529 15.4997 15.0788 15.499C15.5643 15.48 16.0066 15.2874 16.3439 14.9812C16.3459 14.9773 16.3486 14.9749 16.3513 14.9726L16.3439 14.9812C16.7469 14.6154 17 14.0872 17 13.5C17 12.3954 16.1046 11.5 15 11.5ZM8 13C8.55228 13 9 13.4477 9 14C9 14.5128 8.61396 14.9355 8.11662 14.9933L8 15H6C5.44772 15 5 14.5523 5 14C5 13.4872 5.38604 13.0645 5.88338 13.0067L6 13H8ZM9 9.5C9.55229 9.5 10 9.94772 10 10.5C10 11.0128 9.61396 11.4355 9.11662 11.4933L9 11.5H6C5.44772 11.5 5 11.0523 5 10.5C5 9.98716 5.38604 9.56449 5.88338 9.50673L6 9.5H9ZM18 6C18.5523 6 19 6.44772 19 7C19 7.51284 18.614 7.93551 18.1166 7.99327L18 8H6C5.44772 8 5 7.55228 5 7C5 6.48716 5.38604 6.06449 5.88338 6.00673L6 6H18Z" fill="black" fill-opacity="0.7" />
 							</svg>
 							Сертификаты
 						</p>
-						<p onClick={() => setFilterItem('product')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.product ? '!bg-gray-light2' : ""}`}>
+						<p onClick={() => setFilterItem('product')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 hover:rounded cursor-pointer ${currentFilter.product ? '!bg-gray-light2 rounded' : ""}`}>
 							<svg className="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C4 1.44772 4.44772 1 5 1H19C19.5523 1 20 1.44772 20 2V9H22C22.5523 9 23 9.44772 23 10V19C23 19.5523 22.5523 20 22 20H19.5V22C19.5 22.5523 19.0523 23 18.5 23H5.5C4.94772 23 4.5 22.5523 4.5 22V20H2C1.44772 20 1 19.5523 1 19V10C1 9.44772 1.44772 9 2 9H4V2ZM6 9H18V3H6V9ZM3 11V18H4.49025V16C4.49025 15.4477 4.93797 15 5.49025 15H18.5086C19.0609 15 19.5086 15.4477 19.5086 16V18H21V11H3ZM6.5 17V21H17.5V17H6.5Z" fill="black" fill-opacity="0.7" />
 							</svg>
 							Печатная продукция
 						</p>
-						<p onClick={() => setFilterItem('active')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 cursor-pointer ${currentFilter.active ? '!bg-gray-light2' : ""}`}>
+						<p onClick={() => setFilterItem('active')} className={`flex items-center font-montserrat py-3 px-5 transition-all hover:bg-gray-light2 hover:rounded cursor-pointer ${currentFilter.active ? '!bg-gray-light2 rounded' : ""}`}>
 							<svg className="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5002 5C14.5002 3.067 16.0672 1.5 18.0002 1.5C19.9332 1.5 21.5002 3.067 21.5002 5C21.5002 6.93298 19.9332 8.5 18.0002 8.5C16.0672 8.5 14.5002 6.93298 14.5002 5ZM18.0002 3.5C17.1718 3.5 16.5002 4.17158 16.5002 5C16.5002 5.82841 17.1718 6.5 18.0002 6.5C18.8286 6.5 19.5002 5.82841 19.5002 5C19.5002 4.17158 18.8286 3.5 18.0002 3.5ZM9.67453 6.05404C9.92294 5.96803 10.1952 5.98329 10.4325 6.09652L15.9309 8.72082C16.2471 8.87173 16.4613 9.17712 16.4954 9.52582C16.5296 9.87451 16.3787 10.2157 16.0978 10.425L11.7431 13.6712L16.05 16.5064C16.2805 16.6582 16.438 16.8984 16.4854 17.1702C16.5327 17.442 16.4656 17.7213 16.2999 17.942L12.8041 22.5993C12.4725 23.041 11.8457 23.1303 11.404 22.7988C10.9623 22.4672 10.873 21.8404 11.2046 21.3987L14.0619 17.5921L9.45188 14.5574C9.17951 14.3781 9.01167 14.0772 9.00215 13.7513C8.99263 13.4254 9.14263 13.1152 9.40407 12.9204L13.5739 9.81198L9.94124 8.07819L6.32737 9.32951C5.80549 9.51021 5.23592 9.23363 5.05522 8.71174C4.87452 8.18986 5.1511 7.6203 5.67298 7.43959L9.67453 6.05404ZM22.7289 8.04814C23.107 8.45063 23.0873 9.08349 22.6848 9.46167L19.6857 12.2797C19.3711 12.5752 18.9024 12.6356 18.5232 12.4294L17.1823 11.7002C16.6971 11.4363 16.5177 10.8291 16.7816 10.3439C17.0454 9.85877 17.6527 9.67935 18.1378 9.94321L18.8433 10.3269L21.3153 8.00413C21.7178 7.62595 22.3507 7.64565 22.7289 8.04814ZM9.02934 14.9762C9.46922 15.3102 9.55511 15.9375 9.22116 16.3774L7.73631 18.3333C7.65333 18.4426 7.54873 18.5336 7.42903 18.6008L2.49134 21.3704C2.00965 21.6405 1.40015 21.4691 1.12996 20.9874C0.859782 20.5057 1.03124 19.8962 1.51292 19.626L6.26915 16.9582L7.62819 15.168C7.96214 14.7282 8.58945 14.6423 9.02934 14.9762Z" fill="black" fill-opacity="0.7" />
 							</svg>
@@ -1006,13 +1059,13 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 					<div className="flex flex-wrap ">
 
 						{currentFilter.photo && <>
-							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white bg-white-BG_FILTER hover:border-gray-light2">
 								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
 									<input className='hidden' id='checkSearchAll' type="checkbox" />
 									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
 								</div>
 
-								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg className="absolute hidden cursor-pointer hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 								</svg>
 
@@ -1024,13 +1077,13 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 									<Image src={matOne} />
 								</div>
 							</div>
-							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white bg-white-BG_FILTER hover:border-gray-light2">
 								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
 									<input className='hidden' id='checkSearchAll' type="checkbox" />
 									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
 								</div>
 
-								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg className="absolute hidden cursor-pointer hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 								</svg>
 
@@ -1042,13 +1095,13 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 									<Image src={matOne} />
 								</div>
 							</div>
-							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white bg-white-BG_FILTER hover:border-gray-light2">
 								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
 									<input className='hidden' id='checkSearchAll' type="checkbox" />
 									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
 								</div>
 
-								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg className="absolute hidden cursor-pointer hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 								</svg>
 
@@ -1060,13 +1113,13 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 									<Image src={matOne} />
 								</div>
 							</div>
-							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white bg-white-BG_FILTER hover:border-gray-light2">
 								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
 									<input className='hidden' id='checkSearchAll' type="checkbox" />
 									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
 								</div>
 
-								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg className="absolute hidden cursor-pointer hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 								</svg>
 
@@ -1082,22 +1135,22 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 						{currentFilter.video && <>
 							<div className="w-full flex pb-3">
 								<p className="font-montserrat font-medium  text-gray-quick-silver mr-4">Сортировка:</p>
-								<p className="mr-3 font-montserrat pb-0.5 font-medium text-primary border-b border-b-primary border-dotted">По умолчанию</p>
-								<p className="font-montserrat font-medium pb-0.5  border-b border-gray-quick-silver border-dotted text-black-70pe ">Без подписей</p>
+								<p onClick={() => setFilterSortLocal('default')} className={`mr-3 font-montserrat pb-0.5 font-medium cursor-pointer hover:text-primary hover:border-b-primary   border-b  text-black-70pe  border-dotted ${filterSort.default ? '!text-primary !border-b-primary' : ""}`}>По умолчанию</p>
+								<p onClick={() => setFilterSortLocal('notP')} className={`font-montserrat font-medium pb-0.5 cursor-pointer hover:text-primary hover:border-b-primary border-b border-gray-quick-silver border-dotted text-black-70pe ${filterSort.notP ? '!text-primary !border-b-primary' : ""}`}>Без подписей</p>
 							</div>
-							<div onClick={setVideo} className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI h-52 transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
+							<div onClick={setVideo} className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI h-52 transition-all border-white bg-white-BG_FILTER hover:border-gray-light2">
 								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
 									<input className='hidden' id='checkSearchAll' type="checkbox" />
 									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
 								</div>
 
-								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg className="absolute cursor-pointer hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 								</svg>
 
 								<div className="pb-3 relative ..5x1:w-56 ">
 									<div className="absolute z-10 left-0 right-0 bottom-0 top-0 flex items-center justify-center">
-										<svg className="" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<svg className="-mt-4" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M38.8635 30.8286C39.4964 30.4632 40.2761 30.4632 40.909 30.8286L62.3863 43.2286C63.0191 43.594 63.409 44.2692 63.409 45C63.409 45.7308 63.0191 46.406 62.3863 46.7714L40.909 59.1714C40.2761 59.5368 39.4964 59.5368 38.8635 59.1714C38.2307 58.806 37.8408 58.1307 37.8408 57.4V32.6001C37.8408 31.8693 38.2307 31.194 38.8635 30.8286ZM41.9317 36.1429V53.8571L57.2726 45L41.9317 36.1429Z" fill="white" />
 											<path d="M89.4999 45C89.4999 69.5767 69.5766 89.5 45 89.5C20.4233 89.5 0.5 69.5767 0.5 45C0.5 20.4233 20.4233 0.5 45 0.5C69.5766 0.5 89.4999 20.4233 89.4999 45Z" stroke="white" stroke-opacity="0.8" />
 										</svg>
@@ -1107,16 +1160,17 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 									<Image src={videoPreview} />
 								</div>
 							</div>
+
 						</>}
 						{currentFilter.service && <>
 
 							<div className="p-4 h-379px w-278px bg-gray-light">
 								<div className="h-full p-4 bg-white flex items-center justify-center">
-									<div className="flex items-center flex-col">
+									<div className="flex cursor-pointer hoverCus items-center flex-col">
 										<p className="font-montserrat text-22px font-medium leading-120% text-center">Сертификат соответствия</p>
 										<p className="font-montserrat font-medium text-gray-quick-silver leading-120% mt-3 mb-11 text-center">Евразийский экономический союз</p>
 										<button>
-											<svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<svg className="hid" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g filter="url(#filter0_b_3037_526760)">
 													<circle cx="22" cy="22" r="22" fill="white" fill-opacity="0.8" />
 												</g>
@@ -1130,6 +1184,20 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 													</filter>
 												</defs>
 											</svg>
+											<svg className="hidden hov" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g filter="url(#filter0_b_2130_1356759)">
+													<circle cx="22" cy="22" r="22" fill="#337202" />
+												</g>
+												<path d="M14 32H30.4706V29.6471H14M30.4706 19.0588H25.7647V12H18.7059V19.0588H14L22.2353 27.2941L30.4706 19.0588Z" fill="white" fill-opacity="0.8" />
+												<defs>
+													<filter id="filter0_b_2130_1356759" x="-4" y="-4" width="52" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+														<feFlood flood-opacity="0" result="BackgroundImageFix" />
+														<feGaussianBlur in="BackgroundImageFix" stdDeviation="2" />
+														<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2130_1356759" />
+														<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2130_1356759" result="shape" />
+													</filter>
+												</defs>
+											</svg>
 
 										</button>
 									</div>
@@ -1139,10 +1207,10 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 						{currentFilter.product && <>
 							<div className="w-full flex pb-3">
 								<p className="font-montserrat font-medium  text-gray-quick-silver mr-4">Сортировка:</p>
-								<p className="mr-3 font-montserrat pb-0.5 font-medium text-primary border-b border-b-primary border-dotted">Все</p>
-								<p className="font-montserrat font-medium pb-0.5  border-b mr-3 border-gray-quick-silver border-dotted text-black-70pe ">Буклеты</p>
-								<p className="font-montserrat font-medium pb-0.5  border-b mr-3 border-gray-quick-silver border-dotted text-black-70pe ">Ролл апы</p>
-								<p className="font-montserrat font-medium pb-0.5  border-b border-gray-quick-silver border-dotted text-black-70pe ">PDF</p>
+								<p onClick={() => setFilterSortLocalPr('all')} className={`mr-3 font-montserrat pb-0.5 cursor-pointer font-medium  border-b border-gray-quick-silver text-black-70pe border-dotted ${filterSortProduct.all ? '!border-b-primary !text-primary ' : ""}`}>Все</p>
+								<p onClick={() => setFilterSortLocalPr('bucl')} className={`font-montserrat font-medium pb-0.5 cursor-pointer border-b mr-3 border-gray-quick-silver border-dotted text-black-70pe ${filterSortProduct.bucl ? '!border-b-primary !text-primary ' : ""}`}>Буклеты</p>
+								<p onClick={() => setFilterSortLocalPr('rolls')} className={`font-montserrat font-medium pb-0.5 cursor-pointer border-b mr-3 border-gray-quick-silver border-dotted text-black-70pe ${filterSortProduct.rolls ? '!border-b-primary !text-primary ' : ""}`}>Ролл апы</p>
+								<p onClick={() => setFilterSortLocalPr('pdf')} className={`font-montserrat font-medium pb-0.5 cursor-pointer border-b border-gray-quick-silver border-dotted text-black-70pe ${filterSortProduct.pdf ? '!border-b-primary !text-primary ' : ""}`}>PDF</p>
 							</div>
 							<div className="px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white hover:bg-white-BG_FILTER hover:border-gray-light2">
 								<div className='hidden items-center absolute left-14px top-14px hoverShowI'>
@@ -1150,7 +1218,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 									<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-deNum cursor-pointer border'></label>
 								</div>
 
-								<svg className="absolute hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg className="absolute cursor-pointer hidden hoverShowI left-3 top-11" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
 								</svg>
 
@@ -1340,9 +1408,9 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 
 										</div>
-										<div className="mt-3 .5x01:w-300px relative">
+										<div className="mt-3 hoverCus .5x01:w-300px relative">
 											<Image src={i} />
-											<div className="absolute left-0 right-0 bottom-77px flex .5x01:bottom-100px items-center h-16 justify-end  bg-white-80pe">
+											<div className="absolute hov hidden left-0 right-0 bottom-77px flex .5x01:bottom-100px items-center h-16 justify-end  bg-white-80pe">
 												<button className="flex items-center font-montserrat font-medium text-xs text-white bg-primary hover:bg-primary-hover transition-all h-8 px-5 mr-4 ">
 													Перейти <svg className="ml-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M8.75033 4.66683L11.0837 7.00016M11.0837 7.00016L8.75033 9.3335M11.0837 7.00016H2.91699" stroke="white" stroke-width="1.5" stroke-linecap="round" />
