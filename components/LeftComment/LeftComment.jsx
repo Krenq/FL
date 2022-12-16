@@ -1,4 +1,11 @@
+import { useState } from "react"
+
 const LeftComment = ({ show, setShow }) => {
+	const [starsLength, setStarsLength] = useState(0)
+
+	const setStars = (len) => {
+		setStarsLength(len)
+	}
 
 	return (
 		<>
@@ -10,21 +17,32 @@ const LeftComment = ({ show, setShow }) => {
 							<p className="font-montserrat text-22px mb-4">Оставить отзыв</p>
 							<p className="font-noto-sans mb-6px text-11px text-black-70pe ">Ваша оценка *</p>
 							<div className="flex mb-18px">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
-								</svg>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
-								</svg>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
-								</svg>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
-								</svg>
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
-								</svg>
+								{starsLength > 0 ? <svg onClick={() => setStars(1)} class="mt-3px mr-1" width="19" height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1945_1209386)"><path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202"></path></g><defs><clipPath id="clip0_1945_1209386"><rect width="18" height="18" fill="white"></rect></clipPath></defs></svg>
+									: <svg onClick={() => setStars(1)} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
+									</svg>
+								}
+								{starsLength >= 2 ? <svg onClick={() => setStars(2)} class="mt-3px mr-1" width="19" height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1945_1209386)"><path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202"></path></g><defs><clipPath id="clip0_1945_1209386"><rect width="18" height="18" fill="white"></rect></clipPath></defs></svg>
+									: <svg onClick={() => setStars(2)} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
+									</svg>
+								}
+								{starsLength >= 3 ? <svg onClick={() => setStars(3)} class="mt-3px mr-1" width="19" height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1945_1209386)"><path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202"></path></g><defs><clipPath id="clip0_1945_1209386"><rect width="18" height="18" fill="white"></rect></clipPath></defs></svg>
+									: <svg onClick={() => setStars(3)} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
+									</svg>
+								}
+								{starsLength >= 4 ? <svg onClick={() => setStars(4)} class="mt-3px mr-1" width="19" height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1945_1209386)"><path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202"></path></g><defs><clipPath id="clip0_1945_1209386"><rect width="18" height="18" fill="white"></rect></clipPath></defs></svg>
+									: <svg onClick={() => setStars(4)} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
+									</svg>
+								}
+
+								{starsLength >= 5 ? <svg onClick={() => setStars(5)} class="mt-3px mr-1" width="19" height="19" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1945_1209386)"><path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" stroke="#337202"></path></g><defs><clipPath id="clip0_1945_1209386"><rect width="18" height="18" fill="white"></rect></clipPath></defs></svg>
+									: <svg onClick={() => setStars(5)} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12 2L14.2451 8.90983H21.5106L15.6327 13.1803L17.8779 20.0902L12 15.8197L6.12215 20.0902L8.36729 13.1803L2.48944 8.90983H9.75486L12 2Z" fill="#DBDCDA" />
+									</svg>
+								}
 							</div>
 							<p className="font-noto-sans  text-11px text-black-70pe mb-1">Комментарий *</p>
 							<textarea className="border border-gray w-full h-100px mb-4 outline-none">

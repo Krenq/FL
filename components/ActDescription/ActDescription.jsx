@@ -49,12 +49,12 @@ const ActDescription = () => {
 	return (
 		<section className="pb-100px .6x3:pb-5 ">
 
-			<div className="px-80px ..5x2:px-3  overflow-x-auto whitespace-nowrap   border-b flex  border-stroke">
+			<div className="px-80px ..5x2:px-3 mb-5 ..5x2:mb-3 overflow-x-auto whitespace-nowrap   border-b flex  border-stroke">
 
 
-				<p onClick={() => setFilterItem('act')} className={`${filter.act ? 'text-primary border-b-3px' : "text-gray-quick-silver"} ..5x4:text-sm cursor-pointer ..6x03:mr-5 ..6x03:text-13px ..6x03:pb-1  .2x1:text-base pb-14px mr-9 font-montserrat text-18px font-semibold `}>Участвует в акциях (5)</p>
-				<p onClick={() => setFilterItem('cool')} className={`${filter.cool ? 'text-primary border-b-3px' : "text-gray-quick-silver"} ..5x4:text-sm cursor-pointer ..6x03:mr-5 ..6x03:text-13px pb-14px ..6x03:pb-1 .2x1:text-base mr-9 font-montserrat text-18px font-semibold  `}>Отлично сочетается</p>
-				<p onClick={() => setFilterItem('recomend')} className={`${filter.recomend ? 'text-primary border-b-3px' : "text-gray-quick-silver"} ..5x4:text-sm ..6x03:mr-5 ..6x03:text-13px cursor-pointer ..6x03:pb-1 .2x1:text-base pb-14px font-montserrat text-18px font-semibold  `}>Также рекомендуем</p>
+				<p onClick={() => setFilterItem('act')} className={`${filter.act ? 'text-primary border-b-3px' : "text-gray-quick-silver"} ..5x4:text-sm cursor-pointer ..6x03:mr-5 ..6x03:text-13px ..6x03:pb-1  .2x1:text-base pb-14px mr-9 font-montserrat text-18px font-semibold ..5x2:font-medium hover:text-primary`}>Участвует в акциях (5)</p>
+				<p onClick={() => setFilterItem('cool')} className={`${filter.cool ? 'text-primary border-b-3px' : "text-gray-quick-silver"} ..5x4:text-sm cursor-pointer ..6x03:mr-5 ..6x03:text-13px pb-14px ..6x03:pb-1 .2x1:text-base mr-9 font-montserrat text-18px font-semibold ..5x2:font-medium hover:text-primary`}>Отлично сочетается</p>
+				<p onClick={() => setFilterItem('recomend')} className={`${filter.recomend ? 'text-primary border-b-3px' : "text-gray-quick-silver"} ..5x4:text-sm ..6x03:mr-5 ..6x03:text-13px cursor-pointer ..6x03:pb-1 .2x1:text-base pb-14px font-montserrat text-18px font-semibold ..5x2:font-medium hover:text-primary`}>Также рекомендуем</p>
 			</div>
 			<div className="px-80px relative ..5x2:px-3">
 				<Swiper ref={sliderFilt} breakpoints={{

@@ -48,7 +48,7 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 					</svg>
 
 				</div>
-				<div onClick={close} className={`absolute cursor-pointer .4x2:right-28 z-10 ..5x2:right-4 ..5x2:top-4 top-60px right-230px ${isFullView || isFullViewVideo ? 'border-l pl-4 ..5x2:border-none border-stroke' : ""} `}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<div onClick={close} className={`absolute cursor-pointer  .4x2:right-28 z-10 ..5x2:right-4 ..5x2:top-4 top-60px right-230px ${isFullView || isFullViewVideo ? 'border-l pl-4 ..5x2:border-none border-stroke' : ""} `}><svg className=" ..5x2:h-4 ..5x2:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M19 5L5 19M5 5L19 19" stroke="black" stroke-opacity="0.7" stroke-width="2" stroke-linecap="round" />
 				</svg>
 				</div>
@@ -109,25 +109,25 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 					</div>
 				</div>}
-				{isFullView && <div className="p-5 .4x2:right-28 ..5x2:left-3 ..5x2:right-auto  ..5x2:top-14 bg-white rounded-xl w-250px absolute top-100px right-230px z-10">
-					<p className="font-montserrat mb-14px text-sm">Имя: <span className="font-montserrat font-semibold ">{name}</span></p>
-					<p className="font-montserrat mb-14px text-sm">Размер: <span className="font-montserrat font-semibold ">{size}</span></p>
-					<p className="font-montserrat mb-14px text-sm">Загружен: <span className="font-montserrat font-semibold ">{upload}</span></p>
-					<p className="font-montserrat mb-14px text-sm">Скачиваний: <span className="font-montserrat font-semibold ">{download}</span></p>
+				{isFullView && <div className="p-5 ..5x2:p-3 .4x2:right-28 ..5x2:left-3 ..5x2:right-auto  ..5x2:top-62px bg-white rounded-xl w-250px absolute top-100px right-230px z-10">
+					<p className="font-montserrat mb-14px ..5x2:text-11px ..5x2:mb-2 text-sm">Имя: <span className="font-montserrat ..5x2:font-medium font-semibold ">{name}</span></p>
+					<p className="font-montserrat mb-14px ..5x2:text-11px ..5x2:mb-2 text-sm">Размер: <span className="font-montserrat ..5x2:font-medium font-semibold ">{size}</span></p>
+					<p className="font-montserrat mb-14px ..5x2:text-11px ..5x2:mb-2 text-sm">Загружен: <span className="font-montserrat ..5x2:font-medium font-semibold ">{upload}</span></p>
+					<p className="font-montserrat ..5x2:text-11px  text-sm">Скачиваний: <span className="font-montserrat ..5x2:font-medium font-semibold ">{download}</span></p>
 
 				</div>
 				}
 
 
 				<div className="relative">
-					<div className={`absolute ..5x2:right-1/2 ..7x001:bottom-10 w-20 ability1000  ..5x2:w-20 ..5x2:bg-white ..5x2:text-13px ..5x2:text-black .6x3:right-460px .5x01:right-390px .2x1:right-180px right-531px text-white text-base bottom-0 flex justify-center items-center px-4 font-montserrat font-semibold z-10 bg-black-70pe h-8  ${isFullView || isFullViewVideo ? 'bottom-9 -translate-x-24 ..5x2:rounded-2xl .2x00:translate-x-0 ..5x2:!translate-x-50% .2x00:mr-0 -mr-1 z-20' : ""}`}>
+					<div className={`absolute ..5x2:right-1/2 ..7x001:bottom-10 w-20 ability1000  ..5x2:w-20 ..5x2:bg-white-80pe ..5x2:text-13px ..5x2:text-black .6x3:right-460px .5x01:right-390px .2x1:right-180px right-531px text-white text-base bottom-0 flex justify-center items-center px-4 font-montserrat font-semibold z-10 bg-black-70pe h-8  ${isFullView || isFullViewVideo ? 'bottom-9 -translate-x-24 ..5x2:rounded-2xl .2x00:translate-x-0 ..5x2:!translate-x-50% .2x00:mr-0 -mr-1 z-20' : ""}`}>
 						{currentSlide} / {allSlides}
 					</div>
-					{isFullView || isFullViewVideo ? <Swiper onSwiper={(arg) => setAllSlides(arg.imagesLoaded / 2)} onSlideChange={(arg) => setCurrentSlide(arg.snapIndex + 1)} ref={slider} slidesPerView={1} className=' '  >
+					{isFullView || isFullViewVideo ? <Swiper onSwiper={(arg) => setAllSlides(arg.imagesLoaded / 2)} onSlideChange={(arg) => setCurrentSlide(arg.snapIndex + 1)} ref={slider} slidesPerView={1}  >
 
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -154,9 +154,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -183,9 +183,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -212,9 +212,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -241,9 +241,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -270,9 +270,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -299,9 +299,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -328,9 +328,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -357,9 +357,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -386,9 +386,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -415,9 +415,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -444,9 +444,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />
@@ -473,9 +473,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex ..5x2:mt-52px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
+						<SwiperSlide className={`flex justify-center mt-60px  ${isFullView || isFullViewVideo ? '..5x2:flex  ..5x2:mt-47px ..5x2:!w-full ..5x2:items-center ..5x2:justify-center' : ""} ..5x2:mt-100px `}>
 
-							<div className={`..5x2:!w-379px ${isFullView || isFullViewVideo ? '..5x2:flex items-center justify-center ..5x2:!w-full ..5x2:!h-full' : ""} ..5x2:!h-379px  relative`}>
+							<div className={` ${isFullView || isFullViewVideo ? '..5x2:flex  items-center justify-center ..5x2:!w-full ..5x2:!h-full' : "..5x2:!w-379px ..5x2:!h-379px "}   relative`}>
 								{isFullViewVideo && <div className="absolute left-18px top-18px z-10 flex items-center">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M7 5.07178C7.3094 4.89315 7.6906 4.89315 8 5.07178L18.5 11.134C18.8094 11.3126 19 11.6427 19 12C19 12.3573 18.8094 12.6874 18.5 12.866L8 18.9282C7.6906 19.1069 7.3094 19.1069 7 18.9282C6.6906 18.7496 6.5 18.4195 6.5 18.0622V5.93781C6.5 5.58054 6.6906 5.25041 7 5.07178ZM8.5 7.66986V16.3302L16 12L8.5 7.66986Z" fill="white" />

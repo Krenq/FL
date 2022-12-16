@@ -2844,6 +2844,7 @@
 }
 
 @media (max-width: 1000px) {
+
 	.imgDiscount {
 		width: 300px;
 		height: 300px;
@@ -3527,6 +3528,46 @@
 	display: none !important;
 }
 
+.hoverCus:hover p {
+	color: #000 !important;
+}
+
 .hoverCustVideo:hover p {
 	color: #fff !important;
+}
+
+.photoCus .swiper-scrollbar {
+	width: 100px !important;
+	left: calc(50% - 50px) !important;
+	bottom: 52.5px !important;
+}
+
+@media (max-width: 1000px) {
+	.photoCus .swiper-scrollbar {
+		bottom: -10px !important;
+	}
+
+	.letterSpacing-4px {
+		letter-spacing: normal !important;
+	}
+
+	.mobSl .slick-slide {
+		margin-right: 5px;
+	}
+
+}
+
+@media (max-width: 530px) {
+	.mobSl .slick-slide {
+		margin-right: 0px;
+	}
+}
+
+.bg-shadow {
+
+	box-shadow: 0px 0px 20px rgba(132, 132, 132, 0.2);
+}
+
+.bgcard {
+	background: url('../images/templates/bg-card.jpg') 0 0 no-repeat;
 }

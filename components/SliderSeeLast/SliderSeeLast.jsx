@@ -10,7 +10,7 @@ import oneL from '../../images/templates/oneItemSearchSlider.jpg'
 import treeL from '../../images/templates/treeItemSearch.jpg'
 import twoI from '../../images/templates/twoItemSearch.jpg'
 import SpecialOfferItem from "../SpecialOfferItem/SpecialOfferItem";
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Scrollbar } from "swiper";
 import { useState } from "react";
 import ProductCard from "../ProductCard/ProductCard";
 
@@ -32,7 +32,10 @@ const SliderSeeLast = () => {
 	return (
 		<div className="relative px-80px pb-60px .3x1:px-10 ..5x2:px-3">
 			<h4 className="font-montserrat pt-60px ..5x2:pt-6 ..5x2:mb-2 ..6x3:text-sm ..5x2:text-base text-26px font-medium mb-6 ">Вы недавно смотрели</h4>
-			<Swiper ref={seeSlider} slidesPerView={2} breakpoints={{
+			<Swiper ref={seeSlider} slidesPerView={2} scrollbar={{
+				hide: false,
+				draggable: true,
+			}} className=' photoCus sliderPaginationCustom ' breakpoints={{
 				360: {
 					slidesPerView: 2
 				},
@@ -57,7 +60,7 @@ const SliderSeeLast = () => {
 				1850: {
 					slidesPerView: 6
 				}
-			}} modules={[Navigation, Pagination]}  >
+			}} modules={[Navigation, Pagination, Scrollbar]}  >
 
 				<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
 					<ProductCard
@@ -280,12 +283,12 @@ const SliderSeeLast = () => {
 
 
 			</Swiper>
-			<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlidePhotoSee} className='absolute w-11 h-11 rounded-32px hover:bg-black transition-all bg-white flex items-center justify-center ..5x2:hidden  left-11   top-80   z-10'>
+			<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlidePhotoSee} className='absolute w-11 h-11 rounded-32px hover:bg-black transition-all bg-white flex items-center justify-center ..5x2:hidden  left-14   top-80   z-10'>
 				<svg className="activeArrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M14.33 8L6.03 16L5 15L9 9L9.7 8L9 7L5 1L6.03 0L14.33 8Z" fill={`${buttonHover ? 'white' : "black"}`} />
 				</svg>
 			</button>
-			<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhotoSee} className='absolute  w-11 h-11 rounded-32px bg-white flex items-center justify-center hover:bg-black transition-all ..5x2:hidden right-11  top-80 z-10'>
+			<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhotoSee} className='absolute  w-11 h-11 rounded-32px bg-white flex items-center justify-center hover:bg-black transition-all ..5x2:hidden right-14  top-80 z-10'>
 				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M14.33 8L6.03 16L5 15L9 9L9.7 8L9 7L5 1L6.03 0L14.33 8Z" fill={`${buttonHoverNext ? 'white' : "black"}`} />
 				</svg>

@@ -59,7 +59,7 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 			<div>
 				<h4 className="font-montserrat font-medium text-xl mb-3 ..6x3:mb-6px ..6x3:text-sm">Фото и видео отзывы</h4>
 				<div className="mb-12 relative ..6x3:-mr-3 ..6x3:mb-6">
-					<Swiper ref={sliderPhoto} className='firstSlider sliderPaginationCustom ' breakpoints={{
+					<Swiper ref={sliderPhoto} className=' photoCus sliderPaginationCustom ' breakpoints={{
 						950: {
 							slidesPerView: 5
 						},
@@ -103,9 +103,7 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 						<SwiperSlide onClick={setVideo} className="pr-2   cursor-pointer">
 							<Image src={detailSix} />
 						</SwiperSlide>
-						<SwiperSlide onClick={setVideo} className="pr-2   cursor-pointer">
-							<Image src={detailSix} />
-						</SwiperSlide>
+
 
 					</Swiper>
 
@@ -557,13 +555,13 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 							</>}
 						</div>
 						<button onClick={setS} className="w-full h-11 flex justify-center items-center border border-stroke mb-24 font-montserrat text-xs ..6x3:text-13px ..6x3:h-10 hover:bg-gray-light hover:border-white ..5x2:mb-6 ..6x3:hidden font-medium">{show ? 'Свернуть' : "Показать ещё 2 из 5"}</button>
-						<button className="w-full h-11  justify-center items-center border border-stroke mb-24 font-montserrat text-xs ..6x3:text-13px ..6x3:h-10 ..6x3:flex hidden ..5x2:mb-6 ">Показать ещё </button>
+						<button onClick={setS} className="w-full h-11 outline-none justify-center items-center border border-stroke mb-24 font-montserrat text-xs ..6x3:text-13px ..6x3:h-10 ..6x3:flex hidden ..5x2:mb-6 ">  {show ? 'Свернуть' : "Показать ещё"}</button>
 					</div>
 					<div className="..5x2:flex ..5x2:items-center ..5x2:flex-col">
 						<p className="mb-4 font-montserrat text-xl ..6x3:mb-6px ..6x3:text-sm ..6x3:leading-140% font-medium leading-120%">Отмечай @TianDe  в социальных сетях и мы разместим ваш пост здесь!</p>
-						<div className="commentPhoto relative">
+						<div className="commentPhoto relative overflow-hidden mr-1.5">
 							<Image src={commentsPhoto} />
-							<button className=" bg-white-60pe absolute left-6 top-6 ..6x3:top-4 ..6x3:left-4 px-8 h-11 flex justify-center items-center font-montserrat text-xs font-medium ..6x3:text-xs ..6x3:h-8 ..6x3:px-5">Подробнее</button>
+							<button className=" bg-white-60pe absolute left-6 top-6 ..6x3:top-4 ..6x3:left-4 hover:bg-white hover:font-medium transition-all px-8 h-11 flex justify-center items-center font-montserrat text-xs font-medium ..6x3:text-xs ..6x3:h-8 ..6x3:px-5">Подробнее</button>
 						</div>
 
 					</div>

@@ -33,7 +33,18 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 		[hoverHeart, setHoverHeart] = useState(false),
 		[isLike, setLike] = useState(false),
 		[clickDe, setClickDe] = useState(false),
-		[clickBasket, setClickBasket] = useState(false)
+		[clickBasket, setClickBasket] = useState(false),
+		[likeMobile, setLikeMobile] = useState(false),
+		[hoverCopy, setHoverCopy] = useState(false),
+		[allSlides, setAllSlides] = useState(0),
+		[snap, setSnap] = useState(0)
+
+	const setAllSl = (length) => setAllSlides(length),
+		setCurrentSnap = (len) => setSnap(len)
+
+	const setHov = () => setHoverCopy(!hoverCopy)
+
+	const setLikeMob = () => setLikeMobile(!likeMobile)
 
 	const setDe = () => setClickDe(!clickDe),
 		setBasket = () => setClickBasket(!clickBasket)
@@ -115,9 +126,25 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 		prevSlide = () => {
 			if (slider.current !== null && slider.current.swiper !== null) slider.current.swiper.slidePrev();
 		},
-		scrollDescription = () => window.scrollTo({ top: 1500 }),
-		scrollDescriptionPhone = () => window.scrollTo({ top: 1200 })
+		scrollDescription = () => {
+			setDropDowns({
+				sale: false,
+				free: false,
+				loal: false,
+				promo: false
+			})
+			window.scrollTo({ top: 1500 })
+		},
+		scrollDescriptionPhone = () => {
+			setDropDowns({
+				sale: false,
+				free: false,
+				loal: false,
+				promo: false
+			})
+			window.scrollTo({ top: 1200 })
 
+		}
 
 
 
@@ -183,14 +210,14 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 							<path d="M9 1.5L10.6839 6.68237H16.1329L11.7245 9.88525L13.4084 15.0676L9 11.8647L4.59161 15.0676L6.27547 9.88525L1.86708 6.68237H7.31614L9 1.5Z" fill="#DBDCDA" />
 						</svg>
 
-						<p className="ml-5px ..7x2:ml-0 ..7x59:mr-1 ..7x2:text-10px ..7x01:text-11px ..7x59:ml-0.5 mr-6 ..6x2:mr-3 font-montserrat font-medium text-13px ..6x2:text-xs text-primary">5 отзывов</p>
+						<p className="ml-5px ..7x2:ml-0 ..7x59:mr-1 ..7x2:text-10px ..7x01:text-11px ..7x59:ml-0.5 mr-6 ..6x2:mr-3 font-montserrat font-medium text-13px ..6x2:text-xs border-b border-white hover:border-primary   text-primary">5 отзывов</p>
 					</div>
 					<div className="flex items-center cursor-pointer">
 						<svg className="..6x2:h-14px ..6x2:w-14px" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fillRule="evenodd" clipRule="evenodd" d="M0.75 9C0.75 4.44365 4.44365 0.75 9 0.75C13.5564 0.75 17.25 4.44365 17.25 9C17.25 13.5564 13.5564 17.25 9 17.25C4.44365 17.25 0.75 13.5564 0.75 9ZM9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75C12.7279 15.75 15.75 12.7279 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25ZM7.125 5.75241C7.35705 5.61843 7.64295 5.61843 7.875 5.75241L12.375 8.35048C12.607 8.48446 12.75 8.73205 12.75 9C12.75 9.26795 12.607 9.51554 12.375 9.64952L7.875 12.2476C7.64295 12.3816 7.35705 12.3816 7.125 12.2476C6.89295 12.1136 6.75 11.866 6.75 11.5981V6.40193C6.75 6.13398 6.89295 5.88638 7.125 5.75241ZM8.25 7.70096V10.299L10.5 9L8.25 7.70096Z" fill="#337202" />
 						</svg>
 
-						<p className="font-montserrat ..7x2:ml-0.5 ..7x2:text-10px hover:text-primary ..7x01:text-11px ml-5px mr-6 ..7x59:mr-1 ..7x59:ml-0.5 ..6x2:mr-14px text-13px ..6x2:text-xs text-gray-quick-silver">2 видео</p>
+						<p className="font-montserrat ..7x2:ml-0.5 ..7x2:text-10px hover:text-primary  border-b border-white hover:border-primary ..7x01:text-11px ml-5px mr-6 ..7x59:mr-1 ..7x59:ml-0.5 ..6x2:mr-14px text-13px ..6x2:text-xs text-gray-quick-silver transition-all hover:font-medium">2 видео</p>
 					</div>
 					<div className="flex items-center cursor-pointer">
 						<svg className="..6x2:h-14px ..6x2:w-14px" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -203,7 +230,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 								</clipPath>
 							</defs>
 						</svg>
-						<p className="font-montserrat hover:text-primary ..7x2:ml-0 ml-5px ..7x2:text-10px ..7x01:text-11px ..7x59:mr-1 ..7x59:ml-0.5 mr-6 ..6x2:mr-0 ..6x2:text-xs text-13px text-gray-quick-silver">Сертификаты</p>
+						<p className="font-montserrat  border-b border-white hover:border-primary hover:text-primary ..7x2:ml-0 ml-5px ..7x2:text-10px ..7x01:text-11px ..7x59:mr-1 transition-all hover:font-medium ..7x59:ml-0.5 mr-6 ..6x2:mr-0 ..6x2:text-xs text-13px text-gray-quick-silver">Сертификаты</p>
 
 					</div>
 					<div className="flex items-center ..5x5:hidden cursor-pointer">
@@ -211,7 +238,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 							<path fillRule="evenodd" clipRule="evenodd" d="M15 4.125C15 5.57475 13.8247 6.75 12.375 6.75C11.6985 6.75 11.0818 6.4941 10.6164 6.07382L6.66459 8.70832C6.72033 8.92121 6.75 9.14464 6.75 9.375C6.75 9.60536 6.72033 9.82879 6.66459 10.0417L10.2029 12.4006C10.6752 11.7061 11.4718 11.25 12.375 11.25C13.8247 11.25 15 12.4253 15 13.875C15 15.3247 13.8247 16.5 12.375 16.5C10.9341 16.5 9.76433 15.339 9.75013 13.9015L5.88365 11.3238C5.41821 11.7441 4.80149 12 4.125 12C2.67525 12 1.5 10.8247 1.5 9.375C1.5 7.92525 2.67525 6.75 4.125 6.75C4.80149 6.75 5.41821 7.0059 5.88365 7.42618L9.83541 4.79168C9.77967 4.57879 9.75 4.35536 9.75 4.125C9.75 2.67525 10.9253 1.5 12.375 1.5C13.8247 1.5 15 2.67525 15 4.125ZM12.375 5.25C12.9963 5.25 13.5 4.74632 13.5 4.125C13.5 3.50368 12.9963 3 12.375 3C11.7537 3 11.25 3.50368 11.25 4.125C11.25 4.74632 11.7537 5.25 12.375 5.25ZM4.125 10.5C4.74632 10.5 5.25 9.99632 5.25 9.375C5.25 8.75368 4.74632 8.25 4.125 8.25C3.50368 8.25 3 8.75368 3 9.375C3 9.99632 3.50368 10.5 4.125 10.5ZM13.5 13.875C13.5 14.4963 12.9963 15 12.375 15C11.7537 15 11.25 14.4963 11.25 13.875C11.25 13.2537 11.7537 12.75 12.375 12.75C12.9963 12.75 13.5 13.2537 13.5 13.875Z" fill="#337202" />
 						</svg>
 
-						<p className="font-montserrat ml-1 text-13px text-gray-quick-silver hover:text-primary">Поделиться</p>
+						<p className="font-montserrat ml-1  border-b border-white hover:border-primary text-13px text-gray-quick-silver hover:text-primary transition-all hover:font-medium">Поделиться</p>
 					</div>
 				</div>
 			</div>
@@ -227,7 +254,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 					</svg>
 
 
-					<p className="ml-5px ..7x2:text-10px ..7x59:mr-1 ..7x01:text-11px ..7x59:ml-0.5 mr-3 font-montserrat font-medium text-xs text-gray-quick-silver">Артикул: 30115/01</p>
+					<p className="ml-5px ..7x2:text-10px ..7x59:mr-1 ..7x01:text-11px ..7x59:ml-0.5 mr-3 font-montserrat font-medium ..5x2:font-normal text-xs text-gray-quick-silver">Артикул: 30115/01</p>
 				</div>
 				<div className="flex items-center">
 					<svg width="14" height="14" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -242,9 +269,9 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 			<div className="flex   -mr-1  ">
 				<div className="flex ..5x2:flex-col ..5x2:w-full">
-					<div className="relative mt-6 mb-7  ..6x04:mt-2 widthDetails .6x2:mr-0 ..5x2:!w-auto">
+					<div className="relative mt-6 mb-4  ..6x04:mt-2 widthDetails .6x2:mr-0 ..5x2:!w-auto">
 
-						<div className="absolute ..6x04:left-0 cursor-pointer  ..6x04:top-2 ..5x2:flex-col -left-2 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
+						<div className="absolute ..6x04:left-0 cursor-pointer   ..6x04:top-2 ..5x2:flex-col -left-2 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
 							<div onClick={() => slider.current.swiper.slideTo(0)} className="border ..5x2:hidden  .3x1:h-9 .3x1:w-9  mb-2 border-black-70pe mr-5 w-60px h-60px">
 								<Image src={oneSmall} />
 							</div>
@@ -256,22 +283,25 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 								if (e.target.src === 'http://localhost:6006/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDetailCardSmallTwo.229bdfcb.jpg&w=128&q=75' && e.target.id !== '2' && e.target.id !== '3') slider.current.swiper.slideTo(1)
 							}} className=" .3x1:h-9 relative cursor-pointer .3x1:w-9 ..5x2:hidden mr-5  w-60px h-60px mb-2">
-								<Image src={twoSmall} />
-								<div onClick={() => slider.current.swiper.slideTo(2)} id='2' className="cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
+								<div className="transition-all hover:border-black border border-white h-60px .3x1:h-9 ">
+									<Image src={twoSmall} />
+								</div>
+
+								<div onClick={() => slider.current.swiper.slideTo(2)} id='2' className="transition-all hover:border-black border border-white cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
 									<Image src={oneMini} />
 								</div>
-								<div onClick={() => slider.current.swiper.slideTo(3)} id='2' className="cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
+								<div onClick={() => slider.current.swiper.slideTo(3)} id='2' className="transition-all hover:border-black border border-white cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
 									<Image src={oneMini} />
 								</div>
 							</div>
 							<div className="..5x2:mt-1 relative cursor-pointer .3x1:h-9 .3x1:w-9  w-60px h-60px">
-								<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg className=".3x1:h-9 .3x1:w-9" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="30" cy="30" r="29.5" fill="white" stroke="#C5C1AB" />
 									<circle cx="30" cy="30" r="27.5" fill="white" stroke="#C5C1AB" />
 									<path d="M14.5902 29H13.5102V22.79H11.3702V21.86H16.7302V22.79H14.5902V29ZM24.9297 25.42C24.9297 25.9733 24.8597 26.4767 24.7197 26.93C24.5864 27.3767 24.3797 27.7633 24.0997 28.09C23.8264 28.4167 23.4797 28.6667 23.0597 28.84C22.6464 29.0133 22.163 29.1 21.6097 29.1C21.043 29.1 20.5497 29.0133 20.1297 28.84C19.7164 28.66 19.3697 28.41 19.0897 28.09C18.8164 27.7633 18.613 27.3733 18.4797 26.92C18.3464 26.4667 18.2797 25.9633 18.2797 25.41C18.2797 24.6767 18.3997 24.0367 18.6397 23.49C18.8797 22.9433 19.2464 22.5167 19.7397 22.21C20.2397 21.9033 20.8664 21.75 21.6197 21.75C22.353 21.75 22.963 21.9033 23.4497 22.21C23.943 22.51 24.313 22.9367 24.5597 23.49C24.8064 24.0367 24.9297 24.68 24.9297 25.42ZM19.4197 25.42C19.4197 25.9933 19.4964 26.4867 19.6497 26.9C19.803 27.3067 20.043 27.6233 20.3697 27.85C20.6964 28.07 21.1097 28.18 21.6097 28.18C22.1164 28.18 22.5297 28.07 22.8497 27.85C23.1697 27.6233 23.4064 27.3067 23.5597 26.9C23.713 26.4867 23.7897 25.9933 23.7897 25.42C23.7897 24.56 23.6164 23.89 23.2697 23.41C22.9297 22.9233 22.3797 22.68 21.6197 22.68C21.113 22.68 20.6964 22.79 20.3697 23.01C20.043 23.23 19.803 23.5433 19.6497 23.95C19.4964 24.3567 19.4197 24.8467 19.4197 25.42ZM29.5713 21.86C30.1779 21.86 30.6846 21.9167 31.0913 22.03C31.5046 22.1433 31.8146 22.3333 32.0213 22.6C32.2346 22.86 32.3413 23.2067 32.3413 23.64C32.3413 23.92 32.2913 24.17 32.1913 24.39C32.0913 24.6033 31.9446 24.7833 31.7513 24.93C31.5646 25.07 31.3313 25.1633 31.0513 25.21V25.26C31.3379 25.3067 31.5946 25.3933 31.8213 25.52C32.0479 25.64 32.2279 25.8167 32.3613 26.05C32.4946 26.2833 32.5613 26.5867 32.5613 26.96C32.5613 27.3933 32.4579 27.7633 32.2513 28.07C32.0513 28.37 31.7613 28.6 31.3813 28.76C31.0079 28.92 30.5613 29 30.0413 29H27.4813V21.86H29.5713ZM29.7513 24.84C30.3113 24.84 30.6946 24.75 30.9013 24.57C31.1146 24.39 31.2213 24.1233 31.2213 23.77C31.2213 23.41 31.0946 23.1533 30.8413 23C30.5879 22.8467 30.1846 22.77 29.6313 22.77H28.5613V24.84H29.7513ZM28.5613 25.72V28.1H29.8713C30.4513 28.1 30.8546 27.9867 31.0813 27.76C31.3079 27.5333 31.4213 27.2333 31.4213 26.86C31.4213 26.6333 31.3713 26.4333 31.2713 26.26C31.1713 26.0867 31.0013 25.9533 30.7613 25.86C30.5279 25.7667 30.2079 25.72 29.8013 25.72H28.5613ZM39.4938 29L38.7338 26.94H35.9738L35.2138 29H34.0938L36.8038 21.83H37.9238L40.6238 29H39.4938ZM37.7138 23.99C37.6938 23.9167 37.6571 23.8067 37.6038 23.66C37.5571 23.5067 37.5104 23.3533 37.4638 23.2C37.4171 23.04 37.3804 22.91 37.3538 22.81C37.3204 22.9433 37.2804 23.09 37.2338 23.25C37.1938 23.4033 37.1538 23.5467 37.1138 23.68C37.0738 23.8067 37.0404 23.91 37.0138 23.99L36.2938 26H38.4338L37.7138 23.99ZM44.5867 21.86C45.5201 21.86 46.2001 22.05 46.6267 22.43C47.0534 22.8033 47.2667 23.3267 47.2667 24C47.2667 24.3 47.2167 24.5867 47.1167 24.86C47.0234 25.1333 46.8667 25.38 46.6467 25.6C46.4267 25.8133 46.1334 25.9833 45.7667 26.11C45.4067 26.23 44.9634 26.29 44.4367 26.29H43.6667V29H42.5867V21.86H44.5867ZM44.5067 22.77H43.6667V25.38H44.3167C44.7234 25.38 45.0634 25.3367 45.3367 25.25C45.6101 25.1567 45.8134 25.0133 45.9467 24.82C46.0867 24.62 46.1567 24.36 46.1567 24.04C46.1567 23.6133 46.0234 23.2967 45.7567 23.09C45.4967 22.8767 45.0801 22.77 44.5067 22.77ZM24.448 33.86V40.06H25.368V42.94H24.328V41H19.548V42.94H18.518V40.06H19.068C19.288 39.66 19.5013 39.22 19.708 38.74C19.9147 38.2533 20.098 37.7433 20.258 37.21C20.418 36.67 20.5513 36.12 20.658 35.56C20.7713 34.9933 20.8513 34.4267 20.898 33.86H24.448ZM21.808 34.8C21.7747 35.18 21.708 35.6 21.608 36.06C21.508 36.5133 21.3847 36.98 21.238 37.46C21.098 37.94 20.938 38.4067 20.758 38.86C20.5847 39.3067 20.4013 39.7067 20.208 40.06H23.378V34.8H21.808ZM33.1069 41H32.0269V37.74H28.6169V41H27.5369V33.86H28.6169V36.82H32.0269V33.86H33.1069V41ZM38.2374 38.1L36.4474 41H35.2074L37.2174 37.87C36.984 37.79 36.7574 37.6733 36.5374 37.52C36.324 37.36 36.1474 37.15 36.0074 36.89C35.874 36.6233 35.8074 36.2833 35.8074 35.87C35.8074 35.2233 36.034 34.7267 36.4874 34.38C36.9474 34.0333 37.614 33.86 38.4874 33.86H40.5874V41H39.5074V38.1H38.2374ZM38.5174 34.77C38.1774 34.77 37.8874 34.81 37.6474 34.89C37.414 34.97 37.234 35.0967 37.1074 35.27C36.9807 35.4367 36.9174 35.6567 36.9174 35.93C36.9174 36.3367 37.0507 36.6533 37.3174 36.88C37.5907 37.1 38.004 37.21 38.5574 37.21H39.5074V34.77H38.5174Z" fill="#C5C1AB" />
 								</svg>
 
-								<svg className="absolute -bottom-12 .3x1:h-9 .3x1:w-9 left-1/2 ability" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg className="absolute -bottom-12 .3x1:-bottom-7 .3x1:h-9 .3x1:w-9 left-1/2 ability" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="30" cy="30" r="29.5" fill="white" fill-opacity="0.3" stroke="#C5C1AB" />
 									<circle cx="30" cy="30" r="27.5" fill="white" fill-opacity="0.7" stroke="#C5C1AB" />
 									<path d="M7.74756 30.4751C7.46102 30.4462 7.236 30.3753 7.0725 30.2623C6.90304 30.1488 6.78763 30.0075 6.72628 29.8385C6.66552 29.6635 6.64508 29.4775 6.66494 29.2805C6.6848 29.0835 6.74166 28.9083 6.83552 28.7549C6.92938 28.6016 7.07066 28.4862 7.25939 28.4087C7.44274 28.3247 7.67769 28.2971 7.96424 28.326C8.24482 28.3543 8.46954 28.4282 8.6384 28.5478C8.80189 28.6607 8.9173 28.802 8.98462 28.9716C9.04598 29.1406 9.06673 29.3236 9.04686 29.5206C9.027 29.7176 8.96984 29.8958 8.87538 30.0551C8.77556 30.2079 8.63427 30.3233 8.45151 30.4014C8.26279 30.4788 8.02814 30.5034 7.74756 30.4751Z" fill="#337202" />
@@ -285,10 +315,11 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 									<path d="M30.1932 42.568V49H21.4692V42.568H22.5252V48.112H25.2972V42.568H26.3532V48.112H29.1372V42.568H30.1932ZM36.6905 43.456H34.5905V49H33.5465V43.456H31.4705V42.568H36.6905V43.456ZM37.2038 48.352C37.2038 48.056 37.2758 47.848 37.4198 47.728C37.5638 47.608 37.7358 47.548 37.9358 47.548C38.1438 47.548 38.3198 47.608 38.4638 47.728C38.6158 47.848 38.6918 48.056 38.6918 48.352C38.6918 48.64 38.6158 48.848 38.4638 48.976C38.3198 49.104 38.1438 49.168 37.9358 49.168C37.7358 49.168 37.5638 49.104 37.4198 48.976C37.2758 48.848 37.2038 48.64 37.2038 48.352Z" fill="#337202" />
 								</svg>
 
+
 							</div>
 							<div onMouseEnter={hoverSet} onMouseLeave={hoverSet} className="..5x2:hidden hoverCustVideo hover:bg-primary mt-28 cursor-pointer .3x1:h-9 .3x1:w-10  w-60px h-60px flex flex-col justify-center items-center">
 								<svg className=".3x1:h-4 .3x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill={`${buttonHover ? '#337202' : "#fff"} `} />
+									<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill={`${buttonHover ? "#fff" : '#337202'} `} />
 								</svg>
 								<p className="font-montserrat text-13px font-medium .3x1:text-xs .3x1:font-semibold text-primary">VIDEO</p>
 							</div>
@@ -300,51 +331,62 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 							</svg>
 							<p className="font-montserrat text-xs font-semibold text-primary ">VIDEO</p>
 						</div>
-
-						<div className="..5x2:block ..6x5:-right-3 hidden absolute right-1 top-6  z-10    ">
+						{likeMobile ? <svg className="..5x2:block ..6x5:-right-3 hidden absolute right-3 top-3  z-10    " onClick={setLikeMob} width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><g filter="url(#filter0_d_3587_1020586)"><path d="M29.0136 15C27.212 15 25.4828 15.8387 24.3542 17.1537C23.2256 15.8387 21.4965 15 19.6948 15C16.5057 15 14 17.4954 14 20.6948C14 24.5984 17.5204 27.7978 22.8529 32.6332L24.3542 34L25.8556 32.6332C31.188 27.7978 34.7084 24.5984 34.7084 20.6948C34.7084 17.4954 32.2027 15 29.0136 15Z" fill="#FF6363"></path></g><defs><filter id="filter0_d_3587_1020586" x="4" y="10" width="40.7084" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="5"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.388235 0 0 0 0 0.388235 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3587_1020586"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3587_1020586" result="shape"></feBlend></filter></defs></svg> : <div onClick={setLikeMob} className="..5x2:block ..6x5:-right-3 hidden absolute right-1 top-6  z-10    ">
 							<svg class="mx-4 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill="#EDEEEC"></path></svg>
+						</div>}
+						<div className="relative">
+							<Swiper ref={slider} onSwiper={e => setAllSl(e.imagesLoaded / 2)} onSlideChange={e => setCurrentSnap(e.snapIndex)} slidesPerView={1} className='sliderCenter  .1x1:!w-96 '  >
+
+								<SwiperSlide className="pl-16  .3x1:ml-0   .3x1:pl-0 .6x2:pl-7 ..5x2:pl-0 .1x1:!w-96 ..5x2:!w-auto ..6x04:ml-0   relative">
+
+
+
+									<div onClick={close} className="..5x2:h-96 adaptSlide ..5x1:w-80	hoverCustom	hoverI  ..5x1:h-80 ..5x2:w-96">
+										<Image src={one} width='608px' height='608px' />
+
+									</div>
+
+
+								</SwiperSlide>
+								<SwiperSlide className="pl-16  .3x1:ml-0   .3x1:pl-0 .6x2:pl-7 ..5x2:pl-0 .1x1:!w-96 ..5x2:!w-auto ..6x04:ml-0   relative">
+
+
+
+									<div onClick={close} className="..5x2:h-96 adaptSlide ..5x1:w-80	hoverCustom	hoverI  ..5x1:h-80 ..5x2:w-96">
+										<Image src={one} width='608px' height='608px' />
+
+									</div>
+
+
+								</SwiperSlide>
+								<SwiperSlide className="pl-16  .3x1:ml-0   .3x1:pl-0 .6x2:pl-7 ..5x2:pl-0 .1x1:!w-96 ..5x2:!w-auto ..6x04:ml-0   relative">
+
+
+
+									<div onClick={close} className="..5x2:h-96 adaptSlide ..5x1:w-80	hoverCustom	hoverI  ..5x1:h-80 ..5x2:w-96">
+										<Image src={one} width='608px' height='608px' />
+
+									</div>
+
+
+								</SwiperSlide>
+								<SwiperSlide className="pl-16  .3x1:ml-0   .3x1:pl-0 .6x2:pl-7 ..5x2:pl-0 .1x1:!w-96 ..5x2:!w-auto ..6x04:ml-0   relative">
+
+
+
+									<div onClick={close} className="..5x2:h-96 adaptSlide ..5x1:w-80	hoverCustom	hoverI  ..5x1:h-80 ..5x2:w-96">
+										<Image src={one} width='608px' height='608px' />
+
+									</div>
+
+
+								</SwiperSlide>
+							</Swiper>
+							<div className="z-20 hidden ..5x2:flex w-12 h-6 bg-white-80pe rounded-2xl absolute bottom-3 font-montserrat font-semibold text-13px justify-center items-center left-1/2 -translate-x-1/2">
+								{snap + 1} / {allSlides}
+							</div>
 						</div>
-						<Swiper ref={slider} slidesPerView={1} className='sliderCenter  .1x1:!w-96 '  >
 
-							<SwiperSlide className="pl-16  .3x1:ml-0   .3x1:pl-0 .6x2:pl-7 ..5x2:pl-0 .1x1:!w-96 ..5x2:!w-auto ..6x04:ml-0   relative">
-
-
-
-								<div onClick={close} className="..5x2:h-96 adaptSlide ..5x1:w-80	hoverCustom	hoverI  ..5x1:h-80 ..5x2:w-96">
-									<Image src={one} width='608px' height='608px' />
-
-								</div>
-
-
-							</SwiperSlide>
-							<SwiperSlide className="pl-16 ml-2 .3x1:ml-0  .3x1:pl-0   ..5x2:pl-0 .6x2:pl-7 .1x1:!w-96  ..5x2:!w-auto ..6x04:ml-0 .  relative">
-
-
-								<div onClick={close} className="..5x5:h-96 hoverCustom adaptSlide ..5x1:w-80 ..5x1:h-80 ..5x5:w-96">
-									<Image src={one} width='608px' height='608px' />
-								</div>
-
-
-							</SwiperSlide>
-							<SwiperSlide className="pl-16 ml-2 .3x1:ml-0  .3x1:pl-0   ..5x2:pl-0 .6x2:pl-7 .1x1:!w-96  ..5x2:!w-auto ..6x04:ml-0 .  relative">
-
-
-								<div onClick={close} className="..5x5:h-96 hoverCustom adaptSlide ..5x1:w-80 ..5x1:h-80 ..5x5:w-96">
-									<Image src={one} width='608px' height='608px' />
-								</div>
-
-
-							</SwiperSlide>
-							<SwiperSlide className="pl-16 ml-2 .3x1:ml-0  .3x1:pl-0   ..5x2:pl-0 .6x2:pl-7 .1x1:!w-96  ..5x2:!w-auto ..6x04:ml-0 .  relative">
-
-
-								<div onClick={close} className="..5x5:h-96 hoverCustom adaptSlide ..5x1:w-80 ..5x1:h-80 ..5x5:w-96">
-									<Image src={one} width='608px' height='608px' />
-								</div>
-
-
-							</SwiperSlide>
-						</Swiper>
 						<button onClick={prevSlide} className='..5x2:hidden ..5x1:left-6 absolute .1x1:top-44  ..5x1:top-40 .3x1:left-16   transition-all rounded-2xl .3x1:top-52  left-86px     top-300px   z-10'>
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M16.5 17.725L10.7518 12L16.5 6.2625L14.7304 4.5L7.2 12L14.7304 19.5L16.5 17.725Z" fill={`black`} fillOpacity="0.7" />
@@ -358,7 +400,9 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 						</button>
 
 					</div>
-					<div className="..5x2:block -mt-2 z-10 hidden px-1">
+					<div className="..5x2:block pt-3 -mt-2 z-10 hidden relative px-1 bg-shadow">
+						<div className="absolute -left-3 top-0 bottom-0 w-3 bg-white">	</div>
+						<div className="absolute -right-3 top-0 bottom-0 w-3 bg-white">	</div>
 						<div>
 							<div className="flex items-center justify-between">
 								<div className="flex items-center">
@@ -391,18 +435,17 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 						</div>
 					</div>
-					<div className="mt-6 transformD ..5x1:w-64 ..5x2:mx-0 ..5x1:mx-4  w-full ..5x2:w-full ..5x2:!translate-x-0 .6x3:w-96  mr-12 .4x1:w-80 .2x10:mr-2 .1x1:mr-0">
+					<div className="pt-6 transformD bg-white ..5x1:w-64 ..5x2:mx-0 ..5x1:mx-4  w-full ..5x2:w-full ..5x2:!translate-x-0 .6x3:w-96  mr-12 .4x1:w-80 .2x10:mr-2 .1x1:mr-0">
 						<p className="font-montserrat font-medium text-xl mb-2 .1x1:mb-0.5 .5x1:text-sm ..7x1:text-sm">Забота о себе каждый день</p>
 						<p className="font-montserrat .6x3:w-full  text-black-70pe w-475px ..5x1:w-auto .6x3:text-13px .1x1:text-gray-quick-silver ..7x11:h-9 textdots leading-140%">Маска отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения, придает коже ухоженный вид. Насыщает питательными элементами, удерживает влагу внутри, отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения</p>
 						<button onClick={scrollDescription} className="..6x04:hidden font-montserrat font-medium text-13px text-primary  mb-5 .1x1:mb-1">Всё о товаре</button>
 						<button onClick={scrollDescriptionPhone} className="..6x04:block hidden font-montserrat font-medium text-13px border-b border-dashed border-primary text-primary  mb-5 mt-1 .1x1:mb-1">Подробнее о товаре</button>
-
-						<p onClick={copy} className="cursor-pointer .3x1:text-13px ..6x04:hidden .1x1:mb-1.5 font-montserrat mb-3 relative text-gray-quick-silver flex  items-center ">Артикул: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px flex items-center ">30115/01 <svg className=" ml-6px" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<p onMouseEnter={setHov} onMouseLeave={setHov} onClick={copy} className="cursor-pointer .3x1:text-13px ..6x04:hidden .1x1:mb-1.5 font-montserrat mb-3 relative text-gray-quick-silver flex  items-center ">Артикул: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px flex items-center ">30115/01 <svg className=" ml-6px" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<mask id="mask0_2812_712213" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
 								<path fillRule="evenodd" clipRule="evenodd" d="M7.35034 0.75H15.6004C16.551 0.75 17.2504 1.44937 17.2504 2.40001V10.65C17.2504 11.6007 16.551 12.3001 15.6004 12.3001H12.3001V15.6C12.3001 16.5506 11.6007 17.25 10.65 17.25H2.40001C1.44937 17.25 0.75 16.5506 0.75 15.6V7.34992C0.75 6.39929 1.44937 5.69992 2.40001 5.69992H5.70033V2.40001C5.70033 1.44937 6.3997 0.75 7.35034 0.75ZM5.70033 7.34992H2.40001V15.6H10.65V12.3001H7.35034C6.3997 12.3001 5.70033 11.6007 5.70033 10.65V7.34992ZM7.34955 2.39989V10.6499H15.5996V2.39989H7.34955Z" fill="white" />
 							</mask>
 							<g mask="url(#mask0_2812_712213)">
-								<rect x="-0.900391" y="-0.899902" width="19.8001" height="19.8001" fill="#DBDCDA" />
+								<rect x="-0.900391" y="-0.899902" width="19.8001" height="19.8001" fill={hoverCopy ? '#337202' : "#DBDCDA"} />
 							</g>
 						</svg></span>
 							{showCopy && <div className="absolute h-42px right-120px bg-black-70pe w-36 flex items-center justify-center">
@@ -435,13 +478,13 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 							</div>
 
 						</div>
-						<p className="font-montserrat mb-2 .1x1:text-13px .1x1:mb-1 text-gray-quick-silver flex  items-center ">Тон: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px ">06</span></p>
+						<p className="font-montserrat mb-2 .1x1:text-13px .1x1:mb-1 text-gray-quick-silver flex  items-center ">Тон: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px ..5x2:">06</span></p>
 
 						<div className="..6x5:overflow-x-scroll ..6x5:whitespace-nowrap  ">
 
 
 							<div className="flex  flex-wrap w-full ..6x04:flex-nowrap  ..6x04:w-475px">
-								<div className="h-11 .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0">
 										<Image src={oneTon} />
 									</div>
@@ -453,7 +496,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 										</div>
 									</div>
 								</div>
-								<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={twoTon} /></div>
 
 									<div className="itemTonHover transition-all flex justify-center items-center !hidden opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -463,7 +506,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 										</div>
 									</div>
 								</div>
-								<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={treeTon} /></div>
 
 									<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -473,7 +516,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 										</div>
 									</div>
 								</div>
-								<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={fourTon} /></div>
 
 									<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -483,7 +526,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 										</div>
 									</div>
 								</div>
-								<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={fiveTon} /></div>
 
 									<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -493,7 +536,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 										</div>
 									</div>
 								</div>
-								<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-black mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-black mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={sixTon} /> </div>
 
 									<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -503,7 +546,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 										</div>
 									</div>
 								</div>
-								<div className="h-11 .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center   mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center   mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={sevenTon} /> </div>
 
 									<hr className="px w-14 text-gray absolute rotSearchHover" />
@@ -516,7 +559,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 									</div>
 								</div>
-								<div className="h-11 mr-0 .2x10:mr-2 .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center ">
+								<div className="h-11 hover:bg-gray-light transition-all mr-0 .2x10:mr-2 .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center ">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={eightTon} /> </div>
 
 
@@ -530,7 +573,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 
 									</div>
 								</div>
-								<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={nineTon} /> </div>
 
 									<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -540,7 +583,7 @@ const DescriptionItemDetail = ({ description, close, isShow }) => {
 										</div>
 									</div>
 								</div>
-								<div className="h-11 .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+								<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
 									<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={tenTon} /></div>
 
 									<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
