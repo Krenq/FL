@@ -152,7 +152,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 			window.scrollTo({ top: 1200 })
 
 		}
-
+	console.log(snap === 0)
 
 
 	return (
@@ -276,7 +276,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 			<div className="mt-6 flex ..5x2:flex-col ..5x2:w-full ">
 				<div className="pl-72px .3x1:pl-12 .3x1:mr-5 ..5x2:pl-0 ..5x1:mr-0 mr-50px relative">
 					<div className="absolute   cursor-pointer   ..6x04:top-2 ..5x2:flex-col left-0 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
-						<div onClick={() => slider.current.swiper.slideTo(0)} className="border ..5x2:hidden  .3x1:h-9 .3x1:w-9  mb-2 border-black-70pe mr-5 w-60px h-60px">
+						<div onClick={() => slider.current.swiper.slideTo(0)} className={`border ..5x2:hidden  .3x1:h-9 .3x1:w-9  mb-2 border-white mr-5 w-60px h-60px ${snap === 0 ? '!border-black-70pe' : ''}`}>
 							<Image src={oneSmall} />
 						</div>
 						<div className=" .3x1:h-9   .3x1:w-9  h-60px flex flex-col justify-end">
@@ -286,15 +286,15 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 						<div id="one" onClick={(e) => {
 
 							if (e.target.src === 'http://localhost:6006/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDetailCardSmallTwo.229bdfcb.jpg&w=128&q=75' && e.target.id !== '2' && e.target.id !== '3') slider.current.swiper.slideTo(1)
-						}} className=" .3x1:h-9 relative cursor-pointer .3x1:w-9 ..5x2:hidden mr-5  w-60px h-60px mb-2">
-							<div className="transition-all hover:border-black border border-white h-60px .3x1:h-9 ">
+						}} className={` .3x1:h-9 relative cursor-pointer border border-white .3x1:w-9   ..5x2:hidden mr-5  w-60px h-60px mb-2`}>
+							<div className={`transition-all hover:border-black border border-white h-60px .3x1:h-9 ${snap === 1 ? '!border-black-70pe' : ''}`}>
 								<Image src={twoSmall} />
 							</div>
 
-							<div onClick={() => slider.current.swiper.slideTo(2)} id='2' className="transition-all hover:border-black border border-white cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
+							<div onClick={() => slider.current.swiper.slideTo(2)} id='2' className={`transition-all hover:border-black border ${snap === 2 ? '!border-black-70pe' : ''} border-white cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end`}>
 								<Image src={oneMini} />
 							</div>
-							<div onClick={() => slider.current.swiper.slideTo(3)} id='2' className="transition-all hover:border-black border border-white cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end">
+							<div onClick={() => slider.current.swiper.slideTo(3)} id='2' className={`transition-all hover:border-black border ${snap === 3 ? '!border-black-70pe' : ''} border-white cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end`}>
 								<Image src={oneMini} />
 							</div>
 						</div>

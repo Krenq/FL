@@ -68,7 +68,7 @@
 }
 
 .customDots .swiper-pagination {
-	display: block !important;
+	display: hidden !important;
 	left: 50% !important;
 	top: 100px !important;
 	transform: translateX(-50%) !important;
