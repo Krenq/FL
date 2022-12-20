@@ -3,7 +3,7 @@ import { useState } from "react";
 const NewsNext = ({ onClick, kolichestvo, isDetail }) => {
 	let styleR = {
 		right: isDetail ? -25 : 0,
-		top: '60%',
+		top: !isDetail ? '60%' : '50%',
 		zIndex: 20,
 		borderRadius: 25,
 	};

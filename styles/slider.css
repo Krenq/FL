@@ -3557,6 +3557,10 @@
 
 }
 
+.letter-spacing-1px {
+	letter-spacing: 1px;
+}
+
 @media (max-width: 530px) {
 	.mobSl .slick-slide {
 		margin-right: 0px;
@@ -3570,4 +3574,8 @@
 
 .bgcard {
 	background: url('../images/templates/bg-card.jpg') 0 0 no-repeat;
+}
+
+.w-150 {
+	width: 144%;
 }

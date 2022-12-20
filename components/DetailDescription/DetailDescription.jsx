@@ -6,7 +6,15 @@ import NewsNext from "../News/NewsNext"
 import oneNew from '../../images/templates/1news.jpg';
 
 import useWindowSize from "../utils/useWindowSize";
+import prodOne from '../../images/templates/prodOne.jpg'
+import prodTwo from '../../images/templates/prodTwo.jpg'
+import prodTree from '../../images/templates/prodTree.jpg'
+import prodFour from '../../images/templates/prodFour.jpg'
+import prodFive from '../../images/templates/prodFive.jpg'
+import prodSix from '../../images/templates/prodSix.jpg'
 
+import imgMaterTwo from '../../images/templates/imgMaterTwo.jpg'
+import imgMaterTree from '../../images/templates/imgMaterTree.jpg'
 import { useState } from "react"
 import mobileFilter from '../../images/templates/mobileFilter.jpg'
 import { Swiper, SwiperSlide } from "swiper/react"
@@ -1113,8 +1121,11 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 								<p onClick={() => setFilterSortLocal('default')} className={`mr-3 font-montserrat pb-0.5 font-medium cursor-pointer hover:text-primary hover:border-b-primary   border-b  text-black-70pe  border-dotted ${filterSort.default ? '!text-primary !border-b-primary' : ""}`}>По умолчанию</p>
 								<p onClick={() => setFilterSortLocal('notP')} className={`font-montserrat font-medium pb-0.5 cursor-pointer hover:text-primary hover:border-b-primary border-b border-gray-quick-silver border-dotted text-black-70pe ${filterSort.notP ? '!text-primary !border-b-primary' : ""}`}>Без подписей</p>
 							</div>
+							<div className="flex flex-wrap items-center">
+								<MaterialsVideoItem selectedAll={selectedAll} setVideo={setVideo} />
 
-							<MaterialsVideoItem selectedAll={selectedAll} setVideo={setVideo} />
+							</div>
+
 
 						</>}
 						{currentFilter.service && <>
@@ -1167,7 +1178,17 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 								<p onClick={() => setFilterSortLocalPr('rolls')} className={`font-montserrat font-medium pb-0.5 cursor-pointer border-b mr-3 border-gray-quick-silver border-dotted text-black-70pe ${filterSortProduct.rolls ? '!border-b-primary !text-primary ' : ""}`}>Ролл апы</p>
 								<p onClick={() => setFilterSortLocalPr('pdf')} className={`font-montserrat font-medium pb-0.5 cursor-pointer border-b border-gray-quick-silver border-dotted text-black-70pe ${filterSortProduct.pdf ? '!border-b-primary !text-primary ' : ""}`}>PDF</p>
 							</div>
-							<MaterialsTextProdItem selectedAll={selectedAll} />
+							<div className="flex flex-wrap items-center">
+								<MaterialsTextProdItem selectedAll={selectedAll} />
+								<MaterialsTextProdItem img={prodOne} selectedAll={selectedAll} />
+								<MaterialsTextProdItem img={prodTwo} selectedAll={selectedAll} />
+								<MaterialsTextProdItem img={prodFive} selectedAll={selectedAll} />
+								<MaterialsTextProdItem img={prodFour} selectedAll={selectedAll} />
+								<MaterialsTextProdItem img={prodSix} selectedAll={selectedAll} />
+								<MaterialsTextProdItem img={prodTree} selectedAll={selectedAll} />
+
+							</div>
+
 						</>}
 						{currentFilter.active && <>
 							<div className=".5x1:w-1100px .4x2:w-910px w-1200 .2x1.0:w-800px .1x01:w-727px ..5x1:w-664px .1x1:ml-4 ..5x01:w-600px">
@@ -1178,7 +1199,20 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 									</div>
 									<Slider {...settings} className="pt-13px ..6x6:pt-44 newsSlider ..7x001:px-3 ">
 										<div className=" relative pr-5px  ..6x04:p-1.5 transition-all  newsCardHover  cursor-pointer hover:scale-95">
-											<NewsDate title={'ВЧЕРА'} />
+											<div>
+
+
+											</div>
+											<NewsDate title={'ВЧЕРА'} svg={<svg className="mr-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_3337_743612)">
+													<path d="M17.6038 8.6014C17.6054 8.6014 17.6065 8.6014 17.6081 8.6014C17.7177 8.6014 17.8223 8.55542 17.8965 8.47487C17.972 8.39313 18.0093 8.2835 17.9995 8.17269C17.605 3.83333 14.1694 0.396575 9.82965 0.00126633C9.71962 -0.0073786 9.60881 0.02838 9.52707 0.10422C9.44534 0.179666 9.39976 0.286156 9.40094 0.397361C9.46931 6.16431 10.2301 8.52084 17.6038 8.6014ZM17.6038 9.3983C10.2301 9.47886 9.4697 11.8354 9.40133 17.6023C9.40015 17.7135 9.44573 17.82 9.52747 17.8955C9.60056 17.9627 9.69604 18 9.79428 18C9.80607 18 9.81825 17.9996 9.83004 17.9984C14.1698 17.6031 17.6054 14.1668 17.9995 9.82701C18.0093 9.7162 17.9724 9.60656 17.8965 9.52483C17.8207 9.4431 17.715 9.40262 17.6038 9.3983ZM8.14506 0.00323113C3.81907 0.409936 0.394496 3.8459 0.00193826 8.17347C-0.00788552 8.28428 0.0290519 8.39392 0.104892 8.47565C0.179159 8.55621 0.284077 8.60179 0.393318 8.60179C0.394889 8.60179 0.396461 8.60179 0.398033 8.60179C7.7474 8.5173 8.50619 6.16195 8.57535 0.398933C8.57653 0.287728 8.53055 0.180845 8.44882 0.105398C8.3663 0.0299518 8.25588 -0.0069856 8.14506 0.00323113ZM0.39764 9.39791C0.275432 9.38415 0.179552 9.44231 0.104499 9.52404C0.029052 9.60578 -0.00827844 9.71541 0.00154534 9.82622C0.394104 14.1538 3.81907 17.5898 8.14506 17.9965C8.15725 17.9976 8.16982 17.998 8.182 17.998C8.28024 17.998 8.37533 17.9611 8.44842 17.8939C8.53016 17.8185 8.57613 17.7116 8.57495 17.6004C8.50579 11.8377 7.7474 9.48239 0.39764 9.39791Z" fill="black" />
+												</g>
+												<defs>
+													<clipPath id="clip0_3337_743612">
+														<rect width="18" height="18" fill="white" />
+													</clipPath>
+												</defs>
+											</svg>} />
 											<div>
 												<Image
 													className="object-cover"
@@ -1188,96 +1222,119 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 													alt="newsImg"
 												/>
 											</div>
-											<div className="  -mt-4 relative">
-												<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-light3">
-													<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
-													<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
-												</div>
-												<p className="text-center titleNews leading-120% font-montserrat ..5x2:hidden px-2 text-lg font-bold">
+											<div className="  mt-4 relative">
+
+												<p className="text-center titleNews leading-120% font-montserrat text-18px ..5x2:hidden    text-lg font-bold">
 													Возвращение легенды: косметический <br /> спонж для умывания
 												</p>
 												<p className="hidden titleNews ..5x2:block font-montserrat ..6x4:text-sm text-center px-3 text-lg font-medium">
 													Возвращение легенды: косметический спонж для умывания
 												</p>
-												<p className="text-center  mt-2 px-5 leading-140% ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
+												<p className="text-center  mt-2 px-5 leading-140% ..6x3:px-4 mb-5 news_text text-sm font-montserrat ..6x4:text-11px">
 													Все помнят тот самый косметический спонж, который под струей воды
 													превращался из палочки в круглый диск Все помнят тот самый
 													косметический спонж, который под струей воды превращался
 												</p>
-												<button className="relative ability left-1/2 bottom-5 font-semibold  text-13px font-montserrat text-black">
+												<button className="relative overflow-hidden px-1 ability left-1/2 bottom-5 font-semibold  text-13px font-montserrat text-black">
 													Читать
-													<div className="bg-primary lineHover absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
+													<div className="bg-primary lineHover absolute bottom-0.5 -left-1 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
 												</button>
 											</div>
 										</div>
 										<div className=" relative pr-5px  ..6x04:p-1.5 transition-all  newsCardHover  cursor-pointer hover:scale-95">
-											<NewsDate title={'ВЧЕРА'} />
+											<NewsDate title={'APR 30, 2022'} svg={<svg className="mr-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_3337_745835)">
+													<path d="M0 8.71875C0 4.60856 0 2.55375 1.27688 1.27688C2.55375 0 4.60856 0 8.71875 0H9.28125C13.3914 0 15.4462 0 16.7231 1.27688C18 2.55375 18 4.60856 18 8.71875V9.28125C18 13.3914 18 15.4462 16.7231 16.7231C15.4462 18 13.3914 18 9.28125 18H8.71875C4.60856 18 2.55375 18 1.27688 16.7231C0 15.4462 0 13.3914 0 9.28125V8.71875Z" fill="black" />
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M14.8489 6.12C14.9344 5.83481 14.8489 5.625 14.4411 5.625H13.0933C12.7502 5.625 12.5927 5.80613 12.5072 6.00581C12.5072 6.00581 11.8215 7.67588 10.8506 8.76038C10.5368 9.07425 10.3939 9.17437 10.2229 9.17437C10.1368 9.17437 10.0131 9.07425 10.0131 8.78906V6.12C10.0131 5.77744 9.9135 5.625 9.62775 5.625H7.50994C7.29619 5.625 7.16681 5.78419 7.16681 5.93438C7.16681 6.2595 7.65281 6.33375 7.70288 7.24725V9.23119C7.70288 9.666 7.62413 9.74475 7.45256 9.74475C6.99581 9.74475 5.88431 8.06794 5.22506 6.14869C5.09625 5.77575 4.96688 5.625 4.62263 5.625H3.27431C2.88956 5.625 2.8125 5.80613 2.8125 6.00581C2.8125 6.363 3.26925 8.13206 4.93987 10.4726C6.05362 12.0712 7.623 12.9375 9.05062 12.9375C9.90675 12.9375 10.0125 12.7451 10.0125 12.4138V11.205C10.0125 10.8203 10.0941 10.7438 10.3652 10.7438C10.5654 10.7438 10.908 10.8433 11.7073 11.6139C12.6214 12.528 12.7721 12.9375 13.2863 12.9375H14.634C15.0193 12.9375 15.2117 12.7451 15.1009 12.3654C14.9794 11.9869 14.5429 11.4373 13.9641 10.7865C13.6496 10.4153 13.1788 10.0159 13.0359 9.81619C12.8362 9.55969 12.8931 9.44494 13.0359 9.21712C13.0359 9.21712 14.6779 6.90525 14.8494 6.12H14.8489Z" fill="white" />
+												</g>
+												<defs>
+													<clipPath id="clip0_3337_745835">
+														<rect width="18" height="18" fill="white" />
+													</clipPath>
+												</defs>
+											</svg>
+											} />
 											<div>
 												<Image
 													className="object-cover"
-													width={474}
-													height={330}
-													src={oneNew}
+
+													src={imgMaterTwo}
 													alt="newsImg"
 												/>
 											</div>
-											<div className="  -mt-4 relative">
-												<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-light3">
-													<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
-													<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
-												</div>
+											<div className="  mt-4 relative">
+
 												<p className="text-center titleNews leading-120% font-montserrat ..5x2:hidden px-2 text-lg font-bold">
 													Возвращение легенды: косметический <br /> спонж для умывания
 												</p>
 												<p className="hidden titleNews ..5x2:block font-montserrat ..6x4:text-sm text-center px-3 text-lg font-medium">
 													Возвращение легенды: косметический спонж для умывания
 												</p>
-												<p className="text-center  mt-2 px-5 leading-140% ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
+												<p className="text-center  mt-2 px-5 leading-140% ..6x3:px-4 mb-5  text-sm news_text font-montserrat ..6x4:text-11px">
 													Все помнят тот самый косметический спонж, который под струей воды
 													превращался из палочки в круглый диск Все помнят тот самый
 													косметический спонж, который под струей воды превращался
 												</p>
-												<button className="relative ability left-1/2 bottom-5 font-semibold  text-13px font-montserrat text-black">
+												<button className="relative overflow-hidden px-1 ability left-1/2 bottom-5 font-semibold  text-13px font-montserrat text-black">
 													Читать
-													<div className="bg-primary lineHover absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
+													<div className="bg-primary lineHover absolute bottom-0.5 -left-1 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
 												</button>
 											</div>
 										</div>
 										<div className=" relative pr-5px  ..6x04:p-1.5 transition-all  newsCardHover  cursor-pointer hover:scale-95">
-											<NewsDate title={'ВЧЕРА'} />
+											<NewsDate title={'APR 30, 2022'} svg={<svg className="mr-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_3337_743612)">
+													<path d="M17.6038 8.6014C17.6054 8.6014 17.6065 8.6014 17.6081 8.6014C17.7177 8.6014 17.8223 8.55542 17.8965 8.47487C17.972 8.39313 18.0093 8.2835 17.9995 8.17269C17.605 3.83333 14.1694 0.396575 9.82965 0.00126633C9.71962 -0.0073786 9.60881 0.02838 9.52707 0.10422C9.44534 0.179666 9.39976 0.286156 9.40094 0.397361C9.46931 6.16431 10.2301 8.52084 17.6038 8.6014ZM17.6038 9.3983C10.2301 9.47886 9.4697 11.8354 9.40133 17.6023C9.40015 17.7135 9.44573 17.82 9.52747 17.8955C9.60056 17.9627 9.69604 18 9.79428 18C9.80607 18 9.81825 17.9996 9.83004 17.9984C14.1698 17.6031 17.6054 14.1668 17.9995 9.82701C18.0093 9.7162 17.9724 9.60656 17.8965 9.52483C17.8207 9.4431 17.715 9.40262 17.6038 9.3983ZM8.14506 0.00323113C3.81907 0.409936 0.394496 3.8459 0.00193826 8.17347C-0.00788552 8.28428 0.0290519 8.39392 0.104892 8.47565C0.179159 8.55621 0.284077 8.60179 0.393318 8.60179C0.394889 8.60179 0.396461 8.60179 0.398033 8.60179C7.7474 8.5173 8.50619 6.16195 8.57535 0.398933C8.57653 0.287728 8.53055 0.180845 8.44882 0.105398C8.3663 0.0299518 8.25588 -0.0069856 8.14506 0.00323113ZM0.39764 9.39791C0.275432 9.38415 0.179552 9.44231 0.104499 9.52404C0.029052 9.60578 -0.00827844 9.71541 0.00154534 9.82622C0.394104 14.1538 3.81907 17.5898 8.14506 17.9965C8.15725 17.9976 8.16982 17.998 8.182 17.998C8.28024 17.998 8.37533 17.9611 8.44842 17.8939C8.53016 17.8185 8.57613 17.7116 8.57495 17.6004C8.50579 11.8377 7.7474 9.48239 0.39764 9.39791Z" fill="black" />
+												</g>
+												<defs>
+													<clipPath id="clip0_3337_743612">
+														<rect width="18" height="18" fill="white" />
+													</clipPath>
+												</defs>
+											</svg>} />
 											<div>
 												<Image
 													className="object-cover"
 													width={474}
 													height={330}
-													src={oneNew}
+													src={imgMaterTree}
 													alt="newsImg"
 												/>
 											</div>
-											<div className="  -mt-4 relative">
-												<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-light3">
-													<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
-													<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
-												</div>
+											<div className="  mt-4 relative">
+
 												<p className="text-center titleNews leading-120% font-montserrat ..5x2:hidden px-2 text-lg font-bold">
 													Возвращение легенды: косметический <br /> спонж для умывания
 												</p>
 												<p className="hidden titleNews ..5x2:block font-montserrat ..6x4:text-sm text-center px-3 text-lg font-medium">
 													Возвращение легенды: косметический спонж для умывания
 												</p>
-												<p className="text-center  mt-2 px-5 leading-140% ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
+												<p className="text-center  mt-2 px-5 leading-140% ..6x3:px-4 mb-5  text-sm news_text font-montserrat ..6x4:text-11px">
 													Все помнят тот самый косметический спонж, который под струей воды
 													превращался из палочки в круглый диск Все помнят тот самый
 													косметический спонж, который под струей воды превращался
 												</p>
-												<button className="relative ability left-1/2 bottom-5 font-semibold  text-13px font-montserrat text-black">
+												<button className="relative overflow-hidden px-1 ability left-1/2 bottom-5 font-semibold  text-13px font-montserrat text-black">
 													Читать
-													<div className="bg-primary lineHover absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
+													<div className="bg-primary lineHover absolute bottom-0.5 -left-1 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
 												</button>
 											</div>
 										</div>
-										<div className=" relative pr-5px  ..6x04:p-1.5 transition-all   newsCardHover cursor-pointer hover:scale-95">
-											<NewsDate title={'ВЧЕРА'} />
+										<div className=" relative pr-5px  ..6x04:p-1.5 transition-all  newsCardHover  cursor-pointer hover:scale-95">
+											<div>
+
+
+											</div>
+											<NewsDate title={'ВЧЕРА'} svg={<svg className="mr-1" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g clip-path="url(#clip0_3337_743612)">
+													<path d="M17.6038 8.6014C17.6054 8.6014 17.6065 8.6014 17.6081 8.6014C17.7177 8.6014 17.8223 8.55542 17.8965 8.47487C17.972 8.39313 18.0093 8.2835 17.9995 8.17269C17.605 3.83333 14.1694 0.396575 9.82965 0.00126633C9.71962 -0.0073786 9.60881 0.02838 9.52707 0.10422C9.44534 0.179666 9.39976 0.286156 9.40094 0.397361C9.46931 6.16431 10.2301 8.52084 17.6038 8.6014ZM17.6038 9.3983C10.2301 9.47886 9.4697 11.8354 9.40133 17.6023C9.40015 17.7135 9.44573 17.82 9.52747 17.8955C9.60056 17.9627 9.69604 18 9.79428 18C9.80607 18 9.81825 17.9996 9.83004 17.9984C14.1698 17.6031 17.6054 14.1668 17.9995 9.82701C18.0093 9.7162 17.9724 9.60656 17.8965 9.52483C17.8207 9.4431 17.715 9.40262 17.6038 9.3983ZM8.14506 0.00323113C3.81907 0.409936 0.394496 3.8459 0.00193826 8.17347C-0.00788552 8.28428 0.0290519 8.39392 0.104892 8.47565C0.179159 8.55621 0.284077 8.60179 0.393318 8.60179C0.394889 8.60179 0.396461 8.60179 0.398033 8.60179C7.7474 8.5173 8.50619 6.16195 8.57535 0.398933C8.57653 0.287728 8.53055 0.180845 8.44882 0.105398C8.3663 0.0299518 8.25588 -0.0069856 8.14506 0.00323113ZM0.39764 9.39791C0.275432 9.38415 0.179552 9.44231 0.104499 9.52404C0.029052 9.60578 -0.00827844 9.71541 0.00154534 9.82622C0.394104 14.1538 3.81907 17.5898 8.14506 17.9965C8.15725 17.9976 8.16982 17.998 8.182 17.998C8.28024 17.998 8.37533 17.9611 8.44842 17.8939C8.53016 17.8185 8.57613 17.7116 8.57495 17.6004C8.50579 11.8377 7.7474 9.48239 0.39764 9.39791Z" fill="black" />
+												</g>
+												<defs>
+													<clipPath id="clip0_3337_743612">
+														<rect width="18" height="18" fill="white" />
+													</clipPath>
+												</defs>
+											</svg>} />
 											<div>
 												<Image
 													className="object-cover"
@@ -1287,25 +1344,22 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 													alt="newsImg"
 												/>
 											</div>
-											<div className="  -mt-4 relative">
-												<div className="flex justify-center ..6x03:gap-2 gap-3 ..6x03:text-xs font-montserrat font-normal leading-140% text-gray-light3">
-													<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Онлайн-каталог</p>
-													<p className="text-center mt-6 underline mb-2 font-montserrat ..6x4:text-13px">Промоушен</p>
-												</div>
-												<p className="text-center titleNews leading-120% font-montserrat ..5x2:hidden px-2 text-lg font-bold">
+											<div className="  mt-4 relative">
+
+												<p className="text-center titleNews leading-120% font-montserrat text-18px ..5x2:hidden    text-lg font-bold">
 													Возвращение легенды: косметический <br /> спонж для умывания
 												</p>
 												<p className="hidden titleNews ..5x2:block font-montserrat ..6x4:text-sm text-center px-3 text-lg font-medium">
 													Возвращение легенды: косметический спонж для умывания
 												</p>
-												<p className="text-center  mt-2 px-5 leading-140% ..6x3:px-4 mb-5 news_text font-montserrat ..6x4:text-11px">
+												<p className="text-center  mt-2 px-5 leading-140% ..6x3:px-4 mb-5 news_text text-sm font-montserrat ..6x4:text-11px">
 													Все помнят тот самый косметический спонж, который под струей воды
 													превращался из палочки в круглый диск Все помнят тот самый
 													косметический спонж, который под струей воды превращался
 												</p>
-												<button className="relative ability left-1/2 bottom-5 font-semibold  text-13px font-montserrat text-black">
+												<button className="relative overflow-hidden px-1 ability left-1/2 bottom-5 font-semibold  text-13px font-montserrat text-black">
 													Читать
-													<div className="bg-primary lineHover absolute bottom-0.5 -left-1.5 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
+													<div className="bg-primary lineHover absolute bottom-0.5 -left-1 opacity-40 h-9px w-14 ..6x4:ml-0  ml-0.5 ..5x2:ml-1" />
 												</button>
 											</div>
 										</div>

@@ -28,6 +28,7 @@ import SeeLastDetails from "../components/SeeLastDetails/SeeLastDetails";
 import LeftComment from "../components/LeftComment/LeftComment";
 import { useRef } from "react";
 import ViewPhoto from "../components/ViewPhoto/ViewPhoto";
+import BasketModal from "../components/BasketModal/BasketModal";
 
 const DetailsCard = () => {
 	const [showSearch, setShowSearch] = useState(false)
@@ -35,7 +36,8 @@ const DetailsCard = () => {
 		[view, setShowView] = useState(false),
 		[isFullView, setIsFullView] = useState(false),
 		[isFullViewVideo, setIsFullViewVideo] = useState(false),
-		description = useRef(null)
+		description = useRef(null),
+		[showInBask, setShowInBask] = useState(false)
 
 	const setShowL = () => setShow(!show),
 		close = () => {
@@ -50,6 +52,9 @@ const DetailsCard = () => {
 		setVideo = () => {
 			setIsFullViewVideo(!isFullViewVideo)
 			setShowView(!view)
+		},
+		setShowIn = () => {
+			setShowInBask(!showInBask)
 		}
 
 	return (
@@ -58,7 +63,7 @@ const DetailsCard = () => {
 			<section className="container-base relative  ">
 				<SearchResult isShow={showSearch} />
 				<SectionNavDetail />
-				<DescriptionItemDetail close={close} isShow={view} description={description} />
+				<DescriptionItemDetail setShowIn={setShowIn} close={close} isShow={view} description={description} />
 				<ActDescription />
 				<DetailComments setVideo={setVideo} refF={description} close={setF} setShowL={setShowL} />
 				<SeeLastDetails />
@@ -66,6 +71,7 @@ const DetailsCard = () => {
 			</section>
 			<ViewPhoto isFullViewVideo={isFullViewVideo} isFullView={isFullView} close={close} isShow={view} />
 			<LeftComment show={show} setShow={setShowL} />
+			<BasketModal show={showInBask} setShow={setShowIn} />
 			<Footer />
 			<PhoneNavigation />
 		</>

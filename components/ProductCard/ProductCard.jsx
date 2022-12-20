@@ -54,7 +54,7 @@ export default function ProductCard({ obj }) {
 			onClick={() => setUnderL(true)}
 			// className={`card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
 			className={`${underL ? 'underL' : ''
-				} card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
+				} card_prod_con relative w-278px h-428px ${obj.isMiniProduct ? 'w-218px h-317px' : ''} border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
 		>
 			{obj.packS && (
 				<div className="absolute top-0 left-0 z-10">
@@ -133,7 +133,7 @@ export default function ProductCard({ obj }) {
 				<>
 					<div
 						className={`${obj.packS ? 'top-100px' : ' top-16'
-							} absolute z-10 left-1.5 w-60px h-60px flex items-center justify-center border-3.5px border-double border-label-green bg-white rounded-56px ..5x2:hidden`}
+							} absolute z-10 left-1.5 w-60px h-60px ${obj.isMiniProduct ? '!top-2' : ""} flex items-center justify-center border-3.5px border-double border-label-green bg-white rounded-56px ..5x2:hidden`}
 					>
 						<p className=" text-center text-label-green font-noto-sans font-medium text-10px uppercase tracking-1px leading-120%">
 							ТОВАР ДНЯ
@@ -445,7 +445,7 @@ export default function ProductCard({ obj }) {
 
 			{obj.img.length > 1 ? (
 				<Swiper
-					className="product-card-photo-slider"
+					className={`product-card-photo-slider ${obj.isMiniProduct ? 'customDots  ' : ""}`}
 					modules={[Pagination]}
 					pagination={{ clickable: true }}
 					allowTouchMove={true}
@@ -460,14 +460,15 @@ export default function ProductCard({ obj }) {
 
 						if (i === 0) {
 							styles =
-								'mt-5 mx-29px !w-218px !h-218px ..5x2:!w-130px ..5x2:!h-130px ..5x2:mx-22px';
+								`mt-5 mx-29px !w-218px !h-218px ..5x2:!w-130px ..5x2:!h-130px ..5x2:mx-22px ${obj.isMiniProduct ? '!h-146px !mt-3 !w-146px  ' : ""}`;
 						} else {
-							styles = ' !w-276px !h-237px ..5x2:!w-176px ..5x2:!h-150px';
+							styles = `mt-5 mx-29px !w-218px !h-218px ..5x2:!w-130px ..5x2:!h-130px ..5x2:mx-22px ${obj.isMiniProduct ? '!h-146px !mt-3 !w-146px  ' : ""}`;
+							;
 						}
 
 						return (
 							<SwiperSlide>
-								<div className={` ${styles}`}>
+								<div className={` ${styles}  `}>
 									<Image src={el} quality={100} />
 								</div>
 							</SwiperSlide>
@@ -480,7 +481,7 @@ export default function ProductCard({ obj }) {
 				</div>
 			)}
 
-			<div className="absolute bottom-164px flex flex-row items-center h-26px w-full px-4 ..5x2:bottom-129px">
+			<div className={`absolute bottom-164px flex flex-row z-10 items-center h-26px w-full px-4 ..5x2:bottom-129px ${obj.isMiniProduct ? '!bottom-135px' : ""}`}>
 				{obj.iText && (
 					<>
 						{size.width > 1000 ? (
@@ -591,33 +592,33 @@ export default function ProductCard({ obj }) {
 					<div
 						onClick={() => currentColorHandler('1')}
 						className={` bg-label-pink cursor-pointer ${currentColor === '1'
-								? 'w-10px h-10px border border-gray-border'
-								: 'w-6px h-6px'
+							? 'w-10px h-10px border border-gray-border'
+							: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 					<div
 						onClick={() => currentColorHandler('2')}
 						className={` bg-label-orange cursor-pointer ${currentColor === '2'
-								? 'w-10px h-10px border border-gray-border'
-								: 'w-6px h-6px'
+							? 'w-10px h-10px border border-gray-border'
+							: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 					<div
 						onClick={() => currentColorHandler('3')}
 						className={` bg-label-green cursor-pointer ${currentColor === '3'
-								? 'w-10px h-10px border border-gray-border '
-								: 'w-6px h-6px'
+							? 'w-10px h-10px border border-gray-border '
+							: 'w-6px h-6px'
 							}  rounded-56px mx-1`}
 					></div>
 				</div>
 			)}
 
-			<div className="card_text absolute bottom-94px font-montserrat font-normal text-13px leading-150% uppercase text-center px-4 ..5x2:px-2 ..5x2:text-10px ..5x2:tracking-1px ..5x2:bottom-83px">
+			<div className={`card_text absolute bottom-94px font-montserrat font-normal text-13px leading-150% uppercase text-center px-4 ..5x2:px-2 ..5x2:text-10px ..5x2:tracking-1px ..5x2:bottom-83px ${obj.isMiniProduct ? ' !bottom-76px !text-11px letter-spacing-1px' : ''}`}>
 				{obj.text}
 			</div>
 
 			{obj.priceDe && (
-				<div className="absolute w-full flex justify-center items-center bottom-69px text-label-orange font-montserrat font-normal text-base leading-140% ..5x2:hidden">
+				<div className={`absolute w-full flex justify-center items-center bottom-69px text-label-orange font-montserrat font-normal text-base leading-140% ..5x2:hidden ${obj.isMiniProduct ? '!bottom-6' : ""}`}>
 					<p>
 						{obj.priceDe} <span className=" font-lora"> De</span>
 					</p>
@@ -640,23 +641,25 @@ export default function ProductCard({ obj }) {
 					</p>
 				</div>
 			)}
+			{!obj.isMiniProduct && <>
+				<BtnsCardProduct
+					clickBtnR={clickBtnR}
+					clickBtnL={clickBtnL}
+					clickBtnBig={clickBtnBig}
+					clickBtnRDesk={clickBtnRDesk}
+					clickBtnLDesk={clickBtnLDesk}
+					clickBtnBigDesk={clickBtnBigDesk}
+					showBtns={showBtns}
+					priceDe={obj.priceDe}
+					setClickBtnR={setClickBtnR}
+					setClickBtnL={setClickBtnL}
+					setClickBtnBig={setClickBtnBig}
+					setClickBtnLDesk={setClickBtnLDesk}
+					setClickBtnRDesk={setClickBtnRDesk}
+					setClickBtnBigDesk={setClickBtnBigDesk}
+				/>
 
-			<BtnsCardProduct
-				clickBtnR={clickBtnR}
-				clickBtnL={clickBtnL}
-				clickBtnBig={clickBtnBig}
-				clickBtnRDesk={clickBtnRDesk}
-				clickBtnLDesk={clickBtnLDesk}
-				clickBtnBigDesk={clickBtnBigDesk}
-				showBtns={showBtns}
-				priceDe={obj.priceDe}
-				setClickBtnR={setClickBtnR}
-				setClickBtnL={setClickBtnL}
-				setClickBtnBig={setClickBtnBig}
-				setClickBtnLDesk={setClickBtnLDesk}
-				setClickBtnRDesk={setClickBtnRDesk}
-				setClickBtnBigDesk={setClickBtnBigDesk}
-			/>
+			</>}
 
 			{visSliderProd && (
 				<div className="absolute bottom-11 w-full bg-gray-light2 h-120px ..5x2:w-40 ..5x2:h-77px ..5x2:left-7px ..5x2:bottom-12">
