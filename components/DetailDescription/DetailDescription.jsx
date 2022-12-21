@@ -939,43 +939,43 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 					</div>
 					<div className="..5x2:flex hidden justify-between items-center mb-26px ..6x3:mb-23px">
 						<p className="font-montserrat .5x01:text-sm .2x1.0:text-11px">Вес</p>
-						<div className="border-b border-dotted w-65% ..7x1:w-60% ..5x2:w-76% mx-4 border-gray"></div>
-						<p className="tracking-widest font-montserrat .5x01:text-sm .2x1.0:text-11px">18 г.</p>
+						<div className="border-b border-dotted w-full mx-4 border-gray"></div>
+						<p className="tracking-widest font-montserrat .5x01:text-sm .2x1.0:text-11px">18г.</p>
 					</div>
 					<div className="flex ..5x2:hidden justify-between items-center mb-26px ..6x3:mb-23px">
 						<p className="font-montserrat .5x01:text-sm .2x1.0:text-11px">Вес</p>
-						<div className="border-b border-dotted w-65% ..7x1:w-60% ..5x2:w-76% mx-4 border-gray"></div>
-						<p className="tracking-widest font-montserrat .5x01:text-sm .2x1.0:text-11px">18 г.</p>
+						<div className="border-b border-dotted w-full   mx-4 border-gray"></div>
+						<p className="tracking-widest font-montserrat .5x01:text-sm  .2x1.0:text-11px">18г.</p>
 					</div>
 					<div className=" ..5x2:flex hidden justify-between items-center mb-26px ..6x3:mb-23px">
-						<p className="font-montserrat .5x01:text-sm .2x1.0:text-11px">Физические свойства</p>
-						<div className="border-b ..7x2:w-40%   ..6x3:w-50% ..6x6:w-36% ..7x230:w-16 ..7x1:w-34%   border-dotted w-50% ..5x2:w-76% mx-4 border-gray"></div>
-						<p className="tracking-widest font-montserrat .5x01:text-sm .2x1.0:text-11px">1 шт.</p>
+						<p className="font-montserrat .5x01:text-sm whitespace-nowrap .2x1.0:text-11px">Физические свойства</p>
+						<div className="border-b  border-dotted w-full   mx-4 border-gray"></div>
+						<p className="tracking-widest font-montserrat .5x01:text-sm whitespace-nowrap .2x1.0:text-11px">1 шт.</p>
 					</div>
 					<div className=" ..5x2:flex hidden justify-between items-center mb-26px ..6x3:mb-23px">
 						<p className="font-montserrat .5x01:text-sm .2x1.0:text-11px">Возраст</p>
-						<div className="border-b border-dotted w-60% ..7x002:w-50% ..6x5:w-65% ..5x2:w-76% mx-4 border-gray"></div>
+						<div className="border-b border-dotted w-full  mx-4 border-gray"></div>
 						<p className="tracking-widest font-montserrat .5x01:text-sm .2x1.0:text-11px">любой</p>
 					</div>
 					<div className="flex ..5x2:hidden justify-between items-center mb-26px ..6x3:mb-23px">
-						<p className="font-montserrat .5x01:text-sm .2x1.0:text-11px">Вес упаковки</p>
-						<div className="border-b ..7x2:w-40% ..6x6:w-60% ..6x3:w-65% ..7x1:w-50% border-dotted w-50% ..5x2:w-76% mx-4 border-gray"></div>
+						<p className="font-montserrat .5x01:text-sm w-44 whitespace-nowrap .2x1.0:text-11px">Вес упаковки</p>
+						<div className="border-b border-dotted w-full mx-4 border-gray"></div>
 						<p className="tracking-widest font-montserrat .5x01:text-sm .2x1.0:text-11px">50г.</p>
 					</div>
 					<div className="flex ..5x2:hidden justify-between items-center mb-26px ..6x3:mb-23px">
 						<p className="font-montserrat .5x01:text-sm .2x1.0:text-11px">Объем</p>
-						<div className="border-b border-dotted w-60% ..7x002:w-50% ..6x5:w-65% ..5x2:w-76% mx-4 border-gray"></div>
-						<p className="tracking-widest font-montserrat .5x01:text-sm .2x1.0:text-11px">30 ml</p>
+						<div className="border-b border-dotted w-full  mx-4 border-gray"></div>
+						<p className="tracking-widest font-montserrat .5x01:text-sm whitespace-nowrap .2x1.0:text-11px">30 ml</p>
 					</div>
 					<div className="..5x2:flex hidden justify-between items-center  mb-26px ..6x3:mb-23px">
 						<p className="font-montserrat .5x01:text-sm .2x1.0:text-11px">Потребность</p>
-						<div className="border-b  ..6x3:w-43% ..7x1:w-20% ..7x11:w-22%  ..6x4:w-30%  ..7x001:w-23px   border-dotted w-34% ..5x2:w-65%   ..5x4:w-60% ..6x2:w-50% mx-4 border-gray"></div>
-						<p className="tracking-widest font-montserrat text-black-70pe .5x01:text-11px">борьба с морщинами</p>
+						<div className="border-b    border-dotted w-full   mx-4 border-gray"></div>
+						<p className="tracking-widest font-montserrat text-black-70pe whitespace-nowrap .5x01:text-11px">борьба с морщинами</p>
 					</div>
 					<div className="flex justify-between items-center">
 						<p className="font-montserrat .5x01:text-sm .2x1.0:text-11px">Серия</p>
-						<div className="border-b ..7x2:w-22% ..7x11:w-44% ..7x01:w-30% ..7x1:w-35% ..6x04:w-50% border-dotted w-34% ..5x2:w-76% ..6x03:w-60% ..5x4:w-65% mx-4 border-gray"></div>
-						<p className="tracking-widest font-montserrat text-black-70pe .5x01:text-11px">GOLLAGEN ACTIVE</p>
+						<div className="border-b   border-dotted w-full  mx-4 border-gray"></div>
+						<p className="tracking-widest font-montserrat text-black-70pe whitespace-nowrap .5x01:text-11px">GOLLAGEN ACTIVE</p>
 					</div>
 
 				</div>
