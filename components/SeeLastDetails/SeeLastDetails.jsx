@@ -47,16 +47,28 @@ const SeeLastDetails = () => {
 			<div className="px-80px relative .3x1:px-10 ..5x2:px-3">
 				<h4 className="font-montserrat pt-10 ..5x2:pt-6 ..5x2:mb-2 ..6x3:text-sm ..5x2:text-base  text-26px font-medium mb-6 ">Специальные предложения</h4>
 				<Swiper ref={sliderSpecial} slidesPerView={2} breakpoints={{
-					750: {
+					360: {
+						slidesPerView: 2
+					},
+					575: {
 						slidesPerView: 3
 					},
-					1000: {
+					750: {
 						slidesPerView: 4
 					},
-					1300: {
+					930: {
 						slidesPerView: 5
 					},
-					1600: {
+					1000: {
+						slidesPerView: 3
+					},
+					1230: {
+						slidesPerView: 4
+					},
+					1565: {
+						slidesPerView: 5
+					},
+					1850: {
 						slidesPerView: 6
 					}
 				}} modules={[Navigation, Pagination]}  >
@@ -65,6 +77,7 @@ const SeeLastDetails = () => {
 						<ProductCard
 							obj={{
 								img: [specialOne],
+								isDetailCard: true,
 								bgWhite: true,
 								text: 'шампунь для глубоко очищения с углем',
 								iText: 'Акции',
@@ -91,7 +104,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -113,7 +126,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -135,7 +148,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -156,7 +169,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -177,31 +190,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
-								newLabel: true,
-
-								saleLabel: true,
-								price: {
-									old: '₽ 920.00',
-									new: '₽ 764.00',
-								},
-							}}
-						/>
-					</SwiperSlide>
-
-
-
-					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
-						<ProductCard
-							obj={{
-								img: [tree, tree],
-								text: ' питательный шампунь с корнем имбиря ',
-								iText: 'Состав акции',
-								bgWhite: true,
-								balls: '1.4 Б',
-								priceDe: '3 750',
-								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,
@@ -225,9 +214,33 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
+								saleLabel: true,
+								price: {
+									old: '₽ 920.00',
+									new: '₽ 764.00',
+								},
+							}}
+						/>
+					</SwiperSlide>
+
+
+
+					<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 ">
+						<ProductCard
+							obj={{
+								img: [tree, tree],
+								text: ' питательный шампунь с корнем имбиря ',
+								iText: 'Состав акции',
+								bgWhite: true,
+								balls: '1.4 Б',
+								priceDe: '3 750',
+								packS: '4=5',
+
+								newLabel: true,
+								isDetailCard: true,
 								saleLabel: true,
 								price: {
 									old: '₽ 920.00',
@@ -248,7 +261,7 @@ const SeeLastDetails = () => {
 								packS: '4=5',
 
 								newLabel: true,
-
+								isDetailCard: true,
 								saleLabel: true,
 								price: {
 									old: '₽ 920.00',
@@ -270,7 +283,7 @@ const SeeLastDetails = () => {
 								packS: '4=5',
 
 								newLabel: true,
-
+								isDetailCard: true,
 								saleLabel: true,
 								price: {
 									old: '₽ 920.00',
@@ -288,7 +301,7 @@ const SeeLastDetails = () => {
 								balls: '1.4 Б',
 								priceDe: '3 750',
 								packS: '4=5',
-
+								isDetailCard: true,
 								newLabel: true,
 
 								saleLabel: true,

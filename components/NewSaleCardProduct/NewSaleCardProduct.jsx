@@ -110,7 +110,7 @@ export default function NewSaleCardProduct({ obj }) {
                   cy="30"
                   r="29.5"
                   fill="white"
-                  fill-opacity="0.3"
+                  fillOpacity="0.3"
                   stroke="#C5C1AB"
                 />
                 <circle
@@ -118,7 +118,7 @@ export default function NewSaleCardProduct({ obj }) {
                   cy="30"
                   r="27.5"
                   fill="white"
-                  fill-opacity="0.85"
+                  fillOpacity="0.85"
                   stroke="#C5C1AB"
                 />
                 <path
@@ -179,7 +179,7 @@ export default function NewSaleCardProduct({ obj }) {
                 cy="18"
                 r="17.5"
                 fill="white"
-                fill-opacity="0.85"
+                fillOpacity="0.85"
                 stroke="#C5C1AB"
               />
               <path

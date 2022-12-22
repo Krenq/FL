@@ -33,16 +33,28 @@ const SliderSeeLast = () => {
 		<div className="relative px-80px pb-60px .3x1:px-10 ..5x2:px-3">
 			<h4 className="font-montserrat pt-60px ..5x2:pt-6 ..5x2:mb-2 ..6x3:text-sm ..5x2:text-base text-26px font-medium mb-6 ">Вы недавно смотрели</h4>
 			<Swiper ref={seeSlider} slidesPerView={2} breakpoints={{
-				750: {
+				360: {
+					slidesPerView: 2
+				},
+				575: {
 					slidesPerView: 3
 				},
-				1000: {
+				750: {
 					slidesPerView: 4
 				},
-				1300: {
+				930: {
 					slidesPerView: 5
 				},
-				1600: {
+				1000: {
+					slidesPerView: 3
+				},
+				1230: {
+					slidesPerView: 4
+				},
+				1565: {
+					slidesPerView: 5
+				},
+				1850: {
 					slidesPerView: 6
 				}
 			}} modules={[Navigation, Pagination]}  >
@@ -56,7 +68,7 @@ const SliderSeeLast = () => {
 							bgWhite: true,
 							balls: '1.4 Б',
 							priceDe: '3 750',
-
+							isDetailCard: true,
 
 
 							price: {
@@ -76,7 +88,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -96,7 +108,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -115,7 +127,7 @@ const SliderSeeLast = () => {
 							bgWhite: true,
 							balls: '1.4 Б',
 							priceDe: '3 750',
-
+							isDetailCard: true,
 
 
 							price: {
@@ -134,7 +146,7 @@ const SliderSeeLast = () => {
 							bgWhite: true,
 							balls: '1.4 Б',
 							priceDe: '3 750',
-
+							isDetailCard: true,
 
 
 							price: {
@@ -153,7 +165,29 @@ const SliderSeeLast = () => {
 							bgWhite: true,
 							balls: '1.4 Б',
 							priceDe: '3 750',
+							isDetailCard: true,
 
+
+							price: {
+								old: '₽ 920.00',
+								new: '₽ 764.00',
+							},
+						}}
+					/>
+				</SwiperSlide>
+
+
+
+				<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 " >
+					<ProductCard
+						obj={{
+							img: [two, two],
+							text: ' питательный шампунь с корнем имбиря ',
+							iText: 'Состав акции',
+							bgWhite: true,
+							balls: '1.4 Б',
+							priceDe: '3 750',
+							isDetailCard: true,
 
 
 							price: {
@@ -176,29 +210,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
-
-							price: {
-								old: '₽ 920.00',
-								new: '₽ 764.00',
-							},
-						}}
-					/>
-				</SwiperSlide>
-
-
-
-				<SwiperSlide className="..7x1:!w-44 ..7x1:mr-2 " >
-					<ProductCard
-						obj={{
-							img: [two, two],
-							text: ' питательный шампунь с корнем имбиря ',
-							iText: 'Состав акции',
-							bgWhite: true,
-							balls: '1.4 Б',
-							priceDe: '3 750',
-
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -217,7 +229,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -236,7 +248,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',
@@ -254,7 +266,7 @@ const SliderSeeLast = () => {
 							balls: '1.4 Б',
 							priceDe: '3 750',
 
-
+							isDetailCard: true,
 
 							price: {
 								old: '₽ 920.00',

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const NewsPrev = ({ onClick, kolichestvo }) => {
+const NewsPrev = ({ onClick, kolichestvo, isDetail }) => {
 	let styleL = {
-		left: 0,
+		left: isDetail ? -25 : 0,
 		top: '60%',
 		zIndex: 20,
 		borderRadius: 25,
@@ -16,7 +16,7 @@ const NewsPrev = ({ onClick, kolichestvo }) => {
 	return (
 		<button
 			onMouseEnter={setHoverB} onMouseLeave={setHoverB}
-			className="prev_rotate absolute w-11 h-11 flex items-center justify-center  rounded-56px transition-all hover:bg-black bg-white py-3 px-4"
+			className={`prev_rotate absolute w-11 h-11 flex items-center justify-center  rounded-56px transition-all hover:bg-black bg-white py-3 px-4 ${isDetail ? '!bg-white-80pe' : ""}`}
 
 			onClick={onClick}
 			style={styleL}
