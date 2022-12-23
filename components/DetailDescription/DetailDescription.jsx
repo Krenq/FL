@@ -28,6 +28,9 @@ import filtOne from '../../images/templates/filtOne.jpg'
 import MaterialsPhotoItem from "../MaterialsPhotoItem/MaterialsPhotoItem"
 import MaterialsVideoItem from "../MaterialsVideoItem/MaterialsVideoItem"
 import MaterialsTextProdItem from "../MaterialsTextProdItem/MaterialsTextProdItem"
+import DetailMaterialsPhone from "../DetailMaterialsPhone/DetailMaterialsPhone"
+import DetailMaterialsPhoneV from "../DetailMaterialsPhoneV/DetailMaterialsPhoneV"
+import DetailMaterialsPhoneP from "../DetailMaterialsPhoneP/DetailMaterialsPhoneP"
 const DetailDescription = ({ refF, close, setVideo }) => {
 	const [currentFilter, setCurrentFilter] = useState({
 		photo: true,
@@ -377,8 +380,8 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 
 						</div>
-						<div onClick={(e) => setShowLocal('activeComoonents', e)} className={`mt-3  h-12 buttonShadow py-3.5 p-3 rounded transition-all ${show.activeComponents ? 'activeButtonS !h-300px ..6x5:!h-317px ..6x6:!h-350px ..7x001:!h-387px' : 'overflow-hidden'}`}>
-							<div className="flex items-center justify-between">
+						<div onClick={(e) => setShowLocal('activeComoonents', e)} className={`mt-3  h-12 buttonShadow py-3.5 p-0 rounded transition-all ${show.activeComponents ? 'activeButtonS !h-300px ..6x5:!h-317px ..6x6:!h-350px ..7x001:!h-387px' : 'overflow-hidden'}`}>
+							<div className="flex items-center px-3 justify-between">
 								<p className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg className="mr-2" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M7.09157 0.71301C7.37559 0.428994 7.83607 0.428997 8.12009 0.713016L9.14255 1.73549L9.14855 1.74142L13.2626 5.85549C13.5466 6.13951 13.5466 6.59999 13.2626 6.88401L7.60579 12.5409C7.4694 12.6773 7.28441 12.7539 7.09153 12.7539C6.89864 12.7539 6.71366 12.6773 6.57727 12.5409L2.46319 8.42681C2.17917 8.14279 2.17917 7.68231 2.46319 7.39829L7.60574 2.25572L7.09156 1.74153C6.80755 1.45751 6.80755 0.997026 7.09157 0.71301ZM4.00597 7.91255L4.56828 7.35024L9.21247 8.87714L7.09152 10.9981L4.00597 7.91255ZM10.3648 7.72485L5.72057 6.19794L8.63429 3.2842L11.7198 6.36975L10.3648 7.72485Z" fill="white" />
 									<path d="M13.4773 12.6804C14.2806 12.6804 14.9318 12.0292 14.9318 11.2259C14.9318 10.6903 14.447 9.96302 13.4773 9.04403C12.5076 9.96302 12.0227 10.6903 12.0227 11.2259C12.0227 12.0292 12.674 12.6804 13.4773 12.6804Z" fill="white" />
@@ -447,8 +450,8 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 								<EffectsItemDetail title={'ещё'} mb={true} arrow={true} />
 							</div>
 						</div>
-						<div onClick={(e) => setShowLocal('materials', e)} className={`mt-3 mb-3  h-12 buttonShadow p-3 py-3.5 rounded transition-all ${show.materials ? `activeButtonS !h-350px ..6x4:!h-428px  ${currentFilterMobile.active ? '!h-1100px ..6x4:!h-1100px ..7x001:!h-1100px' : ''}` : 'overflow-hidden'}`}>
-							<div className="flex items-center justify-between">
+						<div onClick={(e) => setShowLocal('materials', e)} className={`mt-3 mb-3  h-12 buttonShadow p-0 py-3.5 rounded transition-all ${show.materials ? `activeButtonS !h-350px ..6x4:!h-428px  ${currentFilterMobile.active ? '!h-1100px ..6x4:!h-1100px ..7x001:!h-1100px' : ''}` : 'overflow-hidden'}`}>
+							<div className="flex items-center px-3 justify-between">
 								<p className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg className="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M0.666748 1.83329C0.666748 1.4651 0.965225 1.16663 1.33341 1.16663H14.6667C15.0349 1.16663 15.3334 1.4651 15.3334 1.83329C15.3334 2.20148 15.0349 2.49996 14.6667 2.49996H14.3334V11.1666C14.3334 11.5348 14.0349 11.8333 13.6667 11.8333H9.60956L11.1382 13.3619C11.3985 13.6222 11.3985 14.0443 11.1382 14.3047C10.8778 14.565 10.4557 14.565 10.1953 14.3047L8.00008 12.1094L5.80482 14.3047C5.54447 14.565 5.12236 14.565 4.86201 14.3047C4.60166 14.0443 4.60166 13.6222 4.86201 13.3619L6.39061 11.8333H2.33341C1.96522 11.8333 1.66675 11.5348 1.66675 11.1666V2.49996H1.33341C0.965225 2.49996 0.666748 2.20148 0.666748 1.83329ZM3.00008 2.49996V10.5H13.0001V2.49996H3.00008ZM11.7933 4.03503C12.0539 4.29511 12.0544 4.71722 11.7943 4.97783L8.47475 8.30421C8.21651 8.56298 7.79804 8.56551 7.53669 8.30988L6.52172 7.3171L5.10706 8.69798C4.84358 8.95516 4.4215 8.95006 4.16432 8.68658C3.90713 8.42311 3.91224 8.00103 4.17571 7.74384L6.05652 5.90794C6.3157 5.65495 6.72945 5.65517 6.98836 5.90842L7.99719 6.89519L10.8505 4.036C11.1106 3.77538 11.5327 3.77495 11.7933 4.03503Z" fill="white" stroke="#337202" strokeWidth="0.6" strokeLinecap="round" strokeLinejoin="round" />
 								</svg>
@@ -503,7 +506,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 							<div className="flex h-34px mb-3  bg-green-files items-center justify-between">
 								<p className="font-montserrat font-medium text-11px text-white ml-4 ..7x01:ml-1 ..7x01:text-10px ">Файлов: 17</p>
 								<div className="flex items-center">
-									<button className="..7x01:text-10px ..7x2:px-2 transition-all text-11px  bg-primary h-26px p-1.5 px-3 rounded-3xl flex items-center font-montserrat font-medium   text-white  ">
+									<button onClick={selectALl} className="..7x01:text-10px ..7x2:px-2 transition-all text-11px  bg-primary h-26px p-1.5 px-3 rounded-3xl flex items-center font-montserrat font-medium   text-white  ">
 										<svg className=" mr-1 ..5x2:h-14px ..5x2:w-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M20 12C20 14.1217 19.1571 16.1566 17.6569 17.6569C16.1566 19.1571 14.1217 20 12 20C9.87827 20 7.84344 19.1571 6.34315 17.6569C4.84285 16.1566 4 14.1217 4 12C4 9.87827 4.84285 7.84344 6.34315 6.34315C7.84344 4.84285 9.87827 4 12 4C12.76 4 13.5 4.11 14.2 4.31L15.77 2.74C14.61 2.26 13.34 2 12 2C10.6868 2 9.38642 2.25866 8.17317 2.7612C6.95991 3.26375 5.85752 4.00035 4.92893 4.92893C3.05357 6.8043 2 9.34784 2 12C2 14.6522 3.05357 17.1957 4.92893 19.0711C5.85752 19.9997 6.95991 20.7362 8.17317 21.2388C9.38642 21.7413 10.6868 22 12 22C14.6522 22 17.1957 20.9464 19.0711 19.0711C20.9464 17.1957 22 14.6522 22 12M7.91 10.08L6.5 11.5L11 16L21 6L19.59 4.58L11 13.17L7.91 10.08Z" fill="white" />
 										</svg>
@@ -525,48 +528,11 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 								</div>
 								<div className="flex mt-3 flex-wrap">
-									<div className="w-150px mr-3 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-										<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-										</svg>
-										<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
-											<input className='hidden inputRadio' id='checkSearchAll' type="checkbox" />
-											<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-quick-silver cursor-pointer border'></label>
-										</div>
-										<div className="relative ..7x2:w-20 ..7x2:h-20">
+									<DetailMaterialsPhone selectedAll={selectedAll} src={mobileFilter} />
 
-											<Image src={mobileFilter} />
+									<DetailMaterialsPhone selectedAll={selectedAll} src={mobileFilter} />
+									<DetailMaterialsPhone selectedAll={selectedAll} src={mobileFilter} />
 
-										</div>
-									</div>
-									<div className="w-150px mr-3 ..7x001:mr-0 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-										<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-										</svg>
-										<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
-											<input className='hidden' id='checkSearchAll' type="checkbox" />
-											<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-quick-silver cursor-pointer border'></label>
-										</div>
-										<div className="relative ..7x2:w-20 ..7x2:h-20">
-
-											<Image src={mobileFilter} />
-
-										</div>
-									</div>
-									<div className="w-150px mr-3 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-										<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-										</svg>
-										<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
-											<input className='hidden' id='checkSearchAll' type="checkbox" />
-											<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-quick-silver cursor-pointer border'></label>
-										</div>
-										<div className="relative ..7x2:w-20 ..7x2:h-20">
-
-											<Image src={mobileFilter} />
-
-										</div>
-									</div>
 								</div>
 							</>}
 							{currentFilterMobile.video && <>
@@ -576,66 +542,11 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 								</div>
 								<div className="flex mt-3 flex-wrap">
-									<div className="w-150px mr-3 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-										<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-										</svg>
-										<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
-											<input className='hidden' id='checkSearchAll' type="checkbox" />
-											<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-quick-silver cursor-pointer border'></label>
-										</div>
-										<div className="relative ..7x2:w-20 ..7x2:h-20">
-											<div className="absolute left-0 z-10 flex items-center justify-center right-0 top-0 bottom-0">
-												<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8182 10.9613C14.0432 10.8314 14.3205 10.8314 14.5455 10.9613L22.1819 15.3702C22.4069 15.5001 22.5455 15.7402 22.5455 16C22.5455 16.2599 22.4069 16.5 22.1819 16.6299L14.5455 21.0387C14.3205 21.1687 14.0432 21.1687 13.8182 21.0387C13.5932 20.9088 13.4546 20.6687 13.4546 20.4089V11.5912C13.4546 11.3313 13.5932 11.0912 13.8182 10.9613ZM14.9091 12.8508V19.1492L20.3637 16L14.9091 12.8508Z" fill="white" />
-													<path d="M31.5 16C31.5 24.5604 24.5604 31.5 16 31.5C7.43958 31.5 0.5 24.5604 0.5 16C0.5 7.43959 7.43958 0.5 16 0.5C24.5604 0.5 31.5 7.43959 31.5 16Z" stroke="white" stroke-opacity="0.8" />
-												</svg>
 
-											</div>
-											<Image src={mobileFilter} />
+									<DetailMaterialsPhoneV selectedAll={selectedAll} src={mobileFilter} />
+									<DetailMaterialsPhoneV selectedAll={selectedAll} src={mobileFilter} />
+									<DetailMaterialsPhoneV selectedAll={selectedAll} src={mobileFilter} />
 
-										</div>
-									</div>
-									<div className="w-150px mr-3 ..7x001:mr-0 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-										<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-										</svg>
-										<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
-											<input className='hidden' id='checkSearchAll' type="checkbox" />
-											<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-quick-silver cursor-pointer border'></label>
-										</div>
-										<div className="relative ..7x2:w-20 ..7x2:h-20">
-											<div className="absolute left-0 z-10 flex items-center justify-center right-0 top-0 bottom-0">
-												<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8182 10.9613C14.0432 10.8314 14.3205 10.8314 14.5455 10.9613L22.1819 15.3702C22.4069 15.5001 22.5455 15.7402 22.5455 16C22.5455 16.2599 22.4069 16.5 22.1819 16.6299L14.5455 21.0387C14.3205 21.1687 14.0432 21.1687 13.8182 21.0387C13.5932 20.9088 13.4546 20.6687 13.4546 20.4089V11.5912C13.4546 11.3313 13.5932 11.0912 13.8182 10.9613ZM14.9091 12.8508V19.1492L20.3637 16L14.9091 12.8508Z" fill="white" />
-													<path d="M31.5 16C31.5 24.5604 24.5604 31.5 16 31.5C7.43958 31.5 0.5 24.5604 0.5 16C0.5 7.43959 7.43958 0.5 16 0.5C24.5604 0.5 31.5 7.43959 31.5 16Z" stroke="white" stroke-opacity="0.8" />
-												</svg>
-
-											</div>
-											<Image src={mobileFilter} />
-
-										</div>
-									</div>
-									<div className="w-150px mr-3 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-										<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-										</svg>
-										<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
-											<input className='hidden' id='checkSearchAll' type="checkbox" />
-											<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-quick-silver cursor-pointer border'></label>
-										</div>
-										<div className="relative ..7x2:w-20 ..7x2:h-20">
-											<div className="absolute left-0 z-10 flex items-center justify-center right-0 top-0 bottom-0">
-												<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8182 10.9613C14.0432 10.8314 14.3205 10.8314 14.5455 10.9613L22.1819 15.3702C22.4069 15.5001 22.5455 15.7402 22.5455 16C22.5455 16.2599 22.4069 16.5 22.1819 16.6299L14.5455 21.0387C14.3205 21.1687 14.0432 21.1687 13.8182 21.0387C13.5932 20.9088 13.4546 20.6687 13.4546 20.4089V11.5912C13.4546 11.3313 13.5932 11.0912 13.8182 10.9613ZM14.9091 12.8508V19.1492L20.3637 16L14.9091 12.8508Z" fill="white" />
-													<path d="M31.5 16C31.5 24.5604 24.5604 31.5 16 31.5C7.43958 31.5 0.5 24.5604 0.5 16C0.5 7.43959 7.43958 0.5 16 0.5C24.5604 0.5 31.5 7.43959 31.5 16Z" stroke="white" stroke-opacity="0.8" />
-												</svg>
-
-											</div>
-											<Image src={mobileFilter} />
-
-										</div>
-									</div>
 								</div>
 							</>}
 							{currentFilterMobile.service && <>
@@ -678,31 +589,19 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 									<p className="pb-1 font-montserrat font-medium text-13px text-gray-quick-silver border-b border-dashed border-gray-quick-silver ml-3">PDF.</p>
 								</div>
 								<div className="flex mt-3 flex-wrap">
-									<div className="w-150px mr-3 ..7x2:mr-0 ..7x2:w-120px ..7x59:w-130px ..7x59:mr-1 ..7x59:mb-1 mb-3 relative flex justify-end bg-gray-light">
-										<svg className="absolute ..7x59:left-0.5 ..7x2:left-3 ..7x2:top-11 left-3 top-14 z-10" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4 22H20.4706V19.6471H4M20.4706 9.05882H15.7647V2H8.70588V9.05882H4L12.2353 17.2941L20.4706 9.05882Z" fill="#DBDCDA" />
-										</svg>
-										<div className=' flex items-center ..7x59:left-1 ..7x2:left-14px absolute left-14px top-14px '>
-											<input className='hidden' id='checkSearchAll' type="checkbox" />
-											<label htmlFor="checkSearchAll" className='w-5 h-5 border-gray-quick-silver cursor-pointer border'></label>
-										</div>
-										<div className="relative ..7x2:w-20 ..7x2:h-20">
 
-											<Image src={mobileFilter} />
-											<p className="text-center font-montserrat font-medium text-11px text-gray-quick-silver mb-3">PDF</p>
-										</div>
-									</div>
+									<DetailMaterialsPhoneP src={mobileFilter} selectedAll={selectedAll} />
 
 								</div>
 							</>}
 							{currentFilterMobile.active && <>
-								<div className=".5x1:w-1100px ..5x2:w-full !ml-0 .4x2:w-910px w-1200 .2x1.0:w-800px .1x01:w-727px ..5x1:w-664px .1x1:ml-4 ..5x01:w-600px">
+								<div className=".5x1:w-1100px   ..5x2:w-full !ml-0 .4x2:w-910px w-1200 .2x1.0:w-800px .1x01:w-727px ..5x1:w-664px .1x1:ml-4 ..5x01:w-600px">
 									<div className="p-3   border border-stroke">
 										<div className="w-full flex ">
 											<p className="font-montserrat font-medium text-xl ..5x2:text-13px">Статьи</p>
 											<p className="font-montserrat font-medium text-xl text-gray-quick-silver ml-2 ..5x2:text-13px">3</p>
 										</div>
-										<Slider {...settings} className="pt-13px ..5x2:pt-1 mobSl  newsSlider   ">
+										<Slider {...settings} className="pt-13px ..5x2:h-400px ..6x04:h-auto  ..5x2:pt-1 mobSl  newsSlider   ">
 											<div className=" relative pr-5px  ..5x2:!px-0 ..6x04:p-1.5 transition-all  newsCardHover  cursor-pointer hover:scale-95">
 												<NewsDate title={'ВЧЕРА'} />
 												<div>
@@ -844,7 +743,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 											<p className="font-montserrat font-medium text-xl ..5x2:text-13px">Видео</p>
 											<p className="font-montserrat font-medium text-xl text-gray-quick-silver ml-2 ..5x2:text-13px">1</p>
 										</div>
-										<div className="flex ..6x04:justify-center">
+										<div className="flex ..5x2:justify-center">
 											<div className="mt-3  ..5x2:mt-1 ..5x2:w-272px .5x01:w-300px mr-10px relative">
 												<Image src={i} />
 												<div>

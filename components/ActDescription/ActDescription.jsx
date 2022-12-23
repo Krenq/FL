@@ -89,9 +89,8 @@ const ActDescription = () => {
 							img: [defailFilterTwo, defailFilterTwo],
 							text: 'Для сенсационного  увлажнения и восстановления кожи',
 							iText: 'Состав акции',
-
+							dateEnd: ',',
 							balls: '1.4 Б',
-							timeOver: '14.03.22',
 							prodDayLabel: true,
 							newLabel: true,
 							hitLabel: true,
@@ -111,7 +110,6 @@ const ActDescription = () => {
 							iText: 'Состав акции',
 
 							balls: '1.4 Б',
-							timeOver: '14.03.22',
 							prodDayLabel: true,
 							newLabel: true,
 							hitLabel: true,
@@ -131,7 +129,6 @@ const ActDescription = () => {
 							iText: 'Состав акции',
 
 							balls: '1.4 Б',
-							timeOver: '14.03.22',
 							prodDayLabel: true,
 							newLabel: true,
 							hitLabel: true,
@@ -151,7 +148,6 @@ const ActDescription = () => {
 							iText: 'Состав акции',
 
 							balls: '1.4 Б',
-							timeOver: '14.03.22',
 							prodDayLabel: true,
 							newLabel: true,
 							hitLabel: true,
@@ -172,7 +168,7 @@ const ActDescription = () => {
 							iText: 'Состав акции',
 
 							balls: '1.4 Б',
-							timeOver: '14.03.22',
+
 							prodDayLabel: true,
 							newLabel: true,
 							hitLabel: true,
@@ -192,7 +188,7 @@ const ActDescription = () => {
 							iText: 'Состав акции',
 
 							balls: '1.4 Б',
-							timeOver: '14.03.22',
+
 							prodDayLabel: true,
 							newLabel: true,
 							hitLabel: true,
@@ -212,7 +208,7 @@ const ActDescription = () => {
 							iText: 'Состав акции',
 
 							balls: '1.4 Б',
-							timeOver: '14.03.22',
+
 							prodDayLabel: true,
 							newLabel: true,
 							hitLabel: true,
@@ -232,7 +228,7 @@ const ActDescription = () => {
 							iText: 'Состав акции',
 
 							balls: '1.4 Б',
-							timeOver: '14.03.22',
+
 							prodDayLabel: true,
 							newLabel: true,
 							hitLabel: true,

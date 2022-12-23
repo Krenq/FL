@@ -42,7 +42,7 @@ export default function NewSaleCardProduct({ obj }) {
 			onClick={() => setUnderL(true)}
 			onMouseLeave={() => setUnderL(false)}
 			className={`${underL ? 'underL' : ''
-				} card_prod_con relative w-278px h-428px border border-white ${obj.timeOver ? 'hover:border-white' : ""} ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
+				} card_prod_con relative w-278px h-428px border border-white ..5x2:hover:border-white hover:border-gray ..5x2:w-44 ..5x2:h-317px bg-white`}
 		>
 			{obj.packS && (
 				<div className="absolute top-0 left-0 z-10">
@@ -416,15 +416,7 @@ export default function NewSaleCardProduct({ obj }) {
 					<Image src={obj.img[0] && defImg} quality={100} />
 				</div>
 			)}
-			{obj.timeOver && (
 
-				<p
-					className={` text-center mt-7 ..5x2:text-11px ..5x2:mt-5 ..6x1:font-montserrat font-noto-sans text-sm font-light text-black-70pe`}
-				>
-					До {obj.timeOver}
-				</p>
-
-			)}
 			<div className={`absolute bottom-164px flex flex-row items-center h-26px w-full px-4 ..5x2:bottom-129px `}>
 				{obj.iText && (
 					<>
@@ -543,7 +535,7 @@ export default function NewSaleCardProduct({ obj }) {
 				className={`${obj.packS
 					? ' bottom-84px ..5x2:bottom-66px'
 					: 'bottom-104px ..5x2:bottom-83px'
-					} ${obj.timeOver ? 'bottom-80px ..5x2:bottom-70px' : ""} card_text absolute font-montserrat font-normal text-13px leading-150% uppercase text-center px-4 ..5x2:px-2 ..5x2:text-10px ..5x2:tracking-1px `}
+					}  card_text absolute font-montserrat font-normal text-13px leading-150% uppercase text-center px-4 ..5x2:px-2 ..5x2:text-10px ..5x2:tracking-1px `}
 			>
 				{obj.text}
 			</div>
@@ -557,7 +549,7 @@ export default function NewSaleCardProduct({ obj }) {
 			) : (
 				<div
 					className={`${obj.packS ? 'bottom-62px' : 'bottom-66px'
-						} ${obj.timeOver ? ' !bottom-14 ..5x2:!bottom-12' : ""} absolute w-full flex justify-center ..5x2:bottom-12`}
+						} absolute w-full flex justify-center ..5x2:bottom-12`}
 				>
 					<p className=" font-montserrat text-gray-quick-silver font-normal leading-140% text-base line-through mr-3 ..5x2:mr-2 ..5x2:text-11px">
 						{obj.price?.old}
@@ -568,7 +560,7 @@ export default function NewSaleCardProduct({ obj }) {
 				</div>
 			)}
 
-			<div className={`absolute ${obj.timeOver ? '!bottom-0' : ""} bottom-3 px-3 w-full flex justify-between ..5x2:hidden`}>
+			<div className={`absolute bottom-3 px-3 w-full flex justify-between ..5x2:hidden`}>
 				{obj.priceDe ? (
 					<>
 						{clickBtnLDesk ? (
@@ -608,7 +600,7 @@ export default function NewSaleCardProduct({ obj }) {
 								onClick={() => setClickBtnBigDesk(true)}
 								className="  whitespace-nowrap w-full py-4 bg-gray-light2 text-primary font-montserrat font-medium text-xs leading-100% hover:text-white hover:bg-primary"
 							>
-								{obj.timeOver ? 'Купить' : "+ Добавить в заказ"}
+								+ Добавить в заказ
 
 							</button>
 						)}
@@ -730,7 +722,7 @@ export default function NewSaleCardProduct({ obj }) {
 			</div>
 
 			{visSliderProd && (
-				<div className={`absolute bottom-68px w-full bg-gray-light2 h-24 ..5x2:w-40 ..5x2:h-77px ..5x2:left-7px ..5x2:bottom-12 ${obj.timeOver ? '!bottom-62px' : ""}`}>
+				<div className={`absolute bottom-68px w-full bg-gray-light2 h-24 ..5x2:w-40 ..5x2:h-77px ..5x2:left-7px ..5x2:bottom-12 `}>
 					{obj.iText === 'Акции' && (
 						<>
 							<div className="absolute bottom-24 w-full flex justify-center ..5x2:hidden">

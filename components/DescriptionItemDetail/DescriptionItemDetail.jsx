@@ -22,12 +22,14 @@ import oneSmall from '../../images/templates/DetaillCardSmallOne.jpg'
 import twoSmall from '../../images/templates/DetailCardSmallTwo.jpg'
 import treeSmall from '../../images/templates/productToDayDet.png'
 import { Swiper, SwiperSlide } from "swiper/react";
+import wom from '../../images/templates/monMini.png'
 import Image from "next/image";
 import { Navigation } from "swiper";
 import { useState } from "react";
 import EffectsItemDetail from "../EffectsItemDetail/EffectsItemDetail";
 import SectionImgs from "../InstrumentItem/SectionImgs";
 import Link from "next/link";
+import MiniPhotoDots from "../MiniPhotoDots/MiniPhotoDots";
 const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 	const [buttonHover, setButtonHover] = useState(false),
 		[buttonHoverNext, setButtonHoverNext] = useState(false),
@@ -39,7 +41,15 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 		[likeMobile, setLikeMobile] = useState(false),
 		[hoverCopy, setHoverCopy] = useState(false),
 		[allSlides, setAllSlides] = useState(0),
-		[snap, setSnap] = useState(0)
+		[snap, setSnap] = useState(0),
+		[currentTon, setCurrentTon] = useState(6),
+		[value, setValue] = useState('')
+
+
+	const inputChange = (e) => setValue(e.target.value)
+
+
+	const setCurrentTonF = (ton) => setCurrentTon(ton)
 
 
 	const setAllSl = (length) => setAllSlides(length),
@@ -149,15 +159,15 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 				loal: false,
 				promo: false
 			})
-			window.scrollTo({ top: 1200 })
+			window.scrollTo({ top: 1500 })
 
 		}
-	console.log(snap === 0)
+
 
 
 	return (
-		<section className="px-80px ..5x2:px-3  pb-110px ..5x2:pb-8">
-			<div className="border-b pb-3   ..6x2:border-white border-stroke  ">
+		<section className="px-80px ..5x2:px-0  pb-110px ..5x2:pb-8">
+			<div className="border-b pb-3 px-3  ..6x2:border-white border-stroke  ">
 				<p className="font-montserrat text-32px font-medium mb-3 ..5x2:mb-1 ..5x2:mt-6px .3x1:text-2xl ..6x5:text-base mt-10px">Крем-маска ночная с мушмулой</p>
 				<div className="flex">
 					<div className="flex items-center ..6x2:hidden">
@@ -249,7 +259,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 					</div>
 				</div>
 			</div>
-			<div className="hidden ..6x2:flex   items-center">
+			<div className="hidden ..6x2:flex px-3  items-center">
 				<div className="flex items-center">
 					<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<mask id="mask0_2584_437788" maskUnits="userSpaceOnUse" x="0" y="0" width="13" height="12">
@@ -273,12 +283,11 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 				</div>
 			</div>
 
-			<div className="mt-6 flex ..5x2:flex-col ..5x2:w-full ">
+			<div className="mt-6 ..5x2:mt-2 flex ..5x2:flex-col ..5x2:w-full ">
 				<div className="pl-72px .3x1:pl-12 .3x1:mr-5 ..5x2:pl-0 ..5x1:mr-0 mr-50px relative">
-					<div className="absolute   cursor-pointer   ..6x04:top-2 ..5x2:flex-col left-0 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
-						<div onClick={() => slider.current.swiper.slideTo(0)} className={`border ..5x2:hidden  .3x1:h-9 .3x1:w-9  mb-2 border-white mr-5 w-60px h-60px ${snap === 0 ? '!border-black-70pe' : ''}`}>
-							<Image src={oneSmall} />
-						</div>
+					<div className="absolute   cursor-pointer   ..6x04:top-2 ..5x2:flex-col left-0 ..5x3:left-3 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
+
+						<MiniPhotoDots slider={slider} img={oneSmall} length={0} snap={snap} />
 						<div className=" .3x1:h-9   .3x1:w-9  h-60px flex flex-col justify-end">
 							<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center   justify-center .3x1:text-9px .3x1:h-14px .3x1:w-9">HIT!</p>
 							<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex bg-white items-center justify-center .3x1:h-14px .3x1:w-9 .3x1:text-9px ">NEW</p>
@@ -287,16 +296,11 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 							if (e.target.src === 'http://localhost:6006/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDetailCardSmallTwo.229bdfcb.jpg&w=128&q=75' && e.target.id !== '2' && e.target.id !== '3') slider.current.swiper.slideTo(1)
 						}} className={` .3x1:h-9 relative cursor-pointer border border-white .3x1:w-9   ..5x2:hidden mr-5  w-60px h-60px mb-2`}>
-							<div className={`transition-all hover:border-black border border-white h-60px .3x1:h-9 ${snap === 1 ? '!border-black-70pe' : ''}`}>
-								<Image src={twoSmall} />
-							</div>
 
-							<div onClick={() => slider.current.swiper.slideTo(2)} id='2' className={`transition-all hover:border-black border ${snap === 2 ? '!border-black-70pe' : ''} border-white cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end`}>
-								<Image src={oneMini} />
-							</div>
-							<div onClick={() => slider.current.swiper.slideTo(3)} id='2' className={`transition-all hover:border-black border ${snap === 3 ? '!border-black-70pe' : ''} border-white cursor-pointer .3x1:h-9  .3x1:w-9  h-60px flex flex-col justify-end`}>
-								<Image src={oneMini} />
-							</div>
+							<MiniPhotoDots slider={slider} img={twoSmall} length={1} snap={snap} />
+							<MiniPhotoDots slider={slider} img={oneMini} length={2} snap={snap} />
+							<MiniPhotoDots slider={slider} img={oneMini} length={3} snap={snap} />
+
 						</div>
 						<div className="..5x2:mt-1 relative cursor-pointer .3x1:h-9 .3x1:w-9  w-60px h-60px">
 							<svg className=".3x1:h-9 .3x1:w-9" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -321,21 +325,21 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 
 						</div>
-						<div onMouseEnter={hoverSet} onMouseLeave={hoverSet} className="..5x2:hidden hoverCustVideo hover:bg-primary mt-28 .3x1:mt-70px cursor-pointer .3x1:h-9 .3x1:w-10  w-60px h-60px flex flex-col justify-center items-center">
+						<div onMouseEnter={hoverSet} onMouseLeave={hoverSet} className="..5x2:hidden .3x1:h-34px .3x1:mt-24 .3x1:ml-0.5  .3x1:w-34px hoverCustVideo hover:bg-primary mt-146px -translate-y-2 .3x1:mt-70px cursor-pointer    w-60px h-60px flex flex-col justify-center items-center">
 							<svg className=".3x1:h-4 .3x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill={`${buttonHover ? "#fff" : '#337202'} `} />
 							</svg>
-							<p className="font-montserrat text-13px font-medium .3x1:text-xs .3x1:font-semibold text-primary">VIDEO</p>
+							<p className="font-montserrat text-13px font-medium .3x1:text-10px .3x1:font-semibold  text-primary">VIDEO</p>
 						</div>
 
 					</div>
-					<div className="..5x2:flex px-6px  hidden absolute right-0 z-10 ..6x04:-right-2 ..6x04:rounded-r-none top-20 w-60px ..6x2:h-12 .1x1:h-9  rounded-xl  bg-shadow   flex-col justify-center items-center">
+					<div className="..5x2:flex px-6px  hidden absolute right-0 z-20 bg-white  ..6x04:rounded-r-none top-20 w-60px ..6x2:h-12 .1x1:h-9  rounded-xl  bg-shadow   flex-col justify-center items-center">
 						<svg className=".1x1:h-4 .1x1:w-4" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fillRule="evenodd" clipRule="evenodd" d="M7 5.07172C7.3094 4.89309 7.6906 4.89309 8 5.07172L18.5 11.1339C18.8094 11.3126 19 11.6427 19 11.9999C19 12.3572 18.8094 12.6873 18.5 12.866L8 18.9282C7.6906 19.1068 7.3094 19.1068 7 18.9282C6.6906 18.7495 6.5 18.4194 6.5 18.0621V5.93774C6.5 5.58048 6.6906 5.25035 7 5.07172ZM8.5 7.6698V16.3301L16 11.9999L8.5 7.6698Z" fill="#337202" />
 						</svg>
 						<p className="font-montserrat text-xs font-semibold text-primary ">VIDEO</p>
 					</div>
-					{likeMobile ? <svg className="..5x2:block ..6x5:-right-3 hidden absolute right-3 top-3  z-10    " onClick={setLikeMob} width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><g filter="url(#filter0_d_3587_1020586)"><path d="M29.0136 15C27.212 15 25.4828 15.8387 24.3542 17.1537C23.2256 15.8387 21.4965 15 19.6948 15C16.5057 15 14 17.4954 14 20.6948C14 24.5984 17.5204 27.7978 22.8529 32.6332L24.3542 34L25.8556 32.6332C31.188 27.7978 34.7084 24.5984 34.7084 20.6948C34.7084 17.4954 32.2027 15 29.0136 15Z" fill="#FF6363"></path></g><defs><filter id="filter0_d_3587_1020586" x="4" y="10" width="40.7084" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="5"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.388235 0 0 0 0 0.388235 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3587_1020586"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3587_1020586" result="shape"></feBlend></filter></defs></svg> : <div onClick={setLikeMob} className="..5x2:block ..6x5:-right-3 hidden absolute right-1 top-6  z-10    ">
+					{likeMobile ? <svg className="..5x2:block  hidden absolute right-3 top-3  z-10    " onClick={setLikeMob} width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><g filter="url(#filter0_d_3587_1020586)"><path d="M29.0136 15C27.212 15 25.4828 15.8387 24.3542 17.1537C23.2256 15.8387 21.4965 15 19.6948 15C16.5057 15 14 17.4954 14 20.6948C14 24.5984 17.5204 27.7978 22.8529 32.6332L24.3542 34L25.8556 32.6332C31.188 27.7978 34.7084 24.5984 34.7084 20.6948C34.7084 17.4954 32.2027 15 29.0136 15Z" fill="#FF6363"></path></g><defs><filter id="filter0_d_3587_1020586" x="4" y="10" width="40.7084" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="5"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.388235 0 0 0 0 0.388235 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3587_1020586"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3587_1020586" result="shape"></feBlend></filter></defs></svg> : <div onClick={setLikeMob} className="..5x2:block   hidden absolute right-1 top-6  z-10    ">
 						<svg class="mx-4 mr-5" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill="#EDEEEC"></path></svg>
 					</div>}
 
@@ -343,23 +347,23 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 					<Swiper className="w-608px ..5x2:w-auto ..5x2:h-auto .1x1:w-250px .1x1:h-250px .2x007:w-500px .2x007:h-500px .6x3:w-360px .3x1:w-300px .3x1:h-300px .6x3:h-360px" ref={slider} onSwiper={e => setAllSl(e.imagesLoaded / 2)} onSlideChange={e => setCurrentSnap(e.snapIndex)}   >
 
 
-						<SwiperSlide className="..5x2:flex ..5x2:justify-center" >
-							<Image src={oneDetaul} />
-						</SwiperSlide>
-						<SwiperSlide className="..5x2:flex ..5x2:justify-center" >
+						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
 							<Image src={twoDetaul} />
 						</SwiperSlide>
-						<SwiperSlide className="..5x2:flex ..5x2:justify-center" >
+						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
+							<Image src={wom} />
+						</SwiperSlide>
+						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
 							<Image src={oneDetaul} />
 						</SwiperSlide>
 
-						<SwiperSlide className="..5x2:flex ..5x2:justify-center" >
-							<Image src={twoDetaul} />
-						</SwiperSlide>
-						<SwiperSlide className="..5x2:flex ..5x2:justify-center"  >
+						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
 							<Image src={oneDetaul} />
 						</SwiperSlide>
-						<SwiperSlide className="..5x2:flex ..5x2:justify-center"    >
+						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center"  >
+							<Image src={twoDetaul} />
+						</SwiperSlide>
+						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center"    >
 							<Image src={twoDetaul} />
 						</SwiperSlide>
 
@@ -381,42 +385,8 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 					</button>
 				</div>
-				<div className="..5x2:block  pt-3  mt-4 z-10 hidden relative px-1 bg-shadow">
-					<div className="absolute -left-3 top-0 bottom-0 w-3 bg-white">	</div>
-					<div className="absolute -right-3 top-0 bottom-0 w-3 bg-white">	</div>
-					<div>
-						<div className="flex items-center justify-between">
-							<div className="flex items-center">
-								<p className="font-montserrat mr-6px text-13px ..7x230:text-11px">₸ <span className="line-through text-black-70pe">1 580 900.00</span></p>
-								<p className="font-montserrat text-13px text-label-pink-2 ..7x230:text-11px font-semibold flex items-center">₸ 1 580 900.00 <span className="font-normal mx-6px">(-29%)</span> </p>
 
-							</div>
-							<div className="flex items-center text-black-70pe font-montserrat text-13px">
-								<svg width="16" className="mr-0.5" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M10.3333 14.3333C10.3333 14.3333 5.99998 14.6667 3.66665 12C1.33331 9.33333 1.33331 1.33333 1.33331 1.33333C1.33331 1.33333 9.33331 1 12 3C14.6666 5 14 10.6667 14 10.6667" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M14.6666 14.6668C14.6666 14.6668 10.9402 11.8507 8.66665 9.3335C6.39308 6.81633 5.33331 4.3335 5.33331 4.3335" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M8.66669 9.33333L9.00002 5" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
-									<path d="M8.66665 9.33333L5.33331 9" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-
-
-								1.8 Б
-							</div>
-						</div>
-						<p></p>
-
-					</div>
-					<div className="flex mt-3 justify-between items-center">
-						<p className="font-montserrat text-gray-quick-silver text-11px  items-center text-center ">В наличии <br /> <span className="text-primary">{'>'} 50 шт.</span></p>
-						<div className="flex">
-							<button className="  border px-26px mr-3 border-gray-light2 h-8 font-lora text-xs font-medium text-label-orange  ..7x01:mr-1 ..7x01:px-4 ">374 De</button>
-							<button className="  bg-primary px-52px font-montserrat h-8 font-medium text-xs text-white ..7x01:px-7">Купить</button>
-
-						</div>
-
-					</div>
-				</div>
-				<div className=" .2x1:w-317px ..5x2:w-auto  .1x1:w-250px  bg-white z-10 -mt-0 pt-3 ..5x2:mx-0 ..5x1:mx-4      mr-12  .2x10:mr-2 .1x1:mr-0">
+				<div className=" .2x1:w-317px px-3 ..5x2:w-auto  .1x1:w-250px  bg-white z-10 -mt-0 pt-3 ..5x2:mx-0 ..5x1:mx-4      mr-12  .2x10:mr-2 .1x1:mr-0">
 					<p className="font-montserrat font-medium text-xl mb-2 .1x1:mb-0.5   .5x1:text-sm ..7x1:text-sm">Забота о себе каждый день</p>
 					<p className="font-montserrat    text-black-70pe  .1x1:text-10px ..5x2:text-13px .6x3:text-13px .1x1:text-gray-quick-silver ..7x11:h-9 textdots leading-140%">Маска отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения, придает коже ухоженный вид. Насыщает питательными элементами, удерживает влагу внутри, отлично питает и тонизирует кожу, стимулирует обменные процессы, снимает раздражения</p>
 					<button onClick={scrollDescription} className="..6x04:hidden  font-montserrat font-medium text-13px text-primary  mb-5 .1x1:mb-1">Всё о товаре</button>
@@ -465,7 +435,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 
 						<div className="flex  flex-wrap  ..6x04:flex-nowrap  ..6x04:w-475px">
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+							<div onClick={() => setCurrentTonF(1)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 1 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0">
 									<Image src={oneTon} />
 								</div>
@@ -477,7 +447,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 									</div>
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+							<div onClick={() => setCurrentTonF(2)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 2 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={twoTon} /></div>
 
 								<div className="itemTonHover transition-all flex justify-center items-center !hidden opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -487,7 +457,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 									</div>
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+							<div onClick={() => setCurrentTonF(3)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 3 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={treeTon} /></div>
 
 								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -497,7 +467,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 									</div>
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+							<div onClick={() => setCurrentTonF(4)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 4 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={fourTon} /></div>
 
 								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -507,7 +477,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 									</div>
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+							<div onClick={() => setCurrentTonF(5)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 5 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={fiveTon} /></div>
 
 								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -517,7 +487,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 									</div>
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-black mr-2">
+							<div onClick={() => setCurrentTonF(6)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 6 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={sixTon} /> </div>
 
 								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -527,7 +497,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 									</div>
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center   mr-2">
+							<div onClick={() => setCurrentTonF(7)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center   mr-2 ${currentTon === 7 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={sevenTon} /> </div>
 
 								<hr className="px w-14 text-gray absolute rotSearchHover" />
@@ -540,7 +510,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all mr-0 .2x10:mr-2 .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center ">
+							<div onClick={() => setCurrentTonF(8)} className={`h-11 hover:bg-gray-light transition-all mr-0 .2x10:mr-2 .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center ${currentTon === 8 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={eightTon} /> </div>
 
 
@@ -554,7 +524,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+							<div onClick={() => setCurrentTonF(9)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 9 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={nineTon} /> </div>
 
 								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -564,7 +534,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 									</div>
 								</div>
 							</div>
-							<div className="h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2">
+							<div onClick={() => setCurrentTonF(10)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 10 ? '!border-black' : ""}`}>
 								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={tenTon} /></div>
 
 								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
@@ -578,7 +548,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 					</div>
 
 				</div>
-				<div className="   ..5x2:hidden        ..5x2:mt-5  w-150">
+				<div className="px-3   ..5x2:hidden        ..5x2:mt-5  w-150">
 					<div className="border ..6x04:hidden border-gray-light p-5 .1x1:p-3">
 						<div className="flex justify-between items-center">
 							<p className="font-montserrat ">₸ <span className="line-through text-black-70pe">1 580 900.00</span></p>
@@ -594,16 +564,18 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 							</div>
 						</div>
 						<div className="mt-10px mb-4">
-							<p className="font-montserrat text-xl text-label-pink-2 font-semibold flex items-center .4x1:text-base ..5x1:text-sm">₸ 1 580 900.00 <span className="font-normal mx-6px">(-29%)</span> <span className="text-26px font-normal text-stroke ">/</span> <span className="mx-6px .4x1:text-base text-xl text-label-orange font-medium font-montserrat">7 500 De</span></p>
+							<p className="font-montserrat text-xl text-label-pink-2 font-semibold flex items-center .4x1:text-base ..5x1:text-sm .2x00750:text-base">₸ 1 580 900.00 <span className="font-normal mx-6px">(-29%)</span> <span className="text-26px font-normal text-stroke ">/</span> <span className="mx-6px .4x1:text-base text-xl text-label-orange font-medium font-montserrat">7 500 De</span></p>
 
 						</div>
 						<div className="flex w-full justify-between">
 
-							<p className="flex-1 w-full font-montserrat text-gray-quick-silver flex items-center .4x2:text-10px .2x50:text-sm .2x00:text-xs">В наличии <span className="ml-1.5  font-medium relative text-primary flex items-center"> {'>'} 50 шт.
-								{isLike ? <svg className="ml-3px      cursor-pointer transition-all" onClick={() => setLike(false)} width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><g filter="url(#filter0_d_3587_1020586)"><path d="M29.0136 15C27.212 15 25.4828 15.8387 24.3542 17.1537C23.2256 15.8387 21.4965 15 19.6948 15C16.5057 15 14 17.4954 14 20.6948C14 24.5984 17.5204 27.7978 22.8529 32.6332L24.3542 34L25.8556 32.6332C31.188 27.7978 34.7084 24.5984 34.7084 20.6948C34.7084 17.4954 32.2027 15 29.0136 15Z" fill="#FF6363"></path></g><defs><filter id="filter0_d_3587_1020586" x="4" y="10" width="40.7084" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="5"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.388235 0 0 0 0 0.388235 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3587_1020586"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3587_1020586" result="shape"></feBlend></filter></defs></svg>
-									: <svg onClick={() => setLike(true)} onMouseEnter={() => setHoverHeart(true)} onMouseLeave={() => setHoverHeart(false)} className=" .2x00:ml-0 ml-14px cursor-pointer transition-all" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M12.4578 19.1008L12.3542 19.2044L12.2403 19.1008C7.32207 14.6381 4.07084 11.6872 4.07084 8.69482C4.07084 6.62398 5.62398 5.07084 7.69482 5.07084C9.28937 5.07084 10.8425 6.10627 11.3913 7.51444H13.3172C13.8659 6.10627 15.4191 5.07084 17.0136 5.07084C19.0845 5.07084 20.6376 6.62398 20.6376 8.69482C20.6376 11.6872 17.3864 14.6381 12.4578 19.1008ZM17.0136 3C15.212 3 13.4828 3.83869 12.3542 5.15368C11.2256 3.83869 9.49646 3 7.69482 3C4.50572 3 2 5.49537 2 8.69482C2 12.5984 5.52044 15.7978 10.8529 20.6332L12.3542 22L13.8556 20.6332C19.188 15.7978 22.7084 12.5984 22.7084 8.69482C22.7084 5.49537 20.2027 3 17.0136 3Z" fill={`${hoverHeart ? '#F14155' : "#EDEEEC"}`} />
+							<p className="flex-1 w-full font-montserrat text-gray-quick-silver .2x10:text-12px flex relative items-center .2x00750:text-10px .4x2:text-9px  ">В наличии <span className="ml-1.5  font-medium   text-primary flex items-center"> {'>'} 50 шт.
+								{isLike ? <svg className="absolute .2x00:h-9 .2x00:w-9 .1x1:top-1.5 cursor-pointer right-0 top-1 .2x00:top-2.5" onClick={() => setLike(false)} width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="24" fill="white"></circle><g filter="url(#filter0_d_3587_1020586)"><path d="M29.0136 15C27.212 15 25.4828 15.8387 24.3542 17.1537C23.2256 15.8387 21.4965 15 19.6948 15C16.5057 15 14 17.4954 14 20.6948C14 24.5984 17.5204 27.7978 22.8529 32.6332L24.3542 34L25.8556 32.6332C31.188 27.7978 34.7084 24.5984 34.7084 20.6948C34.7084 17.4954 32.2027 15 29.0136 15Z" fill="#FF6363"></path></g><defs><filter id="filter0_d_3587_1020586" x="4" y="10" width="40.7084" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix><feOffset dy="5"></feOffset><feGaussianBlur stdDeviation="5"></feGaussianBlur><feComposite in2="hardAlpha" operator="out"></feComposite><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.388235 0 0 0 0 0.388235 0 0 0 0.2 0"></feColorMatrix><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3587_1020586"></feBlend><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3587_1020586" result="shape"></feBlend></filter></defs></svg>
+									: <svg onClick={() => setLike(true)} onMouseEnter={() => setHoverHeart(true)} onMouseLeave={() => setHoverHeart(false)} className="absolute .2x00:h-9 .1x1:top-1.5 .2x00:w-9 cursor-pointer right-0 top-1 .2x00:top-2.5" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="24" cy="24" r="24" fill="white" />
+										<path d="M24.4578 31.1008L24.3542 31.2044L24.2403 31.1008C19.3221 26.6381 16.0708 23.6872 16.0708 20.6948C16.0708 18.624 17.624 17.0708 19.6948 17.0708C21.2894 17.0708 22.8425 18.1063 23.3913 19.5144H25.3172C25.8659 18.1063 27.4191 17.0708 29.0136 17.0708C31.0845 17.0708 32.6376 18.624 32.6376 20.6948C32.6376 23.6872 29.3864 26.6381 24.4578 31.1008ZM29.0136 15C27.212 15 25.4828 15.8387 24.3542 17.1537C23.2256 15.8387 21.4965 15 19.6948 15C16.5057 15 14 17.4954 14 20.6948C14 24.5984 17.5204 27.7978 22.8529 32.6332L24.3542 34L25.8556 32.6332C31.188 27.7978 34.7084 24.5984 34.7084 20.6948C34.7084 17.4954 32.2027 15 29.0136 15Z" fill={`${hoverHeart ? '#F14155' : "#EDEEEC"}`} />
 									</svg>}
+
 							</span>
 							</p>
 							<div className="flex-1 h-14 .1x1:h-12   ml-4    border    border-gray-light2 flex items-center justify-center">
@@ -674,7 +646,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 						</div>
 
 						<div className='bg-input-error-bg pl-4 py-3 px-2'>
-							<p className='.2x1:text-10px font-montserrat leading-140% text-11px font-normal flex items-center'>
+							<p className='.2x1:text-10px font-montserrat .1x01:text-8px leading-140% text-11px font-normal flex items-center'>
 								<svg className='mr-2' width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M7.33301 10.0003H8.66634V11.3337H7.33301V10.0003ZM7.99968 2.66699C5.05968 2.66699 2.66634 5.06032 2.66634 8.00032C2.66634 10.9403 5.05968 13.3337 7.99968 13.3337C10.9397 13.3337 13.333 10.9403 13.333 8.00032C13.333 5.06032 10.9397 2.66699 7.99968 2.66699ZM7.99968 14.667C7.1242 14.667 6.25729 14.4946 5.44845 14.1595C4.63962 13.8245 3.90469 13.3334 3.28563 12.7144C2.03539 11.4641 1.33301 9.76843 1.33301 8.00032C1.33301 6.23221 2.03539 4.53652 3.28563 3.28628C3.90469 2.66722 4.63962 2.17616 5.44845 1.84112C6.25729 1.50609 7.1242 1.33366 7.99968 1.33365C9.76779 1.33366 11.4635 2.03603 12.7137 3.28628C13.964 4.53652 14.6663 6.23221 14.6663 8.00032C14.6663 8.8758 14.4939 9.74271 14.1589 10.5515C13.8238 11.3604 13.3328 12.0953 12.7137 12.7144C12.0947 13.3334 11.3597 13.8245 10.5509 14.1595C9.74206 14.4946 8.87516 14.667 7.99968 14.667ZM7.33301 4.66699H8.66634V8.66699H7.33301V4.66699Z" fill="black" />
 								</svg>
@@ -740,12 +712,12 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 									</div>
 									<div className={`flex items-center mb-6px ${dropDownds.free ? 'block' : 'hidden'}`}>
 										<p id="click" className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Бутики</p>
-										<span id="click" className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<span id="click" className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 .4x1:hidden  " width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg> от 0 ₽</span>
 									</div>
 
-									<button className={`${dropDownds.free ? 'hidden' : ""} p-1.5 ..5x1:text-8px px-3 ..7x230:text-9px ..7x230:px-1 .2x00:text-10px rounded-xl bg-primary-searchBG ..6x04:text-10px   text-11px font-montserrat text-black`}>ещё</button>
+									<button className={`${dropDownds.free ? 'hidden' : ""} -mt-1.5 p-1.5 h-27px ..5x1:text-8px px-3 ..7x230:text-9px ..7x230:px-1 .2x00:text-10px rounded-xl bg-primary-searchBG ..6x04:text-10px   text-11px font-montserrat text-black`}>ещё</button>
 
 
 
@@ -778,7 +750,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 											<p className="font-montserrat mb-0.5 .2x00:text-xs">Курьерская</p>
 											<p className="font-montserrat text-13px to-black-70pe .2x00:text-xs">2-3 дня</p>
 
-											<SectionImgs variant={'Dostavka'} adapt={true} noCenter={true} mr3={true} textImg={[yandex, pochtaRF, ozon, cdek]} />
+											<SectionImgs drop={true} variant={'DostavkaDropDown'} adapt={true} noCenter={true} mr3={true} textImg={[yandex, pochtaRF, ozon, cdek]} />
 
 										</div>
 										<div>
@@ -813,7 +785,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 											<p className="font-montserrat mb-0.5 .2x00:text-xs">ПВЗ/постаматы</p>
 											<p className="font-montserrat text-13px to-black-70pe .2x00:text-xs">4-6 дней</p>
 
-											<SectionImgs variant={'Dostavka'} adapt={true} noCenter={true} mr3={true} textImg={[ozon, cdek, berry]} />
+											<SectionImgs variant={'DostavkaDropDown'} adapt={true} noCenter={true} mr3={true} textImg={[ozon, cdek, berry]} />
 
 										</div>
 										<div>
@@ -1011,7 +983,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 						</div>
 						<div className={`p-3 pt-0 ${dropDownds.promo ? 'block' : 'hidden'}`}>
 							<div className="mb-3 w-full flex ">
-								<input className="h-11 w-full rounded font-noto-sans text-13px outline-none px-10px mr-3 border border-gray-quick-silver" type="text" value={"УСПЕХ"} />
+								<input className="h-11 w-full rounded font-noto-sans text-13px outline-none px-10px mr-3 border border-gray-quick-silver" type="text" onChange={e => inputChange(e)} value={value} placeholder={"УСПЕХ"} />
 								<button className="h-11 px-30px font-montserrat text-xs text-primary font-medium bg-gray-light2 rounded">
 									Применить
 								</button>
@@ -1056,6 +1028,43 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 				</div>
 
+			</div>
+			<div className="fixed left-0  right-0 ..6x6:bottom-66px bottom-94px z-50 ">
+				<div className="..5x2:block   pb-3  bg-white   pt-3  mt-4 z-10 hidden relative px-1 bg-shadow">
+					<div className="absolute -left-3 top-0 bottom-0 w-3 bg-white">	</div>
+					<div className="absolute -right-3 top-0 bottom-0 w-3 bg-white">	</div>
+					<div>
+						<div className="flex items-center justify-between">
+							<div className="flex items-center">
+								<p className="font-montserrat mr-6px text-13px ..7x230:text-11px">₸ <span className="line-through text-black-70pe">1 580 900.00</span></p>
+								<p className="font-montserrat text-13px text-label-pink-2 ..7x230:text-11px font-semibold flex items-center">₸ 1 580 900.00 <span className="font-normal mx-6px">(-29%)</span> </p>
+
+							</div>
+							<div className="flex items-center text-black-70pe font-montserrat text-13px">
+								<svg width="16" className="mr-0.5" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.3333 14.3333C10.3333 14.3333 5.99998 14.6667 3.66665 12C1.33331 9.33333 1.33331 1.33333 1.33331 1.33333C1.33331 1.33333 9.33331 1 12 3C14.6666 5 14 10.6667 14 10.6667" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M14.6666 14.6668C14.6666 14.6668 10.9402 11.8507 8.66665 9.3335C6.39308 6.81633 5.33331 4.3335 5.33331 4.3335" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M8.66669 9.33333L9.00002 5" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M8.66665 9.33333L5.33331 9" stroke="#337202" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+
+
+								1.8 Б
+							</div>
+						</div>
+						<p></p>
+
+					</div>
+					<div className="flex mt-3 justify-between items-center">
+						<p className="font-montserrat text-gray-quick-silver text-11px  items-center text-center ">В наличии <br /> <span className="text-primary">{'>'} 50 шт.</span></p>
+						<div className="flex">
+							<button className="  border px-26px mr-3 border-gray-light2 h-8 font-lora text-xs font-medium text-label-orange  ..7x01:mr-1 ..7x01:px-4 ">374 De</button>
+							<button className="  bg-primary px-52px font-montserrat h-8 font-medium text-xs text-white ..7x01:px-7">Купить</button>
+
+						</div>
+
+					</div>
+				</div>
 			</div>
 
 			{/* <div className="flex   -mr-1  ">
@@ -1869,7 +1878,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 				</div>
 			</div> */}
 
-			<div className="hidden ..5x2:!block ..5x2:mt-5">
+			<div className="hidden px-3 ..5x2:!block ..5x2:mt-5">
 				<div onClick={(e) => setFilter('sale', e)} className={`  h-110px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.sale ? 'activeSlide' : ''}`}>
 
 					<div id="click" className={`flex px-3 ..6x04:pl-0 ..6x04:mt-0 transiton-all mt-8 .1x1:pb-1 .1x1:mt-0   items-center mt-3 relative ..6x04:pb-10px pb-4 border-b border-dashed border-gray ${dropDownds.sale ? 'border-none pb-0' : ''}`}>
@@ -1983,7 +1992,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 								</div>
 								<div className={`flex items-center mb-6px ${dropDownds.free ? 'block' : 'hidden'}`}>
 									<p id="click" className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Бутики</p>
-									<span id="click" className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<span id="click" className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1  ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 									</svg> от 0 ₽</span>
 								</div>

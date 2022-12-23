@@ -462,7 +462,7 @@ export default function ProductCard({ obj }) {
 							styles =
 								`mt-5 mx-29px !w-218px !h-218px ..5x2:!w-130px ..5x2:!h-130px ..5x2:mx-22px ${obj.isMiniProduct ? '!h-146px !mt-3 !w-146px  ' : ""}`;
 						} else {
-							styles = `mt-5 mx-29px !w-218px !h-218px ..5x2:!w-130px ..5x2:!h-130px ..5x2:mx-22px ${obj.isMiniProduct ? '!h-146px !mt-3 !w-146px  ' : ""}`;
+							styles = `!w-276px !h-237px ..5x2:!w-176px ..5x2:!h-150px ${obj.isMiniProduct ? '!h-146px !mt-3 !w-146px  ' : ""}`;
 							;
 						}
 

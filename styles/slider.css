@@ -3513,7 +3513,7 @@
 	display: flex !important;
 }
 
-#checkSearchAll:checked+label {
+.checkSearchAll:checked+label {
 
 
 	border: none;
@@ -3578,4 +3578,137 @@
 
 .w-150 {
 	width: 144%;
+}
+
+
+
+
+
+
+.sliderDetail .swiper-pagination {
+	display: flex;
+	justify-content: center;
+
+	margin-top: 12px;
+}
+
+.sliderDetail .swiper-pagination .swiper-pagination-bullet.Cus:first-child {
+	border-radius: 8px 0 0 8px;
+}
+
+.sliderDetail .swiper-pagination .swiper-pagination-bullet.Cus:last-child {
+	border-radius: 0px 8px 8px 0px;
+}
+
+.sliderDetail .swiper-pagination .swiper-pagination-bullet.Cus {
+	color: black;
+	width: 23px !important;
+	height: 3px !important;
+	background-color: #e5e6e4;
+	margin: 0;
+
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.16);
+	bottom: 15px;
+}
+
+
+.sliderDetail {
+	overflow: visible !important;
+}
+
+.sliderDetail .swiper-scrollbar-drag {
+	width: 36px !important;
+
+}
+
+.sliderDetail .swiper-scrollbar {
+	position: absolute;
+
+	left: 50%;
+	overflow: visible !important;
+
+
+}
+
+
+
+
+
+.sliderDetailLast .swiper-pagination {
+	display: flex;
+	justify-content: center;
+
+	margin-top: 12px;
+}
+
+.sliderDetailLast .swiper-pagination .swiper-pagination-bullet.Cus:first-child {
+	border-radius: 8px 0 0 8px;
+}
+
+.sliderDetailLast .swiper-pagination .swiper-pagination-bullet.Cus:last-child {
+	border-radius: 0px 8px 8px 0px;
+}
+
+.sliderDetailLast .swiper-pagination .swiper-pagination-bullet.Cus {
+	color: black;
+	width: 23px !important;
+	height: 3px !important;
+	background-color: #e5e6e4;
+	margin: 0;
+
+	box-shadow: 0 6px 6px rgba(0, 0, 0, 0.16);
+	bottom: 15px;
+}
+
+
+
+.sliderDetailLast .swiper-scrollbar-drag {
+	width: 36px !important;
+
+}
+
+.sliderDetailLast .swiper-scrollbar {
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	overflow: visible !important;
+	margin-top: 12px;
+
+}
+
+.sliderDetailLast .swiper-scrollbar:last-child {
+	bottom: -20px !important;
+}
+
+.sliderDetailLast {
+	overflow: visible !important;
+}
+
+.sliderDetail .swiper-scrollbar {
+	bottom: 10px !important;
+}
+
+.customTwo .swiper-scrollbar {
+	bottom: -15px !important;
+}
+
+.customTwo .swiper-scrollbar-drag {
+	width: 57px !important;
+
+}
+
+@media (min-width: 1000px) {
+	.sliderDetail .swiper-scrollbar {
+		display: none !important;
+
+	}
+
+
+
+	.sliderDetailLast .swiper-scrollbar {
+		display: none !important;
+
+	}
+
+
 }

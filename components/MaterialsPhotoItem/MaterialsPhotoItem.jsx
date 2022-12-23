@@ -24,7 +24,7 @@ const MaterialsPhotoItem = ({ close, selectedAll }) => {
 	return (
 		<div className={`px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI transition-all border-white bg-white-BG_FILTER hover:border-gray-light2 ${isUse || selectedAll ? '!border-gray-light2' : ""}`}>
 			<div className={`hidden items-center absolute left-14px top-14px hoverShowI ${isUse || selectedAll ? '!block' : ""}`}>
-				<input ref={selectedInput} className='hidden' id='checkSearchAll' type="checkbox" />
+				<input ref={selectedInput} className='hidden checkSearchAll' type="checkbox" />
 				<label onClick={setUse} htmlFor="checkSearchAll" className={`w-5 h-5 border-gray-deNum cursor-pointer border ${isUse || selectedAll ? '!block' : ""}`}></label>
 			</div>
 

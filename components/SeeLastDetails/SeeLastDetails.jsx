@@ -49,7 +49,7 @@ const SeeLastDetails = () => {
 				<Swiper ref={sliderSpecial} slidesPerView={2} scrollbar={{
 					hide: false,
 					draggable: true,
-				}} modules={[Navigation, Scrollbar]} className=' photoCus sliderPaginationCustom ' breakpoints={{
+				}} modules={[Navigation, Pagination, Scrollbar]} className=' photoCus   sliderDetail' breakpoints={{
 					360: {
 						slidesPerView: 2
 					},
@@ -74,7 +74,7 @@ const SeeLastDetails = () => {
 					1850: {
 						slidesPerView: 6
 					}
-				}} modules={[Navigation, Pagination]}  >
+				}}    >
 
 					<SwiperSlide className="..7x1:!w-44 pb-10 ..7x1:mr-2 ">
 						<ProductCard

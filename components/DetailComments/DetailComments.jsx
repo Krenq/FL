@@ -59,7 +59,7 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 			<div>
 				<h4 className="font-montserrat font-medium text-xl mb-3 ..6x3:mb-6px ..6x3:text-sm">Фото и видео отзывы</h4>
 				<div className="mb-12 relative ..6x3:-mr-3 ..6x3:mb-6">
-					<Swiper ref={sliderPhoto} className=' photoCus sliderPaginationCustom ' breakpoints={{
+					<Swiper ref={sliderPhoto} className=' photoCus customTwo sliderDetail ' breakpoints={{
 						950: {
 							slidesPerView: 5
 						},

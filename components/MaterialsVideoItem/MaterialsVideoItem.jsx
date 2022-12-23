@@ -4,9 +4,13 @@ import { useRef, useState } from "react"
 import videoPreview from '../../images/templates/videoPreview.jpg'
 const MaterialsVideoItem = ({ setVideo, selectedAll }) => {
 	const [hoverDownload, setHoverDownload] = useState(false)
-
+	const [isUse, setIsUse] = useState(false)
 	const hover = () => setHoverDownload(!hoverDownload)
+	const setUse = () => {
 
+		selectedInput.current.checked = !isUse
+		setIsUse(!isUse)
+	}
 	const selectedInput = useRef(null)
 	useEffect(() => {
 		selectedInput.current.checked = selectedAll
@@ -14,10 +18,10 @@ const MaterialsVideoItem = ({ setVideo, selectedAll }) => {
 
 
 	return (
-		<div onClick={setVideo} className={`px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI h-52 transition-all border-white bg-white-BG_FILTER hover:border-gray-light2  ${selectedAll ? '!border-gray-light2' : ""}`}>
+		<div className={`px-60px .1x1:px-10 border mr-10px mb-10px relative hoverI h-52 transition-all border-white bg-white-BG_FILTER hover:border-gray-light2  ${selectedAll ? '!border-gray-light2' : ""}`}>
 			<div className={`hidden items-center absolute left-14px top-14px hoverShowI ${selectedAll ? '!block' : ""}`}>
-				<input ref={selectedInput} className='hidden' id='checkSearchAll' type="checkbox" />
-				<label htmlFor="checkSearchAll" className={`w-5 h-5 border-gray-deNum cursor-pointer border ${selectedAll ? '!block' : ""}`}></label>
+				<input ref={selectedInput} className='hidden checkSearchAll' type="checkbox" />
+				<label onClick={setUse} htmlFor="checkSearchAll" className={`w-5 h-5 border-gray-deNum cursor-pointer border ${selectedAll ? '!block' : ""}`}></label>
 			</div>
 
 			<svg onMouseEnter={hover} onMouseLeave={hover} className={`absolute cursor-pointer hidden hoverShowI left-3 top-11 ${selectedAll ? '!block' : ""}`} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
