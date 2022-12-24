@@ -162,6 +162,20 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 			window.scrollTo({ top: 1500 })
 
 		}
+	const miniPhotosDots = [
+		oneSmall,
+		twoSmall,
+		oneMini,
+		oneMini
+	],
+		sliderPhotos = [
+			twoDetaul,
+			wom,
+			oneDetaul,
+			oneDetaul,
+			twoDetaul,
+			twoDetaul
+		]
 
 
 
@@ -286,8 +300,8 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 			<div className="mt-6 ..5x2:mt-2 flex ..5x2:flex-col ..5x2:w-full ">
 				<div className="pl-72px .3x1:pl-12 .3x1:mr-5 ..5x2:pl-0 ..5x1:mr-0 mr-50px relative">
 					<div className="absolute   cursor-pointer   ..6x04:top-2 ..5x2:flex-col left-0 ..5x3:left-3 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
+						{miniPhotosDots[0] && <MiniPhotoDots slider={slider} img={miniPhotosDots[0]} length={0} snap={snap} />}
 
-						<MiniPhotoDots slider={slider} img={oneSmall} length={0} snap={snap} />
 						<div className=" .3x1:h-9   .3x1:w-9  h-60px flex flex-col justify-end">
 							<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center   justify-center .3x1:text-9px .3x1:h-14px .3x1:w-9">HIT!</p>
 							<p className="font-noto-sans border border-black-70pe font-medium tracking-widest text-black-70pe w-16 h-6 flex bg-white items-center justify-center .3x1:h-14px .3x1:w-9 .3x1:text-9px ">NEW</p>
@@ -296,10 +310,8 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 							if (e.target.src === 'http://localhost:6006/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDetailCardSmallTwo.229bdfcb.jpg&w=128&q=75' && e.target.id !== '2' && e.target.id !== '3') slider.current.swiper.slideTo(1)
 						}} className={` .3x1:h-9 relative cursor-pointer border border-white .3x1:w-9   ..5x2:hidden mr-5  w-60px h-60px mb-2`}>
+							{miniPhotosDots.map((photo, i) => i !== 0 && <MiniPhotoDots slider={slider} img={photo} length={i} snap={snap} />)}
 
-							<MiniPhotoDots slider={slider} img={twoSmall} length={1} snap={snap} />
-							<MiniPhotoDots slider={slider} img={oneMini} length={2} snap={snap} />
-							<MiniPhotoDots slider={slider} img={oneMini} length={3} snap={snap} />
 
 						</div>
 						<div className="..5x2:mt-1 relative cursor-pointer .3x1:h-9 .3x1:w-9  w-60px h-60px">
@@ -345,27 +357,11 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 
 					<Swiper className="w-608px ..5x2:w-auto ..5x2:h-auto .1x1:w-250px .1x1:h-250px .2x007:w-500px .2x007:h-500px .6x3:w-360px .3x1:w-300px .3x1:h-300px .6x3:h-360px" ref={slider} onSwiper={e => setAllSl(e.imagesLoaded / 2)} onSlideChange={e => setCurrentSnap(e.snapIndex)}   >
+						{sliderPhotos.map((photo, i) => <SwiperSlide key={i} onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
+							<Image src={photo} />
+						</SwiperSlide>)}
 
 
-						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
-							<Image src={twoDetaul} />
-						</SwiperSlide>
-						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
-							<Image src={wom} />
-						</SwiperSlide>
-						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
-							<Image src={oneDetaul} />
-						</SwiperSlide>
-
-						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center" >
-							<Image src={oneDetaul} />
-						</SwiperSlide>
-						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center"  >
-							<Image src={twoDetaul} />
-						</SwiperSlide>
-						<SwiperSlide onClick={close} className="..5x2:flex hoverCustom ..5x2:justify-center"    >
-							<Image src={twoDetaul} />
-						</SwiperSlide>
 
 
 					</Swiper>
