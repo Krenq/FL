@@ -404,6 +404,7 @@ module.exports = {
 			},
 			borderRadius: {
 				'3px': '3px',
+				'20px': '20px',
 				'32px': '32px',
 				'56px': '56px',
 			},

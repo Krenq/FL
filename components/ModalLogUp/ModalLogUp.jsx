@@ -2,21 +2,31 @@ import { useEffect, useState } from 'react';
 import Logo from '../ui/Logo/Logo';
 import ava from '../../images/templates/avaLogIn.png';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ModalLogUp({ show, setShow, setBoolLogIn }) {
-  const [visPassword, setVisPassword] = useState(true);
   const [checkBoxRemember, setCheckBoxRemember] = useState(false);
+  const [checkBoxConsult, setCheckBoxConsult] = useState(false);
   const [disBtn, setDisBtn] = useState(true);
   const [nameInput, setNameInput] = useState('');
-  const [passInput, setPassInput] = useState('');
+  const [lastNameInput, setLastNameInput] = useState('');
+  const [phoneInput, setPhoneInput] = useState('');
+  const [birthdayInput, setBirthdayInput] = useState('');
+  const [consultInput, setConsultInput] = useState('');
   const [error, setError] = useState(false);
+  const [errorConsult, setErrorConsult] = useState(false);
 
   useEffect(() => {
     checkInputs();
-  }, [nameInput, passInput]);
+  }, [nameInput, lastNameInput, phoneInput, birthdayInput]);
 
   const checkInputs = () => {
-    if (nameInput.length > 0 && passInput.length > 0) {
+    if (
+      nameInput.length > 0 &&
+      lastNameInput.length > 0 &&
+      phoneInput.length > 0 &&
+      birthdayInput.length > 0
+    ) {
       return setDisBtn(false);
     } else {
       return setDisBtn(true);
@@ -25,7 +35,9 @@ export default function ModalLogUp({ show, setShow, setBoolLogIn }) {
 
   const clearInputs = () => {
     setNameInput('');
-    setPassInput('');
+    setLastNameInput('');
+    setPhoneInput('');
+    setBirthdayInput('');
   };
 
   const errorFromB = () => {
@@ -36,6 +48,13 @@ export default function ModalLogUp({ show, setShow, setBoolLogIn }) {
     setShow();
     setBoolLogIn(true);
     clearInputs();
+  };
+
+  const reWritePhoneInput = (value) => {
+    let newStr = value.trim().replace(/[^0-9]+/g, '');
+
+    setPhoneInput(newStr);
+    console.log(newStr.replace(/^((\+7|7|8)+([0-9]){10})$/g));
   };
 
   return (
@@ -165,9 +184,10 @@ export default function ModalLogUp({ show, setShow, setBoolLogIn }) {
                     Имя*
                   </label>
                   <input
-                    className="inputForm w-full h-11 border border-gray-quick-silver px-2.5 "
+                    className="inputForm w-full h-11 border border-gray-quick-silver px-2.5 focus:border-primary "
                     type="text"
-                    name=""
+                    value={nameInput}
+                    onChange={(e) => setNameInput(e.target.value)}
                     id="name"
                     placeholder="введите"
                   />
@@ -181,9 +201,10 @@ export default function ModalLogUp({ show, setShow, setBoolLogIn }) {
                     Фамилия *
                   </label>
                   <input
-                    className="inputForm w-full h-11 border border-gray-quick-silver px-2.5 "
+                    className="inputForm w-full h-11 border border-gray-quick-silver px-2.5 focus:border-primary"
                     type="text"
-                    name=""
+                    value={lastNameInput}
+                    onChange={(e) => setLastNameInput(e.target.value)}
                     id="lastName"
                     placeholder="введите"
                   />
@@ -196,13 +217,35 @@ export default function ModalLogUp({ show, setShow, setBoolLogIn }) {
                   >
                     Телефон *
                   </label>
-                  <input
-                    className="inputForm w-full h-11 border border-gray-quick-silver px-2.5 "
-                    type="text"
-                    name=""
-                    id="phone"
-                    placeholder="введите"
-                  />
+
+                  <div className="flex relative">
+                    <div className="flex flex-row items-center bg-gray-light2 px-2.5 border border-r-0 border-gray-quick-silver cursor-pointer focus:border-primary">
+                      <div className=" bg-black w-18px h-18px mr-2 rounded-full "></div>
+                      <svg
+                        width="10"
+                        height="10"
+                        viewBox="0 0 10 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M1.875 3.75L5 6.875L8.125 3.75H1.875Z"
+                          fill="#18202B"
+                        />
+                      </svg>
+                    </div>
+
+                    <span className="absolute top-2.5 left-66px">+7</span>
+
+                    <input
+                      className="inputForm w-full h-11 border border-gray-quick-silver px-38px focus:border-primary"
+                      type="tel"
+                      value={phoneInput}
+                      onChange={(e) => reWritePhoneInput(e.target.value)}
+                      id="phone"
+                      placeholder="(___) ___-__-__"
+                    />
+                  </div>
                 </div>
 
                 <div className="flex flex-col w-full gap-1">
@@ -213,9 +256,10 @@ export default function ModalLogUp({ show, setShow, setBoolLogIn }) {
                     Дата рождения *
                   </label>
                   <input
-                    className="inputForm w-full h-11 border border-gray-quick-silver px-2.5 "
+                    className="inputForm w-full h-11 border border-gray-quick-silver px-2.5 focus:border-primary"
                     type="text"
-                    name=""
+                    value={birthdayInput}
+                    onChange={(e) => setBirthdayInput(e.target.value)}
                     id="birthday"
                     placeholder="ДД.ММ.ГГГГ"
                   />
@@ -245,13 +289,164 @@ export default function ModalLogUp({ show, setShow, setBoolLogIn }) {
                 <p className=" font-montserrat font-normal text-base leading-140%">
                   У вас есть консультант?
                 </p>
-                <div className=" h-4 w-4 bg-black"></div>
+
+                <div
+                  onClick={() => setCheckBoxConsult(!checkBoxConsult)}
+                  className={` h-25px w-50px rounded-20px flex ${
+                    checkBoxConsult ? '  bg-primary-hover' : ' bg-stroke'
+                  } items-center cursor-pointer transition-all duration-300`}
+                >
+                  <div
+                    className={`h-30px w-30px rounded-full flex items-center justify-center switchConsult transition-all duration-300 ${
+                      checkBoxConsult
+                        ? ' bg-primary translate-x-3/4'
+                        : ' bg-white translate-x-0'
+                    }`}
+                  >
+                    <svg
+                      width="21"
+                      height="20"
+                      viewBox="0 0 23 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_4356_734359)">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M10.8572 -0.355957L13.16 6.79978H20.6124L14.5833 11.2223L16.8862 18.378L10.8572 13.9555L4.82809 18.378L7.13099 11.2223L1.10193 6.79978H8.55426L10.8572 -0.355957ZM10.8572 3.68913L9.45379 8.04978H4.91239L8.58646 10.7448L7.18309 15.1055L10.8572 12.4104L14.5312 15.1055L13.1278 10.7448L16.8019 8.04978H12.2605L10.8572 3.68913Z"
+                          fill={checkBoxConsult ? 'white' : 'black'}
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_4356_734359">
+                          <rect
+                            width="19.8095"
+                            height="20"
+                            fill="white"
+                            transform="translate(0.952393)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                </div>
               </div>
 
-              <div className="w-full h-11 mb-4">
-                <button className="flex items-center justify-center h-full w-full bg-gray-light2 font-montserrat font-medium text-13px text-primary leading-100%">
-                  Зарегистрироваться
-                </button>
+              {checkBoxConsult && (
+                <>
+                  <div className="flex flex-row items-center w-full relative">
+                    <div className="absolute left-2.5">
+                      {consultInput.length > 0 ? (
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M15.75 5.24988L6.75 14.2499L2.625 10.1249L3.6825 9.06738L6.75 12.1274L14.6925 4.19238L15.75 5.24988Z"
+                            fill="#337202"
+                          />
+                        </svg>
+                      ) : (
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M3.25 9.16667C3.25 5.89898 5.89898 3.25 9.16667 3.25C12.4344 3.25 15.0833 5.89898 15.0833 9.16667C15.0833 12.4344 12.4344 15.0833 9.16667 15.0833C5.89898 15.0833 3.25 12.4344 3.25 9.16667ZM9.16667 1.75C5.07055 1.75 1.75 5.07055 1.75 9.16667C1.75 13.2628 5.07055 16.5833 9.16667 16.5833C10.9446 16.5833 12.5764 15.9577 13.854 14.9147L16.9697 18.0303C17.2626 18.3232 17.7374 18.3232 18.0303 18.0303C18.3232 17.7374 18.3232 17.2626 18.0303 16.9697L14.9147 13.854C15.9577 12.5764 16.5833 10.9446 16.5833 9.16667C16.5833 5.07055 13.2628 1.75 9.16667 1.75Z"
+                            fill="black"
+                          />
+                        </svg>
+                      )}
+                    </div>
+
+                    <input
+                      className="inputForm w-full h-11 border border-gray-quick-silver px-10 focus:border-primary"
+                      type="text"
+                      name=""
+                      value={consultInput}
+                      onChange={(e) => setConsultInput(e.target.value)}
+                      placeholder="ID консультанта"
+                    />
+
+                    {consultInput.length > 0 && (
+                      <div
+                        onClick={() => setConsultInput('')}
+                        className="absolute right-3 cursor-pointer"
+                      >
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.3334 6.66675L6.66675 13.3334M6.66675 6.66675L13.3334 13.3334"
+                            stroke="#949792"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+
+                  {consultInput.length > 0 && (
+                    <div className="mt-13px">
+                      <div className="">
+                        <div className=" bg-gray-100 flex flex-row pl-2 py-2 border border-stroke">
+                          <div className="flex items-center mr-2">
+                            <div className="flex w-10 h-10 ">
+                              <Image
+                                className="rounded-full"
+                                src={ava}
+                                width={40}
+                                height={40}
+                                quality={100}
+                              />
+                            </div>
+                          </div>
+                          <div className="flex flex-col">
+                            <div className="mb-1">
+                              <p className=" font-noto-sans font-medium text-sm leading-140%">
+                                Одинцова Марина Валентиновна
+                              </p>
+                            </div>
+                            <div className=" mb-2">
+                              <p className=" font-noto-sans font-normal text-13px leading-120% text-gray-quick-silver">
+                                Россия, №14501257
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </>
+              )}
+
+              <div className="w-full h-11 mb-4 mt-6">
+                {disBtn ? (
+                  <button
+                    className="flex items-center justify-center h-full w-full bg-gray-light2 font-montserrat font-medium text-13px text-primary leading-100%"
+                    disabled
+                  >
+                    Зарегистрироваться 1
+                  </button>
+                ) : (
+                  <button className="flex items-center justify-center h-full w-full bg-primary font-montserrat font-medium text-13px text-white leading-100%">
+                    Зарегистрироваться 2
+                  </button>
+                )}
               </div>
 
               <div className=" flex flex-row items-top mt-3">
