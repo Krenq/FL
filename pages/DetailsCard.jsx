@@ -29,6 +29,7 @@ import LeftComment from "../components/LeftComment/LeftComment";
 import { useRef } from "react";
 import ViewPhoto from "../components/ViewPhoto/ViewPhoto";
 import BasketModal from "../components/BasketModal/BasketModal";
+import MenuPhone from "../components/MenuPhone/MenuPhone";
 
 const DetailsCard = () => {
 	const [showSearch, setShowSearch] = useState(false)
@@ -56,7 +57,8 @@ const DetailsCard = () => {
 		setShowIn = () => {
 			setShowInBask(!showInBask)
 		}
-
+	const [showMenu, setShowMenu] = useState(false)
+	const setShowF = () => setShowMenu(!showMenu)
 	return (
 		<>
 			<Header showSearch={showSearch} setShowSearch={setShowSearch} />
@@ -73,7 +75,8 @@ const DetailsCard = () => {
 			<LeftComment show={show} setShow={setShowL} />
 			<BasketModal show={showInBask} setShow={setShowIn} />
 			<Footer />
-			<PhoneNavigation />
+			<PhoneNavigation setShow={setShowF} showMenu={showMenu} showBurger={false} setShowBurger={false} />
+			< MenuPhone showMenu={showMenu} showBurger={false} setShowBurger={false} />
 		</>
 
 	)

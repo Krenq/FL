@@ -30,6 +30,7 @@ import EffectsItemDetail from "../EffectsItemDetail/EffectsItemDetail";
 import SectionImgs from "../InstrumentItem/SectionImgs";
 import Link from "next/link";
 import MiniPhotoDots from "../MiniPhotoDots/MiniPhotoDots";
+import Ton from "../Ton/Ton";
 const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 	const [buttonHover, setButtonHover] = useState(false),
 		[buttonHoverNext, setButtonHoverNext] = useState(false),
@@ -43,7 +44,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 		[allSlides, setAllSlides] = useState(0),
 		[snap, setSnap] = useState(0),
 		[currentTon, setCurrentTon] = useState(6),
-		[value, setValue] = useState('')
+		[value, setValue] = useState('УСПЕХ')
 
 
 	const inputChange = (e) => setValue(e.target.value)
@@ -162,20 +163,27 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 			window.scrollTo({ top: 1500 })
 
 		}
-	const miniPhotosDots = [
-		oneSmall,
-		twoSmall,
-		oneMini,
-		oneMini
-	],
-		sliderPhotos = [
-			twoDetaul,
-			wom,
-			oneDetaul,
-			oneDetaul,
-			twoDetaul,
-			twoDetaul
-		]
+
+	const sliderPhotos = [
+		twoDetaul,
+		wom,
+		oneDetaul,
+		oneDetaul,
+
+	]
+
+	const tons = [
+		{ src: oneTon },
+		{ src: twoTon },
+		{ src: treeTon },
+		{ src: fourTon },
+		{ src: fiveTon },
+		{ src: sixTon },
+		{ src: sevenTon, isNone: true },
+		{ src: eightTon, isNone: true },
+		{ src: nineTon },
+		{ src: tenTon },
+	]
 
 
 
@@ -300,7 +308,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 			<div className="mt-6 ..5x2:mt-2 flex ..5x2:flex-col ..5x2:w-full ">
 				<div className="pl-72px .3x1:pl-12 .3x1:mr-5 ..5x2:pl-0 ..5x1:mr-0 mr-50px relative">
 					<div className="absolute   cursor-pointer   ..6x04:top-2 ..5x2:flex-col left-0 ..5x3:left-3 top-0 flex z-10 w-48 .3x1:w-24 flex-wrap">
-						{miniPhotosDots[0] && <MiniPhotoDots slider={slider} img={miniPhotosDots[0]} length={0} snap={snap} />}
+						{sliderPhotos[0] && <MiniPhotoDots slider={slider} img={sliderPhotos[0]} length={0} snap={snap} />}
 
 						<div className=" .3x1:h-9   .3x1:w-9  h-60px flex flex-col justify-end">
 							<p className="font-noto-sans tracking-widest	font-medium mb-1 bg-label-yellow w-16 h-6 flex items-center   justify-center .3x1:text-9px .3x1:h-14px .3x1:w-9">HIT!</p>
@@ -310,7 +318,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 							if (e.target.src === 'http://localhost:6006/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDetailCardSmallTwo.229bdfcb.jpg&w=128&q=75' && e.target.id !== '2' && e.target.id !== '3') slider.current.swiper.slideTo(1)
 						}} className={` .3x1:h-9 relative cursor-pointer border border-white .3x1:w-9   ..5x2:hidden mr-5  w-60px h-60px mb-2`}>
-							{miniPhotosDots.map((photo, i) => i !== 0 && <MiniPhotoDots slider={slider} img={photo} length={i} snap={snap} />)}
+							{sliderPhotos.map((photo, i) => i !== 0 && <MiniPhotoDots slider={slider} img={photo} length={i} snap={snap} />)}
 
 
 						</div>
@@ -425,121 +433,16 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 						</div>
 
 					</div>
-					<p className="font-montserrat mb-2 .1x1:text-13px .1x1:mb-1 text-gray-quick-silver flex  items-center ">Тон: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px ..5x2:">06</span></p>
+					<p className="font-montserrat mb-2 .1x1:text-13px .1x1:mb-1 text-gray-quick-silver flex  items-center ">Тон: <span className="ml-6px font-montserrat text-gray-quick-silver letterSpacing-4px ..5x2:">{currentTon < 10 ? `0${currentTon}` : currentTon}</span></p>
 
 					<div className="..6x5:overflow-x-scroll ..6x5:whitespace-nowrap  ">
 
 
 						<div className="flex  flex-wrap  ..6x04:flex-nowrap  ..6x04:w-475px">
-							<div onClick={() => setCurrentTonF(1)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 1 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0">
-									<Image src={oneTon} />
-								</div>
 
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-									<p className="text-13px text-black-70pe font-montserrat">Тон: 01</p>
-									<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-									</div>
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(2)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 2 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={twoTon} /></div>
-
-								<div className="itemTonHover transition-all flex justify-center items-center !hidden opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-									<p className="text-13px text-black-70pe font-montserrat">Тон: 02</p>
-									<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-									</div>
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(3)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 3 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={treeTon} /></div>
-
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-									<p className="text-13px text-black-70pe font-montserrat">Тон: 03</p>
-									<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-									</div>
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(4)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 4 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={fourTon} /></div>
-
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-									<p className="text-13px text-black-70pe font-montserrat">Тон: 04</p>
-									<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-									</div>
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(5)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 5 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={fiveTon} /></div>
-
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-									<p className="text-13px text-black-70pe font-montserrat">Тон: 05</p>
-									<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-									</div>
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(6)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 6 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={sixTon} /> </div>
-
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-									<p className="text-13px text-black-70pe font-montserrat">Тон: 06</p>
-									<div className="w-18px -bottom-1 rotSearchHover left-8 -z-10  h-18px bg-white absolute ">
-
-									</div>
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(7)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center   mr-2 ${currentTon === 7 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={sevenTon} /> </div>
-
-								<hr className="px w-14 text-gray absolute rotSearchHover" />
-								<hr className="px w-14 text-gray absolute unrotSearchHover" />
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-20 -top-14 h-42px w-48 bg-white">
-									<p className="text-13px text-black-70pe font-montserrat flex items-center">Тон: 07 / <span className="ml-1 text-label-pink-2">нет в наличии</span></p>
-									<div className="w-18px -bottom-1 rotSearchHover left-24 -z-10 h-18px bg-white absolute ">
-
-									</div>
-
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(8)} className={`h-11 hover:bg-gray-light transition-all mr-0 .2x10:mr-2 .1x1:h-8 ..5x2:overflow-hidden .1x1:w-11 w-52px cursor-pointer relative itemTon mb-2  bg-gray-light flex items-center justify-center ${currentTon === 8 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={eightTon} /> </div>
+							{tons.map((ton, i) => <Ton key={i} src={ton.src} isNone={ton.isNone} setCurrentTonF={setCurrentTonF} currentTon={currentTon} length={i + 1} />)}
 
 
-								<hr className="px w-14 text-gray absolute rotSearchHover" />
-								<hr className="px w-14 text-gray absolute unrotSearchHover" />
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-20 -top-14 h-42px w-48 bg-white">
-									<p className="text-13px text-black-70pe font-montserrat flex items-center">Тон: 08 / <span className="ml-1 text-label-pink-2">нет в наличии</span></p>
-									<div className="w-18px -bottom-1 rotSearchHover left-24 -z-10 h-18px bg-white absolute ">
-
-									</div>
-
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(9)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 9 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"><Image src={nineTon} /> </div>
-
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-									<p className="text-13px text-black-70pe font-montserrat">Тон: 09</p>
-									<div className="w-18px -bottom-1 rotSearchHover left-8 h-18px -z-10  bg-white absolute ">
-
-									</div>
-								</div>
-							</div>
-							<div onClick={() => setCurrentTonF(10)} className={`h-11 hover:bg-gray-light transition-all .1x1:h-8 .1x1:!w-11  w-52px cursor-pointer relative itemTon mb-2 border flex items-center justify-center border-stroke mr-2 ${currentTon === 10 ? '!border-black' : ""}`}>
-								<div className="mt-1.5 .1x1:h-5 .1x1:w-5 .1x1:mt-0"> <Image src={tenTon} /></div>
-
-								<div className="itemTonHover transition-all flex justify-center !hidden items-center opacity-0 rounded-lg py-3 px-4 absolute -left-4 -top-14 h-42px w-86px bg-white">
-									<p className="text-13px text-black-70pe font-montserrat">Тон: 10</p>
-									<div className="w-18px -bottom-1 rotSearchHover left-8 h-18px -z-10  bg-white absolute ">
-
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 
@@ -598,14 +501,14 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 					<div onClick={(e) => setFilter('sale', e)} className={`  h-110px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.sale ? 'activeSlide' : ''}`}>
 
 						<div id="click" className={`flex px-3 ..6x04:pl-0 ..6x04:mt-0 transiton-all mt-8 .1x1:pb-1 .1x1:mt-0   items-center mt-3 relative ..6x04:pb-10px pb-4 border-b border-dashed border-gray ${dropDownds.sale ? 'border-none pb-0' : ''}`}>
-							<svg className={`absolute .1x1:right-1  right-3 transition-all top-5 ${dropDownds.sale ? 'prev_rotate' : ''}`} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className={`absolute .1x1:right-1  right-3 transition-all top-5 ${dropDownds.sale ? 'prev_rotate' : ''}`} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
 
-							<svg className="mr-4 ..5x1:mr-1.5 ..6x04:hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className="mr-4 ..5x1:mr-1.5 ..6x04:hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M25.2542 27.8353C23.3647 29.4528 20.5385 30.1606 16.7902 30.2415C16.79 30.2415 16.7899 30.2415 16.7898 30.2415L16.2482 30.2497L16.2466 30.2497L15.7012 30.2521C15.7011 30.2521 15.701 30.2521 15.701 30.2521C12.5102 30.2521 9.86256 29.3881 7.93451 27.742C6.00752 26.0968 4.78416 23.6576 4.46462 20.477C4.13625 17.2085 5.5032 14.5311 8.24699 11.6928C8.2472 11.6926 8.24742 11.6923 8.24763 11.6921L8.54256 11.3945L10.5892 9.40644L10.5892 9.4065L10.5927 9.40294L10.8797 9.10511L10.8798 9.10518L10.8835 9.10109L11.1052 8.85351L11.1052 8.85354L11.1076 8.85076C11.2654 8.66573 11.3736 8.51485 11.417 8.40492L11.417 8.40492C11.8572 7.28866 11.9238 5.30469 11.5817 2.54785C11.4681 1.63198 12.4 0.944323 13.2416 1.32303C16.1206 2.6185 18.1613 4.42283 19.3257 6.72994C19.6611 7.39461 19.8955 8.11727 20.0496 8.90709C20.0652 8.98673 20.0798 9.06472 20.0934 9.14164L20.1655 9.59944L20.2191 10.0611C20.2266 10.1389 20.2335 10.218 20.2398 10.2992C20.2399 10.2996 20.2399 10.3 20.2399 10.3004L20.2724 10.8216L20.2949 11.418L20.295 11.4205L20.3162 12.4226L20.3239 12.7903L20.5755 12.5221L20.639 12.4544L20.6391 12.4545L20.642 12.4512C20.9882 12.0601 21.3745 11.5512 21.7984 10.9281L21.7996 10.9263L22.2343 10.2676L22.2353 10.266C22.3852 10.0324 22.5393 9.78611 22.6975 9.52703L22.6979 9.52638L22.9375 9.12947L22.9379 9.12884C23.3669 8.41023 24.386 8.352 24.8942 9.01707C27.0483 11.8366 28.1201 15.4598 28.1201 19.8556C28.1201 23.6799 27.1378 26.2228 25.2542 27.8353ZM14.3835 4.65839L14.1358 4.48304L14.1469 4.78631L14.1596 5.13161C14.1596 5.13191 14.1596 5.13222 14.1596 5.13252C14.2034 6.87011 14.0259 8.24068 13.6186 9.27327C13.3805 9.87704 12.9374 10.4185 12.0811 11.2606C12.0809 11.2608 12.0807 11.261 12.0805 11.2612L10.7926 12.502L10.7926 12.502L10.7913 12.5032L10.0353 13.249L10.0353 13.2489L10.0322 13.2522L9.64665 13.656L9.64664 13.656L9.64529 13.6575C7.57078 15.8889 6.5851 17.908 6.81943 20.2405C7.07321 22.7665 7.98817 24.6838 9.50454 25.9679C11.0194 27.2508 13.1156 27.8855 15.7012 27.8855L15.7027 27.8855L16.7454 27.8752L16.7454 27.8753L16.7489 27.8752L17.4798 27.851L17.4817 27.8509C20.3448 27.721 22.4229 27.1884 23.782 25.9372C25.1458 24.6816 25.7535 22.7334 25.7535 19.8556C25.7535 16.8914 25.2217 14.372 24.1615 12.2841L24.1615 12.2841L24.1604 12.2821L24.0949 12.1576L23.9777 11.9352L23.8376 12.1439L23.6762 12.3842C23.6761 12.3844 23.676 12.3845 23.6759 12.3847C22.9624 13.4285 22.3192 14.2081 21.7109 14.7371C21.1043 15.2647 20.5415 15.5352 19.986 15.5791L19.8205 15.5855C19.3316 15.5848 18.9541 15.4212 18.6725 15.1517C18.3877 14.8793 18.192 14.4898 18.0879 14.0271C18.0788 13.9869 18.0704 13.9472 18.0626 13.9077L18.0209 13.6578C18.0153 13.6167 18.0102 13.5746 18.0054 13.5309L17.9804 13.2352L17.9561 12.6649L17.9216 11.2573L17.9217 11.2573L17.9215 11.2539L17.8986 10.7635L17.8986 10.7635L17.8983 10.7593L17.8663 10.3319L17.8664 10.3319L17.8658 10.3264L17.8221 9.93741L17.8221 9.93741L17.8217 9.93431C17.8131 9.87027 17.804 9.80683 17.7941 9.74346L17.7942 9.74345L17.7936 9.74048L17.7273 9.3632L17.7273 9.36319L17.7268 9.36043C17.6127 8.7759 17.4451 8.2564 17.2129 7.79625L17.0789 7.86384L17.2129 7.79625C16.6454 6.6719 15.7936 5.68873 14.6484 4.846L14.6485 4.84598L14.6462 4.84438L14.3835 4.65839ZM14.1561 18.3874L14.0604 18.1288L13.8953 18.3497L13.6521 18.675L13.6521 18.675L13.6503 18.6775C12.8007 19.8653 12.4757 20.9497 12.661 21.921C12.848 22.9014 13.5391 23.5458 14.3811 23.7766C15.1233 23.9802 15.8502 23.8869 16.4834 23.3229C16.6001 23.219 16.6869 23.0923 16.7293 22.9384C16.7715 22.7854 16.767 22.6165 16.7196 22.4319C16.6261 22.068 16.3597 21.62 15.8975 21.0561L15.8975 21.0561L15.8953 21.0535L15.558 20.6604L15.558 20.6603L15.5551 20.6571L15.3621 20.4451L15.3613 20.4441C14.8937 19.9391 14.5141 19.3091 14.2171 18.5521C14.2169 18.5516 14.2167 18.5512 14.2166 18.5507L14.1561 18.3874ZM13.7552 26.059L13.7155 26.2037L13.7551 26.059C12.0965 25.6042 10.7065 24.3055 10.3362 22.3645C9.87264 19.9347 11.1153 17.4382 13.946 14.8653C14.6515 14.224 15.787 14.6378 15.9146 15.5827C16.1239 17.1331 16.531 18.2239 17.0979 18.8363C18.2328 20.0621 18.9258 21.2277 19.109 22.2819C19.29 23.3234 18.9766 24.2717 18.0574 25.0903C16.7518 26.2531 15.2126 26.4587 13.7552 26.059Z" fill="black" fillOpacity="0.7" stroke="#F7F8F6" strokeWidth="0.3" />
 							</svg>
-							<svg className="mr-3 ..6x04:block hidden" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className="mr-3 ..6x04:block hidden" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M23.5722 25.9745C21.843 27.4548 19.2393 28.1165 15.7379 28.192C15.7376 28.1921 15.7373 28.1921 15.737 28.1921L15.2321 28.1997L15.2288 28.1998L14.7199 28.202C14.7196 28.202 14.7193 28.202 14.719 28.202C11.7564 28.2019 9.31418 27.3998 7.54215 25.8869C5.77214 24.3758 4.64043 22.1297 4.34422 19.1813C4.04295 16.1826 5.29057 13.7167 7.84552 11.0735L8.12086 10.7956L10.0385 8.93287L10.0386 8.93299L10.0454 8.92587L10.3146 8.64665L10.3147 8.64679L10.322 8.63861L10.5299 8.40651L10.53 8.40657L10.5347 8.401C10.6821 8.22812 10.8003 8.06864 10.8518 7.93811L10.8518 7.9381C11.2806 6.85086 11.337 4.95499 11.0161 2.369C10.9249 1.63372 11.673 1.08166 12.3487 1.3857C15.0225 2.58884 16.904 4.25792 17.9756 6.38115C18.2825 6.98923 18.498 7.65245 18.6402 8.38094L18.9346 8.32347L18.6402 8.38094C18.6545 8.45424 18.6679 8.52595 18.6804 8.59661L18.7473 9.02109L18.797 9.44911C18.8038 9.52016 18.8101 9.59251 18.8159 9.66669L18.8462 10.1532L18.8673 10.7102L18.8871 11.6496L18.9027 12.3849L19.4059 11.8485L19.4654 11.7851L19.4655 11.7851L19.4712 11.7786C19.8018 11.4052 20.1682 10.9223 20.5678 10.3347L20.5679 10.3347L20.5702 10.3312L20.9777 9.71364L20.9778 9.71366L20.9798 9.71044C21.121 9.49043 21.2661 9.25848 21.415 9.01466L21.4158 9.01337L21.6404 8.64126L21.6412 8.64001C21.9856 8.06309 22.8038 8.01635 23.2117 8.55028C25.2052 11.1595 26.2033 14.5197 26.2033 18.6147C26.2033 22.1739 25.2896 24.5043 23.5722 25.9745ZM13.5767 4.23717L13.0813 3.88649L13.1035 4.49302L13.1154 4.81657C13.1561 6.4348 12.9899 7.69537 12.6192 8.63523C12.4094 9.16736 12.016 9.65477 11.2149 10.4427L10.0075 11.6058L10.0075 11.6058L10.005 11.6083L9.29627 12.3075L9.29618 12.3074L9.28996 12.3139L8.92852 12.6925L8.9285 12.6925L8.9258 12.6954C6.96594 14.8034 6.0085 16.7399 6.2347 18.9914C6.47569 21.3901 7.34717 23.2299 8.80758 24.4666C10.265 25.7008 12.271 26.302 14.7199 26.302L14.7229 26.302L15.7005 26.2924L15.7005 26.2925L15.7074 26.2923L16.3927 26.2696L16.3964 26.2695C19.0893 26.1473 21.0863 25.6461 22.4036 24.4334C23.7304 23.2119 24.3033 21.3306 24.3033 18.6147C24.3033 15.817 23.8015 13.4291 22.7935 11.4442L22.7936 11.4442L22.7915 11.4402L22.73 11.3235L22.4958 10.8787L22.2155 11.296L22.0649 11.5203C22.0647 11.5206 22.0645 11.521 22.0642 11.5213C21.3987 12.4949 20.8047 13.2129 20.2494 13.6958C19.6976 14.1758 19.202 14.408 18.7275 14.4463L18.5789 14.452C18.1609 14.4508 17.8481 14.3119 17.6157 14.0896C17.3772 13.8614 17.2056 13.5275 17.1129 13.1155C17.1049 13.0798 17.0975 13.0448 17.0905 13.0099L17.0523 12.7804C17.0475 12.7446 17.043 12.7079 17.0388 12.6699L17.0157 12.3979L16.9932 11.8681L16.9609 10.5498L16.961 10.5498L16.9607 10.5431L16.9392 10.0834L16.9393 10.0834L16.9387 10.075L16.9087 9.6743L16.9089 9.67428L16.9076 9.66318L16.8666 9.29854L16.8667 9.29853L16.8659 9.29233C16.8577 9.23118 16.8489 9.17059 16.8396 9.11008L16.8396 9.11007L16.8386 9.10412L16.7764 8.75042L16.7764 8.75041L16.7754 8.74489C16.6662 8.18563 16.505 7.68416 16.2794 7.2372L16.2794 7.23719C15.7349 6.15825 14.9188 5.2179 13.8274 4.41477L13.8275 4.41473L13.823 4.41154L13.5767 4.23717ZM12.9377 24.2767L12.8583 24.566L12.9377 24.2766C11.4362 23.8649 10.1816 22.6918 9.84684 20.9369L9.55215 20.9931L9.84684 20.9369C9.42783 18.7408 10.5429 16.4526 13.1816 14.0542C13.748 13.5394 14.6596 13.8715 14.762 14.6301C14.9596 16.0936 15.347 17.1565 15.9124 17.7673C16.9674 18.9069 17.5936 19.9722 17.7577 20.9166C17.9174 21.8356 17.6458 22.6703 16.8229 23.4031L17.0224 23.6272L16.8229 23.4031C15.6447 24.4524 14.2596 24.6392 12.9377 24.2767ZM13.4209 17.1829L13.2295 16.6657L12.8993 17.1074L12.6713 17.4124L12.6712 17.4124L12.6676 17.4175C11.8573 18.5504 11.5282 19.6112 11.7132 20.5808C11.9009 21.5649 12.5975 22.2132 13.4402 22.4443C14.1788 22.6469 14.9185 22.5549 15.5593 21.9843C15.6881 21.8695 15.7883 21.7253 15.8374 21.5471C15.8861 21.3709 15.8787 21.1836 15.829 20.9903C15.7325 20.6144 15.4642 20.1722 15.0272 19.6391L15.0273 19.639L15.0229 19.6339L14.7066 19.2653L14.7067 19.2652L14.7008 19.2588L14.52 19.06L14.5182 19.0581C14.0961 18.6021 13.75 18.0299 13.4775 17.3358L13.4209 17.1829Z" fill="black" fillOpacity="0.7" stroke="white" strokeWidth="0.6" />
 							</svg>
 
@@ -657,7 +560,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
 
-							<svg className={`mr-4 absolute left-3 top-2.5 ..5x1:mr-1.5 ..6x04:hidden .1x1:top-0`} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className={`mr-4 absolute left-3 top-2.5 ..5x1:mr-1.5 ..6x04:hidden .1x1:top-0`} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M25.1615 19.9048C25.8452 19.6313 26.1778 18.8554 25.9043 18.1716C25.6308 17.4879 24.8549 17.1554 24.1712 17.4289L23.4767 17.7066C22.793 17.9801 22.4604 18.7561 22.7339 19.4398C23.0074 20.1235 23.7834 20.4561 24.4671 20.1826L25.1615 19.9048Z" fill="black" fillOpacity="0.7" />
 								<path d="M20.3004 21.8492C20.9841 21.5758 21.3167 20.7998 21.0432 20.1161C20.7697 19.4324 19.9938 19.0998 19.31 19.3733L17.9212 19.9289C17.2374 20.2023 16.9049 20.9783 17.1784 21.662C17.4519 22.3457 18.2278 22.6783 18.9115 22.4048L20.3004 21.8492Z" fill="black" fillOpacity="0.7" />
 								<path d="M14.7449 24.0715C15.4286 23.798 15.7611 23.022 15.4876 22.3383C15.2142 21.6546 14.4382 21.322 13.7545 21.5955L12.3656 22.1511C11.6819 22.4246 11.3493 23.2005 11.6228 23.8842C11.8963 24.5679 12.6723 24.9005 13.356 24.627L14.7449 24.0715Z" fill="black" fillOpacity="0.7" />
@@ -673,7 +576,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 								<path fillRule="evenodd" clipRule="evenodd" d="M22.6663 5.3335C20.4572 5.3335 18.6663 7.12436 18.6663 9.3335C18.6663 10.1524 19.0129 11.0777 19.4738 11.9995C19.9574 12.9667 20.6625 14.1119 21.5693 15.4246C21.8182 15.785 22.2283 16.0002 22.6663 16.0002C23.1044 16.0002 23.5145 15.785 23.7634 15.4246C24.6702 14.1119 25.3753 12.9667 25.8589 11.9995C26.3198 11.0777 26.6663 10.1524 26.6663 9.3335C26.6663 7.12436 24.8755 5.3335 22.6663 5.3335ZM21.333 9.3335C21.333 8.59712 21.93 8.00016 22.6663 8.00016C23.4027 8.00016 23.9997 8.59712 23.9997 9.3335C23.9997 9.49645 23.9018 9.95094 23.4738 10.8069C23.2648 11.2249 22.9966 11.7013 22.6663 12.2376C22.3361 11.7013 22.0679 11.2249 21.8589 10.8069C21.4309 9.95094 21.333 9.49645 21.333 9.3335Z" stroke="#F7F8F6" strokeWidth="0.6" strokeLinejoin="round" />
 								<path fillRule="evenodd" clipRule="evenodd" d="M4.66634 1.3335C2.82539 1.3335 1.33301 2.82588 1.33301 4.66683V27.3335C1.33301 29.1744 2.82539 30.6668 4.66634 30.6668H27.333C29.174 30.6668 30.6663 29.1744 30.6663 27.3335V4.66683C30.6663 2.82588 29.174 1.3335 27.333 1.3335H4.66634ZM3.99967 4.66683C3.99967 4.29864 4.29815 4.00016 4.66634 4.00016H27.333C27.7012 4.00016 27.9997 4.29864 27.9997 4.66683V27.3335C27.9997 27.7017 27.7012 28.0002 27.333 28.0002H4.66634C4.29815 28.0002 3.99967 27.7017 3.99967 27.3335V4.66683Z" stroke="#F7F8F6" strokeWidth="0.6" strokeLinejoin="round" />
 							</svg>
-							<svg className={`mr-3 ..6x04:block hidden `} width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className={`mr-3 ..6x04:block hidden `} width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M23.5892 18.6606C24.2302 18.4042 24.542 17.6767 24.2856 17.0358C24.0292 16.3948 23.3017 16.083 22.6608 16.3394L22.0097 16.5998C21.3687 16.8562 21.057 17.5837 21.3134 18.2247C21.5698 18.8656 22.2972 19.1774 22.9382 18.921L23.5892 18.6606Z" fill="black" fillOpacity="0.7" />
 								<path d="M19.0319 20.4835C19.6729 20.2271 19.9847 19.4997 19.7283 18.8587C19.4719 18.2177 18.7444 17.9059 18.1035 18.1623L16.8014 18.6832C16.1604 18.9395 15.8486 19.667 16.105 20.308C16.3614 20.949 17.0889 21.2607 17.7299 21.0043L19.0319 20.4835Z" fill="black" fillOpacity="0.7" />
 								<path d="M13.8236 22.5668C14.4646 22.3105 14.7764 21.583 14.52 20.942C14.2636 20.301 13.5361 19.9893 12.8951 20.2457L11.5931 20.7665C10.9521 21.0229 10.6403 21.7503 10.8967 22.3913C11.1531 23.0323 11.8806 23.3441 12.5215 23.0877L13.8236 22.5668Z" fill="black" fillOpacity="0.7" />
@@ -694,26 +597,26 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 							<div className="ml-12">
 								<p id="click" className='font-montserrat font-semibold ..6x04:text-13px    ..6x04:font-medium .1x1:text-13px'>Бесплатная доставка</p>
 								<div className={`flex items-center  ${dropDownds.free ? 'flex-wrap' : ''}`}>
-									<div className='flex items-center mb-6px'>
+									<div id="click" className='flex items-center mb-6px'>
 										<p id="click" className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Курьер</p>
 										<span id="click" className='..7x230:text-9px ..5x1:text-8px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 .4x1:hidden ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg> от 2 500 ₽</span>
 									</div>
-									<div className={`${dropDownds.free ? 'mr-2' : ""} mb-6px flex items-center`}>
+									<div id="click" className={`${dropDownds.free ? 'mr-2' : ""} mb-6px flex items-center`}>
 										<p id="click" className='font-montserrat  ..7x230:text-10px   text-13px font-normal mr-1  ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>ПВЗ</p>
 										<span id="click" className='..7x230:text-9px ..5x1:text-8px .2x00:text-10px rounded-xl .2x00:mr-0.5 ..7x230:px-1 ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center' ><svg className="mr-1 .4x1:hidden ..6x04:hidden" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg>от 1 500 ₽</span>
 									</div>
-									<div className={`flex items-center mb-6px ${dropDownds.free ? 'block' : 'hidden'}`}>
+									<div id="click" className={`flex items-center mb-6px ${dropDownds.free ? 'block' : 'hidden'}`}>
 										<p id="click" className='..7x230:text-10px font-montserrat  text-13px font-normal mr-1 ..7x01:mr-0.5 ..6x04:text-11px .4x1:text-10px'>Бутики</p>
 										<span id="click" className='..7x230:text-9px  rounded-xl ..7x230:px-1 .2x00:mr-0.5 .2x00:text-10px  ..6x04:text-10px ..7x01:mr-0.5 font-montserrat  text-13px mr-2 p-1 px-1.5 bg-primary-searchBG text-primary flex items-center'><svg className="mr-1 .4x1:hidden  " width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M12.2498 4.08336L5.24984 11.0834L2.0415 7.87503L2.864 7.05253L5.24984 9.43253L11.4273 3.26086L12.2498 4.08336Z" fill="#337202" />
 										</svg> от 0 ₽</span>
 									</div>
 
-									<button className={`${dropDownds.free ? 'hidden' : ""} -mt-1.5 p-1.5 h-27px ..5x1:text-8px px-3 ..7x230:text-9px ..7x230:px-1 .2x00:text-10px rounded-xl bg-primary-searchBG ..6x04:text-10px   text-11px font-montserrat text-black`}>ещё</button>
+									<button id="click" className={`${dropDownds.free ? 'hidden' : ""} -mt-1.5 p-1.5 h-27px ..5x1:text-8px px-3 ..7x230:text-9px ..7x230:px-1 .2x00:text-10px rounded-xl bg-primary-searchBG ..6x04:text-10px   text-11px font-montserrat text-black`}>ещё</button>
 
 
 
@@ -844,17 +747,17 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 					<div onClick={(e) => setFilter('loal', e)} className={` h-80px .1x1:h-16 cursor-pointer overflow-hidden ${dropDownds.loal ? 'activeSlide mb-3' : ''}`}>
 						<div id="click" className={`flex px-3 ..6x04:pl-0  pt-2 .1x1:pt-0 .1x1:mt-0  items-center -mt-2 relative pb-4 border-b ..6x04:pb-10px  border-dashed border-gray ${dropDownds.loal ? 'border-none' : ""}`}>
-							<svg className={`absolute transition-all .1x1:right-1  right-3 top-5 ..6x04:top-3 ${dropDownds.loal ? 'prev_rotate' : ''}`} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className={`absolute transition-all .1x1:right-1  right-3 top-5 ..6x04:top-3 ${dropDownds.loal ? 'prev_rotate' : ''}`} width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
 
-							<svg className="mr-4 ..5x1:mr-1.5 ..6x04:hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className="mr-4 ..5x1:mr-1.5 ..6x04:hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="16" cy="16" r="15" stroke="black" strokeOpacity="0.7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="bevel" strokeDasharray="3 6 9 12" />
 								<path d="M8 19.541C8.286 19.5237 8.48967 19.463 8.611 19.359C8.741 19.255 8.82333 19.099 8.858 18.891C8.89267 18.683 8.91 18.4187 8.91 18.098V12.69C8.91 12.4993 8.91433 12.3173 8.923 12.144C8.93167 11.962 8.94033 11.806 8.949 11.676C8.80167 11.6847 8.64133 11.6933 8.468 11.702C8.29467 11.7107 8.13867 11.7193 8 11.728V11.013L11.315 11C12.121 11 12.8447 11.104 13.486 11.312C14.1273 11.52 14.6733 11.8233 15.124 12.222C15.5747 12.612 15.917 13.0887 16.151 13.652C16.385 14.2153 16.502 14.8437 16.502 15.537C16.502 16.1177 16.4023 16.681 16.203 17.227C16.0037 17.773 15.696 18.2627 15.28 18.696C14.8727 19.1207 14.357 19.463 13.733 19.723C13.109 19.983 12.3723 20.113 11.523 20.113H8V19.541ZM10.288 18.384C10.288 18.618 10.2837 18.826 10.275 19.008C10.275 19.19 10.2663 19.3373 10.249 19.45C10.431 19.45 10.613 19.4543 10.795 19.463C10.977 19.463 11.1373 19.463 11.276 19.463C11.4233 19.463 11.5273 19.463 11.588 19.463C12.1253 19.463 12.602 19.3633 13.018 19.164C13.434 18.9647 13.785 18.6873 14.071 18.332C14.3657 17.9767 14.5867 17.565 14.734 17.097C14.89 16.629 14.968 16.1307 14.968 15.602C14.968 14.7527 14.8293 14.0333 14.552 13.444C14.2747 12.8547 13.8543 12.404 13.291 12.092C12.7363 11.78 12.043 11.6197 11.211 11.611C10.925 11.611 10.717 11.663 10.587 11.767C10.457 11.8623 10.3747 12.014 10.34 12.222C10.3053 12.43 10.288 12.6943 10.288 13.015V18.384Z" fill="black" fillOpacity="0.7" />
 								<path d="M20.24 20.321C19.6333 20.321 19.0873 20.1823 18.602 19.905C18.1253 19.619 17.7483 19.2203 17.471 18.709C17.1937 18.189 17.055 17.578 17.055 16.876C17.055 16.2693 17.1893 15.7017 17.458 15.173C17.7353 14.6443 18.121 14.2197 18.615 13.899C19.109 13.5697 19.681 13.405 20.331 13.405C20.695 13.405 21.0373 13.4613 21.358 13.574C21.6873 13.6867 21.9777 13.8643 22.229 14.107C22.489 14.341 22.6927 14.6487 22.84 15.03C22.9873 15.4027 23.061 15.8577 23.061 16.395L18.589 16.473C18.589 17.0623 18.654 17.5867 18.784 18.046C18.9227 18.5053 19.1437 18.8607 19.447 19.112C19.7503 19.3633 20.1447 19.489 20.63 19.489C20.864 19.489 21.111 19.45 21.371 19.372C21.6397 19.2853 21.891 19.164 22.125 19.008C22.3677 18.852 22.5713 18.6657 22.736 18.449L23.139 18.8C22.879 19.19 22.58 19.4977 22.242 19.723C21.904 19.9397 21.5573 20.0913 21.202 20.178C20.8553 20.2733 20.5347 20.321 20.24 20.321ZM18.641 15.797H21.644C21.644 15.4677 21.5963 15.173 21.501 14.913C21.4143 14.6443 21.2757 14.432 21.085 14.276C20.8943 14.12 20.6517 14.042 20.357 14.042C19.8977 14.042 19.5207 14.1893 19.226 14.484C18.9313 14.77 18.7363 15.2077 18.641 15.797Z" fill="black" fillOpacity="0.7" />
 								<path d="M7.9 19.4469L7.99395 19.4412C8.27341 19.4242 8.44984 19.3654 8.54592 19.2831L8.54849 19.2809L8.54853 19.2809C8.65457 19.1961 8.72763 19.065 8.75936 18.8746C8.79278 18.674 8.81 18.4157 8.81 18.098V12.69L7.9 19.4469ZM7.9 19.4469V19.541M7.9 19.4469V19.541M7.9 19.541V20.113V20.213H8H11.523C12.3823 20.213 13.1326 20.0815 13.7715 19.8153C14.4063 19.5508 14.934 19.2012 15.3522 18.7652M7.9 19.541L15.28 18.696M15.1898 12.1467C14.7278 11.7381 14.1695 11.4285 13.5169 11.2169C12.8638 11.0051 12.1295 10.9 11.315 10.9L11.3146 10.9L7.99961 10.913L7.9 10.9134V11.013V11.728V11.8344L8.00624 11.8278C8.1444 11.8192 8.29998 11.8105 8.47299 11.8019C8.60332 11.7954 8.72635 11.7888 8.84208 11.7823L15.124 12.222M15.1898 12.1467C15.19 12.1469 15.1901 12.147 15.1903 12.1471L15.124 12.222M15.1898 12.1467C15.1897 12.1466 15.1896 12.1465 15.1894 12.1464L15.124 12.222M15.1898 12.1467C15.6523 12.5471 16.0036 13.0365 16.2434 13.6136C16.483 14.1907 16.602 14.8323 16.602 15.537C16.602 16.1294 16.5003 16.7043 16.2969 17.2613C16.0927 17.8208 15.7774 18.3222 15.3522 18.7652M15.124 12.222C15.5747 12.612 15.917 13.0887 16.151 13.652C16.385 14.2153 16.502 14.8437 16.502 15.537C16.502 16.1177 16.4023 16.681 16.203 17.227C16.0037 17.773 15.696 18.2627 15.28 18.696M15.3522 18.7652L15.28 18.696M15.3522 18.7652C15.3522 18.7652 15.3521 18.7652 15.3521 18.7653L15.28 18.696M18.5505 19.9908L18.5506 19.9908C18.0578 19.6951 17.6685 19.283 17.3831 18.7567L17.3828 18.7561C17.0964 18.219 16.955 17.5913 16.955 16.876C16.955 16.254 17.0929 15.6707 17.3689 15.1277L17.3694 15.1265C17.6545 14.5831 18.0517 14.1456 18.56 13.8155C19.0719 13.4744 19.6634 13.305 20.331 13.305C20.7053 13.305 21.0588 13.3629 21.3908 13.4795C21.7333 13.5968 22.0358 13.7818 22.2972 14.0339C22.57 14.2798 22.7814 14.6009 22.9332 14.9936M18.5505 19.9908L22.229 14.107C22.489 14.341 22.6927 14.6487 22.84 15.03C22.9873 15.4027 23.061 15.8577 23.061 16.395L18.589 16.473M18.5505 19.9908L18.5524 19.9918C19.0541 20.2785 19.6175 20.421 20.24 20.421C20.5449 20.421 20.8742 20.3718 21.2271 20.2748M18.5505 19.9908L21.3413 19.2765M22.9332 14.9936C22.9332 14.9937 22.9332 14.9939 22.9333 14.994L22.84 15.03L22.933 14.9932C22.9331 14.9934 22.9331 14.9935 22.9332 14.9936ZM22.9332 14.9936C23.0863 15.3812 23.161 15.8493 23.161 16.395V16.4933L23.0627 16.495L18.6896 16.5713M18.6896 16.5713C18.6892 16.5387 18.689 16.506 18.689 16.473H18.589M18.6896 16.5713C18.6965 17.1129 18.7603 17.5949 18.88 18.0179C19.0142 18.4622 19.2258 18.7989 19.5108 19.035C19.7923 19.2683 20.1624 19.389 20.63 19.389C20.8526 19.389 21.0895 19.352 21.3413 19.2765M18.6896 16.5713L18.5907 16.573L18.589 16.473M18.589 16.473C18.589 17.0623 18.654 17.5867 18.784 18.046C18.9227 18.5053 19.1437 18.8607 19.447 19.112C19.7503 19.3633 20.1447 19.489 20.63 19.489C20.864 19.489 21.111 19.45 21.371 19.372C21.6397 19.2853 21.891 19.164 22.125 19.008C22.3379 18.8711 22.5208 18.7109 22.6737 18.5273L22.6703 18.5244L22.736 18.449L22.8156 18.5095C22.8143 18.5113 22.8129 18.5131 22.8116 18.5148M22.8116 18.5148L23.139 18.8C22.879 19.19 22.58 19.4977 22.242 19.723C21.904 19.9397 21.5573 20.0913 21.202 20.178M22.8116 18.5148L18.615 13.899C18.121 14.2197 17.7353 14.6443 17.458 15.173C17.1893 15.7017 17.055 16.2693 17.055 16.876C17.055 17.578 17.1937 18.189 17.471 18.709C17.7483 19.2203 18.1253 19.619 18.602 19.905C19.0873 20.1823 19.6333 20.321 20.24 20.321C20.5347 20.321 20.8553 20.2733 21.202 20.178M22.8116 18.5148L21.3413 19.2765M21.202 20.178L21.2257 20.2752C21.2262 20.275 21.2266 20.2749 21.2271 20.2748M21.202 20.178L21.2285 20.2744C21.2281 20.2745 21.2276 20.2747 21.2271 20.2748M21.2271 20.2748C21.5937 20.1852 21.95 20.029 22.296 19.8072L22.296 19.8072L22.2975 19.8062C22.648 19.5725 22.956 19.2548 23.2222 18.8555L23.271 18.7823L23.2047 18.7246L22.8017 18.3736L22.7211 18.3034L22.6564 18.3885C22.4992 18.5953 22.3044 18.7738 22.0709 18.9239L22.0709 18.9239L22.0695 18.9248C21.8435 19.0755 21.6008 19.1927 21.3413 19.2765M13.994 18.2682L13.994 18.2682L13.9931 18.2693C13.7166 18.6129 13.3775 18.8809 12.9748 19.0738C12.5743 19.2657 12.1128 19.363 11.588 19.363H11.5876H11.5873H11.5869H11.5866H11.5862H11.5858H11.5855H11.5851H11.5848H11.5844H11.584H11.5837H11.5833H11.5829H11.5826H11.5822H11.5818H11.5814H11.5811H11.5807H11.5803H11.5799H11.5796H11.5792H11.5788H11.5784H11.578H11.5777H11.5773H11.5769H11.5765H11.5761H11.5757H11.5753H11.575H11.5746H11.5742H11.5738H11.5734H11.573H11.5726H11.5722H11.5718H11.5714H11.571H11.5706H11.5702H11.5698H11.5694H11.569H11.5686H11.5682H11.5678H11.5674H11.5669H11.5665H11.5661H11.5657H11.5653H11.5649H11.5645H11.5641H11.5636H11.5632H11.5628H11.5624H11.562H11.5615H11.5611H11.5607H11.5603H11.5598H11.5594H11.559H11.5586H11.5581H11.5577H11.5573H11.5568H11.5564H11.556H11.5555H11.5551H11.5546H11.5542H11.5538H11.5533H11.5529H11.5524H11.552H11.5515H11.5511H11.5507H11.5502H11.5498H11.5493H11.5489H11.5484H11.5479H11.5475H11.547H11.5466H11.5461H11.5457H11.5452H11.5447H11.5443H11.5438H11.5434H11.5429H11.5424H11.542H11.5415H11.541H11.5406H11.5401H11.5396H11.5391H11.5387H11.5382H11.5377H11.5373H11.5368H11.5363H11.5358H11.5353H11.5349H11.5344H11.5339H11.5334H11.5329H11.5324H11.532H11.5315H11.531H11.5305H11.53H11.5295H11.529H11.5285H11.528H11.5275H11.527H11.5265H11.526H11.5255H11.525H11.5245H11.524H11.5235H11.523H11.5225H11.522H11.5215H11.521H11.5205H11.52H11.5195H11.5189H11.5184H11.5179H11.5174H11.5169H11.5164H11.5158H11.5153H11.5148H11.5143H11.5138H11.5132H11.5127H11.5122H11.5117H11.5111H11.5106H11.5101H11.5095H11.509H11.5085H11.5079H11.5074H11.5069H11.5063H11.5058H11.5053H11.5047H11.5042H11.5036H11.5031H11.5026H11.502H11.5015H11.5009H11.5004H11.4998H11.4993H11.4987H11.4982H11.4976H11.4971H11.4965H11.496H11.4954H11.4948H11.4943H11.4937H11.4932H11.4926H11.492H11.4915H11.4909H11.4904H11.4898H11.4892H11.4887H11.4881H11.4875H11.4869H11.4864H11.4858H11.4852H11.4846H11.4841H11.4835H11.4829H11.4823H11.4818H11.4812H11.4806H11.48H11.4794H11.4788H11.4783H11.4777H11.4771H11.4765H11.4759H11.4753H11.4747H11.4741H11.4735H11.4729H11.4723H11.4717H11.4711H11.4705H11.4699H11.4693H11.4687H11.4681H11.4675H11.4669H11.4663H11.4657H11.4651H11.4645H11.4639H11.4633H11.4627H11.4621H11.4614H11.4608H11.4602H11.4596H11.459H11.4584H11.4577H11.4571H11.4565H11.4559H11.4552H11.4546H11.454H11.4534H11.4527H11.4521H11.4515H11.4509H11.4502H11.4496H11.449H11.4483H11.4477H11.447H11.4464H11.4458H11.4451H11.4445H11.4439H11.4432H11.4426H11.4419H11.4413H11.4406H11.44H11.4393H11.4387H11.438H11.4374H11.4367H11.4361H11.4354H11.4348H11.4341H11.4335H11.4328H11.4321H11.4315H11.4308H11.4301H11.4295H11.4288H11.4282H11.4275H11.4268H11.4262H11.4255H11.4248H11.4241H11.4235H11.4228H11.4221H11.4214H11.4208H11.4201H11.4194H11.4187H11.4181H11.4174H11.4167H11.416H11.4153H11.4146H11.414H11.4133H11.4126H11.4119H11.4112H11.4105H11.4098H11.4091H11.4084H11.4077H11.407H11.4063H11.4056H11.4049H11.4042H11.4035H11.4028H11.4021H11.4014H11.4007H11.4H11.3993H11.3986H11.3979H11.3972H11.3965H11.3958H11.395H11.3943H11.3936H11.3929H11.3922H11.3915H11.3907H11.39H11.3893H11.3886H11.3879H11.3871H11.3864H11.3857H11.385H11.3842H11.3835H11.3828H11.382H11.3813H11.3806H11.3798H11.3791H11.3784H11.3776H11.3769H11.3762H11.3754H11.3747H11.3739H11.3732H11.3725H11.3717H11.371H11.3702H11.3695H11.3687H11.368H11.3672H11.3665H11.3657H11.365H11.3642H11.3635H11.3627H11.3619H11.3612H11.3604H11.3597H11.3589H11.3581H11.3574H11.3566H11.3558H11.3551H11.3543H11.3535H11.3528H11.352H11.3512H11.3505H11.3497H11.3489H11.3481H11.3474H11.3466H11.3458H11.345H11.3442H11.3435H11.3427H11.3419H11.3411H11.3403H11.3395H11.3387H11.338H11.3372H11.3364H11.3356H11.3348H11.334H11.3332H11.3324H11.3316H11.3308H11.33H11.3292H11.3284H11.3276H11.3268H11.326H11.3252H11.3244H11.3236H11.3228H11.322H11.3212H11.3204H11.3195H11.3187H11.3179H11.3171H11.3163H11.3155H11.3147H11.3138H11.313H11.3122H11.3114H11.3106H11.3097H11.3089H11.3081H11.3073H11.3064H11.3056H11.3048H11.3039H11.3031H11.3023H11.3015H11.3006H11.2998H11.2989H11.2981H11.2973H11.2964H11.2956H11.2948H11.2939H11.2931H11.2922H11.2914H11.2905H11.2897H11.2888H11.288H11.2871H11.2863H11.2854H11.2846H11.2837H11.2829H11.282H11.2812H11.2803H11.2794H11.2786H11.2777H11.2769H11.276H11.2752H11.2744H11.2736H11.2727H11.2719H11.2711H11.2703H11.2695H11.2687H11.2679H11.267H11.2662H11.2654H11.2646H11.2638H11.2629H11.2621H11.2613H11.2605H11.2597H11.2588H11.258H11.2572H11.2564H11.2555H11.2547H11.2539H11.2531H11.2522H11.2514H11.2506H11.2497H11.2489H11.2481H11.2473H11.2464H11.2456H11.2448H11.2439H11.2431H11.2423H11.2414H11.2406H11.2398H11.2389H11.2381H11.2373H11.2364H11.2356H11.2348H11.2339H11.2331H11.2322H11.2314H11.2306H11.2297H11.2289H11.228H11.2272H11.2264H11.2255H11.2247H11.2238H11.223H11.2221H11.2213H11.2204H11.2196H11.2188H11.2179H11.2171H11.2162H11.2154H11.2145H11.2137H11.2128H11.212H11.2111H11.2103H11.2094H11.2086H11.2077H11.2069H11.206H11.2051H11.2043H11.2034H11.2026H11.2017H11.2009H11.2H11.1992H11.1983H11.1974H11.1966H11.1957H11.1949H11.194H11.1931H11.1923H11.1914H11.1905H11.1897H11.1888H11.188H11.1871H11.1862H11.1854H11.1845H11.1836H11.1828H11.1819H11.181H11.1802H11.1793H11.1784H11.1775H11.1767H11.1758H11.1749H11.1741H11.1732H11.1723H11.1714H11.1706H11.1697H11.1688H11.1679H11.1671H11.1662H11.1653H11.1644H11.1636H11.1627H11.1618H11.1609H11.16H11.1592H11.1583H11.1574H11.1565H11.1556H11.1547H11.1539H11.153H11.1521H11.1512H11.1503H11.1494H11.1485H11.1477H11.1468H11.1459H11.145H11.1441H11.1432H11.1423H11.1414H11.1405H11.1397H11.1388H11.1379H11.137H11.1361H11.1352H11.1343H11.1334H11.1325H11.1316H11.1307H11.1298H11.1289H11.128H11.1271H11.1262H11.1253H11.1244H11.1235H11.1226H11.1217H11.1208H11.1199H11.119H11.1181H11.1172H11.1163H11.1154H11.1145H11.1136H11.1127H11.1118H11.1109H11.11H11.109H11.1081H11.1072H11.1063H11.1054H11.1045H11.1036H11.1027H11.1018H11.1008H11.0999H11.099H11.0981H11.0972H11.0963H11.0954H11.0944H11.0935H11.0926H11.0917H11.0908H11.0899H11.0889H11.088H11.0871H11.0862H11.0852H11.0843H11.0834H11.0825H11.0816H11.0806H11.0797H11.0788H11.0779H11.0769H11.076H11.0751H11.0742H11.0732H11.0723H11.0714H11.0704H11.0695H11.0686H11.0676H11.0667H11.0658H11.0649H11.0639H11.063H11.0621H11.0611H11.0602H11.0592H11.0583H11.0574H11.0564H11.0555H11.0546H11.0536H11.0527H11.0517H11.0508H11.0499H11.0489H11.048H11.047H11.0461H11.0452H11.0442H11.0433H11.0423H11.0414H11.0404H11.0395H11.0385H11.0376H11.0367H11.0357H11.0348H11.0338H11.0329H11.0319H11.031H11.03H11.0291H11.0281H11.0272H11.0262H11.0253H11.0243H11.0233H11.0224H11.0214H11.0205H11.0195H11.0186H11.0176H11.0167H11.0157H11.0147H11.0138H11.0128H11.0119H11.0109H11.0099H11.009H11.008H11.007H11.0061H11.0051H11.0042H11.0032H11.0022H11.0013H11.0003H10.9993H10.9984H10.9974H10.9964H10.9955H10.9945H10.9935H10.9926H10.9916H10.9906H10.9896H10.9887H10.9877H10.9867H10.9857H10.9848H10.9838H10.9828H10.9818H10.9809H10.9799H10.9789H10.9779H10.977H10.976H10.975H10.974H10.973H10.9721H10.9711H10.9701H10.9691H10.9681H10.9672H10.9662H10.9652H10.9642H10.9632H10.9622H10.9613H10.9603H10.9593H10.9583H10.9573H10.9563H10.9553H10.9543H10.9533H10.9524H10.9514H10.9504H10.9494H10.9484H10.9474H10.9464H10.9454H10.9444H10.9434H10.9424H10.9414H10.9404H10.9394H10.9384H10.9374H10.9364H10.9354H10.9344H10.9334H10.9324H10.9314H10.9304H10.9294H10.9284H10.9274H10.9264H10.9254H10.9244H10.9234H10.9224H10.9214H10.9204H10.9194H10.9184H10.9174H10.9164H10.9154H10.9144H10.9133H10.9123H10.9113H10.9103H10.9093H10.9083H10.9073H10.9063H10.9053H10.9042H10.9032H10.9022H10.9012H10.9002H10.8992H10.8981H10.8971H10.8961H10.8951H10.8941H10.8931H10.892H10.891H10.89H10.889H10.8879H10.8869H10.8859H10.8849H10.8839H10.8828H10.8818H10.8808H10.8798H10.8787H10.8777H10.8767H10.8756H10.8746H10.8736H10.8726H10.8715H10.8705H10.8695H10.8684H10.8674H10.8664H10.8653H10.8643H10.8633H10.8622H10.8612H10.8602H10.8591H10.8581H10.8571H10.856H10.855H10.8539H10.8529H10.8519H10.8508H10.8498H10.8487H10.8477H10.8467H10.8456H10.8446H10.8435H10.8425H10.8414H10.8404H10.8394H10.8383H10.8373H10.8362H10.8352H10.8341H10.8331H10.832H10.831H10.8299H10.8289H10.8278H10.8268H10.8257H10.8247H10.8236H10.8226H10.8215H10.8205H10.8194H10.8183H10.8173H10.8162H10.8152H10.8141H10.8131H10.812H10.8109H10.8099H10.8088H10.8078H10.8067H10.8056H10.8046H10.8035H10.8025H10.8014H10.8003H10.7993H10.7982H10.7974C10.6521 19.3561 10.5069 19.352 10.3616 19.3505C10.3706 19.253 10.3749 19.1394 10.375 19.0104C10.3837 18.827 10.388 18.6182 10.388 18.384V13.015C10.388 12.6973 10.4052 12.439 10.4386 12.2384C10.4704 12.048 10.543 11.9232 10.6461 11.8476L10.6462 11.8477L10.6495 11.8451C10.7528 11.7624 10.9327 11.7111 11.2105 11.711C12.0304 11.7196 12.7059 11.8776 13.242 12.1792L13.2425 12.1795C13.7873 12.4812 14.193 12.916 14.4615 13.4866C14.731 14.0592 14.868 14.7631 14.868 15.602C14.868 16.1207 14.7915 16.6083 14.6391 17.0654L14.6391 17.0654L14.6386 17.067C14.4949 17.5234 14.2799 17.9234 13.994 18.2682ZM21.4058 14.9437L21.4058 14.9437L21.4071 14.9474C21.4882 15.1685 21.5337 15.418 21.5425 15.697H18.7602C18.8593 15.1797 19.0407 14.8032 19.2956 14.5558L19.2957 14.5558L19.2967 14.5547C19.5706 14.2808 19.9212 14.142 20.357 14.142C20.6333 14.142 20.8522 14.2147 21.0217 14.3534C21.1954 14.4955 21.3242 14.6906 21.4058 14.9437Z" stroke="black" strokeOpacity="0.7" strokeWidth="0.2" />
 							</svg>
-							<svg className="mr-3 ..6x04:block hidden" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className="mr-3 ..6x04:block hidden" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<circle cx="15" cy="15" r="11.6875" stroke="white" strokeOpacity="0.8" />
 								<circle cx="15" cy="15" r="14.25" stroke="black" strokeOpacity="0.7" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="bevel" strokeDasharray="3 6 9 12" />
 								<path d="M7.5 18.3197C7.76813 18.3034 7.95906 18.2466 8.07281 18.1491C8.19469 18.0516 8.27188 17.9053 8.30438 17.7103C8.33688 17.5153 8.35313 17.2675 8.35313 16.9669V11.8969C8.35313 11.7181 8.35719 11.5475 8.36531 11.385C8.37344 11.2144 8.38156 11.0681 8.38969 10.9462C8.25156 10.9544 8.10125 10.9625 7.93875 10.9706C7.77625 10.9788 7.63 10.9869 7.5 10.995V10.3247L10.6078 10.3125C11.3634 10.3125 12.0419 10.41 12.6431 10.605C13.2444 10.8 13.7563 11.0844 14.1788 11.4581C14.6013 11.8237 14.9222 12.2706 15.1416 12.7988C15.3609 13.3269 15.4706 13.9159 15.4706 14.5659C15.4706 15.1103 15.3772 15.6384 15.1903 16.1503C15.0034 16.6622 14.715 17.1213 14.325 17.5275C13.9431 17.9256 13.4597 18.2466 12.8747 18.4903C12.2897 18.7341 11.5991 18.8559 10.8028 18.8559H7.5V18.3197ZM9.645 17.235C9.645 17.4544 9.64094 17.6494 9.63281 17.82C9.63281 17.9906 9.62469 18.1288 9.60844 18.2344C9.77906 18.2344 9.94969 18.2384 10.1203 18.2466C10.2909 18.2466 10.4413 18.2466 10.5713 18.2466C10.7094 18.2466 10.8069 18.2466 10.8638 18.2466C11.3675 18.2466 11.8144 18.1531 12.2044 17.9663C12.5944 17.7794 12.9234 17.5194 13.1916 17.1863C13.4678 16.8531 13.675 16.4672 13.8131 16.0284C13.9594 15.5897 14.0325 15.1225 14.0325 14.6269C14.0325 13.8306 13.9025 13.1563 13.6425 12.6038C13.3825 12.0513 12.9884 11.6287 12.4603 11.3362C11.9403 11.0437 11.2903 10.8934 10.5103 10.8853C10.2422 10.8853 10.0472 10.9341 9.92531 11.0316C9.80344 11.1209 9.72625 11.2631 9.69375 11.4581C9.66125 11.6531 9.645 11.9009 9.645 12.2016V17.235Z" fill="black" fillOpacity="0.7" />
@@ -864,7 +767,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 
 							<div>
 								<p id="click" className='font-montserrat font-semibold ..6x04:text-13px  ..6x04:font-medium .1x1:text-13px '>Программа лояльности</p>
-								<p id="click" className='font-lora font-medium text-gray-quick-silver ..6x04:text-13px .1x1:text-13px '>De<span className=' font-normal font-montserrat'>-счёт:</span> <span className='font-montserrat  font-normal text-label-orange '>9 000 De</span></p>
+								<p id="click" className='font-lora font-medium text-gray-quick-silver ..6x04:text-13px .1x1:text-13px '>De<span id="click" className=' font-normal font-montserrat'>-счёт:</span> <span className='font-montserrat  font-normal text-label-orange '>9 000 De</span></p>
 
 							</div>
 						</div>
@@ -955,7 +858,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 								<path d="M10.3396 5.075L7 8.4281L3.65312 5.075L2.625 6.10729L7 10.5L11.375 6.10729L10.3396 5.075Z" fill="black" fillOpacity="0.7" />
 							</svg>
 
-							<svg className="mr-4 ..5x1:mr-1.5 ..6x04:hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className="mr-4 ..5x1:mr-1.5 ..6x04:hidden" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<mask id="path-1-inside-1_2812_671857" fill="white">
 									<path fillRule="evenodd" clipRule="evenodd" d="M3.2002 4.53335C3.2002 3.79697 3.79715 3.20001 4.53353 3.20001H16.5335C16.8871 3.20001 17.2263 3.34049 17.4763 3.59054L28.2585 14.3727C29.706 15.8289 29.706 18.1806 28.2585 19.6368L28.2557 19.6396L19.6523 28.243C18.9521 28.9438 18.0015 29.3379 17.0109 29.3379C16.02 29.3379 15.0699 28.9441 14.3696 28.2431L3.59124 17.4767C3.34088 17.2266 3.2002 16.8872 3.2002 16.5333V4.53335ZM5.86686 5.86668V15.9806L16.2562 26.3584C16.4564 26.5588 16.7278 26.6713 17.0109 26.6713C17.2941 26.6713 17.5656 26.5587 17.7656 26.3585L26.3673 17.7567L26.3685 17.7555C26.7805 17.3398 26.7805 16.6697 26.3685 16.254L26.3673 16.2528L15.9812 5.86668H5.86686Z" />
 									<path fillRule="evenodd" clipRule="evenodd" d="M11.5335 13.2C12.454 13.2 13.2002 12.4538 13.2002 11.5333C13.2002 10.6129 12.454 9.86668 11.5335 9.86668C10.6131 9.86668 9.86686 10.6129 9.86686 11.5333C9.86686 12.4538 10.6131 13.2 11.5335 13.2Z" />
@@ -964,7 +867,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 								<path fillRule="evenodd" clipRule="evenodd" d="M11.5335 13.2C12.454 13.2 13.2002 12.4538 13.2002 11.5333C13.2002 10.6129 12.454 9.86668 11.5335 9.86668C10.6131 9.86668 9.86686 10.6129 9.86686 11.5333C9.86686 12.4538 10.6131 13.2 11.5335 13.2Z" fill="black" fillOpacity="0.7" />
 								<path d="M17.4763 3.59054L17.2642 3.80267L17.2642 3.80267L17.4763 3.59054ZM28.2585 14.3727L28.4713 14.1612L28.4707 14.1606L28.2585 14.3727ZM28.2585 19.6368L28.471 19.8485L28.4713 19.8483L28.2585 19.6368ZM28.2557 19.6396L28.4679 19.8517L28.4682 19.8513L28.2557 19.6396ZM19.6523 28.243L19.4402 28.0309L19.4401 28.0309L19.6523 28.243ZM14.3696 28.2431L14.5819 28.031L14.5816 28.0308L14.3696 28.2431ZM3.59124 17.4767L3.37923 17.6889H3.37923L3.59124 17.4767ZM5.86686 15.9806H5.56686C5.56686 16.0602 5.59851 16.1366 5.65485 16.1929L5.86686 15.9806ZM5.86686 5.86668V5.56668C5.70118 5.56668 5.56686 5.70099 5.56686 5.86668H5.86686ZM16.2562 26.3584L16.4685 26.1464L16.4682 26.1462L16.2562 26.3584ZM17.7656 26.3585L17.5534 26.1464L17.5533 26.1465L17.7656 26.3585ZM26.3673 17.7567L26.5795 17.9689L26.5801 17.9682L26.3673 17.7567ZM26.3685 17.7555L26.5813 17.967L26.5816 17.9667L26.3685 17.7555ZM26.3685 16.254L26.5816 16.0428L26.5813 16.0425L26.3685 16.254ZM26.3673 16.2528L26.5801 16.0413L26.5795 16.0406L26.3673 16.2528ZM15.9812 5.86668L16.1934 5.65455C16.1371 5.59829 16.0608 5.56668 15.9812 5.56668V5.86668ZM4.53353 2.90001C3.63146 2.90001 2.9002 3.63128 2.9002 4.53335H3.5002C3.5002 3.96265 3.96283 3.50001 4.53353 3.50001V2.90001ZM16.5335 2.90001H4.53353V3.50001H16.5335V2.90001ZM17.6885 3.3784C17.3822 3.0721 16.9667 2.90001 16.5335 2.90001V3.50001C16.8076 3.50001 17.0704 3.60888 17.2642 3.80267L17.6885 3.3784ZM28.4713 19.8483C30.0351 18.2751 30.0351 15.7344 28.4713 14.1612L28.0458 14.5842C29.377 15.9233 29.377 18.0861 28.0458 19.4253L28.4713 19.8483ZM28.4682 19.8513L28.471 19.8485L28.0461 19.425L28.0433 19.4278L28.4682 19.8513ZM19.8644 28.4551L28.4679 19.8517L28.0436 19.4274L19.4402 28.0309L19.8644 28.4551ZM17.0109 29.6379C18.0811 29.6379 19.1081 29.2121 19.8645 28.455L19.4401 28.0309C18.7961 28.6754 17.9218 29.0379 17.0109 29.0379V29.6379ZM14.1574 28.4551C14.9139 29.2124 15.9404 29.6379 17.0109 29.6379V29.0379C16.0997 29.0379 15.2259 28.6757 14.5819 28.031L14.1574 28.4551ZM3.37923 17.6889L14.1576 28.4553L14.5816 28.0308L3.80326 17.2644L3.37923 17.6889ZM2.9002 16.5333C2.9002 16.9668 3.07253 17.3826 3.37923 17.6889L3.80326 17.2644C3.60922 17.0706 3.5002 16.8076 3.5002 16.5333H2.9002ZM2.9002 4.53335V16.5333H3.5002V4.53335H2.9002ZM6.16686 15.9806V5.86668H5.56686V15.9806H6.16686ZM17.0109 26.3713C16.8074 26.3713 16.6123 26.2904 16.4685 26.1464L16.044 26.5704C16.3004 26.8271 16.6482 26.9713 17.0109 26.9713V26.3713ZM17.5533 26.1465C17.4096 26.2904 17.2145 26.3713 17.0109 26.3713V26.9713C17.3737 26.9713 17.7215 26.8271 17.9778 26.5705L17.5533 26.1465ZM26.1552 17.5446L17.5534 26.1464L17.9777 26.5706L26.5795 17.9689L26.1552 17.5446ZM26.1557 17.5441L26.1545 17.5453L26.5801 17.9682L26.5813 17.967L26.1557 17.5441ZM26.1554 16.4651C26.4515 16.7639 26.4515 17.2456 26.1554 17.5444L26.5816 17.9667C27.1095 17.4341 27.1095 16.5754 26.5816 16.0428L26.1554 16.4651ZM26.1545 16.4642L26.1557 16.4654L26.5813 16.0425L26.5801 16.0413L26.1545 16.4642ZM15.7691 6.07881L26.1552 16.4649L26.5795 16.0406L16.1934 5.65455L15.7691 6.07881ZM5.86686 6.16668H15.9812V5.56668H5.86686V6.16668ZM28.4707 14.1606L17.6885 3.3784L17.2642 3.80267L28.0464 14.5849L28.4707 14.1606ZM16.4682 26.1462L6.07888 15.7684L5.65485 16.1929L16.0442 26.5707L16.4682 26.1462ZM11.5335 13.5C12.6197 13.5 13.5002 12.6195 13.5002 11.5333H12.9002C12.9002 12.2881 12.2883 12.9 11.5335 12.9V13.5ZM13.5002 11.5333C13.5002 10.4472 12.6197 9.56668 11.5335 9.56668V10.1667C12.2883 10.1667 12.9002 10.7786 12.9002 11.5333H13.5002ZM11.5335 9.56668C10.4474 9.56668 9.56686 10.4472 9.56686 11.5333H10.1669C10.1669 10.7786 10.7787 10.1667 11.5335 10.1667V9.56668ZM9.56686 11.5333C9.56686 12.6195 10.4474 13.5 11.5335 13.5V12.9C10.7787 12.9 10.1669 12.2881 10.1669 11.5333H9.56686Z" fill="#F7F8F6" mask="url(#path-1-inside-1_2812_671857)" />
 							</svg>
-							<svg className="mr-3 ..6x04:block hidden" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg id="click" className="mr-3 ..6x04:block hidden" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<mask id="path-1-inside-1_2585_696349" fill="white">
 									<path fillRule="evenodd" clipRule="evenodd" d="M3 4.25C3 3.55964 3.55964 3 4.25 3H15.5C15.8315 3 16.1495 3.1317 16.3839 3.36612L26.4922 13.4744C27.8492 14.8395 27.8492 17.0443 26.4922 18.4094L26.4896 18.4121L18.4238 26.4778C17.7674 27.1348 16.8762 27.5043 15.9476 27.5043C15.0186 27.5043 14.1279 27.135 13.4713 26.4779L3.36661 16.3844C3.13189 16.1499 3 15.8318 3 15.5V4.25ZM5.5 5.5V14.9818L15.24 24.711C15.4276 24.8988 15.6821 25.0043 15.9476 25.0043C16.213 25.0043 16.4675 24.8988 16.655 24.7111L24.7192 16.6469L24.7203 16.6458C25.1065 16.2561 25.1065 15.6278 24.7203 15.2381L24.7192 15.2369L14.9822 5.5H5.5Z" />
 									<path fillRule="evenodd" clipRule="evenodd" d="M10.8125 12.375C11.6754 12.375 12.375 11.6754 12.375 10.8125C12.375 9.94956 11.6754 9.25 10.8125 9.25C9.94956 9.25 9.25 9.94956 9.25 10.8125C9.25 11.6754 9.94956 12.375 10.8125 12.375Z" />
@@ -979,7 +882,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 						</div>
 						<div className={`p-3 pt-0 ${dropDownds.promo ? 'block' : 'hidden'}`}>
 							<div className="mb-3 w-full flex ">
-								<input className="h-11 w-full rounded font-noto-sans text-13px outline-none px-10px mr-3 border border-gray-quick-silver" type="text" onChange={e => inputChange(e)} value={value} placeholder={"УСПЕХ"} />
+								<input className="h-11 w-full rounded font-noto-sans text-13px outline-none px-10px mr-3 border border-gray-quick-silver" type="text" onChange={e => inputChange(e)} value={value} />
 								<button className="h-11 px-30px font-montserrat text-xs text-primary font-medium bg-gray-light2 rounded">
 									Применить
 								</button>
@@ -1953,7 +1856,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 							<path fillRule="evenodd" clipRule="evenodd" d="M22.6663 5.3335C20.4572 5.3335 18.6663 7.12436 18.6663 9.3335C18.6663 10.1524 19.0129 11.0777 19.4738 11.9995C19.9574 12.9667 20.6625 14.1119 21.5693 15.4246C21.8182 15.785 22.2283 16.0002 22.6663 16.0002C23.1044 16.0002 23.5145 15.785 23.7634 15.4246C24.6702 14.1119 25.3753 12.9667 25.8589 11.9995C26.3198 11.0777 26.6663 10.1524 26.6663 9.3335C26.6663 7.12436 24.8755 5.3335 22.6663 5.3335ZM21.333 9.3335C21.333 8.59712 21.93 8.00016 22.6663 8.00016C23.4027 8.00016 23.9997 8.59712 23.9997 9.3335C23.9997 9.49645 23.9018 9.95094 23.4738 10.8069C23.2648 11.2249 22.9966 11.7013 22.6663 12.2376C22.3361 11.7013 22.0679 11.2249 21.8589 10.8069C21.4309 9.95094 21.333 9.49645 21.333 9.3335Z" stroke="#F7F8F6" strokeWidth="0.6" strokeLinejoin="round" />
 							<path fillRule="evenodd" clipRule="evenodd" d="M4.66634 1.3335C2.82539 1.3335 1.33301 2.82588 1.33301 4.66683V27.3335C1.33301 29.1744 2.82539 30.6668 4.66634 30.6668H27.333C29.174 30.6668 30.6663 29.1744 30.6663 27.3335V4.66683C30.6663 2.82588 29.174 1.3335 27.333 1.3335H4.66634ZM3.99967 4.66683C3.99967 4.29864 4.29815 4.00016 4.66634 4.00016H27.333C27.7012 4.00016 27.9997 4.29864 27.9997 4.66683V27.3335C27.9997 27.7017 27.7012 28.0002 27.333 28.0002H4.66634C4.29815 28.0002 3.99967 27.7017 3.99967 27.3335V4.66683Z" stroke="#F7F8F6" strokeWidth="0.6" strokeLinejoin="round" />
 						</svg>
-						<svg className={`mr-3 ..6x04:block hidden `} width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg className={`mr-3 ${dropDownds.free ? 'mb-7 w-8' : ""} ..6x04:block hidden `} width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M23.5892 18.6606C24.2302 18.4042 24.542 17.6767 24.2856 17.0358C24.0292 16.3948 23.3017 16.083 22.6608 16.3394L22.0097 16.5998C21.3687 16.8562 21.057 17.5837 21.3134 18.2247C21.5698 18.8656 22.2972 19.1774 22.9382 18.921L23.5892 18.6606Z" fill="black" fillOpacity="0.7" />
 							<path d="M19.0319 20.4835C19.6729 20.2271 19.9847 19.4997 19.7283 18.8587C19.4719 18.2177 18.7444 17.9059 18.1035 18.1623L16.8014 18.6832C16.1604 18.9395 15.8486 19.667 16.105 20.308C16.3614 20.949 17.0889 21.2607 17.7299 21.0043L19.0319 20.4835Z" fill="black" fillOpacity="0.7" />
 							<path d="M13.8236 22.5668C14.4646 22.3105 14.7764 21.583 14.52 20.942C14.2636 20.301 13.5361 19.9893 12.8951 20.2457L11.5931 20.7665C10.9521 21.0229 10.6403 21.7503 10.8967 22.3913C11.1531 23.0323 11.8806 23.3441 12.5215 23.0877L13.8236 22.5668Z" fill="black" fillOpacity="0.7" />
@@ -2026,7 +1929,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 										<p className="font-montserrat mb-0.5 .2x00:text-xs">Курьерская</p>
 										<p className="font-montserrat text-13px to-black-70pe .2x00:text-xs">2-3 дня</p>
 
-										<SectionImgs variant={'Dostavka'} adapt={true} noCenter={true} mr3={true} textImg={[yandex, pochtaRF, ozon, cdek]} />
+										<SectionImgs variant={'DostavkaDropDown'} adapt={true} noCenter={true} mr3={true} textImg={[yandex, pochtaRF, ozon, cdek]} />
 
 									</div>
 									<div>
@@ -2061,7 +1964,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 										<p className="font-montserrat mb-0.5 .2x00:text-xs">ПВЗ/постаматы</p>
 										<p className="font-montserrat text-13px to-black-70pe .2x00:text-xs">4-6 дней</p>
 
-										<SectionImgs variant={'Dostavka'} adapt={true} noCenter={true} mr3={true} textImg={[ozon, cdek, berry]} />
+										<SectionImgs variant={'DostavkaDropDown'} adapt={true} noCenter={true} mr3={true} textImg={[ozon, cdek, berry]} />
 
 									</div>
 									<div>
@@ -2259,7 +2162,7 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 					</div>
 					<div className={`p-3 pt-0 ${dropDownds.promo ? 'block' : 'hidden'}`}>
 						<div className="mb-3 w-full flex ">
-							<input className="h-11 w-full rounded font-noto-sans text-13px outline-none px-10px mr-3 border border-gray-quick-silver" type="text" value={"УСПЕХ"} />
+							<input className="h-11 w-full rounded font-noto-sans text-13px outline-none px-10px mr-3 border border-gray-quick-silver" type="text" value={value} onChange={e => inputChange(e)} />
 							<button className="h-11 px-30px font-montserrat text-xs text-primary font-medium bg-gray-light2 rounded">
 								Применить
 							</button>

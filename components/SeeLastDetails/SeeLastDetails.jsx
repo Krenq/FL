@@ -49,7 +49,7 @@ const SeeLastDetails = () => {
 				<Swiper ref={sliderSpecial} slidesPerView={2} scrollbar={{
 					hide: false,
 					draggable: true,
-				}} modules={[Navigation, Pagination, Scrollbar]} className=' photoCus   sliderDetail' breakpoints={{
+				}} modules={[Navigation, Pagination, Scrollbar]} className=' photoCus !overflow-hidden ..5x2:!overflow-visible  sliderDetail' breakpoints={{
 					360: {
 						slidesPerView: 2
 					},
@@ -320,12 +320,12 @@ const SeeLastDetails = () => {
 
 
 				</Swiper>
-				<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlidePhotoSpecial} className='absolute hover:bg-black transition-all w-11 h-11 rounded-32px bg-white flex items-center justify-center ..5x2:hidden  left-14   top-80   z-10'>
+				<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlidePhotoSpecial} className='absolute hover:bg-black transition-all w-11 h-11 rounded-32px bg-white flex items-center justify-center ..5x2:hidden  left-60px   top-308px   z-10'>
 					<svg className="activeArrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14.33 8L6.03 16L5 15L9 9L9.7 8L9 7L5 1L6.03 0L14.33 8Z" fill={`${buttonHover ? 'white' : "black"}`} />
 					</svg>
 				</button>
-				<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhotoSpecial} className='absolute  w-11 h-11 hover:bg-black transition-all rounded-32px bg-white flex items-center justify-center ..5x2:hidden right-14  top-80 z-10'>
+				<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhotoSpecial} className='absolute  w-11 h-11 hover:bg-black transition-all rounded-32px bg-white flex items-center justify-center ..5x2:hidden right-69px top-308px z-10'>
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14.33 8L6.03 16L5 15L9 9L9.7 8L9 7L5 1L6.03 0L14.33 8Z" fill={`${buttonHoverNext ? 'white' : "black"}`} />
 					</svg>

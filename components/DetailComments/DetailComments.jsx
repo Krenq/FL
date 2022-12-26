@@ -75,33 +75,47 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 					}} modules={[Navigation, Scrollbar]}  >
 
 
-						<SwiperSlide onClick={setVideo} className="pr-2 cursor-pointer">
-							<Image src={detailOne} />
-						</SwiperSlide>
-						<SwiperSlide onClick={setVideo} className="pr-2 cursor-pointer">
-							<Image src={detailTwo} />
-						</SwiperSlide>
-						<SwiperSlide onClick={setVideo} className="pr-2 cursor-pointer">
-							<Image src={detailTree} />
-						</SwiperSlide>
-						<SwiperSlide onClick={setVideo} className="pr-2 relative cursor-pointer">
-							<div className="absolute flex items-center justify-center left-0 right-0 bottom-0 top-0 z-10">
-								<svg className="..5x4:h-38px ..5x4:w-38px" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M38.8635 30.8286C39.4964 30.4632 40.2761 30.4632 40.909 30.8286L62.3863 43.2286C63.0191 43.5939 63.409 44.2692 63.409 45C63.409 45.7307 63.0191 46.406 62.3863 46.7714L40.909 59.1713C40.2761 59.5367 39.4964 59.5367 38.8635 59.1713C38.2307 58.806 37.8408 58.1307 37.8408 57.3999V32.6C37.8408 31.8692 38.2307 31.194 38.8635 30.8286ZM41.9317 36.1429V53.8571L57.2726 45L41.9317 36.1429Z" fill="white" />
-									<circle cx="45" cy="45" r="44.5" stroke="white" strokeOpacity="0.8" />
-								</svg>
+						<SwiperSlide onClick={setVideo} className="pr-2 ..7x1:pr-0 ..7x1:mr-2 ..7x1:w-90px ..7x1:h-90px  cursor-pointer">
+							<div className="..7x1:w-90px ..7x1:h-90px">
+								<Image src={detailOne} />
 							</div>
 
-							<Image src={detailFour} />
 						</SwiperSlide>
-						<SwiperSlide onClick={setVideo} className="pr-2  cursor-pointer">
-							<Image src={detailSix} />
+						<SwiperSlide onClick={setVideo} className="pr-2 ..7x1:pr-0 ..7x1:mr-2 ..7x1:w-90px ..7x1:h-90px cursor-pointer">
+							<div className="..7x1:w-90px ..7x1:h-90px"><Image src={detailTwo} /></div>
+
 						</SwiperSlide>
-						<SwiperSlide onClick={setVideo} className="pr-2  cursor-pointer">
-							<Image src={detailSix} />
+						<SwiperSlide onClick={setVideo} className="pr-2 ..7x1:pr-0 ..7x1:mr-2 ..7x1:w-90px ..7x1:h-90px cursor-pointer">
+							<div className="..7x1:w-90px ..7x1:h-90px"><Image src={detailTree} /></div>
+
 						</SwiperSlide>
-						<SwiperSlide onClick={setVideo} className="pr-2   cursor-pointer">
-							<Image src={detailSix} />
+						<SwiperSlide onClick={setVideo} className="pr-2 ..7x1:pr-0 ..7x1:mr-2 ..7x1:w-90px ..7x1:h-90px relative cursor-pointer">
+							<div className="..7x1:w-90px ..7x1:h-90px">
+								<div className="absolute flex items-center justify-center left-0 right-0 bottom-0 top-0 z-10">
+									<svg className="..5x4:h-38px ..5x4:w-38px" width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fillRule="evenodd" clipRule="evenodd" d="M38.8635 30.8286C39.4964 30.4632 40.2761 30.4632 40.909 30.8286L62.3863 43.2286C63.0191 43.5939 63.409 44.2692 63.409 45C63.409 45.7307 63.0191 46.406 62.3863 46.7714L40.909 59.1713C40.2761 59.5367 39.4964 59.5367 38.8635 59.1713C38.2307 58.806 37.8408 58.1307 37.8408 57.3999V32.6C37.8408 31.8692 38.2307 31.194 38.8635 30.8286ZM41.9317 36.1429V53.8571L57.2726 45L41.9317 36.1429Z" fill="white" />
+										<circle cx="45" cy="45" r="44.5" stroke="white" strokeOpacity="0.8" />
+									</svg>
+								</div>
+
+								<Image src={detailFour} />
+
+							</div>
+
+						</SwiperSlide>
+						<SwiperSlide onClick={setVideo} className="pr-2 ..7x1:pr-0 ..7x1:mr-2 ..7x1:w-90px ..7x1:h-90px  cursor-pointer">
+							<div className="..7x1:w-90px ..7x1:h-90px"><Image src={detailSix} /></div>
+
+						</SwiperSlide>
+						<SwiperSlide onClick={setVideo} className="pr-2 ..7x1:pr-0 ..7x1:mr-2 ..7x1:w-90px ..7x1:h-90px   cursor-pointer">
+							<div className="..7x1:w-90px ..7x1:h-90px"><Image src={detailSix} /></div>
+
+						</SwiperSlide>
+						<SwiperSlide onClick={setVideo} className="pr-2 ..7x1:pr-0 ..7x1:mr-2 ..7x1:w-90px ..7x1:h-90px  cursor-pointer">
+							<div className="..7x1:w-90px ..7x1:h-90px">
+								<Image src={detailSix} />
+
+							</div>
 						</SwiperSlide>
 
 
@@ -110,13 +124,13 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 
 
 
-					<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlidePhoto} className='activeArrow absolute hover:bg-black transition-all   ..5x2:hidden h-8 w-8 bg-white  -left-8   top-20 flex justify-center  rounded-56px items-center  z-10'>
+					<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlidePhoto} className='activeArrow absolute hover:bg-black transition-all   ..5x2:hidden h-8 w-8 bg-white  -left-4   top-20 flex justify-center  rounded-56px items-center  z-10'>
 						<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill={`${buttonHover ? 'white' : "black"}`} />
 						</svg>
 
 					</button>
-					<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhoto} className=' absolute  ..5x2:hidden  -right-8  hover:bg-black transition-all   h-8 w-8 top-20 bg-white z-10 flex justify-center items-center rounded-56px'>
+					<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlidePhoto} className=' absolute  ..5x2:hidden  -right-3  hover:bg-black transition-all   h-8 w-8 top-20 bg-white z-10 flex justify-center items-center rounded-56px'>
 						<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M8.53875 7L1.27625 14L0.375 13.125L3.875 7.875L4.4875 7L3.875 6.125L0.375 0.875L1.27625 0L8.53875 7Z" fill={`${buttonHoverNext ? 'white' : "black"}`} />
 						</svg>

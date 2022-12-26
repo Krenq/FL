@@ -243,12 +243,12 @@ const ActDescription = () => {
 					</SwiperSlide>
 
 				</Swiper>
-				<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlideFilt} className='absolute hover:bg-black transition-all rounded-2xl ..5x2:hidden  left-10 h-8 w-8 flex items-center justify-center top-60   z-10'>
+				<button onMouseEnter={hoverSet} onMouseLeave={hoverSet} onClick={prevSlideFilt} className='absolute hover:bg-black transition-all rounded-2xl ..5x2:hidden  left-16 h-8 w-8 flex items-center justify-center top-218px   z-10'>
 					<svg className="activeArrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14.33 8L6.03 16L5 15L9 9L9.7 8L9 7L5 1L6.03 0L14.33 8Z" fill={`${buttonHover ? 'white' : "black"}`} />
 					</svg>
 				</button>
-				<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlideFilt} className='absolute hover:bg-black transition-all rounded-2xl ..5x2:hidden right-20 h-8 w-8 flex items-center justify-center  top-60 z-10'>
+				<button onMouseEnter={hoverNext} onMouseLeave={hoverNext} onClick={nextSlideFilt} className='absolute hover:bg-black transition-all rounded-2xl ..5x2:hidden right-77px h-8 w-8 flex items-center justify-center  top-218px  z-10'>
 					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14.33 8L6.03 16L5 15L9 9L9.7 8L9 7L5 1L6.03 0L14.33 8Z" fill={`${buttonHoverNext ? 'white' : "black"}`} />
 					</svg>

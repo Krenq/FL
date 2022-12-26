@@ -25,12 +25,15 @@ import i from '../../images/templates/image.jpg'
 import matOne from '../../images/templates/materialsone.jpg'
 import videoPreview from '../../images/templates/videoPreview.jpg'
 import filtOne from '../../images/templates/filtOne.jpg'
+
 import MaterialsPhotoItem from "../MaterialsPhotoItem/MaterialsPhotoItem"
 import MaterialsVideoItem from "../MaterialsVideoItem/MaterialsVideoItem"
 import MaterialsTextProdItem from "../MaterialsTextProdItem/MaterialsTextProdItem"
 import DetailMaterialsPhone from "../DetailMaterialsPhone/DetailMaterialsPhone"
 import DetailMaterialsPhoneV from "../DetailMaterialsPhoneV/DetailMaterialsPhoneV"
 import DetailMaterialsPhoneP from "../DetailMaterialsPhoneP/DetailMaterialsPhoneP"
+import VideoMaterials from "../VideoMaterials/VideoMaterials"
+
 const DetailDescription = ({ refF, close, setVideo }) => {
 	const [currentFilter, setCurrentFilter] = useState({
 		photo: true,
@@ -46,7 +49,76 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 		pdf: false
 	}),
 		[selectedAll, setSelectedAll] = useState(false),
-		[showComponents, setShowComponents] = useState(false)
+		[showComponents, setShowComponents] = useState(false),
+		[currentsItems, setCurrentsItems] = useState([])
+
+	const materialsPhoto = [
+		matOne,
+		matOne,
+		matOne,
+		matOne
+	],
+		materialsVideo = [
+			videoPreview
+		],
+		materialsProducts = [
+			prodOne,
+			prodTwo,
+			prodTree,
+			prodFour,
+			prodFive,
+			prodSix,
+
+		]
+
+
+	const setCurrent = item => setCurrentsItems([...currentsItems, item]),
+		deleteItem = item => {
+			const newArray = currentsItems.filter(itemArr => itemArr.src === item.src)
+			setCurrentsItems([...newArray])
+		},
+		downLoadCheked = () => {
+			if (selectedAll) {
+				setCurrentsItems([])
+				if (currentFilter.photo || currentFilterMobile.photo) {
+					materialsPhoto.forEach(item => {
+						const targetA = document.createElement('a')
+						targetA.setAttribute('download', `custom.jpg`)
+						targetA.setAttribute('href', item.src)
+						targetA.click()
+
+					})
+				} else if (currentFilter.video || currentFilterMobile.video) {
+					// ${item.type === 'video' ? 'mp4' : 'jpg'}
+					materialsVideo.forEach(item => {
+						const targetA = document.createElement('a')
+						targetA.setAttribute('download', `custom.mp4`)
+						targetA.setAttribute('href', item.src)
+						targetA.click()
+
+					})
+				} else if (currentFilter.product || currentFilterMobile.product) {
+					materialsProducts.forEach(item => {
+						const targetA = document.createElement('a')
+						targetA.setAttribute('download', `custom.pdf`)
+						targetA.setAttribute('href', item.src)
+						targetA.click()
+
+					})
+				}
+
+			} else {
+
+				currentsItems.forEach(item => {
+					const targetA = document.createElement('a')
+					targetA.setAttribute('download', `custom.${item.type}`)
+					targetA.setAttribute('href', item.src.src)
+					targetA.click()
+
+				})
+			}
+
+		}
 
 	const showComp = () => setShowComponents(!showComponents)
 
@@ -131,7 +203,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 	const setShowLocal = (title, e) => {
 
-		if (e.target.classList.value === 'flex items-center justify-between' || e.target.classList.value === 'font-montserrat mb-3 text-sm font-medium flex items-center ') {
+		if (e.target.id === 'click') {
 			switch (title) {
 				case ('desc'):
 					return setShow({ materials: false, desc: !show.desc, activeComponents: false })
@@ -152,7 +224,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 
 	const setFilterItem = (title, e) => {
-
+		setCurrentsItems([])
 		if (window.innerWidth < 1000) {
 
 			switch (title) {
@@ -317,6 +389,15 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 		],
 	};
 
+	const downloadFileService = () => {
+		const targetA = document.createElement('a')
+		targetA.setAttribute('download', `custom.txt`)
+		targetA.setAttribute('href', '')
+		targetA.click()
+	}
+
+
+
 	return (
 		<>
 
@@ -360,12 +441,12 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 				<div className="hidden ..5x2:block">
 					<div className=" ">
 						<div onClick={(e) => setShowLocal('desc', e)} className={`mt-3 h-12 buttonShadow p-3 py-3.5 rounded transition-all ${show.desc ? 'activeButtonS' : 'overflow-hidden'} `}>
-							<div className="flex items-center justify-between">
-								<p className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg className="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<div id="click" className="flex items-center justify-between">
+								<p id="click" className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg id="click" className="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M2.66667 1.99996C2.48257 1.99996 2.33333 2.1492 2.33333 2.33329V13.6666C2.33333 13.8507 2.48257 14 2.66667 14H11V2.33329C11 2.14919 10.8508 1.99996 10.6667 1.99996H2.66667ZM12.3333 6.66663V2.33329C12.3333 1.41283 11.5872 0.666626 10.6667 0.666626H2.66667C1.74619 0.666626 1 1.41282 1 2.33329V13.6666C1 14.5871 1.7462 15.3333 2.66667 15.3333H13.3333C14.2538 15.3333 15 14.5871 15 13.6666V7.99996C15 7.26357 14.4031 6.66663 13.6667 6.66663H12.3333ZM12.3333 7.99996V14H13.3333C13.5174 14 13.6667 13.8507 13.6667 13.6666V7.99996H12.3333ZM3 3.99996C3 3.63177 3.29848 3.33329 3.66667 3.33329H6.33333C6.70152 3.33329 7 3.63177 7 3.99996C7 4.36815 6.70152 4.66663 6.33333 4.66663H3.66667C3.29848 4.66663 3 4.36815 3 3.99996ZM3 6.33329C3 5.9651 3.29848 5.66663 3.66667 5.66663H7.66667C8.03486 5.66663 8.33333 5.9651 8.33333 6.33329C8.33333 6.70148 8.03486 6.99996 7.66667 6.99996H3.66667C3.29848 6.99996 3 6.70148 3 6.33329Z" fill="white" stroke="#337202" strokeWidth="0.6" strokeLinecap="round" strokeLinejoin="round" />
 								</svg>
 									Описание</p>
-								<svg className="svgI -mt-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg id="click" className="svgI -mt-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11.8167 5.8L8 9.63212L4.175 5.8L3 6.97976L8 12L13 6.97976L11.8167 5.8Z" fill="black" />
 								</svg>
 							</div>
@@ -381,8 +462,8 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 						</div>
 						<div onClick={(e) => setShowLocal('activeComoonents', e)} className={`mt-3  h-12 buttonShadow py-3.5 p-0 rounded transition-all ${show.activeComponents ? 'activeButtonS !h-300px ..6x5:!h-317px ..6x6:!h-350px ..7x001:!h-387px' : 'overflow-hidden'}`}>
-							<div className="flex items-center px-3 justify-between">
-								<p className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg className="mr-2" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<div id="click" className="flex items-center px-3 justify-between">
+								<p id="click" className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg id="click" className="mr-2" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M7.09157 0.71301C7.37559 0.428994 7.83607 0.428997 8.12009 0.713016L9.14255 1.73549L9.14855 1.74142L13.2626 5.85549C13.5466 6.13951 13.5466 6.59999 13.2626 6.88401L7.60579 12.5409C7.4694 12.6773 7.28441 12.7539 7.09153 12.7539C6.89864 12.7539 6.71366 12.6773 6.57727 12.5409L2.46319 8.42681C2.17917 8.14279 2.17917 7.68231 2.46319 7.39829L7.60574 2.25572L7.09156 1.74153C6.80755 1.45751 6.80755 0.997026 7.09157 0.71301ZM4.00597 7.91255L4.56828 7.35024L9.21247 8.87714L7.09152 10.9981L4.00597 7.91255ZM10.3648 7.72485L5.72057 6.19794L8.63429 3.2842L11.7198 6.36975L10.3648 7.72485Z" fill="white" />
 									<path d="M13.4773 12.6804C14.2806 12.6804 14.9318 12.0292 14.9318 11.2259C14.9318 10.6903 14.447 9.96302 13.4773 9.04403C12.5076 9.96302 12.0227 10.6903 12.0227 11.2259C12.0227 12.0292 12.674 12.6804 13.4773 12.6804Z" fill="white" />
 									<path d="M1.47727 14.1349C1.07561 14.1349 0.75 14.4606 0.75 14.8622C0.75 15.2639 1.07561 15.5895 1.47727 15.5895H16.0227C16.4244 15.5895 16.75 15.2639 16.75 14.8622C16.75 14.4606 16.4244 14.1349 16.0227 14.1349H1.47727Z" fill="white" />
@@ -392,7 +473,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 								</svg>
 
 									Активные компоненты</p>
-								<svg className="svgI -mt-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg id="click" className="svgI -mt-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11.8167 5.8L8 9.63212L4.175 5.8L3 6.97976L8 12L13 6.97976L11.8167 5.8Z" fill="black" />
 								</svg>
 							</div>
@@ -451,14 +532,14 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 							</div>
 						</div>
 						<div onClick={(e) => setShowLocal('materials', e)} className={`mt-3 mb-3  h-12 buttonShadow p-0 py-3.5 rounded transition-all ${show.materials ? `activeButtonS !h-350px ..6x4:!h-428px  ${currentFilterMobile.active ? '!h-1100px ..6x4:!h-1100px ..7x001:!h-1100px' : ''}` : 'overflow-hidden'}`}>
-							<div className="flex items-center px-3 justify-between">
-								<p className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg className="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<div id="click" className="flex items-center px-3 justify-between">
+								<p id="click" className="font-montserrat mb-3 text-sm font-medium flex items-center "><svg id="click" className="mr-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M0.666748 1.83329C0.666748 1.4651 0.965225 1.16663 1.33341 1.16663H14.6667C15.0349 1.16663 15.3334 1.4651 15.3334 1.83329C15.3334 2.20148 15.0349 2.49996 14.6667 2.49996H14.3334V11.1666C14.3334 11.5348 14.0349 11.8333 13.6667 11.8333H9.60956L11.1382 13.3619C11.3985 13.6222 11.3985 14.0443 11.1382 14.3047C10.8778 14.565 10.4557 14.565 10.1953 14.3047L8.00008 12.1094L5.80482 14.3047C5.54447 14.565 5.12236 14.565 4.86201 14.3047C4.60166 14.0443 4.60166 13.6222 4.86201 13.3619L6.39061 11.8333H2.33341C1.96522 11.8333 1.66675 11.5348 1.66675 11.1666V2.49996H1.33341C0.965225 2.49996 0.666748 2.20148 0.666748 1.83329ZM3.00008 2.49996V10.5H13.0001V2.49996H3.00008ZM11.7933 4.03503C12.0539 4.29511 12.0544 4.71722 11.7943 4.97783L8.47475 8.30421C8.21651 8.56298 7.79804 8.56551 7.53669 8.30988L6.52172 7.3171L5.10706 8.69798C4.84358 8.95516 4.4215 8.95006 4.16432 8.68658C3.90713 8.42311 3.91224 8.00103 4.17571 7.74384L6.05652 5.90794C6.3157 5.65495 6.72945 5.65517 6.98836 5.90842L7.99719 6.89519L10.8505 4.036C11.1106 3.77538 11.5327 3.77495 11.7933 4.03503Z" fill="white" stroke="#337202" strokeWidth="0.6" strokeLinecap="round" strokeLinejoin="round" />
 								</svg>
 
 
 									Материалы</p>
-								<svg className="svgI -mt-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg id="click" className="svgI -mt-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11.8167 5.8L8 9.63212L4.175 5.8L3 6.97976L8 12L13 6.97976L11.8167 5.8Z" fill="black" />
 								</svg>
 							</div>
@@ -512,7 +593,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 										</svg>
 										Выделить все
 									</button>
-									<button className="flex ..7x01:text-10px transition-all  bg-primary mr-1 h-26px p-1.5 px-3 rounded-3xl items-center ..7x2:ml-0.5 ..7x2:px-2 ml-2 font-montserrat font-medium text-11px text-white">
+									<button onClick={downLoadCheked} className="flex ..7x01:text-10px transition-all  bg-primary mr-1 h-26px p-1.5 px-3 rounded-3xl items-center ..7x2:ml-0.5 ..7x2:px-2 ml-2 font-montserrat font-medium text-11px text-white">
 										<svg className=" mr-1 ..5x2:h-14px ..5x2:w-14px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M6.56023 10.8285C6.4317 10.9626 6.26436 11.0624 6.07022 11.1086C4.30906 11.5274 3 13.1122 3 15.0002C3 17.2094 4.79086 19.0002 7 19.0002C7.38062 19.0002 7.74717 18.9474 8.09352 18.8492C8.62487 18.6986 9.17772 19.0072 9.32834 19.5386C9.47897 20.0699 9.17033 20.6228 8.63898 20.7734C8.11683 20.9214 7.56678 21.0002 7 21.0002C3.68629 21.0002 1 18.3139 1 15.0002C1 12.3751 2.68503 10.1457 5.03157 9.33088C5.36842 5.77877 8.35971 3 12 3C15.6573 3 18.6596 5.80487 18.973 9.38085C21.2471 10.234 22.8662 12.427 22.8662 15.0002C22.8662 18.3139 20.1799 21.0002 16.8662 21.0002C16.2994 21.0002 15.7494 20.9214 15.2272 20.7734C14.6959 20.6228 14.3872 20.0699 14.5378 19.5386C14.6885 19.0072 15.2413 18.6986 15.7727 18.8492C16.119 18.9474 16.4856 19.0002 16.8662 19.0002C19.0753 19.0002 20.8662 17.2094 20.8662 15.0002C20.8662 13.1122 19.5572 11.5274 17.796 11.1086C17.3803 11.0098 17.0875 10.6647 17.0354 10.2647C17.0123 10.1804 17 10.0917 17 10C17 7.23858 14.7614 5 12 5C9.23858 5 7 7.23858 7 10C7 10.3447 6.8256 10.6487 6.56023 10.8285Z" fill="white" />
 											<path d="M16.2758 14.2957C16.6648 14.6877 16.6623 15.3209 16.2703 15.7099L12.7043 19.2481C12.3129 19.6364 11.681 19.6347 11.2917 19.2441L7.82444 15.7654C7.43456 15.3743 7.43561 14.7411 7.82677 14.3512C8.21794 13.9613 8.85111 13.9624 9.24099 14.3536L11 16.1184V10C11 9.44772 11.4477 9 12 9C12.5523 9 13 9.44772 13 10V16.1372L14.8616 14.2901C15.2536 13.9011 15.8868 13.9036 16.2758 14.2957Z" fill="white" />
@@ -528,10 +609,10 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 								</div>
 								<div className="flex mt-3 flex-wrap">
-									<DetailMaterialsPhone selectedAll={selectedAll} src={mobileFilter} />
+									{/* TODO: Итерироваться по новому массиву специально для мобильной версии, иначе изображения ломаются */}
+									{materialsPhoto.map((photoSrc, i) => <DetailMaterialsPhone key={i} src={mobileFilter} deleteItem={deleteItem} setCurrent={setCurrent} selectedAll={selectedAll} />)}
 
-									<DetailMaterialsPhone selectedAll={selectedAll} src={mobileFilter} />
-									<DetailMaterialsPhone selectedAll={selectedAll} src={mobileFilter} />
+
 
 								</div>
 							</>}
@@ -542,10 +623,9 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 
 								</div>
 								<div className="flex mt-3 flex-wrap">
+									{/* TODO: Итерироваться по новому массиву специально для мобильной версии, иначе изображения ломаются */}
+									{materialsVideo.map((photoSrc, i) => <DetailMaterialsPhoneV key={i} deleteItem={deleteItem} setCurrent={setCurrent} selectedAll={selectedAll} src={mobileFilter} />)}
 
-									<DetailMaterialsPhoneV selectedAll={selectedAll} src={mobileFilter} />
-									<DetailMaterialsPhoneV selectedAll={selectedAll} src={mobileFilter} />
-									<DetailMaterialsPhoneV selectedAll={selectedAll} src={mobileFilter} />
 
 								</div>
 							</>}
@@ -555,7 +635,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 										<div className="bg-white h-full w-full flex items-center  flex-col">
 											<p className="font-montserrat font-medium text-13px text-center leading-140% mt-10 mb-0.5">Сертификат соответствия</p>
 											<p className="font-montserrat font-medium leading-120% text-11px text-gray-quick-silver mb-6 text-center">Евразийский экономический союз</p>
-											<div>
+											<div onClick={downloadFileService}>
 												<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<circle cx="16" cy="16" r="16" fill="#337202" />
 													<path d="M16.7469 9.25C16.7469 8.83579 16.4111 8.5 15.9969 8.5C15.5827 8.5 15.2469 8.83579 15.2469 9.25V17.1862L13.1553 15.0947C12.8624 14.8018 12.3876 14.8018 12.0947 15.0947C11.8018 15.3876 11.8018 15.8624 12.0947 16.1553L15.4274 19.488C15.5649 19.6484 15.769 19.75 15.9969 19.75L15.9984 19.75C16.1909 19.7504 16.3835 19.6772 16.5303 19.5303L19.9053 16.1553C20.1982 15.8624 20.1982 15.3876 19.9053 15.0947C19.6124 14.8018 19.1376 14.8018 18.8447 15.0947L16.7469 17.1925V9.25Z" fill="white" />
@@ -569,7 +649,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 										<div className="bg-white h-full w-full flex items-center  flex-col">
 											<p className="font-montserrat font-medium text-13px text-center leading-140% mt-10 mb-0.5">Сертификат соответствия</p>
 											<p className="font-montserrat font-medium leading-120% text-11px text-gray-quick-silver mb-6 text-center">Евразийский экономический союз</p>
-											<div>
+											<div onClick={downloadFileService}>
 												<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<circle cx="16" cy="16" r="16" fill="#337202" />
 													<path d="M16.7469 9.25C16.7469 8.83579 16.4111 8.5 15.9969 8.5C15.5827 8.5 15.2469 8.83579 15.2469 9.25V17.1862L13.1553 15.0947C12.8624 14.8018 12.3876 14.8018 12.0947 15.0947C11.8018 15.3876 11.8018 15.8624 12.0947 16.1553L15.4274 19.488C15.5649 19.6484 15.769 19.75 15.9969 19.75L15.9984 19.75C16.1909 19.7504 16.3835 19.6772 16.5303 19.5303L19.9053 16.1553C20.1982 15.8624 20.1982 15.3876 19.9053 15.0947C19.6124 14.8018 19.1376 14.8018 18.8447 15.0947L16.7469 17.1925V9.25Z" fill="white" />
@@ -590,7 +670,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 								</div>
 								<div className="flex mt-3 flex-wrap">
 
-									<DetailMaterialsPhoneP src={mobileFilter} selectedAll={selectedAll} />
+									<DetailMaterialsPhoneP src={mobileFilter} deleteItem={deleteItem} setCurrent={setCurrent} selectedAll={selectedAll} />
 
 								</div>
 							</>}
@@ -601,7 +681,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 											<p className="font-montserrat font-medium text-xl ..5x2:text-13px">Статьи</p>
 											<p className="font-montserrat font-medium text-xl text-gray-quick-silver ml-2 ..5x2:text-13px">3</p>
 										</div>
-										<Slider {...settings} className="pt-13px ..5x2:h-400px ..6x04:h-auto  ..5x2:pt-1 mobSl  newsSlider   ">
+										<Slider {...settings} className="pt-13px ..5x2:h-500px  ..6x2:h-460px ..6x4:h-400px ..6x04:h-auto  ..5x2:pt-1 mobSl  newsSlider   ">
 											<div className=" relative pr-5px  ..5x2:!px-0 ..6x04:p-1.5 transition-all  newsCardHover  cursor-pointer hover:scale-95">
 												<NewsDate title={'ВЧЕРА'} />
 												<div>
@@ -744,67 +824,13 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 											<p className="font-montserrat font-medium text-xl text-gray-quick-silver ml-2 ..5x2:text-13px">1</p>
 										</div>
 										<div className="flex ..5x2:justify-center">
-											<div className="mt-3  ..5x2:mt-1 ..5x2:w-272px .5x01:w-300px mr-10px relative">
-												<Image src={i} />
-												<div>
-													<p className="font-montserrat font-semibold text-18px ..5x2:text-13px">Как скрыть следы усталости под глазами</p>
-													<p className="font-montserrat font-medium text-sm ..5x2:text-11px ..5x2:mt-1 text-gray-quick-silver mt-2 mb-4">19 часов назад</p>
-												</div>
-												<div className="absolute top-1.5 flex items-center left-2">
-													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83317 4.22639C6.09101 4.07753 6.40867 4.07753 6.6665 4.22639L15.4165 9.27823C15.6743 9.42709 15.8332 9.70219 15.8332 9.99991C15.8332 10.2976 15.6743 10.5727 15.4165 10.7216L6.66651 15.7734C6.40867 15.9223 6.09101 15.9223 5.83317 15.7734C5.57534 15.6246 5.4165 15.3495 5.4165 15.0517V4.94808C5.4165 4.65036 5.57534 4.37525 5.83317 4.22639ZM7.08317 6.39146V13.6084L13.3332 9.99991L7.08317 6.39146Z" fill="white" />
-													</svg>
+											<VideoMaterials src={i} logoItem={<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83317 4.22639C6.09101 4.07753 6.40867 4.07753 6.6665 4.22639L15.4165 9.27823C15.6743 9.42709 15.8332 9.70219 15.8332 9.99991C15.8332 10.2976 15.6743 10.5727 15.4165 10.7216L6.66651 15.7734C6.40867 15.9223 6.09101 15.9223 5.83317 15.7734C5.57534 15.6246 5.4165 15.3495 5.4165 15.0517V4.94808C5.4165 4.65036 5.57534 4.37525 5.83317 4.22639ZM7.08317 6.39146V13.6084L13.3332 9.99991L7.08317 6.39146Z" fill="white" />
+											</svg>} lengthTime={'00:20'} text={'Как скрыть следы усталости под глазами'} time={'19 часов назад'} />
+											<VideoMaterials src={i} logoItem={<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83317 4.22639C6.09101 4.07753 6.40867 4.07753 6.6665 4.22639L15.4165 9.27823C15.6743 9.42709 15.8332 9.70219 15.8332 9.99991C15.8332 10.2976 15.6743 10.5727 15.4165 10.7216L6.66651 15.7734C6.40867 15.9223 6.09101 15.9223 5.83317 15.7734C5.57534 15.6246 5.4165 15.3495 5.4165 15.0517V4.94808C5.4165 4.65036 5.57534 4.37525 5.83317 4.22639ZM7.08317 6.39146V13.6084L13.3332 9.99991L7.08317 6.39146Z" fill="white" />
+											</svg>} lengthTime={'01:56:00'} text={'Как правильно подготовить очищать кожу'} time={'2 дня назад'} />
 
-													<p className="ml-1.5 font-montserrat ..5x2:text-11px font-medium text-white">
-														00:20
-													</p>
-												</div>
-												<svg className="absolute right-2 top-2 z-10" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<g clip-path="url(#clip0_3113_149809)">
-														<path d="M0 15.5C0 8.193 0 4.54 2.27 2.27C4.54 0 8.193 0 15.5 0H16.5C23.807 0 27.46 0 29.73 2.27C32 4.54 32 8.193 32 15.5V16.5C32 23.807 32 27.46 29.73 29.73C27.46 32 23.807 32 16.5 32H15.5C8.193 32 4.54 32 2.27 29.73C0 27.46 0 23.807 0 16.5V15.5Z" fill="white" fill-opacity="0.3" />
-														<path fill-rule="evenodd" clip-rule="evenodd" d="M26.398 10.88C26.55 10.373 26.398 10 25.673 10H23.277C22.667 10 22.387 10.322 22.235 10.677C22.235 10.677 21.016 13.646 19.29 15.574C18.732 16.132 18.478 16.31 18.174 16.31C18.021 16.31 17.801 16.132 17.801 15.625V10.88C17.801 10.271 17.624 10 17.116 10H13.351C12.971 10 12.741 10.283 12.741 10.55C12.741 11.128 13.605 11.26 13.694 12.884V16.411C13.694 17.184 13.554 17.324 13.249 17.324C12.437 17.324 10.461 14.343 9.289 10.931C9.06 10.268 8.83 10 8.218 10H5.821C5.137 10 5 10.322 5 10.677C5 11.312 5.812 14.457 8.782 18.618C10.762 21.46 13.552 23 16.09 23C17.612 23 17.8 22.658 17.8 22.069V19.92C17.8 19.236 17.945 19.1 18.427 19.1C18.783 19.1 19.392 19.277 20.813 20.647C22.438 22.272 22.706 23 23.62 23H26.016C26.701 23 27.043 22.658 26.846 21.983C26.63 21.31 25.854 20.333 24.825 19.176C24.266 18.516 23.429 17.806 23.175 17.451C22.82 16.995 22.921 16.791 23.175 16.386C23.175 16.386 26.094 12.276 26.399 10.88H26.398Z" fill="white" />
-													</g>
-													<defs>
-														<clipPath id="clip0_3113_149809">
-															<rect width="32" height="32" fill="white" />
-														</clipPath>
-													</defs>
-												</svg>
-
-
-											</div>
-											<div className="mt-3 ..5x2:mt-1 ..6x04:hidden ..5x2:w-272px .5x01:w-300px relative">
-												<Image src={i} />
-												<div className="absolute left-0 right-0 bottom-77px ..5x2:bottom-20 flex .5x01:bottom-100px items-center h-16 justify-end  bg-white-80pe">
-													<button className="flex items-center font-montserrat font-medium text-xs text-white bg-primary hover:bg-primary-hover transition-all h-8 px-5 mr-4 ">
-														Перейти <svg className="ml-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M8.75033 4.66683L11.0837 7.00016M11.0837 7.00016L8.75033 9.3335M11.0837 7.00016H2.91699" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-														</svg>
-
-													</button>
-												</div>
-												<div>
-													<p className="font-montserrat font-semibold text-18px ..5x2:text-13px">Как правильно подготовить очищать кожу</p>
-													<p className="font-montserrat font-medium text-sm ..5x2:text-11px ..5x2:mt-1 text-gray-quick-silver mt-2 mb-4">2 дня назад</p>
-												</div>
-												<div className="absolute top-1.5 flex items-center left-2">
-													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83317 4.22639C6.09101 4.07753 6.40867 4.07753 6.6665 4.22639L15.4165 9.27823C15.6743 9.42709 15.8332 9.70219 15.8332 9.99991C15.8332 10.2976 15.6743 10.5727 15.4165 10.7216L6.66651 15.7734C6.40867 15.9223 6.09101 15.9223 5.83317 15.7734C5.57534 15.6246 5.4165 15.3495 5.4165 15.0517V4.94808C5.4165 4.65036 5.57534 4.37525 5.83317 4.22639ZM7.08317 6.39146V13.6084L13.3332 9.99991L7.08317 6.39146Z" fill="white" />
-													</svg>
-
-													<p className="ml-1.5 ..5x2:text-11px font-montserrat font-medium text-white">
-														01:56:00
-													</p>
-												</div>
-
-												<svg className="absolute right-2 top-2 z-10" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M31.296 8.472C31.504 9.224 31.648 10.232 31.744 11.512C31.856 12.792 31.904 13.896 31.904 14.856L32 16.2C32 19.704 31.744 22.28 31.296 23.928C30.896 25.368 29.968 26.296 28.528 26.696C27.776 26.904 26.4 27.048 24.288 27.144C22.208 27.256 20.304 27.304 18.544 27.304L16 27.4C9.296 27.4 5.12 27.144 3.472 26.696C2.032 26.296 1.104 25.368 0.704 23.928C0.496 23.176 0.352 22.168 0.256 20.888C0.144 19.608 0.0959999 18.504 0.0959999 17.544L0 16.2C0 12.696 0.256 10.12 0.704 8.472C1.104 7.032 2.032 6.104 3.472 5.704C4.224 5.496 5.6 5.352 7.712 5.256C9.792 5.144 11.696 5.096 13.456 5.096L16 5C22.704 5 26.88 5.256 28.528 5.704C29.968 6.104 30.896 7.032 31.296 8.472Z" fill="white" fill-opacity="0.3" />
-													<path d="M13 20.6L21.304 15.8L13 11V20.6Z" fill="white" />
-												</svg>
-
-
-
-											</div>
 										</div>
 
 
@@ -954,7 +980,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 							</svg>
 							Выделить все
 						</button>
-						<button className="flex transition-all hover:bg-primary p-1.5 px-3 rounded-3xl items-center ml-34px font-montserrat font-medium text-13px text-white">
+						<button onClick={downLoadCheked} className="flex transition-all hover:bg-primary p-1.5 px-3 rounded-3xl items-center ml-34px font-montserrat font-medium text-13px text-white">
 							<svg className="mr-10px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M6.56023 10.8285C6.4317 10.9626 6.26436 11.0624 6.07022 11.1086C4.30906 11.5274 3 13.1122 3 15.0002C3 17.2094 4.79086 19.0002 7 19.0002C7.38062 19.0002 7.74717 18.9474 8.09352 18.8492C8.62487 18.6986 9.17772 19.0072 9.32834 19.5386C9.47897 20.0699 9.17033 20.6228 8.63898 20.7734C8.11683 20.9214 7.56678 21.0002 7 21.0002C3.68629 21.0002 1 18.3139 1 15.0002C1 12.3751 2.68503 10.1457 5.03157 9.33088C5.36842 5.77877 8.35971 3 12 3C15.6573 3 18.6596 5.80487 18.973 9.38085C21.2471 10.234 22.8662 12.427 22.8662 15.0002C22.8662 18.3139 20.1799 21.0002 16.8662 21.0002C16.2994 21.0002 15.7494 20.9214 15.2272 20.7734C14.6959 20.6228 14.3872 20.0699 14.5378 19.5386C14.6885 19.0072 15.2413 18.6986 15.7727 18.8492C16.119 18.9474 16.4856 19.0002 16.8662 19.0002C19.0753 19.0002 20.8662 17.2094 20.8662 15.0002C20.8662 13.1122 19.5572 11.5274 17.796 11.1086C17.3803 11.0098 17.0875 10.6647 17.0354 10.2647C17.0123 10.1804 17 10.0917 17 10C17 7.23858 14.7614 5 12 5C9.23858 5 7 7.23858 7 10C7 10.3447 6.8256 10.6487 6.56023 10.8285Z" fill="white" />
 								<path d="M16.2758 14.2957C16.6648 14.6877 16.6623 15.3209 16.2703 15.7099L12.7043 19.2481C12.3129 19.6364 11.681 19.6347 11.2917 19.2441L7.82444 15.7654C7.43456 15.3743 7.43561 14.7411 7.82677 14.3512C8.21794 13.9613 8.85111 13.9624 9.24099 14.3536L11 16.1184V10C11 9.44772 11.4477 9 12 9C12.5523 9 13 9.44772 13 10V16.1372L14.8616 14.2901C15.2536 13.9011 15.8868 13.9036 16.2758 14.2957Z" fill="white" />
@@ -1009,10 +1035,9 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 					<div className="flex flex-wrap ">
 
 						{currentFilter.photo && <>
-							<MaterialsPhotoItem selectedAll={selectedAll} close={close} />
-							<MaterialsPhotoItem selectedAll={selectedAll} close={close} />
-							<MaterialsPhotoItem selectedAll={selectedAll} close={close} />
-							<MaterialsPhotoItem selectedAll={selectedAll} close={close} />
+							{materialsPhoto.map((photoSrc, i) => <MaterialsPhotoItem key={i} src={photoSrc} deleteItem={deleteItem} setCurrent={setCurrent} selectedAll={selectedAll} close={close} />
+							)}
+
 						</>}
 						{currentFilter.video && <>
 							<div className="w-full flex pb-3">
@@ -1021,7 +1046,8 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 								<p onClick={() => setFilterSortLocal('notP')} className={`font-montserrat font-medium pb-0.5 cursor-pointer hover:text-primary hover:border-b-primary border-b border-gray-quick-silver border-dotted text-black-70pe ${filterSort.notP ? '!text-primary !border-b-primary' : ""}`}>Без подписей</p>
 							</div>
 							<div className="flex flex-wrap items-center">
-								<MaterialsVideoItem selectedAll={selectedAll} setVideo={setVideo} />
+								{materialsVideo.map((videoSrc, i) => <MaterialsVideoItem key={i} src={videoSrc} deleteItem={deleteItem} setCurrent={setCurrent} selectedAll={selectedAll} setVideo={setVideo} />
+								)}
 
 							</div>
 
@@ -1034,7 +1060,7 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 									<div className="flex cursor-pointer hoverCus items-center flex-col">
 										<p className="font-montserrat text-22px font-medium leading-120% text-center">Сертификат соответствия</p>
 										<p className="font-montserrat font-medium transition-all text-gray-quick-silver leading-120% mt-3 mb-11 text-center">Евразийский экономический союз</p>
-										<button>
+										<button onClick={downloadFileService}>
 											<svg className="hid" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<g filter="url(#filter0_b_3037_526760)">
 													<circle cx="22" cy="22" r="22" fill="white" fill-opacity="0.8" />
@@ -1078,13 +1104,8 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 								<p onClick={() => setFilterSortLocalPr('pdf')} className={`font-montserrat font-medium pb-0.5 cursor-pointer border-b border-gray-quick-silver border-dotted text-black-70pe ${filterSortProduct.pdf ? '!border-b-primary !text-primary ' : ""}`}>PDF</p>
 							</div>
 							<div className="flex flex-wrap items-center">
-								<MaterialsTextProdItem selectedAll={selectedAll} />
-								<MaterialsTextProdItem img={prodOne} selectedAll={selectedAll} />
-								<MaterialsTextProdItem img={prodTwo} selectedAll={selectedAll} />
-								<MaterialsTextProdItem img={prodFive} selectedAll={selectedAll} />
-								<MaterialsTextProdItem img={prodFour} selectedAll={selectedAll} />
-								<MaterialsTextProdItem img={prodSix} selectedAll={selectedAll} />
-								<MaterialsTextProdItem img={prodTree} selectedAll={selectedAll} />
+								{materialsProducts.map((productSrc, i) => <MaterialsTextProdItem key={i} src={productSrc} deleteItem={deleteItem} setCurrent={setCurrent} selectedAll={selectedAll} />)}
+
 
 							</div>
 
@@ -1272,67 +1293,14 @@ const DetailDescription = ({ refF, close, setVideo }) => {
 										<p className="font-montserrat font-medium text-xl text-gray-quick-silver ml-2">1</p>
 									</div>
 									<div className="flex ">
-										<div className="mt-3  .5x01:w-300px mr-10px relative">
-											<Image src={i} />
-											<div>
-												<p className="font-montserrat font-semibold text-18px">Как скрыть следы усталости под глазами</p>
-												<p className="font-montserrat font-medium text-sm text-gray-quick-silver mt-2 mb-4">19 часов назад</p>
-											</div>
-											<div className="absolute top-1.5 flex items-center left-2">
-												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83317 4.22639C6.09101 4.07753 6.40867 4.07753 6.6665 4.22639L15.4165 9.27823C15.6743 9.42709 15.8332 9.70219 15.8332 9.99991C15.8332 10.2976 15.6743 10.5727 15.4165 10.7216L6.66651 15.7734C6.40867 15.9223 6.09101 15.9223 5.83317 15.7734C5.57534 15.6246 5.4165 15.3495 5.4165 15.0517V4.94808C5.4165 4.65036 5.57534 4.37525 5.83317 4.22639ZM7.08317 6.39146V13.6084L13.3332 9.99991L7.08317 6.39146Z" fill="white" />
-												</svg>
 
-												<p className="ml-1.5 font-montserrat font-medium text-white">
-													00:20
-												</p>
-											</div>
-											<svg className="absolute right-2 top-2 z-10" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<g clip-path="url(#clip0_3113_149809)">
-													<path d="M0 15.5C0 8.193 0 4.54 2.27 2.27C4.54 0 8.193 0 15.5 0H16.5C23.807 0 27.46 0 29.73 2.27C32 4.54 32 8.193 32 15.5V16.5C32 23.807 32 27.46 29.73 29.73C27.46 32 23.807 32 16.5 32H15.5C8.193 32 4.54 32 2.27 29.73C0 27.46 0 23.807 0 16.5V15.5Z" fill="white" fill-opacity="0.3" />
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M26.398 10.88C26.55 10.373 26.398 10 25.673 10H23.277C22.667 10 22.387 10.322 22.235 10.677C22.235 10.677 21.016 13.646 19.29 15.574C18.732 16.132 18.478 16.31 18.174 16.31C18.021 16.31 17.801 16.132 17.801 15.625V10.88C17.801 10.271 17.624 10 17.116 10H13.351C12.971 10 12.741 10.283 12.741 10.55C12.741 11.128 13.605 11.26 13.694 12.884V16.411C13.694 17.184 13.554 17.324 13.249 17.324C12.437 17.324 10.461 14.343 9.289 10.931C9.06 10.268 8.83 10 8.218 10H5.821C5.137 10 5 10.322 5 10.677C5 11.312 5.812 14.457 8.782 18.618C10.762 21.46 13.552 23 16.09 23C17.612 23 17.8 22.658 17.8 22.069V19.92C17.8 19.236 17.945 19.1 18.427 19.1C18.783 19.1 19.392 19.277 20.813 20.647C22.438 22.272 22.706 23 23.62 23H26.016C26.701 23 27.043 22.658 26.846 21.983C26.63 21.31 25.854 20.333 24.825 19.176C24.266 18.516 23.429 17.806 23.175 17.451C22.82 16.995 22.921 16.791 23.175 16.386C23.175 16.386 26.094 12.276 26.399 10.88H26.398Z" fill="white" />
-												</g>
-												<defs>
-													<clipPath id="clip0_3113_149809">
-														<rect width="32" height="32" fill="white" />
-													</clipPath>
-												</defs>
-											</svg>
+										<VideoMaterials src={i} logoItem={<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83317 4.22639C6.09101 4.07753 6.40867 4.07753 6.6665 4.22639L15.4165 9.27823C15.6743 9.42709 15.8332 9.70219 15.8332 9.99991C15.8332 10.2976 15.6743 10.5727 15.4165 10.7216L6.66651 15.7734C6.40867 15.9223 6.09101 15.9223 5.83317 15.7734C5.57534 15.6246 5.4165 15.3495 5.4165 15.0517V4.94808C5.4165 4.65036 5.57534 4.37525 5.83317 4.22639ZM7.08317 6.39146V13.6084L13.3332 9.99991L7.08317 6.39146Z" fill="white" />
+										</svg>} lengthTime={'00:20'} isDesc={true} text={'Как скрыть следы усталости под глазами'} time={'19 часов назад'} />
+										<VideoMaterials src={i} logoItem={<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83317 4.22639C6.09101 4.07753 6.40867 4.07753 6.6665 4.22639L15.4165 9.27823C15.6743 9.42709 15.8332 9.70219 15.8332 9.99991C15.8332 10.2976 15.6743 10.5727 15.4165 10.7216L6.66651 15.7734C6.40867 15.9223 6.09101 15.9223 5.83317 15.7734C5.57534 15.6246 5.4165 15.3495 5.4165 15.0517V4.94808C5.4165 4.65036 5.57534 4.37525 5.83317 4.22639ZM7.08317 6.39146V13.6084L13.3332 9.99991L7.08317 6.39146Z" fill="white" />
+										</svg>} lengthTime={'01:56:00'} isDesc={true} text={'Как правильно подготовить очищать кожу'} time={'2 дня назад'} />
 
-
-										</div>
-										<div className="mt-3 hoverCus .5x01:w-300px relative">
-											<Image src={i} />
-											<div className="absolute hov hidden left-0 right-0 bottom-77px flex .5x01:bottom-100px items-center h-16 justify-end  bg-white-80pe">
-												<button className="flex items-center font-montserrat font-medium text-xs text-white bg-primary hover:bg-primary-hover transition-all h-8 px-5 mr-4 ">
-													Перейти <svg className="ml-2" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M8.75033 4.66683L11.0837 7.00016M11.0837 7.00016L8.75033 9.3335M11.0837 7.00016H2.91699" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-													</svg>
-
-												</button>
-											</div>
-											<div>
-												<p className="font-montserrat font-semibold text-18px">Как правильно подготовить очищать кожу</p>
-												<p className="font-montserrat font-medium text-sm text-gray-quick-silver mt-2 mb-4">2 дня назад</p>
-											</div>
-											<div className="absolute top-1.5 flex items-center left-2">
-												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83317 4.22639C6.09101 4.07753 6.40867 4.07753 6.6665 4.22639L15.4165 9.27823C15.6743 9.42709 15.8332 9.70219 15.8332 9.99991C15.8332 10.2976 15.6743 10.5727 15.4165 10.7216L6.66651 15.7734C6.40867 15.9223 6.09101 15.9223 5.83317 15.7734C5.57534 15.6246 5.4165 15.3495 5.4165 15.0517V4.94808C5.4165 4.65036 5.57534 4.37525 5.83317 4.22639ZM7.08317 6.39146V13.6084L13.3332 9.99991L7.08317 6.39146Z" fill="white" />
-												</svg>
-
-												<p className="ml-1.5 font-montserrat font-medium text-white">
-													01:56:00
-												</p>
-											</div>
-
-											<svg className="absolute right-2 top-2 z-10" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M31.296 8.472C31.504 9.224 31.648 10.232 31.744 11.512C31.856 12.792 31.904 13.896 31.904 14.856L32 16.2C32 19.704 31.744 22.28 31.296 23.928C30.896 25.368 29.968 26.296 28.528 26.696C27.776 26.904 26.4 27.048 24.288 27.144C22.208 27.256 20.304 27.304 18.544 27.304L16 27.4C9.296 27.4 5.12 27.144 3.472 26.696C2.032 26.296 1.104 25.368 0.704 23.928C0.496 23.176 0.352 22.168 0.256 20.888C0.144 19.608 0.0959999 18.504 0.0959999 17.544L0 16.2C0 12.696 0.256 10.12 0.704 8.472C1.104 7.032 2.032 6.104 3.472 5.704C4.224 5.496 5.6 5.352 7.712 5.256C9.792 5.144 11.696 5.096 13.456 5.096L16 5C22.704 5 26.88 5.256 28.528 5.704C29.968 6.104 30.896 7.032 31.296 8.472Z" fill="white" fill-opacity="0.3" />
-												<path d="M13 20.6L21.304 15.8L13 11V20.6Z" fill="white" />
-											</svg>
-
-
-
-										</div>
 									</div>
 
 

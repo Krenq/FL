@@ -9,7 +9,7 @@ const PhoneNavigation = ({ setShow }) => {
 	const [showMenu, setShowMenu] = useState(false),
 		router = useRouter();
 
-	console.log(showMenu)
+
 
 
 	const setShowMenuF = () => {
@@ -134,7 +134,7 @@ const PhoneNavigation = ({ setShow }) => {
 							}`}
 						onClick={setShowMenuF}
 					>
-						{showMenu ? <svg className="h-52px mt-4 mb-3.5 w-20  ..6x6:w-8 ..6x6:mt-2 ..6x6:mb-2.5 ..6x6:h-8      " width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						{showMenu ? <svg className="h-52px mt-4 mb-3.5 w-24  ..6x6:w-14 ..6x6:mt-2 ..6x6:mb-2.5 ..6x6:h-8      " width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M11.8232 13.7004L4.87714 20.6464L3.35355 19.1229L10.2996 12.1768L10.4764 12L10.2996 11.8232L3.35355 4.87714L4.87714 3.35355L11.8232 10.2996L12 10.4764L12.1768 10.2996L19.1229 3.35355L20.6464 4.87714L13.7004 11.8232L13.5236 12L13.7004 12.1768L20.6464 19.1229L19.1229 20.6464L12.1768 13.7004L12 13.5236L11.8232 13.7004Z" stroke="#337202" stroke-width="0.5" />
 						</svg>
 							: <svg
