@@ -127,6 +127,7 @@ module.exports = {
 				1: '#FAF7F2',
 				2: '#FEEFDF',
 				3: '#EDD2B4',
+				4: '#DDCEBC'
 			},
 			label: {
 				pink: '#E7929C',
@@ -174,6 +175,7 @@ module.exports = {
 				'47px': '47px',
 				'50px': '50px',
 				'52px': '52px',
+				'54px': '54px',
 				'60px': '60px',
 
 				'62px': '62px',
@@ -247,6 +249,7 @@ module.exports = {
 				'308px': '308px',
 				'310px': '310px',
 				'317px': '317px',
+				'330px': '330px',
 
 				'345px': '345px',
 
@@ -268,7 +271,9 @@ module.exports = {
 				'390px': '390px',
 				'400px': '400px',
 				'410px': '410px',
+				
 				'416px': '416px',
+				'420px': '420px',
 				'428px': '428px',
 				'440px': '440px',
 

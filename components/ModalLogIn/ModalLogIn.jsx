@@ -7,8 +7,11 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
   const [visPassword, setVisPassword] = useState(true);
   const [checkBoxRemember, setCheckBoxRemember] = useState(false);
   const [disBtn, setDisBtn] = useState(true);
-  const [nameInput, setNameInput] = useState('');
-  const [passInput, setPassInput] = useState('');
+  const [logInInputs, setLogInInputs] = useState({
+    name: '',
+    password: '',
+  });
+
   const [error, setError] = useState(false);
   const [kashUsers, setKashUsers] = useState([
     {
@@ -20,10 +23,17 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
 
   useEffect(() => {
     checkInputs();
-  }, [nameInput, passInput]);
+  }, [logInInputs]);
+
+  const logInInputHandler = (e) => {
+    setLogInInputs((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   const checkInputs = () => {
-    if (nameInput.length > 0 && passInput.length > 0) {
+    if (logInInputs.name.length > 0 && logInInputs.password.length > 0) {
       return setDisBtn(false);
     } else {
       return setDisBtn(true);
@@ -31,8 +41,10 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
   };
 
   const clearInputs = () => {
-    setNameInput('');
-    setPassInput('');
+    setLogInInputs({
+      name: '',
+      password: '',
+    });
   };
 
   const errorFromB = () => {
@@ -52,11 +64,10 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
           <div
             onClick={setShow}
             className="outModal bg-gray-light2 bg-opacity-60 w-full h-full fixed top-0 left-0 right-0 bottom-0 z-100"
-          ></div>
-          <div className="fixed top-0 right-0 z-110 bg-white w-448px h-full p-8">
+          >
             <button
               onClick={setShow}
-              className=" py-3.5 pl-5 pr-5 customCloseRight absolute top-10 -left-50px z-80 bg-primary "
+              className=" py-3.5 pl-5 pr-5 customCloseRight fixed top-10 right-448px z-100 bg-primary "
             >
               <svg
                 width="10"
@@ -73,7 +84,8 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
                 />
               </svg>
             </button>
-
+          </div>
+          <div className="fixed top-0 right-0 z-110 bg-white w-448px h-full p-8 overflow-y-scroll">
             <div className="w-full flex justify-center items-center pb-8">
               <Logo />
             </div>
@@ -149,7 +161,7 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
                         error
                           ? ' border-label-pink'
                           : 'border-gray-quick-silver'
-                      } h-full border flex justify-center items-center px-2.5`}
+                      } h-full border border-r-0 flex justify-center items-center px-2.5`}
                     >
                       <svg
                         width="24"
@@ -170,12 +182,12 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
                         error
                           ? ' border-label-pink'
                           : 'border-gray-quick-silver'
-                      } inputForm w-full border border-l-0 px-2.5 `}
+                      } inputForm w-full border px-2.5 focus:border-primary `}
                       type="text"
                       name="name"
                       placeholder="№ контракта, email или телефон"
-                      value={nameInput}
-                      onChange={(event) => setNameInput(event.target.value)}
+                      value={logInInputs.name}
+                      onChange={logInInputHandler}
                     />
                   </div>
 
@@ -185,7 +197,7 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
                         error
                           ? ' border-label-pink'
                           : 'border-gray-quick-silver'
-                      } h-full border flex justify-center items-center px-2.5`}
+                      } h-full border border-r-0 flex justify-center items-center px-2.5 `}
                     >
                       <svg
                         width="24"
@@ -206,11 +218,12 @@ export default function ModalLogIn({ show, setShow, setBoolLogIn }) {
                         error
                           ? ' border-label-pink'
                           : 'border-gray-quick-silver'
-                      } inputForm w-full border border-l-0 border-gray-quick-silver pl-2.5 pr-10`}
+                      } inputForm w-full border border-gray-quick-silver pl-2.5 pr-10 focus:border-primary`}
                       type={visPassword ? 'password' : 'text'}
                       placeholder="Пароль"
-                      value={passInput}
-                      onChange={(event) => setPassInput(event.target.value)}
+                      name="password"
+                      value={logInInputs.password}
+                      onChange={logInInputHandler}
                     />
 
                     <div
