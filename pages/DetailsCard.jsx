@@ -62,7 +62,7 @@ const DetailsCard = () => {
 	return (
 		<>
 			<Header showSearch={showSearch} setShowSearch={setShowSearch} />
-			<section className="container-base relative  ">
+			<section className="container-base relative ">
 				<SearchResult isShow={showSearch} />
 				<SectionNavDetail />
 				<DescriptionItemDetail setShowIn={setShowIn} close={close} isShow={view} description={description} />
@@ -74,7 +74,7 @@ const DetailsCard = () => {
 			<ViewPhoto isFullViewVideo={isFullViewVideo} isFullView={isFullView} close={close} isShow={view} />
 			<LeftComment show={show} setShow={setShowL} />
 			<BasketModal show={showInBask} setShow={setShowIn} />
-			<Footer />
+			<Footer isDetail={true} />
 			<PhoneNavigation setShow={setShowF} showMenu={showMenu} showBurger={false} setShowBurger={false} />
 			< MenuPhone showMenu={showMenu} showBurger={false} setShowBurger={false} />
 		</>

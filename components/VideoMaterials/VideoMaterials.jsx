@@ -4,7 +4,7 @@
 
 import Image from "next/image"
 
-const VideoMaterials = ({ src, logoItem, isDesc, text, time, lengthTime }) => {
+const VideoMaterials = ({ src, logoItem, isDesc, text, time, lengthTime, isHidden }) => {
 	return (
 		<>
 			{isDesc ? <div className="mt-3 mx-5px hoverCus .5x01:w-300px relative">
@@ -37,7 +37,7 @@ const VideoMaterials = ({ src, logoItem, isDesc, text, time, lengthTime }) => {
 
 
 
-			</div> : <div className="mt-3 mx-5px ..5x2:mt-1 ..6x04:hidden ..5x2:w-272px .5x01:w-300px relative">
+			</div> : <div className={`mt-3 mx-5px ..5x2:mt-1 ${isHidden ? "..6x04:hidden" : ""}  ..5x2:w-272px .5x01:w-300px relative`}>
 				<Image src={src} />
 				<div className="absolute left-0 right-0 bottom-77px ..5x2:bottom-20 flex .5x01:bottom-100px items-center h-16 justify-end  bg-white-80pe">
 					<button className="flex items-center font-montserrat font-medium text-xs text-white bg-primary hover:bg-primary-hover transition-all h-8 px-5 mr-4 ">

@@ -59,7 +59,7 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 			<div>
 				<h4 className="font-montserrat font-medium text-xl mb-3 ..6x3:mb-6px ..6x3:text-sm">Фото и видео отзывы</h4>
 				<div className="mb-12 relative ..6x3:-mr-3 ..6x3:mb-6">
-					<Swiper ref={sliderPhoto} className=' photoCus customTwo sliderDetail ' breakpoints={{
+					<Swiper ref={sliderPhoto} className=' photoCus customTwo sliderDetail !overflow-hidden ..5x2:!overflow-visible' breakpoints={{
 						950: {
 							slidesPerView: 5
 						},
@@ -117,7 +117,12 @@ const DetailComments = ({ setShowL, refF, close, setVideo }) => {
 
 							</div>
 						</SwiperSlide>
+						<SwiperSlide onClick={setVideo} className="pr-2 ..7x1:pr-0 ..7x1:mr-2 ..7x1:w-90px ..7x1:h-90px  cursor-pointer">
+							<div className="..7x1:w-90px ..7x1:h-90px">
+								<Image src={detailSix} />
 
+							</div>
+						</SwiperSlide>
 
 					</Swiper>
 
