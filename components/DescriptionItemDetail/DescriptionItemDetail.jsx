@@ -67,6 +67,9 @@ const DescriptionItemDetail = ({ description, close, isShow, setShowIn }) => {
 		}
 
 
+
+
+
 	const [showCopy, setShowCopy] = useState(false),
 		copy = () => {
 			navigator.clipboard.writeText('30115/01')

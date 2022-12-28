@@ -4,7 +4,7 @@ export default function SectionFooterStock(props) {
 	return (
 		<>
 			{props.text ? (
-				<article className={`..5x2:pb-24   ..5x4:px-10 ..6x5:px-2 ..6x5:pb-28 ..6x6:pb-20 ..5x4:text-center  bg-label-bg px-20 flex flex-col justify-center items-center ${props.isDetail ? '!pb-44' : ""}`}>
+				<article className={`..5x2:pb-24   ..5x4:px-10 ..6x5:px-2 ..6x5:pb-28 ..6x6:pb-20 ..5x4:text-center  bg-label-bg px-20 flex flex-col justify-center items-center ${props.isDetail ? '..5x2:!pb-44' : ""}`}>
 					{props.text.map((el, index) => (
 
 						<p key={index}

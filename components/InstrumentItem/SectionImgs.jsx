@@ -1192,31 +1192,34 @@ export default function SectionImgs({
 							</defs>
 						</svg>
 					</div>
-				</div>
-			)}
+				</div >
+			)
+			}
 
-			{variant === 'DostavkaDropDown' && (
-				<div
-					className={`flex flex-wrap justify-center items-center ${noCenter ? '!justify-start' : ''
-						}`}
-				>
-					{textImg.map((el, i) => (
-						<div
-							key={i}
-							className={`flex justify-center items-center mr-2 my-2 ${mr3 ? '!mr-3' : ''
-								} ${adapt ? '.2x50:h-1 .2x50:w-8 .2x50:!mr-1' : ''}`}
-						>
-							<Image
+			{
+				variant === 'DostavkaDropDown' && (
+					<div
+						className={`flex flex-wrap justify-center items-center ${noCenter ? '!justify-start' : ''
+							}`}
+					>
+						{textImg.map((el, i) => (
+							<div
 								key={i}
-								src={el}
-								width={el.width}
-								height={el.height}
-								quality={100}
-							/>
-						</div>
-					))}
-				</div>
-			)}
+								className={`flex justify-center items-center mr-2 my-2 ${mr3 ? '!mr-3' : ''
+									} ${adapt ? '.2x50:h-1 .2x50:w-8 .2x50:!mr-1' : ''}`}
+							>
+								<Image
+									key={i}
+									src={el}
+									width={el.width}
+									height={el.height}
+									quality={100}
+								/>
+							</div>
+						))}
+					</div>
+				)
+			}
 		</>
 	);
 }

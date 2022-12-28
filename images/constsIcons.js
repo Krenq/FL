@@ -52,3 +52,6 @@ export const ICON_MIR_GRAY = require('./Icons/mir_gray.png');
 export const ICON_UP_GRAY = require('./Icons/UP_gray.png');
 export const ICON_MC_GRAY = require('./Icons/MC_gray.png');
 
+export const ICON_COPY = require('./Icons/copyIcon.svg');
+
+

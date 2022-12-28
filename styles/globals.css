@@ -14,7 +14,8 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+  user-select: none !important;
 }
 
 .activeAnchor {
@@ -100,3 +101,34 @@ li.slick-active div {
   transition: width 0.5s ease 0s !important;
 }
 
+.navLogo {
+  left: calc(50% - 35px) !important;
+}
+
+.windowNavBar {
+  box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.1);
+}
+
+.outModal {
+  backdrop-filter: blur(5px) !important;
+}
+
+.inputForm {
+  outline: 0 !important;
+  outline-offset: 0 !important;
+}
+
+.switchConsult {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.verifInputs {
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  width: 90px;
+  height: 44px;
+  border: 1px solid #337202;
+  border-radius: 6px;
+  background-color: white;
+  text-align: center;
+}

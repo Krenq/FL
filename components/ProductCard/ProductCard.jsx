@@ -641,79 +641,83 @@ export default function ProductCard({ obj }) {
 					</p>
 				</div>
 			)}
-			{!obj.isMiniProduct && <>
-				<BtnsCardProduct
-					clickBtnR={clickBtnR}
-					clickBtnL={clickBtnL}
-					clickBtnBig={clickBtnBig}
-					clickBtnRDesk={clickBtnRDesk}
-					clickBtnLDesk={clickBtnLDesk}
-					clickBtnBigDesk={clickBtnBigDesk}
-					showBtns={showBtns}
-					priceDe={obj.priceDe}
-					setClickBtnR={setClickBtnR}
-					setClickBtnL={setClickBtnL}
-					setClickBtnBig={setClickBtnBig}
-					setClickBtnLDesk={setClickBtnLDesk}
-					setClickBtnRDesk={setClickBtnRDesk}
-					setClickBtnBigDesk={setClickBtnBigDesk}
-				/>
+			{
+				!obj.isMiniProduct && <>
+					<BtnsCardProduct
+						clickBtnR={clickBtnR}
+						clickBtnL={clickBtnL}
+						clickBtnBig={clickBtnBig}
+						clickBtnRDesk={clickBtnRDesk}
+						clickBtnLDesk={clickBtnLDesk}
+						clickBtnBigDesk={clickBtnBigDesk}
+						showBtns={showBtns}
+						priceDe={obj.priceDe}
+						setClickBtnR={setClickBtnR}
+						setClickBtnL={setClickBtnL}
+						setClickBtnBig={setClickBtnBig}
+						setClickBtnLDesk={setClickBtnLDesk}
+						setClickBtnRDesk={setClickBtnRDesk}
+						setClickBtnBigDesk={setClickBtnBigDesk}
+					/>
 
-			</>}
+				</>
+			}
 
-			{visSliderProd && (
-				<div className="absolute bottom-11 w-full bg-gray-light2 h-120px ..5x2:w-40 ..5x2:h-77px ..5x2:left-7px ..5x2:bottom-12">
-					{obj.iText === 'Акции' && (
-						<>
-							<div className="absolute bottom-24 w-full flex justify-center ..5x2:hidden">
-								<p className=" font-montserrat font-normal text-11px leading-140%">
-									Экономия при покупке в акции:
-								</p>
-							</div>
+			{
+				visSliderProd && (
+					<div className="absolute bottom-11 w-full bg-gray-light2 h-120px ..5x2:w-40 ..5x2:h-77px ..5x2:left-7px ..5x2:bottom-12">
+						{obj.iText === 'Акции' && (
+							<>
+								<div className="absolute bottom-24 w-full flex justify-center ..5x2:hidden">
+									<p className=" font-montserrat font-normal text-11px leading-140%">
+										Экономия при покупке в акции:
+									</p>
+								</div>
 
-							<div className="absolute hidden bottom-60px w-full ..5x2:flex justify-center">
-								<p className=" font-montserrat font-normal text-10px leading-140%">
-									Экономия
-								</p>
-							</div>
-						</>
-					)}
+								<div className="absolute hidden bottom-60px w-full ..5x2:flex justify-center">
+									<p className=" font-montserrat font-normal text-10px leading-140%">
+										Экономия
+									</p>
+								</div>
+							</>
+						)}
 
-					<Swiper
-						ref={sliderFilt}
-						className="h-full w-204px ..5x2:w-110px"
-						slidesPerView={2}
-						spaceBetween={5}
-						modules={[Navigation]}
-						allowTouchMove={false}
-						breakpoints={{
-							1000: {
-								slidesPerView: 3,
-								spaceBetween: 10,
-							},
-						}}
-					>
-						<SwiperSlide className={`${obj.iText === 'Акции' ? 'ml-0.5' : ''}`}>
-							<CardSliderItem photo={imgSCard} iText={obj.iText} />
-						</SwiperSlide>
+						<Swiper
+							ref={sliderFilt}
+							className="h-full w-204px ..5x2:w-110px"
+							slidesPerView={2}
+							spaceBetween={5}
+							modules={[Navigation]}
+							allowTouchMove={false}
+							breakpoints={{
+								1000: {
+									slidesPerView: 3,
+									spaceBetween: 10,
+								},
+							}}
+						>
+							<SwiperSlide className={`${obj.iText === 'Акции' ? 'ml-0.5' : ''}`}>
+								<CardSliderItem photo={imgSCard} iText={obj.iText} />
+							</SwiperSlide>
 
-						<SwiperSlide>
-							<CardSliderItem photo={imgSCard} iText={obj.iText} />
-						</SwiperSlide>
+							<SwiperSlide>
+								<CardSliderItem photo={imgSCard} iText={obj.iText} />
+							</SwiperSlide>
 
-						<SwiperSlide>
-							<CardSliderItem photo={imgSCard} iText={obj.iText} />
-						</SwiperSlide>
+							<SwiperSlide>
+								<CardSliderItem photo={imgSCard} iText={obj.iText} />
+							</SwiperSlide>
 
-						<SwiperSlide>
-							<CardSliderItem photo={imgSCard} iText={obj.iText} />
-						</SwiperSlide>
-					</Swiper>
+							<SwiperSlide>
+								<CardSliderItem photo={imgSCard} iText={obj.iText} />
+							</SwiperSlide>
+						</Swiper>
 
-					<ProductPrevButton onClick={prevSlideFilt} isIText={obj.iText} />
-					<ProductNextButton onClick={nextSlideFilt} isIText={obj.iText} />
-				</div>
-			)}
-		</div>
+						<ProductPrevButton onClick={prevSlideFilt} isIText={obj.iText} />
+						<ProductNextButton onClick={nextSlideFilt} isIText={obj.iText} />
+					</div>
+				)
+			}
+		</div >
 	);
 }

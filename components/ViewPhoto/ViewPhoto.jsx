@@ -634,9 +634,9 @@ const ViewPhoto = ({ isShow, close, isFullView, isFullViewVideo, name = '2021-01
 
 
 						</SwiperSlide>
-					</Swiper>}
+					</Swiper >}
 
-				</div>
+				</div >
 
 				<button onClick={prevSlide} className='..5x2:hidden .4x2:left-28  absolute  file:placeholder: transition-all rounded-2xl    left-246px     top-460px   z-10'>
 					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,5 +1,4 @@
-
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react';
 
 const Anchor = ({ elements }) => {
 	const [currentElement, setCurrentElement] = useState([
